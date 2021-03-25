@@ -1,0 +1,52 @@
+{
+  "name": "natura11y-inclusive-framework",
+  "version": "1.0.0",
+  "description": "Natura11y Inclusive Framework",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js --open --hot",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cavidano/natura11y.git"
+  },
+  "keywords": [],
+  "author": "Carl Avidano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CityOfNewYork/nyc-core-framework-website/issues"
+  },
+  "homepage": "https://cavidano.github.io/natura11y",
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-transform-shorthand-properties": "^7.10.4",
+    "@babel/preset-env": "^7.12.13",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "extract-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.0.0",
+    "mini-css-extract-plugin": "^1.3.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.2.0",
+    "sass": "^1.32.6",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.0.0-rc.6",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "custom-event-polyfill": "^1.0.7",
+    "element-closest-polyfill": "^1.0.2",
+    "file-loader": "^6.2.0"
+  },
+  "main": "webpack.config.js",
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
