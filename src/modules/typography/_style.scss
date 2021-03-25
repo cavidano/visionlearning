@@ -33,19 +33,19 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 
 // Import Open Source Fonts
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
 
     // Body Font Stack
 
-    --body-font-family: "Source Sans Pro";
+    --body-font-family: "Open Sans";
     
     --body-font-weight-normal: 400;
     --body-font-weight-medium: 600;
     --body-font-weight-bold: 700;
 
-    --body-font-size: 22px;
+    --body-font-size: 20px;
     --body-line-height: 1.5;
 
     // Font Sizes
