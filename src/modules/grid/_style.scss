@@ -138,15 +138,12 @@ $columns: 12;
 //////////////////////////////////////////////
 
 .css-grid {
+    --columns: 3;
+    --grid-gap: var(--spacer-2);
+
     display: grid;
+    gap: var(--grid-gap); 
 
-    gap: var(--spacer-2);
-    
-    background-color: yellow;
-
-    grid-template-columns: repeat(2, 1fr);
-
-
-
+    grid-template-columns: repeat(var(--columns), 1fr);
 
 }

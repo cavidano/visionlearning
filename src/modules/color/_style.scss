@@ -27,8 +27,10 @@ In this file:
     // Theme Color Palette
 
     --primary: #65278a;
-    --secondary: #64cc7e;
-    --dark: #191b35;
+    --library: #fbb94e;
+    --glossary: #4eaf48;
+    --classroom: #1d8dc4;
+    --dark: #292444;
     --light: #f1f4f6;
 
     // Accessible Link Color
@@ -43,13 +45,29 @@ In this file:
     --primary-confirm: #16db93;
     --primary-warn: #ff73aa;
 
-    // Associated Secondary Colors
+    // Associated library Colors
 
-    --secondary-text: var(--dark);
-    --secondary-border: hsla(0, 0%, 0%, 0.25);
-    --secondary-link: currentColor;
-    --secondary-confirm: #41e0f2;
-    --secondary-warn: #ffa3a4;
+    --library-text: var(--dark);
+    --library-border: hsla(0, 0%, 0%, 0.125);
+    --library-link: currentColor;
+    --library-confirm: #41e0f2;
+    --library-warn: #ffa3a4;
+
+    // Associated Glossary Colors
+
+    --glossary-text: var(--dark);
+    --glossary-border: hsla(0, 0%, 0%, 0.125);
+    --glossary-link: currentColor;
+    --glossary-confirm: #41e0f2;
+    --glossary-warn: #ffa3a4;
+
+    // Associated Classroom Colors
+
+    --classroom-text: var(--dark);
+    --classroom-border: hsla(0, 0%, 0%, 0.125);
+    --classroom-link: currentColor;
+    --classroom-confirm: #41e0f2;
+    --classroom-warn: #ffa3a4;
 
     // Associated Dark Colors
 
@@ -96,13 +114,31 @@ $theme-colors: (
         warn: var(--primary-warn)
     ), 
     
-    "secondary": (
-        swatch: var(--secondary),
-        text: var(--secondary-text),
-        border: var(--secondary-border),
-        link: var(--secondary-link),
-        confirm: var(--secondary-confirm),
-        warn: var(--secondary-warn)
+    "library": (
+        swatch: var(--library),
+        text: var(--library-text),
+        border: var(--library-border),
+        link: var(--library-link),
+        confirm: var(--library-confirm),
+        warn: var(--library-warn)
+    ), 
+    
+    "glossary": (
+        swatch: var(--glossary),
+        text: var(--glossary-text),
+        border: var(--glossary-border),
+        link: var(--glossary-link),
+        confirm: var(--glossary-confirm),
+        warn: var(--glossary-warn)
+    ), 
+    
+    "classroom": (
+        swatch: var(--classroom),
+        text: var(--classroom-text),
+        border: var(--classroom-border),
+        link: var(--classroom-link),
+        confirm: var(--classroom-confirm),
+        warn: var(--classroom-warn)
     ), 
     
     "dark": (
