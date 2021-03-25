@@ -132,3 +132,21 @@ $columns: 12;
         }
     }
 }
+
+//////////////////////////////////////////////
+// F. CSS Grid
+//////////////////////////////////////////////
+
+.css-grid {
+    display: grid;
+
+    gap: var(--spacer-2);
+    
+    background-color: yellow;
+
+    grid-template-columns: repeat(2, 1fr);
+
+
+
+
+}
