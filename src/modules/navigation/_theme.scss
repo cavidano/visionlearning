@@ -14,7 +14,6 @@
 
 .vl-hat {
     display: grid;
-    padding: var(--spacer-1) var(--spacer-2);
 
     grid-template-columns: 1fr auto;
 
@@ -25,23 +24,28 @@
 
 .vl-hat__toggle-button {
     grid-area: toggle;
+    padding: var(--spacer-1);
 }
 
 .vl-hat__menu {
     grid-area: menu;
     font-size: var(--font-size-md);
 
+    padding: var(--spacer-1) var(--spacer-2);
+
     @extend .collapse;
 }
 
 .vl-hat__actions {
     grid-area: actions;
+    padding: var(--spacer-1);
 }
 
 @include breakpoint.breakpoints-down(lg) {
 
     .vl-hat__menu {
-        padding: var(--spacer-2);
+        padding-top: var(--spacer-2);
+        padding-bottom: var(--spacer-2);
     }
 
 }
@@ -52,8 +56,9 @@
         display: none;
     }
     
-    .vl-hat__menu {
-        display: flex;
+    .vl-hat__menu,
+    .vl-hat__menu.shown  {
+        display: flex !important;
     }
 
     .vl-hat {
@@ -87,38 +92,40 @@
         line-height: normal;
     }
 
-     li {
+    li {
+        width: calc(100% / 3);
+    }
+
+    a {
         position: relative;
-        width: 33.3333%;
+        flex-direction: column;
+        justify-content: center;
+        
+        padding: var(--spacer-2);
+
+        width: 100%;
 
         &::before {
             content: "";
             position: absolute;
+            top: unset;
             right: 0;
             bottom: 0;
             left: 0;
             height: calc(var(--default-border-width) * 2);
-            background-color: currentColor;
+            // z-index: auto;
         }
 
-        &.library::before {
-            background-color: var(--library);
-        }
-
-        &.glossary::before {
-            background-color: var(--glossary);
-        }
-
-        &.classroom::before {
-            background-color: var(--classroom);
+        &[aria-current]::before {
+            top: 0;
+            height: unset;
+            background-image: linear-gradient(hsla(0, 0%, 100%, 0.375), hsla(0, 0%, 100%, 0.125));
+            opacity: 1;
         }
     }
 
-    a {
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        padding: var(--spacer-2);
+    a > span{
+        z-index: 5;
     }
 
     span {
@@ -133,6 +140,46 @@
         font-size: var(--font-size-sm);
         opacity: 0.75;
     }
+
+    li {
+        --current-color: null;
+        a:not([aria-current])::before, 
+        a[aria-current] {
+            background-color: var(--current-color);
+        }
+    }
+
+    li.library {
+        --current-color: var(--library);
+    }
+
+    li.glossary {
+        --current-color: var(--glossary);
+    }
+
+    li.classroom {
+        --current-color: var(--classroom);
+    }
+
+}
+
+#es-translate {
+
+    span {
+        position: relative;
+        z-index: 5;
+    }
+    
+    &::before {
+        background-image: linear-gradient(#d2593f,#bf3823);
+        opacity: 1;
+        z-index: 1;
+    }
+
+    &::after {
+        z-index: 10;
+    }
+    
 }
 
 @include breakpoint.breakpoints-down(lg) {
@@ -163,26 +210,8 @@
     .vl-header__menu {
         flex: 1 1 50%;
     }
+
     span.title {
         font-size: var(--font-size-lg);
     }
-}
-
-#es-translate {
-
-    span {
-        position: relative;
-        z-index: 2;
-    }
-    
-    &::before {
-        opacity: 1;
-        background-image: linear-gradient(#d2593f,#bf3823);
-        z-index: 1;
-    }
-
-    &::after {
-        z-index: 3;
-    }
-    
 }

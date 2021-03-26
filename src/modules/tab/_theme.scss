@@ -1,0 +1,16 @@
+
+.tabs-nav {
+    // color: var(--a11y-link-color);
+
+    :is(
+        [aria-current="page"],
+        [aria-selected="true"]
+    ){
+
+        &::before {
+            background-color: var(--library);
+        }
+        color: var(--dark);
+    }
+     
+}
