@@ -6,16 +6,69 @@
 @use "../breakpoint/style" as breakpoint;
 @use "../border/style" as border;
 @use "../color/style" as color;
+@use "../collapse/style" as collapse;
 
 //////////////////////////////////////////////
-// B. VL Header
+// B. VL Hat
+//////////////////////////////////////////////
+
+.vl-hat {
+    display: grid;
+    padding: var(--spacer-1) var(--spacer-2);
+
+    grid-template-columns: 1fr auto;
+
+    grid-template-areas: 
+        "toggle actions"
+        "menu menu";
+}
+
+.vl-hat__toggle-button {
+    grid-area: toggle;
+}
+
+.vl-hat__menu {
+    grid-area: menu;
+    font-size: var(--font-size-md);
+
+    @extend .collapse;
+}
+
+.vl-hat__actions {
+    grid-area: actions;
+}
+
+@include breakpoint.breakpoints-down(lg) {
+
+    .vl-hat__menu {
+        padding: var(--spacer-2);
+    }
+
+}
+
+@include breakpoint.breakpoints-up(lg) {
+    
+    .vl-hat__toggle-button {
+        display: none;
+    }
+    
+    .vl-hat__menu {
+        display: flex;
+    }
+
+    .vl-hat {
+        grid-template-areas: 
+            "menu actions";
+    }
+}
+
+//////////////////////////////////////////////
+// C. VL Header
 //////////////////////////////////////////////
 
 .vl-header {
     position: relative;
     z-index: 1000;
-
-    background-color: yellow;
 }
 
 .vl-header__logo {
@@ -76,7 +129,6 @@
         font-weight: var(--body-font-weight-bold);
     }
 
-
     span.tagline {
         font-size: var(--font-size-sm);
         opacity: 0.75;
@@ -115,8 +167,6 @@
         font-size: var(--font-size-lg);
     }
 }
-
-
 
 #es-translate {
 
