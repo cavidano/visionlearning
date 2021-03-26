@@ -1,0 +1,138 @@
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "../breakpoint/style" as breakpoint;
+@use "../border/style" as border;
+
+.vl-header {
+    position: relative;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+        line-height: normal;
+    }
+
+}
+
+.vl-header__bar {
+    grid-area: bar;
+}
+
+.vl-header__logo {
+    grid-area: logo;
+    padding: var(--spacer-2);
+
+    
+
+    z-index: 2000;
+    position: relative;
+    @extend .border-bottom;
+
+
+}
+
+.vl-header__menu {
+    grid-area: menu;
+
+    :is(ul, li, a) {
+        display: flex;
+        height: 100%;
+    }
+
+    li {
+        position: relative;
+        width: 33.3333%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background-color: currentColor;
+        }
+
+        &.library {
+            color: var(--library);
+        }
+
+        &.glossary {
+            color: var(--glossary);
+        }
+
+        &.classroom {
+            color: var(--classroom);
+        }
+    }
+
+    a {
+        padding: var(--spacer-2);
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    a > span {
+        display: block;
+    } 
+
+    span.title {
+        font-size: var(--font-size-lg);
+        font-weight: var(--body-font-weight-bold);
+    }
+
+    span.tagline {
+        font-size: var(--font-size-sm);
+    }
+}
+
+@include breakpoint.breakpoints-up(lg) {
+    .vl-header {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "bar bar"
+            "logo menu";
+    }
+}
+
+
+@include breakpoint.breakpoints-down(lg) {
+
+    .vl-header__logo,
+    .vl-header__menu {
+        text-align: center;
+    }
+
+    .vl-header__menu {
+        a > span.tagline {
+            display: none;
+        }
+    }
+    
+}
+
+#es-translate {
+
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    
+    &::before {
+        opacity: 1;
+        background-image: linear-gradient(#d2593f,#bf3823);
+        z-index: 1;
+    }
+
+    &::after {
+        z-index: 3;
+    }
+    
+}
