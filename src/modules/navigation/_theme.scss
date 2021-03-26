@@ -5,44 +5,36 @@
 
 @use "../breakpoint/style" as breakpoint;
 @use "../border/style" as border;
+@use "../color/style" as color;
+
+//////////////////////////////////////////////
+// B. VL Header
+//////////////////////////////////////////////
 
 .vl-header {
     position: relative;
     z-index: 1000;
 
-    ul {
-        list-style: none;
-        line-height: normal;
-    }
-
-}
-
-.vl-header__bar {
-    grid-area: bar;
+    background-color: yellow;
 }
 
 .vl-header__logo {
-    grid-area: logo;
     padding: var(--spacer-2);
-
-    
-
-    z-index: 2000;
-    position: relative;
-    @extend .border-bottom;
-
-
 }
 
 .vl-header__menu {
-    grid-area: menu;
 
     :is(ul, li, a) {
         display: flex;
         height: 100%;
     }
 
-    li {
+    ul {
+        list-style: none;
+        line-height: normal;
+    }
+
+     li {
         position: relative;
         width: 33.3333%;
 
@@ -52,56 +44,44 @@
             right: 0;
             bottom: 0;
             left: 0;
-            height: 4px;
+            height: calc(var(--default-border-width) * 2);
             background-color: currentColor;
         }
 
-        &.library {
-            color: var(--library);
+        &.library::before {
+            background-color: var(--library);
         }
 
-        &.glossary {
-            color: var(--glossary);
+        &.glossary::before {
+            background-color: var(--glossary);
         }
 
-        &.classroom {
-            color: var(--classroom);
+        &.classroom::before {
+            background-color: var(--classroom);
         }
     }
 
     a {
-        padding: var(--spacer-2);
         flex-direction: column;
         justify-content: center;
         width: 100%;
+        padding: var(--spacer-2);
     }
 
-    a > span {
+    span {
         display: block;
     } 
 
     span.title {
-        font-size: var(--font-size-lg);
         font-weight: var(--body-font-weight-bold);
     }
 
+
     span.tagline {
         font-size: var(--font-size-sm);
+        opacity: 0.75;
     }
 }
-
-@include breakpoint.breakpoints-up(lg) {
-    .vl-header {
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "bar bar"
-            "logo menu";
-    }
-}
-
 
 @include breakpoint.breakpoints-down(lg) {
 
@@ -110,13 +90,33 @@
         text-align: center;
     }
 
-    .vl-header__menu {
-        a > span.tagline {
-            display: none;
-        }
+    .vl-header__logo {
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
     }
-    
+
+   span.tagline {
+       display: none;
+    }
 }
+
+@include breakpoint.breakpoints-up(lg) {
+    .vl-header {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .vl-header__logo,
+    .vl-header__menu {
+        flex: 1 1 50%;
+    }
+    span.title {
+        font-size: var(--font-size-lg);
+    }
+}
+
+
 
 #es-translate {
 
