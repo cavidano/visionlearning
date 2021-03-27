@@ -32,39 +32,48 @@
 .backdrop__info {
     position: absolute;
     top: 100%;
-    background-color: inherit;
-    transition: opacity 0.1s;
-    opacity: 0;
-    font-size: calc( var(--font-size-md) * 0.875);
-    padding: var(--spacer-2);
     margin-top: -1px;
+    background-color: inherit;
+    padding: var(--spacer-2);
+    // font-size: calc( var(--font-size-md) * 0.875);
+    transition: opacity 0.125s;
+    opacity: 0;
+text-rendering: optimizeLegibility;
 }
 
+.discipline-grid .backdrop {
+  overflow: hidden;
+}
 
 .discipline-grid .backdrop {
   transition: transform 0.2s ease-in-out;
 }
 
-.discipline-grid:focus-within .backdrop,
-.discipline-grid:hover .backdrop {
-//   transform: translateY(-12.5%);
+.discipline-grid .backdrop.focused {
   overflow: visible;
-}
-
-.backdrop:focus ~ .backdrop,
-.backdrop:hover ~ .backdrop {
-//   transform: translateX(-12.5%);
-}
-
-.discipline-grid .backdrop:focus,
-.discipline-grid .backdrop:hover {
-  transform: scale(1.25);
-  transform-origin: center;
   z-index: 50;
+  
+  transform: scale(1.125);
 
   filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
-  
+
   .backdrop__info {
-      opacity: 1;
+    opacity: 1;
   }
+
 }
+
+
+
+
+
+
+// .discipline-grid:focus-within .backdrop,
+// .discipline-grid:hover .backdrop {
+//   transform: translateY(-12.5%);
+// }
+
+// .backdrop:focus ~ .backdrop,
+// .backdrop:hover ~ .backdrop {
+//   transform: translateX(-12.5%);
+// }

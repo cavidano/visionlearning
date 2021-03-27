@@ -52,7 +52,8 @@ new Form();
 
 import "./modules/gradient";
 
-import "./modules/grid";
+import Grid from "./modules/grid";
+new Grid();
 
 import "./modules/icon";
 
