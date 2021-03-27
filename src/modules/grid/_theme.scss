@@ -35,7 +35,7 @@
     background-color: inherit;
     transition: opacity 0.1s;
     opacity: 0;
-    font-size: var(--font-size-md);
+    font-size: calc( var(--font-size-md) * 0.875);
     padding: var(--spacer-2);
     margin-top: -1px;
 }
