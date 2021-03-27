@@ -1,0 +1,70 @@
+
+//////////////////////////////////////////////
+// A. CSS Grid
+//////////////////////////////////////////////
+
+.css-grid {
+    --columns: 3;
+    --grid-gap: var(--spacer-2);
+
+    display: grid;
+    gap: var(--grid-gap); 
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+//////////////////////////////////////////////
+// A. CSS Grid
+//////////////////////////////////////////////
+
+.discipline-grid {
+    --columns: 4;
+    position: relative;
+    // --grid-gap: var(--spacer-1);
+
+    display: grid;
+    align-items: center;
+    gap: var(--grid-gap); 
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+.backdrop__info {
+    position: absolute;
+    top: 100%;
+    background-color: inherit;
+    transition: opacity 0.1s;
+    opacity: 0;
+    font-size: var(--font-size-md);
+    padding: var(--spacer-2);
+    margin-top: -1px;
+}
+
+
+.discipline-grid .backdrop {
+  transition: transform 0.2s ease-in-out;
+}
+
+.discipline-grid:focus-within .backdrop,
+.discipline-grid:hover .backdrop {
+//   transform: translateY(-12.5%);
+  overflow: visible;
+}
+
+.backdrop:focus ~ .backdrop,
+.backdrop:hover ~ .backdrop {
+//   transform: translateX(-12.5%);
+}
+
+.discipline-grid .backdrop:focus,
+.discipline-grid .backdrop:hover {
+  transform: scale(1.25);
+  transform-origin: center;
+  z-index: 50;
+
+  filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
+  
+  .backdrop__info {
+      opacity: 1;
+  }
+}
