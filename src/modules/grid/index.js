@@ -10,6 +10,7 @@ export default class Grid {
     constructor() {
 
         const discList = document.querySelectorAll(".discipline-grid .backdrop");
+        const discInfoList = document.querySelectorAll(".discipline-grid .backdrop__info");
 
         let time;
 
@@ -28,8 +29,8 @@ export default class Grid {
             disc.addEventListener("mouseout", (event) => {
 
                 event.preventDefault();
+                
                 clearTimeout(time);
-
                 disc.classList.remove("focused");
 
             });

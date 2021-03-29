@@ -19,26 +19,31 @@
 
 .discipline-grid {
     --columns: 4;
+    --grid-gap: null;
+
     position: relative;
-    // --grid-gap: var(--spacer-1);
 
     display: grid;
-    align-items: center;
     gap: var(--grid-gap); 
 
     grid-template-columns: repeat(var(--columns), 1fr);
+    
 }
 
 .backdrop__info {
     position: absolute;
     top: 100%;
-    margin-top: -1px;
+
     background-color: inherit;
-    padding: var(--spacer-2);
-    // font-size: calc( var(--font-size-md) * 0.875);
+
+    padding-left: var(--spacer-2);
+    padding-right: var(--spacer-2);
+    padding-bottom: var(--spacer-2);
+    
+    font-size: calc( var(--font-size-md) * 0.875);
     transition: opacity 0.125s;
+    
     opacity: 0;
-text-rendering: optimizeLegibility;
 }
 
 .discipline-grid .backdrop {
@@ -53,7 +58,7 @@ text-rendering: optimizeLegibility;
   overflow: visible;
   z-index: 50;
   
-  transform: scale(1.125);
+  transform: scale(1.25);
 
   filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
 
