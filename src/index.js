@@ -85,6 +85,9 @@ new Tab();
 import Table from "./modules/table";
 new Table();
 
+import Tearsheet from "./modules/tearsheet";
+new Tearsheet();
+
 import "./modules/typography";
 
 import "./modules/z-index/index";
