@@ -43,6 +43,12 @@ module.exports = merge(common, {
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
+            filename: 'index.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            template: './home.html',
+            filename: 'home.html',
             inject: 'body'
         })
     ]
