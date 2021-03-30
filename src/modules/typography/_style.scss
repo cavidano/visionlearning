@@ -58,7 +58,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
 
     // Banner Headline
 
-    --banner-headline-font-size: calc(var(--body-font-size) * 3.8);
+    --banner-headline-font-size: calc(var(--body-font-size) * 2);
     --banner-headline-font-weight: var(--body-font-weight-normal);
 
     // Headers
@@ -175,8 +175,10 @@ $headers: (
 
 @each $key, $header-map in $headers {
 
-    #{$key} {
-        font-size: map.get($header-map, "size");
+    #{$key}{
+        &:not(.banner-headline) {
+            font-size: map.get($header-map, "size");
+        }
     }
 }
 
@@ -189,10 +191,7 @@ $headers: (
 
 .banner-headline {
     font-weight: var(--banner-headline-font-weight);
-
-    @include breakpoint.breakpoints-up(lg){
-        font-size: var(--banner-headline-font-size);
-    }
+    font-size: var(--banner-headline-font-size);
 }
 
 //////////////////////////////////////////////

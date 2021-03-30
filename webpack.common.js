@@ -1,6 +1,6 @@
 module.exports = {
     entry: {
-        natura11y: [
+        visionlearning: [
             './src/index.js'
         ]
     }

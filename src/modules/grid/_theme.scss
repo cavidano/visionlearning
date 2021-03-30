@@ -48,6 +48,9 @@
 
 .discipline-grid .backdrop {
   overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .discipline-grid .backdrop {

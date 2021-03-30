@@ -16,17 +16,18 @@ export default class Grid {
 
         discList.forEach((disc) => {
 
-            disc.addEventListener("mouseover", (event) => {
+            disc.addEventListener("mouseenter", (event) => {
 
                 event.preventDefault();
 
                 time = setTimeout(() => {
                     disc.classList.add("focused");
-                }, 750);
+                }, 500);
+
 
             });
 
-            disc.addEventListener("mouseout", (event) => {
+            disc.addEventListener("mouseleave", (event) => {
 
                 event.preventDefault();
                 
