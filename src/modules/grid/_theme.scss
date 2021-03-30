@@ -51,13 +51,10 @@
   &:hover {
     cursor: pointer;
   }
-  animation-duration: 0.25s;
-  animation-fill-mode: forwards;
   z-index: auto;
 }
 
 .discipline-grid .backdrop {
-  transition: transform 0.2s ease-in-out;
   &:nth-child(1), 
   &:nth-child(5){
     transform-origin: left;
@@ -70,32 +67,35 @@
 }
 
 
+.discipline-grid .backdrop.focused, 
+.discipline-grid .backdrop.unfocused {
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  z-index: 1500;
+}
+
 .discipline-grid .backdrop.focused {
   overflow: visible;
 
   animation-name: scaleUp;
 
-  filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
-}
-
-.discipline-grid .backdrop.focused, 
-.discipline-grid .backdrop.unfocused {
-  z-index: 1500;
+  
 }
 
 .discipline-grid .backdrop.unfocused {
   animation-name: scaleDown;
 }
 
-
 @keyframes scaleUp {
 
   from {
     transform: scale(1);
+    filter: none;
   }
 
   to {
     transform: scale(1.25);
+    filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
   }
   
 }
@@ -111,18 +111,3 @@
   }
 
 }
-
-
-
-
-
-
-// .discipline-grid:focus-within .backdrop,
-// .discipline-grid:hover .backdrop {
-//   transform: translateY(-12.5%);
-// }
-
-// .backdrop:focus ~ .backdrop,
-// .backdrop:hover ~ .backdrop {
-//   transform: translateX(-12.5%);
-// }
