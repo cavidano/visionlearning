@@ -10,7 +10,6 @@ export default class Grid {
     constructor() {
 
         const discList = document.querySelectorAll(".discipline-grid .backdrop");
-        const discInfoList = document.querySelectorAll(".discipline-grid .backdrop__info");
 
         let time;
 
@@ -19,11 +18,12 @@ export default class Grid {
             disc.addEventListener("mouseenter", (event) => {
 
                 event.preventDefault();
-
+                
                 time = setTimeout(() => {
+                    disc.classList.remove("unfocused");
                     disc.classList.add("focused");
                 }, 500);
-
+                
             });
 
             disc.addEventListener("mouseleave", (event) => {
@@ -31,7 +31,16 @@ export default class Grid {
                 event.preventDefault();
                 
                 clearTimeout(time);
-                disc.classList.remove("focused");
+
+                if (disc.classList.contains("focused")) {
+                    
+                    disc.classList.remove("focused");
+                    disc.classList.add("unfocused");
+
+                    disc.addEventListener('animationend', () => {
+                        disc.classList.remove("unfocused");
+                    });
+                }
 
             });
 

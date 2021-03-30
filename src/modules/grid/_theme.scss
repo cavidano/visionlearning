@@ -43,7 +43,7 @@
     font-size: calc( var(--font-size-md) * 0.875);
     transition: opacity 0.125s;
     
-    opacity: 0;
+    // opacity: 0;
 }
 
 .discipline-grid .backdrop {
@@ -51,6 +51,9 @@
   &:hover {
     cursor: pointer;
   }
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  z-index: auto;
 }
 
 .discipline-grid .backdrop {
@@ -66,16 +69,45 @@
   
 }
 
+
 .discipline-grid .backdrop.focused {
   overflow: visible;
-  z-index: 50;
-  
-  transform: scale(1.25);
+
+  animation-name: scaleUp;
 
   filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
+}
 
-  .backdrop__info {
-    opacity: 1;
+.discipline-grid .backdrop.focused, 
+.discipline-grid .backdrop.unfocused {
+  z-index: 1500;
+}
+
+.discipline-grid .backdrop.unfocused {
+  animation-name: scaleDown;
+}
+
+
+@keyframes scaleUp {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.25);
+  }
+  
+}
+
+@keyframes scaleDown {
+
+  from {
+    transform: scale(1.25);
+  }
+
+  to {
+    transform: scale(1);
   }
 
 }
