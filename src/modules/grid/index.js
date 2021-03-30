@@ -24,7 +24,6 @@ export default class Grid {
                     disc.classList.add("focused");
                 }, 500);
 
-
             });
 
             disc.addEventListener("mouseleave", (event) => {
