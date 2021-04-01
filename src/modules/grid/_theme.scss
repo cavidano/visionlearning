@@ -111,3 +111,40 @@
   }
 
 }
+
+.overview-grid{
+  display: grid;
+    --columns: 2;
+    --grid-gap: var(--spacer-4);
+
+    margin-top: var(--spacer-4);
+
+    position: relative;
+
+    display: grid;
+    gap: var(--grid-gap); 
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+
+    > * {
+      // text-align: center;
+      padding: var(--spacer-4);
+    }
+
+}
+
+// .vl{
+//   position: relative;
+//   overflow: hidden;
+
+//   > .logo {
+//     position: absolute;
+//     z-index: auto;
+
+//     transform: scale(6);
+//     top: 50%;
+//     opacity: 0.25;
+
+//   }
+
+// }
