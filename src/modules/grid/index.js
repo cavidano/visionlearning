@@ -9,7 +9,7 @@ export default class Grid {
 
     constructor() {
 
-        const discList = document.querySelectorAll(".discipline-grid .backdrop");
+        const discList = document.querySelectorAll(".grid--discipline .backdrop");
 
         let time;
 

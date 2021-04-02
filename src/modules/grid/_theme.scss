@@ -1,36 +1,86 @@
 
 //////////////////////////////////////////////
-// A. CSS Grid
+// A. Modules
 //////////////////////////////////////////////
 
-.css-grid {
-    --columns: 3;
+@use "sass:map";
+@use "../breakpoint/style" as breakpoint;
+
+//////////////////////////////////////////////
+// A. CSS Grid Component
+//////////////////////////////////////////////
+
+.grid {
+    --grid-columns: null;
     --grid-gap: var(--spacer-2);
-
-    display: grid;
-    gap: var(--grid-gap); 
-
-    grid-template-columns: repeat(var(--columns), 1fr);
-}
-
-//////////////////////////////////////////////
-// A. CSS Grid
-//////////////////////////////////////////////
-
-.discipline-grid {
-    --columns: 4;
-    --grid-gap: null;
 
     position: relative;
 
     display: grid;
-    gap: var(--grid-gap); 
-
-    grid-template-columns: repeat(var(--columns), 1fr);
-    
+    gap: var(--grid-gap);
 }
 
-.backdrop__info {
+.grid--3-colums {
+    @include breakpoint.breakpoints-up(lg) {
+    --grid-columns: 3;
+    --grid-gap: var(--spacer-4);
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+    }
+}
+
+//////////////////////////////////////////////
+// B. Grid Discipline
+//////////////////////////////////////////////
+
+// Grid Discipline Component
+
+.grid--discipline { 
+  --grid-columns: 4;
+  --grid-gap: null;
+
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+
+  .backdrop {
+    overflow: hidden;
+    z-index: auto;
+    
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:nth-child(1), 
+    &:nth-child(5) {
+      transform-origin: left;
+    }
+
+    &:nth-child(4), 
+    &:nth-child(8) {
+      transform-origin: right;
+    }
+
+    &.focused, 
+    &.unfocused {
+      animation-duration: 0.25s;
+      animation-fill-mode: forwards;
+      z-index: 1500;
+    }
+    
+    &.focused {
+      overflow: visible;
+      animation-name: scaleUp;
+    }
+
+    &.unfocused {
+      animation-name: scaleDown;
+    }
+
+  }
+
+}
+
+// Grid Discipline Info
+
+.grid--discipline__info {
     position: absolute;
     top: 100%;
 
@@ -42,49 +92,9 @@
     
     font-size: calc( var(--font-size-md) * 0.875);
     transition: opacity 0.125s;
-    
-    // opacity: 0;
 }
 
-.discipline-grid .backdrop {
-  overflow: hidden;
-  &:hover {
-    cursor: pointer;
-  }
-  z-index: auto;
-}
-
-.discipline-grid .backdrop {
-  &:nth-child(1), 
-  &:nth-child(5){
-    transform-origin: left;
-  }
-  &:nth-child(4), 
-  &:nth-child(8){
-    transform-origin: right;
-  }
-  
-}
-
-
-.discipline-grid .backdrop.focused, 
-.discipline-grid .backdrop.unfocused {
-  animation-duration: 0.25s;
-  animation-fill-mode: forwards;
-  z-index: 1500;
-}
-
-.discipline-grid .backdrop.focused {
-  overflow: visible;
-
-  animation-name: scaleUp;
-
-  
-}
-
-.discipline-grid .backdrop.unfocused {
-  animation-name: scaleDown;
-}
+// Keyframe Animations
 
 @keyframes scaleUp {
 
@@ -112,39 +122,14 @@
 
 }
 
-.overview-grid{
-  display: grid;
+//////////////////////////////////////////////
+// B. Grid Overview
+//////////////////////////////////////////////
+
+
+.grid--overview{
     --columns: 2;
     --grid-gap: var(--spacer-4);
 
-    margin-top: var(--spacer-4);
-
-    position: relative;
-
-    display: grid;
-    gap: var(--grid-gap); 
-
     grid-template-columns: repeat(var(--columns), 1fr);
-
-    > * {
-      // text-align: center;
-      padding: var(--spacer-4);
-    }
-
 }
-
-// .vl{
-//   position: relative;
-//   overflow: hidden;
-
-//   > .logo {
-//     position: absolute;
-//     z-index: auto;
-
-//     transform: scale(6);
-//     top: 50%;
-//     opacity: 0.25;
-
-//   }
-
-// }
