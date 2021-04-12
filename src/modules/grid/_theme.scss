@@ -11,20 +11,32 @@
 //////////////////////////////////////////////
 
 .grid {
-    --grid-columns: null;
-    --grid-gap: var(--spacer-2);
+  --grid-columns: null;
+  --grid-gap: var(--spacer-2);
 
-    position: relative;
+  position: relative;
 
-    display: grid;
-    gap: var(--grid-gap);
+  display: grid;
+  gap: var(--grid-gap);
 }
 
-.grid--3-colums {
+[class*="grid--columns"] {
     @include breakpoint.breakpoints-up(lg) {
-    --grid-columns: 3;
-    --grid-gap: var(--spacer-4);
+
+      &[class*="columns-2"] {
+        --grid-columns: 2;
+      }
+
+      &[class*="columns-3"] {
+        --grid-columns: 3;
+      }
+
+      &[class*="columns-4"] {
+        --grid-columns: 4;
+      }
+      
       grid-template-columns: repeat(var(--grid-columns), 1fr);
+
     }
 }
 
@@ -126,10 +138,27 @@
 // B. Grid Overview
 //////////////////////////////////////////////
 
-
-.grid--overview{
+.grid--introduction {
     --columns: 2;
     --grid-gap: var(--spacer-4);
 
-    grid-template-columns: repeat(var(--columns), 1fr);
+    @include breakpoint.breakpoints-up(lg) {
+      
+      [class*="--discipline"] {
+        grid-area: disciplines;
+      }
+
+      .vl {
+        grid-area: vl;
+      }
+
+      .ngss {
+        grid-area: ngss;
+      }
+      
+      grid-template-areas: 
+        "disciplines disciplines"
+        "vl ngss";
+
+    }
 }
