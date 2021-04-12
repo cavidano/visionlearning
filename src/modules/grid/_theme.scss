@@ -11,7 +11,7 @@
 //////////////////////////////////////////////
 
 .grid {
-  --grid-columns: null;
+  --grid-columns: 1;
   --grid-gap: var(--spacer-2);
 
   position: relative;
@@ -34,9 +34,9 @@
       &[class*="columns-4"] {
         --grid-columns: 4;
       }
-      
+  
       grid-template-columns: repeat(var(--grid-columns), 1fr);
-
+      
     }
 }
 
