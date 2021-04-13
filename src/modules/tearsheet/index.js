@@ -9,20 +9,19 @@ export default class Tearsheet {
     constructor() {
 
         const tsToggleButton = document.querySelector("[data-toggle='ts-menu']");
+        const tsContainer = document.querySelector(".tearsheet");
 
-        if(tsToggleButton) {
+        if (tsToggleButton) {
 
             tsToggleButton.setAttribute("aria-expanded", false);
 
             tsToggleButton.addEventListener("click", (event) => {
 
-                const collapseTargetID = event.target.getAttribute("data-target").replace(/#/, "");
+                event.preventDefault();
+                tsContainer.classList.toggle("menu-shown");
 
-                const collapseTarget = document.getElementById(collapseTargetID);
-
-                collapseTarget.classList.toggle("shown");
             });
-            
+
         }
 
     }
