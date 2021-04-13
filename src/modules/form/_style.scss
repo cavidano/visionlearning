@@ -269,6 +269,7 @@ fieldset {
 
     > .button {
         --button-border-radius: 0;
+        align-self: stretch;
     }
 
     > [class*="button--icon-only"] {
