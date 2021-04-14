@@ -206,7 +206,7 @@
 }
 
 //////////////////////////////////////////////
-// B. Grid Footer Links
+// B. Grid CTA Sponsor App
 //////////////////////////////////////////////
 
 .grid--cta-sponsors-app {
@@ -237,6 +237,42 @@
         margin-bottom: unset;
         margin-right: var(--spacer-3);
       }
+
+    }
+}
+
+//////////////////////////////////////////////
+// B. Grid CTA Sponsor App
+//////////////////////////////////////////////
+
+.grid--cool {
+    --grid-columns: 3;
+    --grid-gap: var(--spacer-4);
+
+    .svg {
+      margin-bottom: var(--spacer-2);
+    }
+
+    @include breakpoint.breakpoints-down(md) {
+      > * {
+        text-align: center;
+      }
+    }
+
+    @include breakpoint.breakpoints-up(md) {
+      grid-template-columns: auto auto  calc(100% / 3);
+    }
+
+    @include breakpoint.breakpoints-up(lg) {
+
+      // > * {
+      //   display: flex;
+      // }
+
+      // .svg {
+      //   margin-bottom: unset;
+      //   margin-right: var(--spacer-3);
+      // }
 
     }
 }
