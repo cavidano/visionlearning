@@ -162,3 +162,81 @@
 
     }
 }
+
+//////////////////////////////////////////////
+// B. Grid Footer Links
+//////////////////////////////////////////////
+
+.grid--footer-links {
+    --grid-gap: var(--spacer-3);
+
+    @include breakpoint.breakpoints-up(sm) {
+
+      .materials {
+        grid-area: materials;
+        // background-color: blue;
+      }
+
+      .about {
+        grid-area: about;
+        // background-color: red;
+      }
+
+      .help {
+        grid-area: help;
+        // background-color: purple;
+      }
+
+      .connect {
+        grid-area: connect;
+        // background-color: gray;
+      }
+      
+      grid-template-areas: 
+        "materials about help"
+        "connect connect connect";
+      
+    }
+
+    @include breakpoint.breakpoints-up(lg) {
+
+      grid-template-areas: 
+        "materials about help connect";
+    }
+}
+
+//////////////////////////////////////////////
+// B. Grid Footer Links
+//////////////////////////////////////////////
+
+.grid--cta-sponsors-app {
+    --grid-columns: 2;
+    --grid-gap: var(--spacer-4);
+
+    .svg{
+      margin-bottom: var(--spacer-1);
+    }
+
+    @include breakpoint.breakpoints-down(md) {
+      > * {
+        text-align: center;
+      }
+    }
+
+    @include breakpoint.breakpoints-up(md) {
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+    }
+
+    @include breakpoint.breakpoints-up(lg) {
+
+      > * {
+        display: flex;
+      }
+
+      .svg {
+        margin-bottom: unset;
+        margin-right: var(--spacer-3);
+      }
+
+    }
+}
