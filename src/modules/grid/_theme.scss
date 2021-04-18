@@ -164,115 +164,46 @@
 }
 
 //////////////////////////////////////////////
-// B. Grid Footer Links
+// B. Grid Global Foot
 //////////////////////////////////////////////
 
-.grid--footer-links {
-    --grid-gap: var(--spacer-3);
+.grid--global-foot {
+    --grid-gap: var(--spacer-2);
+    
+    font-size: var(--font-size-md);
 
-    @include breakpoint.breakpoints-up(sm) {
+    // > * {
+    //   background-color: yellow;
+    // }
 
-      .materials {
-        grid-area: materials;
-        // background-color: blue;
-      }
-
-      .about {
-        grid-area: about;
-        // background-color: red;
-      }
-
-      .help {
-        grid-area: help;
-        // background-color: purple;
-      }
-
-      .connect {
-        grid-area: connect;
-        // background-color: gray;
-      }
-      
-      grid-template-areas: 
-        "materials about help"
-        "connect connect connect";
-      
+    .nav-primary {
+      grid-area: nav-primary;
     }
 
-    @include breakpoint.breakpoints-up(lg) {
+    .nav-secondary {
+      grid-area: nav-secondary;
+    }
+
+    .ctas {
+      grid-area: ctas;
+    }
+
+    .connect {
+      grid-area: connect;
+    }
+
 
       grid-template-areas: 
-        "materials about help connect";
-    }
-}
-
-//////////////////////////////////////////////
-// B. Grid CTA Sponsor App
-//////////////////////////////////////////////
-
-.grid--cta-sponsors-app {
-    --grid-columns: 2;
-    --grid-gap: var(--spacer-4);
-
-    .svg{
-      margin-bottom: var(--spacer-1);
-    }
-
-    @include breakpoint.breakpoints-down(md) {
-      > * {
-        text-align: center;
-      }
-    }
-
-    @include breakpoint.breakpoints-up(md) {
-      grid-template-columns: repeat(var(--grid-columns), 1fr);
-    }
+        "nav-primary nav-secondary"
+        "ctas ctas"
+        "connect connect";
 
     @include breakpoint.breakpoints-up(lg) {
 
-      > * {
-        display: flex;
-      }
+      grid-template-columns: 1fr 1fr 2fr var(--spacer-4) 2fr;
 
-      .svg {
-        margin-bottom: unset;
-        margin-right: var(--spacer-3);
-      }
-
-    }
-}
-
-//////////////////////////////////////////////
-// B. Grid CTA Sponsor App
-//////////////////////////////////////////////
-
-.grid--cool {
-    --grid-columns: 3;
-    --grid-gap: var(--spacer-4);
-
-    .svg {
-      margin-bottom: var(--spacer-2);
-    }
-
-    @include breakpoint.breakpoints-down(md) {
-      > * {
-        text-align: center;
-      }
-    }
-
-    @include breakpoint.breakpoints-up(md) {
-      grid-template-columns: auto auto  calc(100% / 3);
-    }
-
-    @include breakpoint.breakpoints-up(lg) {
-
-      // > * {
-      //   display: flex;
-      // }
-
-      // .svg {
-      //   margin-bottom: unset;
-      //   margin-right: var(--spacer-3);
-      // }
-
+      grid-template-areas: 
+        "nav-primary nav-secondary ctas . connect";
+      
     }
 }
