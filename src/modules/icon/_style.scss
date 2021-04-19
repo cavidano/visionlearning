@@ -51,7 +51,7 @@ In this file:
 //////////////////////////////////////////////
 
 .icon_font {
-  font-family: 'NYC-Core-Icons';
+  font-family: 'Natura11y';
 }
 
 //////////////////////////////////////////////
@@ -70,113 +70,4 @@ In this file:
   to {
     transform: rotate(360deg);
   }
-}
-
-//////////////////////////////////////////////
-// E. Subway Icons
-//////////////////////////////////////////////
-
-[class*="icon_subway-"] {
-    position: relative;
-    display: flex;
-
-    &::before {
-        position: relative;
-        z-index: 2;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-
-        border-radius: 100%;
-        
-        transform-origin: center;
-        transform: scale(0.875);
-        
-        background-color: white;
-
-        z-index: 1;
-    }
-
-    &[class*="-express"]::after{
-      border-radius: unset;
-      transform: rotate(45deg) scale(0.6);
-    }
-}
-
-.icon_subway-a, 
-.icon_subway-c, 
-.icon_subway-e
-{
-  color: #0036a8 !important;
-}
-
-.icon_subway-b, 
-.icon_subway-d, 
-.icon_subway-f, 
-.icon_subway-f-express,
-.icon_subway-m
-{
-  color: #ff6319 !important;
-}
-
-.icon_subway-g {
-  color: #6cbe45 !important;
-}
-
-.icon_subway-l {
-  color: #a7a9ac !important;
-}
-
-.icon_subway-j, 
-.icon_subway-z
-{
-  color: #996633 !important;
-}
-
-.icon_subway-n,
-.icon_subway-q,
-.icon_subway-r,
-.icon_subway-w
-{
-
-  &::after {
-    background-color: black;
-  }
-
-  color: #FCCD01 !important;
-}
-
-.icon_subway-1, 
-.icon_subway-2, 
-.icon_subway-3
-{
-  color: #ee352e !important;
-}
-
-.icon_subway-4, 
-.icon_subway-5, 
-.icon_subway-6, 
-.icon_subway-6-express
-{
-  color: #00933c !important;
-}
-
-.icon_subway-7, 
-.icon_subway-7-express
-{
-  color: #b933ad !important;
-}
-
-.icon_subway-t {
-  color: #00add0 !important;
-}
-
-.icon_subway-s {
-  color: #808183 !important;
 }
