@@ -168,7 +168,7 @@
 //////////////////////////////////////////////
 
 .grid--global-foot {
-    --grid-gap: var(--spacer-2);
+    --grid-gap: var(--spacer-4);
     
     font-size: var(--font-size-md);
 
@@ -192,18 +192,16 @@
       grid-area: connect;
     }
 
-
-      grid-template-areas: 
-        "nav-primary nav-secondary"
-        "ctas ctas"
-        "connect connect";
+    grid-template-areas: 
+      "nav-primary nav-secondary"
+      "ctas ctas"
+      "connect connect";
 
     @include breakpoint.breakpoints-up(lg) {
 
-      grid-template-columns: 1fr 1fr 2fr var(--spacer-4) 2fr;
+      grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
 
       grid-template-areas: 
-        "nav-primary nav-secondary ctas . connect";
-      
+        "nav-primary nav-secondary ctas connect";
     }
 }
