@@ -13,6 +13,8 @@ In this file:
 
 @use "sass:map";
 @use "../icon/style" as icon;
+@use "../alert/style" as alert;
+@use "../color/style" as color;
 
 //////////////////////////////////////////////
 // B. Quiz Selectors
@@ -39,6 +41,7 @@ ol.quiz {
         border-radius: var(--form-field-border-radius);
         margin: var(--spacer-2) auto;
         overflow: hidden;
+        display: none;
     }
 
     .form-entry__field__label {
@@ -85,9 +88,26 @@ ol.quiz {
         
         font-style: italic;
         font-size: 90%;
-        color: green;
-        
-        // display: block;
+        color: var(--white-confirm);
     }
+    
 
+}
+
+.quiz__score {
+
+    @extend .alert;
+    @extend .alert--confirm;
+
+    display: none;
+    
+    margin: var(--form-field-padding-y) auto;
+    color: green;
+    padding-left: calc(1.25em + var(--form-field-padding-x));
+    
+    font-style: italic;
+    font-size: 90%;
+    color: green;
+
+    // display: block;
 }
