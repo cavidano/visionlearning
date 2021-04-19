@@ -647,7 +647,6 @@ fieldset {
 }
 
 
-
 // Form Option Radio
 
 .form-entry__option__radio > label > input ~ .radio__label::before {
@@ -656,48 +655,6 @@ fieldset {
 
 .form-entry__option__radio > label > input:checked ~ .radio__label::before {
     content: "\e939";
-}
-
-.form-entry__option--quiz {
-
-    .form-entry__option__radio > label > input ~ .radio__label::before {
-        @extend .vl-icon_font;
-    }
-
-    .form-entry__option__radio.answer-a > label > input ~ .radio__label::before {
-        content: "\e900";
-    }
-
-    .form-entry__option__radio.answer-b > label > input ~ .radio__label::before {
-        content: "\e901";
-    }
-
-    .form-entry__option__radio.answer-c > label > input ~ .radio__label::before {
-        content: "\e902";
-    }
-
-    .form-entry__option__radio.answer-d > label > input ~ .radio__label::before {
-        content: "\e903";
-    }
-
-    .form-entry__option__radio.answer-e > label > input ~ .radio__label::before {
-        content: "\e904";
-    }
-
-    .form-entry__option__radio > label > input:checked ~ .radio__label::before {
-        content: "\e905";
-    }
-
-    .response {
-        display: none;
-        margin-top: var(--form-field-padding-y);
-        padding-left: calc(1.25em + var(--form-field-padding-x));
-        
-        font-style: italic;
-        font-size: 90%;
-        color: green;
-    }
-
 }
 
 // Form Option Check

@@ -1,0 +1,93 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Quiz Selectors
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../icon/style" as icon;
+
+//////////////////////////////////////////////
+// B. Quiz Selectors
+//////////////////////////////////////////////
+
+ol.quiz {
+    padding-left: 1.5em;
+    list-style-position: outside;
+    font-weight: var(--body-font-weight-bold);
+
+    .form-entry__option {
+        font-weight: var(--body-font-weight-normal);
+    }
+
+    // li {
+    //     background-color: yellow;
+    // }
+
+}
+
+.quiz {
+
+    .quiz__image {
+        border-radius: var(--form-field-border-radius);
+        margin: var(--spacer-2) auto;
+        overflow: hidden;
+    }
+
+    .form-entry__field__label {
+        padding: unset ;
+    }
+
+    .form-entry__option__radio > label > input ~ .radio__label::before {
+        @extend .vl-icon_font;
+    }
+
+    .form-entry__option__radio:nth-child(1) > label > input ~ .radio__label::before {
+        content: "\e900";
+    }
+
+    .form-entry__option__radio:nth-child(2) > label > input ~ .radio__label::before {
+        content: "\e901";
+    }
+
+    .form-entry__option__radio:nth-child(3) > label > input ~ .radio__label::before {
+        content: "\e902";
+    }
+
+    .form-entry__option__radio:nth-child(4) > label > input ~ .radio__label::before {
+        content: "\e903";
+    }
+
+    .form-entry__option__radio:nth-child(5) > label > input ~ .radio__label::before {
+        content: "\e904";
+    }
+
+    .form-entry__option__radio > label > input:checked ~ .radio__label::before {
+        content: "\e905";
+    }
+
+    .form-entry__option__radio > label > input:not(:checked) ~ .radio__label::before {
+        opacity: 1;
+        color: var(--white-link);
+    }
+
+    .response {
+        display: none;
+        margin-top: var(--form-field-padding-y);
+        padding-left: calc(1.25em + var(--form-field-padding-x));
+        
+        font-style: italic;
+        font-size: 90%;
+        color: green;
+        
+        // display: block;
+    }
+
+}
