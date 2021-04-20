@@ -92,7 +92,6 @@ ol.quiz {
 
         display: block
     }
-    
 
 }
 
@@ -104,12 +103,11 @@ ol.quiz {
     display: none;
     
     margin: var(--form-field-padding-y) auto;
-    color: green;
     padding-left: calc(1.25em + var(--form-field-padding-x));
     
     font-style: italic;
     font-size: 90%;
     color: green;
 
-    // display: block;
+    display: block;
 }
