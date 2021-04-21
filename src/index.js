@@ -92,6 +92,9 @@ import "./modules/typography";
 
 import "./modules/z-index/index";
 
+import Quiz from "./modules/quiz";
+new Quiz();
+
 //////////////////////////////////////////////
 // Environments (For Testing Webpack)
 //////////////////////////////////////////////
