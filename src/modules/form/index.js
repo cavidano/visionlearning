@@ -269,7 +269,7 @@ export default class Form {
         /////////
 
         const quiz = document.querySelector('.quiz');
-        const submitButton = quiz.querySelector('button[type="submit"]');
+        const submitButton = document.querySelector('button[type="submit"]');
 
         function scoreQuiz(event) {
 
@@ -300,6 +300,7 @@ export default class Form {
             // Scroll to quizScore
 
             if (quizScore) {
+            
                 
                 quizScore.style.display = "block";
 
@@ -313,6 +314,8 @@ export default class Form {
             
         };
 
-        submitButton.addEventListener('click', scoreQuiz);
+        if (submitButton) {
+            submitButton.addEventListener('click', scoreQuiz);
+        }
     }
 }

@@ -21,28 +21,34 @@ In this file:
 //////////////////////////////////////////////
 
 .quiz {
-    // background-color: orangered;
     overflow: hidden;
+    
+    button[type="submit"]{
+        background-color: var(--white-link);
+        color: white !important;
+    }
 }
 
 .quiz__questions {
-    padding-left: 1.5em;
-    // list-style-position: inside;
-    font-weight: var(--body-font-weight-bold);
-
-    .form-entry__option {
-        font-weight: var(--body-font-weight-normal);
-    }
-
-    // li {
-        // background-color: yellow;
-    // }
+    // list-style: none;
+    counter-reset: section; 
+    background-color: yell;
 }
 
 .quiz__questions {
 
     .form-entry__field__label {
-        padding: unset ;
+        display: flex;
+        padding: unset;
+        padding-left: calc( var(--form-field-padding-x) + 2em);
+
+        &::before {
+            counter-increment: section;                   
+            content: counter(section) ".";
+            position: absolute;
+            left: 0;
+            padding-left: var(--form-field-padding-x);
+        }
     }
 
     .form-entry__option__radio > label > input ~ .radio__label::before {
@@ -117,12 +123,11 @@ In this file:
     &::before {
         position: absolute;
         content: "";
+
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-
-
 
         border-radius: inherit;
         pointer-events: none;
@@ -135,8 +140,7 @@ In this file:
         color: var(--white-confirm);
     }
 
-    display: none;    
-
+    display: none;
 }
 
 .quiz__score__header {
