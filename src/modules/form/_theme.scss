@@ -28,7 +28,7 @@ In this file:
 
 .quiz__questions {
     padding-left: 1.5em;
-    list-style-position: outside;
+    // list-style-position: inside;
     font-weight: var(--body-font-weight-bold);
 
     .form-entry__option {
@@ -38,7 +38,6 @@ In this file:
     // li {
         // background-color: yellow;
     // }
-
 }
 
 .quiz__questions {
@@ -98,7 +97,7 @@ In this file:
     font-style: italic;
     font-size: 90%;
 
-    display: block;
+    // display: block;
 
     color: var(--white-warn);
 
@@ -124,5 +123,4 @@ In this file:
     font-style: italic;
     font-size: 90%;
 
-    display: block;
 }

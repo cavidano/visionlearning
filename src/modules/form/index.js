@@ -265,5 +265,41 @@ export default class Form {
             fileUpload.addEventListener("dragend", dragOff);
             fileUpload.addEventListener("drop", dropped);
         });
+
+        /////////
+
+        const quiz = document.querySelector('.quiz');
+        const submitButton = quiz.querySelector('button[type="submit"]');
+
+        function scoreQuiz(event) {
+
+            event.preventDefault();
+
+            const quizResponsesList = quiz.querySelectorAll('.quiz__response');
+            const quizQuestionsParent = quiz.querySelector('.quiz__questions');
+            const quizQuestionsList = quizQuestionsParent.querySelectorAll('li.form-entry');
+
+            quizResponsesList.forEach((quizResponse) => {
+                quizResponse.classList.remove('display-block');
+            });
+
+            quizQuestionsList.forEach((quizQuestion) => {
+
+                let quizQuestionOptions = quizQuestion.querySelector('.form-entry__option');
+                let answered = quizQuestionOptions.querySelector('input:checked');
+
+                if (answered) {
+                   let answerResponse = answered.closest('label').nextElementSibling;
+                   answerResponse.classList.add('display-block');
+                }
+
+                
+
+            });
+            
+
+        };
+
+        submitButton.addEventListener('click', scoreQuiz);
     }
 }
