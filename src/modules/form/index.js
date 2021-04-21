@@ -275,9 +275,11 @@ export default class Form {
 
             event.preventDefault();
 
-            const quizResponsesList = quiz.querySelectorAll('.quiz__response');
             const quizQuestionsParent = quiz.querySelector('.quiz__questions');
             const quizQuestionsList = quizQuestionsParent.querySelectorAll('li.form-entry');
+            const quizResponsesList = quiz.querySelectorAll('.quiz__response');
+            
+            const quizScore = quiz.querySelector('.quiz__score');
 
             quizResponsesList.forEach((quizResponse) => {
                 quizResponse.classList.remove('display-block');
@@ -293,11 +295,22 @@ export default class Form {
                    answerResponse.classList.add('display-block');
                 }
 
-                
-
             });
-            
 
+            // Scroll to quizScore
+
+            if (quizScore) {
+                
+                quizScore.style.display = "block";
+
+                let myScroll = quizScore.offsetTop - 16;
+
+                window.scrollTo({
+                    top: myScroll,
+                    behavior: "smooth"
+                });
+            }
+            
         };
 
         submitButton.addEventListener('click', scoreQuiz);

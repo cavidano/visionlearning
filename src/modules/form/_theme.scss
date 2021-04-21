@@ -108,15 +108,11 @@ In this file:
 
 .quiz__score {
     position: relative;
-
-    margin: var(--spacer-4) auto;
+    padding: var(--spacer-2);
 
     p {
         margin-bottom: 0.25em;
     }
-    
-    // display: none;
-
 
     &::before {
         position: absolute;
@@ -132,8 +128,14 @@ In this file:
         pointer-events: none;
 
         background-color: currentColor;
-        opacity: 0.125;    
-    }    
+        opacity: 0.1;    
+    }
+
+    &.passed {
+        color: var(--white-confirm);
+    }
+
+    display: none;    
 
 }
 
