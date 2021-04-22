@@ -315,3 +315,9 @@ address {
         background: radial-gradient(circle, rgba(145,176,61,1) 0%, rgba(145,176,61,0.75) 75%);
     }
 }
+
+.cool{
+    .card__body h2{
+        color: var(--white-link);
+    }
+}
