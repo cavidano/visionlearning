@@ -215,3 +215,22 @@
         font-size: var(--font-size-lg);
     }
 }
+
+//////////////////////////////////////////////
+// C. VL Header
+//////////////////////////////////////////////
+
+#breadcrumb {
+    background-color: yellow;
+
+    .nav__dropdown{
+        --gap-size: 0.25em;
+    
+        background-color: red;
+    }
+
+    .accordion {
+        --accordion-panel-padding-y: var(--spacer-1);
+    }
+
+}

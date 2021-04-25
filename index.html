@@ -2548,14 +2548,101 @@
                     <div class="aspect-ratio aspect-ratio--3by2 border">
                         <div class="aspect-ratio__content flex-row align-items-center">
                             <div class="width-100 padding-4">
-                                <ul class="nav nav--breadcrumb">
+                                <ul class="nav nav--horizontal" id="breadcrumb">
                                     <li>
                                         <a class="button button--icon-only" href="#1" aria-label="Home">
                                             <span class="icon_home" aria-hidden="true"></span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#1">About</a>
+                                        <a href="#1" data-toggle="dropdown">
+                                            Library
+                                        </a>
+                                        <div class="nav__dropdown">
+
+                                            <div class="accordion">
+
+                                                <button class="accordion__button" id="acc-button-biology" data-toggle="accordion" aria-controls="acc-panel-biology" aria-expanded="false">
+                                                    Biology
+                                                </button>
+
+                                                <div class="accordion__panel" id="acc-panel-biology" data-accordion="panel" aria-labelledby="acc-button-biology" role="region">
+                                                    <div class="accordion__panel__content">
+                                                    <ul>
+                                                        <li>
+                                                            Cell Biology
+                                                        </li>
+                                                        <li>
+                                                            Energy in Living Systems
+                                                        </li>
+                                                        <li>
+                                                            Evolutionary Biology
+                                                        </li>
+                                                        <li>
+                                                            Genetics
+                                                        </li>
+                                                    </ul>
+                                                    </div>
+                                                </div>
+
+                                                <button class="accordion__button" id="acc-button-boroughs-the-bronx" data-toggle="accordion" aria-controls="acc-panel-boroughs-the-bronx" aria-expanded="false">
+                                                    Accordion Two
+                                                </button>
+
+                                                <div class="accordion__panel" id="acc-panel-boroughs-the-bronx" data-accordion="panel" aria-labelledby="acc-button-boroughs-the-bronx" role="region">
+                                                    <div class="accordion__panel__content">
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, maxime
+                                                                                                consequuntur! Assumenda aperiam alias aut, laudantium ut
+                                                            <a href="#1">voluptate asperiores</a>.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <button class="accordion__button" id="acc-button-boroughs-brooklyn" data-toggle="accordion" aria-controls="acc-panel-boroughs-brooklyn" aria-expanded="false">
+                                                    Accordion Three
+                                                </button>
+
+                                                <div class="accordion__panel" id="acc-panel-boroughs-brooklyn" data-accordion="panel" aria-labelledby="acc-button-boroughs-brooklyn" role="region">
+                                                    <div class="accordion__panel__content">
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, maxime
+                                                                                                consequuntur! Assumenda aperiam alias aut, laudantium ut
+                                                            <a href="#1">voluptate asperiores</a>.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <button class="accordion__button" id="acc-button-boroughs-queens" data-toggle="accordion" aria-controls="acc-panel-boroughs-queens" aria-expanded="false">
+                                                    Accordion Four
+                                                </button>
+
+                                                <div class="accordion__panel" id="acc-panel-boroughs-queens" data-accordion="panel" aria-labelledby="acc-button-boroughs-queens" role="region">
+                                                    <div class="accordion__panel__content">
+                                                        <p>
+                                                            Queens is a New York City borough on Long Island across the East River from Manhattan. Flushing Meadows Corona Park, with the Unisphere, a 12-story 1964 World's Fair globe sculpture, hosts the annual U.S. Open tennis tournament.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <button class="accordion__button" id="acc-button-boroughs-staten-island" data-toggle="accordion" aria-controls="acc-panel-boroughs-staten-island" aria-expanded="false">
+                                                    Accordion Five
+                                                </button>
+
+                                                <div class="accordion__panel" id="acc-panel-boroughs-staten-island" data-accordion="panel" aria-labelledby="acc-button-boroughs-staten-island" role="region">
+                                                    <div class="accordion__panel__content">
+                                                        <p>
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, maxime
+                                                                                                consequuntur! Assumenda aperiam alias aut, laudantium ut
+                                                            <a href="#1">voluptate asperiores</a>.
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- .accordion -->
+
+                                        </div>
                                     </li>
                                     <li>
                                         Services

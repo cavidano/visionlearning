@@ -431,9 +431,9 @@ In this file:
 
 .nav--breadcrumb {
     --breadcrumb-font-size: var(--font-size-sm);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
 
     font-size: var(--breadcrumb-font-size);
 
