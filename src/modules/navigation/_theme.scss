@@ -225,7 +225,6 @@
 
     .nav__dropdown{
         --gap-size: 0.25em;
-    
         background-color: red;
     }
 
@@ -233,4 +232,25 @@
         --accordion-panel-padding-y: var(--spacer-1);
     }
 
+    .accordion__panel__content{
+        ul {
+            list-style: none;
+        }
+    }
+
+}
+
+.disc-subcat {
+    background-color: blueviolet;
+    padding-left: 20px;
+    > li {
+    position: relative;
+        &::before {
+            position: absolute;
+            content: "+";
+            left: 0;
+            top: 0;
+            background-color: burlywood;
+        }
+    }
 }
