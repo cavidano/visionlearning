@@ -94,5 +94,5 @@ In this file:
 .accordion__panel {
     overflow: hidden;
     transition: max-height var(--accordion-animation);
-    max-height: auto;
+    max-height: 0;
 }
