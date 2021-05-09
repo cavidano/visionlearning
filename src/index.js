@@ -52,6 +52,9 @@ import "./modules/flex";
 import Forms from "./modules/forms";
 new Forms();
 
+import Grid from "./modules/grid";
+new Grid();
+
 import "./modules/grid";
 
 import "./modules/icons";
