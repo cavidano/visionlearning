@@ -13,7 +13,7 @@ module.exports = merge(common, {
         children: false
     },
     devServer: {
-        port: 8080, 
+        port: 8080,
         contentBase: path.resolve(__dirname)
     }, 
     module: {
@@ -42,18 +42,8 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.html',
-            filename: 'index.html',
-            inject: 'body'
-        }),
-        new HtmlWebpackPlugin({
-            template: './home.html',
-            filename: 'home.html',
-            inject: 'body'
-        }),
-        new HtmlWebpackPlugin({
-            template: './discipline.html',
-            filename: 'discipline.html',
+            template: './tearsheet.html',
+            filename: 'tearsheet.html',
             inject: 'body'
         })
     ]
