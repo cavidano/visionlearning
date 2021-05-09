@@ -205,3 +205,31 @@
         "nav-primary nav-secondary ctas connect";
     }
 }
+
+//////////////////@extend
+
+.disc-banner {
+
+  display: grid;
+  gap: var(--spacer-4);
+
+  > .banner-headline {
+    grid-area: headline;
+  }
+
+  > .disc-banner__teaser {
+    grid-area: teaser;
+
+  }
+  > .disc-banner__summary {
+    grid-area: summary;
+
+  }
+  
+  grid-template-columns: 66% auto;
+
+  grid-template-areas:
+    "headline headline"
+    "summary teaser";
+
+}
