@@ -4,7 +4,7 @@
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "../breakpoint/style" as breakpoint;
+@use "../breakpoints/style" as breakpoints;
 
 //////////////////////////////////////////////
 // A. CSS Grid Component
@@ -21,7 +21,7 @@
 }
 
 [class*="grid--columns"] {
-    @include breakpoint.breakpoints-up(lg) {
+    @include breakpoints.breakpoints-up(lg) {
 
       &[class*="columns-2"] {
         --grid-columns: 2;
@@ -142,7 +142,7 @@
     --columns: 2;
     --grid-gap: var(--spacer-4);
 
-    @include breakpoint.breakpoints-up(lg) {
+    @include breakpoints.breakpoints-up(lg) {
       
       [class*="--discipline"] {
         grid-area: disciplines;
@@ -197,7 +197,7 @@
       "ctas ctas"
       "connect connect";
 
-    @include breakpoint.breakpoints-up(lg) {
+    @include breakpoints.breakpoints-up(lg) {
 
       grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
 

@@ -3,8 +3,8 @@
 // A. Modules
 //////////////////////////////////////////////
 
-@use "../breakpoint/style" as breakpoint;
-@use "../border/style" as border;
+@use "../breakpoints/style" as breakpoints;
+@use "../borders/style" as borders;
 @use "../color/style" as color;
 @use "../collapse/style" as collapse;
 
@@ -41,7 +41,7 @@
     padding: var(--spacer-1);
 }
 
-@include breakpoint.breakpoints-down(lg) {
+@include breakpoints.breakpoints-down(lg) {
 
     .vl-hat__menu {
         padding-top: var(--spacer-2);
@@ -50,7 +50,7 @@
 
 }
 
-@include breakpoint.breakpoints-up(lg) {
+@include breakpoints.breakpoints-up(lg) {
     
     .vl-hat__toggle-button {
         display: none;
@@ -182,7 +182,7 @@
     
 }
 
-@include breakpoint.breakpoints-down(lg) {
+@include breakpoints.breakpoints-down(lg) {
 
     .vl-header__logo,
     .vl-header__menu {
@@ -200,7 +200,7 @@
     }
 }
 
-@include breakpoint.breakpoints-up(lg) {
+@include breakpoints.breakpoints-up(lg) {
     .vl-header {
         display: flex;
         align-items: stretch;
