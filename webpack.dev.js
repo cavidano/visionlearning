@@ -14,7 +14,8 @@ module.exports = merge(common, {
     },
     devServer: {
         port: 8080,
-        contentBase: path.resolve(__dirname)
+        contentBase: path.resolve(__dirname),
+        index: 'tearsheet.html'
     }, 
     module: {
         rules: [
