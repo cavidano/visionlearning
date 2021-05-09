@@ -61,8 +61,7 @@
 
 		<div class="vl-header__logo">
 
-			<a
-				href="#1" data-logo="brand">
+			<a href="{{ site.baseurl }}/index.html" data-logo="brand">
 
 				<!-- Placeholder logo, replace the following <svg> tag with your own image version -->
 				<svg xmlns="http://www.w3.org/2000/svg" width="275" height="60" viewbox="0 0 275 60">
@@ -123,7 +122,7 @@
 		<nav class="vl-header__menu">
 			<ul>
 				<li class="library">
-					<a href="#1">
+					<a href="#1" {% if page.url contains '/library' %} aria-current="page" {% endif %}>
 						<span class="title">Library</span>
 						<span class="tagline">Learning modules</span>
 					</a>
