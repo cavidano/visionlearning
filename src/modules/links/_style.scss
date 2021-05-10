@@ -46,7 +46,7 @@ p > a {
 // C. Logo Link
 //////////////////////////////////////////////
 
-a[data-logo="brand"] {
+[data-logo="brand"] {
     display: inline-block;
 
     > svg {
