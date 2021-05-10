@@ -235,12 +235,17 @@
 	const moduleGridView = document.getElementById("module-grid-view");
 	const moduleListView = document.getElementById("module-list-view");
 
-	const loadModules = async () => {
+	const truncateString = (yourString, maxLength) => {
+		const index = yourString.indexOf(" ", maxLength);
+		return index === -1 ? yourString : yourString.substring(0, index) + '...'
+	}
+
+	const loadLibraryData = async () => {
 		try {
 			const response = await fetch(libraryData);
 			const moduleData = await response.json();
 
-			console.log("moduleData ===== >", moduleData);
+			console.log("libraryData ===== >", moduleData);
 
 			displayModules(moduleData);
 
@@ -258,7 +263,7 @@
 
 			let categories = moduleArray.categories;
 
-			let categoryDisplay = categories.map((category, index) => {
+			const moduleGridHTML = categories.map((category) => {
 
 				return `
 					<div class="margin-y-5">
@@ -268,11 +273,6 @@
 						<div class="grid grid--columns-4">
 
 						${category.modules.map((module) => {
-
-							const truncateString = (yourString, maxLength) => {
-								const index = yourString.indexOf(" ", maxLength);
-								return index === -1 ? yourString : yourString.substring(0, index) + '...'
-							}
 
 							let summary = truncateString(module.summary, 120);
 
@@ -291,33 +291,32 @@
 									</p>
 								</div>
 
-									<hr class="margin-x-3">
+								<hr class="margin-x-3">
 
-									<div class="card__body font-size-md">
-										<strong>Did you know?</strong>
-										<p>
-											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex facilis labore reiciendis.
-										</p>
+								<div class="card__body font-size-md">
+									<strong>Did you know?</strong>
+									<p>
+										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex facilis labore reiciendis.
+									</p>
 
-										<strong>NGSS</strong>
-										<p>
-											HS-C6.2, HS-LS1.C2
-										</p>
-									</div>
+									<strong>NGSS</strong>
+									<p>
+										HS-C6.2, HS-LS1.C2
+									</p>
+								</div>
 
-									<div class="card__foot border-top font-size-md">
-										<ul class="nav nav--horizontal justify-content-between">
-											<li>
-												<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
-													<span class="vl_icon_bookmark-add button__icon"></span>
-												</a>
-											</li>
-											<li>
-												<a class="button button--outline rounded-pill" href="#1">Go To Module</a>
-											</li>
-										</ul>
-									</div>
-
+								<div class="card__foot border-top font-size-md">
+									<ul class="nav nav--horizontal justify-content-between">
+										<li>
+											<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
+												<span class="vl_icon_bookmark-add button__icon"></span>
+											</a>
+										</li>
+										<li>
+											<a class="button button--outline rounded-pill" href="#1">Go To Module</a>
+										</li>
+									</ul>
+								</div>
 
 							</div>`;
 
@@ -329,15 +328,54 @@
 
 			}).join('');
 
-			return categoryDisplay;
+			const moduleListHTML = categories.map((category) => {
 
-		}).join('');
+				return `
+					<div class="margin-y-5">
 
-	moduleGridView.innerHTML = moduleDisplayHTML;
+						<h2 class="h4 margin-bottom-4">${category.name}</h2>
+
+						<ul class="list-divider">
+
+							${category.modules.map((module) => {
+
+								let summary = truncateString(module.summary, 120);
+
+								return `
+								<li>
+									<span class="list-divider__cell">
+										<a class="link" href="#1">
+											${module.title}
+										</a>
+									</span>
+									<span class="list-divider__cell">
+										<div class="button-group justify-content-end">
+											<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
+												<span class="vl_icon_bookmark-add button__icon"></span>
+											</a>
+											<a class="button button--outline rounded-pill" href="#1">Go To Module</a>
+										</div>
+									</span>
+								</li>`;
+
+							}).join("")}
+							
+						</ul>
+
+					</div>`;
+
+			}).join('');
+
+			moduleGridView.innerHTML = moduleGridHTML;
+			moduleListView.innerHTML = moduleListHTML;
+		});
+
+		moduleDisplayHTML()
+		
 
 	};
 
-	loadModules();
+	loadLibraryData();
 
 </script>
 

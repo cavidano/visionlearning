@@ -11,3 +11,24 @@
 
     --body-font-size: 20px;
 }
+
+.list-divider { 
+    list-style: none;
+
+    > li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    > li:not(:last-child) {
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
+    }
+
+}
+
+.list-divider__cell{
+    padding: var(--spacer-1) var(--spacer-2);
+}

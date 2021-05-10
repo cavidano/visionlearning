@@ -142,6 +142,44 @@
                         ]
                     }
                 ]
+            },
+            {
+                "name": "Energy in Living Systems",
+                "modules": [
+                    {
+                        "title": "Energy Metabolism I",
+
+                        "summary": 
+                            "Food fuels our bodies, but how does our body convert food molecules into usable energy? This module looks at glycolysis and the Krebs cycle, two important stages of cellular respiration, the process by which cells harvest energy from food. It highlights the work of Sir Hans Adolf Krebs and his focus on cyclic pathways as he discovered the main biochemical pathway for breaking down fuel to produce energy.",
+
+                        "authors": [
+                            "Anthony Carpi Fish, PHD"
+                        ]
+                    },
+                    {
+                        "title": "Energy Metabolism II",
+
+                        "summary":
+                            "ATP is the main energy currency of living cells. This module answers the question of how most ATP is generated. A look at two important compounds, NADH and FADH2, reveals their important role in the production of ATP. The module explains the workings of the electron transport chain, which provides high-energy electrons to fuel the ATP-producing process called oxidative phosphorylation.",
+
+                        "authors": [
+                            "Anthony Carpi Fish, PHD", 
+                            "Ann Egger Salad"
+                        ]
+                    },
+                    {
+                        "title": "Photosynthesis I",
+
+                        "summary": 
+                            "Through photosynthesis, plants harvest energy from the sun to produce oxygen and sugar, the basic energy source for all living things. This module introduces photosynthesis, beginning with experiments leading to its discovery. The stages of photosynthesis are explained. Topics include the role of chlorophyll, the action spectrum of photosynthesis, the wavelengths of light that drive photosynthesis, light-harvesting complexes, and the electron transport chain.",
+
+                        "authors": [
+                            "Nathan H Lents, Ph.D.", 
+                            "John Nishan"
+                        ]
+                    }
+                    
+                ]
             }
             
         ]
