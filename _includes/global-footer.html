@@ -226,93 +226,119 @@
 
 <script src="{{ site.baseurl }}/dist/js/visionlearning.js"></script>
 
+{% if page.title == 'Biology' %}
+
 <script>
 
-const libraryData = "{{ site.baseurl }}/lib/json/vl-library.json";
+	const libraryData = "{{ site.baseurl }}/lib/json/vl-library.json";
 
-const moduleGridView = document.getElementById("module-grid-view");
-const moduleListView = document.getElementById("module-list-view");
+	const moduleGridView = document.getElementById("module-grid-view");
+	const moduleListView = document.getElementById("module-list-view");
 
-const loadModules = async () => {
-    try {
-		const response = await fetch(libraryData);
-        const moduleData = await response.json();
+	const loadModules = async () => {
+		try {
+			const response = await fetch(libraryData);
+			const moduleData = await response.json();
 
-		console.log("moduleData ===== >", moduleData);
+			console.log("moduleData ===== >", moduleData);
 
-		displayModules(moduleData);
+			displayModules(moduleData);
 
-    } catch (err) {
-        console.warn(err);
-    }
-};
+		} catch (err) {
+			console.warn(err);
+		}
+	};
 
-const displayModules = (modules) => {
+	const displayModules = (modules) => {
 
-	const moduleDisplayHTML = modules.map((moduleArray) => {
+		const moduleDisplayHTML = modules.map((moduleArray) => {
 
-		let discipline = moduleArray.discipline;
-		let introduction = moduleArray.introduction;
+			let discipline = moduleArray.discipline;
+			let introduction = moduleArray.introduction;
 
-		let categories = moduleArray.categories;
+			let categories = moduleArray.categories;
 
-		let cpRows = categories.map((category) => {
-			return `
-				<h3 data-prop>${category.name}</h3>
-				<tr>
-					<td>
-						
-					</td>
-					<td>
+			let categoryDisplay = categories.map((category, index) => {
+
+				return `
+					<div class="margin-y-5">
+
+						<h2 class="h4 margin-bottom-4">${category.name}</h2>
+
+						<div class="grid grid--columns-4">
+
 						${category.modules.map((module) => {
-					    	return `
-								<span class="display-block">
-								${module.title}
-								</span>
-								<span class="display-block">
-								${module.summary}
-								</span>
-								`;           
-    					}).join("")}
-					</td>
-				</tr>
-			`;
+
+							const truncateString = (yourString, maxLength) => {
+								const index = yourString.indexOf(" ", maxLength);
+								return index === -1 ? yourString : yourString.substring(0, index) + '...'
+							}
+
+							let summary = truncateString(module.summary, 120);
+
+							return `
+
+							<div class="card border">
+
+								<div class="card__body">
+									<h5 class=" font-weight-normal">
+									<a class="link" href="#1">
+										${module.title}
+									</a>
+									</h5>
+									<p>
+										${summary}
+									</p>
+								</div>
+
+									<hr class="margin-x-3">
+
+									<div class="card__body font-size-md">
+										<strong>Did you know?</strong>
+										<p>
+											Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex facilis labore reiciendis.
+										</p>
+
+										<strong>NGSS</strong>
+										<p>
+											HS-C6.2, HS-LS1.C2
+										</p>
+									</div>
+
+									<div class="card__foot border-top font-size-md">
+										<ul class="nav nav--horizontal justify-content-between">
+											<li>
+												<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
+													<span class="vl_icon_bookmark-add button__icon"></span>
+												</a>
+											</li>
+											<li>
+												<a class="button button--outline rounded-pill" href="#1">Go To Module</a>
+											</li>
+										</ul>
+									</div>
+
+
+							</div>`;
+
+						}).join("")}
+					
+						</div>
+
+					</div>`;
+
+			}).join('');
+
+			return categoryDisplay;
+
 		}).join('');
 
-		return `
-			<div class="cp-header box-shadow-1">
-				<span class="cp-header__title">${discipline}</span>
-				<span class="cp-header__title">${introduction}</span>
-			</div>
-			<table class="table">
-				<thead>
-					<tr>
-						<th scope="col">
-							CSS Variable
-						</th>
-						<th scope="col">Default Value</th>
-						<th scope="col">
-							<button data-clipboard="all">
-								<span>Copy All</span>
-							</button>
-						</th>
-						<th scope="col">Description</th>
-					</tr>
-				</thead>
-				<tbody>
-					${cpRows}
-				</tbody>
-			</table>
-		`;
+	moduleGridView.innerHTML = moduleDisplayHTML;
 
-	}).join('');
+	};
 
-moduleGridView.innerHTML = moduleDisplayHTML;
-
-};
-
-
-loadModules();
+	loadModules();
 
 </script>
 
+{% endif %}

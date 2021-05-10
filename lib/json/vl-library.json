@@ -1,32 +1,149 @@
  [
-        {    
-            "discipline": "Biology",
-            "introduction" : "Lorem Ipsum...",
-            "categories": [
-                {
-                    "name": "Biological Molecules",
-                    "modules": [
-                        {
-                            "title": "Carbohydrates",
-                            "authors": [
-                                "Anthony Carpi Fish, PHD", 
-                                "Ann Egger Salad"
-                            ],
-                            "summary": "Lorem Ipsum..."
-                        },
-                        {
-                            "title": "Fats and Proteins",
-                            "authors": [
-                                "Anthony Carpi Fish, PHD", 
-                                "Ann Egger Salad"
-                            ],
-                            "summary": "Lorem Ipsum..."
-                        }
+    {    
+        "discipline": "Biology",
+        "introduction" : "Lorem Ipsum...",
+        "categories": [
+            {
+                "name": "Biological Molecules",
+                "modules": [
+                    {
+                        "title": "Carbohydrates",
 
-                    ]
-                }
-                
-                
-            ]
-        }
-   ]
+                        "summary": 
+                            "Our bodies are efficient chemical processing plants, breaking down nutrients to use and store for energy. This module introduces carbohydrates, an important macronutrient. It explains how different carbohydrates are used by plants and animals. Simple sugars and complex carbohydrates are identified, and their biochemical structures are compared and contrasted.",
+
+                        "authors": [
+                            "Anthony Carpi Fish, PHD"
+                        ]
+                    },
+                    {
+                        "title": "Fats and Proteins",
+
+                        "summary":
+                            "Fats and proteins are two of the major nutrient groups that our bodies need. This module provides an introduction to these two macronutrients. The basic chemical structure of fats as triglycerides is presented along with the purposes and types of fat. The module also introduces the amazing structure of protein molecules, including the peptide bond, and explains the purpose of proteins.",
+
+                        "authors": [
+                            "Anthony Carpi Fish, PHD", 
+                            "Ann Egger Salad"
+                        ]
+                    },
+                    {
+                        "title": "Biological Proteins",
+
+                        "summary": 
+                            "This module explores how proteins are polymers composed of building blocks called amino acids. Using the historic research of Frederick Sanger on insulin as a starting point, the complex structures of proteins, due to molecular bonds like the disulfide bridge and the peptide bond, are explained.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    },
+                    {
+                        "title": "Blood Biology I",
+
+                        "summary": 
+                            "Knowledge of blood components brought about a revolution in surgery through safe transfusion. The module traces the development of our understanding of blood over centuries, beginning in 1628 with English physician William Harvey's breakthrough research on circulation. With a focus on early 20th-century experiments by Austrian researcher Karl Landsteiner, the module shows how the identification of clotting factors, blood types, and antigens was critical to medical science. Whole blood, plasma, serum, and different types of blood cells are defined.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    },
+                    {
+                        "title": "Lipids",
+
+                        "summary": 
+                            "Fats, oils, waxes, steroids, certain plant pigments, and parts of the cell membrane – these are all lipids. This module explores the world of lipids, a class of compounds produced by both plants and animals. It begins with a look at the chemical reaction that produces soap and then examines the chemical composition of a wide variety of lipid types. Properties and functions of lipids are discussed.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Cell Biology",
+                "modules": [
+                    {
+                        "title": "Discovery and Structure of Cells",
+
+                        "summary": 
+                            "Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.",
+
+                        "authors": [
+                            "Anthony Carpi Fish, PHD"
+                        ]
+                    },
+                    {
+                        "title": "Membranes I",
+
+                        "summary":
+                            "Cell membranes are much more than passive barriers; they are complex and dynamic structures that control what enters and leaves the cell. This module explores how scientists came to understand cell membranes, including the experiments that led to the development of the fluid-mosaic model of membrane structure. The module describes how the components and structure of cell membranes relate to key functions.",
+
+                        "authors": [
+                            "Anthony Carpi Fish, PHD", 
+                            "Ann Egger Salad"
+                        ]
+                    },
+                    {
+                        "title": "Membranes II",
+
+                        "summary": 
+                            "For living things to survive, different molecules need to enter and leave cells, yet cell membranes serve as a barrier to most molecules. Fortunately, all living cells have built-in transporters that allow water, glucose, sodium, potassium, chloride, and other molecules to cross the plasma membrane. This module looks at how passive and active transporters work. It highlights the importance of the study of cell membranes by looking at advances in treating cystic fibrosis and common digestive ailments as well as the development of effective pain relievers.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    },
+                    {
+                        "title": "Cellular Organelles I",
+
+                        "summary": 
+                            "Evolution isn't always about competition. It can also be about cooperation, as is the case with the development of chloroplasts and mitochondria from free-living bacteria. This module explains the theory of endosymbiosis along with its origins. Convincing evidence in support of the theory is presented. The evolution of the nucleus and other organelles through invagination of the cell membrane is also discussed.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    },
+                    {
+                        "title": "Cell Division I",
+
+                        "summary": 
+                            "Cell division is an enormously complex process that must go on millions and millions of times during the life of an organism. This module explains the difference between binary fission and the cell division cycle. The stages of cell division are explored, and research that contributed to our understanding of the process is described.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    },
+                    {
+                        "title": "Cell Division II",
+
+                        "summary": 
+                            "Beginning with the discovery of mitosis, the module details each phase of this cell process. It provides an overview of the structure of cell components that are critical to mitosis. The module describes Clark Noble’s experiments with the Madagascar Periwinkle, which led to the discovery of an effective cancer treatment drug. The relationship between mitosis and cancer is explored as is the mechanism by which anti-cancer drugs work to slow down or prevent cell division.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    },
+                    {
+                        "title": "Absorption, Distribution, and Storage of Chemicals",
+
+                        "summary": 
+                            "In order for many medicines to work, the chemicals must move from the outside environment into the body. This module discusses the different mechanisms by which chemicals cross the cell membrane and the factors that influence this process. In addition to introducing biological absorption, the module explains how chemicals are stored and distributed within the body.",
+
+                        "authors": [
+                            "David Warmflash, MD", 
+                            "Nathan H Lents, Ph.D."
+                        ]
+                    }
+                ]
+            }
+            
+        ]
+    }
+]
