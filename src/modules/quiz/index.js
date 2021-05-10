@@ -10,10 +10,10 @@ export default class Quiz {
 
         const quiz = document.querySelector('.quiz');
         
-        const submitButton = quiz.querySelector('button[type="submit"]');
-
         if(quiz){
 
+            const submitButton = quiz.querySelector('button[type="submit"]');
+            
             console.log(submitButton);
 
             function scoreQuiz(event) {
@@ -57,8 +57,9 @@ export default class Quiz {
                 }
 
             };
-            
+
             submitButton.addEventListener('click', scoreQuiz);
+            
         }
     }
 }

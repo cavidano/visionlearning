@@ -212,7 +212,6 @@
 
 </footer>
 
-
 <!-- Google Translate JS -->
 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -226,3 +225,94 @@
 </script>
 
 <script src="{{ site.baseurl }}/dist/js/visionlearning.js"></script>
+
+<script>
+
+const libraryData = "{{ site.baseurl }}/lib/json/vl-library.json";
+
+const moduleGridView = document.getElementById("module-grid-view");
+const moduleListView = document.getElementById("module-list-view");
+
+const loadModules = async () => {
+    try {
+		const response = await fetch(libraryData);
+        const moduleData = await response.json();
+
+		console.log("moduleData ===== >", moduleData);
+
+		displayModules(moduleData);
+
+    } catch (err) {
+        console.warn(err);
+    }
+};
+
+const displayModules = (modules) => {
+
+	const moduleDisplayHTML = modules.map((moduleArray) => {
+
+		let discipline = moduleArray.discipline;
+		let introduction = moduleArray.introduction;
+
+		let categories = moduleArray.categories;
+
+		let cpRows = categories.map((category) => {
+			return `
+				<h3 data-prop>${category.name}</h3>
+				<tr>
+					<td>
+						
+					</td>
+					<td>
+						${category.modules.map((module) => {
+					    	return `
+								<span class="display-block">
+								${module.title}
+								</span>
+								<span class="display-block">
+								${module.summary}
+								</span>
+								`;           
+    					}).join("")}
+					</td>
+				</tr>
+			`;
+		}).join('');
+
+		return `
+			<div class="cp-header box-shadow-1">
+				<span class="cp-header__title">${discipline}</span>
+				<span class="cp-header__title">${introduction}</span>
+			</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">
+							CSS Variable
+						</th>
+						<th scope="col">Default Value</th>
+						<th scope="col">
+							<button data-clipboard="all">
+								<span>Copy All</span>
+							</button>
+						</th>
+						<th scope="col">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					${cpRows}
+				</tbody>
+			</table>
+		`;
+
+	}).join('');
+
+moduleGridView.innerHTML = moduleDisplayHTML;
+
+};
+
+
+loadModules();
+
+</script>
+

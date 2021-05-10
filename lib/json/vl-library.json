@@ -1,0 +1,32 @@
+ [
+        {    
+            "discipline": "Biology",
+            "introduction" : "Lorem Ipsum...",
+            "categories": [
+                {
+                    "name": "Biological Molecules",
+                    "modules": [
+                        {
+                            "title": "Carbohydrates",
+                            "authors": [
+                                "Anthony Carpi Fish, PHD", 
+                                "Ann Egger Salad"
+                            ],
+                            "summary": "Lorem Ipsum..."
+                        },
+                        {
+                            "title": "Fats and Proteins",
+                            "authors": [
+                                "Anthony Carpi Fish, PHD", 
+                                "Ann Egger Salad"
+                            ],
+                            "summary": "Lorem Ipsum..."
+                        }
+
+                    ]
+                }
+                
+                
+            ]
+        }
+   ]
