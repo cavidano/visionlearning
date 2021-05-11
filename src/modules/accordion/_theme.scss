@@ -1,0 +1,19 @@
+
+
+.article__aside {
+
+    .accordion {
+        --accordion-button-padding-x: var(--spacer-2);
+        --accordion-panel-padding-y: var(--spacer-2);
+        --accordion-panel-padding-x: var(--accordion-button-padding-x);
+        color: var(--white-link);
+    }
+    
+    .accordion__button {
+        font-weight: var(--body-font-weight-bold);
+    }
+
+    .accordion__button[aria-expanded="true"] {
+        color: var(--dark);
+    }
+}

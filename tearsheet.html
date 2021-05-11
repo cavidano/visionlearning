@@ -185,7 +185,7 @@
                     <div class="accordion">
 
                         <button
-                            class="accordion__button h5"
+                            class="accordion__button"
                             id="acc-button-example-01"
                             data-toggle="accordion"
                             aria-controls="acc-panel-example-01"
@@ -460,13 +460,13 @@
                     </h2>
                 </header>
 
-                <figure class="container wide margin-y-4">
+                <figure class="container margin-y-4">
 
-                    <article class="article">
+                    <article class="article" style="--subtle-fill-opacity: 0.025;">
 
-                        <header class="article__head">
+                        <header class="article__head subtle-fill">
 
-                            <div class="container padding-y-4 text-align-center">
+                            <div class="container padding-y-5 text-align-center">
                                 <span class="font-size-md">
                                     <strong>Cell Biology</strong>
                                 </span>
@@ -476,7 +476,7 @@
 
                         </header>
 
-                        <div class="article__main">
+                        <div class="article__main box-shadow-1">
 
                             <div class="tabs" role="tablist">
 
@@ -550,8 +550,6 @@
                                                 samples were of cork – composed of long-dead
                                                 cells, absent of any cytosol or organelles.
                                             </p>
-
-                                            </p>
                                         </section>
                                         <!-- .container -->
                                 </div>
@@ -559,14 +557,6 @@
                                 <div class="tabs__panel" id="tab-panel-module-02" aria-labelledby="tab-button-module-02" role="tabpanel">
                                     <div class="container narrow padding-y-4">
                                         <h2 class="h4">Tab 02</h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
-                                                                                ducimus quam provident repellendus eos libero error adipisci laudantium
-                                                                                exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
-                                                                                quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                                                                                velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
-                                                                                reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
-                                        </p>
                                     </div>
                                     <!-- .container -->
                                 </div>
@@ -574,14 +564,6 @@
                                 <div class="tabs__panel" id="tab-panel-module-03" aria-labelledby="tab-button-module-02" role="tabpanel">
                                     <div class="container padding-y-4">
                                         <h2 class="h4">Tab 03</h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis maiores
-                                                                                ducimus quam provident repellendus eos libero error adipisci laudantium
-                                                                                exercitationem, nisi quos deserunt, ab facere similique molestiae vitae. Reiciendis,
-                                                                                quam incidunt. Doloremque autem explicabo ad quisquam sunt dolore similique, aliquid
-                                                                                velit culpa eveniet tenetur illo numquam! Provident velit hic deleniti culpa
-                                                                                reprehenderit, consequatur officia mollitia ipsam, fuga nostrum aut.
-                                        </p>
                                     </div>
                                     <!-- .container -->
                                 </div>
@@ -592,21 +574,112 @@
                         </div>
                         <!-- .article__main -->
 
-                        <aside class="article__aside">
+                        <aside class="article__aside subtle-fill">
 
                             <div class="container sticky-top padding-y-2">
                             
-                                <ul class="nav" role="menu">
-                                    <li>
-                                        <a href="#1">Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#1">Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#1">Link</a>
-                                    </li>
-                                </ul>
+                                <div class="accordion font-size-md">
+
+                                    <button
+                                        class="accordion__button"
+                                        id="acc-button-toc-01"
+                                        data-toggle="accordion"
+                                        aria-controls="acc-panel-toc-01"
+                                        aria-expanded="true">
+                                            Table of Contents
+                                    </button>
+
+                                    <div 
+                                        class="accordion__panel shown"
+                                        id="acc-panel-toc-01"
+                                        data-accordion="panel"
+                                        aria-labelledby="acc-button-toc-01"
+                                        role="region">
+                                            <div class="accordion__panel__content">
+
+                                                <ul class="nav">
+                                                    <li>
+                                                        <a href="#1">
+                                                            Antony van Leeuwenhoek improves microscopy
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#1">
+                                                            The beginnings of cell theory
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#1">
+                                                            Prokaryotes and eukaryotes: The case for a shared ancestry
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#1">
+                                                            Differences between cell types: Organelles and their functions
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#1">
+                                                            Cell theory expands
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#1">
+                                                            Cell variety within organisms
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                    </div>
+
+                                    <button
+                                        class="accordion__button"
+                                        id="acc-button-toc-02"
+                                        data-toggle="accordion"
+                                        aria-controls="acc-panel-toc-02"
+                                        aria-expanded="false">
+                                            Accordion Title
+                                    </button>
+
+                                    <div 
+                                        class="accordion__panel"
+                                        id="acc-panel-toc-02"
+                                        data-accordion="panel"
+                                        aria-labelledby="acc-button-toc-02"
+                                        role="region">
+                                            <div class="accordion__panel__content">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, maxime
+                                                    consequuntur! Assumenda aperiam alias aut, laudantium ut <a href="#1">voluptate asperiores</a>.
+                                                </p>
+                                            </div>
+                                    </div>
+
+                                    <button
+                                        class="accordion__button"
+                                        id="acc-button-toc-03"
+                                        data-toggle="accordion"
+                                        aria-controls="acc-panel-toc-03"
+                                        aria-expanded="false">
+                                            Accordion Title
+                                    </button>
+
+                                    <div 
+                                        class="accordion__panel"
+                                        id="acc-panel-toc-03"
+                                        data-accordion="panel"
+                                        aria-labelledby="acc-button-toc-03"
+                                        role="region">
+                                            <div class="accordion__panel__content">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, maxime
+                                                    consequuntur! Assumenda aperiam alias aut, laudantium ut <a href="#1">voluptate asperiores</a>.
+                                                </p>
+                                            </div>
+                                    </div>
+
+                                </div>
+                                <!-- .accordion -->
 
                             </div>
 

@@ -1,6 +1,6 @@
 
 .article {
-    // background-color: yellow;
+    // background-color:antiquewhite;
 
     display: grid;
 
@@ -13,16 +13,19 @@
 }
 
 .article__head {
-    grid-area: head;
     // background-color:azure;
+
+    grid-area: head;
 }
 
 .article__main {
+    // background-color: azure;
+
     grid-area: main;
-    // background-color: antiquewhite;
 }
 
 .article__aside {
-    grid-area: aside;
     // background-color: aqua;
+    
+    grid-area: aside;
 }
