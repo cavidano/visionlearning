@@ -9,6 +9,15 @@
 }
 
 .article__main {
+
+    .tabs-nav {
+        --tab-button-padding-y: 0.875em;
+    }
+
+    .tabs-nav button:not([aria-selected="true"]) {
+        background: linear-gradient( transparent,hsla(249, 31%, 20%, 0.05));
+    }
+
     .tabs-nav button[aria-selected="true"]::before {
         color: var(--library);
     }

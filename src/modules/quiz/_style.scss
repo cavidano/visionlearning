@@ -13,6 +13,7 @@ In this file:
 
 @use "sass:map";
 @use "../icons/theme" as icons;
+@use "../accents/style" as accents;
 
 //////////////////////////////////////////////
 // B. Quiz Block
@@ -27,9 +28,9 @@ In this file:
     }
 }
 
-.quiz__questions {
+ol.quiz__questions {
     list-style: none;
-    counter-reset: section; 
+    counter-reset: section;
 
     .form-entry__field__label {
         display: flex;
@@ -44,6 +45,10 @@ In this file:
             padding-left: var(--form-field-padding-x);
         }
     }
+
+}
+
+.quiz__questions {
 
     .form-entry__option__radio > label > input ~ .radio__label::before {
         @extend .vl-icon_font;
@@ -133,4 +138,43 @@ In this file:
     }
 
     display: none;
+}
+
+// 
+
+.comprehension-checkpoint {
+    // background-color: antiquewhite;
+
+}
+
+.comprehension-checkpoint__header {
+
+        @extend %subtle-fill-psuedo;
+        --subtle-fill-opacity: 0.075;
+
+        display: flex;
+        align-items: center;
+
+        color: var(--primary);
+    
+        margin-left: calc(var(--button--icon-only-size) * -1);
+
+    > span {
+        @extend %subtle-fill-psuedo;
+        --subtle-fill-opacity: 0.075;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        width: var(--button--icon-only-size);
+        height: var(--button--icon-only-size);
+
+
+        margin-right: 0.5em;
+    }
+
+    > span > [class*="icon"] {
+        font-size: 1.5em;
+    }
+
 }

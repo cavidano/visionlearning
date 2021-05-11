@@ -32,10 +32,25 @@
     align-items: start;
 
     section {
-        // background-color: red;
-
         margin-top: var(--spacer-4);
         margin-bottom: var(--spacer-4);
+    }
+
+    figure {
+        display: table;
+
+        margin: var(--spacer-5) auto;
+        
+        figcaption {
+            display: table-caption;
+            caption-side: bottom;
+        }
+
+        img {
+            min-width: unset !important;
+            width: auto !important;
+        }
+
     }
 }
 
