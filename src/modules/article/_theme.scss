@@ -1,0 +1,28 @@
+
+.article {
+    // background-color: yellow;
+
+    display: grid;
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "head head"
+        "main aside";
+
+
+}
+
+.article__head {
+    grid-area: head;
+    // background-color:azure;
+}
+
+.article__main {
+    grid-area: main;
+    // background-color: antiquewhite;
+}
+
+.article__aside {
+    grid-area: aside;
+    // background-color: aqua;
+}
