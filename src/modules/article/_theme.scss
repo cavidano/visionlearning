@@ -1,27 +1,56 @@
-.article {
 
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "../breakpoints/style" as breakpoints;
+
+//////////////////////////////////////////////
+// A. Article (Module)
+//////////////////////////////////////////////
+
+.article {
     display: grid;
 
-    grid-template-columns: 1fr 20em;
+    gap: var(--spacer-2);
+    
     grid-template-areas:
-        "head head"
-        "main aside";
+        "head"
+        "did-you-know"
+        "main"
+        "sidebar";
 }
 
 .article__head {
-    // background-color:azure;
-
     grid-area: head;
+    // background-color: antiquewhite;
 }
 
 .article__main {
-    // background-color: azure;
-
     grid-area: main;
+
+    section {
+        background-color: red;
+    }
 }
 
-.article__aside {
-    // background-color: aqua;
-    
-    grid-area: aside;
+.article__did-you-know {    
+    grid-area: did-you-know;
+}
+
+.article__sidebar {    
+    grid-area: sidebar;
+}
+
+@include breakpoints.breakpoints-up(lg) {
+
+    .article {
+        grid-template-columns: 1fr 20em;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "head head"
+            "main did-you-know"
+            "main sidebar";
+    }
+
 }

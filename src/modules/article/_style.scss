@@ -91,6 +91,7 @@ In this file:
 
     .article--three-column {
         --article-sidebar-width: 260px;
+
         grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
 
         grid-template-areas:

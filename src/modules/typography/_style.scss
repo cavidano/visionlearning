@@ -218,6 +218,7 @@ blockquote {
     margin-bottom: 1.5em;
 }
 
+ul.list-bulleted,
 p ~ ul,
 p ~ ol {
 
@@ -226,6 +227,7 @@ p ~ ol {
     }
 }
 
+ul.list-bulleted,
 p ~ ul {
     --list-item-padding: 1em;
 
