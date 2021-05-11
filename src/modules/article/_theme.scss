@@ -29,8 +29,13 @@
 .article__main {
     grid-area: main;
 
+    align-items: start;
+
     section {
-        background-color: red;
+        // background-color: red;
+
+        margin-top: var(--spacer-4);
+        margin-bottom: var(--spacer-4);
     }
 }
 

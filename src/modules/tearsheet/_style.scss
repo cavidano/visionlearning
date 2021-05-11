@@ -6,12 +6,12 @@
     position: relative;
     min-height: 100vh;
 
-    section {
+    section[id] {
         overflow: hidden;
         min-height: 100vh;
     }
 
-    section > header {
+    section[id] > header {
         padding-left: var(--spacer-3);
         padding-right: var(--spacer-3);
         text-align: center;
