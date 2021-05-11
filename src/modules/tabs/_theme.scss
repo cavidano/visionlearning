@@ -7,3 +7,9 @@
 
     }
 }
+
+.article__main {
+    .tabs-nav button[aria-selected="true"]::before {
+        color: var(--library);
+    }
+}

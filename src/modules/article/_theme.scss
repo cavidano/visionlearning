@@ -1,15 +1,11 @@
-
 .article {
-    // background-color:antiquewhite;
 
     display: grid;
 
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 20em;
     grid-template-areas:
         "head head"
         "main aside";
-
-
 }
 
 .article__head {

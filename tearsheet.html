@@ -462,9 +462,9 @@
 
                 <figure class="container margin-y-4">
 
-                    <article class="article" style="--subtle-fill-opacity: 0.025;">
+                    <article class="article" style="--subtle-fill-opacity: 0.05;">
 
-                        <header class="article__head subtle-fill">
+                        <header class="article__head">
 
                             <div class="container padding-y-5 text-align-center">
                                 <span class="font-size-md">
@@ -519,7 +519,20 @@
                                     id="tab-panel-module-01"
                                     aria-labelledby="tab-button-module-01"
                                     role="tabpanel">
+
                                         <section class="container narrow padding-y-4">
+
+                                            <div class="button-group justify-content-start margin-bottom-3">
+                                                <a class="button button--has-icon" href="#1">
+                                                    <span class="vl_icon_bookmark-add button__icon"></span>
+                                                    <span class="button__text">Bookmark</span>
+                                                </a>
+                                                <a class="button button--has-icon" href="#1">
+                                                    <span class="vl_icon_glossary-highlight button__icon"></span>
+                                                    <span class="button__text">Glossary Terms</span>
+                                                </a>
+                                            </div>
+
                                             <p>
                                                 There are many discoveries that have changed the course of science and
                                                 the world. Nikola Tesla’s discovery of alternating currents, for
@@ -574,9 +587,23 @@
                         </div>
                         <!-- .article__main -->
 
-                        <aside class="article__aside subtle-fill">
+                        <aside class="article__aside">
 
-                            <div class="container sticky-top padding-y-2">
+                            <div class="container">
+
+                                <div class="container theme-dark font-size-md border-radius padding-y-3 margin-bottom-2">
+
+                                    <h6 class="text-color-library">Did you know?</h6>
+                                    
+                                    <p>
+                                        The human body consists of trillions of individual cells and 200 distinct types of
+                                        cells? Human cells range in size from 1/12,000 of an inch (a few micrometers) to
+                                        over 39 inches (more than a meter) long. All living things are made of cells, but in
+                                        spite of vast differences in size, shape, and function, these building blocks of
+                                        life share remarkable similarities.
+                                    </p>
+                                    
+                                    </div>
                             
                                 <div class="accordion font-size-md">
 
@@ -585,12 +612,12 @@
                                         id="acc-button-toc-01"
                                         data-toggle="accordion"
                                         aria-controls="acc-panel-toc-01"
-                                        aria-expanded="true">
+                                        aria-expanded="false">
                                             Table of Contents
                                     </button>
 
                                     <div 
-                                        class="accordion__panel shown"
+                                        class="accordion__panel"
                                         id="acc-panel-toc-01"
                                         data-accordion="panel"
                                         aria-labelledby="acc-button-toc-01"
