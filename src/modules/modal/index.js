@@ -10,8 +10,12 @@ export default class Modal {
 
         const modalList = document.querySelectorAll(".modal");
         const modalButtonList = document.querySelectorAll("[data-modal-open]");
+        const body = document.querySelector("body");
 
         const initModal = (modalTarget) => {
+
+            body.style.overflow = "hidden";
+
 
             modalTarget.setAttribute("aria-hidden", false);
 
@@ -39,6 +43,8 @@ export default class Modal {
             firstElementOfModal.focus();
 
             function closeModal() {
+                // body.style.overflow = "unset";
+                body.removeAttribute("style");
                 modalTarget.setAttribute("aria-hidden", true);
                 focusedElementBeforeModal.focus();
             }

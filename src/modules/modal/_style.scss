@@ -41,10 +41,16 @@ In this file:
   bottom: 0;
   left: 0;
 
+  height: 100vh;
+  overflow-y: scroll;
+
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+
+  align-content: start;
+  will-change: scroll-position;
 
   z-index: var(--modal-z-index);
   
@@ -80,13 +86,14 @@ In this file:
 //////////////////////////////////////////////
 
 .modal__content {
-
   position: relative;
+  border: 12px solid blue !important;
 
   display: flex;
   flex-direction: column;
   
   max-height: calc(100vh - (var(--modal-padding) * 2));
+
   width: 100%;
 
   z-index: auto;
