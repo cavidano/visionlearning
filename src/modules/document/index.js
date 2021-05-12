@@ -204,7 +204,7 @@ export default class Document {
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go To Module</a>
+                                            <a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go to Module</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -245,7 +245,7 @@ export default class Document {
                                                 </a>
                                             </li>
                                             <li>
-                                                <a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go To Module</a>
+                                                <a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go to Module</a>
                                             </li>
                                         </ul>
                                     </span>
