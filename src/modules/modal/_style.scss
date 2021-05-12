@@ -25,7 +25,7 @@ In this file:
 
   --modal-overlay-opacity: 0.8;
   
-  --modal-z-index: 1400;
+  --modal-z-index: 2000;
 }
 
 //////////////////////////////////////////////
@@ -53,13 +53,13 @@ In this file:
   
   padding: var(--modal-padding);
 
-  &[class*="theme-"]{
+  &[class*="theme-"] {
     background-color: transparent !important;
   }
   
   display: none;
 
-  backdrop-filter: blur(0.75rem);
+  // backdrop-filter: blur(0.25rem);
 
   &[aria-hidden="false"] {
     display: flex;
@@ -78,7 +78,7 @@ In this file:
   display: flex;
   flex-direction: column;
 
-  transform: translateY(3em);
+  transform: translateY(4em);
 
   width: 100%;
 
@@ -104,12 +104,12 @@ In this file:
 
   padding: var(--modal-padding-y) var(--modal-padding-x);
 
-  h1, .h1, 
-  h2, .h2, 
-  h3, .h3,
-  h4, .h4, 
-  h5, .h5, 
-  h6, .h6 {
+  > h1, > .h1, 
+  > h2, > .h2, 
+  > h3, > .h3,
+  > h4, > .h4, 
+  > h5, > .h5, 
+  > h6, > .h6 {
     margin-bottom: 0 !important;
   }
 
@@ -139,9 +139,11 @@ body.modal-open {
       bottom: 0;
       left: 0; 
 
-      background-color: inherit;
+      background-color: black;
       
       opacity: 0.75;
+
+      z-index: 1900;
   }
 
 }

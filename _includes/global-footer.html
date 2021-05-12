@@ -1,55 +1,53 @@
-<div class="modal" id="modal-cool" role="dialog">
+<div class="modal" id="modal-disc" role="dialog">
 
-	<div class="modal__content narrow medium--md rounded box-shadow-3" aria-labelledby="modal-1-title">
+	<div class="modal__content narrow medium--md box-shadow-3" aria-labelledby="modal-1-title">
 
-		<header class="modal__content__head border-bottom">
-			<h2 class="h4" id="modal-1-title">
-				Modal Title
-			</h2>
-			<button class="button button--icon-only" data-modal-close>
-				<span class="icon_close"></span>
-			</button>
-		</header>
+		<header class="modal__content__head theme-primary biology padding-0 border-radius-top position-relative">
 
-		<main class="modal__content__body" id="modal-1-content">
-			<div class="backdrop backdrop--fixed theme-primary biology" style="--backdrop-fixed-height: 600px;">
+			<div class="position-absolute top right padding-2 z-index-1500">
+
+				<button class="button button--icon-only" data-modal-close>
+					<span class="icon_close"></span>
+				</button>
+			</div>
+
+			<div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 500px;">
 
 				<div class="backdrop__image gradient-veneer-bottom">
-					<img class="opacity-40" src="{{ site.baseurl }}/images/backdrop-example-02.jpg" alt="Placeholder">
+					<img class="opacity-40" src="./images/backdrop-example-02.jpg" alt="Placeholder">
 				</div>
 
 				<div class="backdrop__cover">
 
-					<div class="container wide">
+					<div class="container">
 
-						<div class="medium margin-left-0">
+						<div class="container disc-banner text-shadow">
 
-							<div class="disc-banner text-shadow">
+							<h1 class="banner-headline">
+								Biology
+							</h1>
 
-								<h1 class="banner-headline">
-									Biology
-								</h1>
-
-								<div class="disc-banner__teaser">
-									<p>
-										<strong class="h5 display-block">Misconception:</strong>
-										Sudden environmental change is required for evolution to occur.
-									</p>
-								</div>
-
-								<div class="disc-banner__summary">
-									<p>
-										Life as we know it is a wonderfully diverse enterprise. Organisms pass
-										traits from parent to offspring, function in a varied and changing
-										environment, and carry out a myriad of complex biochemical processes.
-										Understanding the principles of biology helps give context and clarity to
-										larger scientific and social issues. Our biology learning modules reveal the
-										current state of scientific understanding on topics like cell structure and
-										function, genetics, taxonomy, evolution by natural selection, and more.
-									</p>
-								</div>
-
+							<div class="disc-banner__teaser">
+								<h6>Misconception:</h6>
+								<p>
+									Sudden environmental change is required for evolution to occur.
+								</p>
 							</div>
+
+							<div class="disc-banner__summary">
+								<p>
+									Life as we know it is a wonderfully diverse enterprise.
+									Organisms pass traits from parent to offspring, function in a
+									varied and changing environment, and carry out a myriad of
+									complex biochemical processes. Understanding the principles of
+									biology helps give context and clarity to larger scientific and
+									social issues. Our biology learning modules reveal the current
+									state of scientific understanding on topics like cell structure
+									and function, genetics, taxonomy, evolution by natural
+									selection, and more.
+								</p>
+							</div>
+
 						</div>
 
 					</div>
@@ -57,61 +55,47 @@
 				</div>
 
 			</div>
+		</header>
+
+		<main class="modal__content__body theme-primary biology" id="modal-1-content">
 
 			<div class="overflow-hidden tabs" role="tablist">
 
-				<div class="border-bottom module-results-filter font-size-md">
+				<div class="module-results-filter font-size-md padding-y-2 border-top border-bottom">
 
-					<div class="container wide padding-y-2">
-
-						<ul class="nav nav--horizontal justify-content-end">
-							<li>
-								<button
-									class="button button--has-icon"
-									aria-controls="tab-group-module-results-01"
-									id="tab-button-group-d-01"
-									aria-selected="true"
-									role="tab">
-										<span class="icon_grid button__icon"></span>
-										<span class="button__text">Grid</span>
-								</button>
-							</li>
-							<li>
-								<button
-									class="button button--has-icon"
-									aria-controls="tab-group-module-results-02"
-									id="tab-button-group-d-02"
-									aria-selected="false"
-									role="tab">
-										<span class="icon_list button__icon"></span>
-										<span class="button__text">List</span>
-								</button>
-							</li>
-						</ul>
-
-					</div>
+					<ul class="nav nav--horizontal justify-content-end">
+						<li>
+							<button
+								class="button button--has-icon"
+								aria-controls="tab-group-module-results-list"
+								id="tab-button-module-results-list"
+								aria-selected="true"
+								role="tab">
+									<span class="icon_list button__icon"></span>
+									<span class="button__text">List</span>
+							</button>
+						</li>
+						<li>
+							<button class="button button--has-icon"
+								aria-controls="tab-group-module-results-grid"
+								id="tab-button-module-results-grid"
+								aria-selected="false"
+								role="tab">
+									<span class="icon_grid button__icon"></span>
+									<span class="button__text">Grid</span>
+							</button>
+						</li>
+					</ul>
 
 				</div>
 
-				<div
-					class="tabs__panel shown"
-					id="tab-group-module-results-01"
-					aria-labelledby="tab-button-group-d-01"
-					role="tabpanel">
-
-					<div class="container wide overflow-hidden" id="module-grid-view"></div>
-
+				<div class="tabs__panel shown" id="tab-group-module-results-list" aria-labelledby="tab-button-module-results-list" role="tabpanel">
+					<div class="overflow-hidden" id="module-list-view"></div>
 				</div>
 				<!-- .tabs__panel -->
 
-				<div
-					class="tabs__panel"
-					id="tab-group-module-results-02"
-					aria-labelledby="tab-button-group-d-02"
-					role="tabpanel">
-
-					<div class="container wide overflow-hidden" id="module-list-view"></div>
-
+				<div class="tabs__panel" id="tab-group-module-results-grid" aria-labelledby="tab-button-module-results-grid" role="tabpanel">
+					<div class="overflow-hidden" id="module-grid-view"></div>
 				</div>
 				<!-- .tabs__panel -->
 
@@ -128,6 +112,7 @@
 				</li>
 			</ul>
 		</footer>
+
 	</div>
 	<!-- .modal__content -->
 
@@ -361,10 +346,9 @@
 
 <script src="{{ site.baseurl }}/dist/js/visionlearning.js"></script>
 
+<script defer>
 
-<script>
-
-	const libraryData = "{{ site.baseurl }}/lib/json/vl-library.json";
+	const libraryData = "./lib/json/vl-library.json";
 
 	const moduleGridView = document.getElementById("module-grid-view");
 	const moduleListView = document.getElementById("module-list-view");
@@ -392,55 +376,97 @@
 
 		const moduleDisplayHTML = modules.map((moduleArray) => {
 
-			let discipline = moduleArray.discipline;
-			let introduction = moduleArray.introduction;
+			// let discipline = moduleArray.discipline;
+			// let introduction = moduleArray.introduction;
 
 			let categories = moduleArray.categories;
 
 			const moduleGridHTML = categories.map((category) => {
 
 				return `
-					<div class="margin-y-5">
+				<div class="margin-y-4">
 
-						<h2 class="h4 margin-bottom-4">${category.name}</h2>
+					<h2 class="h4 margin-bottom-4">${category.name}</h2>
 
-						<div class="grid grid--columns-4">
+					<div class="grid grid--columns-3">
+
+					${category.modules.map((module) => {
+
+						let summary = truncateString(module.summary, 120);
+
+						return `
+
+						<div class="card border">
+
+							<div class="card__body">
+								<h5 class=" font-weight-normal">
+								<a class="link" href="{{ site.url }}/library/module.html">
+									${module.title}
+								</a>
+								</h5>
+								<p>
+									${summary}
+								</p>
+							</div>
+
+							<hr class="margin-x-3">
+
+							<div class="card__body font-size-md">
+
+								<strong>Did you know?</strong>
+								<p>
+									Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex facilis labore reiciendis.
+								</p>
+
+								<strong>NGSS</strong>
+								<p>
+									HS-C6.2, HS-LS1.C2
+								</p>
+							</div>
+
+							<div class="card__foot border-top font-size-md">
+								<ul class="nav nav--horizontal justify-content-between">
+									<li>
+										<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
+											<span class="vl_icon_bookmark-add button__icon"></span>
+										</a>
+									</li>
+									<li>
+										<a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go to Module</a>
+									</li>
+								</ul>
+							</div>
+
+						</div>`;
+
+					}).join("")}
+				
+					</div>
+
+				</div>`;
+
+			}).join('');
+
+			const moduleListHTML = categories.map((category) => {
+
+				return `
+				<div class="margin-y-4">
+
+					<h2 class="h4 margin-bottom-4">${category.name}</h2>
+
+					<ul class="list-divider">
 
 						${category.modules.map((module) => {
 
-							let summary = truncateString(module.summary, 120);
-
 							return `
-
-							<div class="card border">
-
-								<div class="card__body">
-									<h5 class=" font-weight-normal">
+							<li>
+								<span class="list-divider__cell">
 									<a class="link" href="{{ site.url }}/library/module.html">
 										${module.title}
 									</a>
-									</h5>
-									<p>
-										${summary}
-									</p>
-								</div>
-
-								<hr class="margin-x-3">
-
-								<div class="card__body font-size-md">
-									<strong>Did you know?</strong>
-									<p>
-										Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex facilis labore reiciendis.
-									</p>
-
-									<strong>NGSS</strong>
-									<p>
-										HS-C6.2, HS-LS1.C2
-									</p>
-								</div>
-
-								<div class="card__foot border-top font-size-md">
-									<ul class="nav nav--horizontal justify-content-between">
+								</span>
+								<span class="list-divider__cell">
+									<ul class="nav nav--horizontal font-size-md">
 										<li>
 											<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
 												<span class="vl_icon_bookmark-add button__icon"></span>
@@ -450,53 +476,14 @@
 											<a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go to Module</a>
 										</li>
 									</ul>
-								</div>
-
-							</div>`;
+								</span>
+							</li>`;
 
 						}).join("")}
-					
-						</div>
+						
+					</ul>
 
-					</div>`;
-
-			}).join('');
-
-			const moduleListHTML = categories.map((category) => {
-
-				return `
-					<div class="margin-y-5">
-
-						<h2 class="h4 margin-bottom-4">${category.name}</h2>
-
-						<ul class="list-divider">
-
-							${category.modules.map((module) => {
-
-								let summary = truncateString(module.summary, 120);
-
-								return `
-								<li>
-									<span class="list-divider__cell">
-										<a class="link" href="{{ site.url }}/library/module.html">
-											${module.title}
-										</a>
-									</span>
-									<span class="list-divider__cell">
-										<div class="button-group justify-content-end">
-											<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
-												<span class="vl_icon_bookmark-add button__icon"></span>
-											</a>
-											<a class="button button--outline rounded-pill" href="#1">Go to Module</a>
-										</div>
-									</span>
-								</li>`;
-
-							}).join("")}
-							
-						</ul>
-
-					</div>`;
+				</div>`;
 
 			}).join('');
 
@@ -505,10 +492,8 @@
 		});
 
 		moduleDisplayHTML()
-		
 
 	};
 
 	loadLibraryData();
-
 </script>
