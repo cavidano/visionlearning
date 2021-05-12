@@ -148,111 +148,114 @@ export default class Document {
 
             const moduleDisplayHTML = modules.map((moduleArray) => {
 
-                let discipline = moduleArray.discipline;
-                let introduction = moduleArray.introduction;
+                // let discipline = moduleArray.discipline;
+                // let introduction = moduleArray.introduction;
 
                 let categories = moduleArray.categories;
 
                 const moduleGridHTML = categories.map((category) => {
 
                     return `
-                            <div class="margin-y-5">
+                    <div class="margin-y-4">
 
-                                <h2 class="h4 margin-bottom-4">${category.name}</h2>
+                        <h2 class="h4 margin-bottom-4">${category.name}</h2>
 
-                                <div class="grid grid--columns-4">
+                        <div class="grid grid--columns-3">
 
-                                ${category.modules.map((module) => {
+                        ${category.modules.map((module) => {
 
-                                    let summary = truncateString(module.summary, 120);
+                            let summary = truncateString(module.summary, 120);
 
-                                    return `
+                            return `
 
-                                    <div class="card border">
+                            <div class="card border">
 
-                                        <div class="card__body">
-                                            <h5 class=" font-weight-normal">
-                                            <a class="link" href="{{ site.url }}/library/module.html">
-                                                ${module.title}
+                                <div class="card__body">
+                                    <h5 class=" font-weight-normal">
+                                    <a class="link" href="{{ site.url }}/library/module.html">
+                                        ${module.title}
+                                    </a>
+                                    </h5>
+                                    <p>
+                                        ${summary}
+                                    </p>
+                                </div>
+
+                                <hr class="margin-x-3">
+
+                                <div class="card__body font-size-md">
+
+                                    <strong>Did you know?</strong>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex facilis labore reiciendis.
+                                    </p>
+
+                                    <strong>NGSS</strong>
+                                    <p>
+                                        HS-C6.2, HS-LS1.C2
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top font-size-md">
+                                    <ul class="nav nav--horizontal justify-content-between">
+                                        <li>
+                                            <a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
+                                                <span class="vl_icon_bookmark-add button__icon"></span>
                                             </a>
-                                            </h5>
-                                            <p>
-                                                ${summary}
-                                            </p>
-                                        </div>
-
-                                        <hr class="margin-x-3">
-
-                                        <div class="card__body font-size-md">
-                                            <strong>Did you know?</strong>
-                                            <p>
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem, ex facilis labore reiciendis.
-                                            </p>
-
-                                            <strong>NGSS</strong>
-                                            <p>
-                                                HS-C6.2, HS-LS1.C2
-                                            </p>
-                                        </div>
-
-                                        <div class="card__foot border-top font-size-md">
-                                            <ul class="nav nav--horizontal justify-content-between">
-                                                <li>
-                                                    <a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
-                                                        <span class="vl_icon_bookmark-add button__icon"></span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go To Module</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-                                    </div>`;
-
-                                }).join("")}
-                            
+                                        </li>
+                                        <li>
+                                            <a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go To Module</a>
+                                        </li>
+                                    </ul>
                                 </div>
 
                             </div>`;
+
+                        }).join("")}
+                    
+                        </div>
+
+                    </div>`;
 
                 }).join('');
 
                 const moduleListHTML = categories.map((category) => {
 
                     return `
-                            <div class="margin-y-5">
+                    <div class="margin-y-4">
 
-                                <h2 class="h4 margin-bottom-4">${category.name}</h2>
+                        <h2 class="h4 margin-bottom-4">${category.name}</h2>
 
-                                <ul class="list-divider">
+                        <ul class="list-divider">
 
-                                    ${category.modules.map((module) => {
+                            ${category.modules.map((module) => {
 
-                                        let summary = truncateString(module.summary, 120);
-
-                                        return `
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="{{ site.url }}/library/module.html">
-                                                    ${module.title}
+                                return `
+                                <li>
+                                    <span class="list-divider__cell">
+                                        <a class="link" href="{{ site.url }}/library/module.html">
+                                            ${module.title}
+                                        </a>
+                                    </span>
+                                    <span class="list-divider__cell">
+                                        <ul class="nav nav--horizontal font-size-md">
+                                            <li>
+                                                <a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
+                                                    <span class="vl_icon_bookmark-add button__icon"></span>
                                                 </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <div class="button-group justify-content-end">
-                                                    <a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
-                                                        <span class="vl_icon_bookmark-add button__icon"></span>
-                                                    </a>
-                                                    <a class="button button--outline rounded-pill" href="#1">Go To Module</a>
-                                                </div>
-                                            </span>
-                                        </li>`;
+                                            </li>
+                                            <li>
+                                                <a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go To Module</a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>`;
 
-                                    }).join("")}
-                                    
-                                </ul>
+                            }).join("")}
+                            
+                        </ul>
 
-                            </div>`;
+                    </div>`;
 
                 }).join('');
 
@@ -261,7 +264,6 @@ export default class Document {
             });
 
             moduleDisplayHTML()
-
 
         };
 

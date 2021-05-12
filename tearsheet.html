@@ -2421,8 +2421,6 @@
                         </div>
                         <!-- .form-entry -->
 
-
-
                     </form>
 
                 </div>
@@ -2765,9 +2763,9 @@
 
                     <div class="modal__content narrow medium--md box-shadow-3" aria-labelledby="modal-1-title">
 
-                        <header class="modal__content__head padding-0 border-radius-top">
+                        <header class="modal__content__head theme-primary biology padding-0 border-radius-top">
 
-                            <div class="backdrop backdrop--fixed theme-primary biology" style="--backdrop-fixed-height: 600px;">
+                            <div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 500px;">
 
                                 <div class="backdrop__image gradient-veneer-bottom">
                                     <img class="opacity-40" src="./images/backdrop-example-02.jpg" alt="Placeholder">
@@ -2775,38 +2773,35 @@
 
                                 <div class="backdrop__cover">
 
-                                    <div class="container wide">
+                                    <div class="container">
 
-                                        <div class="medium margin-left-0">
+                                        <div class="disc-banner text-shadow">
 
-                                            <div class="disc-banner text-shadow">
+                                            <h1 class="banner-headline">
+                                                Biology
+                                            </h1>
 
-                                                <h1 class="banner-headline">
-                                                    Biology
-                                                </h1>
-
-                                                <div class="disc-banner__teaser">
-                                                    <p>
-                                                        <strong class="h5 display-block">Misconception:</strong>
-                                                        Sudden environmental change is required for evolution to occur.
-                                                    </p>
-                                                </div>
-
-                                                <div class="disc-banner__summary">
-                                                    <p>
-                                                        Life as we know it is a wonderfully diverse enterprise.
-                                                        Organisms pass traits from parent to offspring, function in a
-                                                        varied and changing environment, and carry out a myriad of
-                                                        complex biochemical processes. Understanding the principles of
-                                                        biology helps give context and clarity to larger scientific and
-                                                        social issues. Our biology learning modules reveal the current
-                                                        state of scientific understanding on topics like cell structure
-                                                        and function, genetics, taxonomy, evolution by natural
-                                                        selection, and more.
-                                                    </p>
-                                                </div>
-
+                                            <div class="disc-banner__teaser">
+                                                <p>
+                                                    <strong class="h5 display-block">Misconception:</strong>
+                                                    Sudden environmental change is required for evolution to occur.
+                                                </p>
                                             </div>
+
+                                            <div class="disc-banner__summary">
+                                                <p>
+                                                    Life as we know it is a wonderfully diverse enterprise.
+                                                    Organisms pass traits from parent to offspring, function in a
+                                                    varied and changing environment, and carry out a myriad of
+                                                    complex biochemical processes. Understanding the principles of
+                                                    biology helps give context and clarity to larger scientific and
+                                                    social issues. Our biology learning modules reveal the current
+                                                    state of scientific understanding on topics like cell structure
+                                                    and function, genetics, taxonomy, evolution by natural
+                                                    selection, and more.
+                                                </p>
+                                            </div>
+
                                         </div>
 
                                     </div>
@@ -2816,44 +2811,45 @@
                             </div>
                         </header>
 
-                        <main class="modal__content__body" id="modal-1-content">
+                        <main class="modal__content__body theme-primary biology" id="modal-1-content">
 
                             <div class="overflow-hidden tabs" role="tablist">
 
-                                <div class="border-bottom module-results-filter font-size-md">
+                                <div class="module-results-filter font-size-md padding-y-2 border-top border-bottom">
 
-                                    <div class="container wide padding-y-2">
-
-                                        <ul class="nav nav--horizontal justify-content-end">
-                                            <li>
-                                                <button class="button button--has-icon" aria-controls="tab-group-module-results-01" id="tab-button-group-d-01" aria-selected="true" role="tab">
-                                                    <span class="icon_grid button__icon"></span>
-                                                    <span class="button__text">Grid</span>
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="button button--has-icon" aria-controls="tab-group-module-results-02" id="tab-button-group-d-02" aria-selected="false" role="tab">
+                                    <ul class="nav nav--horizontal justify-content-end">
+                                        <li>
+                                            <button
+                                                class="button button--has-icon"
+                                                aria-controls="tab-group-module-results-list"
+                                                id="tab-button-module-results-list"
+                                                aria-selected="true"
+                                                role="tab">
                                                     <span class="icon_list button__icon"></span>
                                                     <span class="button__text">List</span>
-                                                </button>
-                                            </li>
-                                        </ul>
-
-                                    </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button class="button button--has-icon"
+                                                aria-controls="tab-group-module-results-grid"
+                                                id="tab-button-module-results-grid"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    <span class="icon_grid button__icon"></span>
+                                                    <span class="button__text">Grid</span>
+                                            </button>
+                                        </li>
+                                    </ul>
 
                                 </div>
 
-                                <div class="tabs__panel shown" id="tab-group-module-results-01" aria-labelledby="tab-button-group-d-01" role="tabpanel">
-
-                                    <div class="container wide overflow-hidden" id="module-grid-view"></div>
-
+                                <div class="tabs__panel shown" id="tab-group-module-results-list" aria-labelledby="tab-button-module-results-list" role="tabpanel">
+                                    <div class="overflow-hidden" id="module-list-view"></div>
                                 </div>
                                 <!-- .tabs__panel -->
 
-                                <div class="tabs__panel" id="tab-group-module-results-02" aria-labelledby="tab-button-group-d-02" role="tabpanel">
-
-                                    <div class="container wide overflow-hidden" id="module-list-view"></div>
-
+                                <div class="tabs__panel" id="tab-group-module-results-grid" aria-labelledby="tab-button-module-results-grid" role="tabpanel">
+                                    <div class="overflow-hidden" id="module-grid-view"></div>
                                 </div>
                                 <!-- .tabs__panel -->
 
@@ -2870,6 +2866,7 @@
                                 </li>
                             </ul>
                         </footer>
+
                     </div>
                     <!-- .modal__content -->
 

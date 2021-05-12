@@ -20,7 +20,7 @@ In this file:
 //////////////////////////////////////////////
 
 %modal-vars {
-  --modal-padding-x: var(--spacer-2);
+  --modal-padding-x: var(--spacer-3);
   --modal-padding-y: var(--spacer-2);
 
   --modal-overlay-opacity: 0.8;
@@ -45,7 +45,6 @@ In this file:
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
-
 
   overflow-y: scroll;
   will-change: scroll-position;
@@ -84,8 +83,6 @@ In this file:
   width: 100%;
 
   z-index: auto;
-  
-  background-color: inherit;
   
   @extend .margin-x-auto;
   
@@ -144,7 +141,7 @@ body.modal-open {
 
       background-color: inherit;
       
-      opacity: 0.8;
+      opacity: 0.75;
   }
 
 }
