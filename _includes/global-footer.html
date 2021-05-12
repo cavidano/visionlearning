@@ -14,7 +14,7 @@
 			<div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 500px;">
 
 				<div class="backdrop__image gradient-veneer-bottom">
-					<img class="opacity-40" src="{{ site.url }}/images/backdrop-example-02.jpg" alt="Placeholder">
+					<img class="opacity-40" src="./images/backdrop-example-02.jpg" alt="Placeholder">
 				</div>
 
 				<div class="backdrop__cover">
@@ -102,8 +102,15 @@
 			</div>
 		</main>
 
-		<footer class="modal__content__foot theme-primary biology border-top">
-			<a class="button theme-primary rounded-pill" href="#1">Close</a>
+		<footer class="modal__content__foot border-top">
+			<ul class="nav nav--horizontal justify-content-between">
+				<li>
+					<a href="#1">Secondary Action</a>
+				</li>
+				<li>
+					<a class="button theme-primary rounded-pill" href="#1">Primary Action</a>
+				</li>
+			</ul>
 		</footer>
 
 	</div>
@@ -341,7 +348,7 @@
 
 <script defer>
 
-	const libraryData = "{{ site.url }}/lib/json/vl-library.json";
+	const libraryData = "./lib/json/vl-library.json";
 
 	const moduleGridView = document.getElementById("module-grid-view");
 	const moduleListView = document.getElementById("module-list-view");
