@@ -36,22 +36,20 @@ In this file:
   @extend %modal-vars;
 
   position: fixed;
-  top: 0;
+  top: 0em;
   right: 0;
   bottom: 0;
   left: 0;
 
-  height: 100vh;
-  overflow-y: scroll;
-
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-content: center;
 
-  align-content: start;
+
+  overflow-y: scroll;
   will-change: scroll-position;
-
+  
   z-index: var(--modal-z-index);
   
   padding: var(--modal-padding);
@@ -60,17 +58,6 @@ In this file:
     background-color: transparent !important;
   }
   
-  &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      
-      opacity: var(--modal-overlay-opacity);
-  }
-
   display: none;
 
   backdrop-filter: blur(0.75rem);
@@ -81,18 +68,18 @@ In this file:
 
 }
 
+
 //////////////////////////////////////////////
 // D. Modal Elements
 //////////////////////////////////////////////
 
 .modal__content {
   position: relative;
-  border: 12px solid blue !important;
 
   display: flex;
   flex-direction: column;
-  
-  max-height: calc(100vh - (var(--modal-padding) * 2));
+
+  transform: translateY(3em);
 
   width: 100%;
 
@@ -138,4 +125,26 @@ In this file:
   flex-shrink: 1;
   
   overflow-y: auto;
+}
+
+//////////////////////////////////////////////
+// E. Modal Body Overlay
+//////////////////////////////////////////////
+
+body.modal-open {
+  overflow: hidden;
+
+  &::after {
+      position: fixed;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; 
+
+      background-color: inherit;
+      
+      opacity: 0.8;
+  }
+
 }

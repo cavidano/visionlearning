@@ -14,7 +14,7 @@ export default class Modal {
 
         const initModal = (modalTarget) => {
 
-            body.style.overflow = "hidden";
+            body.classList.add("modal-open");
 
 
             modalTarget.setAttribute("aria-hidden", false);
@@ -43,8 +43,8 @@ export default class Modal {
             firstElementOfModal.focus();
 
             function closeModal() {
-                // body.style.overflow = "unset";
-                body.removeAttribute("style");
+                body.classList.remove("modal-open");
+                
                 modalTarget.setAttribute("aria-hidden", true);
                 focusedElementBeforeModal.focus();
             }
