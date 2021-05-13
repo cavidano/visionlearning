@@ -14,7 +14,7 @@
 			<div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 500px;">
 
 				<div class="backdrop__image gradient-veneer-bottom">
-					<img class="opacity-40" src="{{ site.baseurl }}/images/backdrop-example-02.jpg" alt="Placeholder">
+					<img class="opacity-40" src="{{ site.url }}images/backdrop-example-02.jpg" alt="Placeholder">
 				</div>
 
 				<div class="backdrop__cover">
@@ -344,13 +344,13 @@
     }
 </script>
 
-<script src="{{ site.baseurl }}/dist/js/visionlearning.js"></script>
+<script src="{{ site.url }}dist/js/visionlearning.js"></script>
 
 
 
 <script defer>
 
-	const libraryData = "{{ site.baseurl }}/lib/json/vl-library.json";
+	const libraryData = "{{ site.url }}lib/json/vl-library.json";
 
 	const moduleGridView = document.getElementById("module-grid-view");
 	const moduleListView = document.getElementById("module-list-view");
