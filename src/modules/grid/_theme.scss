@@ -233,3 +233,67 @@
     "headline headline"
     "summary teaser";
 }
+
+
+//////////////////////////////////////////////
+// A. Article (Module)
+//////////////////////////////////////////////
+
+.landing {
+    display: grid;
+
+    gap: var(--spacer-2);
+    
+    grid-template-areas:
+        "cta"
+        "sidebar"
+        "main";
+}
+
+
+.landing__main {
+    grid-area: main;
+
+    align-items: start;
+
+    section {
+        margin-top: var(--spacer-4);
+        margin-bottom: var(--spacer-4);
+    }
+
+    figure {
+        display: table;
+
+        margin: var(--spacer-5) auto;
+        
+        figcaption {
+            display: table-caption;
+            caption-side: bottom;
+        }
+
+        img {
+            min-width: unset !important;
+            width: auto !important;
+        }
+
+    }
+}
+
+.landing__cta {    
+    grid-area: cta;
+}
+
+.landing__sidebar {    
+    grid-area: sidebar;
+}
+
+@include breakpoints.breakpoints-up(lg) {
+
+    .landing {
+        grid-template-columns: 1fr 20em;
+        grid-template-areas:
+            "main cta"
+            "main sidebar";
+    }
+
+}
