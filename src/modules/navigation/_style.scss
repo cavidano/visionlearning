@@ -183,9 +183,6 @@ In this file:
             align-items: stretch;
 
             > li {
-                display: flex;
-                flex: 1;
-
                 border-bottom-style: none !important;
             }
 
@@ -362,7 +359,7 @@ In this file:
     align-items: center;
 
     z-index: 1000;
-    
+
     ul {
         @extend %list-style-nav;
     }
@@ -404,7 +401,7 @@ In this file:
     justify-content: space-between;
     align-items: center;
 
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
     grid-template-areas:
         "logo buttons"
         "menu menu";
@@ -415,7 +412,14 @@ In this file:
         > ul > li:not(:last-child) {
             margin-bottom: var(--nav-gap);
         }
+
     }
+
+    form[role="search"] .form-entry__field {
+        height: var(--button--icon-only-size);
+        border-radius: var(--button-border-radius);
+    }
+
 }
 
 [class*="primary-nav--below--"] {
@@ -458,6 +462,20 @@ In this file:
         @extend .expanded-link;
     }
 
+    > form[role="search"] {
+        --nav-search-width: 200px;
+        margin-top: var(--spacer-2);
+
+        button::before {
+            display: none;
+        }
+    }
+
+    .form-entry__field {
+        border-width: var(--default-border-width);
+        border-style: var(--default-border-style);
+    }
+
     .nav__dropdown {
         padding: var(--nav-gap);
     }
@@ -476,7 +494,8 @@ In this file:
             }
 
             [class*="__menu"] {
-                display: block !important;
+                display: flex !important;
+
             }
 
             [class*="__actions"] {
@@ -486,6 +505,11 @@ In this file:
             [class*="__actions"] button.mobile-menu-toggle {
                 display: none;
             }
+
+            form[role="search"] {
+                max-width: var(--nav-search-width);
+                margin-top: unset;
+            }
         }
 
         .primary-nav--inline#{$mod} {
@@ -494,8 +518,9 @@ In this file:
                 "logo menu buttons";
 
             [class*="__menu"] {
-                padding-top: unset;
-                padding-bottom: unset;
+                padding: unset;
+
+                align-items: center;
 
                 > ul {
                     display: flex;
@@ -525,6 +550,7 @@ In this file:
                         margin-bottom: auto;
                     }
                 }
+
             }
         }
 
@@ -540,6 +566,10 @@ In this file:
 
             > [class*="__menu"] {
                 padding: unset;
+
+                > ul {
+                    flex-grow: 1;
+                }
             }
 
             > [class*="__menu"] > ul {
@@ -601,6 +631,17 @@ In this file:
                 }
             }
 
+            form[role="search"] .form-entry__field {
+                border-top-width: 0;
+                border-right-width: 0;
+                border-bottom-width: 0;
+
+                [dir="rtl"] & {
+                    border-left-width: 0;
+                    border-right-width: var(--default-border-width);
+                    border-right-style: var(--default-border-style);
+                }
+            }
         }
 
     }

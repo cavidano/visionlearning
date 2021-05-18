@@ -7,6 +7,8 @@
 @use "../borders/style" as borders;
 @use "../color/style" as color;
 @use "../collapse/style" as collapse;
+@use "../navigation/style" as navigation;
+@use "../icons/style" as icons;
 
 //////////////////////////////////////////////
 // B. VL Hat
@@ -220,37 +222,90 @@
 // C. VL Header
 //////////////////////////////////////////////
 
-#breadcrumb {
-    background-color: yellow;
+.nav-module-breadcrumb {
 
-    .nav__dropdown{
-        --gap-size: 0.25em;
-        background-color: red;
-    }
+    ul {
+        @extend %list-style-nav;
 
-    .accordion {
-        --accordion-panel-padding-y: var(--spacer-1);
-    }
-
-    .accordion__panel__content{
-        ul {
-            list-style: none;
+        li {
+            position: relative;
         }
-    }
 
-}
-
-.disc-subcat {
-    background-color: blueviolet;
-    padding-left: 20px;
-    > li {
-    position: relative;
-        &::before {
+        > li > .nav__dropdown {
+            min-width: 260px;
             position: absolute;
-            content: "+";
-            left: 0;
-            top: 0;
-            background-color: burlywood;
+            background-color: white;
         }
     }
+
+    > ul {
+        display: flex;
+        align-items: center;
+    }
+
+    > ul > li > button {
+        padding: var(--button-padding-y) var(--button-padding-x);
+    }
+
+    .nav__dropdown > button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: calc(var(--button-padding-x) * 0.75) var(--button-padding-x);
+
+        &:not(:last-child) {
+            border-bottom-width: var(--default-border-width);
+            border-bottom-style: var(--default-border-style);
+            border-bottom-color: inherit;
+        }
+
+        width: 100%;
+
+        &:hover, 
+        &:focus {
+            text-decoration: none;
+        }
+
+        &::after {
+            @extend .icon_font;
+
+            content: "\e917";
+        }
+
+
+    }
+
+    .nav__dropdown > button + .collapse {
+        padding: var(--button-padding-x);
+
+        
+
+        > ul > li {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+
+            &::before {
+                position: absolute;
+                content: "+";
+                left: 0;
+                top: 0;
+            }
+
+            padding-left: 1em;
+        }
+
+        > ul > li > ul {
+            font-size: var(--font-size-sm);
+            margin-top: 0.5em;
+        }
+
+        > ul > li > ul > li > a {
+            color: var(--white-link);
+        } 
+    }
+
 }
