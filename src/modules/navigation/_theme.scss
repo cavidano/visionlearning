@@ -264,6 +264,7 @@
         --button-padding-x: 0.875em;
         --button-padding-y: 0.75em;
         --button-border-radius: 0;
+        --button-font-weight: var(--body-font-weight-normal);
 
         &[aria-expanded="true"] {
             background-color: white;
@@ -310,11 +311,13 @@
         padding: var(--button-padding-x);
 
         > ul > li {
-            position: relative;
-
             &:not(:last-child) {
                 margin-bottom: 0.5em;
             }
+        }
+
+        > ul > li > button {
+            position: relative;
 
             &::before {
                 position: absolute;
@@ -323,12 +326,20 @@
                 top: 0;
             }
 
-            padding-left: 1em;
+
+            padding-left: 1.25rem;
+        }
+
+        > ul > li > button[aria-expanded="true"] {
+            &::before {
+                content: "-";
+            }
         }
 
         > ul > li > ul {
             font-size: var(--font-size-sm);
             margin-top: 0.5em;
+            margin-left: 1.25rem;
         }
 
         > ul > li > ul > li:not(:last-child) {
