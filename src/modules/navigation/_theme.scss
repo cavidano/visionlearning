@@ -3,6 +3,7 @@
 // A. Modules
 //////////////////////////////////////////////
 
+@use "../accents/style" as accents;
 @use "../breakpoints/style" as breakpoints;
 @use "../borders/style" as borders;
 @use "../color/style" as color;
@@ -223,6 +224,8 @@
 //////////////////////////////////////////////
 
 .nav-module-breadcrumb {
+    @extend %subtle-fill-psuedo;
+    --subtle-fill-opacity: 0.05;
 
     ul {
         @extend %list-style-nav;
@@ -232,8 +235,10 @@
         }
 
         > li > .nav__dropdown {
-            min-width: 260px;
             position: absolute;
+
+            min-width: 240px;
+            
             background-color: white;
         }
     }
@@ -241,14 +246,34 @@
     > ul {
         display: flex;
         align-items: center;
+        font-size: var(--font-size-md);
     }
 
-    > ul > li > button {
-        padding: var(--button-padding-y) var(--button-padding-x);
+    > ul > li:not(:last-child) {
+        border-right-width: var(--default-border-width);
+        border-right-style: var(--default-border-style);
+        border-right-color: inherit;
     }
 
+    > ul > li:first-child > a {
+        --subtle-fill-opacity: 0 !important;
+        
+    }
+
+    > ul > li > .button {
+        --button-padding-x: 0.875em;
+        --button-padding-y: 0.75em;
+        --button-border-radius: 0;
+
+        &[aria-expanded="true"] {
+            background-color: white;
+        }
+    }
+
+    
     .nav__dropdown > button {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
 
@@ -267,19 +292,22 @@
             text-decoration: none;
         }
 
-        &::after {
+        &::before {
             @extend .icon_font;
 
             content: "\e917";
         }
+    }
 
+    .nav__dropdown > button[aria-expanded="true"] {
 
+        &::before {
+            content: "\e916";
+        }
     }
 
     .nav__dropdown > button + .collapse {
         padding: var(--button-padding-x);
-
-        
 
         > ul > li {
             position: relative;
@@ -302,6 +330,10 @@
             font-size: var(--font-size-sm);
             margin-top: 0.5em;
         }
+
+        > ul > li > ul > li:not(:last-child) {
+            margin-bottom: 0.5em;
+        } 
 
         > ul > li > ul > li > a {
             color: var(--white-link);
