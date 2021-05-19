@@ -3,10 +3,13 @@
 // A. Modules
 //////////////////////////////////////////////
 
+@use "../accents/style" as accents;
 @use "../breakpoints/style" as breakpoints;
 @use "../borders/style" as borders;
 @use "../color/style" as color;
 @use "../collapse/style" as collapse;
+@use "../navigation/style" as navigation;
+@use "../icons/style" as icons;
 
 //////////////////////////////////////////////
 // B. VL Hat
@@ -107,13 +110,14 @@
 
         &::before {
             content: "";
+            
             position: absolute;
             top: unset;
             right: 0;
             bottom: 0;
             left: 0;
+
             height: calc(var(--default-border-width) * 2);
-            // z-index: auto;
         }
 
         &[aria-current]::before {
@@ -217,40 +221,135 @@
 }
 
 //////////////////////////////////////////////
-// C. VL Header
+// D. Nav Module Breadcrumb
 //////////////////////////////////////////////
 
-#breadcrumb {
-    background-color: yellow;
+.nav-module-breadcrumb {
+    @extend %subtle-fill-psuedo;
+    --subtle-fill-opacity: 0.05;
 
-    .nav__dropdown{
-        --gap-size: 0.25em;
-        background-color: red;
-    }
+    ul {
+        @extend %list-style-nav;
 
-    .accordion {
-        --accordion-panel-padding-y: var(--spacer-1);
-    }
-
-    .accordion__panel__content{
-        ul {
-            list-style: none;
+        li {
+            position: relative;
         }
-    }
 
-}
-
-.disc-subcat {
-    background-color: blueviolet;
-    padding-left: 20px;
-    > li {
-    position: relative;
-        &::before {
+        > li > .nav__dropdown {
             position: absolute;
-            content: "+";
-            left: 0;
-            top: 0;
-            background-color: burlywood;
+
+            min-width: 240px;
+            
+            background-color: white;
         }
     }
+
+    > ul {
+        display: flex;
+        align-items: center;
+        font-size: var(--font-size-md);
+    }
+
+    > ul > li:not(:last-child) {
+        border-right-width: var(--default-border-width);
+        border-right-style: var(--default-border-style);
+        border-right-color: inherit;
+    }
+
+    > ul > li:first-child > a {
+        --subtle-fill-opacity: 0 !important;
+        
+    }
+
+    > ul > li > .button {
+        --button-padding-x: 0.875em;
+        --button-padding-y: 0.75em;
+        --button-border-radius: 0;
+        --button-font-weight: var(--body-font-weight-normal);
+
+        &[aria-expanded="true"] {
+            background-color: white;
+        }
+    }
+
+    
+    .nav__dropdown > button {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: calc(var(--button-padding-x) * 0.75) var(--button-padding-x);
+
+        &:not(:last-child) {
+            border-bottom-width: var(--default-border-width);
+            border-bottom-style: var(--default-border-style);
+            border-bottom-color: inherit;
+        }
+
+        width: 100%;
+
+        &:hover, 
+        &:focus {
+            text-decoration: none;
+        }
+
+        &::before {
+            @extend .icon_font;
+
+            content: "\e917";
+        }
+    }
+
+    .nav__dropdown > button[aria-expanded="true"] {
+
+        &::before {
+            content: "\e916";
+        }
+    }
+
+    .nav__dropdown > button + .collapse {
+        padding: var(--button-padding-x);
+
+        > ul > li {
+            &:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+        }
+
+        > ul > li > button {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "+";
+                left: 0;
+                top: 0;
+            }
+
+
+            padding-left: 1.25rem;
+        }
+
+        > ul > li > button[aria-expanded="true"] {
+            &::before {
+                content: "-";
+            }
+        }
+
+        > ul > li > ul {
+            font-size: var(--font-size-sm);
+            margin-top: 0.5em;
+            margin-left: 1.25rem;
+        }
+
+        > ul > li > ul > li:not(:last-child) {
+            margin-bottom: 0.5em;
+        } 
+
+        > ul > li > ul > li > a {
+            color: var(--white-link);
+        } 
+    }
+
 }
