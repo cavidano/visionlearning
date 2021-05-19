@@ -238,7 +238,7 @@
         > li > .nav__dropdown {
             position: absolute;
 
-            min-width: 240px;
+            min-width: 260px;
             
             background-color: white;
         }
@@ -258,7 +258,6 @@
 
     > ul > li:first-child > a {
         --subtle-fill-opacity: 0 !important;
-        
     }
 
     > ul > li > .button {
@@ -279,7 +278,7 @@
         align-items: center;
         justify-content: space-between;
 
-        padding: calc(var(--button-padding-x) * 0.75) var(--button-padding-x);
+        padding: calc(var(--button-padding-x) * 0.625) var(--button-padding-x);
 
         &:not(:last-child) {
             border-bottom-width: var(--default-border-width);
