@@ -110,13 +110,14 @@
 
         &::before {
             content: "";
+            
             position: absolute;
             top: unset;
             right: 0;
             bottom: 0;
             left: 0;
+
             height: calc(var(--default-border-width) * 2);
-            // z-index: auto;
         }
 
         &[aria-current]::before {
@@ -220,7 +221,7 @@
 }
 
 //////////////////////////////////////////////
-// C. VL Header
+// D. Nav Module Breadcrumb
 //////////////////////////////////////////////
 
 .nav-module-breadcrumb {
