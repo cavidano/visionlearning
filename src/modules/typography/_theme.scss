@@ -1,3 +1,6 @@
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
 
 :root {
 
@@ -11,6 +14,10 @@
 
     --body-font-size: 20px;
 }
+
+//////////////////////////////////////////////
+// B. List Divider
+//////////////////////////////////////////////
 
 .list-divider { 
     list-style: none;
@@ -31,4 +38,18 @@
 
 .list-divider__cell{
     padding: var(--spacer-1) var(--spacer-2);
+}
+
+//////////////////////////////////////////////
+// C. Description List
+//////////////////////////////////////////////
+
+dl > dt {
+    font-weight: var(--body-font-weight-bold);
+    font-style: italic;
+}
+
+dd {
+    margin-bottom: 1em;
+    margin-left: 1em;
 }

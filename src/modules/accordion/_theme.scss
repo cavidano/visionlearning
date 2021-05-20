@@ -8,11 +8,6 @@
     
     .accordion__button {
         font-weight: var(--body-font-weight-bold);
-        color: var(--white-link);
-
-        &[aria-expanded="true"]{
-            color: var(--dark);
-        }
     }
     
     .accordion__panel a {
