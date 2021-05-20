@@ -16,7 +16,7 @@ export default class Accordion {
             const accordionButtonList = accordion.querySelectorAll("[data-toggle='accordion']");
             const accordionPanelList = accordion.querySelectorAll("[data-accordion='panel']");
 
-            function setKeyboardFocusableElements(element = document, focusable = false) {
+            const setKeyboardFocusableElements = (element = document, focusable = false) => {
 
                 const focusElList = element.querySelectorAll("a[href], button, input, textarea, select, details, [tabindex]:not([tabindex=' - 1 '])");
 
