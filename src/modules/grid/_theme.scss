@@ -243,9 +243,9 @@
     gap: var(--spacer-3);
     
     grid-template-areas:
-        "cta"
-        "sidebar"
-        "main";
+      "main"
+      "cta"
+      "sidebar";
 }
 
 
