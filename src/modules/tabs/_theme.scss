@@ -1,24 +1,31 @@
 .module-results-filter {
 
     button[aria-selected="true"] {
-
         background-color: white;
-        color:  var(--primary);
 
+        color:  var(--primary);
     }
 }
 
-.article__main {
-
-    .tabs-nav {
-        --tab-button-padding-y: 0.875em;
+.tabs-nav {
+    > li > button::before {
+        background-color: var(--dark);
     }
 
-    .tabs-nav button:not([aria-selected="true"]) {
-        background: linear-gradient( transparent,hsla(249, 31%, 20%, 0.05));
+    &.library > li > *::before {
+        background-color: var(--library);
     }
 
-    .tabs-nav button[aria-selected="true"]::before {
-        color: var(--library);
+    &.glossary > li > *::before {
+        background-color: var(--glossary);
     }
+
+    &.classroom > li > *::before {
+        background-color: var(--classroom);
+    }
+}
+
+.tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
+    background: hsla(249, 31%, 20%, 0.05);
+    color: var(--white-link);
 }
