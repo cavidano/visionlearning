@@ -224,7 +224,7 @@
 // D. Nav Module Breadcrumb
 //////////////////////////////////////////////
 
-.nav-module-breadcrumb {
+.module-breadcrumb {
     @extend %subtle-fill-psuedo;
     --subtle-fill-opacity: 0.05;
 
@@ -271,6 +271,13 @@
         }
     }
 
+    .nav__dropdown button {
+        &:hover, 
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
     .nav__dropdown > button {
 
         padding: calc(var(--button-padding-x) * 0.625) var(--button-padding-x);
@@ -281,11 +288,6 @@
             border-bottom-width: var(--default-border-width);
             border-bottom-style: var(--default-border-style);
             border-bottom-color: inherit;
-        }
-
-        &:hover, 
-        &:focus {
-            text-decoration: none;
         }
 
         &:not([class*="current"]) {
@@ -318,45 +320,53 @@
     .nav__dropdown > button + .collapse {
         padding: var(--button-padding-x);
 
-        > ul > li {
-            &:not(:last-child) {
-                margin-bottom: 0.5em;
-            }
-        }
+    }
 
-        > ul > li > button {
-            position: relative;
+    .nav__dropdown > ul.module-breadcrumb__subcats {
+        padding: var(--button-padding-x);
+    }
 
-            &::before {
-                position: absolute;
-                content: "+";
-                left: 0;
-                top: 0;
-            }
-
-
-            padding-left: 1.25rem;
-        }
-
-        > ul > li > button[aria-expanded="true"] {
-            &::before {
-                content: "-";
-            }
-        }
-
-        > ul > li > ul {
-            font-size: var(--font-size-sm);
-            margin-top: 0.5em;
-            margin-left: 1.25rem;
-        }
-
-        > ul > li > ul > li:not(:last-child) {
+    ul.module-breadcrumb__subcats > li {
+        &:not(:last-child) {
             margin-bottom: 0.5em;
-        } 
+        }
+    }
 
-        > ul > li > ul > li > a {
-            color: var(--white-link);
-        } 
+    ul.module-breadcrumb__subcats > li > button {
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        &::before {
+
+            @extend .icon_font;
+
+            content: "\e91d";
+
+            width: 1.75rem;
+            display: block;
+        }
+    }
+
+    ul.module-breadcrumb__subcats > li > button[aria-expanded="true"] {
+        &::before {
+            content: "\e91e";
+        }
+    }
+
+    ul.module-breadcrumb__subcats > li > ul {
+        font-size: var(--font-size-sm);
+        margin-top: 0.5em;
+        margin-left: 1.75rem;
+    }
+
+    ul.module-breadcrumb__subcats > li > ul > li:not(:last-child) {
+        margin-bottom: 0.5em;
+    } 
+
+    ul.module-breadcrumb__subcats > li > ul > li > a {
+        color: var(--white-link);
     }
 
 }
