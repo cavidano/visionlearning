@@ -1,7 +1,6 @@
-
 :root {
     --narrow-width: 43rem; // Approximately 55 characters wide for readability
-    --medium-width: calc( var(--narrow-width) * 1.75);
+    --medium-width: calc( var(--narrow-width) * 1.5);
     
-    --wide-width: calc( var(--narrow-width) * 2.25);
+    --wide-width: calc( var(--narrow-width) * 2);
 }
