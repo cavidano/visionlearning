@@ -140,24 +140,21 @@ ol.quiz__questions {
     display: none;
 }
 
-// 
-
-.comprehension-checkpoint {
-    // background-color: antiquewhite;
-
-}
+//
 
 .comprehension-checkpoint__header {
+    border-radius: var(--form-field-border-radius, 0.25em);
+    overflow: hidden;
 
-        @extend %subtle-fill-psuedo;
-        --subtle-fill-opacity: 0.075;
+    @extend %subtle-fill-psuedo;
+    --subtle-fill-opacity: 0.075;
 
-        display: flex;
-        align-items: center;
+    display: flex;
+    align-items: center;
 
-        color: var(--primary);
-    
-        margin-left: calc(var(--button--icon-only-size) * -1);
+    color: var(--primary);
+
+    margin-left: calc(var(--button--icon-only-size) * -1);
 
     > span {
         @extend %subtle-fill-psuedo;
