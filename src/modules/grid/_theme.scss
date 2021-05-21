@@ -240,7 +240,7 @@
 .landing {
     display: grid;
 
-    gap: var(--spacer-2);
+    gap: var(--spacer-3);
     
     grid-template-areas:
         "cta"
@@ -289,6 +289,7 @@
 
     .landing {
         grid-template-columns: 1fr 20em;
+        grid-template-rows: auto 1fr;
         grid-template-areas:
             "main cta"
             "main sidebar";

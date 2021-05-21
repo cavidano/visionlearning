@@ -122,7 +122,7 @@
 		<nav class="vl-header__menu">
 			<ul>
 				<li class="library">
-					<a href="{{ site.url }}library/" {% if page.url contains '/library' %} aria-current="page" {% endif %}>
+					<a href="{{ site.url }}/library/" {% if page.url contains '/library' %} aria-current="page" {% endif %}>
 						<span class="title">Library</span>
 						<span class="tagline">Learning modules</span>
 					</a>
@@ -148,92 +148,219 @@
 
 {% if page.url contains 'module' %}
 
-<nav class="nav-module-breadcrumb">
+	<nav class="nav-module-breadcrumb">
 
-	<ul class="wide padding-x-2">
-		<li>
-			<a class="button" href="#1">
-				<span class="icon_home" aria-hidden="true"></span>
-			</a>
-		</li>
-		<li>
-			<button class="button" data-toggle="dropdown">
-				Library
-			</button>
-
-			<div class="nav__dropdown box-shadow-1">
-
-				<button
-					data-toggle="collapse"
-					data-target="disc-biology">
-						Biology
+		<ul class="wide padding-x-2">
+			<li>
+				<a class="button" href="#1">
+					<span class="icon_home" aria-hidden="true"></span>
+				</a>
+			</li>
+			<li>
+				<button class="button" data-toggle="dropdown">
+					Library
 				</button>
 
-				<div class="collapse" id="disc-biology">
-					<ul>
-						<li>
-							<button
-								data-toggle="collapse"
-								data-target="#nav-biological-molecules">
-									Biological Molecules
-							</button>
+				<div class="nav__dropdown box-shadow-1">
 
-							<ul class="collapse" id="nav-biological-molecules">
-								<li>
-									<a href="#1">Carbohydrates</a>
-								</li>
-								<li>
-									<a href="#1">Fats and Proteins</a>
-								</li>
-								<li>
-									<a href="#1">Biological Proteins</a>
-								</li>
-								<li>
-									<a href="#1">Blood Biology I</a>
-								</li>
-								<li>
-									<a href="#1">Lipids</a>
-								</li>
-							</ul>
-				
-						</li>
-						<li>
-							<button
-								data-toggle="collapse"
-								data-target="#nav-energy-in-living-systems">
-									Energy in Living Systems
-							</button>
+					<button class="current">
+							Biology
+					</button>
 
-							<ul class="collapse nav" id="nav-energy-in-living-systems">
-								<li>
-									<a href="#1">Module</a>
-								</li>
-								<li>
-									<a href="#1">Module</a>
-								</li>
-								<li>
-									<a href="#1">Module</a>
-								</li>
-							</ul>
-				
-						</li>
-					</ul>
+					<button
+						data-toggle="collapse"
+						data-target="disc-chemistry">
+							Chemistry
+					</button>
+
+					<div class="collapse" id="disc-chemistry">
+						<ul>
+							<li>
+								<button
+									data-toggle="collapse"
+									data-target="#nav-biological-molecules">
+										Biological Molecules
+								</button>
+
+								<ul class="collapse" id="nav-biological-molecules">
+									<li>
+										<a href="#1">Carbohydrates</a>
+									</li>
+									<li>
+										<a href="#1">Fats and Proteins</a>
+									</li>
+									<li>
+										<a href="#1">Biological Proteins</a>
+									</li>
+									<li>
+										<a href="#1">Blood Biology I</a>
+									</li>
+									<li>
+										<a href="#1">Lipids</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<button
+									data-toggle="collapse"
+									data-target="#nav-cell-biology">
+										Cell Biology
+								</button>
+
+								<ul class="collapse" id="nav-cell-biology">
+									<li>
+										<a href="#1">Discovery and Structure of Cells</a>
+									</li>
+									<li>
+										<a href="#1">Membranes I</a>
+									</li>
+									<li>
+										<a href="#1">Membranes II</a>
+									</li>
+									<li>
+										<a href="#1">Cellular Organelles I</a>
+									</li>
+									<li>
+										<a href="#1">Cell Division I</a>
+									</li>
+									<li>
+										<a href="#1">Cell Division II</a>
+									</li>
+									<li>
+										<a href="#1">Absorption, Distribution, and Storage of Chemicals</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<button
+									data-toggle="collapse"
+									data-target="#nav-energy-in-living-systems">
+										Energy in Living Systems
+								</button>
+
+								<ul class="collapse" id="nav-energy-in-living-systems">
+									<li>
+										<a href="#1">Energy Metabolism I</a>
+									</li>
+									<li>
+										<a href="#1">Energy Metabolism II</a>
+									</li>
+									<li>
+										<a href="#1">Photosynthesis I</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<button
+									data-toggle="collapse"
+									data-target="#nav-evolutionary-biology">
+										Evolutionary Biology
+								</button>
+
+								<ul class="collapse" id="nav-evolutionary-biology">
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+									<li>
+										<a href="#1"></a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<button
+									data-toggle="collapse"
+									data-target="#nav-genetics">
+										Genetics
+								</button>
+
+								<ul class="collapse nav" id="nav-genetics">
+									<li>
+										<a href="#1">Module</a>
+									</li>
+									<li>
+										<a href="#1">Module</a>
+									</li>
+									<li>
+										<a href="#1">Module</a>
+									</li>
+								</ul>
+					
+							</li>
+						</ul>
+					</div>
+
+					<button
+						data-toggle="collapse"
+						data-target="disc-earth-science">
+							Earth Science
+					</button>
+
+					<button
+						data-toggle="collapse"
+						data-target="disc-earth-science">
+							General Science
+					</button>
+
+					<button
+						data-toggle="collapse"
+						data-target="disc-inside-science">
+							Inside Science
+					</button>
+
+					<button
+						data-toggle="collapse"
+						data-target="disc-math-in-science">
+							Math in Science
+					</button>
+					
+					<button
+						data-toggle="collapse"
+						data-target="disc-physics">
+							Physics
+					</button>
+
+					<button
+						data-toggle="collapse"
+						data-target="disc-process-of-science">
+							Process of Science
+					</button>
+
 				</div>
-
-				<button
-					data-toggle="collapse"
-					data-target="disc-chemistry">
-						Chemistry
+			</li>
+			<li>
+				<button class="button" data-toggle="dropdown">
+					Biology
 				</button>
-			</div>
-		</li>
-		<li>
-			<button class="button" data-toggle="dropdown">
-				Biology
-			</button>
-		</li>
-	</ul>
+			</li>
+		</ul>
 
-</nav>
+	</nav>
 
 {% endif %}
