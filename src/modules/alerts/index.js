@@ -10,10 +10,10 @@ export default class Alerts {
         
         const alertDismissableList = document.querySelectorAll(".alert--dismissable");
 
-        const closeButtonHTML = `
-        <button class="button button--icon-only">
-            <span class="icon_close" aria-label="Close" aria-hidden="true">
-        </button>`;
+        const closeButtonHTML = 
+            `<button class="button button--icon-only">
+                <span class="icon_close" aria-label="Close" aria-hidden="true">
+            </button>`;
 
         alertDismissableList.forEach((alertDismissable) => {
             
