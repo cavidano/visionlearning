@@ -3,145 +3,247 @@ layout: global
 title: "Library"
 ---
 
-<div class="margin-y-5">
+<article class="landing wide margin-y-4">
 
-<div class="container medium">
-
-<div class="grid grid--columns-2">
-
-    <div class="grid__cell">
-        <div
-            class="form-entry"
-            data-required="true"
-            data-error-description="Borough is required!" 
-            data-error-instructions="Select a Borough">
-
-            <div class="form-entry__field">
-                
-                <label class="form-entry__field__label screen-reader-only" for="select-borough">
-                    Borough
-                </label>
-                
-                <span class="form-entry__field__select">
-                    <select id="select-borough" name="Boroughs">
-                        <option value="">All Disciplines</option>
-                        <option value="Biology">Biology</option>
-                        <option value="Chemistry">Chemistry</option>
-                        <option value="Earth Science">Earth Science</option>
-                        <option value="General Science">General Science</option>
-                        <option value="Inside Science">Inside Science</option>
-                        <option value="Math in Science">Math in Science</option>
-                        <option value="Math in Science">Physics</option>
-                        <option value="Process of Science">Process of Science</option>
-                    </select>
-                </span>
-
-            </div>
-
-        </div>
-        <!-- .form-entry -->
-    </div>
-
-    <div class="grid__cell">
-
-        <div class="form-entry">
-
-            <div class="form-entry__field">
-
-                <label class="form-entry__field__label screen-reader-only" for="search-example-02">
-                    Search
-                </label>
-                
-                <span class="form-entry__field__input">
-                    <span class="icon_search"></span>
-                    <input type="text" name="search-example" id="search-example-02" placeholder="Search Modules">
-                </span>
-
-            </div>
-        
-        </div>
-        <!-- .form-entry -->
-
-    </div>
-
-</div>
-
-<div class="margin-y-4">
-
-    <header class="theme-primary biology discipline-divider margin-bottom-3">
-        <img src="{{ site.url }}/images/discipline-biology.jpg" alt="">
-        <h2 class="h3">Biology</h2>
-    </header>
-
-    <h2 class="h6">Biological Molecules</h2>
-
-    <ul class="list-divider">
-
-        <li>
-            <span class="list-divider__cell">
-                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                    Carbohydrates
-                </a>
-            </span>
-            <span class="list-divider__cell">
-                <a class="button button--icon-only list-add-remove" href="#1">
-                    <span class="vl_icon_list-add button__icon"></span>
-                </a>
-            </span>
-        </li>
-        <li>
-            <span class="list-divider__cell">
-                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                    Fats and Proteins
-                </a>
-            </span>
-            <span class="list-divider__cell">
-                <a class="button button--icon-only list-add-remove" href="#1">
-                    <span class="vl_icon_list-add button__icon"></span>
-                </a>
-            </span>
-        </li>
-        <li>
-            <span class="list-divider__cell">
-                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                    Biological Proteins
-                </a>
-            </span>
-            <span class="list-divider__cell">
-                <a class="button button--icon-only list-add-remove" href="#1">
-                    <span class="vl_icon_list-add button__icon"></span>
-                </a>
-            </span>
-        </li>
-        <li>
-            <span class="list-divider__cell">
-                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                    Blood Biology I
-                </a>
-            </span>
-            <span class="list-divider__cell">
-                <a class="button button--icon-only list-add-remove" href="#1">
-                    <span class="vl_icon_list-add button__icon"></span>
-                </a>
-            </span>
-        </li>
-        <li>
-            <span class="list-divider__cell">
-                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                    Lipids
-                </a>
-            </span>
-            <span class="list-divider__cell">
-                <a class="button button--icon-only list-add-remove" href="#1">
-                    <span class="vl_icon_list-add button__icon"></span>
-                </a>
-            </span>
-        </li>
+    <div class="landing__main">
     
-    </ul>
 
-</div>
+        <div class="grid grid--columns-2">
 
-</div>
+            <div class="grid__cell">
+                <div
+                    class="form-entry">
 
-</div>
+                    <div class="form-entry__field">
+                        
+                        <label class="form-entry__field__label screen-reader-only" for="select-borough">
+                            Borough
+                        </label>
+                        
+                        <span class="form-entry__field__select">
+                            <select id="select-borough" name="Boroughs">
+                                <option value="">All Discipline</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Earth Science">Earth Science</option>
+                                <option value="General Science">General Science</option>
+                                <option value="Inside Science">Inside Science</option>
+                                <option value="Math in Science">Math in Science</option>
+                                <option value="Math in Science">Physics</option>
+                                <option value="Process of Science">Process of Science</option>
+                            </select>
+                        </span>
+
+                    </div>
+
+                </div>
+                <!-- .form-entry -->
+            </div>
+
+            <div class="grid__cell">
+
+                <div class="form-entry">
+
+                    <div class="form-entry__field">
+
+                        <label class="form-entry__field__label screen-reader-only" for="search-example-02">
+                            Search
+                        </label>
+                        
+                        <span class="form-entry__field__input">
+                            <span class="icon_search"></span>
+                            <input type="text" name="search-example" id="search-example-02" placeholder="Search Modules">
+                        </span>
+
+                    </div>
+                
+                </div>
+                <!-- .form-entry -->
+
+            </div>
+
+        </div>
+
+        <div class="margin-y-4 overflow-hidden">
+
+            <header class="theme-primary biology discipline-divider margin-bottom-3">
+                <img src="{{ site.url }}/images/discipline-biology.jpg" alt="">
+                <h2 class="h3">Biology</h2>
+            </header>
+
+            <div class="container category margin-y-3">
+            
+                <h2 class="h6">Biological Molecules</h2>
+
+                <ul class="list-divider">
+
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Carbohydrates
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Fats and Proteins
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Biological Proteins
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Blood Biology I
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Lipids
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                
+                </ul>
+
+            </div>
+
+            <div class="container category margin-y-3">
+            
+                <h2 class="h6">Cell Biology</h2>
+
+                <ul class="list-divider">
+
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Carbohydrates
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Fats and Proteins
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Biological Proteins
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Blood Biology I
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="link" href="http://127.0.0.1:4000/library/module.html">
+                                Lipids
+                            </a>
+                        </span>
+                        <span class="list-divider__cell">
+                            <a class="button button--icon-only list-add-remove" href="#1">
+                                <span class="vl_icon_list-add button__icon"></span>
+                            </a>
+                        </span>
+                    </li>
+                
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- .article__main -->
+
+    <aside class="landing__cta">
+
+
+        <div class="card box-shadow-1 display-none">
+            
+            <div class="card__head border-bottom">
+                <p>Module of the Day</p>
+            </div>
+
+            <div class="card__body font-size-md">
+                <h2 class="h6">The Piltdown Hoax</h2>
+                <p>
+                    The Piltdown Man was once hailed as the "missing link" in the evolution of apes to
+                    humans. However, the discovery at Piltdown - human skull fragments, ancient...
+                </p>
+                <a href="#1">Go to Module</a>
+            </div>
+
+        </div>
+        <!-- .card -->    
+
+    </aside>
+
+    <div class="landing__sidebar">
+
+    </div>
+    <!-- .article__main -->
+
+</article>
