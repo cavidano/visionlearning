@@ -283,3 +283,9 @@ screen and (-ms-high-contrast: none) {
         }
     }
 }
+
+.list-add-remove {
+    --subtle-fill-opacity: 0 !important;
+    border-radius: 100%;
+    font-size: var(--font-size-lg);
+}

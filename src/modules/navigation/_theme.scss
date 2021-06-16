@@ -378,34 +378,16 @@
 // E. All Modules
 //////////////////////////////////////////////
 
-.all-modules {
-  
-  > header {
-      display: grid;
-      align-items: center;
+.discipline-divider {
+    display: grid;
+    align-items: center;
 
-      gap: var(--spacer-3);
-      
-      grid-template-columns: 120px 1fr auto;
+    gap: var(--spacer-3);
+    
+    grid-template-columns: 120px 1fr auto;
 
-      h2.h3 {
-          margin-bottom: unset;
-      }
-
-  }
-
-  .grid {
-    --grid-gap: var(--spacer-3);
-    a {
-        color: var(--white-link);
+    h2.h3 {
+        margin-bottom: unset;
     }
-  }
 
-}
-
-.all-modules__subcategory {
-
-  &:not(:last-child) {
-    margin-bottom: var(--grid-gap);
-  }
 }

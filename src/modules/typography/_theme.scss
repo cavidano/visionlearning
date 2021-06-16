@@ -14,7 +14,6 @@
 
     --body-font-size: 20px;
 
-
     // Banner Headline
 
     --banner-headline-font-size: calc(var(--body-font-size) * 3.25);
@@ -38,6 +37,7 @@
 
 .list-divider { 
     list-style: none;
+    // font-size: var(--font-size-md);
 
     > li {
         display: flex;
@@ -53,8 +53,8 @@
 
 }
 
-.list-divider__cell{
-    padding: var(--spacer-1) var(--spacer-2);
+.list-divider__cell {
+    padding: 0.25em 0.5em;
 }
 
 //////////////////////////////////////////////
