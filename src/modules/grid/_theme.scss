@@ -239,9 +239,10 @@
 .landing {
     display: grid;
 
-    gap: var(--spacer-3);
+    // gap: var(--spacer-3);
     
     grid-template-areas:
+      "filter"
       "main"
       "cta"
       "sidebar";
@@ -278,20 +279,26 @@
 
 .landing__cta {    
     grid-area: cta;
+    background-color: red;
+}
+
+.landing__filter {    
+    grid-area: filter;
 }
 
 .landing__sidebar {    
     grid-area: sidebar;
+    background-color: purple !important;
 }
 
 @include breakpoints.breakpoints-up(lg) {
 
     .landing {
-        grid-template-columns: 1fr 20em;
+        grid-template-columns: 16em 1fr 16em;
         grid-template-rows: auto 1fr;
         grid-template-areas:
-            "main cta"
-            "main sidebar";
+            "filter main cta"
+            "filter main sidebar";
     }
 
 }

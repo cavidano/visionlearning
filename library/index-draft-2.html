@@ -3,64 +3,71 @@ layout: global
 title: "Library"
 ---
 
-<article class="container wide landing margin-y-4">
-
-    <div class="landing__filter font-size-md box-shadow-1 subtle-fill">
-
-        <div class="form-entry padding-2">
-
-            <div class="form-entry__field">
-
-                <label class="form-entry__field__label screen-reader-only" for="search-example-02">
-                    Search
-                </label>
-                
-                <span class="form-entry__field__input">
-                    <span class="icon_search"></span>
-                    <input type="text" name="search-example" id="search-example-02" placeholder="Search Modules">
-                </span>
-
-            </div>
-        
-        </div>
-        <!-- .form-entry -->
-
-        <ul class="nav nav--divider" role="menu">
-            <li>
-                <a href="#1" aria-current="page">All Disciplines</a>
-            </li>
-            <li>
-                <a href="#1">Biology</a>
-            </li>
-            <li>
-                <a href="#1">Chemistry</a>
-            </li>
-            <li>
-                <a href="#1">Earth Science</a>
-            </li>
-            <li>
-                <a href="#1">General Science</a>
-            </li>
-            <li>
-                <a href="#1">Inside Science</a>
-            </li>
-            <li>
-                <a href="#1">Math in Science</a>
-            </li>
-            <li>
-                <a href="#1">General Science</a>
-            </li>
-        </ul>
-    </div>
-    <!-- .landing__sidebar -->
+<article class="landing wide margin-y-4">
 
     <div class="landing__main">
+    
+        <div class="grid grid--columns-2">
 
-        <div class="overflow-hidden">
+            <div class="grid__cell">
+                <div
+                    class="form-entry">
+
+                    <div class="form-entry__field">
+                        
+                        <label class="form-entry__field__label screen-reader-only" for="select-borough">
+                            Borough
+                        </label>
+                        
+                        <span class="form-entry__field__select">
+                            <select id="select-borough" name="Boroughs">
+                                <option value="">All Discipline</option>
+                                <option value="Biology">Biology</option>
+                                <option value="Chemistry">Chemistry</option>
+                                <option value="Earth Science">Earth Science</option>
+                                <option value="General Science">General Science</option>
+                                <option value="Inside Science">Inside Science</option>
+                                <option value="Math in Science">Math in Science</option>
+                                <option value="Math in Science">Physics</option>
+                                <option value="Process of Science">Process of Science</option>
+                            </select>
+                        </span>
+
+                    </div>
+
+                </div>
+                <!-- .form-entry -->
+            </div>
+
+            <div class="grid__cell">
+
+                <div class="form-entry">
+
+                    <div class="form-entry__field">
+
+                        <label class="form-entry__field__label screen-reader-only" for="search-example-02">
+                            Search
+                        </label>
+                        
+                        <span class="form-entry__field__input">
+                            <span class="icon_search"></span>
+                            <input type="text" name="search-example" id="search-example-02" placeholder="Search Modules">
+                        </span>
+
+                    </div>
+                
+                </div>
+                <!-- .form-entry -->
+
+            </div>
+
+        </div>
+
+        <div class="margin-y-4 overflow-hidden">
 
             <header class="theme-primary biology discipline-divider margin-bottom-3">
-                <h2 class="h3 padding-x-3">Biology</h2>
-                <img src="./images/discipline-biology.jpg" alt="">
+                <img src="{{ site.url }}/images/discipline-biology.jpg" alt="">
+                <h2 class="h3">Biology</h2>
             </header>
 
             <div class="container category margin-y-3">
@@ -212,6 +219,7 @@ title: "Library"
 
     <aside class="landing__cta">
 
+
         <div class="card box-shadow-1 display-none">
             
             <div class="card__head border-bottom">
@@ -235,6 +243,6 @@ title: "Library"
     <div class="landing__sidebar">
 
     </div>
-    <!-- .landing__sidebar -->
+    <!-- .article__main -->
 
 </article>
