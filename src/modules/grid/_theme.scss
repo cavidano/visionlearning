@@ -291,8 +291,23 @@
 
     // border: 12px solid purple !important;
 
-    [aria-selected="true"]{
+    [aria-selected="true"] {
       font-weight: var(--body-font-weight-bold);
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        width: calc(var(--default-border-width) * 3);
+        
+        background-color: var(--library);
+        
+        // opacity: 0.0625;
+    }
     }
 }
 
