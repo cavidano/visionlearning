@@ -20,6 +20,7 @@
 }
 
 [class*="grid--columns"] {
+  
     @include breakpoints.breakpoints-up(lg) {
 
       &[class*="columns-2"] {
@@ -35,6 +36,7 @@
       }
   
       grid-template-columns: repeat(var(--grid-columns), 1fr);
+
     }
 }
 
@@ -233,71 +235,74 @@
 
 
 //////////////////////////////////////////////
-// A. Article (Module)
+// A. Landing
 //////////////////////////////////////////////
 
-.landing {
+.landing, 
+.materials {
     display: grid;
-
-    // gap: var(--spacer-3);
-    
-    grid-template-areas:
-      "filter"
-      "main"
-      "cta"
-      "sidebar";
+    height: 100%;
+    min-height: 800px;
 }
 
+.landing {
+    gap: var(--spacer-3);
+    
+    grid-template-areas:
+      "main"
+      "aside";
+
+    // border: 12px solid red !important;
+
+}
 
 .landing__main {
     grid-area: main;
 
-    align-items: start;
+    // border: 12px solid blue !important;
+}
 
-    section {
-        margin-top: var(--spacer-4);
-        margin-bottom: var(--spacer-4);
-    }
+.landing__aside {    
+    grid-area: aside;
+    border: 12px solid yellow !important;
+}
 
-    figure {
-        display: table;
 
-        margin: var(--spacer-5) auto;
-        
-        figcaption {
-            display: table-caption;
-            caption-side: bottom;
-        }
+@include breakpoints.breakpoints-up(lg) {
+    .landing {
+        grid-template-columns: 1fr 16em;
 
-        img {
-            min-width: unset !important;
-            width: auto !important;
-        }
-
+        grid-template-areas:
+            "main aside"
     }
 }
 
-.landing__cta {    
-    grid-area: cta;
-    background-color: red;
+
+// Whoa
+
+.materials {
+  grid-template-areas:
+    "aside"
+    "main";
 }
 
-.landing__filter {    
-    grid-area: filter;
+.materials__aside {    
+    grid-area: aside;
+
+    // border: 12px solid purple !important;
 }
 
-.landing__sidebar {    
-    grid-area: sidebar;
+.materials__main {
+    grid-area: main;
+
+    // border: 12px solid green !important;
 }
 
 @include breakpoints.breakpoints-up(lg) {
-
-    .landing {
-        grid-template-columns: 16em 1fr 16em;
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-            "filter main cta"
-            "filter main sidebar";
+    .materials {
+      grid-template-columns: 16em 1fr;
+    
+      grid-template-areas:
+          "aside main"
     }
-
 }
