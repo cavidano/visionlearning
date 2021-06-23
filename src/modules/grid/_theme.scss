@@ -288,7 +288,6 @@
 
 .landing__sidebar {    
     grid-area: sidebar;
-    background-color: purple !important;
 }
 
 @include breakpoints.breakpoints-up(lg) {
