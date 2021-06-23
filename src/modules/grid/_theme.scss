@@ -290,6 +290,10 @@
     grid-area: aside;
 
     // border: 12px solid purple !important;
+
+    [aria-selected="true"]{
+      font-weight: var(--body-font-weight-bold);
+    }
 }
 
 .materials__main {
