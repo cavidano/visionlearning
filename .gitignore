@@ -1,8 +1,9 @@
-.vscode
+._*
+.DS_Store
+
 node_modules
 
 _site
-.sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
