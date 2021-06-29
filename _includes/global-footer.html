@@ -606,14 +606,14 @@
 
 			console.log('moduleData ===== >', moduleData);
 
-			displayDisciplines(moduleData);
+			initDisciplines(moduleData);
 
 		} catch (err) {
 			console.warn(err);
 		}
 	};
 
-	const displayDisciplines = (disciplines) => {
+	const initDisciplines = (disciplines) => {
 
 		const moduleListView = document.getElementById('module-list-view');
 
@@ -631,13 +631,56 @@
 
 			console.log('discipline ===== >', discipline.Name);
 
+			disciplineModules = [];
+
 			subCategoryArray.forEach(subCategory => {
 
 				let modulesByCategory = allModules.filter(module => module.SubCategory === subCategory);
 			
 				console.log('modulesByCategory ===== >', modulesByCategory);
+
+				disciplineModules.push(modulesByCategory);
 				
 			});
+			
+			console.log('disciplineModules ========== >', disciplineModules);
+
+			let moduleListHTML = disciplineModules.map((category, index) => {
+				
+				let categoryTitle = category[0].SubCategory;
+
+				let moduleListItems = category.map((module) => {
+
+					let moduleTitle = module.Name;
+
+					return(`
+						<li>
+							<span class="list-divider__cell">
+								<a class="link" href="http://127.0.0.1:4000/library/module.html">
+									${moduleTitle}
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm ally-link" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					`);
+				}).join('');
+
+				return(`
+					<div class="category margin-y-3">
+									
+						<h2 class="h6">${categoryTitle}</h2>
+
+						<ul class="list-divider font-size-md">
+							${moduleListItems}
+						</ul>
+
+					</div>
+				`);
+			}).join('');
 
 			return (`
 				<section>
@@ -647,8 +690,8 @@
 						<img src="{{ site.url }}/images/discipline-${discipline.Slug}.jpg" alt="">
 					</header>
 					
-					<div class="padding-2">
-						${discipline.Slug}
+					<div class="padding-3">
+						${moduleListHTML}
 					</div>
 
 				</section>
