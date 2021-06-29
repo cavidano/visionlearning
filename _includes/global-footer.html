@@ -617,35 +617,61 @@
 
 		moduleListView.innerHTML = disciplines.map((discipline) => {
 
-			console.log('discipline ===== >', discipline.Name);
+			const allModules = discipline.Modules;
 
-			// discipline.forEach(disc) {
+			let subCategoriesArray = [];
+			
+			allModules.map((module) => {
+				subCategoriesArray.push(module.SubCategory);
+			});
 
-			// 	let name = discipline.Name;
- 				return `
-				<header class="theme-primary ${discipline.Slug} discipline-divider">
-					<h2 class="h3 margin-x-3" style="line-height: unset !important;">${discipline.Name}</h2>
-					<img src="{{ site.url }}/images/discipline-${discipline.Slug}.jpg" alt="">
-				</header>`;
+			const subCategoryList = new Set(subCategoriesArray.sort());
 
-			// 	<div class="margin-y-4">
+			// console.log('discipline ===== >', discipline.Name);
 
-			// 		<h2 class="h4 margin-bottom-4">${discipline}</h2>
+			// console.log('allModules ===== >', allModules);
 
-			// 	</div>`;
+			// console.log('subCategories ===== >', subCategoryList);
 
-			// let introduction = moduleArray.introduction;
+			subCategoryList.forEach(subCategory => {
+				// console.log('subCategory ===== > !!!!!!', subCategory);
 
-			// let categories = moduleArray.categories;
+				const myModules = allModules.filter(module => module.SubCategory === subCategory);
+			
+				console.log('myModules ===== >', myModules);
 
-			// const moduleListHTML = categories.map((category) => {
-			// 		return `
-			// 	<div class="margin-y-4">
+				
 
-			// 		<h2 class="h4 margin-bottom-4">${discipline}</h2>
 
-			// 	</div>`;
-			// 	}).join('');
+
+
+
+				
+			});
+
+
+
+
+			// const subCategorieList = subCategories.map((module) => {
+			// 	let dailyMeetings = allModules.filter((module) => module.meetingDay === weekday);
+			// });
+
+			return (`
+				<section>
+
+					<header class="theme-primary ${discipline.Slug} discipline-divider">
+						<h2 class="h3 margin-x-3" style="line-height: unset !important;">${discipline.Name}</h2>
+						<img src="{{ site.url }}/images/discipline-${discipline.Slug}.jpg" alt="">
+					</header>
+					
+					<div class="padding-2">
+
+						${modulesBySubcategory}
+
+					</div>
+
+				</section>
+			`);
 
 		}).join('');
 	};
