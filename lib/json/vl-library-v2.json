@@ -234,7 +234,7 @@
        "Id":1,
        "Name":"Chemistry",
        "Description":"The universe is a vast soup of interacting particles and energy. The ways in which those interactions take place, as well as the structure and composition of matter, is the main focus of the field of chemistry. Our chemistry learning modules introduce you to the world of chemistry, exploring current research and scientific findings on concepts like the structure and function of atoms, forms of energy and its transfer, chemical bonding and reactions, and more.",
-       "Slug": "Chemistry",
+       "Slug": "chemistry",
        "Modules":[
           {
              "Id":"49",

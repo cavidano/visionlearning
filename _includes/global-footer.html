@@ -630,19 +630,14 @@
 			subCategoryArray = new Set(subCategoryArray.sort());
 
 			console.log('discipline ===== >', discipline.Name);
-			
+
 			subCategoryArray.forEach(subCategory => {
 
-				const myModules = allModules.filter(module => module.SubCategory === subCategory);
+				let modulesByCategory = allModules.filter(module => module.SubCategory === subCategory);
 			
-				console.log('myModules ===== >', myModules);
+				console.log('modulesByCategory ===== >', modulesByCategory);
 				
-				return (`
-					<h2>Coool</h2>
-				`);
 			});
-
-
 
 			return (`
 				<section>
@@ -653,6 +648,7 @@
 					</header>
 					
 					<div class="padding-2">
+						${discipline.Slug}
 					</div>
 
 				</section>
