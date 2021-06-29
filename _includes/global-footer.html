@@ -604,7 +604,7 @@
 			const response = await fetch(libraryData);
 			const moduleData = await response.json();
 
-			console.log('moduleData ===== >', moduleData);
+			// console.log('moduleData ===== >', moduleData);
 
 			initDisciplines(moduleData);
 
@@ -617,7 +617,9 @@
 
 		const moduleListView = document.getElementById('module-list-view');
 
-		moduleListView.innerHTML = disciplines.map((discipline) => {
+		moduleListView.innerHTML = disciplines
+			// .filter(discipline => discipline.Name === 'Physics')
+			.map((discipline) => {
 
 			const allModules = discipline.Modules;
 
@@ -629,7 +631,7 @@
 
 			subCategoryArray = new Set(subCategoryArray.sort());
 
-			console.log('discipline ===== >', discipline.Name);
+			// console.log('discipline ===== >', discipline.Name);
 
 			disciplineModules = [];
 
@@ -637,13 +639,13 @@
 
 				let modulesByCategory = allModules.filter(module => module.SubCategory === subCategory);
 			
-				console.log('modulesByCategory ===== >', modulesByCategory);
+				// console.log('modulesByCategory ===== >', modulesByCategory);
 
 				disciplineModules.push(modulesByCategory);
 				
 			});
 			
-			console.log('disciplineModules ========== >', disciplineModules);
+			// console.log('disciplineModules ========== >', disciplineModules);
 
 			let moduleListHTML = disciplineModules.map((category, index) => {
 				
