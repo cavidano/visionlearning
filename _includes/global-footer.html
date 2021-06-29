@@ -468,12 +468,14 @@
 			console.log('libraryData ===== >', moduleData);
 
 			displayModules(moduleData);
+
 		} catch (err) {
 			console.warn(err);
 		}
 	};
 
 	const displayModules = (modules) => {
+
 		const moduleDisplayHTML = modules.map((moduleArray) => {
 			// let discipline = moduleArray.discipline;
 			// let introduction = moduleArray.introduction;
@@ -619,42 +621,28 @@
 
 			const allModules = discipline.Modules;
 
-			let subCategoriesArray = [];
+			let subCategoryArray = [];
 			
 			allModules.map((module) => {
-				subCategoriesArray.push(module.SubCategory);
+				subCategoryArray.push(module.SubCategory);
 			});
 
-			const subCategoryList = new Set(subCategoriesArray.sort());
+			subCategoryArray = new Set(subCategoryArray.sort());
 
-			// console.log('discipline ===== >', discipline.Name);
-
-			// console.log('allModules ===== >', allModules);
-
-			// console.log('subCategories ===== >', subCategoryList);
-
-			subCategoryList.forEach(subCategory => {
-				// console.log('subCategory ===== > !!!!!!', subCategory);
+			console.log('discipline ===== >', discipline.Name);
+			
+			subCategoryArray.forEach(subCategory => {
 
 				const myModules = allModules.filter(module => module.SubCategory === subCategory);
 			
 				console.log('myModules ===== >', myModules);
-
 				
-
-
-
-
-
-				
+				return (`
+					<h2>Coool</h2>
+				`);
 			});
 
 
-
-
-			// const subCategorieList = subCategories.map((module) => {
-			// 	let dailyMeetings = allModules.filter((module) => module.meetingDay === weekday);
-			// });
 
 			return (`
 				<section>
@@ -665,9 +653,6 @@
 					</header>
 					
 					<div class="padding-2">
-
-						${modulesBySubcategory}
-
 					</div>
 
 				</section>
