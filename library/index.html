@@ -5,13 +5,13 @@ title: "Library"
 
 <div class="theme-light overflow-hidden">
 
-    <div class="wide margin-y-5">
+    <div class="wide margin-y-4">
 
         <div class="landing">
 
             <div class="landing__main theme-white box-shadow-1">
             
-                <div class="materials tabs">
+                <div class="materials">
 
                     <div class="materials__aside font-size-md padding-2 border-right--lg">
 
@@ -25,7 +25,7 @@ title: "Library"
                                 
                                 <span class="form-entry__field__input">
                                     <input type="text" name="search-example" id="search-example" placeholder="Search Library">
-                                    <button class="button button--icon-only" type="button" aria-label="Home">
+                                    <button class="button  button--icon-only" type="button" aria-label="Home">
                                         <span class="icon_search" aria-hidden="true"></span>
                                     </button>
                                 </span>
@@ -35,7 +35,10 @@ title: "Library"
                         </div>
                         <!-- .form-entry -->
 
-                        <ul class="nav nav--divider border border-radius--sm" id="filter-by-discipline" role="menu">
+                        <ul
+                            class="nav nav--divider border border-radius--sm"
+                            id="filter-by-discipline"
+                            role="menu">
                             <li>
                                 <button aria-selected="true">
                                     All Disciplines
@@ -82,201 +85,10 @@ title: "Library"
 
                     <div class="materials__main">
 
-                        <div
-                            class="tabs__panel shown"
-                            id="tab-panel-all"
-                            aria-labelledby="tab-materials-all"
-                            role="tabpanel">
-
-                            <div class="padding-2">
-                                <div id="module-list-view"></div>
-                            </div>
-
+                        <div class="padding-2">
+                            <div id="module-list-view"></div>
                         </div>
-                        <!-- tabs_panel -->
 
-                        <div
-                            class="tabs__panel"
-                            id="tab-panel-biology"
-                            aria-labelledby="tab-materials-biology"
-                            role="tabpanel">
-
-                            <div class="biology theme-primary">
-                                                        
-                                <div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 250px;">
-
-                                    <div class="backdrop__image gradient-veneer-bottom">
-                                        <img class="opacity-40" src="{{ site.url }}/images/backdrop-example-02.jpg" alt="Placeholder">
-                                    </div>
-
-                                    <div class="backdrop__cover">
-
-                                        <div class="container">
-
-                                            <div class="container text-shadow">
-
-                                                <h1 class="banner-headline">
-                                                    Biology
-                                                </h1>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="padding-2">
-
-                                <div class="container category margin-y-3">
-                                
-                                    <h2 class="h6">Biological Molecules</h2>
-
-                                    <ul class="list-divider">
-
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Carbohydrates
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Fats and Proteins
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Biological Proteins
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Blood Biology I
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Lipids
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                    
-                                    </ul>
-
-                                </div>
-
-                                <div class="container category margin-y-3">
-                                
-                                    <h2 class="h6">Cell Biology</h2>
-
-                                    <ul class="list-divider">
-
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Carbohydrates
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Fats and Proteins
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Biological Proteins
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Blood Biology I
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="list-divider__cell">
-                                                <a class="link" href="http://127.0.0.1:4000/library/module.html">
-                                                    Lipids
-                                                </a>
-                                            </span>
-                                            <span class="list-divider__cell">
-                                                <a class="button button--icon-only list-add-remove" href="#1">
-                                                    <span class="vl_icon_list-add button__icon"></span>
-                                                </a>
-                                            </span>
-                                        </li>
-                                    
-                                    </ul>
-
-                                </div>
-                                </div>
-                            
-                            </div>
-
-                        </div>
-                        <!-- tabs_panel -->
-                    
                     </div>
                 
                 </div>
