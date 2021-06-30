@@ -49,6 +49,11 @@ new Document();
 
 import "./modules/flex";
 
+import "./modules/loader";
+
+import FullHeight from "./modules/full-height";
+new FullHeight();
+
 import Forms from "./modules/forms";
 new Forms();
 

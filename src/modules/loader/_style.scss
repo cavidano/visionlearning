@@ -1,0 +1,36 @@
+/*
+
+In this file:
+
+// A. Generic Links
+// B. Expanded Link
+// C. Logo Link
+
+*/
+
+//////////////////////////////////////////////
+// A. Generic Links
+//////////////////////////////////////////////
+
+.loader {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: inherit;
+    background-color: hsla(150, 100%, 75%, 0.75);
+    display: none;
+}
+
+.loader::after{
+    content: "cool";
+    margin: var(--spacer-4) auto;
+
+}

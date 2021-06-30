@@ -3,106 +3,103 @@ layout: global
 title: "Library"
 ---
 
-<div class="theme-light overflow-hidden">
+<div class="theme-light full-height overflow-hidden padding-y-4">
 
-    <div class="wide margin-y-4">
+    <div class="landing wide">
 
-        <div class="landing">
+        <div class="landing__main theme-white">
+        
+            <div class="materials">
 
-            <div class="landing__main theme-white box-shadow-1">
-            
-                <div class="materials">
+                <div class="materials__aside font-size-md padding-2 border-right--lg">
 
-                    <div class="materials__aside font-size-md padding-2 border-right--lg">
+                    <div class="form-entry margin-bottom-2">
 
-                        <div class="form-entry margin-bottom-2">
+                        <div class="form-entry__field">
 
-                            <div class="form-entry__field">
+                            <label class="form-entry__field__label screen-reader-only" for="search-example">
+                                Search
+                            </label>
+                            
+                            <span class="form-entry__field__input">
+                                <input type="text" name="search-example" id="search-example" placeholder="Search Library">
+                                <button class="button  button--icon-only" type="button" aria-label="Home">
+                                    <span class="icon_search" aria-hidden="true"></span>
+                                </button>
+                            </span>
 
-                                <label class="form-entry__field__label screen-reader-only" for="search-example">
-                                    Search
-                                </label>
-                                
-                                <span class="form-entry__field__input">
-                                    <input type="text" name="search-example" id="search-example" placeholder="Search Library">
-                                    <button class="button  button--icon-only" type="button" aria-label="Home">
-                                        <span class="icon_search" aria-hidden="true"></span>
-                                    </button>
-                                </span>
-
-                            </div>
-                        
                         </div>
-                        <!-- .form-entry -->
-
-                        <ul
-                            class="nav nav--divider border border-radius--sm"
-                            id="filter-by-discipline"
-                            role="menu">
-                            <li>
-                                <button aria-selected="true">
-                                    All Disciplines
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    Biology
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    Chemistry
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    Earth Science
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    General Science
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    Inside Science
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    Math in Science
-                                </button>
-                            </li>
-                            <li>
-                                <button>
-                                    General Science
-                                </button>
-                            </li>
-                        </ul>
                     
                     </div>
+                    <!-- .form-entry -->
 
-                    <div class="materials__main">
-
-                        <div class="padding-2 position-relative">
-
-                            <div id="module-list-view"></div>
-                            <div class="loader"></div>
-                        </div>
-
-                    </div>
+                    <ul
+                        class="nav nav--divider border border-radius--sm"
+                        id="filter-by-discipline"
+                        role="menu">
+                        <li>
+                            <button aria-selected="true">
+                                All Disciplines
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Biology
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Chemistry
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Earth Science
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                General Science
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Inside Science
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Math in Science
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                General Science
+                            </button>
+                        </li>
+                    </ul>
                 
                 </div>
 
-            </div>
-            
-            <div class="landing__aside">
+                <div class="materials__main">
+
+                    <div class="padding-2 position-relative">
+
+                        <div id="module-list-view"></div>
+                        <div class="loader"></div>
+                    </div>
+
+                </div>
             
             </div>
 
         </div>
-        <!-- .landing -->
+        
+        <div class="landing__aside">
+        
+        </div>
+
     </div>
+    <!-- .landing -->
 
 </div>

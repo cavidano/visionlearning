@@ -244,20 +244,27 @@
 }
 
 .landing {
+
     gap: var(--spacer-3);
     
     grid-template-areas:
       "main"
       "aside";
 
-    // border: 12px solid red !important;
+    height: 100%;
+    overflow: hidden;
+
+    // border: 6px solid blue !important;
 
 }
 
 .landing__main {
     grid-area: main;
 
-    // border: 12px solid blue !important;
+    height: 100%;
+    overflow: hidden;
+
+    // border: 6px solid green !important;
 }
 
 .landing__aside {    
@@ -282,12 +289,14 @@
   grid-template-areas:
     "aside"
     "main";
+
+    height: 100%;
+
+    // border: 6px solid purple !important;
 }
 
 .materials__aside {    
     grid-area: aside;
-
-    // border: 12px solid purple !important;
 
     [aria-selected="true"] {
       font-weight: var(--body-font-weight-bold);
@@ -303,16 +312,18 @@
         width: calc(var(--default-border-width) * 3);
         
         background-color: var(--library);
-        
-        // opacity: 0.0625;
-    }
+      }
     }
 }
 
 .materials__main {
     grid-area: main;
 
-    // border: 12px solid green !important;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    // border: 6px solid pink !important;
 }
 
 @include breakpoints.breakpoints-up(lg) {
