@@ -598,28 +598,59 @@
 <script defer>
 
 	const libraryData = '{{ site.url }}/lib/json/vl-library-v2.json';
+	
+	const moduleListView = document.getElementById('module-list-view');
+
+	let moduleData = '';
 
 	const loadLibraryData = async () => {
 		try {
 			const response = await fetch(libraryData);
-			const moduleData = await response.json();
+			
+			moduleData = await response.json();
 
-			// console.log('moduleData ===== >', moduleData);
-
-			initDisciplines(moduleData);
+			initModuleData(moduleData);
+		
+			bindButtons();
 
 		} catch (err) {
 			console.warn(err);
 		}
 	};
 
-	const initDisciplines = (disciplines) => {
+	const bindButtons = () => {
 
-		const moduleListView = document.getElementById('module-list-view');
+		const filterButtonTarget = document.getElementById('filter-by-discipline');
 
-		moduleListView.innerHTML = disciplines
-			// .filter(discipline => discipline.Name === 'Physics')
-			.map((discipline) => {
+		const filterButtonList = filterButtonTarget.querySelectorAll('button');
+
+		filterButtonList.forEach(filterButton => {
+
+			let myName = filterButton.innerHTML.toString().trim();
+			
+			filterButton.addEventListener("click", (event) => {
+
+				filterButtonList.forEach(button => {
+					button.removeAttribute("aria-selected");
+				});
+
+				filterButton.setAttribute("aria-selected", true);
+
+				if(myName === 'All Disciplines'){
+					initModuleData(moduleData)
+				} else{
+					initModuleData(moduleData.filter(discipline => discipline.Name === myName));
+				}
+
+			});
+			
+		});
+
+	};
+
+	const initModuleData = (disciplines) => {
+
+		moduleListView.innerHTML = disciplines.map((discipline) => {
 
 			const allModules = discipline.Modules;
 
