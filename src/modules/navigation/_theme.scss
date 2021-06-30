@@ -371,7 +371,6 @@
     ul.module-breadcrumb__subcats > li > ul > li > a {
         color: var(--white-link);
     }
-
 }
 
 //////////////////////////////////////////////
@@ -379,15 +378,23 @@
 //////////////////////////////////////////////
 
 .discipline-divider {
-    display: grid;
+    display: flex;
     align-items: center;
 
-    gap: var(--spacer-3);
-    
-    grid-template-columns: 1fr 120px;
+    padding: var(--spacer-3);
+
+    border-radius: 0.25em;
+    overflow: hidden;
 
     h2.h3 {
         margin-bottom: unset;
+        line-height: unset !important;
+    }
+
+    &.biology {
+        background-image: url(~/images/discipline-biology.jpg);
+        background-position: center right;background-size: contain;
+        background-repeat: no-repeat;
     }
 
 }

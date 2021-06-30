@@ -1,5 +1,3 @@
-import './_style.scss';
-
 //////////////////////////////////////////////
 // Full Height
 //////////////////////////////////////////////
@@ -10,10 +8,12 @@ export default class FullHeight {
         
         const bannerTarget = document.querySelector('.full-height');
 
-
         if (bannerTarget) {
             
             const headerHeight = document.getElementById('global-header').offsetHeight;
+            const footerHeight = document.getElementById('global-footer').offsetHeight;
+
+            const headerFooterHeight = headerHeight + footerHeight;
 
             const setBannerHeight = () => {
 

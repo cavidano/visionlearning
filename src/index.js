@@ -49,7 +49,7 @@ new Document();
 
 import "./modules/flex";
 
-import "./modules/loader";
+// import "./modules/loader";
 
 import FullHeight from "./modules/full-height";
 new FullHeight();

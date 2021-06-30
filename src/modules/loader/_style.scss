@@ -26,11 +26,47 @@ In this file:
 
     background-color: inherit;
     background-color: hsla(150, 100%, 75%, 0.75);
-    display: none;
+
+    opacity: 0;
 }
 
 .loader::after{
     content: "cool";
     margin: var(--spacer-4) auto;
-
 }
+
+.loader {
+    animation: 1s ease-in;
+
+    &.show {
+        opacity: 1;
+    }
+
+    &.hide {
+        opacity: 0;
+    }
+  }
+  
+  @keyframes fadeIn {
+  
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+    
+  }
+  
+  @keyframes fadeOut {
+  
+    from {
+        opacity: 1;
+    }
+  
+    to {
+        opacity: 0;
+    }
+    
+  }
