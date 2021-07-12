@@ -13,8 +13,6 @@ export default class FullHeight {
             const headerHeight = document.getElementById('global-header').offsetHeight;
             const footerHeight = document.getElementById('global-footer').offsetHeight;
 
-            const headerFooterHeight = headerHeight + footerHeight;
-
             const setBannerHeight = () => {
 
                 const windowHeight = window.innerHeight;
