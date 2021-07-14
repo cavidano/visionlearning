@@ -64,12 +64,18 @@
 @include breakpoints.breakpoints-up(lg) {
 
     .article {
-        grid-template-columns: 1fr 20em;
+        grid-template-columns: 20em 1fr;
         grid-template-rows: auto auto 1fr;
+        // grid-template-areas:
+        //     "head head"
+        //     "main did-you-know"
+        //     "main sidebar";
+            
+
         grid-template-areas:
-            "head head"
-            "main did-you-know"
-            "main sidebar";
+            "sidebar head"
+            "sidebar main"
+            "did-you-know main";
     }
 
 }

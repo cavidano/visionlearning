@@ -272,13 +272,12 @@
     border: 12px solid yellow !important;
 }
 
-
 @include breakpoints.breakpoints-up(lg) {
     .landing {
         grid-template-columns: 1fr 16em;
 
         grid-template-areas:
-            "main aside"
+            "main aside";
     }
 }
 
@@ -334,3 +333,10 @@
           "aside main"
     }
 }
+
+
+//////////////////////////////////////////////
+// A. Module
+//////////////////////////////////////////////
+
+
