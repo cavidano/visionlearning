@@ -23,17 +23,20 @@
 }
 
 .article__head {
-    grid-area: head;
     border: 6px solid blue !important;
+
+    grid-area: head;
 }
 
 .article__audio {
-    grid-area: audio;
     border: 6px solid yellow !important;
+
+    grid-area: audio;
 }
 
 .article__main {
     border: 6px solid tan !important;
+    
     grid-area: main;
 
     align-items: start;
@@ -66,8 +69,9 @@
 }
 
 .article__sidebar {    
-    grid-area: sidebar;
     border: 6px solid red !important;
+
+    grid-area: sidebar;
 }
 
 @include breakpoints.breakpoints-up(lg) {
