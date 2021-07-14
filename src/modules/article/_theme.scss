@@ -12,10 +12,11 @@
 .article {
     display: grid;
 
-    gap: var(--spacer-3);
+    // gap: var(--spacer-3);
     
     grid-template-areas:
         "head"
+        "audio"
         "did-you-know"
         "sidebar"
         "main";
@@ -23,9 +24,16 @@
 
 .article__head {
     grid-area: head;
+    border: 6px solid blue !important;
+}
+
+.article__audio {
+    grid-area: audio;
+    border: 6px solid yellow !important;
 }
 
 .article__main {
+    border: 6px solid tan !important;
     grid-area: main;
 
     align-items: start;
@@ -59,12 +67,13 @@
 
 .article__sidebar {    
     grid-area: sidebar;
+    border: 6px solid red !important;
 }
 
 @include breakpoints.breakpoints-up(lg) {
 
     .article {
-        grid-template-columns: 20em 1fr;
+        grid-template-columns: 1fr 20em;
         grid-template-rows: auto auto 1fr;
         // grid-template-areas:
         //     "head head"
@@ -73,9 +82,9 @@
             
 
         grid-template-areas:
-            "sidebar head"
-            "sidebar main"
-            "did-you-know main";
+            "head audio"
+            "main did-you-know"
+            "main sidebar";
     }
 
 }

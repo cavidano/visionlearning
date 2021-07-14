@@ -225,8 +225,8 @@
 //////////////////////////////////////////////
 
 .module-breadcrumb {
-    @extend %subtle-fill-psuedo;
-    --subtle-fill-opacity: 0.05;
+    // @extend %subtle-fill-psuedo;
+    // --subtle-fill-opacity: 0.05;
 
     ul {
         @extend %list-style-nav;
