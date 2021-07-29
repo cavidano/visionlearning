@@ -49,6 +49,11 @@ In this file:
     --header-line-height: 1.125;
 }
 
+:root {
+    --narrow-width: 38rem;
+    --medium-width: calc( var(--narrow-width) * 1.75);
+    --wide-width: calc( var(--narrow-width) * 2.25);
+}
 //////////////////////////////////////////////
 // B. List Divider
 //////////////////////////////////////////////
