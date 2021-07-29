@@ -3,13 +3,13 @@
 // A. Modules
 //////////////////////////////////////////////
 
-@use "../accents/style" as accents;
-@use "../breakpoints/style" as breakpoints;
-@use "../borders/style" as borders;
-@use "../color/style" as color;
-@use "../collapse/style" as collapse;
-@use "../navigation/style" as navigation;
-@use "../icons/style" as icons;
+@use "../../modules/accents/style" as accents;
+@use "../../modules/breakpoints/style" as breakpoints;
+@use "../../modules/borders/style" as borders;
+@use "../../modules/color/style" as color;
+@use "../../modules/collapse/style" as collapse;
+@use "../../modules/navigation/style" as navigation;
+@use "../../modules/icons/style" as icons;
 
 //////////////////////////////////////////////
 // B. VL Hat

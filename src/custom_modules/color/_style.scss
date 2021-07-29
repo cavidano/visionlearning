@@ -1,0 +1,46 @@
+:root {
+    --biology-color: #00492f;
+    --chemistry-color: #29417c;
+    --earth-science-color: #552c39;
+    --general-science-color: #c13926;
+    --inside-science-color: #4c3463;
+    --math-in-science-color: #016a7c;
+    --physics-color: #1b3639;
+    --process-of-science-color: #6f1030;
+}
+
+.biology {
+    --primary: var(--biology-color);
+}
+
+.chemistry {
+    --primary: var(--chemistry-color);
+}
+
+.earth-science {
+    --primary: var(--earth-science-color);
+}
+
+.general-science {
+    --primary: var(--general-science-color);
+}
+
+.inside-science {
+    --primary: var(--inside-science-color);
+}
+
+.math-in-science {
+    --primary: var(--math-in-science-color);
+}
+
+.physics {
+    --primary: var(--physics-color);
+}
+
+.process-of-science {
+    --primary: var(--process-of-science-color);
+}
+
+.ally-link {
+    color: var(--a11y-link-color);
+}

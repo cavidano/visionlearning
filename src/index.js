@@ -57,9 +57,6 @@ new FullHeight();
 import Forms from "./modules/forms";
 new Forms();
 
-// import Grid from "./modules/grid";
-// new Grid();
-
 // import "./modules/grid";
 
 import "./modules/icons";
@@ -103,12 +100,18 @@ import "./modules/z-index";
 // Custom Modules
 //////////////////////////////////////////////
 
-import "./vl_theme/custom_properties";
+import "./custom_modules/color";
 
-import Quiz from "./vl_theme/quiz";
+import "./custom_modules/grid";
+
+import "./custom_modules/icons";
+
+import "./custom_modules/navigation";
+
+import Quiz from "./custom_modules/quiz";
 new Quiz();
 
-import "./vl_theme/grid"
+import "./custom_modules/css_variables";
 
 //////////////////////////////////////////////
 // Environments (For Testing Webpack)
