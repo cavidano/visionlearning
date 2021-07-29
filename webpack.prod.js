@@ -36,6 +36,7 @@ module.exports = merge(common, {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
+                    
                     {
                         loader: MiniCssExtractPlugin.loader
                     },
@@ -57,7 +58,12 @@ module.exports = merge(common, {
             },
             {
                 test: /\.(png|jpg|svg)$/,
-                loader: 'url-loader'
+                loader: 'url-loader',
+                options: {
+                    limit: 1,
+                    name: "[name].[ext]",
+                    publicPath: '/images'
+                }
             },
         ],
     },

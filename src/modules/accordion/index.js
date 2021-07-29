@@ -1,5 +1,4 @@
-import "./_style.scss";
-import "./_theme.scss";
+import './_style.scss';
 
 //////////////////////////////////////////////
 // Accordion
@@ -9,22 +8,34 @@ export default class Accordion {
 
     constructor() {
 
-        const accordionList = document.querySelectorAll(".accordion");
+        // Get each set of accordions
+
+        const accordionList = document.querySelectorAll('.accordion');
 
         accordionList.forEach((accordion) => {
 
-            const accordionButtonList = accordion.querySelectorAll("[data-toggle='accordion']");
-            const accordionPanelList = accordion.querySelectorAll("[data-accordion='panel']");
+            const accordionButtonList = accordion.querySelectorAll('[data-toggle="accordion"]');
+            const accordionPanelList = accordion.querySelectorAll('[data-accordion="panel"]');
 
-            const setKeyboardFocusableElements = (element = document, focusable = false) => {
+            const setFocusableElements = (element = document, focusable = false) => {
 
-                const focusElList = element.querySelectorAll("a[href], button, input, textarea, select, details, [tabindex]:not([tabindex=' - 1 '])");
+                const elements = [
+                    'a[href]',
+                    'button',
+                    'input',
+                    'textarea',
+                    'select', 
+                    'details', 
+                    '[tabindex]:not([tabindex="- 1"]'
+                ];
 
-                for (const focusEl of focusElList) {
+                const focusableElementList = element.querySelectorAll(elements);
+
+                for (const focusableElement of focusableElementList) {
                     if (focusable === true) {
-                        focusEl.setAttribute("tabindex", 0);
+                        focusableElement.setAttribute('tabindex', 0);
                     } else if (focusable === false) {
-                        focusEl.setAttribute("tabindex", -1);
+                        focusableElement.setAttribute('tabindex', -1);
                     }
                 }
             }
@@ -32,22 +43,22 @@ export default class Accordion {
             accordionButtonList.forEach((accordionButton, index) => {
 
                 const currentAccordionPanel = accordionButton.nextElementSibling;
-                let isExpanded = accordionButton.getAttribute("aria-expanded");
+                let isExpanded = accordionButton.getAttribute('aria-expanded');
 
-                accordionButton.setAttribute("tabindex", 0);
+                accordionButton.setAttribute('tabindex', 0);
 
-                if (isExpanded === "true") {
-                    currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
-                    currentAccordionPanel.classList.add("show");
+                if (isExpanded === 'true') {
+                    currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + 'px';
+                    currentAccordionPanel.classList.add('show');
 
-                    setKeyboardFocusableElements(currentAccordionPanel, true);
+                    setFocusableElements(currentAccordionPanel, true);
 
                 } else {
-                    accordionButton.setAttribute("aria-expanded", false);
+                    accordionButton.setAttribute('aria-expanded', false);
                     currentAccordionPanel.style.maxHeight = null;
-                    currentAccordionPanel.setAttribute("aria-hidden", true);
+                    currentAccordionPanel.setAttribute('aria-hidden', true);
 
-                    setKeyboardFocusableElements(currentAccordionPanel, false);
+                    setFocusableElements(currentAccordionPanel, false);
                 }
 
                 const initAccordion = (event) => {
@@ -57,52 +68,52 @@ export default class Accordion {
                     
                     for (const otherAccordionPanel of accordionPanelList) {
 
-                        otherAccordionPanel.classList.remove("show");
+                        otherAccordionPanel.classList.remove('show');
                         
                         if (otherAccordionPanel !== currentAccordionPanel) {
-                            otherAccordionPanel.classList.remove("shown");
+                            otherAccordionPanel.classList.remove('shown');
                             otherAccordionPanel.style.maxHeight = null;
-                            otherAccordionPanel.previousElementSibling.setAttribute("aria-expanded", false);
-                            otherAccordionPanel.setAttribute("aria-hidden", true);
+                            otherAccordionPanel.previousElementSibling.setAttribute('aria-expanded', false);
+                            otherAccordionPanel.setAttribute('aria-hidden', true);
 
-                            setKeyboardFocusableElements(otherAccordionPanel, false);
+                            setFocusableElements(otherAccordionPanel, false);
                         }
                     }
 
-                    currentAccordionPanel.classList.toggle("shown");
+                    currentAccordionPanel.classList.toggle('shown');
 
-                    isExpanded = accordionButton.getAttribute("aria-expanded");
+                    isExpanded = accordionButton.getAttribute('aria-expanded');
                     
-                    if (isExpanded === "true") {
-                        accordionButton.setAttribute("aria-expanded", false);
-                        currentAccordionPanel.setAttribute("aria-hidden", true);
+                    if (isExpanded === 'true') {
+                        accordionButton.setAttribute('aria-expanded', false);
+                        currentAccordionPanel.setAttribute('aria-hidden', true);
                         
-                        setKeyboardFocusableElements(currentAccordionPanel, false);
+                        setFocusableElements(currentAccordionPanel, false);
 
-                    } else if (isExpanded === "false") {
-                        accordionButton.setAttribute("aria-expanded", true);
-                        currentAccordionPanel.setAttribute("aria-hidden", false);
+                    } else if (isExpanded === 'false') {
+                        accordionButton.setAttribute('aria-expanded', true);
+                        currentAccordionPanel.setAttribute('aria-hidden', false);
 
-                        setKeyboardFocusableElements(currentAccordionPanel, true);
+                        setFocusableElements(currentAccordionPanel, true);
                     }
 
                     if (currentAccordionPanel.style.maxHeight) {
                         currentAccordionPanel.style.maxHeight = null;
                     } else {
-                        currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + "px";
-                        currentAccordionPanel.setAttribute("aria-hidden", false);
+                        currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + 'px';
+                        currentAccordionPanel.setAttribute('aria-hidden', false);
                     }
 
-                    let accTrigger = new Event("accTrigger", { bubbles: true });
+                    let accTrigger = new Event('accTrigger', { bubbles: true });
                     document.dispatchEvent(accTrigger);
 
                 }
 
-                accordionButton.addEventListener("click", (event) => {
+                accordionButton.addEventListener('click', (event) => {
                     initAccordion(event);
                 });
 
-                accordionButton.addEventListener("keydown", (event) => {
+                accordionButton.addEventListener('keydown', (event) => {
 
                     const directionalFocus = (dir) => {
                         event.preventDefault();
@@ -136,8 +147,8 @@ export default class Accordion {
 
                 });
 
-                accordionButton.addEventListener("keyup", (event) => {
-                    if (event.keyCode === 13 && event.target.tagName !== "BUTTON") {
+                accordionButton.addEventListener('keyup', (event) => {
+                    if (event.keyCode === 13 && event.target.tagName !== 'BUTTON') {
                         initAccordion(event);
                     }
                 });

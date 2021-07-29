@@ -1,0 +1,213 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Width Utilities
+// D. Height Utilities
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../modules/breakpoints/style" as breakpoints;
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+:root {
+
+    // Body Font Stack
+
+    --body-font-family: "Open Sans";
+    
+    --body-font-weight-normal: 400;
+    --body-font-weight-medium: 600;
+    --body-font-weight-bold: 700;
+
+    --body-font-size: 20px;
+
+    // Banner Headline
+
+    --banner-headline-font-size: calc(var(--body-font-size) * 3.25);
+    --banner-headline-font-weight: var(--body-font-weight-normal);
+
+    // Headers
+
+    --h1-font-size: calc(var(--body-font-size) * 2.5);    // ~ 60px
+    --h2-font-size: calc(var(--body-font-size) * 2);  // ~ 48px
+    --h3-font-size: calc(var(--body-font-size) * 1.75);  // ~ 40px
+    --h4-font-size: calc(var(--body-font-size) * 1.5);  // ~ 35px
+    --h5-font-size: calc(var(--body-font-size) * 1.25);  // ~ 30px
+    --h6-font-size: calc(var(--body-font-size) * 1.125);  // ~ 26px
+
+    --header-line-height: 1.125;
+}
+
+//////////////////////////////////////////////
+// B. List Divider
+//////////////////////////////////////////////
+
+.list-divider { 
+    list-style: none;
+    // font-size: var(--font-size-md);
+
+    > li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    > li:not(:last-child) {
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
+    }
+
+}
+
+.list-divider__cell {
+    padding: 0.25em 0.5em;
+}
+
+//////////////////////////////////////////////
+// C. Description List
+//////////////////////////////////////////////
+
+dl > dt {
+    font-weight: var(--body-font-weight-bold);
+    font-style: italic;
+}
+
+dd {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+//////////////////////////////////////////////
+// A. Article (Module)
+//////////////////////////////////////////////
+
+.article {
+    display: grid;
+
+    // gap: var(--spacer-3);
+    
+    grid-template-areas:
+        "head"
+        "audio"
+        "did-you-know"
+        "sidebar"
+        "main";
+}
+
+.article__head {
+    border: 6px solid blue !important;
+
+    grid-area: head;
+}
+
+.article__audio {
+    border: 6px solid yellow !important;
+
+    grid-area: audio;
+}
+
+.article__main {
+    border: 6px solid tan !important;
+    
+    grid-area: main;
+
+    align-items: start;
+
+    section {
+        margin-top: var(--spacer-4);
+        margin-bottom: var(--spacer-4);
+    }
+
+    figure {
+        display: table;
+
+        margin: var(--spacer-5) auto;
+        
+        figcaption {
+            display: table-caption;
+            caption-side: bottom;
+        }
+
+        img {
+            min-width: unset !important;
+            width: auto !important;
+        }
+
+    }
+}
+
+.article__did-you-know {    
+    grid-area: did-you-know;
+}
+
+.article__sidebar {    
+    border: 6px solid red !important;
+
+    grid-area: sidebar;
+}
+
+@include breakpoints.breakpoints-up(lg) {
+
+    .article {
+        grid-template-columns: 1fr 20em;
+        grid-template-rows: auto auto 1fr;
+        // grid-template-areas:
+        //     "head head"
+        //     "main did-you-know"
+        //     "main sidebar";
+            
+
+        grid-template-areas:
+            "head audio"
+            "main did-you-know"
+            "main sidebar";
+    }
+
+}
+
+/////
+
+
+.module-results-filter {
+
+    button[aria-selected="true"] {
+        background-color: white;
+
+        color:  var(--primary);
+    }
+}
+
+.tabs-nav {
+    > li > button::before {
+        background-color: var(--dark);
+    }
+
+    &.library > li > *::before {
+        background-color: var(--library);
+    }
+
+    &.glossary > li > *::before {
+        background-color: var(--glossary);
+    }
+
+    &.classroom > li > *::before {
+        background-color: var(--classroom);
+    }
+}
+
+.tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
+    background: hsla(249, 31%, 20%, 0.05);
+    color: var(--white-link);
+}

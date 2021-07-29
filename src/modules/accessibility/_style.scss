@@ -104,8 +104,7 @@ button {
     --focus-outline-size: calc(var(--default-border-width) * 2);
 
     @extend %hover-focus;
-
-    &.backdrop,
+    
     &.button {
         --focus-outline-distance: calc(var(--default-border-width) * 4);
     }

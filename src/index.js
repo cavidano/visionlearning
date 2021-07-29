@@ -19,7 +19,7 @@ new Accordion();
 import Alerts from "./modules/alerts";
 new Alerts();
 
-import "./modules/article";
+// import "./modules/article";
 
 import "./modules/aspect-ratios";
 
@@ -101,6 +101,8 @@ import "./modules/z-index";
 
 import Quiz from "./modules/quiz";
 new Quiz();
+
+import "./theme";
 
 //////////////////////////////////////////////
 // Environments (For Testing Webpack)

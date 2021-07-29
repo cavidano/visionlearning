@@ -1,4 +1,4 @@
-import "./_style.scss";
+import './_style.scss';
 
 //////////////////////////////////////////////
 // Document
@@ -114,5 +114,6 @@ export default class Document {
         if (isIE11) {
             loadCustomPropertiesPolyfill();            
         }
+
     }
 }
