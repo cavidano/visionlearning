@@ -5,7 +5,7 @@
 import "element-closest-polyfill";
 
 //////////////////////////////////////////////
-// Modules
+// Natura11y Modules
 //////////////////////////////////////////////
 
 import "./modules/accents";
@@ -49,8 +49,6 @@ new Document();
 
 import "./modules/flex";
 
-// import "./modules/loader";
-
 import FullHeight from "./modules/full-height";
 new FullHeight();
 
@@ -62,6 +60,8 @@ new Forms();
 import "./modules/icons";
 
 import "./modules/language";
+
+// import "./modules/loader";
 
 import "./modules/links";
 
@@ -108,7 +108,7 @@ import "./custom_modules/icons";
 
 import "./custom_modules/navigation";
 
-import Quiz from "./custom_modules/quiz";
+import Quiz from "./custom_modules/quiz"; 
 new Quiz();
 
 import "./custom_modules/css_variables";
