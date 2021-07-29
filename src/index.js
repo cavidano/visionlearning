@@ -102,7 +102,8 @@ import "./modules/z-index";
 
 import "./custom_modules/color";
 
-import "./custom_modules/grid";
+import Grid from "./custom_modules/grid"; 
+new Grid();
 
 import "./custom_modules/icons";
 
