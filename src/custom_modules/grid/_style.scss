@@ -320,19 +320,19 @@ In this file:
 }
 
 .article__head {
-    border: 6px solid blue !important;
+    // border: 6px solid blue !important;
 
     grid-area: head;
 }
 
 .article__audio {
-    border: 6px solid yellow !important;
+    // border: 6px solid yellow !important;
 
     grid-area: audio;
 }
 
 .article__main {
-    border: 6px solid tan !important;
+    // border: 6px solid tan !important;
     
     grid-area: main;
 
@@ -366,7 +366,7 @@ In this file:
 }
 
 .article__sidebar {    
-    border: 6px solid red !important;
+    // border: 6px solid red !important;
 
     grid-area: sidebar;
 }
