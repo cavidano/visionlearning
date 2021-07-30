@@ -165,30 +165,31 @@ $theme-colors: (
 //////////////////////////////////////////////
 
 body:not([class*="theme-"]),
+body > footer:not([class*="theme-"]),
 [class*="theme-"] {
     background-color: var(--background-color);
 
     color: var(--text-color);
     
-    border-color: var(--border-color);
+    border-color: var(--border-color) !important;
 
     * {
-        &:not([class*="theme-"]):not(input):not(textarea):not(select):not(footer) {
+        &:not([class*="theme-"]):not(textarea):not(select):not(footer) {
             border-color: inherit;
         }
     }
 
     td > a, 
     .td-content > a,
-    p > a:not([class*="text-color-"]),
-    a.link {
+    p > a:not([class*="text-"]),
+    .text-color-link {
         color: var(--link-color);
     }
 
     select option,
     [data-toggle="dropdown"] ~ ul, 
-    // .modal::before,
-    // .modal__content,
+    .modal::before,
+    .modal__content,
     .table-scroll__container::after {
         background-color: var(--background-color);
     }

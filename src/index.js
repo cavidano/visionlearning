@@ -100,8 +100,6 @@ import "./modules/z-index";
 // Custom Modules
 //////////////////////////////////////////////
 
-import "./custom_modules/color";
-
 import Grid from "./custom_modules/grid"; 
 new Grid();
 
@@ -113,6 +111,8 @@ import Quiz from "./custom_modules/quiz";
 new Quiz();
 
 import "./custom_modules/css_variables";
+
+import "./custom_modules/color";
 
 //////////////////////////////////////////////
 // Environments (For Testing Webpack)

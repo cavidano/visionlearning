@@ -103,10 +103,6 @@ dd {
     margin-left: 1em;
 }
 
-
-/////
-
-
 .module-results-filter {
 
     button[aria-selected="true"] {
@@ -119,6 +115,7 @@ dd {
 .tabs-nav {
     > li > button::before {
         background-color: var(--dark);
+        opacity: 0;
     }
 
     &.library > li > *::before {
@@ -139,3 +136,37 @@ dd {
     // background: linear-gradient( hsla(250, 20%, 20%, 0.05) 0%, hsla(0, 0%, 100%) 100%);
     color: var(--white-link);
 }
+
+.term {
+    position: relative;
+    display: inline-block;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        right: -0.2em;
+        left: -0.2em;
+        background-color: var(--glossary);
+        
+    }
+
+    &::before{
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        opacity: 0.2;
+    }
+
+    &::after{
+        bottom: 0;
+        height: 2px;
+    }
+
+    
+}
+
+
+

@@ -3,7 +3,7 @@ layout: global
 title: "Module Example"
 ---
 
-<article class="article theme-white wide">
+<article class="article wide">
 
     <header class="article__head padding-y-3">
 
@@ -23,9 +23,9 @@ title: "Module Example"
      
     </div>
 
-    <div class="article__main box-shadow-1">
+    <div class="article__main border-top box-shadow-1">
 
-        <div class="container narrow font-size-sm" style="--subtle-fill-opacity: 0.025;">
+        <div class="container narrow font-size-md" style="--subtle-fill-opacity: 0.025;">
             <ul class="tabs-nav tabs-nav--horizontal library">
                 <li>
                     <a href="#1" aria-current="page">
@@ -53,7 +53,7 @@ title: "Module Example"
                 </h2>
                 <p>
                     There are many discoveries that have changed the course of science and
-                    the world. Nikola Tesla’s discovery of alternating currents, for
+                    the world. Nikola Tesla’s discovery of alternating <span class="term">currents</span>, for
                     example, helped pave the way for widespread access to electricity, and
                     Louis Pasteur’s discovery that heat and disinfectant could kill bacteria
                     improved food safety and saved millions of lives. In 1655, the English
@@ -437,6 +437,20 @@ title: "Module Example"
     <div class="article__sidebar">
 
         <div class="sticky-top">
+
+            <div class="grid grid--columns-2 font-size-sm padding-2" style="--grid-gap: var(--spacer-1)">
+
+                <button class="button text-color-glossary">
+                    <span class=" vl_icon_glossary-highlight button__icon"></span>
+                    <span class="button__text">Glossary Terms</span>
+                </button>
+
+                <button class="button button--has-icon text-color-primary">
+                    <span class="vl_icon_ngss button__icon"></span>
+                    <span class="button__text">NGSS</span>
+                </button>
+            
+            </div>
         
             <div class="accordion font-size-md">
 
