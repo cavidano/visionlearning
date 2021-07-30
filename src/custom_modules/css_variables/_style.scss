@@ -113,9 +113,13 @@ dd {
 }
 
 .tabs-nav {
+
+    > li::before{
+        opacity: 0;
+    }
+    
     > li > button::before {
         background-color: var(--dark);
-        opacity: 0;
     }
 
     &.library > li > *::before {
