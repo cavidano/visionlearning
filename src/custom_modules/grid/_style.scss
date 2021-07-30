@@ -423,3 +423,34 @@ In this file:
         "nav-primary nav-secondary ctas connect";
     }
 }
+
+
+
+// Module Helper
+
+.grid--module-helper {
+
+  --grid-gap: var(--spacer-1);
+
+  .toggle-terms {
+    grid-area: terms;
+  }
+
+  .toggle-ngss {
+    grid-area: ngss;
+  }
+
+  .accordion {
+    grid-area: acc;
+  }
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "terms ngss"
+    "acc acc";
+  
+}
+
+
+
+

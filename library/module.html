@@ -438,152 +438,152 @@ title: "Module Example"
 
         <div class="sticky-top">
 
-            <div class="grid grid--columns-2 font-size-sm padding-2" style="--grid-gap: var(--spacer-1)">
+            <div class="grid grid--module-helper font-size-md padding-2">
 
-                <button class="button text-color-glossary">
+                <button class="button text-color-glossary toggle-terms">
                     <span class=" vl_icon_glossary-highlight button__icon"></span>
                     <span class="button__text">Glossary Terms</span>
                 </button>
 
-                <button class="button button--has-icon text-color-primary">
+                <button class="button button--has-icon text-color-primary toggle-ngss">
                     <span class="vl_icon_ngss button__icon"></span>
                     <span class="button__text">NGSS</span>
                 </button>
-            
+                
+                <div class="accordion theme-light">
+
+                    <button
+                        class="accordion__button"
+                        id="acc-button-key-concepts"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-key-concepts"
+                        aria-expanded="true">
+                            Key Concepts
+                    </button>
+
+                    <div 
+                        class="accordion__panel show"
+                        id="acc-panel-key-concepts"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-key-concepts"
+                        role="region">
+                            <div class="accordion__panel__content">
+                                <ul class="list-bulleted">
+                                    <li>
+                                    <p>Cells are the basic structural and functional unit of all living things and contain inheritable genetic
+                                        material.
+                                    </p>
+                                        
+                                    </li>
+                                    <li>
+                                        The activity of a cell is carried out by the sub-cellular structures it possesses.
+                                    </li>
+                                    <li>
+                                        Cells possess an outer boundary layer, called a cell membrane, cytoplasm, which contains organelles, and genetic
+                                        material.
+                                    </li>
+                                    <li>
+                                        There is considerable variety among living cells, including the function of membranes and subcellular
+                                        structures, and the different types of functions the cells carry out, such as chemical transport, support, and
+                                        other functions.
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+
+                    <button
+                        class="accordion__button"
+                        id="acc-button-terms-you-should-know"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-terms-you-should-know"
+                        aria-expanded="false">
+                            Terms You Should Know
+                    </button>
+
+                    <div 
+                        class="accordion__panel"
+                        id="acc-panel-terms-you-should-know"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-terms-you-should-know"
+                        role="region">
+                            <div class="accordion__panel__content">
+
+                                <dl>
+                                    <dt>
+                                        <a href="#1">function</a>
+                                    </dt>
+                                    <dd>special purpose; designated action</dd>
+
+                                    <dt>
+                                        <a href="#1">membrane</a>
+                                    </dt>
+                                    <dd>a thin layer of tissue</dd>
+
+                                    <dt>
+                                        <a href="#1">structure</a>
+                                    </dt>
+                                    <dd>the arrangement of parts; the way something is built</dd>
+                                </dl>
+
+                            </div>
+                    </div>
+
+                    <button
+                        class="accordion__button"
+                        id="acc-button-table-of-contents"
+                        data-toggle="accordion"
+                        aria-controls="acc-panel-table-of-contents"
+                        aria-expanded="false">
+                            Table of Contents
+                    </button>
+
+                    <div 
+                        class="accordion__panel"
+                        id="acc-panel-table-of-contents"
+                        data-accordion="panel"
+                        aria-labelledby="acc-button-table-of-contents"
+                        role="region">
+                            <div class="accordion__panel__content">
+
+                                <ul class="nav">
+                                    <li>
+                                        <a href="#1">
+                                            Antony van Leeuwenhoek improves microscopy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">
+                                            The beginnings of cell theory
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">
+                                            Prokaryotes and eukaryotes: The case for a shared ancestry
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">
+                                            Differences between cell types: Organelles and their functions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">
+                                            Cell theory expands
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">
+                                            Cell variety within organisms
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+
+                </div>
+                <!-- .accordion -->
             </div>
         
-            <div class="accordion font-size-md">
-
-                <button
-                    class="accordion__button"
-                    id="acc-button-key-concepts"
-                    data-toggle="accordion"
-                    aria-controls="acc-panel-key-concepts"
-                    aria-expanded="true">
-                        Key Concepts
-                </button>
-
-                <div 
-                    class="accordion__panel show"
-                    id="acc-panel-key-concepts"
-                    data-accordion="panel"
-                    aria-labelledby="acc-button-key-concepts"
-                    role="region">
-                        <div class="accordion__panel__content">
-                            <ul class="list-bulleted">
-                                <li>
-                                <p>Cells are the basic structural and functional unit of all living things and contain inheritable genetic
-                                    material.
-                                </p>
-                                    
-                                </li>
-                                <li>
-                                    The activity of a cell is carried out by the sub-cellular structures it possesses.
-                                </li>
-                                <li>
-                                    Cells possess an outer boundary layer, called a cell membrane, cytoplasm, which contains organelles, and genetic
-                                    material.
-                                </li>
-                                <li>
-                                    There is considerable variety among living cells, including the function of membranes and subcellular
-                                    structures, and the different types of functions the cells carry out, such as chemical transport, support, and
-                                    other functions.
-                                </li>
-                            </ul>
-                        </div>
-                </div>
-
-                <button
-                    class="accordion__button"
-                    id="acc-button-terms-you-should-know"
-                    data-toggle="accordion"
-                    aria-controls="acc-panel-terms-you-should-know"
-                    aria-expanded="false">
-                        Terms You Should Know
-                </button>
-
-                <div 
-                    class="accordion__panel"
-                    id="acc-panel-terms-you-should-know"
-                    data-accordion="panel"
-                    aria-labelledby="acc-button-terms-you-should-know"
-                    role="region">
-                        <div class="accordion__panel__content">
-
-                            <dl>
-                                <dt>
-                                    <a href="#1">function</a>
-                                </dt>
-                                <dd>special purpose; designated action</dd>
-
-                                <dt>
-                                    <a href="#1">membrane</a>
-                                </dt>
-                                <dd>a thin layer of tissue</dd>
-
-                                <dt>
-                                    <a href="#1">structure</a>
-                                </dt>
-                                <dd>the arrangement of parts; the way something is built</dd>
-                            </dl>
-
-                        </div>
-                </div>
-
-                <button
-                    class="accordion__button"
-                    id="acc-button-table-of-contents"
-                    data-toggle="accordion"
-                    aria-controls="acc-panel-table-of-contents"
-                    aria-expanded="false">
-                        Table of Contents
-                </button>
-
-                <div 
-                    class="accordion__panel"
-                    id="acc-panel-table-of-contents"
-                    data-accordion="panel"
-                    aria-labelledby="acc-button-table-of-contents"
-                    role="region">
-                        <div class="accordion__panel__content">
-
-                            <ul class="nav">
-                                <li>
-                                    <a href="#1">
-                                        Antony van Leeuwenhoek improves microscopy
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#1">
-                                        The beginnings of cell theory
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#1">
-                                        Prokaryotes and eukaryotes: The case for a shared ancestry
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#1">
-                                        Differences between cell types: Organelles and their functions
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#1">
-                                        Cell theory expands
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#1">
-                                        Cell variety within organisms
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                </div>
-
-            </div>
-            <!-- .accordion -->
 
         </div>
 
