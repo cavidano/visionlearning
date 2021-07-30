@@ -220,6 +220,7 @@ p ~ ol {
     }
 }
 
+ul.list-bulleted,
 p ~ ul,
 p ~ ol {
     li {
@@ -227,6 +228,7 @@ p ~ ol {
     }
 }
 
+ul.list-bulleted,
 p ~ ul {
     --list-item-padding: 1em;
 
