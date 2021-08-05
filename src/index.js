@@ -110,6 +110,9 @@ import "./custom_modules/navigation";
 import Quiz from "./custom_modules/quiz"; 
 new Quiz();
 
+import Glossary from "./custom_modules/glossary"; 
+new Glossary();
+
 import "./custom_modules/css_variables";
 
 import "./custom_modules/color";
