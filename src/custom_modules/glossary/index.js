@@ -10,7 +10,7 @@ export default class Glossary {
 
         const glossaryTermsButton = document.querySelector('[data-toggle="glossary"]');
 
-        const termList = document.querySelectorAll('[data-def]');
+        const termList = document.querySelectorAll('.term');
 
         if(glossaryTermsButton) {
 
@@ -18,7 +18,7 @@ export default class Glossary {
 
                 termList.forEach((term) => {
 
-                    term.classList.toggle('term');
+                    term.classList.toggle('highlighted');
 
                 });
 
