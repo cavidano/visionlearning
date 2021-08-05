@@ -14,6 +14,26 @@ export default class Glossary {
 
         if(glossaryTermsButton) {
 
+            let hoverFocusDelay;
+
+            const hoverFocusIn = (event) => {
+
+                hoverFocusDelay = setTimeout(() => { 
+
+                    termList.forEach((term) => {
+                        term.classList.remove("tooltip-show");
+                    });
+
+                    event.target.classList.add("tooltip-show");
+                    
+                }, 400);
+            };
+
+            const hoverFocusOut = (event) => {
+                clearTimeout(hoverFocusDelay);
+                event.target.classList.remove("tooltip-show");
+            }
+
             glossaryTermsButton.addEventListener('click', (event) => {
 
                 event.preventDefault();
@@ -26,82 +46,55 @@ export default class Glossary {
 
                     term.setAttribute('tabindex', index + 1);
 
-                    initTooltip(term);
+                    if(term.classList.contains('highlighted')){
+                        initTooltip(term);
+                    } else {
+                        term.setAttribute('tabindex', 0);
 
+                        removeTooltip(term);
+                    }
                 });
 
             });
 
             function initTooltip(term) {
 
-                let hoverFocusDelay;
+                const termDefinition = term.getAttribute("data-definition");
 
-                const hoverFocusIn = (event) => {
+                const tooltipHTML = (`
+                    <span class="term__tooltip">
+                        <span class="tooltip-header display-none">Glossary Term</span>
+                        ${termDefinition}
+                    </span>`
+                );
 
-                    hoverFocusDelay = setTimeout(() => { 
-
-                        termList.forEach((term) => {
-                            term.classList.remove("tooltip-show");
-                        });
-
-                        event.target.classList.add("tooltip-show");
-                    }, 300);
-                };
-
-                const hoverFocusOut = (event) => {
-                    clearTimeout(hoverFocusDelay);
-                    event.target.classList.remove("tooltip-show");
-                }
-
-                const tooltipText = term.getAttribute("data-def");
-
-                const tooltipHTML = `
-                <span class="term__tooltip">
-                    <span class="tooltip-header">Glossary Term</span>
-                    ${tooltipText}
-                </span>`;
-
-                if(tooltipText) {
-
+                if(termDefinition) {
                     term.insertAdjacentHTML('beforeend', tooltipHTML);
-                    
-                    const buttonTooltip = term.querySelector(".term__tooltip");
-
-                    const tooltipPosition = () => {
-
-                        const buttonTooltipWidth = buttonTooltip.offsetWidth / 2;
-                        const buttonPositionLeft = term.offsetLeft ;
-                        const buttonPositionRight = window.innerWidth - (term.offsetLeft + term.offsetWidth);
-
-                        if (buttonTooltipWidth > buttonPositionLeft) {
-                            buttonTooltip.classList.add("left");
-                        }
-
-                        if (buttonTooltipWidth > buttonPositionRight) {
-                            buttonTooltip.classList.add("right");
-                        }
-
-                    };
-
-                    if (term.classList.contains('highlighted')){
-
-                        tooltipPosition();
-
-                        window.addEventListener("resize", tooltipPosition);
-
-                        term.addEventListener("mouseenter", hoverFocusIn);
-                        term.addEventListener("focusin", hoverFocusIn);
-
-                        term.addEventListener("mouseleave", hoverFocusOut);
-                        term.addEventListener("focusout", hoverFocusOut);
-                    } else {
-                        term.removeEventListener("mouseenter");
-                        term.removeEventListener("focusin");
-                    }
-
                 }
+
+                term.addEventListener("mouseenter", hoverFocusIn);
+                term.addEventListener("focusin", hoverFocusIn);
+
+                term.addEventListener("mouseleave", hoverFocusOut);
+                term.addEventListener("focusout", hoverFocusOut);
+
             }
 
+            function removeTooltip(term) {
+
+                console.log("not highlighted");
+                
+                const termTooltip = term.querySelector('.term__tooltip');
+
+                termTooltip.remove();
+
+                term.removeEventListener("mouseenter", hoverFocusIn);
+                term.removeEventListener("focusin", hoverFocusIn);
+
+                term.removeEventListener("mouseleave", hoverFocusOut);
+                term.removeEventListener("focusout", hoverFocusOut);
+                
+            }
 
         }
 
