@@ -222,7 +222,7 @@ p ~ ol {
 
 ul.list-bulleted,
 p ~ ul,
-p ~ ol {
+p ~ ol:not(.quiz__questions) {
     li {
         margin-bottom: var(--spacer-1);
     }
@@ -238,7 +238,7 @@ p ~ ul {
     }
 }
 
-ol {
+ol:not(.quiz__questions) {
     --list-item-padding: 2em;
 
     list-style: none;

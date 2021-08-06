@@ -29,7 +29,7 @@ In this file:
 }
 
 ol.quiz__questions {
-    list-style: none;
+    list-style: none !important;
     counter-reset: section;
 
     .form-entry__field__label {
@@ -45,7 +45,6 @@ ol.quiz__questions {
             padding-left: var(--form-field-padding-x);
         }
     }
-
 }
 
 .quiz__questions {
