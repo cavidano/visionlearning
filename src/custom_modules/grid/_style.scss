@@ -213,6 +213,7 @@ In this file:
 }
 
 .landing {
+    // border: 6px solid blue !important;
 
     gap: var(--spacer-3);
     
@@ -223,17 +224,16 @@ In this file:
     height: 100%;
     overflow: hidden;
 
-    // border: 6px solid blue !important;
 
 }
 
 .landing__main {
+    // border: 6px solid green !important;
+
     grid-area: main;
 
     height: 100%;
     overflow: hidden;
-
-    // border: 6px solid green !important;
 }
 
 .landing__aside {    
@@ -253,13 +253,14 @@ In this file:
 // Materials 
 
 .materials {
+    // border: 6px solid purple !important;
+
   grid-template-areas:
     "aside"
     "main";
 
     height: 100%;
 
-    // border: 6px solid purple !important;
 }
 
 .materials__aside {    
@@ -284,13 +285,14 @@ In this file:
 }
 
 .materials__main {
+    // border: 6px solid pink !important;
+
     grid-area: main;
 
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
 
-    // border: 6px solid pink !important;
 }
 
 @include breakpoints.breakpoints-up(lg) {
@@ -309,7 +311,7 @@ In this file:
 .article {
     display: grid;
 
-    // gap: var(--spacer-3);
+    gap: var(--spacer-2);
     
     grid-template-areas:
         "head"
@@ -321,18 +323,22 @@ In this file:
 
 .article__head {
     // border: 6px solid blue !important;
+    // background: blue !important;
+
 
     grid-area: head;
 }
 
 .article__audio {
     // border: 6px solid yellow !important;
+    // background: red !important;
 
     grid-area: audio;
 }
 
 .article__main {
     // border: 6px solid tan !important;
+    // background: tan !important;
     
     grid-area: main;
 
@@ -363,10 +369,13 @@ In this file:
 
 .article__did-you-know {    
     grid-area: did-you-know;
+
+    display: none;
 }
 
 .article__sidebar {    
     // border: 6px solid red !important;
+    // background: yellow !important;
 
     grid-area: sidebar;
 }
@@ -374,7 +383,7 @@ In this file:
 @include breakpoints.breakpoints-up(lg) {
 
     .article {
-        grid-template-columns: 1fr 20em;
+        grid-template-columns: 1fr 22em;
         grid-template-rows: auto auto 1fr;            
 
         grid-template-areas:
@@ -383,6 +392,9 @@ In this file:
             "main sidebar";
     }
 
+    .article__did-you-know {    
+        display: block;
+    }
 }
 
 //////////////////////////////////////////////
@@ -424,19 +436,17 @@ In this file:
     }
 }
 
-
-
 // Module Helper
 
 .grid--module-helper {
 
   --grid-gap: var(--spacer-1);
 
-  .toggle-terms {
+  .button--toggle-terms {
     grid-area: terms;
   }
 
-  .toggle-ngss {
+  .button--toggle-ngss {
     grid-area: ngss;
   }
 
@@ -445,10 +455,16 @@ In this file:
   }
 
   grid-template-columns: 1fr 1fr;
+
   grid-template-areas:
-    "terms ngss"
-    "acc acc";
-  
+    "acc acc"
+    "terms ngss";
+
+    @include breakpoints.breakpoints-up(lg) {
+      grid-template-areas:
+        "terms ngss"
+        "acc acc";
+    }
 }
 
 

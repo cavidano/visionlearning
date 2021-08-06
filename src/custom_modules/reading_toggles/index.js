@@ -4,7 +4,7 @@ import "./_style.scss";
 // Glossary
 //////////////////////////////////////////////
 
-export default class Glossary {
+export default class ReadingToggles {
 
     constructor() {
 

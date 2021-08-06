@@ -110,8 +110,8 @@ import "./custom_modules/navigation";
 import Quiz from "./custom_modules/quiz"; 
 new Quiz();
 
-import Glossary from "./custom_modules/glossary"; 
-new Glossary();
+import ReadingToggles from "./custom_modules/reading_toggles"; 
+new ReadingToggles();
 
 import "./custom_modules/css_variables";
 
