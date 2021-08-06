@@ -2,30 +2,50 @@
 
 In this file:
 
-// A. Term
+// A. Toggle Buttons
 // B. Term Highlighted
 
 */
 
 //////////////////////////////////////////////
-// A. Term Toggle Button 
+// A. Toggle Buttons
 //////////////////////////////////////////////
 
-.button--toggle-terms {
-    color: var(--glossary);
+.button--toggle-terms,
+.button--toggle-ngss {
+    --button-border-radius: 0;
 
     &.active {
 
         &::before {
             display: none;
         }
-
-        background-color: var(--glossary);
         color: white;
         
-        text-shadow: 0 0 3px hsla(0, 0%, 0%, 0.125);
+        text-shadow: 0 0 2px hsla(0, 0%, 0%, 0.15);
     }
+}
 
+.button--toggle-terms {
+    --subtle-fill-opacity: 0.12 !important;
+}
+
+.button--toggle-terms {
+    color: var(--glossary);
+
+    &.active {
+        background-color: var(--glossary);
+    }
+}
+
+.button--toggle-ngss {
+    --subtle-fill-opacity: 0.0825 !important;
+    
+    color: var(--primary);
+
+    &.active {
+        background-color: var(--primary);
+    }
 }
 
 //////////////////////////////////////////////
@@ -33,7 +53,6 @@ In this file:
 //////////////////////////////////////////////
 
 .term {
-
     position: relative;
     display: inline-block;
 
@@ -49,7 +68,6 @@ In this file:
         transition: opacity 0.2s ease-in;
 
         opacity: 0;
-        
     }
 
     &::before {
@@ -63,7 +81,6 @@ In this file:
 
         height: 2px;
     }
-    
 }
 
 //////////////////////////////////////////////
@@ -85,7 +102,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. Term Highlighted
+// D. Term Tooltip
 //////////////////////////////////////////////
 
 .term__tooltip {

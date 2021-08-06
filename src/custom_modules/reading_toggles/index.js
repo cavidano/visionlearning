@@ -1,18 +1,22 @@
 import "./_style.scss";
 
 //////////////////////////////////////////////
-// Glossary
+// Reading Toggles
 //////////////////////////////////////////////
 
 export default class ReadingToggles {
 
     constructor() {
-
-        const glossaryTermsButton = document.querySelector('[data-toggle="glossary"]');
+        
+        //////////////////////////////////////////////
+        // Glossary Terms
+        //////////////////////////////////////////////
+        
+        const buttonToggleTerms = document.querySelector('[data-toggle="glossary"]');
 
         const termList = document.querySelectorAll('.term');
 
-        if(glossaryTermsButton) {
+        if(buttonToggleTerms) {
 
             let hoverFocusDelay;
 
@@ -34,11 +38,11 @@ export default class ReadingToggles {
                 event.target.classList.remove("tooltip-show");
             }
 
-            glossaryTermsButton.addEventListener('click', (event) => {
+            buttonToggleTerms.addEventListener('click', (event) => {
 
                 event.preventDefault();
 
-                glossaryTermsButton.classList.toggle('active');
+                buttonToggleTerms.classList.toggle('active');
 
                 termList.forEach((term, index) => {
 
@@ -96,6 +100,21 @@ export default class ReadingToggles {
                 
             }
 
+        }
+
+        //////////////////////////////////////////////
+        // NGSS
+        //////////////////////////////////////////////
+
+        const buttonToggleNGSS = document.querySelector('[data-toggle="ngss"]');
+
+        if(buttonToggleNGSS) {
+            buttonToggleNGSS.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                buttonToggleNGSS.classList.toggle('active');
+
+            });
         }
 
     }
