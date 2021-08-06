@@ -1,0 +1,25 @@
+{% if include.search_type %}
+    {% assign placeholder_text = include.search_type %}
+{% else %}
+    {% assign placeholder_text = '' %}
+{% endif %}
+
+<div class="form-entry margin-bottom-2">
+
+    <div class="form-entry__field">
+
+        <label class="form-entry__field__label screen-reader-only" for="search-example">
+            Search
+        </label>
+        
+        <span class="form-entry__field__input">
+            <input type="text" name="search-example" id="search-example" placeholder="Search Library">
+            <button class="button button--icon-only" type="button">
+                <span class="icon_search" aria-hidden="true"></span>
+            </button>
+        </span>
+
+    </div>
+
+</div>
+<!-- .form-entry -->
