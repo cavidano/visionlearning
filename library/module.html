@@ -60,7 +60,7 @@ title: "Module Example"
                     Introduction
                 </h2>
                 <p>
-                    There are many discoveries that have changed the course of science and the world. Nikola Tesla’s discovery of alternating <span class="term" data-term="current" data-definition="[noun] A flow, as of electricity or water.">current</span>s, for example, helped pave the way for widespread access to electricity, and Louis Pasteur’s discovery that <span class="term" data-definition="A measure of the total internal energy of a substance that can be increased or decreased when objects with different temperatures">heat</span> and disinfectant could kill <span class="term" data-definition="[noun] (plural of bacterium) A large group of one-celled organisms that are found almost everywhere.">bacteria</span> improved food safety and saved millions of lives. In 1655, the English scientist <span class="term" data-definition="An English physicist, born on the Isle of Wight (1635-1703). Hooke's studies were extremely diverse, encompassing biology, geology, physics, chemistry and...">Robert Hooke</span> made an observation that would change the study of biology forever. While examining a thin, dried section of cork tree with a crude <span class="term" data-definition="A form of electromagnetic radiation.  Visible light is that associated with stimulating the organs of sight, which for normal human...">light</span>  microscope, Hooke observed that he could plainly see the cork to be made up of tiny spaces surrounded by walls, much like a honeycomb, but that the spaces were irregular and shallow (Figure 1). Further, Hooke noted that these "little Boxes" were so numerous that there were "in a square Inch above a Million... and in a Cubick Inch, above twelve hundred Millions [sic]" (Hooke, 1655).
+                    There are many discoveries that have changed the course of science and the world. Nikola Tesla’s discovery of alternating <span class="term" data-term="current" data-definition="[noun] A flow, as of electricity or water.">current</span>s, for example, helped pave the way for widespread access to electricity, and Louis Pasteur’s discovery that <span class="term" data-definition="A measure of the total internal energy of a substance that can be increased or decreased when objects with different temperatures">heat</span> and disinfectant could kill <span class="term" data-definition="[noun] (plural of bacterium) A large group of one-celled organisms that are found almost everywhere.">bacteria</span> improved food safety and saved millions of lives. In 1655, the English scientist <span class="term" data-definition="An English physicist, born on the Isle of Wight (1635-1703). Hooke's studies were extremely diverse, encompassing biology, geology, physics, chemistry and..." data-modal-open="modal-term">Robert Hooke</span> made an observation that would change the study of biology forever. While examining a thin, dried section of cork tree with a crude <span class="term" data-definition="A form of electromagnetic radiation.  Visible light is that associated with stimulating the organs of sight, which for normal human...">light</span>  microscope, Hooke observed that he could plainly see the cork to be made up of tiny spaces surrounded by walls, much like a honeycomb, but that the spaces were irregular and shallow (Figure 1). Further, Hooke noted that these "little Boxes" were so numerous that there were "in a square Inch above a Million... and in a Cubick Inch, above twelve hundred Millions [sic]" (Hooke, 1655).
                 </p>
             </div>
             <!-- .container -->
@@ -586,3 +586,34 @@ title: "Module Example"
     <!-- .article__main -->
 
 </article>
+
+
+<div class="modal padding-2" id="modal-term" role="dialog">
+	<div
+        class="modal__content narrow border-radius box-shadow-3"
+        aria-labelledby="modal-example-01-title">
+
+		<header class="modal__content__head theme-glossary">
+            <h2 class="h6" id="modal-example-01-title">
+                Glossary Term
+            </h2>
+            <button class="button button--icon-only" data-modal-close>
+                <span class="icon_close" aria-hidden="true"></span>
+            </button>
+        </header>
+
+		<main class="modal__content__body" id="modal-example-01-content">
+            <h2 class="h4">
+              Hooke, Robert
+            </h2>
+			<p>
+                [person] An English physicist, born on the Isle of Wight (1635-1703). Hooke's studies were extremely diverse, encompassing biology, geology, physics, chemistry, and astronomy. He was also an accomplished inventor: He designed the universal joint, the iris diaphragm, a prototype of a respirator, and the balance spring. In 1662, he became the first Curator of Experiments for the Royal Society of London. Hooke discovered the theory for combustion and devised an equation for elasticity, which is now known as Hooke's Law. He also made important contributions in biology by describing and naming cells, which he observed with a compound microscope that he designed.
+            </p>
+		</main>
+
+		<footer class="modal__content__foot border-top font-size-md ">
+            <a class="button width-100 theme-glossary rounded-pill" href="{{ site.url}}/glossary/term.html">View in Glossary</a>
+		</footer>
+	</div>
+	<!-- .modal__content -->
+</div>
