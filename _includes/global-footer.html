@@ -142,7 +142,7 @@
 	<!-- .modal__content -->
 </div>
 
-<footer {% if page.title == 'Library' %}class="display-none"{% endif %} id="global-footer">
+<footer {% if page.title == 'Library' or page.title == 'Glossary' %}class="display-none"{% endif %} id="global-footer">
 	<div class="theme-dark">
 		<div class="container wide grid grid--global-foot padding-y-4">
 			<nav class="nav-primary">
@@ -602,7 +602,7 @@
 {% endif %}
 
 
-{% if page.title == 'GlossaryX' %}
+{% if page.title == 'Glossary' %}
 
 <script src="{{ site.url }}/lib/js/glossary-landing.js"></script>
 

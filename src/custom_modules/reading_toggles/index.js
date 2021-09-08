@@ -65,9 +65,10 @@ export default class ReadingToggles {
 
                 const termDefinition = term.getAttribute("data-definition");
 
+                // term.setAttribute("data-modal-open", "modal-term");
+
                 const tooltipHTML = (`
                     <span class="term__tooltip">
-                        <span class="tooltip-header display-none">Glossary Term</span>
                         ${termDefinition}
                     </span>`
                 );
