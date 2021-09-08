@@ -28,5 +28,10 @@ exclude:
   - webpack.prod.js
   - tearsheet.html
 
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"
+
+
   # Comment (exclude) for versioning
   # - version/*`
