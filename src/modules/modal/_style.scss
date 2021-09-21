@@ -5,8 +5,8 @@ In this file:
 // A. Modules
 // B. Variables
 // C. Modal Block
-// C. Modal Block/*  */
 // D. Modal Elements
+// E. Modal Modifier
 
 */
 
@@ -81,19 +81,6 @@ In this file:
   }
 }
 
-.modal--scroll-all {
-  overflow-y: scroll;
-
-  &[aria-hidden="false"] {
-    display: block;
-  }
-  
-  .modal__content {
-    margin-top: 120px;
-  }
-
-}
-
 //////////////////////////////////////////////
 // D. Modal Elements
 //////////////////////////////////////////////
@@ -152,4 +139,21 @@ In this file:
 
 body.modal-open {
   overflow: hidden;
+}
+
+//////////////////////////////////////////////
+// E. Modal Modifier
+//////////////////////////////////////////////
+
+.modal--scroll-all {
+  overflow-y: scroll;
+
+  &[aria-hidden="false"] {
+    display: block;
+  }
+  
+  .modal__content {
+    margin-top: 120px;
+  }
+
 }
