@@ -2195,204 +2195,78 @@
 
                 <figure class="container narrow margin-y-4">
 
-                    <button class="button theme-primary width-100 rounded-pill margin-y-3" data-modal-open="modal-1">
-                        Open Modal
+                    <button
+                        class="button width-100 theme-primary"
+                        data-modal-open="modal-example-01">
+                            Open Modal
                     </button>
 
                     <button class="button theme-primary width-100 rounded-pill margin-y-3" data-modal-open="modal-2">
-                        Open Modal
+                        Open Modal Scrollable
                     </button>
 
                 </figure>
 
-                <div class="modal" id="modal-1" role="dialog">
+                <!-- Modal button -->
 
-                    <div class="modal__content narrow medium--md rounded box-shadow-3" aria-labelledby="modal-1-title">
+                <button
+                    class="button theme-primary"
+                    data-modal-open="modal-example-01">
+                        Open Modal
+                </button>
+
+                <!-- Modal dialog -->
+
+                <div class="modal padding-2" id="modal-example-01" role="dialog">
+
+                    <div
+                        class="modal__content narrow border-radius box-shadow-3"
+                        aria-labelledby="modal-example-01-title">
 
                         <header class="modal__content__head border-bottom">
-                            <h2 class="h4" id="modal-1-title">
-                                Modal Title
+                            <h2 class="h6" id="modal-example-01-title">
+                                Modal Title One
                             </h2>
                             <button class="button button--icon-only" data-modal-close>
-                                <span class="icon_close"></span>
+                                <span class="icon_close" aria-hidden="true"></span>
                             </button>
                         </header>
 
-                        <main class="modal__content__body" id="modal-1-content">
+                        <main class="modal__content__body" id="modal-example-01-content">
                             <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
+                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
                             </p>
                             <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
+                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
                             </p>
                             <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
+                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
                             </p>
                             <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
+                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
                             </p>
                             <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
-                            </p>
-                            <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
-                            </p>
-                            <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
-                            </p>
-                            <p>
-                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet,
-                                deleniti perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa
-                                qui aut itaque est perspiciatis.
+                                Lorem, ipsum <a href="#1">dolor sit amet</a> consectetur adipisicing elit. Vero eveniet, deleniti
+                                perspiciatis tempore eaque aspernatur! Provident et voluptates possimus, ipsa qui aut itaque est perspiciatis.
                             </p>
                         </main>
 
-                        <footer class="modal__content__foot border-top">
+                        <footer class="modal__content__foot border-top text-color-link">
                             <ul class="nav nav--horizontal justify-content-between">
                                 <li>
                                     <a href="#1">Secondary Action</a>
                                 </li>
                                 <li>
-                                    <a class="button theme-primary rounded-pill" href="#1">Primary Action</a>
-                                </li>
-                            </ul>
-                        </footer>
-                    </div>
-                    <!-- .modal__content -->
-
-                </div>
-
-                <div class="modal" id="modal-2" role="dialog">
-
-                    <div class="modal__content narrow medium--md box-shadow-3" aria-labelledby="modal-1-title">
-
-                        <header class="modal__content__head theme-primary biology padding-0 border-radius-top position-relative">
-
-                            <div class="position-absolute top right padding-2 z-index-1500">
-
-                                <button class="button button--icon-only" data-modal-close>
-                                    <span class="icon_close"></span>
-                                </button>
-                            </div>
-
-                            <div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 500px;">
-
-                                <div class="backdrop__image gradient-veneer-bottom">
-                                    <img class="opacity-40" src="./images/backdrop-example-02.jpg" alt="Placeholder">
-                                </div>
-
-                                <div class="backdrop__cover">
-
-                                    <div class="container">
-
-                                        <div class="container disc-banner text-shadow">
-
-                                            <h1 class="banner-headline">
-                                                Biology
-                                            </h1>
-
-                                            <div class="disc-banner__teaser">
-                                                <h6>Misconception:</h6>
-                                                <p>
-                                                    Sudden environmental change is required for evolution to occur.
-                                                </p>
-                                            </div>
-
-                                            <div class="disc-banner__summary">
-                                                <p>
-                                                    Life as we know it is a wonderfully diverse enterprise.
-                                                    Organisms pass traits from parent to offspring, function in a
-                                                    varied and changing environment, and carry out a myriad of
-                                                    complex biochemical processes. Understanding the principles of
-                                                    biology helps give context and clarity to larger scientific and
-                                                    social issues. Our biology learning modules reveal the current
-                                                    state of scientific understanding on topics like cell structure
-                                                    and function, genetics, taxonomy, evolution by natural
-                                                    selection, and more.
-                                                </p>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </header>
-
-                        <main class="modal__content__body theme-primary biology" id="modal-1-content">
-
-                            <div class="overflow-hidden tabs" role="tablist">
-
-                                <div class="module-results-filter font-size-md padding-y-2 border-top border-bottom">
-
-                                    <ul class="nav nav--horizontal justify-content-end">
-                                        <li>
-                                            <button
-                                                class="button button--has-icon"
-                                                aria-controls="tab-group-module-results-list"
-                                                id="tab-button-module-results-list"
-                                                aria-selected="true"
-                                                role="tab">
-                                                    <span class="icon_list button__icon"></span>
-                                                    <span class="button__text">List</span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button class="button button--has-icon"
-                                                aria-controls="tab-group-module-results-grid"
-                                                id="tab-button-module-results-grid"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    <span class="icon_grid button__icon"></span>
-                                                    <span class="button__text">Grid</span>
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
-                                <div class="tabs__panel shown" id="tab-group-module-results-list" aria-labelledby="tab-button-module-results-list" role="tabpanel">
-                                    <div class="overflow-hidden" id="module-list-view"></div>
-                                </div>
-                                <!-- .tabs__panel -->
-
-                                <div class="tabs__panel" id="tab-group-module-results-grid" aria-labelledby="tab-button-module-results-grid" role="tabpanel">
-                                    <div class="overflow-hidden" id="module-grid-view"></div>
-                                </div>
-                                <!-- .tabs__panel -->
-
-                            </div>
-                        </main>
-
-                        <footer class="modal__content__foot border-top">
-                            <ul class="nav nav--horizontal justify-content-between">
-                                <li>
-                                    <a href="#1">Secondary Action</a>
-                                </li>
-                                <li>
-                                    <a class="button theme-primary rounded-pill" href="#1">Primary Action</a>
+                                    <a class="button rounded-pill" href="#1">Primary Action</a>
                                 </li>
                             </ul>
                         </footer>
 
                     </div>
-                    <!-- .modal__content -->
 
                 </div>
                 
