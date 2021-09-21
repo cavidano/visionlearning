@@ -120,6 +120,7 @@ In this file:
 
         .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
 
             margin-left: calc(var(--nav-gap) * -1);

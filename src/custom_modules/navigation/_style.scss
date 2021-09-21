@@ -429,3 +429,24 @@
         background-image: url(~/images/discipline-process-of-science.jpg);
     }
 }
+
+.terms-alphabetical {
+    font-size: var(--font-size-sm);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > button {
+        border-radius: var(--button-border-radius);
+        padding: var(--button-padding-y) var(--button-padding-x);
+        // margin: 0.125em;
+    }
+
+    > button[aria-current] {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: white;
+        color:var(--glossary);box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    }
+}
