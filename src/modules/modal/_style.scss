@@ -27,7 +27,7 @@ In this file:
 
   --modal-overlay-opacity: 0.8;
   
-  --modal-z-index: 8000;
+  --modal-z-index: 15000;
 }
 
 //////////////////////////////////////////////
@@ -64,16 +64,19 @@ In this file:
       bottom: 0;
       left: 0;
       
+      background-color: black;
+
       opacity: var(--modal-overlay-opacity);
   }
 
   display: none;
 
-  backdrop-filter: blur(0.75rem);
+  // backdrop-filter: blur(0.75rem);
 
   &[aria-hidden="false"] {
     display: flex;
   }
+
 
 }
 
