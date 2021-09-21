@@ -24,11 +24,11 @@ In this file:
 %box-shadow-vars {
     --base-shadow-unit: 1rem;
 
-    --base-shadow-opacity: 0.1;
+    --base-shadow-opacity: 0.125;
 }
 
 [class*="theme-dark"] {
-    --base-shadow-opacity: 0.175;
+    --base-shadow-opacity: 0.2;
 }
 
 //////////////////////////////////////////////

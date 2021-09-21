@@ -29,7 +29,7 @@ In this file:
 
 :root {
     --button-padding-x: 1em;
-    --button-padding-y: 0.625em;
+    --button-padding-y: 0.75em;
 
     --button-font-weight: var(--body-font-weight-bold);
 
@@ -37,7 +37,7 @@ In this file:
     
     --button-outline-border-width: calc( var(--default-border-width) * 2);
 
-    --button--icon-only-size: 2em;
+    --button-icon-only-size: 2.25em;
 }
 
 //////////////////////////////////////////////
@@ -46,8 +46,6 @@ In this file:
 
 button {
     cursor: pointer;
-
-    font-family: var(--body-font-family);
     
     &:not([class*="theme-"]){
         background-color: transparent;
@@ -55,10 +53,6 @@ button {
 
     &:not([class*="border-"]){
         border: none;
-    }
-
-    &:not([class*="button"]) {
-        text-align: inherit;
     }
 
 }
@@ -86,7 +80,7 @@ button {
 
     transition: opacity 0.5s ease-out;
 
-    &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"]):not([data-toggle="dropdown"]) {
+    &:not([class*="button--outline"]):not([class*="theme-"]):not([class*="background-color"]) {
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.05;
     }
@@ -160,8 +154,8 @@ button {
     align-items: center;
     justify-content: center;
 
-    width: var(--button--icon-only-size);
-    height: var(--button--icon-only-size);
+    width: var(--button-icon-only-size);
+    height: var(--button-icon-only-size);
 
     [class*="_icon"] {
         --icon-size: 1.25em;
@@ -237,7 +231,7 @@ button {
 //////////////////////////////////////////////
 
 .button-group {
-    --gap-size: var(--spacer-1);
+    --gap-size: var(--spacer-2);
 
     display: flex;
     justify-content: center;
@@ -245,7 +239,7 @@ button {
     margin-left: calc(var(--gap-size) * -0.5);
     margin-right: calc(var(--gap-size) * -0.5);
 
-    min-height: var(--button--icon-only-size);
+    min-height: var(--button-icon-only-size);
 
     > [class*="button"], 
     button {
@@ -284,10 +278,4 @@ screen and (-ms-high-contrast: none) {
             margin-left: auto;
         }
     }
-}
-
-.list-add-remove {
-    --subtle-fill-opacity: 0 !important;
-    border-radius: 100%;
-    font-size: var(--font-size-lg);
 }

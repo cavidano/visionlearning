@@ -23,8 +23,7 @@ new Alerts();
 
 import "./modules/aspect-ratios";
 
-import Backdrops from "./modules/backdrops";
-new Backdrops();
+import "./modules/backdrops";
 
 import "./modules/borders";
 

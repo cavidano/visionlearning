@@ -3,6 +3,7 @@
 In this file:
 
 // A. Modules
+// Cool
 // B. Variables
 // C. Font Weight Utilities
 // D. Font Size Utilities
@@ -220,15 +221,13 @@ p ~ ol {
     }
 }
 
-ul.list-bulleted,
 p ~ ul,
-p ~ ol:not(.quiz__questions) {
+p ~ ol {
     li {
         margin-bottom: var(--spacer-1);
     }
 }
 
-ul.list-bulleted,
 p ~ ul {
     --list-item-padding: 1em;
 
@@ -238,7 +237,7 @@ p ~ ul {
     }
 }
 
-ol:not(.quiz__questions) {
+ol {
     --list-item-padding: 2em;
 
     list-style: none;

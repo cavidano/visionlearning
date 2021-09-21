@@ -1,10 +1,10 @@
-import "./_style.scss";
+import './_style.scss';
 
 //////////////////////////////////////////////
 // Form
 //////////////////////////////////////////////
 
-export default class Form {
+export default class Forms {
 
     constructor() {
 
@@ -264,6 +264,5 @@ export default class Form {
             fileUpload.addEventListener("dragend", dragOff);
             fileUpload.addEventListener("drop", dropped);
         });
-        
     }
 }
