@@ -10,6 +10,7 @@
 @use "../../modules/collapse/style" as collapse;
 @use "../../modules/navigation/style" as navigation;
 @use "../../modules/icons/style" as icons;
+@use "../../modules/caret/style" as caret;
 
 //////////////////////////////////////////////
 // B. VL Hat
@@ -225,8 +226,6 @@
 //////////////////////////////////////////////
 
 .module-breadcrumb {
-    // @extend %subtle-fill-psuedo;
-    // --subtle-fill-opacity: 0.05;
 
     ul {
         @extend %list-style-nav;
@@ -265,6 +264,8 @@
         --button-padding-y: 0.75em;
         --button-border-radius: 0;
         --button-font-weight: var(--body-font-weight-normal);
+
+        line-height: normal;
 
         &[aria-expanded="true"] {
             background-color: white;
@@ -314,6 +315,7 @@
             font-weight: var(--body-font-weight-bold);
             font-style: italic;
             cursor: default;
+            text-align: left;
         }
     }
 
