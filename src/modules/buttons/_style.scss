@@ -46,6 +46,8 @@ In this file:
 
 button {
     cursor: pointer;
+
+    font-family: inherit;
     
     &:not([class*="theme-"]){
         background-color: transparent;
