@@ -222,13 +222,15 @@ p ~ ol {
 }
 
 p ~ ul,
+.list-bulleted,
 p ~ ol {
     li {
         margin-bottom: var(--spacer-1);
     }
 }
 
-p ~ ul {
+p ~ ul,
+.list-bulleted {
     --list-item-padding: 1em;
 
     li {
