@@ -2350,8 +2350,8 @@
                 </header>
 
                 <figure class="container narrow margin-y-4">
-                <nav class="terms-alphabetical">                                
-                    <button aria-current="page">A</button>
+                    <nav class="terms-alphabetical">                                
+                        <button aria-current="page">A</button>
                         <button>B</button>
                         <button>C</button>
                         <button>D</button>
@@ -4364,15 +4364,27 @@
 
                     <div class="quiz">
 
-                        <div class="quiz__score passed margin-y-4">
+                        <div
+                            class="alert quiz__score passed margin-y-4"
+                            aria-labelledby="alert-label"
+                            aria-describedby="alert-description"
+                            role="alert">
 
-                            <h2 class="h4">Your score is 92%</h2>
-                            <p>
-                                You answered <strong>2</strong> of <strong>9</strong> questions.
-                            </p>
-                            <p>    
-                                You answered <strong>1</strong> of <strong>2</strong> questions correctly.
-                            </p>
+                            <div class="alert__title h6">
+                                <span class="icon_confirm" aria-hidden="true"></span>
+                                <span class="alert__title__text" id="alert-label">
+                                    Pass: You scored 96%
+                                </span>
+                            </div>
+
+                            <div class="alert__description font-size-md" id="alert-description">
+                                <p>
+                                    You answered <strong>2</strong> of <strong>9</strong> questions.
+                                </p>
+                                <p>    
+                                    You answered <strong>1</strong> of <strong>2</strong> questions correctly.
+                                </p>
+                            </div>
 
                         </div>
                         

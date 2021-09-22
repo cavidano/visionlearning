@@ -237,7 +237,7 @@ p ~ ul {
     }
 }
 
-ol {
+ol:not([class]) {
     --list-item-padding: 2em;
 
     list-style: none;
