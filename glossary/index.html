@@ -16,56 +16,84 @@ title: "Glossary"
                     {% include materials-search.html search_type="Glossary" %}
 
                     <ul
-                        class="nav nav--divider border border-radius--sm"
+                        class="tabs-nav glossary border border-radius"
                         id="filter-by-discipline"
                         role="menu">
+
                         <li>
-                            <button aria-selected="true">
-                                Alphabetical
+                            <button
+                                id="filter-all-disciplines"
+                                aria-selected="true"
+                                role="tab">
+                                    All Disciplines
                             </button>
                         </li>
                         <li>
-                            <button>
-                                Biology
+                            <button
+                                id="filter-biology"
+                                aria-selected="false"
+                                role="tab">
+                                    Biology
                             </button>
                         </li>
                         <li>
-                            <button>
-                                Chemistry
+                            <button
+                                id="filter-chemistry"
+                                aria-selected="false"
+                                role="tab">
+                                    Chemistry
                             </button>
                         </li>
                         <li>
-                            <button>
-                                Earth Science
+                            <button
+                                id="filter-earth-science"
+                                aria-selected="false"
+                                role="tab">
+                                    Earth Science
                             </button>
                         </li>
                         <li>
-                            <button>
-                                General Science
+                            <button
+                                id="filter-general-science"
+                                aria-selected="false"
+                                role="tab">
+                                    General Science
                             </button>
                         </li>
                         <li>
-                            <button>
-                                Inside Science
+                            <button
+                                id="filter-inside-science"
+                                aria-selected="false"
+                                role="tab">
+                                    Inside Science
                             </button>
                         </li>
                         <li>
-                            <button>
-                                Math in Science
+                            <button
+                                id="filter-math-in-science"
+                                aria-selected="false"
+                                role="tab">
+                                    Math in Science
                             </button>
                         </li>
                         <li>
-                            <button>
-                                Physics
+                            <button
+                                id="filter-physics"
+                                aria-selected="false"
+                                role="tab">
+                                    Physics
                             </button>
                         </li>
                         <li>
-                            <button>
-                                Process of Science
+                            <button
+                                id="filter-process-of-science"
+                                aria-selected="false"
+                                role="tab">
+                                    Process  of Science
                             </button>
                         </li>
                     </ul>
-                
+
                 </div>
 
                 <div class="materials__main">
@@ -78,96 +106,41 @@ title: "Glossary"
                                     <h2 class="screen-reader-only">Alphabetical</h2>
                                 </header>
 
-                                <div class="theme-light border-radius padding-3">
+                                <div class="theme-light padding-2 border-radius">
 
-                                    <div class="container narrow">                                
-                                        <ul class="nav nav--horizontal justify-content-center font-size-md" style="flex-wrap: wrap;">
-                                            <li>
-                                                <a href="#1" aria-current="page">A</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">B</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">C</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">D</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">E</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">F</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">G</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">H</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">I</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">J</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">K</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">L</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">M</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">N</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">O</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">P</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">Q</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">R</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">S</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">T</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">U</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">V</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">W</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">X</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">Y</a>
-                                            </li>
-                                            <li>
-                                                <a href="#1">Z</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <nav class="terms-alphabetical">                                
+                                        <button aria-current="page">A</button>
+                                        <button>B</button>
+                                        <button>C</button>
+                                        <button>D</button>
+                                        <button>E</button>
+                                        <button>F</button>
+                                        <button>G</button>
+                                        <button>H</button>
+                                        <button>I</button>
+                                        <button>J</button>
+                                        <button>K</button>
+                                        <button>L</button>
+                                        <button>M</button>
+                                        <button>N</button>
+                                        <button>O</button>
+                                        <button>P</button>
+                                        <button>Q</button>
+                                        <button>R</button>
+                                        <button>S</button>
+                                        <button>T</button>
+                                        <button>U</button>
+                                        <button>V</button>
+                                        <button>W</button>
+                                        <button>X</button>
+                                        <button>Y</button>
+                                        <button>Z</button>
+                                            
+                                    </nav>
                                 
                                 </div>
 
-                                <div class="padding-2">
                                     <div id="term-list-view"></div>
-                                </div>
 
                             </section>
                         </div>

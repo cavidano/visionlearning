@@ -37,6 +37,11 @@ In this file:
 
     --nav-divider-padding-y: 0.625em;
     --nav-divider-padding-x: var(--spacer-3);
+
+    --primary-nav-padding-x: var(--spacer-3);
+    --primary-nav-padding-y: var(--spacer-2);
+
+    --primary-nav-search-width: 200px;
 }
 
 ////////////////////////////////////////
@@ -52,7 +57,8 @@ In this file:
         position: relative;
     }
 
-    a[aria-current] {
+    [aria-selected="true"],
+    [aria-current] {
         font-weight: var(--body-font-weight-bold);
 
         text-decoration: underline;
@@ -68,8 +74,11 @@ In this file:
     @extend %list-style-nav;
 }
 
-.nav:not([class*="nav--divider"]):not([class*="nav--breadcrumb"]) {
+.nav > li svg {
+    fill: currentColor;
+}
 
+.nav:not([class*="nav--divider"]):not([class*="nav--breadcrumb"]) {
     > li:not(:last-child) {
         margin-bottom: var(--nav-gap);
     }
@@ -82,19 +91,24 @@ In this file:
         margin-left: calc( var(--nav-gap) * -1);
         margin-right: 0;
         margin-top: 1rem;
+
         width: 240px;
     }
 
     > li > .nav__dropdown {
         left: 0;
+        
         width: calc(100% + (var(--nav-gap) * 2));
-        padding: var(--nav-gap);
+        
         margin-left: calc(var(--nav-gap) * -1);
         margin-right: calc(var(--nav-gap) * -1);
+
+        padding: var(--nav-gap);
 
         [dir="rtl"] & {
             left: unset;
             right: 0;
+        
             text-align: right;
         }
     }
@@ -106,7 +120,7 @@ In this file:
 
         .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             align-items: center;
 
             margin-left: calc(var(--nav-gap) * -1);
@@ -119,13 +133,16 @@ In this file:
             }
 
             > li > .nav__dropdown {
-                min-width: 200px;
                 position: absolute;
+
+                min-width: 200px;
             }
 
             > li > [data-toggle="dropdown"][class*="-icon"] ~ ul {
                 left: 50%;
+
                 transform: translateX(-50%);
+                
                 margin-left: 0;
 
                 &::after {
@@ -168,6 +185,11 @@ In this file:
         border-top-width: 0 !important;
     }
 
+    > li > a > * {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     [data-toggle="dropdown"] {
         justify-content: space-between;
     }
@@ -179,12 +201,16 @@ In this file:
 
         .nav--divider.nav--horizontal#{$mod} {
             display: flex;
-            flex-direction: row;
             align-items: stretch;
 
             > li {
                 border-bottom-style: none !important;
-                flex: 1 0;
+
+                flex-grow: 1;
+                flex-shrink: 0;
+                
+                display: flex;
+                align-items: stretch;
             }
 
             > li:not(:last-child) {
@@ -200,6 +226,7 @@ In this file:
 
             > li > a, 
             > li > button {
+                display: flex;
                 justify-content: center;
             }
 
@@ -249,7 +276,6 @@ In this file:
     --breadcrumb-font-size: var(--font-size-sm);
 
     display: flex;
-    flex-direction: row;
     align-items: center;
 
     font-size: var(--breadcrumb-font-size);
@@ -352,14 +378,12 @@ In this file:
 //////////////////////////////////////////////
 
 [class*="primary-nav--"] {
-    --primary-nav-padding: var(--spacer-2);
-
     position: relative;
 
     display: grid;
     align-items: center;
 
-    z-index: 1000;
+    z-index: 1000; //???
 
     ul {
         @extend %list-style-nav;
@@ -368,7 +392,7 @@ In this file:
     > [class*="__logo"] {
         grid-area: logo;
 
-        padding: var(--primary-nav-padding);
+        padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
     }
 
     > [class*="__menu"] {
@@ -376,7 +400,7 @@ In this file:
 
         @extend .collapse;
 
-        padding: var(--primary-nav-padding);
+        padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
     }
 
     > [class*="__actions"] {
@@ -385,7 +409,7 @@ In this file:
         display: flex;
         align-items: center;
 
-        padding: var(--primary-nav-padding);
+        padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
 
         > .button {
             margin-right: var(--spacer-2);
@@ -396,9 +420,15 @@ In this file:
             }
         }
     }
+
+    .form-entry:not([class*="active"]) .form-entry__field__input::after {
+        display: none;
+    }
 }
 
 [class*="primary-nav--inline--"] {
+    --search-width: var(--primary-nav-search-width);
+
     justify-content: space-between;
     align-items: center;
 
@@ -408,7 +438,8 @@ In this file:
         "menu menu";
 
     > [class*="__menu"] {
-        align-self: stretch;
+        align-self: stretch; 
+        justify-content: end;
 
         > ul > li:not(:last-child) {
             margin-bottom: var(--nav-gap);
@@ -436,9 +467,9 @@ In this file:
     }
     
     > [class*="__actions"] {
-        padding: calc(var(--primary-nav-padding) * 0.5) var(--primary-nav-padding);
-        
         justify-content: space-between;
+
+        padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
     }
 
     > [class*="__actions"],
@@ -446,6 +477,14 @@ In this file:
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
         border-top-color: inherit;
+    }
+
+    form[role="search"]{
+        
+        .form-entry__field {
+            --form-field-border-radius: 0;
+            height: 100%;
+        } 
     }
 }
 
@@ -463,13 +502,8 @@ In this file:
         @extend .expanded-link;
     }
 
-    > form[role="search"] {
-        --nav-search-width: 200px;
+    form[role="search"] {
         margin-top: var(--spacer-2);
-
-        button::before {
-            display: none;
-        }
     }
 
     .form-entry__field {
@@ -496,11 +530,6 @@ In this file:
 
             [class*="__menu"] {
                 display: flex !important;
-
-            }
-
-            [class*="__actions"] {
-                padding: var(--primary-nav-padding);
             }
 
             [class*="__actions"] button.mobile-menu-toggle {
@@ -508,7 +537,7 @@ In this file:
             }
 
             form[role="search"] {
-                max-width: var(--nav-search-width);
+                max-width: var( --primary-nav-search-width);
                 margin-top: unset;
             }
         }
@@ -520,6 +549,7 @@ In this file:
 
             [class*="__menu"] {
                 padding: unset;
+                justify-content: flex-end;
 
                 align-items: center;
 
@@ -552,6 +582,15 @@ In this file:
                     }
                 }
 
+                form[role="search"] {
+                    margin-left: var(--primary-nav-padding-x);
+                    
+                    [dir="rtl"] & {
+                        margin-left: unset;
+                        margin-right:  var(--primary-nav-padding-x);
+                    }
+                }
+
             }
         }
 
@@ -575,7 +614,6 @@ In this file:
 
             > [class*="__menu"] > ul {
                 display: flex;
-                flex-direction: row;
                 align-items: stretch;
 
                 > li {

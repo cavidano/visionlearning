@@ -142,8 +142,11 @@ In this file:
     padding-bottom: var(--spacer-3);
     
     font-size: calc( var(--font-size-md) * 0.875);
+    line-height: 1.5;
     transition: opacity 0.125s;
     pointer-events: inherit;
+
+    text-align: left;
 }
 
 // Keyframe Animations

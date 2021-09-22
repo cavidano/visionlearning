@@ -6,6 +6,7 @@ In this file:
 // B. Variables
 // C. Modal Block
 // D. Modal Elements
+// E. Modal Modifier
 
 */
 
@@ -19,13 +20,15 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
+// Scoped to Block
+
 %modal-vars {
-  --modal-padding-x: var(--spacer-3);
+  --modal-padding-x: var(--spacer-2);
   --modal-padding-y: var(--spacer-2);
 
   --modal-overlay-opacity: 0.8;
   
-  --modal-z-index: 2000;
+  --modal-z-index: 30000;
 }
 
 //////////////////////////////////////////////
@@ -36,7 +39,7 @@ In this file:
   @extend %modal-vars;
 
   position: fixed;
-  top: 0em;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -46,27 +49,37 @@ In this file:
   justify-content: center;
   align-content: center;
 
-  overflow-y: scroll;
-  will-change: scroll-position;
-  
   z-index: var(--modal-z-index);
   
   padding: var(--modal-padding);
 
-  &[class*="theme-"] {
+  &[class*="theme-"]{
     background-color: transparent !important;
   }
   
+  &::before {
+      position: fixed;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      
+      background-color: black;
+
+      opacity: var(--modal-overlay-opacity);
+  }
+
   display: none;
 
-  // backdrop-filter: blur(0.25rem);
+  // backdrop-filter: blur(0.75rem);
 
+  // Scrollable
   &[aria-hidden="false"] {
     display: flex;
   }
-
 }
-
 
 //////////////////////////////////////////////
 // D. Modal Elements
@@ -77,18 +90,18 @@ In this file:
 
   display: flex;
   flex-direction: column;
-
-  transform: translateY(4em);
-
+  
+  max-height: calc(100vh - (var(--modal-padding) * 2));
   width: 100%;
 
   z-index: auto;
+  
+  background-color: inherit;
   
   @extend .margin-x-auto;
   
   margin-top: var(--modal-padding);
   margin-bottom: var(--modal-padding);
-
 }
 
 .modal__content__head,
@@ -100,50 +113,47 @@ In this file:
 .modal__content__head {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 
   padding: var(--modal-padding-y) var(--modal-padding-x);
 
-  > h1, > .h1, 
-  > h2, > .h2, 
-  > h3, > .h3,
-  > h4, > .h4, 
-  > h5, > .h5, 
-  > h6, > .h6 {
+  h1, .h1, 
+  h2, .h2, 
+  h3, .h3,
+  h4, .h4, 
+  h5, .h5, 
+  h6, .h6 {
     margin-bottom: 0 !important;
   }
 
   button {
     flex-shrink: 0;
   }
-}
-
-.modal__content__body {
-  flex-shrink: 1;
   
-  overflow-y: auto;
 }
 
-//////////////////////////////////////////////
-// E. Modal Body Overlay
-//////////////////////////////////////////////
+:not([class*="--scroll-all"]) .modal__content__body {
+    flex-shrink: 1;
+    overflow-y: auto;
+}
 
 body.modal-open {
   overflow: hidden;
+}
 
-  &::after {
-      position: fixed;
-      content: "";
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0; 
+//////////////////////////////////////////////
+// E. Modal Modifier
+//////////////////////////////////////////////
 
-      background-color: black;
-      
-      opacity: 0.75;
+.modal--scroll-all {
+  overflow-y: scroll;
 
-      z-index: 1900;
+  &[aria-hidden="false"] {
+    display: block;
+  }
+  
+  .modal__content {
+    margin-top: 120px;
   }
 
 }

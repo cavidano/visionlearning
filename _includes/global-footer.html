@@ -1,19 +1,17 @@
-<div class="modal" id="modal-disc" role="dialog">
-	<div
-		class="modal__content narrow medium--md box-shadow-3"
-		aria-labelledby="modal-1-title"
-	>
-		<header
+<div class="modal modal--scroll-all padding-2" id="modal-example-01" role="dialog">
+
+    <div
+        class="modal__content medium theme-primary biology border-radius box-shadow-3"
+        aria-labelledby="modal-example-01-title">
+
+        <header
 			class="
-				modal__content__head
-				theme-primary
-				biology
-				padding-0
-				border-radius-top
-				position-relative
-			"
-		>
-			<div class="position-absolute top right padding-2 z-index-1500">
+			modal__content__head
+			padding-0
+			border-radius-top
+			position-relative">
+			
+			<div class="position-absolute position-top-right padding-2 z-index-1500">
 				<button class="button button--icon-only" data-modal-close>
 					<span class="icon_close"></span>
 				</button>
@@ -21,8 +19,8 @@
 
 			<div
 				class="backdrop backdrop--fixed"
-				style="--backdrop-fixed-height: 500px"
-			>
+				style="--backdrop-fixed-height: 500px">
+
 				<div class="backdrop__image gradient-veneer-bottom">
 					<img
 						class="opacity-40"
@@ -63,86 +61,521 @@
 			</div>
 		</header>
 
-		<main
-			class="modal__content__body theme-primary biology"
-			id="modal-1-content"
-		>
-			<div class="overflow-hidden tabs" role="tablist">
-				<div
-					class="
-						module-results-filter
-						font-size-md
-						padding-y-2
-						border-top border-bottom
-					"
-				>
-					<ul class="nav nav--horizontal justify-content-end">
+        <main class="modal__content__body border-top" id="modal-example-01-content">
+
+            <div class="container">
+						
+					<div class="category margin-y-3">
+									
+						<h2 class="h6">Biological Molecules</h2>
+
+						<ul class="list-divider font-size-md">
+								
+							<li>
+								<span class="list-divider__cell">
+									<a class="text-color-link" href="{{ site.url }}/library/module.html">
+										Carbohydrates
+									</a>
+								</span>
+								<span class="list-divider__cell">
+									<a class="button font-size-sm" href="#1">
+										<span class="button__text">NGSS View</span>
+									</a>
+								</span>
+							</li>
+						
+							<li>
+								<span class="list-divider__cell">
+									<a class="text-color-link" href="{{ site.url }}/library/module.html">
+										Fats and Proteins
+									</a>
+								</span>
+								<span class="list-divider__cell">
+									<a class="button font-size-sm" href="#1">
+										<span class="button__text">NGSS View</span>
+									</a>
+								</span>
+							</li>
+						
+							<li>
+								<span class="list-divider__cell">
+									<a class="text-color-link" href="{{ site.url }}/library/module.html">
+										Biological Proteins
+									</a>
+								</span>
+								<span class="list-divider__cell">
+									<a class="button font-size-sm" href="#1">
+										<span class="button__text">NGSS View</span>
+									</a>
+								</span>
+							</li>
+						
+							<li>
+								<span class="list-divider__cell">
+									<a class="text-color-link" href="{{ site.url }}/library/module.html">
+										Blood Biology I
+									</a>
+								</span>
+								<span class="list-divider__cell">
+									<a class="button font-size-sm" href="#1">
+										<span class="button__text">NGSS View</span>
+									</a>
+								</span>
+							</li>
+						
+							<li>
+								<span class="list-divider__cell">
+									<a class="text-color-link" href="{{ site.url }}/library/module.html">
+										Lipids
+									</a>
+								</span>
+								<span class="list-divider__cell">
+									<a class="button font-size-sm" href="#1">
+										<span class="button__text">NGSS View</span>
+									</a>
+								</span>
+							</li>
+						
+						</ul>
+
+					</div>
+				
+					<div class="category margin-y-3">
+									
+						<h2 class="h6">Cell Biology</h2>
+
+						<ul class="list-divider font-size-md">
+							
 						<li>
-							<button
-								class="button button--has-icon"
-								aria-controls="tab-group-module-results-list"
-								id="tab-button-module-results-list"
-								aria-selected="true"
-								role="tab"
-							>
-								<span class="icon_list button__icon"></span>
-								<span class="button__text">List</span>
-							</button>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Discovery and Structure of Cells
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
 						</li>
+					
 						<li>
-							<button
-								class="button button--has-icon"
-								aria-controls="tab-group-module-results-grid"
-								id="tab-button-module-results-grid"
-								aria-selected="false"
-								role="tab"
-							>
-								<span class="icon_grid button__icon"></span>
-								<span class="button__text">Grid</span>
-							</button>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Membranes I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
 						</li>
-					</ul>
-				</div>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Membranes II
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Cellular Organelles I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Cell Division I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Cell Division II
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Absorption, Distribution, and Storage of Chemicals
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						</ul>
 
-				<div
-					class="tabs__panel shown"
-					id="tab-group-module-results-list"
-					aria-labelledby="tab-button-module-results-list"
-					role="tabpanel"
-				>
-					<div class="overflow-hidden" id="module-list-view"></div>
-				</div>
-				<!-- .tabs__panel -->
+					</div>
+				
+					<div class="category margin-y-3">
+									
+						<h2 class="h6">Energy in Living Systems</h2>
 
-				<div
-					class="tabs__panel"
-					id="tab-group-module-results-grid"
-					aria-labelledby="tab-button-module-results-grid"
-					role="tabpanel"
-				>
-					<div class="overflow-hidden" id="module-grid-view"></div>
-				</div>
-				<!-- .tabs__panel -->
-			</div>
-		</main>
+						<ul class="list-divider font-size-md">
+							
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Energy Metabolism I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Energy Metabolism II
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Photosynthesis I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						</ul>
 
-		<footer class="modal__content__foot border-top">
-			<ul class="nav nav--horizontal justify-content-between">
-				<li>
-					<a href="#1">Secondary Action</a>
-				</li>
-				<li>
-					<a class="button theme-primary rounded-pill" href="#1"
-						>Primary Action</a
-					>
-				</li>
-			</ul>
-		</footer>
-	</div>
-	<!-- .modal__content -->
+					</div>
+				
+					<div class="category margin-y-3">
+									
+						<h2 class="h6">Evolutionary Biology</h2>
+
+						<ul class="list-divider font-size-md">
+							
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Origins of Life I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Origins of Life II
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Charles Darwin I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Charles Darwin II
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Charles Darwin III
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Adaptation
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Taxonomy II
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Taxonomy I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Introduction to Paleoanthropology
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Future of Human Evolution
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									The Piltdown Hoax
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						</ul>
+
+					</div>
+				
+					<div class="category margin-y-3">
+									
+						<h2 class="h6">Genetics</h2>
+
+						<ul class="list-divider font-size-md">
+							
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Mendel and Inheritance
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Mendel and Independent Assortment
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									DNA I
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									DNA II
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									DNA III
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Gene Expression
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Y-Chromsome and Mitochondrial DNA Haplotypes
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						<li>
+							<span class="list-divider__cell">
+								<a class="text-color-link" href="{{ site.url }}/library/module.html">
+									Population Genetics
+								</a>
+							</span>
+							<span class="list-divider__cell">
+								<a class="button font-size-sm" href="#1">
+									<span class="button__text">NGSS View</span>
+								</a>
+							</span>
+						</li>
+					
+						</ul>
+
+					</div>
+				
+				</div>
+        </main>
+
+        <footer class="modal__content__foot border-top text-color-link">
+            <ul class="nav nav--horizontal justify-content-between">
+                <li>
+                    <a href="#1">Secondary Action</a>
+                </li>
+                <li>
+                    <a class="button rounded-pill" href="#1">Primary Action</a>
+                </li>
+            </ul>
+        </footer>
+
+    </div>
+
 </div>
 
-<footer {% if page.title == 'Library' or page.title == 'Glossary' %}class="display-none"{% endif %} id="global-footer">
+<footer id="global-footer">
 	<div class="theme-dark">
 		<div class="container wide grid grid--global-foot padding-y-4">
 			<nav class="nav-primary">
@@ -445,165 +878,16 @@
 	}
 </script>
 
-<script src="{{ site.url }}/dist/js/visionlearning.js"></script>
-
-{% if page.title == 'Home' %}
-
-<script defer>
-	const libraryData = '{{ site.url }}/lib/json/vl-library.json';
-
-	const moduleGridView = document.getElementById('module-grid-view');
-	const moduleListView = document.getElementById('module-list-view');
-
-	const truncateString = (yourString, maxLength) => {
-		const index = yourString.indexOf(' ', maxLength);
-		return index === -1 ? yourString : yourString.substring(0, index) + '...';
-	};
-
-	const loadLibraryData = async () => {
-		try {
-			const response = await fetch(libraryData);
-			const moduleData = await response.json();
-
-			console.log('libraryData ===== >', moduleData);
-
-			displayModules(moduleData);
-
-		} catch (err) {
-			console.warn(err);
-		}
-	};
-
-	const displayModules = (modules) => {
-
-		const moduleDisplayHTML = modules.map((moduleArray) => {
-			// let discipline = moduleArray.discipline;
-			// let introduction = moduleArray.introduction;
-
-			let categories = moduleArray.categories;
-
-			const moduleGridHTML = categories
-				.map((category) => {
-					return `
-				<div class="margin-y-4">
-
-					<h2 class="h4 margin-bottom-4">${category.name}</h2>
-
-					<div class="grid grid--columns-3">
-
-					${category.modules
-						.map((module) => {
-							let summary = truncateString(module.summary, 240);
-
-							return `
-
-						<div class="card border">
-
-							<div class="card__body font-size-md">
-								<h5 class=" font-weight-normal">
-								<a class="link" href="{{ site.url }}/library/module.html">
-									${module.title}
-								</a>
-								</h5>
-								<p>
-									${summary}
-								</p>
-							</div>
-
-							<hr class="margin-x-3">
-
-							<div class="card__body font-size-md">
-
-								<strong>NGSS</strong>
-								<p>
-									HS-C6.2, HS-LS1.C2
-								</p>
-							</div>
-
-							<div class="card__foot border-top font-size-md">
-								<ul class="nav nav--horizontal justify-content-between">
-									<li>
-										<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
-											<span class="vl_icon_list-add button__icon"></span>
-										</a>
-									</li>
-									<li>
-										<a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go to Module</a>
-									</li>
-								</ul>
-							</div>
-
-						</div>`;
-						})
-						.join('')}
-				
-					</div>
-
-				</div>`;
-				})
-				.join('');
-
-			const moduleListHTML = categories
-				.map((category) => {
-					return `
-				<div class="margin-y-4">
-
-					<h2 class="h4 margin-bottom-4">${category.name}</h2>
-
-					<ul class="list-divider">
-
-						${category.modules
-							.map((module) => {
-								return `
-							<li>
-								<span class="list-divider__cell">
-									<a class="link" href="{{ site.url }}/library/module.html">
-										${module.title}
-									</a>
-								</span>
-								<span class="list-divider__cell">
-									<ul class="nav nav--horizontal font-size-md">
-										<li>
-											<a class="button button--icon-only border-radius-circle font-size-lg" href="#1">
-												<span class="vl_icon_list-add button__icon"></span>
-											</a>
-										</li>
-										<li>
-											<a class="button button--outline rounded-pill" href="{{ site.url }}/library/module.html">Go to Module</a>
-										</li>
-									</ul>
-								</span>
-							</li>`;
-							})
-							.join('')}
-						
-					</ul>
-
-				</div>`;
-				})
-				.join('');
-
-			moduleGridView.innerHTML = moduleGridHTML;
-			moduleListView.innerHTML = moduleListHTML;
-		});
-
-		moduleDisplayHTML();
-	};
-
-	loadLibraryData();
-</script>
-
-{% endif %}
-
 {% if page.title == 'Library' %}
 
 <script src="{{ site.url }}/lib/js/library-landing.js"></script>
 
 {% endif %}
 
-
 {% if page.title == 'Glossary' %}
 
 <script src="{{ site.url }}/lib/js/glossary-landing.js"></script>
 
 {% endif %}
+
+<script src="{{ site.url }}/dist/js/visionlearning.js"></script>

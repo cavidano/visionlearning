@@ -10,6 +10,7 @@
 @use "../../modules/collapse/style" as collapse;
 @use "../../modules/navigation/style" as navigation;
 @use "../../modules/icons/style" as icons;
+@use "../../modules/caret/style" as caret;
 
 //////////////////////////////////////////////
 // B. VL Hat
@@ -225,8 +226,6 @@
 //////////////////////////////////////////////
 
 .module-breadcrumb {
-    // @extend %subtle-fill-psuedo;
-    // --subtle-fill-opacity: 0.05;
 
     ul {
         @extend %list-style-nav;
@@ -265,6 +264,8 @@
         --button-padding-y: 0.75em;
         --button-border-radius: 0;
         --button-font-weight: var(--body-font-weight-normal);
+
+        line-height: normal;
 
         &[aria-expanded="true"] {
             background-color: white;
@@ -314,6 +315,7 @@
             font-weight: var(--body-font-weight-bold);
             font-style: italic;
             cursor: default;
+            text-align: left;
         }
     }
 
@@ -425,5 +427,26 @@
 
     &.process-of-science {
         background-image: url(~/images/discipline-process-of-science.jpg);
+    }
+}
+
+.terms-alphabetical {
+    font-size: var(--font-size-sm);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > button {
+        border-radius: var(--button-border-radius);
+        padding: var(--button-padding-y) var(--button-padding-x);
+        // margin: 0.125em;
+    }
+
+    > button[aria-current] {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: white;
+        color:var(--glossary);box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
     }
 }

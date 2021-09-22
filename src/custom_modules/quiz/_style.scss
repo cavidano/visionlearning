@@ -26,11 +26,13 @@ In this file:
         background-color: var(--white-link);
         color: white !important;
     }
+
 }
 
 ol.quiz__questions {
     list-style: none !important;
     counter-reset: section;
+    padding: unset !important;
 
     .form-entry__field__label {
         display: flex;
@@ -98,8 +100,6 @@ ol.quiz__questions {
     font-style: italic;
     font-size: 90%;
 
-    // display: block;
-
     color: var(--white-warn);
 
     [data-answer="correct"] & {
@@ -109,28 +109,6 @@ ol.quiz__questions {
 }
 
 .quiz__score {
-    position: relative;
-    padding: var(--spacer-2);
-
-    p {
-        margin-bottom: 0.25em;
-    }
-
-    &::before {
-        position: absolute;
-        content: "";
-
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-
-        border-radius: inherit;
-        pointer-events: none;
-
-        background-color: currentColor;
-        opacity: 0.1;    
-    }
 
     &.passed {
         color: var(--white-confirm);
@@ -138,8 +116,6 @@ ol.quiz__questions {
 
     display: none;
 }
-
-//
 
 .comprehension-checkpoint__header {
     border-radius: var(--form-field-border-radius, 0.25em);

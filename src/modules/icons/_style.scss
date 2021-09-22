@@ -6,7 +6,6 @@ In this file:
 // B. Shared Styles
 // C. Icon Font Utility Class
 // D. Rotating Utility Class
-// E. Subway Icons
 
 */
 
@@ -34,9 +33,8 @@ In this file:
   position: relative;
   pointer-events: none;
 
-  &:not([class*="_subway-"]) {
-    display: inline-block;
-  }
+  display: inline-block;
+  line-height: inherit;
 
   &[class*="-left"], 
   &[class*="-right"] {
