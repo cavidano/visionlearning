@@ -119,10 +119,6 @@ dd {
 }
 
 .tabs-nav {
-
-    > li::before{
-        opacity: 0;
-    }
     
     > li > button::before {
         background-color: var(--dark);
@@ -142,10 +138,13 @@ dd {
 }
 
 .tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
-    // background: hsla(249, 31%, 20%, 0.05);
-    // background: linear-gradient( hsla(250, 20%, 20%, 0.05) 0%, hsla(0, 0%, 100%) 100%);
     color: var(--white-link);
 }
 
+[data-logo="brand"] {
+    > svg{
+        fill: currentColor;
+    }
+}
 
 
