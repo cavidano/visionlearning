@@ -627,6 +627,10 @@ In this file:
                     text-align: center;
                 }
 
+                > li > button {
+                    width: 100%;
+                }
+
                 > li > a, 
                 > li > button,
                 > li > .nav__dropdown {
