@@ -140,7 +140,33 @@ title: "Glossary"
                                 
                                 </div>
 
-                                    <div id="term-list-view"></div>
+                                <div class="margin-y-2 font-size-md">
+                                    <ul class="list-divider">
+                                        {% for item in site.data.glossarySample %}
+                                        {% assign term = item.Name %}
+                                        {% assign pronounciation = item.Pronounciation %}
+                                        <li>
+                                            <span class="list-divider__cell">
+                                                <a class="text-color-link" href="/glossary/term.html">
+                                                   {{ term }} 
+                                                </a>
+                                            </span>
+                                            <span class="list-divider__cell">
+                                            {% if pronounciation != null %}
+                                            <div class="button-group text-color-link">
+                                                <button
+                                                    class="button button--icon-only">
+                                                    <span class="vl_icon_pronounciation" aria-hidden="true"></span>
+                                                </button>                                                
+                                            </div>
+                                            {% endif %}
+                                            </span>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+
+                                    
 
                             </section>
                         </div>
