@@ -37,8 +37,6 @@ In this file:
 .tabs-nav {
     @extend %custom-properties;
 
-    // background-color: darkkhaki;
-
     list-style: none;
 
     // Separator
@@ -60,7 +58,6 @@ In this file:
             background-color: currentColor;
             
             opacity: 0.125;
-            z-index: 5000;
         }
 
         &:first-child::before {
