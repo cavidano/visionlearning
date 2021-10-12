@@ -48,6 +48,6 @@
   },
   "main": "webpack.config.js",
   "browserslist": [
-    "default"
+    "defaults"
   ]
 }

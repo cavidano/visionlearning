@@ -5,6 +5,8 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const devIndex = 'tearsheet.html';
+
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'eval-cheap-source-map',
@@ -15,7 +17,7 @@ module.exports = merge(common, {
     devServer: {
         port: 8080,
         contentBase: path.resolve(__dirname),
-        index: 'tearsheet.html'
+        index: devIndex
     }, 
     module: {
         rules: [
@@ -52,8 +54,8 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './tearsheet.html',
-            filename: 'tearsheet.html',
+            template: `./${devIndex}`,
+            filename: devIndex,
             inject: 'body'
         })
     ]
