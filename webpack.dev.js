@@ -5,7 +5,8 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const devIndex = 'tearsheet.html';
+const devDir = './_tearsheet';
+const devIndex = 'header-footer.html';
 
 module.exports = merge(common, {
     mode: 'development',
@@ -54,7 +55,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: `./${devIndex}`,
+            template: `./${devDir}/${devIndex}`,
             filename: devIndex,
             inject: 'body'
         })

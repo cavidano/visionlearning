@@ -32,11 +32,11 @@ In this file:
 
     --button-font-weight: var(--body-font-weight-bold);
 
-    --button-border-radius: 0.25em;
+    --button-border-radius: 0;
     
     --button-outline-border-width: calc( var(--default-border-width) * 2);
 
-    --button-icon-only-size: 2.5em;
+    --button-icon-only-size: 2em;
 }
 
 //////////////////////////////////////////////
@@ -158,7 +158,7 @@ button {
     height: var(--button-icon-only-size);
 
     [class*="icon-"] {
-        --icon-size: 1.25em;
+        --icon-size: 1.125em;
 
         display: flex;
     }
@@ -232,7 +232,7 @@ button {
 //////////////////////////////////////////////
 
 .button-group {
-    --gap-size: var(--spacer-2);
+    --gap-size: var(--spacer-1);
     
     --form-field-padding-y: 0;
     --button-padding-y: 0;
