@@ -236,7 +236,7 @@ p ~ ul {
     }
 }
 
-ol {
+ol:not(.quiz__questions) {
     --list-item-padding: 2em;
 
     list-style: none;

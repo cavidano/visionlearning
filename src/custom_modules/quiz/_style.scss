@@ -12,8 +12,8 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "../../modules/icons/style" as icons;
 @use "../../modules/accents/style" as accents;
+@use "../../modules/icons/style" as icons;
 
 //////////////////////////////////////////////
 // B. Quiz Block
@@ -26,13 +26,14 @@ In this file:
         background-color: var(--white-link);
         color: white !important;
     }
-
+    
 }
 
 ol.quiz__questions {
-    list-style: none !important;
+    list-style: none;
     counter-reset: section;
-    padding: unset !important;
+    padding: unset;
+
 
     .form-entry__field__label {
         display: flex;
@@ -51,32 +52,28 @@ ol.quiz__questions {
 
 .quiz__questions {
 
-    .form-entry__option__radio > label > input ~ .radio__label::before {
-        @extend .vl-icon_font;
-    }
-
     .form-entry__option__radio:nth-child(1) > label > input ~ .radio__label::before {
-        content: "\e900";
+        content: "\f13e";
     }
 
     .form-entry__option__radio:nth-child(2) > label > input ~ .radio__label::before {
-        content: "\e901";
+        content: "\f13f";
     }
 
     .form-entry__option__radio:nth-child(3) > label > input ~ .radio__label::before {
-        content: "\e902";
+        content: "\f140";
     }
 
     .form-entry__option__radio:nth-child(4) > label > input ~ .radio__label::before {
-        content: "\e903";
+        content: "\f142";
     }
 
     .form-entry__option__radio:nth-child(5) > label > input ~ .radio__label::before {
-        content: "\e904";
+        content: "\f143";
     }
 
     .form-entry__option__radio > label > input:checked ~ .radio__label::before {
-        content: "\e905";
+        content: "\f141";
     }
 
     .form-entry__option__radio > label > input:not(:checked) ~ .radio__label::before {

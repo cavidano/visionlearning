@@ -97,12 +97,10 @@ import "./modules/z-index";
 import Grid from "./custom_modules/grid"; 
 new Grid();
 
-import "./custom_modules/icons";
-
 import "./custom_modules/navigation";
 
-// import Quiz from "./custom_modules/quiz"; 
-// new Quiz();
+import Quiz from "./custom_modules/quiz"; 
+new Quiz();
 
 import ReadingToggles from "./custom_modules/reading_toggles"; 
 new ReadingToggles();
