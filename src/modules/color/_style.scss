@@ -192,7 +192,7 @@ body > footer:not([class*="theme-"]),
 
     select option,
     [data-toggle="dropdown"] ~ ul, 
-    .modal::before,
+    // .modal::before,
     .modal__content,
     .table-scroll__container::after {
         background-color: var(--background-color);

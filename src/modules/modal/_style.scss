@@ -25,6 +25,7 @@ In this file:
   --modal-padding-x: var(--spacer-2);
   --modal-padding-y: var(--spacer-2);
 
+  --modal-overlay-color: black;
   --modal-overlay-opacity: 0.875;
   
   --modal-z-index: 8000;
@@ -35,7 +36,7 @@ In this file:
 //////////////////////////////////////////////
 
 .modal, 
-.modal::before{
+.modal::before {
   position: fixed;
   top: 0;
   right: 0;
@@ -52,6 +53,7 @@ In this file:
   align-content: center;
 
   z-index: var(--modal-z-index);
+  // background-color: inherit;
   
   padding: var(--modal-padding);
 
@@ -61,6 +63,7 @@ In this file:
   
   &::before {
       content: "";
+      background-color: var(--modal-overlay-color);
 
       opacity: var(--modal-overlay-opacity);
   }
