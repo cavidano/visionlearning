@@ -1,0 +1,1621 @@
+e: Biology
+- Description: >
+    Life as we know it is a wonderfully diverse enterprise. Organisms pass
+    traits from parent to offspring, function in a varied and changing
+    environment, and carry out a myriad of complex biochemical processes.
+    Understanding the principles of biology helps give context and clarity to
+    larger scientific and social issues. Our biology learning modules reveal the
+    current state of scientific understanding on topics like cell structure and
+    function, genetics, taxonomy, evolution by natural selection, and more.
+  Slug: biology
+  Modules:
+    - Id: '61'
+      Name: Carbohydrates
+      Summary: >
+        Our bodies are efficient chemical processing plants, breaking down
+        nutrients to use and store for energy. This module introduces
+        carbohydrates, an important macronutrient. It explains how different
+        carbohydrates are used by plants and animals. Simple sugars and complex
+        carbohydrates are identified, and their biochemical structures are
+        compared and contrasted.
+      SubCategory: Biological Molecules
+    - Id: '62'
+      Name: Fats and Proteins
+      Summary: >
+        Fats and proteins are two of the major nutrient groups that our bodies
+        need. This module provides an introduction to these two macronutrients.
+        The basic chemical structure of fats as triglycerides is presented along
+        with the purposes and types of fat. The module also introduces the
+        amazing  structure of protein molecules, including the peptide bond, and
+        explains the purpose of proteins.
+      SubCategory: Biological Molecules
+    - Id: '243'
+      Name: Biological Proteins
+      Summary: >
+        This module explores how proteins are polymers composed of building
+        blocks called amino acids. Using the historic research of Frederick
+        Sanger on insulin as a starting point, the complex structures of
+        proteins, due to molecular bonds like the disulfide bridge and the
+        peptide bond, are explained.
+      SubCategory: Biological Molecules
+    - Id: '242'
+      Name: Blood Biology I
+      Summary: >
+        Knowledge of blood components brought about a revolution in surgery
+        through safe transfusion. The module traces the development of our
+        understanding of blood over centuries, beginning in 1628 with English
+        physician William Harvey's breakthrough research on circulation. With a
+        focus on early 20th-century experiments by Austrian researcher Karl
+        Landsteiner, the module shows how the identification of clotting
+        factors, blood types, and antigens was critical to medical science.
+        Whole blood, plasma, serum, and different types of blood cells are
+        defined.
+      SubCategory: Biological Molecules
+    - Id: '207'
+      Name: Lipids
+      Summary: >
+        Fats, oils, waxes, steroids, certain plant pigments, and parts of the
+        cell membrane – these are all lipids. This module explores the world of
+        lipids, a class of compounds produced by both plants and animals.  It
+        begins with a look at the chemical reaction that produces soap and then
+        examines the chemical composition of a wide variety of lipid types.
+        Properties and functions of lipids are discussed.
+      SubCategory: Biological Molecules
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_207.mp3
+    - Id: '215'
+      Name: Energy Metabolism I
+      Summary: >
+        Food fuels our bodies, but how does our body convert food molecules into
+        usable energy? This module looks at glycolysis and the Krebs cycle, two
+        important stages of cellular respiration, the process by which cells
+        harvest energy from food. It highlights the work of Sir Hans Adolf Krebs
+        and his focus on cyclic pathways as he discovered the main biochemical
+        pathway for breaking down fuel to produce energy.
+      SubCategory: Energy in Living Systems
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_215.mp3
+    - Id: '225'
+      Name: Energy Metabolism II
+      Summary: >
+        ATP is the main energy currency of living cells. This module answers the
+        question of how most ATP is generated. A look at two important
+        compounds, NADH and FADH<sub>2</sub>, reveals their important role in
+        the production of ATP. The module explains the workings of the electron
+        transport chain, which provides high-energy electrons to fuel the
+        ATP-producing process called oxidative phosphorylation.
+      SubCategory: Energy in Living Systems
+    - Id: '192'
+      Name: Photosynthesis I
+      Summary: >
+        Through photosynthesis, plants harvest energy from the sun to produce
+        oxygen and sugar, the basic energy source for all living things. This
+        module introduces photosynthesis, beginning with experiments leading to
+        its discovery. The stages of photosynthesis are explained. Topics
+        include the role of chlorophyll, the action spectrum of photosynthesis,
+        the wavelengths of light that drive photosynthesis, light-harvesting
+        complexes, and the electron transport chain.
+      SubCategory: Energy in Living Systems
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_192.mp3
+    - Id: '129'
+      Name: Mendel and Inheritance
+      Summary: >
+        Inheritance patterns have been of interest since ancient times, but it
+        was Gregor Mendel's work in the mid-1800s that confirmed that traits are
+        passed on by two parents in a predictable pattern. This module describes
+        the experiments that resulted in <em>Mendel's Laws of Inheritance</em>.
+        A look at specific traits in pea plants over generations shows how
+        Mendel's research methods resulted in an understanding of dominant and
+        recessive genes. Partial dominance is also discussed.
+      SubCategory: Genetics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_129.mp3
+    - Id: '145'
+      Name: Mendel and Independent Assortment
+      Summary: >
+        The power of Mendel’s scientific approach can be seen in the research
+        that led to his Second Law. This module, the second in a series,
+        provides details on Mendel's work with dihybrid crosses and independent
+        assortment. The module describes tests that confirmed Mendel’s ideas
+        about the random and independent segregation of genetic factors.
+      SubCategory: Genetics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_145.mp3
+    - Id: '149'
+      Name: DNA I
+      Summary: >
+        This module is the first in a series that discusses the discovery,
+        structure, and function of DNA. Key experiments are discussed: from
+        Griffith’s discovery of genetic “transformation” to Avery, MacLeod, and
+        McCarty’s determination of the “transforming agent” to confirmation by
+        Hershey and Chase of DNA rather than protein as the genetic material.
+      SubCategory: Genetics
+    - Id: '160'
+      Name: DNA II
+      Summary: >
+        Exploration of the structure of DNA sheds light on fascinating
+        properties of the molecule. This module, the second in a series,
+        highlights major discoveries, from the parts of a nucleotide - the
+        building blocks of DNA - to the double helix structure of the DNA
+        molecule. The module describes scientific developments that led to an
+        understanding of the mechanism by which DNA replicates itself.
+      SubCategory: Genetics
+    - Id: '180'
+      Name: DNA III
+      Summary: >
+        In the field of molecular biology, scientists examine how DNA encodes
+        all the complexities of living things. This third module in the DNA
+        series focuses in the process by which DNA is replicated. The module
+        describes the DNA synthesis assay, where scientists were able to
+        replicate DNA in a test tube. Advancements in understanding the features
+        and properties of DNA replication are discussed.
+      SubCategory: Genetics
+    - Id: '214'
+      Name: Gene Expression
+      Summary: >
+        Through a look at the devastating Tay-Sachs disease and other hereditary
+        conditions, this module explores the connection between genes and
+        enzymes. The role of dominance vs. recessivity is examined. The module
+        traces developments in our understanding of gene expression, starting
+        with a rediscovery of Mendel’s laws of inheritance and built upon by the
+        pioneering work of later scientists. The module introduces the Central
+        Dogma of molecular biology, which is the one-way process of using DNA to
+        make RNA and RNA to make proteins.
+      SubCategory: Genetics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_214.mp3
+    - Id: '248'
+      Name: Y-Chromsome and Mitochondrial DNA Haplotypes
+      Summary: >
+        Using genetic markers passed down through the male or female line,
+        scientists can construct family trees going back thousands of years.
+        This module introduces haplotypes – genetic sequences that we inherit
+        from only one parent. As an example, the module looks at the degree of
+        interbreeding between now-extinct Neanderthals and modern humans as
+        determined through an analysis of Y-chromosome haplotypes (male lineage)
+        and mitochondrial DNA haplotypes (female lineage).
+      SubCategory: Genetics
+    - Id: '249'
+      Name: Population Genetics
+      Summary: >
+        Changes in the genetic makeup of a population affect the incidence of
+        certain traits and diseases within the population. Beginning with a look
+        at the abnormally high rate of a dangerous health condition in US Amish
+        communities, this module explores forces that affect a population's gene
+        pool. Among them are natural selection, gene flow, and two types of
+        genetic drift: founder effects and bottleneck events. The
+        Harvey-Weinberg Equilibrium equation is presented along with sample
+        problems that show how to calculate the frequency of specific alleles in
+        a population.
+      SubCategory: Genetics
+    - Id: '64'
+      Name: Discovery and Structure of Cells
+      Summary: >
+        Cells are the basic structural and functional unit of life. This module
+        traces the discovery of the cell in the 1600s and the development of
+        modern cell theory. The module looks at similarities and differences
+        between different types of cells and the relationship between cell
+        structure and function. The Theory of Universal Common Descent is
+        presented along with evidence that all living things on Earth descended
+        from a common ancestor.
+      SubCategory: Cell Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_64.mp3
+    - Id: '198'
+      Name: Membranes I
+      Summary: >
+        Cell membranes are much more than passive barriers; they are complex and
+        dynamic structures that control what enters and leaves the cell. This
+        module explores how scientists came to understand cell membranes,
+        including the experiments that led to the development of the
+        fluid-mosaic model of membrane structure. The module describes how the
+        components and structure of cell membranes relate to key functions.
+      SubCategory: Cell Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_198.mp3
+    - Id: '204'
+      Name: Membranes II
+      Summary: >
+        For living things to survive, different molecules need to enter and
+        leave cells, yet cell membranes serve as a barrier to most molecules.
+        Fortunately, all living cells have built-in transporters that allow
+        water, glucose, sodium, potassium, chloride, and other molecules to
+        cross the plasma membrane. This module looks at how passive and active
+        transporters work. It highlights the importance of the study of cell
+        membranes by looking at advances in treating cystic fibrosis and common
+        digestive ailments as well as the development of effective pain
+        relievers.
+      SubCategory: Cell Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_204.mp3
+    - Id: '195'
+      Name: Cellular Organelles I
+      Summary: >
+        Evolution isn't always about competition. It can also be about
+        cooperation, as is the case with the development of chloroplasts and
+        mitochondria from free-living bacteria. This module explains the theory
+        of endosymbiosis along with its origins. Convincing evidence in support
+        of the theory is presented. The evolution of the nucleus and other
+        organelles through  invagination of the cell membrane is also discussed.
+      SubCategory: Cell Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_195.mp3
+    - Id: '196'
+      Name: Cell Division I
+      Summary: >
+        Cell division is an enormously complex process that must go on millions
+        and millions of times during the life of an organism. This module
+        explains the difference between binary fission and the cell division
+        cycle. The stages of cell division are explored, and research that
+        contributed to our understanding of the process is described.
+      SubCategory: Cell Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_196.mp3
+    - Id: '212'
+      Name: Cell Division II
+      Summary: >
+        Beginning with the discovery of mitosis, the module details each phase
+        of this cell process. It provides an overview of the structure of cell
+        components that are critical to mitosis. The module describes Clark
+        Noble’s experiments with the Madagascar Periwinkle, which led to the
+        discovery of an effective cancer treatment drug. The relationship
+        between mitosis and cancer is explored as is the mechanism by which
+        anti-cancer drugs work to slow down or prevent cell division.
+      SubCategory: Cell Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_212.mp3
+    - Id: '106'
+      Name: Absorption, Distribution, and Storage of Chemicals
+      Summary: >
+        In order for many medicines to work, the chemicals must move from the
+        outside environment into the body. This module discusses the different
+        mechanisms by which chemicals cross the cell membrane and the factors
+        that influence this process. In addition to introducing biological
+        absorption, the module explains how chemicals are stored and distributed
+        within the body.
+      SubCategory: Cell Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_106.mp3
+    - Id: '226'
+      Name: Origins of Life I
+      Summary: >
+        Since prehistoric times, people have pondered how life came to exist.
+        This module describes investigations into the origins of life through
+        history, including Louis Pasteur’s experiments that disproved the
+        long-held idea of spontaneous generation and and later research showing
+        that the emergence of biological molecules from a nonliving environment
+        – or abiogenesis – is not only possible, but likely under the right
+        conditions.
+      SubCategory: Evolutionary Biology
+    - Id: '227'
+      Name: Origins of Life II
+      Summary: >
+        Building on earlier experiments showing how life’s chemical building
+        blocks could form from nonliving material on early Earth, this module
+        explores theories on the next steps needed for life. These include the
+        formation of long polymers, which then fold into complex macromolecules.
+        The module describes experiments in an environment like that of
+        primordial Earth, resulting in the spontaneous emergence of
+        phospholipids, which could form into membranes, paving the way for RNA
+        duplication and the eventual emergence of living cells.
+      SubCategory: Evolutionary Biology
+    - Id: '110'
+      Name: Charles Darwin I
+      Summary: >
+        The experiences and observations of Charles Darwin significantly
+        contributed to his theory of evolution through natural selection. This
+        module explores those influences and describes evolution as a force for
+        biological change and diversification. The first in a series, it details
+        how the theory challenged the cultural mindset of the time, including
+        the effect of his major works: <em>On the Origin of Species by Means of
+        Natural Selection</em> and <em>Sexual Selection and the Descent of
+        Man.</em>
+      SubCategory: Evolutionary Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_110.mp3
+    - Id: '111'
+      Name: Charles Darwin II
+      Summary: >
+        The second in a series discussing the work of Charles Darwin, this
+        module takes a deeper look into the processes that led to Darwin's
+        theory of natural selection and examines specific mechanisms that drive
+        evolutionary change. Key points on which the idea of natural selection
+        rests are outlined. Examples from Darwin's personal life shed light on
+        his thinking about change within a species and the "struggle for
+        existence."
+      SubCategory: Evolutionary Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_111.mp3
+    - Id: '112'
+      Name: Charles Darwin III
+      Summary: >
+        Our understanding of the term <em>evolution</em> has changed
+        significantly since Darwin's time. This module explains how Darwin's
+        work helped to give evolution the meaning it has today. It details the
+        concept of "descent with modification" that Darwin described with the
+        one figure originally included in <em>Origin of Species</em>. The module
+        discusses how this model revolutionized scientific thinking about the
+        similarities and differences between and within species, laying the
+        foundation for our current understanding of biodiversity.
+      SubCategory: Evolutionary Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_112.mp3
+    - Id: '68'
+      Name: Adaptation
+      Summary: >
+        This module introduces the concept of evolutionary adaptation. It
+        follows the development of Charles Darwin's ideas on how species adapt
+        to their environment in order to survive and reproduce. The difference
+        between adaptation and natural selection is explained. With a look at
+        penguins and other examples from nature, the module explores the
+        processes that influence the diversity of life.
+      SubCategory: Evolutionary Biology
+    - Id: '89'
+      Name: Taxonomy II
+      Summary: >
+        Carolus Linnaeus, the “father of taxonomy,” developed a uniform system
+        for naming plants and animals to ensure that each species has a unique
+        name. This module outlines rules of forming two-term taxonomic names
+        according to genus and species. The module gives examples of naming
+        controversies and describes how they were resolved, including by bending
+        the rules in regard to certain famous beasts.
+      SubCategory: Evolutionary Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_89.mp3
+    - Id: '70'
+      Name: Taxonomy I
+      Summary: >
+        Modern taxonomy officially began in 1758 with <em>Systema Naturae</em>,
+        the classic work by Carolus Linnaeus. This module, the first in a
+        two-part series on species taxonomy, focuses on Linnaeus’ system for
+        classifying and naming plants and animals. The module discusses the
+        contribution of diverse cultures to the development of our modern
+        biological classification and describes the historical development of a
+        scientific basis for classifying species.
+      SubCategory: Evolutionary Biology
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_70.mp3
+    - Id: '258'
+      Name: Introduction to Paleoanthropology
+      Summary: >
+        Paleoanthropology is the study of human ancestry through fossil remains
+        and other evidence. This module explains how paleoanthropologists
+        uncover and evaluate clues to the lineage to modern humans, tracing
+        intermediate forms along the way since the time we diverged from our
+        cousins, the great apes. Key discoveries are highlighted that shed light
+        on the pathway of human evolution. The module describes different ideas
+        through history about how the human family tree is constructed and which
+        characteristics best define humanness.
+      SubCategory: Evolutionary Biology
+    - Id: '259'
+      Name: Future of Human Evolution
+      Summary: >
+        Some noted modern scientists have declared that human evolution is over.
+        With advances in medicine and public health, natural selection is no
+        longer a major shaping force for humans. Even so, it doesn’t mean that
+        humans won’t evolve. This module explores the various directions that
+        human evolution might take. Various influences on human evolution are
+        discussed by way of specific examples, including artificial selection
+        through surgical advances and how “bottlenecking” could affect the human
+        gene pool if distant space colonies are formed in the future.
+      SubCategory: Evolutionary Biology
+    - Id: '263'
+      Name: The Piltdown Hoax
+      Summary: >
+        The Piltdown Man was once hailed as the "missing link" in the evolution
+        of apes to humans. However, the discovery at Piltdown - human skull
+        fragments, ancient mammal bones, and archaic tools - was an elaborate
+        hoax. The deception took a long time to be revealed due to errors by the
+        discoverers. They succumbed to confirmation bias by accepting any
+        evidence that supported their discovery and rejecting any contradictory
+        evidence.
+      SubCategory: Evolutionary Biologme: Chemistry
+  Description: >
+-    The universe is a vast soup of interacting particles and energy. The ways in
+    which those interactions take place, as well as the structure and
+    composition of matter, is the main focus of the field of chemistry. Our
+    chemistry learning modules introduce you to the world of chemistry,
+    exploring current research and scientific findings on concepts like the
+    structure and function of atoms, forms of energy and its transfer, chemical
+    bonding and reactions, and more.
+  Slug: chemistry
+  Modules:
+    - Id: '49'
+      Name: Early Ideas about Matter
+      Summary: >
+        Tracking the development of our understanding of the atomic structure of
+        matter, this module begins with the contributions of ancient Greeks, who
+        proposed that matter is made up of small particles. The module then
+        describes how Lavoisier's Law of Conservation of Mass and Proust's Law
+        of Definite Proportions contributed to Dalton's modern atomic theory.
+      SubCategory: Atomic Theory and Structure
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_49.mp3
+    - Id: '50'
+      Name: Atomic Theory I
+      Summary: >
+        The 19th and early 20th centuries saw great advances in our
+        understanding of the atom. This module takes readers through experiments
+        with cathode ray tubes that led to the discovery of the first subatomic
+        particle: the electron. The module then describes Thomson’s plum pudding
+        model of the atom along with Rutherford’s gold foil experiment that
+        resulted in the nuclear model of the atom. Also explained is Millikan’s
+        oil drop experiment, which allowed him to determine an electron’s
+        charge. Readers will see how the work of many scientists was critical in
+        this period of rapid development in atomic theory.
+      SubCategory: Atomic Theory and Structure
+    - Id: '51'
+      Name: Atomic Theory II
+      Summary: >
+        The 20th century brought a major shift in our understanding of the atom,
+        from the planetary model that Ernest Rutherford proposed to Niels Bohr’s
+        application of quantum theory and waves to the behavior of electrons.
+        With a focus on Bohr’s work, the developments explored in this module
+        were based on the advancements of many scientists over time and laid the
+        groundwork for future scientists to build upon further. The module also
+        describes James Chadwick’s discovery of the neutron. Among other topics
+        are anions, cations, and isotopes.
+      SubCategory: Atomic Theory and Structure
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_51.mp3
+    - Id: '223'
+      Name: Atomic Theory III
+      Summary: >
+        The 20th century was a period rich in advancing our knowledge of quantum
+        mechanics, shaping modern physics. Tracing developments during this
+        time, this module covers ideas and refinements that built on Bohr’s
+        groundbreaking work in quantum theory. Contributions by many scientists
+        highlight how theoretical insights and experimental results
+        revolutionized our understanding of the atom. Concepts include the
+        Schrödinger equation, Born’s three-dimensional probability maps, the
+        Heisenberg uncertainty principle, and electron spin.
+      SubCategory: Atomic Theory and Structure
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_223.mp3
+    - Id: '231'
+      Name: Atomic Theory IV
+      Summary: >
+        Our Atomic Theory series continues, exploring the quantum model of the
+        atom in greater detail. This module takes a closer look at the
+        Schrödinger equation that defines the energies and probable positions of
+        electrons within atoms. Using the hydrogen atom as an example, the
+        module explains how orbitals can be described by type of wave function.
+        Evidence for orbitals and the quantum model is provided by the
+        absorption and emission spectra of hydrogen. Other concepts include
+        multi-electron atoms, the Aufbau Principle, and Hund’s Rule.
+      SubCategory: Atomic Theory and Structure
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_231.mp3
+    - Id: '52'
+      Name: The Periodic Table of Elements
+      Summary: >
+        The modern periodic table is based on Dmitri Mendeleev’s 1896
+        observations that chemical elements can be grouped according to chemical
+        properties they exhibit. This module explains the arrangement of
+        elements in the period table. It defines periods and groups and
+        describes how various electron configurations affect the properties of
+        the atom.
+      SubCategory: Atomic Theory and Structure
+    - Id: '53'
+      Name: The Mole and Atomic Mass
+      Summary: >
+        The mole is an important concept for talking about a very large number
+        of things — 6.02 x 10<sup>23</sup> of them to be exact. This module
+        shows how the mole, known as Avogadro’s number, is key to calculating
+        quantities of atoms and molecules. It describes 19th-century
+        developments that led to the concept of the mole, Topics include atomic
+        weight, molecular weight, and molar mass. Sample equations illustrate
+        how molar mass and Avogadro’s number act as conversion factors to
+        determine the amount of a substance and its mass.
+      SubCategory: Atomic Theory and Structure
+    - Id: '54'
+      Name: Chemical Reactions
+      Summary: >
+        This modules explores the variety of chemical reactions by grouping them
+        into general types. We look at synthesis, decomposition, single
+        replacement, double replacement, REDOX (including combustion), and
+        acid-base reactions, with examples of each.
+      SubCategory: Reactions and Changes
+    - Id: '59'
+      Name: Nuclear Chemistry
+      Summary: >
+        Beginning with the work of Marie Curie and others, this module traces
+        the development of nuclear chemistry. It describes different types of
+        radiation: alpha, beta, and gamma. The module then applies the principle
+        of half-life to radioactive decay and explains the difference between
+        nuclear fission and nuclear fusion.
+      SubCategory: Reactions and Changes
+    - Id: '60'
+      Name: Carbon Chemistry
+      Summary: >
+        The chemical basis of all living organisms is linked to the way that
+        carbon bonds with other atoms. This introduction to organic chemistry
+        explains the many ways that carbon and hydrogen form bonds. Basic
+        hydrocarbon nomenclature is described, including alkanes, alkenes,
+        alkynes, and isomers. Functional groups of atoms within organic
+        molecules are discussed.
+      SubCategory: Reactions and Changes
+    - Id: '55'
+      Name: Chemical Bonding
+      Summary: >
+        The millions of different chemical compounds that make up everything on
+        Earth are composed of 118 elements that bond together in different ways.
+        This module explores two common types of chemical bonds: covalent and
+        ionic. The module presents chemical bonding on a sliding scale from pure
+        covalent to pure ionic, depending on differences in the
+        electronegativity of the bonding atoms. Highlights from three centuries
+        of scientific inquiry into chemical bonding include Isaac Newton’s
+        ‘forces’, Gilbert Lewis’s dot structures, and Linus Pauling’s
+        application of the principles of quantum mechanics.
+      SubCategory: Chemical Relationships
+    - Id: '268'
+      Name: Chemical Equations
+      Summary: >
+        Chemical equations are an efficient way to describe chemical reactions.
+        This module explains the shorthand notation used to express how atoms
+        are rearranged to make new compounds during a chemical reaction. It
+        shows how balanced chemical equations convey proportions of each
+        reactant and product involved. The module traces the development of
+        chemical equations over the past four centuries as our understanding of
+        chemical processes grew. A look at chemical equations reveals that
+        nothing is lost and nothing is gained in a typical chemical
+        reaction–matter simply changes form.
+      SubCategory: Chemical Relationships
+    - Id: '270'
+      Name: Stoichiometry
+      Summary: ''
+      SubCategory: Chemical Relationships
+    - Id: '271'
+      Name: Acids and Bases I
+      Summary: >
+        Whether maintaining water quality in a fish tank or suffering from acid
+        indigestion, we encounter the effects of acid-base chemistry in many
+        common situations. This module explores acids and bases and describes
+        how our understanding of acid-base chemistry has been refined over the
+        centuries. The module explains how the pH scale indicates acidity. A
+        table of pH values demonstrates how familiar substances range from
+        extremely acidic to extremely basic. Also covered is a neutralization
+        technique called titration.
+      SubCategory: Chemical Relationships
+    - Id: '272'
+      Name: Acids and Bases II
+      Summary: >
+        Our bodies constantly produce carbon dioxide, some of which stays in the
+        blood and becomes carbonic acid. So what keeps blood from becoming too
+        acidic? Our blood has a built-in buffering system that works to maintain
+        a neutral pH. This module explores how our body achieves this remarkable
+        balancing act, and traces scientific discoveries that contributed to our
+        current understanding of acid-base chemistry.
+      SubCategory: Chemical Relationships
+    - Id: '120'
+      Name: States of Matter
+      Summary: >
+        There are many states of matter beyond solids, liquids, and gases,
+        including plasmas, condensates, superfluids, supersolids, and strange
+        matter. This module introduces Kinetic Molecular Theory, which explains
+        how the energy of atoms and molecules results in different states of
+        matter. The module also explains the process of phase transitions in
+        matter.
+      SubCategory: Physical States and Properties
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_120.mp3
+    - Id: '209'
+      Name: Properties of Solids
+      Summary: >
+        Solids are formed when the forces holding atoms or molecules together
+        are stronger than the energy moving them apart. This module shows how
+        the structure and composition of various solids determine their
+        properties, including conductivity, solubility, density, and melting
+        point. The module distinguishes the two main categories of solids:
+        crystalline and amorphous. It then describes the four types of
+        crystalline solids: molecular, network, ionic, and metallic. A look at
+        different solids makes clear how atomic and molecular structure drives
+        function.
+      SubCategory: Physical States and Properties
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_209.mp3
+    - Id: '222'
+      Name: Properties of Liquids
+      Summary: >
+        When it comes to different liquids, some mix well while others don’t;
+        some pour quickly while others flow slowly. This module provides a
+        foundation for considering states of matter in all their complexity. It
+        explains the basic properties of liquids, and explores how
+        intermolecular forces determine their behavior. The concepts of
+        cohesion, adhesion, and viscosity are defined. The module also examines
+        how temperature and molecule size and type affect the properties of
+        liquids.
+      SubCategory: Physical States and Properties
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_222.mp3
+    - Id: '245'
+      Name: Properties of Gases
+      Summary: >
+        This module describes the properties of gases and explores how these
+        properties relate to a common set of behaviors called the gas laws. With
+        a focus on Boyle’s Law, Charles’s Law, and Avogadro’s Law, an overview
+        of 400 years of research shows the development of our understanding of
+        gas behavior. The module presents the ideal gas equation and explains
+        when this equation can—and cannot—be used to predict the behavior of
+        real gases.
+      SubCategory: Physical States and Properties
+    - Id: '216'
+      Name: Diffusion I
+      Summary: >
+        The process of diffusion is critical to life, as it is necessary when
+        our lungs exchange gas during breathing and when our cells take in
+        nutrients. This module explains diffusion and describes factors that
+        influence the process. The module looks at historical developments in
+        our understanding of diffusion, from observations of “dancing” particles
+        in the first century BCE to the discovery of Brownian motion to more
+        recent experiments. Topics include concentration gradients, the
+        diffusion coefficient, and advection.
+      SubCategory: Physical States and Properties
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_216.mp3
+    - Id: '251'
+      Name: Kinetic-Molecular Theory
+      Summary: >
+        Over four hundred years, scientists including Rudolf Clausius and James
+        Clerk Maxwell developed the kinetic-molecular theory (KMT) of gases,
+        which describes how molecule properties relate to the macroscopic
+        behaviors of an ideal gas—a theoretical gas that always obeys the ideal
+        gas equation. KMT provides assumptions about molecule behavior that can
+        be used both as the basis for other theories about molecules and to
+        solve real-world problems.
+      SubCategory: Physical States and Properties
+    - Id: '266'
+      Name: Solutions, Solubility, and Colligative Properties
+      Summary: >
+        Aqueous solutions are found throughout our world, and their chemistry
+        depends in part on how much of a dissolved substance is in them. This
+        module explores how substances dissolve, why some substances don’t
+        dissolve, and how we express the concentration of a solution. The module
+        describes the forces that hold particles together and interactions that
+        keep dissolved particles apart. It also examines how concentration
+        affects freezing point, boiling point, and vapor pressure.
+      SubCategory: Physical States and Properties
+    - Id: '267'
+      Name: Water
+      Summary: >
+        Water is a truly unusual and important substance. The unique chemical
+        properties of water that give rise to surface tension, capillary action,
+        and the low density of ice play vital roles in life as we know it.
+        Floating ice protects aquatic organisms and keeps them from being frozen
+        in the winter. Capillary action keeps plants alive. Surface tension
+        allows lily pads to stay on the surface of a lake. In fact, water’s
+        chemistry is so complex and important that scientists today are still
+        striving to understand all the feats this simple substance can perform.
+      SubCategory: Physical States and Properties
+
+- Name: Earth Science
+  Description: >
+    From the deep sea vents of the Cayman Trough to the shield volcanoes of the
+    Hawaiian islands, Earth Scientists explore the structures and processes that
+    define our world, the forces that continue to sculpt it, and how these
+    processes have interacted over the last 4.6 billion years of Earth's
+    history. Our Earth science modules introduce how scientists use detailed
+    observations, modeling, and comparative studies to develop their
+    understanding of plate tectonics, the foundational theory of the Earth
+    sciences, as well as biogeochemical cycles, the structure of the Earth and
+    its atmosphere, and rocks and minerals.
+  Slug: earth-science
+  Modules:
+    - Id: '65'
+      Name: Origins of Plate Tectonic Theory
+      Summary: >
+        The theory of continental drift was the first step toward plate tectonic
+        theory, which became the foundation upon which modern geology is built. 
+        This module describes how the work of Alfred Wegener, Harry Hess, and
+        others led to our understanding of plate tectonics. It explains plate
+        tectonics as the driving force behind ongoing changes on Earth.
+      SubCategory: Plate Tectonics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_65.mp3
+    - Id: '66'
+      Name: Plates, Plate Boundaries, and Driving Forces
+      Summary: >
+        Earthquakes and volcanoes can reveal a lot about plate boundaries. This
+        module looks at the nature of tectonic plates and discusses the
+        different boundary types that exist between them – convergent,
+        divergent, and transform. Forces that drive the push and pull of these
+        landmasses are explored.
+      SubCategory: Plate Tectonics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_66.mp3
+    - Id: '69'
+      Name: Earth Structure
+      Summary: >
+        Earth's interior structure is composed of layers that vary by
+        composition and behavior. Using principles of physics like gravity and
+        wave motion, this module explains how scientists have determined Earth's
+        deep structure. Different types of seismic waves are discussed. The
+        module details both compositional and mechanical layers of Earth.
+      SubCategory: Plate Tectonics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_69.mp3
+    - Id: '128'
+      Name: The Rock Cycle
+      Summary: >
+        This module addresses the rock cycle, including the historical
+        development of the concept. The relationships between uniformitarianism,
+        the rock cycle, and plate tectonics are explored both generally and
+        through the specific example of the Cascade Range in the Pacific
+        Northwest.
+      SubCategory: Earth Cycles
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_128.mp3
+    - Id: '99'
+      Name: The Hydrologic Cycle
+      Summary: >
+        Powered by the sun, water constantly cycles through the Earth and its
+        atmosphere. This module discusses the hydrologic cycle, including the
+        various water reservoirs in the oceans, in the air, and on the land. The
+        module addresses connections between the hydrologic cycle, climate, and
+        the impacts humans have had on the cycle.
+      SubCategory: Earth Cycles
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_99.mp3
+    - Id: '95'
+      Name: The Carbon Cycle
+      Summary: >
+        Carbon, the fourth most abundant element in the universe, moves between
+        the atmosphere, oceans, biosphere, and geosphere in what is called the
+        <em>carbon cycle</em>. This module provides an overview of the global
+        carbon cycle, one of the major biogeochemical cycles. The module
+        explains geological and biological components of the cycle. Major
+        sources and sinks of carbon are discussed, as well as the impact of
+        human activities on global carbon levels.
+      SubCategory: Earth Cycles
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_95.mp3
+    - Id: '98'
+      Name: The Nitrogen Cycle
+      Summary: >
+        This module provides an overview of the nitrogen cycle and the chemical
+        changes that govern the cycle.
+      SubCategory: Earth Cycles
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_98.mp3
+    - Id: '197'
+      Name: The Phosphorus Cycle
+      Summary: >
+        All living organisms need phosphorous to survive and grow. This module
+        describes forms that phosphorous takes in nature and how the element
+        cycles through the natural world. A historical journey highlights how we
+        came to understand this vital element. The Experimental Lakes Project
+        shows the harmful effects of too much phosphorous on the environment as
+        a result of human activities.
+      SubCategory: Earth Cycles
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_197.mp3
+    - Id: '202'
+      Name: History of Earth's Atmosphere I
+      Summary: >
+        This module looks at how the Earth's atmosphere has changed since the
+        planet came into existence. Starting with clues provided by neon gas,
+        the module traces how scientists have pieced together the story of
+        Earth’s atmosphere. Techniques are described for determining the
+        concentration of elements found on Earth as well as those on planets and
+        stars that are too far away to allow scientists to collect samples.
+      SubCategory: Atmosphere and Oceans
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_202.mp3
+    - Id: '203'
+      Name: History of Earth's Atmosphere II
+      Summary: >
+        The composition of Earth’s atmosphere has evolved over time. This module
+        examines how Earth came to be the only planet in the universe known to
+        contain oxygen gas. The module explores the advent and rise of oxygen in
+        Earth’s atmosphere. Evidence described includes the rock record, bands
+        of iron in sediment, microscopic fossils, and isotopes of sulfur.
+      SubCategory: Atmosphere and Oceans
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_203.mp3
+    - Id: '107'
+      Name: Composition of Earth's Atmosphere
+      Summary: >
+        Earth's atmosphere contains many components that can be measured in
+        different ways. This module describes these different components and
+        shows how temperature and pressure change with altitude. The scientific
+        developments that led to an understanding of these concepts are
+        discussed.
+      SubCategory: Atmosphere and Oceans
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_107.mp3
+    - Id: '234'
+      Name: Factors that Control Earth's Temperature
+      Summary: >
+        Based on how much sunlight hits Earth versus how much is reflected,
+        Earth’s average temperature should be well below freezing. Fortunately,
+        there are other factors that affect the planet’s temperature. This
+        module explores the effects of those factors, including distance from
+        the sun, aerosol particles floating in the air, and greenhouse gases.
+        Topics introduced include insolation and albedo. Also explored is how a
+        planet’s climate can be modeled by taking account of energy in, energy
+        lost, and energy transferred.
+      SubCategory: Atmosphere and Oceans
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_234.mp3
+    - Id: '255'
+      Name: Factors that Control Regional Climate
+      Summary: >
+        Although weather can change every day, climate is the average of daily
+        weather conditions over decades. This module presents factors that
+        influence climate around the world, such as the shape, tilt, and orbit
+        of Earth. Starting with observations of early ocean travelers and
+        progressing through others’ ideas over later centuries, the module
+        describes how we came to understand Earth’s climate. Also discussed is
+        the imbalance of energy from incoming vs. outgoing radiation and its
+        effect on wind and ocean currents.
+      SubCategory: Atmosphere and Oceans
+    - Id: '119'
+      Name: Defining Minerals
+      Summary: >
+        The study of minerals provides a window into the history of Earth and
+        other planets in our solar system. This first module in a three-part
+        series describes the history of our understanding of minerals and then
+        defines a mineral, focusing on chemical composition and structure.
+      SubCategory: Rocks and Minerals
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_119.mp3
+    - Id: '130'
+      Name: Properties of Minerals
+      Summary: >
+        Minerals are classified on the basis of their chemical composition,
+        which is expressed in their physical properties. This module, the second
+        in a series on minerals, describes the physical properties that are
+        commonly used to identify minerals. These include color, crystal form,
+        hardness, density, luster, and cleavage.
+      SubCategory: Rocks and Minerals
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_130.mp3
+    - Id: '140'
+      Name: The Silicate Minerals
+      Summary: >
+        Understanding the structure of silicate minerals makes it possible to
+        identify 95% of the rocks on Earth. This module covers the structure of
+        silicates, the most common minerals in the Earth's crust. The module
+        explains the significance of the silica tetrahedron and describes the
+        variety of shapes it takes. X-ray diffraction is discussed in relation
+        to understanding the atomic structure of minerals.
+      SubCategory: Rocks and Minerals
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_140.mp3
+
+- Name: General Science
+  Description: >
+    Certain physical properties, processes, and concepts are fundamental to all
+    areas of scientific study. Understanding the ways in which energy transfers
+    from one object to another, for example, is as important to a biologist as
+    it is to a chemist or physicist. Our General Science library provides
+    learning modules that explain a host of universal principles, including the
+    people who contributed to their development. These readings help to lay the
+    foundation for your further exploration in science. Modules in this area
+    include basic scientific concepts such as density, temperature, the metric
+    system, and more.
+  Slug: general-science
+  Modules:
+    - Id: '47'
+      Name: The Metric System
+      Summary: >
+        The metric system is the standard system of measurement in science. This
+        module describes the history and basic operation of the metric system,
+        as well as scientific notation. The module explains how the simplicity
+        of the metric system stems from having only one base unit for each type
+        of quantity measured (length, volume, and mass) along with a range of
+        prefixes that indicate multiples of ten.
+      SubCategory: Measurement
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_47.mp3
+    - Id: '48'
+      Name: Temperature
+      Summary: >
+        An introduction to the relationship between energy, heat and
+        temperature.  This lesson compares the 3 major temperature scales.
+      SubCategory: Physical Properties
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_48.mp3
+    - Id: '37'
+      Name: Density
+      Summary: >
+        Density is a fundamental physical property of matter. This module
+        introduces the concept of density, explains how density is calculated,
+        and lists the densities of common substances. The relationship between
+        density and buoyancy is discussed. The module relates the concept of
+        density to the operation of large ships, submarines, and hot air
+        balloons.
+      SubCategory: Physical Properties
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_37.mp3
+    - Id: '45'
+      Name: The Scientific Method
+      Summary: >
+        Scientific investigation is not always a linear process that starts with
+        a hypothesis and ends with a conclusion, as portrayed in the classic
+        “Scientific Method.” The true scientific method is a much more dynamic
+        and much less predictable, and can involve various methods that may
+        overlap. This module serves as an introduction to our Practice of
+        Science series of modules, which describe key scientific methodologies.
+      SubCategory: Methods
+
+  
+- Name: Inside Science
+  Description: >
+    For many people, the first thing they imagine when hearing the word
+    "scientist" is a man in a white lab coat, maybe with crazy hair. But not all
+    scientific research is done in a lab, much less wearing a lab coat, and
+    science is not just for men! Scientists are diverse in their backgrounds,
+    the topics they study, and the methods they use. This section introduces
+    readers to scientists who work in the field studying big cats or penguins,
+    who do research in greenhouses and with a microscope, who design experiments
+    using novel techniques and who hail from a host of different backgrounds and
+    cultures.
+  Slug: inside-science
+  Modules:
+    - Id: '217'
+      Name: Carlos J. Finlay
+      Summary: >
+        The successful construction of the Panama Canal relied as much on a
+        medical breakthrough as it did on technological advances and hard labor.
+        This module profiles Cuban doctor Carlos Finlay, who identified
+        mosquitoes as the culprits in the spread of malaria and yellow fever.
+        Tracing how our understanding of infectious disease evolved, the module
+        highlights Finlay’s perseverance in spite of initial rejection by the
+        medical community. It shows how Finlay's insights helped to stop the
+        spread of these diseases and ultimately made the Panama Canal possible.
+      SubCategory: Profiles in Science
+    - Id: '201'
+      Name: Ellen Ochoa
+      Summary: >
+        Although she was rejected by the space program initially, Ellen Ochoa
+        went on to become the first Hispanic woman to travel in space and was
+        ultimately named Director of the Johnson Space Center. This module takes
+        an in-depth look at the life and career of Ellen Ochoa, from considering
+        a flute-playing career to getting a PhD in electrical engineering and
+        becoming an astronaut. The module describes scientific research projects
+        in space and how they contribute to our understanding of Earth.
+      SubCategory: Profiles in Science
+    - Id: '205'
+      Name: Ruth Benerito
+      Summary: >
+        Wrinkle-resistant cotton is one of the most significant developments of
+        the 20th century. In the midst of an economic and social climate that
+        provided few opportunities for women in science, chemist Ruth Benerito
+        developed a method of wrinkle-proofing cotton, which was being edged out
+        of the clothing market by synthetic fabrics. This profile describes the
+        life of the chemist who is often credited with saving the US cotton
+        industry. It explains the cross-linking process that made
+        “wash-and-wear” cotton fabric possible.
+      SubCategory: Profiles in Science
+    - Id: '219'
+      Name: Franklin Chang Díaz
+      Summary: >
+        Franklin Chang Díaz, the first Latin American to travel to space, ties
+        the record for the highest number of space flights. This module traces
+        Chang Diaz’s life and career from his boyhood in Costa Rica where he
+        built his own mini rockets, to his emigration and studies of plasma
+        physics in the US, through his career as an astronaut, and beyond. The
+        module describes Chang Diaz’s work toward a plasma-based rocket engine
+        that could radically change space travel, his ongoing crusade on behalf
+        of the environment, and his induction into NASA’s Astronaut Hall of
+        Fame.
+      SubCategory: Profiles in Science
+    - Id: '221'
+      Name: Percy Lavon Julian
+      Summary: >
+        The module traces the life and career of organic chemist Percy Julian,
+        who developed a way to synthesize cortisone in large quantities, earning
+        him a place in the National Inventors Hall of Fame. The module relates
+        Julian’s accomplishments and the numerous challenges that he overcame
+        through unwavering perseverance in the face of racial barriers. From his
+        upbringing in the Deep South where public schools stopped at the eighth
+        grade for African American children, Julian went on to earn a PhD, was
+        awarded over 130 patents, revolutionized glaucoma treatment, and became
+        the second African American inducted into the National Academy of
+        Sciences.
+      SubCategory: Profiles in Science
+    - Id: '229'
+      Name: Luis Walter Alvarez
+      Summary: >
+        Luis Alvarez is less famous for his Nobel prize-winning research into
+        subatomic particles than for his theory on how dinosaurs became extinct.
+        Yet, before he started looking into dinosaurs, Alvarez was credited with
+        a lifetime of major advances in atomic physics. This module traces
+        Alvarez’s application of physics to aircraft safety, Egyptian pyramids,
+        K-electron capture, nuclear bombs, and the hydrogen bubble chamber which
+        led to the discovery of many new subatomic particles.
+      SubCategory: Profiles in Science
+    - Id: '230'
+      Name: France Anne-Dominic Córdova
+      Summary: >
+        This module profiles the career of astrophysicist France Córdova,
+        director of the National Science Foundation. The module traces Córdova's
+        path from her days at a high school that didn’t offer physics to female
+        students, to her career as a writer, and ultimately to the top post in
+        US science administration. Among her many accomplishments, this powerful
+        role model built the most powerful X-ray telescope ever sent into space,
+        published over 150 scientific papers, helped start a medical school, and
+        has been a leader at several prestigious universities.
+      SubCategory: Profiles in Science
+    - Id: '232'
+      Name: Luis E. Miramontes
+      Summary: >
+        His name may not be familiar, but Mexican chemist Luis Miramontes was
+        instrumental in a discovery that changed the course of human history:
+        the birth control pill. This module traces the life and achievements of
+        Miramontes, not only in the area of hormone synthesis, but in other
+        areas of chemistry as well. Miramontes' advances in pharmaceuticals and
+        petrochemistry are described, including his success in devising a
+        chemical process to remove pollutants from engine exhaust.
+      SubCategory: Profiles in Science
+    - Id: '237'
+      Name: Bernardo Houssay
+      Summary: >
+        Dr. Bernardo Houssay was a pioneering researcher of the endocrine
+        system, the system of glands that secrete hormones in the human body.
+        Especially important was his work on a gland at the base of the brain
+        called the pituitary and how multiple hormones enable the pituitary and
+        other glands to affect one another in what are called "hormone feedback
+        loops." That understanding resulted in  Dr. Houssay being awarded the
+        Nobel Prize.
+      SubCategory: Profiles in Science
+    - Id: '241'
+      Name: David Ho
+      Summary: >
+        This module profiles renowned AIDS researcher David Ho, who is credited
+        with inventing the “AIDS cocktail” that has saved millions of lives. The
+        module traces Ho’s journey from entering Los Angeles public schools at
+        age 12 as a Taiwanese immigrant with no English to being named Time
+        Magazine’s “Man of the Year” and being awarded the Presidential Citizens
+        Medal for combating the HIV/AIDS epidemic. Topics include how the HIV
+        virus replicates and mutates and how effective drugs target the biology
+        of HIV. Also described is Ho’s work toward equality in HIV care around
+        the world and among underserved populations in the US.
+      SubCategory: Profiles in Science
+    - Id: '244'
+      Name: Louis Tompkins Wright
+      Summary: >
+        In the first two decades of the 20th century, job opportunities for
+        African American physicians were pretty much limited to black hospitals
+        and segregated private practice. This module profiles Louis Wright, who
+        in 1920 was the first African American physician to join the staff of
+        Harlem Hospital and who ultimately became Chief of Surgery. The module
+        traces Wright's life and career, from being the only black student at
+        Harvard Medical School to pioneering surgical techniques on the
+        battlefields of World War I. Readers will see how Wright broke racial
+        barriers in many different areas of medical treatment and research.
+      SubCategory: Profiles in Science
+    - Id: '256'
+      Name: Craig Lee
+      Summary: >
+        With a warming climate around the world, astounding archaeological finds
+        have been melting out of ice patches. This module profiles the work of
+        Craig Lee, a leader in the emerging field of ice patch archaeology in
+        North America. The module emphasizes the importance of collaboration
+        between archaeologists, tribal groups, and US government entities in an
+        effort to appropriately collect, protect, and interpret culturally
+        sensitive artifacts found on ancestral Native American lands. Topics
+        include research methods and the multidisciplinary nature of the work.
+      SubCategory: Profiles in Science
+    - Id: '174'
+      Name: The Case of the Ivory-billed Woodpecker
+      Summary: >
+        This reading guide provides access to a published, peer-reviewed
+        scientific research article from the journal <i>Science</i>. Lists of
+        questions and instructions that focus on the article’s format and
+        content help readers see how research papers are organized and how
+        scientists support their hypotheses with evidence.
+      SubCategory: Science Reading Guides
+    - Id: '175'
+      Name: Bone Changes in Rock Climbers
+      Summary: >
+        This reading guide provides access to a published, peer-reviewed
+        scientific research article from the <em>Journal of Anatomy</em>.
+        Questions to accompany the article help readers become familiar with the
+        structure of a scientific journal article and ensure a critical approach
+        to reading. Using the questions as a guide, readers gain a deeper
+        understanding of how scientists undertake research. Links to relevant
+        background modules are included.
+      SubCategory: Science Reading Guides
+    - Id: '183'
+      Name: Kevin Arrigo
+      Summary: >
+        Biological oceanographer Kevin Arrigo investigates questions about
+        changes in polar ecosystems due to a changing climate. This research
+        profile explores Arrigo's expeditions in the Arctic Ocean and examines
+        the different influences on Arrigo’s research projects and his career in
+        general. Factors that guide research are discussed, from obtaining
+        funding, to planning research projects, to conducting research in the
+        field.
+      SubCategory: Scientific Research
+    - Id: '184'
+      Name: Barbara McClintock
+      Summary: >
+        This module profiles the groundbreaking research of biologist Barbara
+        McClintock in the field of genetics. The module describes McClintock’s
+        painstaking process of identifying specific loci for inherited traits.
+        It shows how her diligence and creativity advanced science through
+        decades of research on maize plants, which led to a Nobel Prize for her
+        discovery of “jumping genes” or <em>transposons</em>.
+      SubCategory: Scientific Research
+    - Id: '187'
+      Name: Meselson and Stahl
+      Summary: >
+        Testing predictions is a major part of scientific research, and a key
+        component of many classic experiments. This module explores the research
+        methods used by Meselson and Stahl in their ingenious 1958 experiment
+        showing how DNA replicates. The module highlights the power of
+        simplicity in what has been called "the most beautiful experiment in
+        biology."
+      SubCategory: Scientific Research
+    - Id: '189'
+      Name: Sergio Avila
+      Summary: >
+        This module offers an in-depth profile of wildlife biologist Sergio
+        Avila and his work to conserve endangered jaguars and other wildlife in
+        the US-Mexico border region. Topics in environmental science and
+        conservation biology are introduced. The module describes how research
+        data are collected and analyzed and highlights the importance of
+        cooperation among individuals and agencies to protect endangered plant
+        and animal species.
+      SubCategory: Scientific Research
+    - Id: '211'
+      Name: Mario Molina
+      Summary: >
+        This module traces the life and scientific research of Mario Molina, the
+        first Mexican-born chemist to win the Nobel Prize. Working with F.
+        Sherwood Roland, Molina’s groundbreaking research led to an
+        international treaty to phase out human-made chemicals that harm Earth’s
+        protective ozone layer. As a result, ozone-depleting substances were
+        reduced by 98 percent. Molina has since been crusading to further
+        scientific research in developing countries, spread scientific knowledge
+        that will protect the environment, and advance international policy to
+        save the Earth.
+      SubCategory: Scientific Research
+    - Id: '220'
+      Name: César Milstein
+      Summary: >
+        From home pregnancy tests to treatment for Ebola, the discovery of
+        monoclonal antibodies has greatly advanced science and medicine. This
+        module traces the work of immunologist César Milstein, who successfully
+        created “hybridoma” cells capable of producing specific antibodies in
+        mass quantities. The module describes Milstein’s life as a student in
+        Argentina during the regime of Juan Peron and his later research as he
+        became a world-class scientist, winning the Nobel Prize in 1984.
+      SubCategory: Scientific Research
+    - Id: '233'
+      Name: Santiago Ramón y Cajal and Camillo Golgi
+      Summary: >
+        This module traces the beginnings of neuroscience, with a focus on two
+        fathers of neuroscience who shared the 1906 Nobel Prize for their work.
+        Along with the advent of better microscopes, Camillo Golgi’s and
+        Santiago Ramón y Cajal’s vastly improved staining techniques and
+        meticulous drawings shed light on our understanding of the structure of
+        nervous tissue. The module explores Golgi’s reticular theory, which was
+        later proved incorrect, and Ramón y Cajal’s discovery that the brain was
+        made up of individual cells.
+      SubCategory: Scientific Research
+    - Id: '238'
+      Name: Fabiola León-Velarde
+      Summary: >
+        The air has less oxygen at high altitudes, and the physiology of the
+        body changes dramatically as a result. This module profiles the work of
+        Peruvian physiologist Fabiola León-Velarde, who has significantly
+        advanced the world’s understanding of mountain sickness. The module
+        traces Leon-Velarde’s research and accomplishments while educating
+        readers on changes to the body at high altitudes. Several health effects
+        of high altitude are explored in detail.
+      SubCategory: Scientific Research
+
+- Name: Math in Science
+  Description: >
+    The German mathematician Carl Friedrich Gauss referred to mathematics as the
+    "Queen of the Sciences". In doing so, Gauss not only identified Math as a
+    science itself in that it is defined as the study of numbers and their
+    operations, but also as the underlying foundation for all other sciences 
+    allowing scientists to describe patterns in data, relationships between
+    variables, and fundamental principles discovered in our quest for knowledge.
+    From the study of a wave, which can be described by its length, height, and
+    frequency, to the measurement of the rate at which the tectonic plates in
+    the earth's crust are moving, mathematical principles are fundamental to
+    understanding and doing science. Our Math in Science modules discuss select
+    mathematical principles in context of their use across different scientific
+    disciplines, focusing explicitly on how these principles are used in
+    science.
+  Slug: math-in-science
+  Modules:
+    - Id: '144'
+      Name: Unit Conversion
+      Summary: >
+        This module provides an introduction to the Dimensional Analysis method
+        (i.e. the Factor Label Method) of converting among units of measurement
+        and solving mathematical problems.
+      SubCategory: Equations
+    - Id: '194'
+      Name: Linear Equations in Science
+      Summary: >
+        Linear equations can be used to describe many relationships and
+        processes in the physical world, and thus play a big role in science.
+        This module traces the development of linear equations and explores
+        their many uses in science. The standard form of linear equations is
+        presented, and sample problems are given. Concepts include Cartesian
+        coordinates, ordered pairs, slope-intercept form, describing vertical
+        and horizontal lines, and calculating rates.
+      SubCategory: Equations
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_194.mp3
+    - Id: '206'
+      Name: Exponential Equations in Science I
+      Summary: >
+        Exponential equations are indispensable in science since they can be
+        used to determine growth rate, decay rate, time passed, or the amount of
+        something at a given time. This module describes the history of
+        exponential equations and shows how they are graphed. Sample problems,
+        including a look at the growth rate of the reindeer population on St.
+        Matthew Island in the Bering Sea, illustrate how exponential equations
+        are used in the real world.
+      SubCategory: Equations
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_206.mp3
+    - Id: '210'
+      Name: Exponential Equations in Science II
+      Summary: >
+        This module introduces exponential equations of the form
+        <em>N=N<sub>0</sub> e<sup>kt</sup></em>, which describe growth or decay
+        over time. Such equations can be used to predict the spread of a virus,
+        the growth of a population, chemical reaction rates, or the age of a
+        material based on radioactive decay. The constants <em>e</em> and
+        <em>k</em> are explained, and their role in exponential equations is
+        demonstrated. The module takes readers through sample exponential
+        equations that use <em>e</em> in calculating bacteria growth and in
+        radiocarbon dating.
+      SubCategory: Equations
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_210.mp3
+    - Id: '250'
+      Name: Scientific Notation and Order of Magnitude
+      Summary: >
+        The blue whale weighs approximately 190,000 kilograms, while a plankton
+        weighs just 0.5 milligrams—a difference of 11 orders of magnitude.
+        Scientific notation and order of magnitude are fundamental concepts in
+        all branches of science. They are especially useful when expressing and
+        comparing very large and very small measurements. This module traces the
+        history of our base-ten numeration system and gives a step-by-step
+        explanation of how to write numbers in scientific notation.  Sample
+        problems demonstrate how to divide numbers in scientific notation to
+        determine orders of magnitude.
+      SubCategory: Equations
+    - Id: '257'
+      Name: Measurement
+      Summary: >
+        In almost every facet of modern life, values – measurements – play an
+        important role. We count calories for a diet, stores measure the
+        percentage of tax on our purchases, and our doctors measure important
+        physiological indicators, like heart rate and blood pressure. From the
+        earliest documented days in ancient Egypt, systems of measurement have
+        allowed us to weigh and count objects, delineate boundaries, mark time,
+        establish currencies, and describe natural phenomena. Yet, measurement
+        comes with its own series of challenges. From human error and accidents
+        in measuring to variability to the simply unknowable, even the most
+        precise measures come with some margin of error.
+      SubCategory: Equations
+    - Id: '218'
+      Name: Introduction to Descriptive Statistics
+      Summary: >
+        Scientists look to uncover trends and relationships in data. This is
+        where descriptive statistics is an important tool, allowing scientists
+        to quickly summarize the key characteristics of a population or dataset.
+        The module explains median, mean, and standard deviation and explores
+        the concepts of normal and non-normal distribution. Sample problems show
+        readers how to perform basic statistical operations.
+      SubCategory: Statistics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_218.mp3
+    - Id: '224'
+      Name: Introduction to Inferential Statistics
+      Summary: >
+        Many techniques have been developed to aid scientists in making sense of
+        their data. This module explores inferential statistics, an invaluable
+        tool that helps scientists uncover patterns and relationships in a
+        dataset, make judgments about data, and apply observations about a
+        smaller set of data to a much larger group. The module explains the
+        importance of random sampling to avoid bias. Other concepts include
+        populations, subsamples, estimation, and the difference between a
+        parameter and a statistic.
+      SubCategory: Statistics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_224.mp3
+    - Id: '239'
+      Name: Confidence Intervals
+      Summary: >
+        Through history, important scientific advances have been made in
+        connection with brewing beer. The module begins at the Guinness Brewery
+        with the development of an important mathematical tool for inferential
+        statistics. The focus of the module is confidence intervals, used when
+        making statements about the relationship between a subsample and an
+        entire population. Readers are shown how to construct and report a
+        confidence interval. Topics include Student’s t-distribution, confidence
+        level, critical value, and margin of error. Examples and a sample
+        problem illustrate concepts introduced.
+      SubCategory: Statistics
+    - Id: '131'
+      Name: Wave Mathematics
+      Summary: >
+        Waves, circles, and triangles are closely related. In fact, this
+        relatedness forms the basis of trigonometry. Basic trigonometric
+        functions are explained in this module and applied to describe wave
+        behavior. The module presents Cartesian coordinate (x, y) graphing, and
+        shows how the sine function is used to plot a wave on a graph.
+      SubCategory: Trigonometric Functions
+
+- Name: Physics
+  Description: >
+    When Buzz Aldrin joined Neil Armstrong on the moon in 1969, one of the first
+    things he did was to try one-footed kangaroo hops. Why? To test out methods
+    for moving around in lunar gravity (which is 1/6th that of Earth's). Aldrin
+    was experimenting with physics, a discipline that involves the study of
+    matter and forces and how they interact in space and time. The modules
+    contained in our Physics Library explore the properties of light,
+    electromagnetism, gravity, and more.
+  Slug: physics
+  Modules:
+    - Id: '102'
+      Name: Waves and Wave Motion
+      Summary: >
+        Waves have been of interest to philosophers and scientists alike for
+        thousands of years. This module introduces the history of wave theory
+        and offers basic explanations of longitudinal and transverse waves. Wave
+        periods are described in terms of amplitude and length. Wave motion and
+        the concepts of wave speed and frequency are also explored.
+      SubCategory: Mechanics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_102.mp3
+    - Id: '118'
+      Name: Gravity
+      Summary: >
+        Isaac Newton's description of gravity was not the first explanation of
+        this phenomenon, nor was it the last. This module explores how Newton
+        built on the work of early astronomers and how his theory was confirmed
+        and built upon by others. Mathematical equations are presented for (1)
+        the Law of Universal Gravitation, (2) the Gravitational Constant, (3)
+        Earth's mass, and (4) the gravitational attraction between two people.
+      SubCategory: Mechanics
+    - Id: '199'
+      Name: Energy
+      Summary: >
+        The concept of energy has fascinated scientists and philosophers for
+        thousands of years. This module describes early ideas about energy and
+        traces the development of our modern understanding of energy through the
+        work of Joule and Faraday. Potential and kinetic energy are
+        distinguished, and the six main forms of energy are described. The
+        module highlights energy conversion and discusses how energy is
+        measured.
+      SubCategory: Mechanics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_199.mp3
+    - Id: '200'
+      Name: Thermodynamics I
+      Summary: >
+        Without heat flow, nothing can move, no chemical reactions can take
+        place, and no machines can run. This module introduces the concepts of
+        heat and thermodynamics. It explains early ideas about heat and how
+        scientists came to understand that heat and work are two different forms
+        of the same thing. The First Law of Thermodynamics is described (simply
+        put, energy cannot be created or destroyed). Other topics include latent
+        heat and the measurement of heat.
+      SubCategory: Mechanics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_200.mp3
+    - Id: '132'
+      Name: Light I
+      Summary: >
+        For centuries, controversy over whether light is made of particles or
+        waves abounded. This module traces the controversy over time, from Isaac
+        Newton's "corpuscle" (particle) theory, which prevailed for centuries,
+        to Thomas Young's groundbreaking <i>double slit</i> experiment, which
+        provided evidence that light traveled in waves.
+      SubCategory: Light and Optics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_132.mp3
+    - Id: '138'
+      Name: Light and Electromagnetism
+      Summary: >
+        The study of electricity and magnetism were artfully united in John
+        Clerk Maxwell’s theory of electromagnetism. This module explores the
+        experimental connection between electricity and magnetism, beginning
+        with the work of Oersted, Ampere, and Faraday. The module gives an
+        overview of the electromagnetic nature of light and its properties, as
+        predicted by Maxwell’s mathematical model.
+      SubCategory: Light and Optics
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_138.mp3
+
+- Name: Process of Science
+  Description: >
+    What is it about a scientific theory that sets it apart from other ideas?
+    How does one conduct and control a scientific experiment? Why do statistical
+    statements weigh so heavily in science? Scientists often talk about the
+    findings of their research, but they are less likely to talk about the
+    processes and methods that lead to those discoveries. Yet these processes
+    and methods, and the surprises scientists face while pursuing them define
+    science. Our process of science modules use in-depth examples to introduce
+    the methods used by scientists, the ways that scientists work with data and
+    communicate their findings, and the culture and diversity of science.
+  Slug: process-of-science
+  Modules:
+    - Id: '185'
+      Name: The Nature of Scientific Knowledge
+      Summary: >
+        This module explores the nature of scientific knowledge by asking what
+        science is. It emphasizes the importance of a scientific way of thinking
+        and shows how observation and testing add to the body of scientific
+        knowledge. Focusing on astronomy and physics, the module highlights the
+        work of scientists through history who have contributed to our
+        understanding of the age of the universe as a means of conveying the
+        nature of scientific knowledge.
+      SubCategory: The Culture of Science
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_185.mp3
+    - Id: '172'
+      Name: Scientists and the Scientific Community
+      Summary: >
+        Science benefits from diverse interests and different points of view.
+        This module explores at the human side of science. With a look at the
+        unique background and motivations of individual scientists, it is clear
+        how personal experience, varied perspectives, creativity, and even
+        chance contribute to progress in science.
+      SubCategory: The Culture of Science
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_172.mp3
+    - Id: '161'
+      Name: Scientific Ethics
+      Summary: >
+        Ethical standards are a critical part of scientific research. Through
+        examples of scientific fraud, misconduct, and mistakes, this module
+        makes clear how ethical standards help ensure the reliability of
+        research results and the safety of research subjects. The importance and
+        consequences of integrity in the process of science are examined in
+        detail.
+      SubCategory: The Culture of Science
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_161.mp3
+    - Id: '162'
+      Name: Scientific Institutions and Societies
+      Summary: >
+        Scientific institutions and societies play an essential role in the
+        process of science and contribute to the building of scientific
+        knowledge. This module explores these different bodies and discusses
+        three types in detail: research institutions, professional societies,
+        and funding institutions. Specific examples highlight how these
+        institutions are essential to progress in science.
+      SubCategory: The Culture of Science
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_162.mp3
+    - Id: '158'
+      Name: Understanding Scientific Journals and Articles
+      Summary: >
+        Using a brief history of scientific writing, this module provides an
+        introduction to the structure and content of scientific journal
+        articles. Key differences between scientific journals and popular media
+        are explained, and basic parts of a scientific article are described
+        through a specific example. The module offers advice on how to approach
+        the reading of a scientific article.
+      SubCategory: Scientific Communication
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_158.mp3
+    - Id: '173'
+      Name: Utilizing the Scientific Literature
+      Summary: >
+        Scientific literature is central to the development of science as a
+        whole. This module explains what scientists mean when they refer to the
+        scientific literature and offers specific examples of how scientists use
+        it to (1) discover what other work has been done on a topic, (2) cite
+        sources of their data, and (3) show how their interpretations relate to
+        existing knowledge.
+      SubCategory: Scientific Communication
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_173.mp3
+    - Id: '159'
+      Name: Peer Review in Scientific Publishing
+      Summary: >
+        Peer review is an important part of the process of science. This module
+        describes the history of peer review and shows how the review process
+        helps validate the work of scientists and ensure that quality standards
+        are met. The process is illustrated by actual correspondence among
+        authors, reviewing scientists, and the editor of a scientific journal.
+      SubCategory: Scientific Communication
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_159.mp3
+    - Id: '186'
+      Name: The How and Why of Scientific Meetings
+      Summary: >
+        Scientific meetings and conferences play an important role in the
+        process of science. This module describes the history of scientific
+        societies, beginning with the Royal Society of London in 1660. Specific
+        examples illustrate why scientists go to meetings, how these gatherings
+        influence research, and why attending meetings can be important for
+        students and new scientists.
+      SubCategory: Scientific Communication
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_186.mp3
+    - Id: '154'
+      Name: Data Analysis and Interpretation
+      Summary: >
+        Data analysis is at the heart of any scientific investigation. Using
+        weather as an example, this module takes readers through the steps of
+        data collection, analysis, interpretation, and evaluation. The module
+        explores how scientists collect and record data, find patterns in data,
+        explain those patterns, and share their research with the larger
+        scientific community.
+      SubCategory: Data
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_154.mp3
+    - Id: '157'
+      Name: Uncertainty, Error, and Confidence
+      Summary: >
+        There is uncertainty in all scientific data, and even the best
+        scientists find some degree of error in their measurements. This module
+        uses familiar topics - playing baseball, shooting targets, and
+        calculating the age of an object - to show how scientists identify and
+        measure error and uncertainty, which are reported in terms of
+        confidence.
+      SubCategory: Data
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_157.mp3
+    - Id: '155'
+      Name: Statistics in Science
+      Summary: >
+        Scientific research rarely leads to absolute certainty. There is some
+        degree of uncertainty in all conclusions, and statistics allow us to
+        discuss that uncertainty. Statistical methods are used in all areas of
+        science. The module explores the difference between (a) proving that
+        something is true and (b) measuring the probability of getting a certain
+        result. It explains how common words like "significant," "control," and
+        "random" have a different meaning in the field of statistics than in
+        everyday life.
+      SubCategory: Data
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_155.mp3
+    - Id: '156'
+      Name: Using Graphs and Visual Data in Science
+      Summary: >
+        Understanding graphs and other visual forms of data is an important
+        skill for scientists. This module describes how to read and interpret
+        graphs and introduces other types of visual data. Various examples
+        demonstrate how trends can be grasped easily when data are shown in a
+        visual form.
+      SubCategory: Data
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_156.mp3
+    - Id: '148'
+      Name: The Practice of Science
+      Summary: >
+        Scientists use multiple methods to investigate the natural world and
+        these interconnect and overlap, often with unexpected results. This
+        module gives an overview of scientific research methods, data
+        processing, and the practice of science. It discusses myths that many
+        people believe about the scientific method and provides an introduction
+        to our Research Methods series.
+      SubCategory: Research Methods
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_148.mp3
+    - Id: '150'
+      Name: Experimentation in Scientific Research
+      Summary: >
+        Manipulating and controlling variables are key aspects that set
+        experimentation apart from other scientific research methods. This
+        module highlights the principles of experimentation through examples
+        from history, including the work of Alhazen in 1000 CE and Louis Pasteur
+        in the 1860s.
+      SubCategory: Research Methods
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_150.mp3
+    - Id: '151'
+      Name: Description in Scientific Research
+      Summary: >
+        Observation is an important tool for scientific researchers, and
+        describing what is observed is a valuable method of research. This
+        module explains key features of scientific description and discusses how
+        this method is used in the process of science. Examples from history
+        illustrate the use of description, from the geologic exploration of the
+        US in the 1800s to 20th century studies of primate behavior.
+      SubCategory: Research Methods
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_151.mp3
+    - Id: '152'
+      Name: Comparison in Scientific Research
+      Summary: >
+        Comparing and contrasting is a critical research tool for making sense
+        of the world. Through scenarios in which scientists would likely choose
+        to do comparative research, this module explores the differences and
+        similarities between comparison and experimentation. Studies of the link
+        between cigarette smoking and health illustrate how comparison along
+        with other research methods provided solid evidence that cigarette smoke
+        is a major cause of lung cancer.
+      SubCategory: Research Methods
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_152.mp3
+    - Id: '153'
+      Name: Modeling in Scientific Research
+      Summary: >
+        Scientific modeling is a research method scientists use to replicate
+        real-world systems-whether it's a conceptual model of an atom, a
+        physical model of a river delta, or a computer model of global climate.
+        This module describes the principles that scientists use when building
+        models and shows how modeling contributes to the process of science.
+      SubCategory: Research Methods
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_153.mp3
+    - Id: '177'
+      Name: Theories, Hypotheses, and Laws
+      Summary: >
+        Theories are not based on one scientist's work but on an accumulation of
+        evidence and ideas from many scientists over time. This module discusses
+        how scientific theories are built and revised. It uses the development
+        of the theory of evolution through natural selection to illustrate how
+        theories are built through a process of testing, expanding, and
+        refining.
+      SubCategory: Ideas in Science
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_177.mp3
+    - Id: '181'
+      Name: Scientific Controversy
+      Summary: >
+        Controversy isn't always a bad thing. It exists in every field of
+        science and in many cases clarifies and advances our scientific
+        understanding. This module explains what scientific controversies are
+        and how they differ from other kinds of controversy. Using the example
+        of climate change, the module identifies factors that lead to
+        controversies in science and explains how they are resolved.
+      SubCategory: Ideas in Science
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_181.mp3
+    - Id: '182'
+      Name: Creativity in Science
+      Summary: >
+        Success in science requires a creative mind. This module explores the
+        nature of creativity in the scientific process. It details various
+        discoveries and explains how creativity played a significant role in
+        each. The importance of logical thinking and background knowledge to the
+        creative process is discussed.
+      SubCategory: Ideas in Science
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_182.mp3
+    - Id: '176'
+      Name: The Process of Science
+      Summary: >
+        "What is science and how does it work?" This module introduces the
+        Process of Science series, which answers this question, and presents the
+        scientific process as a way of thinking that can help in everyday
+        decision making. A brief overview is given of key concepts that guide
+        the Process of Science module series.
+      SubCategory: Introduction
+      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_176.mp3
