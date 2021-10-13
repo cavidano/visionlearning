@@ -83,9 +83,6 @@ new Tabs();
 import Tables from "./modules/tables";
 new Tables();
 
-// import Tearsheet from "./modules/tearsheet";
-// new Tearsheet();
-
 import "./modules/typography";
 
 import "./modules/z-index";
@@ -98,6 +95,9 @@ import Grid from "./custom_modules/grid";
 new Grid();
 
 import "./custom_modules/navigation";
+
+import FullHeight from "./custom_modules/full-height";
+new FullHeight();
 
 import Quiz from "./custom_modules/quiz"; 
 new Quiz();
