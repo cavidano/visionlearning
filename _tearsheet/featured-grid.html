@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <!-- I.E. Compatibility Mode -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Header Footer • Tearsheet</title>
+
+        <!-- Natura11y Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@main/dist/natura11y-icons.min.css">
+<style>
+
+.featured-material {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "featured-primary featured-primary"
+    "featured-secondary featured-tertiary";
+}
+
+.featured-primary {
+    grid-area: featured-primary;
+}
+
+.featured-secondary {
+    grid-area: featured-secondary;
+    outline: thick solid orange;
+}
+
+.featured-tertiary {
+    grid-area: featured-tertiary;
+    outline: thick solid red;
+}
+
+</style>
+    </head>
+
+    <body>
+
+        
+        <main style="height:800px;">
+
+            <div class="featured-material">
+                <div class="featured-primary theme-primary chemistry">
+                    <div class="backdrop backdrop--fixed height-100">
+
+                        <div class="backdrop__credit">
+                            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+                        </div>
+
+                        <div class="backdrop__image gradient-veneer-bottom">
+                            <img class="opacity-30" src="https://via.placeholder.com/1600x900" alt="Placeholder">
+                        </div>
+
+                        <div class="backdrop__cover">
+
+                            <div class="container">
+                                <p class="h4 text-shadow margin-bottom-3">
+                                    <em>In Their Eternal Faces<br>The Sun—with just delight</em>
+                                </p>
+                                <a class="button font-size-md theme-primary" href="#1">
+                                    Go to Module
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- .backdrop -->
+                </div>
+                <div class="featured-secondary">
+                </div>
+                <div class="featured-tertiary">
+                </div>
+            </div>
+
+        </main>
+
+       
+
+    </body>
+
+</html>

@@ -61,7 +61,11 @@
                     <div class="vl-hat__actions">
 
                         <div class="button-group">
-                            <button class="button button--icon-only" aria-label="Search">
+                            <button
+                                class="button button--icon-only"
+                                aria-label="Search"
+                                data-toggle="collapse"
+                                data-target-toggle="#global-search">
                                 <span class="icon icon-search" aria-hidden="true"></span>
                             </button>
                             <button class="button button--icon-only" aria-label="Settings">
@@ -77,6 +81,41 @@
                 </div>
 
             </div>
+
+            <div class="collapse padding-y-3 theme-dark border-top z-index-2000" id="global-search">
+
+                <div class="container narrow">
+
+                    <div class="form-entry">
+
+                        <label class="form-entry__field field--has-button">
+
+                            <div class="field--has-button__group">
+                            
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="search"
+                                        name="searchWebsiteInput"
+                                        placeholder="Search"
+                                        id="search-website-input">
+                                </span>
+
+                                <button
+                                    class="button button--icon-only"
+                                    id="custom-language-update">
+                                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                                </button>
+
+                            </div>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
 
             <div class="vl-header wide">
 
