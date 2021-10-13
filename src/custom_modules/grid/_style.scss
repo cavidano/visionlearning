@@ -241,7 +241,6 @@ In this file:
 
 .landing__aside {    
     grid-area: aside;
-    border: 12px solid yellow !important;
 }
 
 @include breakpoints.breakpoints-up(lg) {
