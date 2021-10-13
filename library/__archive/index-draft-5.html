@@ -99,56 +99,7 @@ title: "Library"
                 <div class="materials__main">
 
                     <div class="padding-2 position-relative">
-
-
-                        {% for item in site.data.librarySample %}
-                            {% assign header = item.Discipline %}                         
-                            {% assign slug = item.Slug %}                         
-                            {% assign subcategories = item.Subcategories %}                         
-
-                            <section>
-
-                                <header class="theme-primary {{ slug }} discipline-divider">
-                                    <h2 class="h3 discipline-divider__title">{{ header }}</h2>
-                                </header>
-                                
-                                <div class="container overflow-hidden">
-
-                                {% for category in subcategories %}                
-                                    {% assign title = category.Title %}          
-                                    {% assign modules = category.Modules %}          
-
-                                    <div class="category margin-y-3">
-                                                    
-                                        <h2 class="h6">{{title}}</h2>
-
-                                        <ul class="list-divider font-size-md">
-                                            
-                                            {% for module in modules %}              
-                                    {% assign name = module.Name %}  
-
-                                            <li>
-                                                <span class="list-divider__cell">
-                                                    <a class="text-color-link" href="/library/module.html">
-                                                        {{ name }}
-                                                    </a>
-                                                </span>
-                                                <span class="list-divider__cell">
-                                                    <a class="button font-size-sm ally-link" href="#1">
-                                                        <span class="button__text">NGSS View</span>
-                                                    </a>
-                                                </span>
-                                            </li>
-                                            {% endfor %}
-                                        </ul>
-
-                                    </div>
-                                {% endfor %}
-                                    
-                                </div>
-
-                            </section>
-                            {% endfor %}
+                        <div id="module-list-view"></div>
                     </div>
 
                 </div>
