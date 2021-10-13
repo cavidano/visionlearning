@@ -112,7 +112,7 @@ title: "Library"
                                     <h2 class="h3 discipline-divider__title">{{ header }}</h2>
                                 </header>
                                 
-                                <div class="container overflow-hidden">
+                                <div class="padding-x-2 overflow-hidden">
 
                                 {% for category in subcategories %}                
                                     {% assign title = category.Title %}          
@@ -125,20 +125,20 @@ title: "Library"
                                         <ul class="list-divider font-size-md">
                                             
                                             {% for module in modules %}              
-                                    {% assign name = module.Name %}  
+                                                {% assign name = module.Name %}  
 
-                                            <li>
-                                                <span class="list-divider__cell">
-                                                    <a class="text-color-link" href="/library/module.html">
-                                                        {{ name }}
-                                                    </a>
-                                                </span>
-                                                <span class="list-divider__cell">
-                                                    <a class="button font-size-sm ally-link" href="#1">
-                                                        <span class="button__text">NGSS View</span>
-                                                    </a>
-                                                </span>
-                                            </li>
+                                                <li>
+                                                    <span class="list-divider__cell">
+                                                        <a class="text-color-link" href="/library/module.html">
+                                                            {{ name }}
+                                                        </a>
+                                                    </span>
+                                                    <span class="list-divider__cell">
+                                                        <a class="button font-size-sm ally-link" href="#1">
+                                                            <span class="button__text">NGSS View</span>
+                                                        </a>
+                                                    </span>
+                                                </li>
                                             {% endfor %}
                                         </ul>
 
