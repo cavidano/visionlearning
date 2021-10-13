@@ -63,6 +63,7 @@ In this file:
   
   &::before {
       content: "";
+      
       background-color: var(--modal-overlay-color);
 
       opacity: var(--modal-overlay-opacity);
