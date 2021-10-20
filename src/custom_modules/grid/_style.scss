@@ -3,7 +3,6 @@
 In this file:
 
 // A. Modules
-// B. CSS Generic Grid Columns
 // C. Grid Overview (Homepage)
 // D. Grid Discipline
 // E. Discipline Banner (Modal)
@@ -19,41 +18,6 @@ In this file:
 
 @use "sass:map";
 @use "../../modules/breakpoints/style" as breakpoints;
-
-//////////////////////////////////////////////
-// B. CSS Generic Grid Columns
-//////////////////////////////////////////////
-
-// .grid {
-//   --grid-columns: 1;
-//   --grid-gap: var(--spacer-2);
-
-//   position: relative;
-
-//   display: grid;
-//   gap: var(--grid-gap);
-// }
-
-// [class*="grid--columns"] {
-  
-//     @include breakpoints.breakpoints-up(lg) {
-
-//       &[class*="columns-2"] {
-//         --grid-columns: 2;
-//       }
-
-//       &[class*="columns-3"] {
-//         --grid-columns: 3;
-//       }
-
-//       &[class*="columns-4"] {
-//         --grid-columns: 4;
-//       }
-  
-//       grid-template-columns: repeat(var(--grid-columns), 1fr);
-
-//     }
-// }
 
 //////////////////////////////////////////////
 // C. Grid Overview (Homepage)
@@ -236,7 +200,7 @@ In this file:
       "aside";
 
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 
 
 }
@@ -256,7 +220,7 @@ In this file:
 
 @include breakpoints.breakpoints-up(lg) {
     .landing {
-        grid-template-columns: 1fr 16em;
+        grid-template-columns: 1fr 14em;
 
         grid-template-areas:
             "main aside";

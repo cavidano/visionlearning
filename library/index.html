@@ -3,36 +3,6 @@ layout: global
 title: "Library"
 ---
 
-<style>
-
-.featured-material {
-
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: var(--default-border-width);
-    grid-auto-flow: row;
-    grid-template-areas:
-        "featured-primary featured-primary"
-        "featured-secondary featured-tertiary";
-}
-
-.featured-primary {
-    grid-area: featured-primary;
-}
-
-.featured-secondary {
-    grid-area: featured-secondary;
-}
-
-.featured-tertiary {
-    grid-area: featured-tertiary;
-}
-
-</style>
-
-
 <div class="theme-light full-height overflow-hidden padding-y-4">
 
     <div class="landing wide">
@@ -52,10 +22,10 @@ title: "Library"
 
                         <li>
                             <button
-                                id="filter-all-disciplines"
+                                id="highlights"
                                 aria-selected="true"
                                 role="tab">
-                                    Featured
+                                    Highlights
                             </button>
                         </li>
                         <li>
@@ -138,24 +108,66 @@ title: "Library"
                 <div class="materials__main">
 
                     <div class="padding-2 position-relative height-100">
-                        <div class="featured-material">
-                            <div class="featured-primary theme-primary chemistry">
-                                <div class="backdrop backdrop--fixed justify-content-end">
 
-                                    <div class="backdrop__image gradient-veneer-bottom">
-                                        <img class="opacity-20" src="{{ site.url }}/images/featured/01.jpg" alt="Placeholder">
+                        <div class="grid grid--column-2 height-100">
+
+                            <div class="grid__colspan-2 theme-primary chemistry">
+
+                                <div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 100%;">
+
+                                    <div class="backdrop__image gradient-veneer-left">
+                                        <img class="opacity-40" src="{{ site.url }}/images/featured/01.jpg" alt="Placeholder">
                                     </div>
 
-                                    <div class="backdrop__cover margin-y-3">
+                                    <div class="backdrop__cover">
 
-                                        <div class="container">
-                                            <p class="h2 text-shadow">
-                                                Early Ideas about Matter
-                                            </p>
-                                            <p>
-                                            <em>From Democritus to Dalton</em> 
-                                            </p>
-                                            <a class="button font-size-md" href="#1">
+                                        <div class="padding-3 padding-4--md">
+                                            <div class="text-shadow margin-bottom-2">
+                                                <p class="font-size-md margin-bottom-0">
+                                                    <strong><em>Atomic Theory and Structure</em></strong> 
+                                                </p>
+                                                <h2 class="banner-headline margin-bottom-2"  style="font-size: 56px">
+                                                    Early Ideas about Matter
+                                                </h2>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                </p>
+                                            </div>
+                                            <a class="button font-size-sm border-bottom border-color-library" href="#1">
+                                                Go to Module
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- .backdrop -->
+
+                            </div>
+
+                            <div class="theme-primary inside-science">
+
+                                <div class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 100%;">
+
+                                    <div class="backdrop__image gradient-veneer-bottom">
+                                        <img class="opacity-40" src="{{ site.url }}/images/featured/02.jpg" alt="Placeholder">
+                                    </div>
+
+                                    <div class="backdrop__cover">
+
+                                        <div class="padding-3 padding-4--md">
+                                            <div class="text-shadow margin-bottom-2">
+                                                <p class="font-size-md margin-bottom-0">
+                                                    <strong><em>Scientific Research</em></strong> 
+                                                </p>
+                                                <h2 class="banner-headline margin-bottom-2"  style="font-size: 42px">
+                                                    Barbara McClintock
+                                                </h2>
+                                                <p>
+                                                    From Stable Chromosomes to Jumping Genes.
+                                                </p>
+                                            </div>
+                                            <a class="button font-size-sm border-bottom border-color-library" href="#1">
                                                 Go to Module
                                             </a>
                                         </div>
@@ -165,50 +177,30 @@ title: "Library"
                                 </div>
                                 <!-- .backdrop -->
                             </div>
-                            <div class="featured-secondary theme-primary inside-science">
-                                <div class="backdrop backdrop--fixed height-100 justify-content-end">
 
-                                    <div class="backdrop__image gradient-veneer-bottom">
-                                        <img class="opacity-20" src="{{ site.url }}/images/featured/02.jpg" alt="Placeholder">
-                                    </div>
+                            <div class="theme-primary biology">
 
-                                    <div class="backdrop__cover margin-y-3">
-
-                                        <div class="container font-size-sm">
-                                            <p class="h4 text-shadow margin-bottom-0">
-                                                Barbara McClintock
-                                            </p>
-                                            <p>
-                                                <em>From Stable Chromosomes to Jumping Genes</em> 
-                                            </p>
-                                            <a class="button" href="#1">
-                                                Go to Module
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                <!-- .backdrop -->
-                            </div>
-                            <div class="featured-tertiary theme-primary biology">
-
-                                <div class="backdrop backdrop--fixed height-100 justify-content-end">
+                                <div class="backdrop backdrop--fixed height-100" style="--backdrop-fixed-height: 100%;">
 
                                     <div class="backdrop__image gradient-veneer-bottom">
                                         <img class="opacity-30" src="{{ site.url }}/images/featured/03.jpg" alt="Placeholder">
                                     </div>
 
-                                    <div class="backdrop__cover margin-y-3">
+                                    <div class="backdrop__cover">
 
-                                        <div class="container font-size-sm">
-                                            <p class="h4 text-shadow margin-bottom-0">
-                                                Discovery and Structure of Cells
-                                            </p>
-                                            <p>
-                                                <em>Lorem Ipsum Dolar</em> 
-                                            </p>
-                                            <a class="button" href="#1">
+                                        <div class="padding-3 padding-4--md">
+                                            <div class="text-shadow margin-bottom-2">
+                                                <p class="font-size-md margin-bottom-0">
+                                                    <strong><em>Cell Biology</em></strong> 
+                                                </p>
+                                                <h2 class="banner-headline margin-bottom-2"  style="font-size: 42px">
+                                                    Discovery and Structure of Cells
+                                                </h2>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                </p>
+                                            </div>
+                                            <a class="button font-size-sm border-bottom border-color-library" href="#1">
                                                 Go to Module
                                             </a>
                                         </div>
@@ -229,38 +221,10 @@ title: "Library"
 
         </div>
         
-        <div class="landing__aside">
-
-            <div class="border-top border-color-library box-shadow-1">
-                <div class="card theme-white font-size-sm" style="height: unset !important">
-
-                    <div class="card__head border-bottom">
-                        <p>Module of the Day</p>
-                    </div>
-
-                    <div class="card__body">
-                        <strong class="font-size-rg display-block margin-bottom-1">
-                            Acids and Bases II
-                        </strong>
-                        <p>
-                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>. Common names include membrillo, sachamango and heaven lotus.
-                        </p>
-                        <a class="button button--has-icon--disperse" href="#1">
-                            <span class="button__text">Go to Module</span>
-                            <span class="icon icon-arrow-right"></span>
-                        </a>
-                        
-                    </div>
-
-                </div>
-            </div>
-        
-        </div>
-
-        
-        </div>
+        <div class="landing__aside"></div>
 
     </div>
-    <!-- .landing -->
 
 </div>
+<!-- .landing -->
+

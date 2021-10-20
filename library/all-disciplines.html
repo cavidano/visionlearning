@@ -26,7 +26,7 @@ title: "Library"
                                 aria-selected="false"
                                 role="tab"
                                 href="{{ site.url }}/library/">
-                                    Featured
+                                    Highlights
                             </a>
                         </li>
                         <li>
@@ -135,15 +135,15 @@ title: "Library"
                                             {% for module in modules %}              
                                                 {% assign name = module.Name %}  
 
-                                                <li>
+                                                <li class="text-color-link">
                                                     <span class="list-divider__cell">
-                                                        <a class="text-color-link" href="/library/module.html">
+                                                        <a href="/library/module.html">
                                                             {{ name }}
                                                         </a>
                                                     </span>
                                                     <span class="list-divider__cell">
-                                                        <a class="button font-size-sm ally-link" href="#1">
-                                                            <span class="button__text">NGSS View</span>
+                                                        <a class="button button--icon-only" href="#1">
+                                                            <span class="icon icon-info" aria-hidden="true"></span>
                                                         </a>
                                                     </span>
                                                 </li>
@@ -165,38 +165,9 @@ title: "Library"
 
         </div>
         
-        <div class="landing__aside">
-
-            <div class="border-top border-color-library box-shadow-1">
-                <div class="card theme-white font-size-sm" style="height: unset !important">
-
-                    <div class="card__head border-bottom">
-                        <p>Module of the Day</p>
-                    </div>
-
-                    <div class="card__body">
-                        <strong class="font-size-rg display-block margin-bottom-1">
-                            Acids and Bases II
-                        </strong>
-                        <p>
-                            Gustavia superba is an understory tree that grows in <a href="#1">Central</a> and north-western <a href="#1">South America</a>. Common names include membrillo, sachamango and heaven lotus.
-                        </p>
-                        <a class="button button--has-icon--disperse" href="#1">
-                            <span class="button__text">Go to Module</span>
-                            <span class="icon icon-arrow-right"></span>
-                        </a>
-                        
-                    </div>
-
-                </div>
-            </div>
-        
-        </div>
-
-        
-        </div>
-
+        <div class="landing__aside"></div>
+  
     </div>
-    <!-- .landing -->
 
 </div>
+<!-- .landing -->
