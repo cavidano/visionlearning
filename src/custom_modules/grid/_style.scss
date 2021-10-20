@@ -274,7 +274,7 @@ In this file:
 
 @include breakpoints.breakpoints-up(lg) {
     .materials {
-      grid-template-columns: 16em 1fr;
+      grid-template-columns: 14em 1fr;
     
       grid-template-areas:
           "aside main"
