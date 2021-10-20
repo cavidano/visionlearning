@@ -24,36 +24,36 @@ In this file:
 // B. CSS Generic Grid Columns
 //////////////////////////////////////////////
 
-.grid {
-  --grid-columns: 1;
-  --grid-gap: var(--spacer-2);
+// .grid {
+//   --grid-columns: 1;
+//   --grid-gap: var(--spacer-2);
 
-  position: relative;
+//   position: relative;
 
-  display: grid;
-  gap: var(--grid-gap);
-}
+//   display: grid;
+//   gap: var(--grid-gap);
+// }
 
-[class*="grid--columns"] {
+// [class*="grid--columns"] {
   
-    @include breakpoints.breakpoints-up(lg) {
+//     @include breakpoints.breakpoints-up(lg) {
 
-      &[class*="columns-2"] {
-        --grid-columns: 2;
-      }
+//       &[class*="columns-2"] {
+//         --grid-columns: 2;
+//       }
 
-      &[class*="columns-3"] {
-        --grid-columns: 3;
-      }
+//       &[class*="columns-3"] {
+//         --grid-columns: 3;
+//       }
 
-      &[class*="columns-4"] {
-        --grid-columns: 4;
-      }
+//       &[class*="columns-4"] {
+//         --grid-columns: 4;
+//       }
   
-      grid-template-columns: repeat(var(--grid-columns), 1fr);
+//       grid-template-columns: repeat(var(--grid-columns), 1fr);
 
-    }
-}
+//     }
+// }
 
 //////////////////////////////////////////////
 // C. Grid Overview (Homepage)
@@ -90,15 +90,18 @@ In this file:
 // Grid Discipline Component
 
 .grid--discipline {
-    --grid-columns: 4;
+
+    --grid-columns: 1;
     --grid-gap: null;
 
     grid-template-columns: repeat(var(--grid-columns), 1fr);
 
     .backdrop {
-        overflow: hidden;
-        z-index: auto;
         position: relative;
+
+        overflow: hidden;
+
+        z-index: auto;
 
         &:nth-child(1), 
         &:nth-child(5) {
@@ -125,6 +128,14 @@ In this file:
         &.unfocused {
             animation-name: scaleDown;
         }
+    }
+
+    @include breakpoints.breakpoints-up(md) {
+      --grid-columns: 2;
+    }
+
+    @include breakpoints.breakpoints-up(lg) {
+      --grid-columns: 4;
     }
 
 }

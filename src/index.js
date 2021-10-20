@@ -51,7 +51,7 @@ import "./modules/flex";
 import Forms from "./modules/forms";
 new Forms();
 
-// import "./modules/grid";
+import "./modules/grid";
 
 import "./modules/icons";
 

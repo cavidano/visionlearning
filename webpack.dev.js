@@ -6,7 +6,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devDir = './_tearsheet';
-const devIndex = 'featured-grid.html';
+const devIndex = 'color.html';
 
 module.exports = merge(common, {
     mode: 'development',

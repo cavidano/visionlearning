@@ -2,11 +2,14 @@
 
 In this file:
 
-// A. Variables
-// B. Grid Block
-// C. Grid Gap Modifier
-// D. Grid Size Utilities and Modifiers
-// E. Grid Cell Size Utilities and Modifiers
+// A. Modules
+// B. Variables
+// C. Matrix Block
+// D. Matrix Modifiers
+// E. Matrix Cell Utilities and Modifiers
+// F. Grid Block
+// G. Gap Utilities
+// H. Order Utilities
 
 */
 
@@ -15,112 +18,167 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
+@use "sass:math";
 @use "../breakpoints/style" as breakpoints;
 @use "../spacing/style" as spacing;
 
 //////////////////////////////////////////////
-// A. Variables
+// B. Variables
 //////////////////////////////////////////////
 
 $columns: 12;
+$rows: $columns / 2;
 
 //////////////////////////////////////////////
-// B. Grid Block
+// C. Matrix Block
 //////////////////////////////////////////////
 
-.grid {
+.matrix {
     display: flex;
     flex-wrap: wrap;
     min-width: 100%;
 }
 
-[class*="grid__cell"] {
+[class*="matrix__cell"] {
     flex: 1 1 100%;
     max-width: 100%;
 }
 
 //////////////////////////////////////////////
-// C. Grid Gap Modifiers
-//////////////////////////////////////////////
-
-[class*="grid--gap"] {
-    --gap-size: 0;
-
-    margin-top: calc(var(--gap-size) * -1);
-    margin-right: calc(var(--gap-size) * -0.5);
-    margin-left: calc(var(--gap-size) * -0.5);
-
-    > [class*="grid__cell"] {
-        margin-top: var(--gap-size);
-        padding-left: calc(var(--gap-size) * 0.5);
-        padding-right: calc(var(--gap-size) * 0.5);
-    }
-}
-
-@each $spacer, $value in spacing.$spacers {
-    .grid--gap-#{$spacer} {
-        --gap-size: #{$value};
-    }
-}
-
-.grid--gap-border {
-    --gap-size: var(--default-border-width);
-}
-
-//////////////////////////////////////////////
-// D. Grid Size Utilities and Modifiers
+// D. Matrix Modifiers
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
     @include breakpoints.breakpoints-up($breakpoint) {
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
-        .grid--cell-fill#{$mod} > [class*="grid__cell"] {
+        .matrix--cell-fill#{$mod} > [class*="matrix__cell"] {
             flex: 1;
         }
 
-        .grid--cell-fit#{$mod} > [class*="grid__cell"] {
+        .matrix--cell-fit#{$mod} > [class*="matrix__cell"] {
             flex: none;
         }
         
         @for $i from 1 through $columns {
-            .grid--cell-#{$i}#{$mod} > [class*="grid__cell"] {
+            .matrix--cell-#{$i}#{$mod} > [class*="matrix__cell"] {
                 flex: 0 0 100% / $columns * $i;
                 max-width: 100% / $columns * $i;
             }
         }
+    }
+}
+
+//////////////////////////////////////////////
+// E. Matrix Cell Utilities and Modifiers
+//////////////////////////////////////////////
+
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+
+        @for $i from 1 through $columns {
+            .matrix > .matrix__cell.matrix--cell-#{$i}#{$mod} {
+                flex: 0 0 100% / $columns * $i;
+                max-width: 100% / $columns * $i;
+            }
+        }
+
+        .matrix > .matrix__cell.matrix--cell-fill#{$mod} {
+            flex: 1 !important;
+            max-width: unset;
+        }
+        
+        .matrix > .matrix__cell.matrix--cell-fit#{$mod} {
+            flex: none;
+            max-width: unset;
+        }
+    }
+}
+
+//////////////////////////////////////////////
+// F. Grid Block
+////////////////////////////////////////////// 
+
+.grid {
+    display: grid;
+    gap: var(--gap-size);
+}
+
+[class*="grid--column"] {
+    --columns: initial;
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
+
+        @for $i from 2 through $columns {
+
+            .grid--column-#{$i}#{$mod} {
+                --columns: #{$i} !important;
+            }
+
+            .grid__colspan-#{$i}#{$mod}{
+                grid-column: span #{$i};
+            }
+        }
+
+        @for $i from 2 through $rows {
+            
+            .grid__rowspan-#{$i}#{$mod}{
+                grid-row: span #{$i};
+            }
+        }
+
+    }
+}
+
+//////////////////////////////////////////////
+// G. Gap Utilities
+//////////////////////////////////////////////
+
+.gap {
+    --gap-size: initial;
+}
+
+.matrix {
+    &[class*="gap"] {
+        margin-block-start: calc(var(--gap-size) * -1);
+        margin-inline-end: calc(var(--gap-size) * -0.5);
+        margin-inline-start: calc(var(--gap-size) * -0.5);
+
+        > [class*="matrix__cell"] {
+            margin-block-start: var(--gap-size);
+            padding-inline-start: calc(var(--gap-size) * 0.5);
+            padding-inline-end: calc(var(--gap-size) * 0.5);
+        }
+    }
+}
+
+@each $spacer, $value in spacing.$spacers {
+    .gap-#{$spacer} {
+        --gap-size: #{$value};
+    }
+}
+
+.gap-border {
+    --gap-size: var(--default-border-width);
+}
+
+//////////////////////////////////////////////
+// H. Order Utilities
+//////////////////////////////////////////////
+
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         @for $i from 1 through $columns {
             .order-#{$i}#{$mod} {
                 order: $i;
             }
-        }
-    }
-}
-
-//////////////////////////////////////////////
-// E. Grid Cell Size Utilities and Modifiers
-//////////////////////////////////////////////
-
-@each $breakpoint in map.keys(breakpoints.$breakpoints) {
-    @include breakpoints.breakpoints-up($breakpoint) {
-        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
-
-        @for $i from 1 through $columns {
-            .grid > .grid__cell.grid--cell-#{$i}#{$mod} {
-                flex: 0 0 100% / $columns * $i;
-                max-width: 100% / $columns * $i;
-            }
-        }
-
-        .grid > .grid__cell.grid--cell-fill#{$mod} {
-            flex: 1 !important;
-            max-width: unset;
-        }
-        
-        .grid > .grid__cell.grid--cell-fit#{$mod} {
-            flex: none;
-            max-width: unset;
         }
     }
 }
