@@ -19,14 +19,24 @@ title: "Glossary"
                         class="tabs-nav glossary border border-radius"
                         id="filter-by-discipline"
                         role="menu">
-
                         <li>
                             <button
-                                id="filter-all-disciplines"
+                                id="highlights"
                                 aria-selected="true"
                                 role="tab">
-                                    A-Z
+                                    Highlights
                             </button>
+                        </li>
+
+                        <li>
+                            <a
+                                id="filter-all-disciplines"
+                                aria-selected="false"
+                                role="tab"
+                                href="{{ site.url }}/glossary/a-z.html">
+                                    A-Z
+                            </a>
+                            
                         </li>
                         <li>
                             <button
@@ -98,80 +108,144 @@ title: "Glossary"
 
                 <div class="materials__main">
 
-                    <div class="padding-2 position-relative">
+                    <div class="padding-2 position-relative height-100">
 
-                        <div id="module-list-view">
-                            
-                            <section>
+                        <div class="grid grid--column-2 height-100" style="grid-template-rows: 1fr 1fr;">
 
-                                <header>
-                                    <h2 class="screen-reader-only">Alphabetical</h2>
-                                </header>
+                            <div class="grid__colspan-2">
 
-                                <div class="subtle-fill text-color-glossary padding-2 border-radius">
+                                <div class="card box-shadow-1" style="--card-padding-x:var(--spacer-4)">
 
-                                    <nav class="terms-alphabetical">                                
-                                        <button aria-current="page">A</button>
-                                        <button>B</button>
-                                        <button>C</button>
-                                        <button>D</button>
-                                        <button>E</button>
-                                        <button>F</button>
-                                        <button>G</button>
-                                        <button>H</button>
-                                        <button>I</button>
-                                        <button>J</button>
-                                        <button>K</button>
-                                        <button>L</button>
-                                        <button>M</button>
-                                        <button>N</button>
-                                        <button>O</button>
-                                        <button>P</button>
-                                        <button>Q</button>
-                                        <button>R</button>
-                                        <button>S</button>
-                                        <button>T</button>
-                                        <button>U</button>
-                                        <button>V</button>
-                                        <button>W</button>
-                                        <button>X</button>
-                                        <button>Y</button>
-                                        <button>Z</button>
-                                            
-                                    </nav>
-                                
+                                    <div class="card__head border-bottom">
+                                        <p>Term of the Day</p>
+                                    </div>
+
+                                    <div class="card__body">
+                                        <h2 class="h4">
+                                            electrolyte
+                                        </h2>
+                                        <p>
+                                            [noun] A substance that dissociates into 2 or more oppositely charged ions in water. Electrolytic solutions conduct electricity because the charged ions can carry electrons in water.
+                                        </p>
+
+                                        <a class="button button--outline font-size-sm" href="#1">
+                                            Go to Term
+                                        </a>
+                                    </div>
+
                                 </div>
 
-                                <div class="margin-y-2 font-size-md">
-                                    <ul class="list-divider">
-                                        {% for item in site.data.glossarySample %}
-                                            {% assign term = item.Name %}
-                                            {% assign pronounciation = item.Pronounciation %}
-                                            <li>
-                                                <span class="list-divider__cell">
-                                                    <a class="text-color-link" href="/glossary/term.html">
-                                                    {{ term }} 
-                                                    </a>
-                                                </span>
-                                                <span class="list-divider__cell">
-                                                {% if pronounciation != null %}
-                                                <div class="button-group text-color-link">
-                                                    <button
-                                                        class="button button--icon-only">
-                                                        <span class="icon icon-pronounciation" aria-hidden="true"></span>
-                                                    </button>                                                
+                            </div>
+
+                            <div>
+
+                                <div class="card theme-light">
+
+                                    <div class="card__head border-bottom">
+                                        <p>Test Your Knowledge</p>
+                                    </div>
+
+                                    <div class="card__body padding-3 padding-4--md">
+                                        <div class="form-entry">
+
+                                        <div class="form-entry__field">
+
+                                            <span class="form-entry__field__label">
+                                                Antony van Leeuwenhoek's work led to the field of
+                                            </span>
+
+                                            <div class="form-entry__option">
+
+                                                <div class="form-entry__option__radio">
+                                                    <label>
+                                                        <input type="radio" value="in a streambed near a volcano" name="quiz-question-example-01">
+                                                        <span class="radio__label">
+                                                            <span class="screen-reader-only">a.</span> microbiology.
+                                                        </span>
+                                                    </label>
+                                                    <span class="quiz__response">
+                                                        Sorry, that is incorrect. Metamorphism involves deep burial combined with high temperature and pressure. In the photo, the rocks have been uplifted and the overlying material is being removed. Which choice names the wearing-away process we see in the photograph?
+                                                    </span>
                                                 </div>
-                                                {% endif %}
-                                                </span>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
+
+                                                <div class="form-entry__option__radio" data-answer="correct">
+                                                    <label>
+                                                        <input type="radio" name="quiz-question-example-01">
+                                                        <span class="radio__label">
+                                                            <span class="screen-reader-only">b.</span> botany.
+                                                        </span>
+                                                    </label>
+                                                    <span class="quiz__response">
+                                                        Correct! Rocks that form below Earth’s surface must be uplifted. Then the overlying material must be removed through erosion in order for the rocks to be exposed. This wearing-away process can happen by the action of water, wind, or glacial ice.
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    </div>
+
                                 </div>
 
-                            </section>
+                            </div>
 
+                            <div>
+
+                                <div class="card theme-light">
+
+                                    <div class="card__head border-bottom">
+                                        <p>Scientst</p>
+                                    </div>
+
+                                    <div class="card__body padding-3 padding-4--md">
+                                        <div class="form-entry">
+
+                                        <div class="form-entry__field">
+
+                                            <span class="form-entry__field__label">
+                                                Antony van Leeuwenhoek's work led to the field of
+                                            </span>
+
+                                            <div class="form-entry__option">
+
+                                                <div class="form-entry__option__radio">
+                                                    <label>
+                                                        <input type="radio" value="in a streambed near a volcano" name="quiz-question-example-01">
+                                                        <span class="radio__label">
+                                                            <span class="screen-reader-only">a.</span> microbiology.
+                                                        </span>
+                                                    </label>
+                                                    <span class="quiz__response">
+                                                        Sorry, that is incorrect. Metamorphism involves deep burial combined with high temperature and pressure. In the photo, the rocks have been uplifted and the overlying material is being removed. Which choice names the wearing-away process we see in the photograph?
+                                                    </span>
+                                                </div>
+
+                                                <div class="form-entry__option__radio" data-answer="correct">
+                                                    <label>
+                                                        <input type="radio" name="quiz-question-example-01">
+                                                        <span class="radio__label">
+                                                            <span class="screen-reader-only">b.</span> botany.
+                                                        </span>
+                                                    </label>
+                                                    <span class="quiz__response">
+                                                        Correct! Rocks that form below Earth’s surface must be uplifted. Then the overlying material must be removed through erosion in order for the rocks to be exposed. This wearing-away process can happen by the action of water, wind, or glacial ice.
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
-                    
+
                     </div>
 
                 </div>
@@ -182,32 +256,7 @@ title: "Glossary"
         
         <div class="landing__aside">
 
-        <div class="border-top border-color-glossary box-shadow-1">
-            <div class="card theme-white font-size-sm" style="height: unset !important">
-
-                    <div class="card__head border-bottom">
-                        <p>Term of the Day</p>
-                    </div>
-
-                    <div class="card__body">
-                        <strong class="font-size-rg display-block margin-bottom-1">
-                            eclogite
-                        </strong>
-                        <p>
-                            [noun] A metamorphic rock that forms from mafic rocks (like basalt and gabbro) under extremely high pressure. The main minerals present are…
-                        </p>
-                        <a class="button button--has-icon--disperse" href="#1">
-                            <span class="button__text">Go to Term</span>
-                            <span class="icon icon-arrow-right"></span>
-                        </a>
-                        
-                    </div>
-
-                </div>
-            
-            </div>
         </div>
-
 
     </div>
     <!-- .landing -->
