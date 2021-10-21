@@ -3,8 +3,7 @@
 # Name of website
 title: Visionlearning
 
-baseurl: ""
-url: "http://127.0.0.1:4001"
+url: "https://cavidano.github.io/visionlearning/"
 port: 4001
 
 # Exclude
