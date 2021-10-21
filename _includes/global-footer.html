@@ -752,3 +752,13 @@
 {% endif %}
 
 <script src="{{ site.url }}/dist/js/visionlearning.js"></script>
+
+{% if page.title == 'Glossary Term' %}
+
+<script>
+    document.getElementById('go-back').addEventListener('click', () => {
+        history.back();
+    });
+</script>
+
+{% endif %}

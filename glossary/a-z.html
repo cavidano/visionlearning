@@ -120,7 +120,9 @@ title: "Glossary"
                                 <nav class="theme-glossary padding-2 border-radius">
 
                                     <div class="terms-alphabetical">                                
-                                        <button aria-current="page">A</button>
+                                        <button aria-current="page">
+                                        <span>A</span>
+                                        </button>
                                         <button>B</button>
                                         <button>C</button>
                                         <button>D</button>
@@ -157,7 +159,7 @@ title: "Glossary"
                                             {% assign pronounciation = item.Pronounciation %}
                                             <li>
                                                 <span class="list-divider__cell">
-                                                    <a class="text-color-link" href="/glossary/term.html">
+                                                    <a class="text-color-link" href="{{ site.url }}/glossary/term.html">
                                                     {{ term }} 
                                                     </a>
                                                 </span>
