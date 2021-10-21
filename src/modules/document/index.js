@@ -12,7 +12,7 @@ export default class Document {
         // Copyright Year
         ///////////////////////
 
-        const copyrightYear = document.querySelector(".copyright-year");
+        const copyrightYear = document.querySelector('.copyright-year');
 
         if (copyrightYear) {
             const currentYear = new Date().getFullYear();
@@ -25,95 +25,126 @@ export default class Document {
 
         window.addEventListener('load', () => {
 
-            const googleSelect = document.querySelector(".goog-te-combo");
+            // Google Translate
 
-            if (typeof(googleSelect) != 'undefined' && googleSelect != null) {
-              
-                const translateLinkList = document.querySelectorAll("[data-lang]");
+            const googleTranslateSelect = document.querySelector('.goog-te-combo');
 
-                translateLinkList.forEach((translateLink) => {
-                    
-                    translateLink.addEventListener("click", (event) => {
-
-                        event.preventDefault();
-
-                        let myLang = translateLink.getAttribute("data-lang");
-
-                        setLanguage(myLang);
-
-                    });
-                });
+            if (typeof(googleTranslateSelect) !== 'undefined' && googleTranslateSelect !== null) {
 
                 const setLanguage = (myLang) => {
-                    googleSelect.value = myLang;
-                    googleSelect.querySelector('option[value="' + myLang + '"]').selected = true;
+                    googleTranslateSelect.value = myLang;
+                    googleTranslateSelect.querySelector(`option[value="${myLang}"]`).selected = true;
 
-                    fireEvent(googleSelect,'change');
+                    languageChangeEvent(googleTranslateSelect, 'change');
                 }
 
-                const fireEvent = (element, event) => {
+                const languageChangeEvent = (element, event) => {
 
-                    var evt;
+                    let eventObject;
                     
                     if (document.createEventObject){
-                        evt = document.createEventObject();
-                        return element.fireEvent('on' + event, evt)
+                        eventObject = document.createEventObject();
+                        return element.languageChangeEvent('on' + event, eventObject)
                     } else {
-                        evt = document.createEvent("HTMLEvents"); 
+                        eventObject = document.createEvent('HTMLEvents'); 
                         // event type, bubbling, cancelable
-                        evt.initEvent(event, false, true);
-                        return !element.dispatchEvent(evt);
+                        eventObject.initEvent(event, false, true);
+                        return !element.dispatchEvent(eventObject);
                     }
                 }  
 
+                // Footer Links
+                
+                // const translateLinkList = document.querySelectorAll('[data-lang]');
+
+                // translateLinkList.forEach((translateLink) => {
+
+                //     translateLink.classList.add('notranslate');
+                    
+                //     translateLink.addEventListener('click', (event) => {
+
+                //         event.preventDefault();
+
+                //         let myLang = translateLink.getAttribute('data-lang');
+
+                //         setLanguage(myLang);
+
+                //     });
+                // });
+
+                const allLanguageSelect = document.getElementById('custom-language-select');
+                const allLanguageButton = document.getElementById('custom-language-update');
+
+                allLanguageSelect.classList.add('notranslate');
+
+                const langSelectObserverOptions = {
+                    childList: true
+                }
+
+                const langSelectObserver = new MutationObserver(() => {
+
+                    if(allLanguageSelect.childElementCount === 0) {
+
+                        const languagesList = googleTranslateSelect.querySelectorAll('option');
+
+                        languagesList.forEach((language) => {
+
+                            let value = language.getAttribute('value');
+                            let text = language.innerHTML;
+                            let option = document.createElement('option');
+
+                            option.setAttribute('value', value);
+                            option.innerHTML = text;
+                            
+                            allLanguageSelect.appendChild(option);
+                        });
+                    } else {
+                        allLanguageSelect.value = googleTranslateSelect.value;
+                    }
+
+                });
+                
+                langSelectObserver.observe(googleTranslateSelect, langSelectObserverOptions);
+
+                allLanguageButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    if(allLanguageSelect.value !== '') {
+                        setLanguage(allLanguageSelect.value)
+                    }
+                });
+
             }
 
-            const rtlTarget = document.querySelector("html");
+            // Observe RTL
+
+            const rtlTarget = document.querySelector('html');
+
+            const rtlObserverOptions = {
+                attributes: true,
+                attributeFilter: ['class']
+            }
 
             const rtlObserver = new MutationObserver((mutations) => {
 
-                mutations.forEach(() => {
+                mutations.forEach((mutation) => {
 
-                    let single_class = "translated-rtl";
+                    if(mutation.type === 'attributes') {
 
-                    if (rtlTarget.classList.contains(single_class)) {
-                        rtlTarget.setAttribute("dir", "rtl");
-                    } else {
-                        rtlTarget.setAttribute("dir", "ltr");
+                        const rtlClass = 'translated-rtl';
+
+                        if (rtlTarget.classList.contains(rtlClass)) {
+                            rtlTarget.setAttribute('dir', 'rtl');
+                        } else {
+                            rtlTarget.setAttribute('dir', 'ltr');
+                        }
                     }
 
                 });
             });
 
-            const rtlConfig = {
-                attributes: true,
-                attributeFilter: ["class"]
-            }
-
-            rtlObserver.observe(rtlTarget, rtlConfig);
+            rtlObserver.observe(rtlTarget, rtlObserverOptions);
 
         });
-
-        ///////////////////////
-        // Custom Properties Polyfill
-        ///////////////////////
-
-        const isIE11 = /Trident\/|MSIE/.test(window.navigator.userAgent);
-
-        const loadCustomPropertiesPolyfill = () => {
-
-            const targetNode = document.querySelector('[name="viewport"]');
-            const cpIEPolyfill = document.createElement('script');
-
-            cpIEPolyfill.src = 'https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.1.0/ie11CustomProperties.min.js';
-
-            targetNode.parentNode.insertBefore(cpIEPolyfill, targetNode.nextSibling);
-
-        }
-
-        if (isIE11) {
-            loadCustomPropertiesPolyfill();            
-        }
-
+        
     }
 }

@@ -68,8 +68,8 @@ In this file:
 
 .backdrop__credit {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    inset-block-end: 0;
+    inset-inline-end: 0;
 
     width: auto;
     
@@ -110,6 +110,8 @@ In this file:
     flex-direction: column;
     justify-content: center;
 
+
+
     min-height: var(--backdrop-fixed-height);
     
     > *:not(.backdrop__credit) {
@@ -134,6 +136,7 @@ In this file:
     }
 
     .backdrop__cover {
+
         display: block;
 
         position: relative;

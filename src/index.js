@@ -48,19 +48,14 @@ new Document();
 
 import "./modules/flex";
 
-import FullHeight from "./modules/full-height";
-new FullHeight();
-
 import Forms from "./modules/forms";
 new Forms();
 
-// import "./modules/grid";
+import "./modules/grid";
 
 import "./modules/icons";
 
 import "./modules/language";
-
-// import "./modules/loader";
 
 import "./modules/links";
 
@@ -88,9 +83,6 @@ new Tabs();
 import Tables from "./modules/tables";
 new Tables();
 
-import Tearsheet from "./modules/tearsheet";
-new Tearsheet();
-
 import "./modules/typography";
 
 import "./modules/z-index";
@@ -99,12 +91,13 @@ import "./modules/z-index";
 // Custom Modules
 //////////////////////////////////////////////
 
-import Grid from "./custom_modules/grid"; 
-new Grid();
-
-import "./custom_modules/icons";
+import Layout from "./custom_modules/layout"; 
+new Layout();
 
 import "./custom_modules/navigation";
+
+import FullHeight from "./custom_modules/full-height";
+new FullHeight();
 
 import Quiz from "./custom_modules/quiz"; 
 new Quiz();
@@ -113,6 +106,8 @@ import ReadingToggles from "./custom_modules/reading_toggles";
 new ReadingToggles();
 
 import "./custom_modules/css_variables";
+
+import "./custom_modules/lists";
 
 import "./custom_modules/color";
 

@@ -1,5 +1,7 @@
 import './_style.scss';
 
+import { getFocusableElements } from '../../utilities/focus';
+
 //////////////////////////////////////////////
 // Modal
 //////////////////////////////////////////////
@@ -8,46 +10,53 @@ export default class Modal {
 
     constructor() {
 
-        const modalList = document.querySelectorAll(".modal");
-        const modalButtonList = document.querySelectorAll("[data-modal-open]");
+        const modalList = document.querySelectorAll('.modal');
+        const modalButtonList = document.querySelectorAll('[data-modal-open]');
 
         const initModal = (modalTarget) => {
-
+            
             document.querySelector('body').classList.add('modal-open');
             
+            modalTarget.setAttribute('aria-hidden', false);
+            
             const lastFocusedElement = document.activeElement;
+            
+            const modalContent = modalTarget.querySelector('.modal__content');
 
-            const modalCloseList = modalTarget.querySelectorAll("[data-modal-close]");
+            modalContent.setAttribute('tabindex', 0);
+            modalContent.focus();
+            modalContent.setAttribute('tabindex', -1);
 
-            const closeModal = () => {
-                modalTarget.setAttribute("aria-hidden", true);
-                lastFocusedElement.focus();
-                document.querySelector('body').classList.remove('modal-open');
+            if(modalTarget.classList.contains('modal--scroll-all')) {
+                modalTarget.scrollTop = 0;
             }
 
-            modalTarget.setAttribute("aria-hidden", false);
+            const modalCloseList = modalTarget.querySelectorAll('[data-modal-close]');
 
-            modalCloseList.forEach((modalClose) => {
-                modalClose.addEventListener("click", closeModal);
-                modalClose.setAttribute("aria-label", "Close Modal Window");
-            });
+            const handleCloseOutside = (event) => {
+                let modalContentClick = modalContent.contains(event.target);
 
-            // All focusable modal elements
-            const modalFocusableElements = [
-                'input:not([disabled])',
-                'button:not([disabled])',
-                'a:not([disabled]'
-            ];
+                if (!modalContentClick) {
+                    handleClose();
+                }
+            };
 
-            const modalBody = modalTarget.querySelector('.modal__content__body');
+            const handleClose = () => {
+                
+                modalTarget.setAttribute('aria-hidden', true);
 
-            const focusableElements = modalTarget.querySelectorAll(modalFocusableElements);
+                lastFocusedElement.focus();
+                
+                document.querySelector('body').classList.remove('modal-open');
 
-            const firstElementOfModal = modalBody.querySelector(modalFocusableElements);
+                window.removeEventListener('click', handleCloseOutside);
+            }
+
+            const focusableElements = getFocusableElements(modalTarget);
+
+            const firstElementOfModal = focusableElements[0];
             const lastElementOfModal = focusableElements[focusableElements.length - 1];
 
-            firstElementOfModal.focus();
-              
             modalTarget.addEventListener('keydown', (event) => {
 
                 const keyCodes = {
@@ -59,39 +68,68 @@ export default class Modal {
 
                 switch (key) {
                     case keyCodes.tab:
+
                         if (document.activeElement === lastElementOfModal) {
-                            event.preventDefault();
-                            focusableElements[0].focus();
+                            if(!event.shiftKey){
+                                event.preventDefault();
+                                firstElementOfModal.focus();
+                            }
                         }
+
+                        if(document.activeElement === firstElementOfModal){
+                            if(event.shiftKey){
+                                event.preventDefault();
+                                lastElementOfModal.focus();
+                            }
+                        }
+
+                        if(document.activeElement === modalContent){
+                            if(event.shiftKey){
+                                event.preventDefault();
+                                firstElementOfModal.focus();
+                            }
+                        }
+
                         break;
+                    
                     case keyCodes.esc:
-                        closeModal();
+                        handleClose();
                         break;
                 }
 
             });
 
+            modalCloseList.forEach((modalClose) => {
+                modalClose.addEventListener('click', handleClose);
+                modalClose.setAttribute('aria-label', 'Close Modal Window');
+            });
+
+            if( modalTarget.hasAttribute('data-modal-close-outside')) {
+                window.addEventListener('click', handleCloseOutside);
+            }
         }
 
         modalList.forEach((modal) => {
-            
-            const modalContainer = modal.querySelector(".modal__content");
+
+            const modalContainer = modal.querySelector('.modal__content');
     
-            modalContainer.setAttribute("role", "dialog");
-            modalContainer.setAttribute("aria-modal", true);
+            modalContainer.setAttribute('role', 'dialog');
+            modalContainer.setAttribute('aria-modal', true);
     
-            modal.setAttribute("aria-hidden", true);
+            modal.setAttribute('aria-hidden', true);
 
         });
 
         modalButtonList.forEach((modalButton) => {
             
-            modalButton.addEventListener("click", (event) => {
-    
-                const modalTargetID = event.target.getAttribute("data-modal-open").replace(/#/, "");
+            modalButton.addEventListener('click', (event) => {
+
+                const modalTargetID = event.target.getAttribute('data-modal-open').replace(/#/, '');
                 const modalTarget = document.getElementById(modalTargetID);
     
                 initModal(modalTarget);
+
+                event.stopPropagation();
                 
             });
 

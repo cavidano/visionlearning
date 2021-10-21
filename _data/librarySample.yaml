@@ -1,0 +1,295 @@
+- Discipline: Biology
+  Description: >
+    Life as we know it is a wonderfully diverse enterprise. Organisms pass
+    traits from parent to offspring, function in a varied and changing
+    environment, and carry out a myriad of complex biochemical processes.
+    Understanding the principles of biology helps give context and clarity to
+    larger scientific and social issues. Our biology learning modules reveal the
+    current state of scientific understanding on topics like cell structure and
+    function, genetics, taxonomy, evolution by natural selection, and more.
+  Slug: biology
+  Subcategories:
+
+    - Title: Biological Molecules
+      Modules:
+      - Id: '61'
+        Name: Carbohydrates
+        Summary: >
+          Our bodies are efficient chemical processing plants, breaking down
+          nutrients to use and store for energy. This module introduces
+          carbohydrates, an important macronutrient. It explains how different
+          carbohydrates are used by plants and animals. Simple sugars and complex
+          carbohydrates are identified, and their biochemical structures are
+          compared and contrasted.
+      - Id: '62'
+        Name: Fats and Proteins
+        Summary: >
+          Fats and proteins are two of the major nutrient groups that our bodies
+          need. This module provides an introduction to these two macronutrients.
+          The basic chemical structure of fats as triglycerides is presented along
+          with the purposes and types of fat. The module also introduces the
+          amazing  structure of protein molecules, including the peptide bond, and
+          explains the purpose of proteins.
+      - Id: '243'
+        Name: Biological Proteins
+        Summary: >
+          This module explores how proteins are polymers composed of building
+          blocks called amino acids. Using the historic research of Frederick
+          Sanger on insulin as a starting point, the complex structures of
+          proteins, due to molecular bonds like the disulfide bridge and the
+          peptide bond, are explained.
+      - Id: '242'
+        Name: Blood Biology I
+        Summary: >
+          Knowledge of blood components brought about a revolution in surgery
+          through safe transfusion. The module traces the development of our
+          understanding of blood over centuries, beginning in 1628 with English
+          physician William Harvey's breakthrough research on circulation. With a
+          focus on early 20th-century experiments by Austrian researcher Karl
+          Landsteiner, the module shows how the identification of clotting
+          factors, blood types, and antigens was critical to medical science.
+          Whole blood, plasma, serum, and different types of blood cells are
+          defined.
+      - Id: '207'
+        Name: Lipids
+        Summary: >
+          Fats, oils, waxes, steroids, certain plant pigments, and parts of the
+          cell membrane – these are all lipids. This module explores the world of
+          lipids, a class of compounds produced by both plants and animals.  It
+          begins with a look at the chemical reaction that produces soap and then
+          examines the chemical composition of a wide variety of lipid types.
+          Properties and functions of lipids are discussed.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_207.mp3
+
+    - Title: Cell Biology
+      Modules:
+      - Id: '64'
+        Name: Discovery and Structure of Cells
+        Summary: >
+          Cells are the basic structural and functional unit of life. This module
+          traces the discovery of the cell in the 1600s and the development of
+          modern cell theory. The module looks at similarities and differences
+          between different types of cells and the relationship between cell
+          structure and function. The Theory of Universal Common Descent is
+          presented along with evidence that all living things on Earth descended
+          from a common ancestor.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_64.mp3
+      - Id: '198'
+        Name: Membranes I
+        Summary: >
+          Cell membranes are much more than passive barriers; they are complex and
+          dynamic structures that control what enters and leaves the cell. This
+          module explores how scientists came to understand cell membranes,
+          including the experiments that led to the development of the
+          fluid-mosaic model of membrane structure. The module describes how the
+          components and structure of cell membranes relate to key functions.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_198.mp3
+      - Id: '204'
+        Name: Membranes II
+        Summary: >
+          For living things to survive, different molecules need to enter and
+          leave cells, yet cell membranes serve as a barrier to most molecules.
+          Fortunately, all living cells have built-in transporters that allow
+          water, glucose, sodium, potassium, chloride, and other molecules to
+          cross the plasma membrane. This module looks at how passive and active
+          transporters work. It highlights the importance of the study of cell
+          membranes by looking at advances in treating cystic fibrosis and common
+          digestive ailments as well as the development of effective pain
+          relievers.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_204.mp3
+      - Id: '195'
+        Name: Cellular Organelles I
+        Summary: >
+          Evolution isn't always about competition. It can also be about
+          cooperation, as is the case with the development of chloroplasts and
+          mitochondria from free-living bacteria. This module explains the theory
+          of endosymbiosis along with its origins. Convincing evidence in support
+          of the theory is presented. The evolution of the nucleus and other
+          organelles through  invagination of the cell membrane is also discussed.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_195.mp3
+      - Id: '196'
+        Name: Cell Division I
+        Summary: >
+          Cell division is an enormously complex process that must go on millions
+          and millions of times during the life of an organism. This module
+          explains the difference between binary fission and the cell division
+          cycle. The stages of cell division are explored, and research that
+          contributed to our understanding of the process is described.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_196.mp3
+      - Id: '212'
+        Name: Cell Division II
+        Summary: >
+          Beginning with the discovery of mitosis, the module details each phase
+          of this cell process. It provides an overview of the structure of cell
+          components that are critical to mitosis. The module describes Clark
+          Noble’s experiments with the Madagascar Periwinkle, which led to the
+          discovery of an effective cancer treatment drug. The relationship
+          between mitosis and cancer is explored as is the mechanism by which
+          anti-cancer drugs work to slow down or prevent cell division.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_212.mp3
+      - Id: '106'
+        Name: Absorption, Distribution, and Storage of Chemicals
+        Summary: >
+          In order for many medicines to work, the chemicals must move from the
+          outside environment into the body. This module discusses the different
+          mechanisms by which chemicals cross the cell membrane and the factors
+          that influence this process. In addition to introducing biological
+          absorption, the module explains how chemicals are stored and distributed
+          within the body.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_106.mp3
+
+    - Title: Energy in Living Systems
+      Modules:
+      - Id: '215'
+        Name: Energy Metabolism I
+        Summary: >
+          Food fuels our bodies, but how does our body convert food molecules into
+          usable energy? This module looks at glycolysis and the Krebs cycle, two
+          important stages of cellular respiration, the process by which cells
+          harvest energy from food. It highlights the work of Sir Hans Adolf Krebs
+          and his focus on cyclic pathways as he discovered the main biochemical
+          pathway for breaking down fuel to produce energy.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_215.mp3
+      - Id: '225'
+        Name: Energy Metabolism II
+        Summary: >
+          ATP is the main energy currency of living cells. This module answers the
+          question of how most ATP is generated. A look at two important
+          compounds, NADH and FADH<sub>2</sub>, reveals their important role in
+          the production of ATP. The module explains the workings of the electron
+          transport chain, which provides high-energy electrons to fuel the
+          ATP-producing process called oxidative phosphorylation.
+      - Id: '192'
+        Name: Photosynthesis I
+        Summary: >
+          Through photosynthesis, plants harvest energy from the sun to produce
+          oxygen and sugar, the basic energy source for all living things. This
+          module introduces photosynthesis, beginning with experiments leading to
+          its discovery. The stages of photosynthesis are explained. Topics
+          include the role of chlorophyll, the action spectrum of photosynthesis,
+          the wavelengths of light that drive photosynthesis, light-harvesting
+          complexes, and the electron transport chain.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_192.mp3
+
+    - Title: Evolutionary Biology
+      Modules:
+      - Id: '226'
+        Name: Origins of Life I
+        Summary: >
+          Since prehistoric times, people have pondered how life came to exist.
+          This module describes investigations into the origins of life through
+          history, including Louis Pasteur’s experiments that disproved the
+          long-held idea of spontaneous generation and and later research showing
+          that the emergence of biological molecules from a nonliving environment
+          – or abiogenesis – is not only possible, but likely under the right
+          conditions.
+      - Id: '227'
+        Name: Origins of Life II
+        Summary: >
+          Building on earlier experiments showing how life’s chemical building
+          blocks could form from nonliving material on early Earth, this module
+          explores theories on the next steps needed for life. These include the
+          formation of long polymers, which then fold into complex macromolecules.
+          The module describes experiments in an environment like that of
+          primordial Earth, resulting in the spontaneous emergence of
+          phospholipids, which could form into membranes, paving the way for RNA
+          duplication and the eventual emergence of living cells.
+      - Id: '110'
+        Name: Charles Darwin I
+        Summary: >
+          The experiences and observations of Charles Darwin significantly
+          contributed to his theory of evolution through natural selection. This
+          module explores those influences and describes evolution as a force for
+          biological change and diversification. The first in a series, it details
+          how the theory challenged the cultural mindset of the time, including
+          the effect of his major works: <em>On the Origin of Species by Means of
+          Natural Selection</em> and <em>Sexual Selection and the Descent of
+          Man.</em>
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_110.mp3
+      - Id: '111'
+        Name: Charles Darwin II
+        Summary: >
+          The second in a series discussing the work of Charles Darwin, this
+          module takes a deeper look into the processes that led to Darwin's
+          theory of natural selection and examines specific mechanisms that drive
+          evolutionary change. Key points on which the idea of natural selection
+          rests are outlined. Examples from Darwin's personal life shed light on
+          his thinking about change within a species and the "struggle for
+          existence."
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_111.mp3
+      - Id: '112'
+        Name: Charles Darwin III
+        Summary: >
+          Our understanding of the term <em>evolution</em> has changed
+          significantly since Darwin's time. This module explains how Darwin's
+          work helped to give evolution the meaning it has today. It details the
+          concept of "descent with modification" that Darwin described with the
+          one figure originally included in <em>Origin of Species</em>. The module
+          discusses how this model revolutionized scientific thinking about the
+          similarities and differences between and within species, laying the
+          foundation for our current understanding of biodiversity.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_112.mp3
+      - Id: '68'
+        Name: Adaptation
+        Summary: >
+          This module introduces the concept of evolutionary adaptation. It
+          follows the development of Charles Darwin's ideas on how species adapt
+          to their environment in order to survive and reproduce. The difference
+          between adaptation and natural selection is explained. With a look at
+          penguins and other examples from nature, the module explores the
+          processes that influence the diversity of life.
+      - Id: '89'
+        Name: Taxonomy II
+        Summary: >
+          Carolus Linnaeus, the “father of taxonomy,” developed a uniform system
+          for naming plants and animals to ensure that each species has a unique
+          name. This module outlines rules of forming two-term taxonomic names
+          according to genus and species. The module gives examples of naming
+          controversies and describes how they were resolved, including by bending
+          the rules in regard to certain famous beasts.
+        SubCategory: Evolutionary Biology
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_89.mp3
+      - Id: '70'
+        Name: Taxonomy I
+        Summary: >
+          Modern taxonomy officially began in 1758 with <em>Systema Naturae</em>,
+          the classic work by Carolus Linnaeus. This module, the first in a
+          two-part series on species taxonomy, focuses on Linnaeus’ system for
+          classifying and naming plants and animals. The module discusses the
+          contribution of diverse cultures to the development of our modern
+          biological classification and describes the historical development of a
+          scientific basis for classifying species.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_70.mp3
+      - Id: '258'
+        Name: Introduction to Paleoanthropology
+        Summary: >
+          Paleoanthropology is the study of human ancestry through fossil remains
+          and other evidence. This module explains how paleoanthropologists
+          uncover and evaluate clues to the lineage to modern humans, tracing
+          intermediate forms along the way since the time we diverged from our
+          cousins, the great apes. Key discoveries are highlighted that shed light
+          on the pathway of human evolution. The module describes different ideas
+          through history about how the human family tree is constructed and which
+          characteristics best define humanness.
+      - Id: '259'
+        Name: Future of Human Evolution
+        Summary: >
+          Some noted modern scientists have declared that human evolution is over.
+          With advances in medicine and public health, natural selection is no
+          longer a major shaping force for humans. Even so, it doesn’t mean that
+          humans won’t evolve. This module explores the various directions that
+          human evolution might take. Various influences on human evolution are
+          discussed by way of specific examples, including artificial selection
+          through surgical advances and how “bottlenecking” could affect the human
+          gene pool if distant space colonies are formed in the future.
+      - Id: '263'
+        Name: The Piltdown Hoax
+        Summary: >
+          The Piltdown Man was once hailed as the "missing link" in the evolution
+          of apes to humans. However, the discovery at Piltdown - human skull
+          fragments, ancient mammal bones, and archaic tools - was an elaborate
+          hoax. The deception took a long time to be revealed due to errors by the
+          discoverers. They succumbed to confirmation bias by accepting any
+          evidence that supported their discovery and rejecting any contradictory
+          evidence.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_129.mp3

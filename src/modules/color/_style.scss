@@ -27,10 +27,14 @@ In this file:
     // Theme Color Palette
 
     --primary: #65278a;
-    --library: #fbb94e;
-    --glossary: #4eaf48;
-    --classroom: #1d8dc4;
-    --dark: #282343;
+    // --library: #fbb94e;
+    // --glossary: #4eaf48;
+    // --classroom: #1d8dc4;
+    --library: #FABC57;
+    --glossary: #60BF64;
+    --classroom: #3399CC;
+    // --dark: #282343;
+    --dark: #14142f;
     --light: #f1f4f6;
 
     // Accessible Link Color
@@ -166,7 +170,11 @@ $theme-colors: (
 
 body:not([class*="theme-"]),
 body > footer:not([class*="theme-"]),
-[class*="theme-"] {
+[class*="theme-"],
+[data-active-theme] [aria-current],
+[data-active-theme] [aria-expanded="true"],
+[data-active-theme] [aria-current] + .nav__dropdown
+{
     background-color: var(--background-color);
 
     color: var(--text-color);
@@ -187,8 +195,7 @@ body > footer:not([class*="theme-"]),
     }
 
     select option,
-    [data-toggle="dropdown"] ~ ul, 
-    //.modal::before,
+    [data-toggle="dropdown"] ~ ul,
     .modal__content,
     .table-scroll__container::after {
         background-color: var(--background-color);
@@ -220,7 +227,7 @@ body > footer:not([class*="theme-"]),
     .is-invalid .form-entry__feedback, 
     .is-invalid .form-entry__field__input::after,
     .is-invalid .form-entry__field__select::after,
-    .is-invalid [class*="_icon_warn"],
+    .is-invalid [class*="icon-warn"],
     .is-invalid .form-entry__option
     {
         color: var(--warn-color);
@@ -270,7 +277,40 @@ body > footer:not([class*="theme-"]),
                 --text-color: #{$swatch};
                 color: var(--text-color) !important;
             }
+
         }
 
     }
+}
+
+//////////////////////////////////////////////
+// D. Wayfinding 
+//////////////////////////////////////////////
+
+@each $name, $color-map in $theme-colors {
+    $swatch: map.get($color-map, "swatch");
+    $text: map.get($color-map, "text");
+    $border: map.get($color-map, "border");
+
+    [data-active-theme="#{$name}"] {
+
+        [aria-current],
+        [aria-current] + .nav__dropdown,
+        [aria-expanded="true"] {
+            --background-color: #{$swatch} !important;
+            --text-color: #{$text} !important;
+            --border-color: #{$border} !important;
+        }
+    }
+
+    [data-active-color="#{$name}"] {
+        
+        [aria-current],
+        [aria-expanded="true"] {
+            --text-color: #{$swatch};
+            color: var(--text-color) !important;
+        }
+
+    }
+
 }
