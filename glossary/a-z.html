@@ -19,14 +19,23 @@ title: "Glossary"
                         class="tabs-nav glossary border border-radius"
                         id="filter-by-discipline"
                         role="menu">
-
                         <li>
-                            <button
+                            <a
+                                id="highlights"
+                                aria-selected="false"
+                                role="tab"
+                                href="{{ site.url }}/glossary/">
+                                    Highlights
+                            </a>
+                        </li>
+                        <li>
+                            <a
                                 id="filter-all-disciplines"
                                 aria-selected="true"
-                                role="tab">
+                                role="tab"
+                                href="{{ site.url }}/glossary/a-z.html">
                                     A-Z
-                            </button>
+                            </a>
                         </li>
                         <li>
                             <button
@@ -108,9 +117,9 @@ title: "Glossary"
                                     <h2 class="screen-reader-only">Alphabetical</h2>
                                 </header>
 
-                                <div class="subtle-fill text-color-glossary padding-2 border-radius">
+                                <nav class="theme-glossary padding-2 border-radius">
 
-                                    <nav class="terms-alphabetical">                                
+                                    <div class="terms-alphabetical">                                
                                         <button aria-current="page">A</button>
                                         <button>B</button>
                                         <button>C</button>
@@ -137,10 +146,9 @@ title: "Glossary"
                                         <button>X</button>
                                         <button>Y</button>
                                         <button>Z</button>
-                                            
-                                    </nav>
+                                    </div>
                                 
-                                </div>
+                                </nav>
 
                                 <div class="margin-y-2 font-size-md">
                                     <ul class="list-divider">
