@@ -456,7 +456,7 @@ In this file:
 
 .grid--module-helper {
 
-  --grid-gap: var(--spacer-1);
+  gap: var(--spacer-1);
 
   .button--toggle-terms {
     grid-area: terms;
