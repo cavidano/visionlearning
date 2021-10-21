@@ -430,8 +430,12 @@
     }
 }
 
+//////////////////////////////////////////////
+// E. All Modules
+//////////////////////////////////////////////
+
 .terms-alphabetical {
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-sm);
 
     display: flex;
     flex-wrap: wrap;
@@ -447,8 +451,12 @@
         font-weight: bold;
         text-decoration: underline;
         background-color: white;
-        color:var(--glossary);
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+
+         span {
+            display: block;
+            transform: scale(1.25);
+         }
         
     }
 }
