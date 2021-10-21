@@ -287,13 +287,16 @@ In this file:
 //////////////////////////////////////////////
 
 .grid--featured-material {
-  [class="backdrop"]{
-  --backdrop-fixed-height: unset;
-    
-  }
+
+  grid-template-rows: repeat(3, 1fr);
 
   height: 100%;
-  grid-template-rows: repeat(3, 1fr);
+  
+  [class="backdrop"]{
+    --backdrop-fixed-height: unset;
+    outline: thick solid blue;
+  }
+  
 }
 
 //////////////////////////////////////////////
