@@ -8,252 +8,260 @@
     structure and function of atoms, forms of energy and its transfer, chemical
     bonding and reactions, and more.
   Slug: chemistry
+  Subcategories:
 
-  ModuleCategory: Atomic Theory and Structure
-    - Id: '49'
-      Name: Early Ideas about Matter
-      Summary: >
-        Tracking the development of our understanding of the atomic structure of
-        matter, this module begins with the contributions of ancient Greeks, who
-        proposed that matter is made up of small particles. The module then
-        describes how Lavoisier's Law of Conservation of Mass and Proust's Law
-        of Definite Proportions contributed to Dalton's modern atomic theory.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_49.mp3
-    - Id: '50'
-      Name: Atomic Theory I
-      Summary: >
-        The 19th and early 20th centuries saw great advances in our
-        understanding of the atom. This module takes readers through experiments
-        with cathode ray tubes that led to the discovery of the first subatomic
-        particle: the electron. The module then describes Thomson’s plum pudding
-        model of the atom along with Rutherford’s gold foil experiment that
-        resulted in the nuclear model of the atom. Also explained is Millikan’s
-        oil drop experiment, which allowed him to determine an electron’s
-        charge. Readers will see how the work of many scientists was critical in
-        this period of rapid development in atomic theory.
-    - Id: '51'
-      Name: Atomic Theory II
-      Summary: >
-        The 20th century brought a major shift in our understanding of the atom,
-        from the planetary model that Ernest Rutherford proposed to Niels Bohr’s
-        application of quantum theory and waves to the behavior of electrons.
-        With a focus on Bohr’s work, the developments explored in this module
-        were based on the advancements of many scientists over time and laid the
-        groundwork for future scientists to build upon further. The module also
-        describes James Chadwick’s discovery of the neutron. Among other topics
-        are anions, cations, and isotopes.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_51.mp3
-    - Id: '223'
-      Name: Atomic Theory III
-      Summary: >
-        The 20th century was a period rich in advancing our knowledge of quantum
-        mechanics, shaping modern physics. Tracing developments during this
-        time, this module covers ideas and refinements that built on Bohr’s
-        groundbreaking work in quantum theory. Contributions by many scientists
-        highlight how theoretical insights and experimental results
-        revolutionized our understanding of the atom. Concepts include the
-        Schrödinger equation, Born’s three-dimensional probability maps, the
-        Heisenberg uncertainty principle, and electron spin.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_223.mp3
-    - Id: '231'
-      Name: Atomic Theory IV
-      Summary: >
-        Our Atomic Theory series continues, exploring the quantum model of the
-        atom in greater detail. This module takes a closer look at the
-        Schrödinger equation that defines the energies and probable positions of
-        electrons within atoms. Using the hydrogen atom as an example, the
-        module explains how orbitals can be described by type of wave function.
-        Evidence for orbitals and the quantum model is provided by the
-        absorption and emission spectra of hydrogen. Other concepts include
-        multi-electron atoms, the Aufbau Principle, and Hund’s Rule.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_231.mp3
-    - Id: '52'
-      Name: The Periodic Table of Elements
-      Summary: >
-        The modern periodic table is based on Dmitri Mendeleev’s 1896
-        observations that chemical elements can be grouped according to chemical
-        properties they exhibit. This module explains the arrangement of
-        elements in the period table. It defines periods and groups and
-        describes how various electron configurations affect the properties of
-        the atom.
-    - Id: '53'
-      Name: The Mole and Atomic Mass
-      Summary: >
-        The mole is an important concept for talking about a very large number
-        of things — 6.02 x 10<sup>23</sup> of them to be exact. This module
-        shows how the mole, known as Avogadro’s number, is key to calculating
-        quantities of atoms and molecules. It describes 19th-century
-        developments that led to the concept of the mole, Topics include atomic
-        weight, molecular weight, and molar mass. Sample equations illustrate
-        how molar mass and Avogadro’s number act as conversion factors to
-        determine the amount of a substance and its mass.
-  
-  ModuleCategory: Physical States and Properties
-    - Id: '120'
-      Name: States of Matter
-      Summary: >
-        There are many states of matter beyond solids, liquids, and gases,
-        including plasmas, condensates, superfluids, supersolids, and strange
-        matter. This module introduces Kinetic Molecular Theory, which explains
-        how the energy of atoms and molecules results in different states of
-        matter. The module also explains the process of phase transitions in
-        matter.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_120.mp3
-    - Id: '209'
-      Name: Properties of Solids
-      Summary: >
-        Solids are formed when the forces holding atoms or molecules together
-        are stronger than the energy moving them apart. This module shows how
-        the structure and composition of various solids determine their
-        properties, including conductivity, solubility, density, and melting
-        point. The module distinguishes the two main categories of solids:
-        crystalline and amorphous. It then describes the four types of
-        crystalline solids: molecular, network, ionic, and metallic. A look at
-        different solids makes clear how atomic and molecular structure drives
-        function.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_209.mp3
-    - Id: '222'
-      Name: Properties of Liquids
-      Summary: >
-        When it comes to different liquids, some mix well while others don’t;
-        some pour quickly while others flow slowly. This module provides a
-        foundation for considering states of matter in all their complexity. It
-        explains the basic properties of liquids, and explores how
-        intermolecular forces determine their behavior. The concepts of
-        cohesion, adhesion, and viscosity are defined. The module also examines
-        how temperature and molecule size and type affect the properties of
-        liquids.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_222.mp3
-    - Id: '245'
-      Name: Properties of Gases
-      Summary: >
-        This module describes the properties of gases and explores how these
-        properties relate to a common set of behaviors called the gas laws. With
-        a focus on Boyle’s Law, Charles’s Law, and Avogadro’s Law, an overview
-        of 400 years of research shows the development of our understanding of
-        gas behavior. The module presents the ideal gas equation and explains
-        when this equation can—and cannot—be used to predict the behavior of
-        real gases.
-    - Id: '216'
-      Name: Diffusion I
-      Summary: >
-        The process of diffusion is critical to life, as it is necessary when
-        our lungs exchange gas during breathing and when our cells take in
-        nutrients. This module explains diffusion and describes factors that
-        influence the process. The module looks at historical developments in
-        our understanding of diffusion, from observations of “dancing” particles
-        in the first century BCE to the discovery of Brownian motion to more
-        recent experiments. Topics include concentration gradients, the
-        diffusion coefficient, and advection.
-      AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_216.mp3
-    - Id: '251'
-      Name: Kinetic-Molecular Theory
-      Summary: >
-        Over four hundred years, scientists including Rudolf Clausius and James
-        Clerk Maxwell developed the kinetic-molecular theory (KMT) of gases,
-        which describes how molecule properties relate to the macroscopic
-        behaviors of an ideal gas—a theoretical gas that always obeys the ideal
-        gas equation. KMT provides assumptions about molecule behavior that can
-        be used both as the basis for other theories about molecules and to
-        solve real-world problems.
-    - Id: '266'
-      Name: Solutions, Solubility, and Colligative Properties
-      Summary: >
-        Aqueous solutions are found throughout our world, and their chemistry
-        depends in part on how much of a dissolved substance is in them. This
-        module explores how substances dissolve, why some substances don’t
-        dissolve, and how we express the concentration of a solution. The module
-        describes the forces that hold particles together and interactions that
-        keep dissolved particles apart. It also examines how concentration
-        affects freezing point, boiling point, and vapor pressure.
-    - Id: '267'
-      Name: Water
-      Summary: >
-        Water is a truly unusual and important substance. The unique chemical
-        properties of water that give rise to surface tension, capillary action,
-        and the low density of ice play vital roles in life as we know it.
-        Floating ice protects aquatic organisms and keeps them from being frozen
-        in the winter. Capillary action keeps plants alive. Surface tension
-        allows lily pads to stay on the surface of a lake. In fact, water’s
-        chemistry is so complex and important that scientists today are still
-        striving to understand all the feats this simple substance can perform.
+    - Title: Atomic Theory and Structure
+      Modules:
+      - Id: '49'
+        Name: Early Ideas about Matter
+        Summary: >
+          Tracking the development of our understanding of the atomic structure of
+          matter, this module begins with the contributions of ancient Greeks, who
+          proposed that matter is made up of small particles. The module then
+          describes how Lavoisier's Law of Conservation of Mass and Proust's Law
+          of Definite Proportions contributed to Dalton's modern atomic theory.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_49.mp3
+      - Id: '50'
+        Name: Atomic Theory I
+        Summary: >
+          The 19th and early 20th centuries saw great advances in our
+          understanding of the atom. This module takes readers through experiments
+          with cathode ray tubes that led to the discovery of the first subatomic
+          particle: the electron. The module then describes Thomson’s plum pudding
+          model of the atom along with Rutherford’s gold foil experiment that
+          resulted in the nuclear model of the atom. Also explained is Millikan’s
+          oil drop experiment, which allowed him to determine an electron’s
+          charge. Readers will see how the work of many scientists was critical in
+          this period of rapid development in atomic theory.
+      - Id: '51'
+        Name: Atomic Theory II
+        Summary: >
+          The 20th century brought a major shift in our understanding of the atom,
+          from the planetary model that Ernest Rutherford proposed to Niels Bohr’s
+          application of quantum theory and waves to the behavior of electrons.
+          With a focus on Bohr’s work, the developments explored in this module
+          were based on the advancements of many scientists over time and laid the
+          groundwork for future scientists to build upon further. The module also
+          describes James Chadwick’s discovery of the neutron. Among other topics
+          are anions, cations, and isotopes.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_51.mp3
+      - Id: '223'
+        Name: Atomic Theory III
+        Summary: >
+          The 20th century was a period rich in advancing our knowledge of quantum
+          mechanics, shaping modern physics. Tracing developments during this
+          time, this module covers ideas and refinements that built on Bohr’s
+          groundbreaking work in quantum theory. Contributions by many scientists
+          highlight how theoretical insights and experimental results
+          revolutionized our understanding of the atom. Concepts include the
+          Schrödinger equation, Born’s three-dimensional probability maps, the
+          Heisenberg uncertainty principle, and electron spin.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_223.mp3
+      - Id: '231'
+        Name: Atomic Theory IV
+        Summary: >
+          Our Atomic Theory series continues, exploring the quantum model of the
+          atom in greater detail. This module takes a closer look at the
+          Schrödinger equation that defines the energies and probable positions of
+          electrons within atoms. Using the hydrogen atom as an example, the
+          module explains how orbitals can be described by type of wave function.
+          Evidence for orbitals and the quantum model is provided by the
+          absorption and emission spectra of hydrogen. Other concepts include
+          multi-electron atoms, the Aufbau Principle, and Hund’s Rule.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_231.mp3
+      - Id: '52'
+        Name: The Periodic Table of Elements
+        Summary: >
+          The modern periodic table is based on Dmitri Mendeleev’s 1896
+          observations that chemical elements can be grouped according to chemical
+          properties they exhibit. This module explains the arrangement of
+          elements in the period table. It defines periods and groups and
+          describes how various electron configurations affect the properties of
+          the atom.
+      - Id: '53'
+        Name: The Mole and Atomic Mass
+        Summary: >
+          The mole is an important concept for talking about a very large number
+          of things — 6.02 x 10<sup>23</sup> of them to be exact. This module
+          shows how the mole, known as Avogadro’s number, is key to calculating
+          quantities of atoms and molecules. It describes 19th-century
+          developments that led to the concept of the mole, Topics include atomic
+          weight, molecular weight, and molar mass. Sample equations illustrate
+          how molar mass and Avogadro’s number act as conversion factors to
+          determine the amount of a substance and its mass.
+    
+  Subcategories:
+    
+    - Title: Physical States and Properties
+      - Id: '120'
+        Name: States of Matter
+        Summary: >
+          There are many states of matter beyond solids, liquids, and gases,
+          including plasmas, condensates, superfluids, supersolids, and strange
+          matter. This module introduces Kinetic Molecular Theory, which explains
+          how the energy of atoms and molecules results in different states of
+          matter. The module also explains the process of phase transitions in
+          matter.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_120.mp3
+      - Id: '209'
+        Name: Properties of Solids
+        Summary: >
+          Solids are formed when the forces holding atoms or molecules together
+          are stronger than the energy moving them apart. This module shows how
+          the structure and composition of various solids determine their
+          properties, including conductivity, solubility, density, and melting
+          point. The module distinguishes the two main categories of solids:
+          crystalline and amorphous. It then describes the four types of
+          crystalline solids: molecular, network, ionic, and metallic. A look at
+          different solids makes clear how atomic and molecular structure drives
+          function.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_209.mp3
+      - Id: '222'
+        Name: Properties of Liquids
+        Summary: >
+          When it comes to different liquids, some mix well while others don’t;
+          some pour quickly while others flow slowly. This module provides a
+          foundation for considering states of matter in all their complexity. It
+          explains the basic properties of liquids, and explores how
+          intermolecular forces determine their behavior. The concepts of
+          cohesion, adhesion, and viscosity are defined. The module also examines
+          how temperature and molecule size and type affect the properties of
+          liquids.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_222.mp3
+      - Id: '245'
+        Name: Properties of Gases
+        Summary: >
+          This module describes the properties of gases and explores how these
+          properties relate to a common set of behaviors called the gas laws. With
+          a focus on Boyle’s Law, Charles’s Law, and Avogadro’s Law, an overview
+          of 400 years of research shows the development of our understanding of
+          gas behavior. The module presents the ideal gas equation and explains
+          when this equation can—and cannot—be used to predict the behavior of
+          real gases.
+      - Id: '216'
+        Name: Diffusion I
+        Summary: >
+          The process of diffusion is critical to life, as it is necessary when
+          our lungs exchange gas during breathing and when our cells take in
+          nutrients. This module explains diffusion and describes factors that
+          influence the process. The module looks at historical developments in
+          our understanding of diffusion, from observations of “dancing” particles
+          in the first century BCE to the discovery of Brownian motion to more
+          recent experiments. Topics include concentration gradients, the
+          diffusion coefficient, and advection.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_216.mp3
+      - Id: '251'
+        Name: Kinetic-Molecular Theory
+        Summary: >
+          Over four hundred years, scientists including Rudolf Clausius and James
+          Clerk Maxwell developed the kinetic-molecular theory (KMT) of gases,
+          which describes how molecule properties relate to the macroscopic
+          behaviors of an ideal gas—a theoretical gas that always obeys the ideal
+          gas equation. KMT provides assumptions about molecule behavior that can
+          be used both as the basis for other theories about molecules and to
+          solve real-world problems.
+      - Id: '266'
+        Name: Solutions, Solubility, and Colligative Properties
+        Summary: >
+          Aqueous solutions are found throughout our world, and their chemistry
+          depends in part on how much of a dissolved substance is in them. This
+          module explores how substances dissolve, why some substances don’t
+          dissolve, and how we express the concentration of a solution. The module
+          describes the forces that hold particles together and interactions that
+          keep dissolved particles apart. It also examines how concentration
+          affects freezing point, boiling point, and vapor pressure.
+      - Id: '267'
+        Name: Water
+        Summary: >
+          Water is a truly unusual and important substance. The unique chemical
+          properties of water that give rise to surface tension, capillary action,
+          and the low density of ice play vital roles in life as we know it.
+          Floating ice protects aquatic organisms and keeps them from being frozen
+          in the winter. Capillary action keeps plants alive. Surface tension
+          allows lily pads to stay on the surface of a lake. In fact, water’s
+          chemistry is so complex and important that scientists today are still
+          striving to understand all the feats this simple substance can perform.
 
-  ModuleCategory: Chemical Relationships
-    - Id: '271'
-      Name: Acids and Bases I
-      Summary: >
-        Whether maintaining water quality in a fish tank or suffering from acid
-        indigestion, we encounter the effects of acid-base chemistry in many
-        common situations. This module explores acids and bases and describes
-        how our understanding of acid-base chemistry has been refined over the
-        centuries. The module explains how the pH scale indicates acidity. A
-        table of pH values demonstrates how familiar substances range from
-        extremely acidic to extremely basic. Also covered is a neutralization
-        technique called titration.
-    - Id: '272'
-      Name: Acids and Bases II
-      Summary: >
-        Our bodies constantly produce carbon dioxide, some of which stays in the
-        blood and becomes carbonic acid. So what keeps blood from becoming too
-        acidic? Our blood has a built-in buffering system that works to maintain
-        a neutral pH. This module explores how our body achieves this remarkable
-        balancing act, and traces scientific discoveries that contributed to our
-        current understanding of acid-base chemistry.
-    - Id: '55'
-      Name: Chemical Bonding
-      Summary: >
-        The millions of different chemical compounds that make up everything on
-        Earth are composed of 118 elements that bond together in different ways.
-        This module explores two common types of chemical bonds: covalent and
-        ionic. The module presents chemical bonding on a sliding scale from pure
-        covalent to pure ionic, depending on differences in the
-        electronegativity of the bonding atoms. Highlights from three centuries
-        of scientific inquiry into chemical bonding include Isaac Newton’s
-        ‘forces’, Gilbert Lewis’s dot structures, and Linus Pauling’s
-        application of the principles of quantum mechanics.
-    - Id: '268'
-      Summary: >
-        Chemical equations are an efficient way to describe chemical reactions.
-        This module explains the shorthand notation used to express how atoms
-        are rearranged to make new compounds during a chemical reaction. It
-        shows how balanced chemical equations convey proportions of each
-        reactant and product involved. The module traces the development of
-        chemical equations over the past four centuries as our understanding of
-        chemical processes grew. A look at chemical equations reveals that
-        nothing is lost and nothing is gained in a typical chemical
-        reaction–matter simply changes form.
-    - Id: '270'
-      Name: Stoichiometry
-      Summary: >
-        It’s nearly the start of the school year, and you’ve gathered 10 friends for an
-        end-of-semester bonfire. What would a bonfire be without s’mores? You pack supplies,
-        making sure you have enough to make one s’more for everyone.
+  Subcategories:
+    
+    - Title: Chemical Relationships
+      - Id: '271'
+        Name: Acids and Bases I
+        Summary: >
+          Whether maintaining water quality in a fish tank or suffering from acid
+          indigestion, we encounter the effects of acid-base chemistry in many
+          common situations. This module explores acids and bases and describes
+          how our understanding of acid-base chemistry has been refined over the
+          centuries. The module explains how the pH scale indicates acidity. A
+          table of pH values demonstrates how familiar substances range from
+          extremely acidic to extremely basic. Also covered is a neutralization
+          technique called titration.
+      - Id: '272'
+        Name: Acids and Bases II
+        Summary: >
+          Our bodies constantly produce carbon dioxide, some of which stays in the
+          blood and becomes carbonic acid. So what keeps blood from becoming too
+          acidic? Our blood has a built-in buffering system that works to maintain
+          a neutral pH. This module explores how our body achieves this remarkable
+          balancing act, and traces scientific discoveries that contributed to our
+          current understanding of acid-base chemistry.
+      - Id: '55'
+        Name: Chemical Bonding
+        Summary: >
+          The millions of different chemical compounds that make up everything on
+          Earth are composed of 118 elements that bond together in different ways.
+          This module explores two common types of chemical bonds: covalent and
+          ionic. The module presents chemical bonding on a sliding scale from pure
+          covalent to pure ionic, depending on differences in the
+          electronegativity of the bonding atoms. Highlights from three centuries
+          of scientific inquiry into chemical bonding include Isaac Newton’s
+          ‘forces’, Gilbert Lewis’s dot structures, and Linus Pauling’s
+          application of the principles of quantum mechanics.
+      - Id: '268'
+        Summary: >
+          Chemical equations are an efficient way to describe chemical reactions.
+          This module explains the shorthand notation used to express how atoms
+          are rearranged to make new compounds during a chemical reaction. It
+          shows how balanced chemical equations convey proportions of each
+          reactant and product involved. The module traces the development of
+          chemical equations over the past four centuries as our understanding of
+          chemical processes grew. A look at chemical equations reveals that
+          nothing is lost and nothing is gained in a typical chemical
+          reaction–matter simply changes form.
+      - Id: '270'
+        Name: Stoichiometry
+        Summary: >
+          It’s nearly the start of the school year, and you’ve gathered 10 friends for an
+          end-of-semester bonfire. What would a bonfire be without s’mores? You pack supplies,
+          making sure you have enough to make one s’more for everyone.
 
-  ModuleCategory: Reactions and Changes
-    - Id: '54'
-      Name: Chemical Reactions
-      Summary: >
-        This modules explores the variety of chemical reactions by grouping them
-        into general types. We look at synthesis, decomposition, single
-        replacement, double replacement, REDOX (including combustion), and
-        acid-base reactions, with examples of each.
-    - Id: '59'
-      Name: Nuclear Chemistry
-      Summary: >
-        Beginning with the work of Marie Curie and others, this module traces
-        the development of nuclear chemistry. It describes different types of
-        radiation: alpha, beta, and gamma. The module then applies the principle
-        of half-life to radioactive decay and explains the difference between
-        nuclear fission and nuclear fusion.
-    - Id: '60'
-      Name: Carbon Chemistry
-      Summary: >
-        The chemical basis of all living organisms is linked to the way that
-        carbon bonds with other atoms. This introduction to organic chemistry
-        explains the many ways that carbon and hydrogen form bonds. Basic
-        hydrocarbon nomenclature is described, including alkanes, alkenes,
-        alkynes, and isomers. Functional groups of atoms within organic
-        molecules are discussed.
+ Subcategories:
+    
+    - Title: Reactions and Changes
+      - Id: '54'
+        Name: Chemical Reactions
+        Summary: >
+          This modules explores the variety of chemical reactions by grouping them
+          into general types. We look at synthesis, decomposition, single
+          replacement, double replacement, REDOX (including combustion), and
+          acid-base reactions, with examples of each.
+      - Id: '59'
+        Name: Nuclear Chemistry
+        Summary: >
+          Beginning with the work of Marie Curie and others, this module traces
+          the development of nuclear chemistry. It describes different types of
+          radiation: alpha, beta, and gamma. The module then applies the principle
+          of half-life to radioactive decay and explains the difference between
+          nuclear fission and nuclear fusion.
+      - Id: '60'
+        Name: Carbon Chemistry
+        Summary: >
+          The chemical basis of all living organisms is linked to the way that
+          carbon bonds with other atoms. This introduction to organic chemistry
+          explains the many ways that carbon and hydrogen form bonds. Basic
+          hydrocarbon nomenclature is described, including alkanes, alkenes,
+          alkynes, and isomers. Functional groups of atoms within organic
+          molecules are discussed.
 
 
 - Name: Earth Science
