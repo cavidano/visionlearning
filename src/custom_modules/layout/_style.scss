@@ -194,7 +194,7 @@ In this file:
 .landing {
     // border: 6px solid blue !important;
 
-    gap: var(--spacer-3);
+    // gap: var(--spacer-3);
     
     grid-template-areas:
       "main"
@@ -221,7 +221,7 @@ In this file:
 
 @include breakpoints.breakpoints-up(lg) {
     .landing {
-        grid-template-columns: 1fr 14em;
+        grid-template-columns: 1fr 16em;
 
         grid-template-areas:
             "main aside";
@@ -275,7 +275,7 @@ In this file:
 
 @include breakpoints.breakpoints-up(lg) {
     .materials {
-      grid-template-columns: 14em 1fr;
+      grid-template-columns: 16em 1fr;
     
       grid-template-areas:
           "aside main"
