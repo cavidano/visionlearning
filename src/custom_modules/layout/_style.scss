@@ -292,9 +292,30 @@ In this file:
 
   height: 100%;
   
-  [class="backdrop"]{
+  [class*="backdrop"]{
     --backdrop-fixed-height: unset;
-    outline: thick solid blue;
+  }
+
+  > *:nth-child(1) {
+    grid-area: primary;
+  }
+
+  > *:nth-child(2) {
+    grid-area: secondary;
+  }
+
+  > *:nth-child(3) {
+    grid-area: tertiary;
+  }
+
+  @include breakpoints.breakpoints-up(lg) {
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        grid-template-areas:
+            "primary primary"
+            "secondary tertiary";
   }
   
 }
