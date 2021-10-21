@@ -91,8 +91,8 @@ import "./modules/z-index";
 // Custom Modules
 //////////////////////////////////////////////
 
-import Grid from "./custom_modules/grid"; 
-new Grid();
+import Layout from "./custom_modules/layout"; 
+new Layout();
 
 import "./custom_modules/navigation";
 

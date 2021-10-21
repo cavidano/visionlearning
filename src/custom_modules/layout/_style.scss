@@ -7,8 +7,9 @@ In this file:
 // D. Grid Discipline
 // E. Discipline Banner (Modal)
 // F. Landing (Library, Glossary)
-// G. Article (Module)
-// H. Grid Global Foot
+// H. Featured Material
+// I. Article (Module)
+// J. Grid Global Foot
 
 */
 
@@ -279,6 +280,20 @@ In this file:
       grid-template-areas:
           "aside main"
     }
+}
+
+//////////////////////////////////////////////
+// H. Featured Material
+//////////////////////////////////////////////
+
+.grid--featured-material {
+  [class="backdrop"]{
+  --backdrop-fixed-height: unset;
+    
+  }
+
+  height: 100%;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 //////////////////////////////////////////////

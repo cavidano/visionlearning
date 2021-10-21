@@ -4,7 +4,7 @@ import "./_style.scss";
 // Grid
 //////////////////////////////////////////////
 
-export default class Grid {
+export default class Layout {
 
     constructor() {
 
