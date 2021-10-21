@@ -450,3 +450,33 @@
         color:var(--glossary);box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
     }
 }
+
+
+.tabs-nav {
+    
+    > li > button::before {
+        background-color: var(--dark);
+    }
+
+    &.library > li > *::before {
+        background-color: var(--library);
+    }
+
+    &.glossary > li > *::before {
+        background-color: var(--glossary);
+    }
+
+    &.classroom > li > *::before {
+        background-color: var(--classroom);
+    }
+}
+
+.tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
+    color: var(--white-link);
+}
+
+[data-logo="brand"] {
+    > svg{
+        fill: currentColor;
+    }
+}

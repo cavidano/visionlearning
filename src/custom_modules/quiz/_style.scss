@@ -78,7 +78,7 @@ ol.quiz__questions {
 
     .form-entry__option__radio > label > input:not(:checked) ~ .radio__label::before {
         opacity: 1;
-        color: var(--white-link);
+        color: var(--link-color);
     }
 
 }
