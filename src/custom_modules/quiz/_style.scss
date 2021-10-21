@@ -21,6 +21,7 @@ In this file:
 
 .quiz {
     overflow: hidden;
+
     
     button[type="submit"]{
         background-color: var(--white-link);
@@ -38,19 +39,29 @@ ol.quiz__questions {
     .form-entry__field__label {
         display: flex;
         padding: unset;
-        padding-left: calc( var(--form-field-padding-x) + 2em);
+        padding-inline-start: calc( var(--form-field-padding-x) + 2em);
+        
 
         &::before {
             counter-increment: section;                   
             content: counter(section) ".";
             position: absolute;
-            left: 0;
-            padding-left: var(--form-field-padding-x);
+            inset-inline-start: 0;
+            padding-inline-start: var(--form-field-padding-x);
         }
+    }
+
+    .form-entry__option {
+        margin-top: 0.75em;
     }
 }
 
+
 .quiz__questions {
+
+    .form-entry__option__radio {
+        font-size: 90%;
+    }
 
     .form-entry__option__radio:nth-child(1) > label > input ~ .radio__label::before {
         content: "\f13e";
