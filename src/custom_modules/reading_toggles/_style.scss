@@ -106,7 +106,6 @@ In this file:
 // D. Term Tooltip
 //////////////////////////////////////////////
 
-
 .term__tooltip {
     position: absolute;
     top:100%;
@@ -150,6 +149,8 @@ In this file:
 
 mark {
 
+    display: inline;
+
     // Practices
     --practices-hue: 240;
     --practices-saturation: 75%;
@@ -161,12 +162,37 @@ mark {
         var(--practices-lightness),
         var(--practices-alpha)
     );
+
+    // Crosscutting
+    --crosscutting-hue: 120;
+    --crosscutting-saturation: 60%;
+    --crosscutting-lightness: 40%;
+    --crosscutting-alpha: 0.25;
+    --ngss-crosscutting: hsla(
+        var(--crosscutting-hue),
+        var(--crosscutting-saturation),
+        var(--crosscutting-lightness),
+        var(--crosscutting-alpha)
+    );
+
+    // Core Ideas
+    --core-ideas-hue: 25;
+    --core-ideas-saturation: 75%;
+    --core-ideas-lightness: 50%;
+    --core-ideas-alpha: 0.25;
+    --ngss-core-ideas: hsla(
+        var(--core-ideas-hue),
+        var(--core-ideas-saturation),
+        var(--core-ideas-lightness),
+        var(--core-ideas-alpha)
+    );
+
     
 }
 
 mark {
     background-color: transparent;
-    padding: 0.075em 0.125em;
+    padding: 0.075em 0;
 
     &.highlighted {
         cursor: pointer;
@@ -184,11 +210,91 @@ mark {
                 background-color: var(--ngss-practices);
         }
 
+        &.crosscutting {
+            outline:
+                solid
+                var(--default-border-width) 
+                hsla(
+                    var(--crosscutting-hue),
+                    var(--crosscutting-saturation),
+                    var(--crosscutting-lightness),
+                    calc(var(--crosscutting-alpha)*2));
+            
+                background-color: var(--ngss-crosscutting);
+        }
+
+        &.core-ideas {
+            outline:
+                solid
+                var(--default-border-width) 
+                hsla(
+                    var(--core-ideas-hue),
+                    var(--core-ideas-saturation),
+                    var(--core-ideas-lightness),
+                    calc(var(--core-ideas-alpha)*2));
+            
+                background-color: var(--ngss-core-ideas);
+        }
+
+    }
+
+}
+
+mark.highlighted {
+    position: relative;
+
+    &::before {
+        display: inline-flex;
+        position: absolute;
+        transform: translateY(-100%);
+        padding: 0.5em 0.75em;
+        font-size: 65%;
+        margin-inline-start: calc(var(--default-border-width) * -1) ;
+        font-style: italic;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+        opacity: 0;
+
+    }
+    
+    &.practices::before {
+        content: 'Practices';
+        background-color: hsl(
+            var(--practices-hue) 
+            var(--practices-saturation)
+            var(--practices-lightness)
+        );
+    }
+
+    &.crosscutting::before {
+        content: 'Crosscutting';
+        background-color: hsl(
+            var(--crosscutting-hue) 
+            var(--crosscutting-saturation)
+            var(--crosscutting-lightness)
+        );
+    }
+
+    &.core-ideas::before {
+        content: 'Core Ideas';
+        white-space: nowrap;
+        background-color: hsl(
+            var(--core-ideas-hue) 
+            var(--core-ideas-saturation)
+            var(--core-ideas-lightness)
+        );
     }
 
     &:hover, 
     &:focus {
         --practices-alpha: 0.375;
+        --crosscutting-alpha: 0.375;
+        --core-ideas-alpha: 0.375;
+        
+        &::before {
+            opacity: 1;
+        }
     }
 
 }
