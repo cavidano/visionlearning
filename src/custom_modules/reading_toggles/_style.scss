@@ -148,12 +148,47 @@ In this file:
 // D. Term Tooltip
 //////////////////////////////////////////////
 
+mark {
 
-mark{
+    // Practices
+    --practices-hue: 240;
+    --practices-saturation: 75%;
+    --practices-lightness: 30%;
+    --practices-alpha: 0.25;
+    --ngss-practices: hsla(
+        var(--practices-hue),
+        var(--practices-saturation),
+        var(--practices-lightness),
+        var(--practices-alpha)
+    );
+    
+}
+
+mark {
     background-color: transparent;
+    padding: 0.075em 0.125em;
 
     &.highlighted {
-        background-color: yellow;
         cursor: pointer;
+
+        &.practices {
+            outline:
+                solid
+                var(--default-border-width) 
+                hsla(
+                    var(--practices-hue),
+                    var(--practices-saturation),
+                    var(--practices-lightness),
+                    calc(var(--practices-alpha)*2));
+            
+                background-color: var(--ngss-practices);
+        }
+
     }
+
+    &:hover, 
+    &:focus {
+        --practices-alpha: 0.375;
+    }
+
 }

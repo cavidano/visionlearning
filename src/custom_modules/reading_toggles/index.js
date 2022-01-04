@@ -109,8 +109,7 @@ export default class ReadingToggles {
 
         const buttonToggleNGSS = document.querySelector('[data-toggle="ngss"]');
 
-        const ngssText = document.querySelector('.ngss');
-
+        const ngssTextList = document.querySelectorAll('.ngss');
 
         if(buttonToggleNGSS) {
 
@@ -118,17 +117,34 @@ export default class ReadingToggles {
                 event.preventDefault();
 
                 buttonToggleNGSS.classList.toggle('active');
-                
-                ngssText.classList.toggle('highlighted');
 
-        const whoa = document.querySelector('.ngss.highlighted');
+                ngssTextList.forEach((mark, index) => {
+
+                    mark.classList.toggle('highlighted');
+
+                    mark.setAttribute('tabindex', index + 1);
+
+                    // if(mark.classList.contains('highlighted')){
+                    //     initTooltip(mark);
+                    // } else {
+                    //     mark.setAttribute('tabindex', 0);
+
+                    //     removeTooltip(mark);
+                    // }
+                });
+
+            });
+
+        }
+
+        function initNGSS(){
+            const whoa = document.querySelector('.ngss.highlighted');
 
             whoa.addEventListener('click', (event) => {
                 event.preventDefault();
 
                 alert('cool!')
 
-            });
             });
 
         }
