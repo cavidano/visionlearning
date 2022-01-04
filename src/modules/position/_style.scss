@@ -11,7 +11,7 @@ In this file:
 // A. Variables
 //////////////////////////////////////////////
 
-$positions: static, relative, absolute, fixed, sticky;
+$positions: static, relative, absolute, fixed;
 
 //////////////////////////////////////////////
 // B. Position Utilities
@@ -55,11 +55,7 @@ $positions: static, relative, absolute, fixed, sticky;
     inset-inline-start: 0 !important;
 }
 
-@supports (position: sticky) {
-    
-    .sticky-top {
-        position: sticky;
-        top: -1px;
-    }
-
+.position-sticky-top {
+    position: sticky;
+    inset-block-start: 0;
 }

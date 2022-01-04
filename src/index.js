@@ -55,8 +55,6 @@ import "./modules/grid";
 
 import "./modules/icons";
 
-import "./modules/language";
-
 import "./modules/links";
 
 import Modal from "./modules/modal";

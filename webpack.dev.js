@@ -6,28 +6,29 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devDir = './_tearsheet';
-const devIndex = 'ngss.html';
+// const devIndex = 'header-footer.html';
+const devIndex = 'quiz.html';
 
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'eval-cheap-source-map',
     target: 'web',
-    stats: {
-        children: false
-    },
     devServer: {
-        port: 8080,
-        contentBase: path.resolve(__dirname),
-        index: devIndex
-    }, 
+        port: 8080, 
+        hot: true,
+        open: true,
+        static: {
+            directory: path.resolve(__dirname, devDir),
+            staticOptions: {
+                index: devIndex
+            },
+        }
+    },
     module: {
         rules: [
             {
                 test: /\.m?js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                }
+                exclude: /node_modules/
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -56,7 +57,6 @@ module.exports = merge(common, {
     plugins: [
         new HtmlWebpackPlugin({
             template: `./${devDir}/${devIndex}`,
-            filename: devIndex,
             inject: 'body'
         })
     ]

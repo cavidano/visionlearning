@@ -18,7 +18,6 @@ In this file:
 ////////////////////////////////////////
 
 @use "../accents/style" as accents;
-@use "../caret/style" as caret;
 
 //////////////////////////////////////////////
 // A. Variables
@@ -36,7 +35,8 @@ In this file:
     
     --button-outline-border-width: calc( var(--default-border-width) * 2);
 
-    --button-icon-only-size: 2em;
+    --button-icon-only-size: 2.5em;
+
 }
 
 //////////////////////////////////////////////
@@ -105,7 +105,6 @@ button {
     
 }
 
-
 //////////////////////////////////////////////
 // D. Button Outline Modifier
 //////////////////////////////////////////////
@@ -133,7 +132,7 @@ button {
 
     &:not([class*="--disperse"]) {
         .button__text {
-            margin-inline: 0.25em;
+            margin-inline: 0.5em;
         }
     }
 }
@@ -158,7 +157,7 @@ button {
     height: var(--button-icon-only-size);
 
     [class*="icon-"] {
-        --icon-size: 1.125em;
+        --icon-size: 1.25em;
 
         display: flex;
     }
@@ -234,11 +233,9 @@ button {
 .button-group {
     --gap-size: var(--spacer-1);
     
-    --form-field-padding-y: 0;
     --button-padding-y: 0;
-
+    
     display: flex;
-    justify-content: center;
 
     min-height: var(--button-icon-only-size);
 
@@ -251,7 +248,7 @@ button {
 
     > [class*="button"]:not(.button--icon-only){
         min-height: 100%;
-        font-size: 80%; 
+        font-size: 80%;
     }
 
     > [class*="button"]:not(.button--icon-only) {
