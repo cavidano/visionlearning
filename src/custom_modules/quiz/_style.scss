@@ -22,7 +22,6 @@ In this file:
 .quiz {
     overflow: hidden;
 
-    
     button[type="submit"]{
         background-color: var(--white-link);
         color: white !important;
@@ -64,6 +63,7 @@ ol.quiz__questions {
     }
 
     .form-entry__option__radio:nth-child(1) > label > input ~ .radio__label::before {
+        background-color: turquoise;
         content: "\f13e";
     }
 
