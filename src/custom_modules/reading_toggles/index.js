@@ -109,13 +109,28 @@ export default class ReadingToggles {
 
         const buttonToggleNGSS = document.querySelector('[data-toggle="ngss"]');
 
+        const ngssText = document.querySelector('.ngss');
+
+
         if(buttonToggleNGSS) {
+
             buttonToggleNGSS.addEventListener('click', (event) => {
                 event.preventDefault();
 
                 buttonToggleNGSS.classList.toggle('active');
+                
+                ngssText.classList.toggle('highlighted');
+
+        const whoa = document.querySelector('.ngss.highlighted');
+
+            whoa.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                alert('cool!')
 
             });
+            });
+
         }
 
     }

@@ -106,6 +106,7 @@ In this file:
 // D. Term Tooltip
 //////////////////////////////////////////////
 
+
 .term__tooltip {
     position: absolute;
     top:100%;
@@ -141,4 +142,18 @@ In this file:
 .tooltip-header {
     font-weight: bold;
     display: block;
+}
+
+//////////////////////////////////////////////
+// D. Term Tooltip
+//////////////////////////////////////////////
+
+
+mark{
+    background-color: transparent;
+
+    &.highlighted {
+        background-color: yellow;
+        cursor: pointer;
+    }
 }

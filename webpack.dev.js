@@ -6,7 +6,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devDir = './_tearsheet';
-const devIndex = 'navigation.html';
+const devIndex = 'ngss.html';
 
 module.exports = merge(common, {
     mode: 'development',
