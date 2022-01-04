@@ -6,8 +6,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devDir = './_tearsheet';
-// const devIndex = 'header-footer.html';
-const devIndex = 'quiz.html';
+// const devIndex = 'ngss.html';
+const devIndex = 'header-footer.html';
 
 module.exports = merge(common, {
     mode: 'development',

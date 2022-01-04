@@ -1,8 +1,8 @@
 @font-face {
     font-family: "visionlearning-icons";
-    src: url("./visionlearning-icons.ttf?0678502d0738cbeb65de3d818444be06") format("truetype"),
-url("./visionlearning-icons.woff2?0678502d0738cbeb65de3d818444be06") format("woff2"),
-url("./visionlearning-icons.woff?0678502d0738cbeb65de3d818444be06") format("woff");
+    src: url("visionlearning-icons.ttf?0678502d0738cbeb65de3d818444be06") format("truetype"),
+url("visionlearning-icons.woff2?0678502d0738cbeb65de3d818444be06") format("woff2"),
+url("visionlearning-icons.woff?0678502d0738cbeb65de3d818444be06") format("woff");
 }
 
 .icon:before {
