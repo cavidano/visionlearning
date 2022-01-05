@@ -11,6 +11,39 @@ export default class ReadingToggles {
         //////////////////////////////////////////////
         // Glossary Terms
         //////////////////////////////////////////////
+
+        // const toggleGlossaryTerms = document.getElementById('toggle-highlight-glossary-terms');
+
+        // if(toggleGlossaryTerms){
+
+        //     let hoverFocusDelay;
+
+        //     const hoverFocusIn = (event) => {
+
+        //         hoverFocusDelay = setTimeout(() => { 
+
+        //             termList.forEach((term) => {
+        //                 term.classList.remove("tooltip-show");
+        //             });
+
+        //             event.target.classList.add("tooltip-show");
+                    
+        //         }, 400);
+        //     };
+
+        //     const hoverFocusOut = (event) => {
+        //         clearTimeout(hoverFocusDelay);
+        //         event.target.classList.remove("tooltip-show");
+        //     }
+        // }
+
+        // toggleGlossaryTerms.addEventListener('change', e => {
+
+        //     if(e.target.checked){
+        //         //do something
+        //     }
+        
+        // });
         
         const buttonToggleTerms = document.querySelector('[data-toggle="glossary"]');
 
@@ -123,14 +156,6 @@ export default class ReadingToggles {
                     mark.classList.toggle('highlighted');
 
                     mark.setAttribute('tabindex', index + 1);
-
-                    // if(mark.classList.contains('highlighted')){
-                    //     initTooltip(mark);
-                    // } else {
-                    //     mark.setAttribute('tabindex', 0);
-
-                    //     removeTooltip(mark);
-                    // }
                 });
 
             });
