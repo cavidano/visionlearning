@@ -43,8 +43,7 @@
   "dependencies": {
     "custom-event-polyfill": "^1.0.7",
     "element-closest-polyfill": "^1.0.2",
-    "fantasticon": "^1.2.3",
-    "file-loader": "^6.2.0"
+    "fantasticon": "^1.2.3"
   },
   "main": "webpack.config.js",
   "browserslist": [

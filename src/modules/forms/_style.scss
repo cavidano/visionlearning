@@ -535,9 +535,8 @@ legend {
 .option__label {
 
     &::before {
-        @extend %icon-font-vars;
         @extend .icon_font;
-
+        
         position: absolute;
         inset-block-start: 0;
         inset-inline-start: 0;
@@ -559,7 +558,7 @@ legend {
 // Option Radio
 
 .form-entry__option__radio > label > input ~ .option__label::before {
-    content: "\f138";
+    content: "\f145";
 }
 
 .form-entry__option__radio > label > input:checked ~ .option__label::before {

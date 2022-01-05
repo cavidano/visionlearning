@@ -147,7 +147,13 @@ In this file:
 // D. Term Tooltip
 //////////////////////////////////////////////
 
-:root{
+:root {
+
+}
+
+mark {
+
+    display: inline;
 
     // Practices
     --practices-hue: 240;
@@ -184,13 +190,6 @@ In this file:
         var(--core-ideas-lightness),
         var(--core-ideas-alpha)
     );
-}
-
-mark {
-
-    display: inline;
-
-
     
 }
 

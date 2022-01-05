@@ -55,39 +55,37 @@ ol.quiz__questions {
     }
 }
 
-
 .quiz__questions {
 
     .form-entry__option__radio {
         font-size: 90%;
     }
 
-    .form-entry__option__radio:nth-child(1) > label > input ~ .radio__label::before {
-        background-color: turquoise;
+    .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
         content: "\f13e";
     }
 
-    .form-entry__option__radio:nth-child(2) > label > input ~ .radio__label::before {
+    .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
         content: "\f13f";
     }
 
-    .form-entry__option__radio:nth-child(3) > label > input ~ .radio__label::before {
+    .form-entry__option__radio:nth-child(3) > label > input ~ .option__label::before {
         content: "\f140";
     }
 
-    .form-entry__option__radio:nth-child(4) > label > input ~ .radio__label::before {
+    .form-entry__option__radio:nth-child(4) > label > input ~ .option__label::before {
         content: "\f142";
     }
 
-    .form-entry__option__radio:nth-child(5) > label > input ~ .radio__label::before {
+    .form-entry__option__radio:nth-child(5) > label > input ~ .option__label::before {
         content: "\f143";
     }
 
-    .form-entry__option__radio > label > input:checked ~ .radio__label::before {
+    .form-entry__option__radio > label > input:checked ~ .option__label::before {
         content: "\f141";
     }
 
-    .form-entry__option__radio > label > input:not(:checked) ~ .radio__label::before {
+    .form-entry__option__radio > label > input:not(:checked) ~ .option__label::before {
         opacity: 1;
         color: var(--link-color);
     }
@@ -142,13 +140,13 @@ ol.quiz__questions {
     > span {
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.075;
+
         display: flex;
         align-items: center;
         justify-content: center;
         
         width: var(--button--icon-only-size);
         height: var(--button--icon-only-size);
-
 
         margin-right: 0.5em;
     }
