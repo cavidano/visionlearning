@@ -148,17 +148,22 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-
-}
-
-mark {
-
-    display: inline;
-
-    // Practices
     --practices-hue: 240;
     --practices-saturation: 75%;
     --practices-lightness: 30%;
+
+    --crosscutting-hue: 120;
+    --crosscutting-saturation: 60%;
+    --crosscutting-lightness: 40%;
+
+    --core-ideas-hue: 25;
+    --core-ideas-saturation: 75%;
+    --core-ideas-lightness: 50%;
+}
+
+mark.ngss {
+
+    // Practices
     --practices-alpha: 0.25;
     --ngss-practices: hsla(
         var(--practices-hue),
@@ -168,9 +173,6 @@ mark {
     );
 
     // Crosscutting
-    --crosscutting-hue: 120;
-    --crosscutting-saturation: 60%;
-    --crosscutting-lightness: 40%;
     --crosscutting-alpha: 0.25;
     --ngss-crosscutting: hsla(
         var(--crosscutting-hue),
@@ -180,9 +182,6 @@ mark {
     );
 
     // Core Ideas
-    --core-ideas-hue: 25;
-    --core-ideas-saturation: 75%;
-    --core-ideas-lightness: 50%;
     --core-ideas-alpha: 0.25;
     --ngss-core-ideas: hsla(
         var(--core-ideas-hue),
@@ -190,75 +189,81 @@ mark {
         var(--core-ideas-lightness),
         var(--core-ideas-alpha)
     );
+
+    display: inline;
+
+    background-color: transparent;
     
+    padding: 0.075em 0;
 }
 
-mark {
-    background-color: transparent;
-    padding: 0.075em 0;
+mark.ngss.highlighted {
+    position: relative;
 
-    &.highlighted {
-        cursor: pointer;
+    cursor: pointer;
 
-        &.practices {
-            outline:
-                solid
-                var(--default-border-width) 
-                hsla(
-                    var(--practices-hue),
-                    var(--practices-saturation),
-                    var(--practices-lightness),
-                    calc(var(--practices-alpha)*2));
-            
-                background-color: var(--ngss-practices);
-        }
-
-        &.crosscutting {
-            outline:
-                solid
-                var(--default-border-width) 
-                hsla(
-                    var(--crosscutting-hue),
-                    var(--crosscutting-saturation),
-                    var(--crosscutting-lightness),
-                    calc(var(--crosscutting-alpha)*2));
-            
-                background-color: var(--ngss-crosscutting);
-        }
-
-        &.core-ideas {
-            outline:
-                solid
-                var(--default-border-width) 
-                hsla(
-                    var(--core-ideas-hue),
-                    var(--core-ideas-saturation),
-                    var(--core-ideas-lightness),
-                    calc(var(--core-ideas-alpha)*2));
-            
-                background-color: var(--ngss-core-ideas);
-        }
-
+    &.practices {
+        outline:
+            solid
+            var(--default-border-width) 
+            hsla(
+                var(--practices-hue),
+                var(--practices-saturation),
+                var(--practices-lightness),
+                calc(var(--practices-alpha)*2));
+        
+        background-color: var(--ngss-practices);
     }
 
-}
+    &.crosscutting {
+        outline:
+            solid
+            var(--default-border-width) 
+            hsla(
+                var(--crosscutting-hue),
+                var(--crosscutting-saturation),
+                var(--crosscutting-lightness),
+                calc(var(--crosscutting-alpha)*2)
+            );
+        
+        background-color: var(--ngss-crosscutting);
+    }
 
-mark.highlighted {
-    position: relative;
+    &.core-ideas {
+        outline:
+            solid
+            var(--default-border-width) 
+            hsla(
+                var(--core-ideas-hue),
+                var(--core-ideas-saturation),
+                var(--core-ideas-lightness),
+                calc(var(--core-ideas-alpha)*2)
+            );
+        
+        background-color: var(--ngss-core-ideas);
+    }
 
     &::before {
         display: inline-flex;
+
         position: absolute;
+        
         transform: translateY(-100%);
+        
+        margin-inline-start: calc(var(--default-border-width) * -1);
+
         padding: 0.5em 0.75em;
+        
         font-size: 65%;
-        margin-inline-start: calc(var(--default-border-width) * -1) ;
         font-style: italic;
         font-weight: 700;
         text-transform: uppercase;
+        
         color: white;
+
         opacity: 0;
 
+        transition: opacity 0.125s ease-in;
     }
     
     &.practices::before {
@@ -303,6 +308,7 @@ mark.highlighted {
 }
 
 .ngss-description {
+    display: none;
     position: fixed;
     top: var(--spacer-2);
     right: var(--spacer-2);
