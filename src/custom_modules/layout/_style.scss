@@ -327,7 +327,7 @@ In this file:
 .article {
     display: grid;
 
-    gap: var(--spacer-2);
+    // gap: var(--spacer-2);
     
     grid-template-areas:
         "head"
@@ -355,6 +355,10 @@ In this file:
 .article__main {
     // border: 6px solid tan !important;
     // background: tan !important;
+
+    position: relative;
+
+    z-index: 2500;
     
     grid-area: main;
 
@@ -456,7 +460,7 @@ In this file:
 
 .grid--module-helper {
 
-  gap: var(--spacer-1);
+  gap: var(--default-border-width);
 
   .button--toggle-terms {
     grid-area: terms;
