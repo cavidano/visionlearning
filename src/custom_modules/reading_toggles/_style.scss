@@ -147,9 +147,7 @@ In this file:
 // D. Term Tooltip
 //////////////////////////////////////////////
 
-mark {
-
-    display: inline;
+:root{
 
     // Practices
     --practices-hue: 240;
@@ -186,6 +184,12 @@ mark {
         var(--core-ideas-lightness),
         var(--core-ideas-alpha)
     );
+}
+
+mark {
+
+    display: inline;
+
 
     
 }
@@ -291,10 +295,28 @@ mark.highlighted {
         --practices-alpha: 0.375;
         --crosscutting-alpha: 0.375;
         --core-ideas-alpha: 0.375;
-        
+
         &::before {
             opacity: 1;
         }
     }
 
+}
+
+.ngss-description {
+    position: fixed;
+    top: var(--spacer-2);
+    right: var(--spacer-2);
+    padding: var(--spacer-3);
+    font-size: var(--font-size-md);
+
+    border-radius: 0.25em;
+
+    min-width: 200px;
+    max-width: 300px;
+    background-color: hsl(
+        var(--crosscutting-hue) 
+        var(--crosscutting-saturation)
+        var(--crosscutting-lightness)
+    );
 }
