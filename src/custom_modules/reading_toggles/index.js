@@ -163,7 +163,7 @@ export default class ReadingToggles {
             });
 
         }
-        
+
         //////////////////////////////////////////////
         // NGSS v2
         //////////////////////////////////////////////
@@ -200,9 +200,16 @@ export default class ReadingToggles {
                             });
 
                             const ngssDescHTML = (`
-                                <p class="ngss-desc-block__text" data-ngss-cat="${ngssCat}">
-                                    ${ngssText ? ngssText : 'Purple Montain Majesty'}
-                                </p>
+                                <article class="ngss-desc-block__text" data-ngss-cat="${ngssCat}">
+                                    <p class="font-size-md text-transform-uppercase margin-bottom-1">
+                                        <strong>
+                                            ${ngssCat}
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        ${ngssText ? ngssText : 'That is not good.'}
+                                    </p>
+                                </article>
                             `);
 
                             ngssDescBlock.insertAdjacentHTML('beforeend', ngssDescHTML);

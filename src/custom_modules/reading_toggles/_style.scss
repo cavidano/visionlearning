@@ -144,7 +144,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. Term Tooltip
+// D. NGSS
 //////////////////////////////////////////////
 
 :root {
@@ -202,7 +202,7 @@ mark.ngss.highlighted {
 
     cursor: pointer;
 
-    &[data-ngss-cat="practices"] {
+    &[data-ngss-cat="Practices"] {
         outline:
             solid
             var(--default-border-width) 
@@ -215,7 +215,7 @@ mark.ngss.highlighted {
         background-color: var(--ngss-practices);
     }
 
-    &[data-ngss-cat="crosscutting"] {
+    &[data-ngss-cat="Crosscutting"] {
         outline:
             solid
             var(--default-border-width) 
@@ -229,7 +229,7 @@ mark.ngss.highlighted {
         background-color: var(--ngss-crosscutting);
     }
 
-    &[data-ngss-cat="core-ideas"] {
+    &[data-ngss-cat="Core Ideas"] {
         outline:
             solid
             var(--default-border-width) 
@@ -264,10 +264,12 @@ mark.ngss.highlighted {
         opacity: 0;
 
         transition: opacity 0.125s ease-in;
+
+        content: attr(data-ngss-cat);
+        white-space: nowrap;
     }
     
-    &[data-ngss-cat="practices"]::before {
-        content: 'Practices';
+    &[data-ngss-cat="Practices"]::before {
         background-color: hsl(
             var(--practices-hue) 
             var(--practices-saturation)
@@ -275,8 +277,7 @@ mark.ngss.highlighted {
         );
     }
 
-    &[data-ngss-cat="crosscutting"]::before {
-        content: 'Crosscutting';
+    &[data-ngss-cat="Crosscutting"]::before {
         background-color: hsl(
             var(--crosscutting-hue) 
             var(--crosscutting-saturation)
@@ -284,9 +285,7 @@ mark.ngss.highlighted {
         );
     }
 
-    &[data-ngss-cat="core-ideas"]::before {
-        content: 'Core Ideas';
-        white-space: nowrap;
+    &[data-ngss-cat="Core Ideas"]::before {
         background-color: hsl(
             var(--core-ideas-hue) 
             var(--core-ideas-saturation)
@@ -322,7 +321,7 @@ mark.ngss.highlighted {
 
     padding: var(--spacer-2);
 
-    &[data-ngss-cat="practices"]{
+    &[data-ngss-cat="Practices"]{
         background-color: hsl(
             var(--practices-hue) 
             var(--practices-saturation)
@@ -330,7 +329,7 @@ mark.ngss.highlighted {
         );
     }
 
-    &[data-ngss-cat="crosscutting"]{
+    &[data-ngss-cat="Crosscutting"]{
         background-color: hsl(
             var(--crosscutting-hue) 
             var(--crosscutting-saturation)
@@ -338,7 +337,7 @@ mark.ngss.highlighted {
         );
     }
 
-    &[data-ngss-cat="core-ideas"]{
+    &[data-ngss-cat="Core Ideas"]{
         background-color: hsl(
             var(--core-ideas-hue) 
             var(--core-ideas-saturation)
