@@ -140,6 +140,7 @@ export default class ReadingToggles {
         // NGSS
         //////////////////////////////////////////////
 
+
         const buttonToggleNGSS = document.querySelector('[data-toggle="ngss"]');
 
         const ngssTextList = document.querySelectorAll('.ngss');
@@ -147,6 +148,7 @@ export default class ReadingToggles {
         if(buttonToggleNGSS) {
 
             buttonToggleNGSS.addEventListener('click', (event) => {
+
                 event.preventDefault();
 
                 buttonToggleNGSS.classList.toggle('active');
@@ -162,17 +164,77 @@ export default class ReadingToggles {
 
         }
 
-        function initNGSS(){
-            const whoa = document.querySelector('.ngss.highlighted');
+        // function initNGSS(){
+        //     const whoa = document.querySelector('.ngss.highlighted');
 
-            whoa.addEventListener('click', (event) => {
-                event.preventDefault();
+        //     whoa.addEventListener('click', (event) => {
+        //         event.preventDefault();
 
-                alert('cool!')
+        //         alert('cool!')
 
+        //     });
+
+        // }
+
+        //////////////////////////////////////////////
+        // NGSS v2
+        //////////////////////////////////////////////
+
+        const switchToggleNGSS = document.getElementById('toggle-highlight-ngss');
+        const noteNGSS = document.getElementById('note-highlight-ngss');
+
+        const ngssDescription = document.querySelector('.ngss-description');
+
+        // const 
+
+        if(switchToggleNGSS) {
+
+            switchToggleNGSS.addEventListener('change', (e) => {
+
+                const highlightTerms = e.target.checked;
+
+                if(highlightTerms === true) {
+
+                    ngssTextList.forEach((mark, index) => {
+
+                        mark.classList.add('highlighted');
+
+                        mark.setAttribute('tabindex', index + 1);
+
+                        mark.addEventListener('click', () => {
+
+                            ngssDescription.classList.toggle('shown');
+                        })
+                    });
+
+                } else {
+
+                    ngssTextList.forEach((mark, index) => {
+
+                        mark.classList.remove('highlighted');
+
+                        mark.setAttribute('tabindex', -1);
+                    });
+
+                }
+
+        
             });
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
     }
 }
