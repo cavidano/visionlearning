@@ -1,4 +1,4 @@
-import "./_style.scss";
+import './_style.scss';
 
 //////////////////////////////////////////////
 // Reading Toggles
@@ -163,37 +163,24 @@ export default class ReadingToggles {
             });
 
         }
-
-        // function initNGSS(){
-        //     const whoa = document.querySelector('.ngss.highlighted');
-
-        //     whoa.addEventListener('click', (event) => {
-        //         event.preventDefault();
-
-        //         alert('cool!')
-
-        //     });
-
-        // }
-
+        
         //////////////////////////////////////////////
         // NGSS v2
         //////////////////////////////////////////////
 
-        const switchToggleNGSS = document.getElementById('toggle-highlight-ngss');
-        const noteNGSS = document.getElementById('note-highlight-ngss');
+        const ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
 
-        const ngssDescription = document.querySelector('.ngss-description');
+        const ngssDescBlock = document.querySelector('.ngss-desc-block');
 
         // const 
 
-        if(switchToggleNGSS) {
+        if(ngssToggleSwitch) {
 
-            switchToggleNGSS.addEventListener('change', (e) => {
+            ngssToggleSwitch.addEventListener('change', (e) => {
 
-                const highlightTerms = e.target.checked;
+                const highlightNGSS = e.target.checked;
 
-                if(highlightTerms === true) {
+                if(highlightNGSS === true) {
 
                     ngssTextList.forEach((mark, index) => {
 
@@ -203,13 +190,29 @@ export default class ReadingToggles {
 
                         mark.addEventListener('click', () => {
 
-                            ngssDescription.classList.toggle('shown');
+                            const ngssCat = mark.getAttribute('data-ngss-cat');
+                            const ngssText = mark.getAttribute('data-ngss');
+
+                            let oldNGSSDesc = ngssDescBlock.querySelectorAll('.ngss-desc-block__text');
+
+                            oldNGSSDesc.forEach((desc) => {
+                                desc.remove();
+                            });
+
+                            const ngssDescHTML = (`
+                                <p class="ngss-desc-block__text" data-ngss-cat="${ngssCat}">
+                                    ${ngssText ? ngssText : 'Purple Montain Majesty'}
+                                </p>
+                            `);
+
+                            ngssDescBlock.insertAdjacentHTML('beforeend', ngssDescHTML);
+
                         })
                     });
 
                 } else {
 
-                    ngssTextList.forEach((mark, index) => {
+                    ngssTextList.forEach((mark) => {
 
                         mark.classList.remove('highlighted');
 
@@ -217,24 +220,10 @@ export default class ReadingToggles {
                     });
 
                 }
-
         
             });
 
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-        
+        }       
 
     }
 }
