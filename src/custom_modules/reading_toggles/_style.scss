@@ -7,142 +7,20 @@ In this file:
 
 */
 
-//////////////////////////////////////////////
-// A. Toggle Buttons
-//////////////////////////////////////////////
 
-// .button--toggle-terms,
-// .button--toggle-ngss {
-//     --button-border-radius: 0;
+.module-tools {
 
-//     &.active {
+    // outline: 2px solid blue;
 
-//         &::before {
-//             display: none;
-//         }
-        
-//         color: white;
-        
-//         text-shadow: 0 0 2px hsla(0, 0%, 0%, 0.15);
-//     }
-// }
+    button[aria-selected="true"] {
 
-// .button--toggle-terms {
-//     --subtle-fill-opacity: 0.12 !important;
-// }
+    background-color: white !important;
 
-// .button--toggle-terms {
-//     color: var(--glossary);
+    &::before{display: none;}
+    color: var(--white-link);
 
-//     &.active {
-//         background-color: var(--glossary);
-//     }
-// }
-
-// .button--toggle-ngss {
-//     --subtle-fill-opacity: 0.0825 !important;
-    
-//     color: var(--primary);
-
-//     &.active {
-//         background-color: var(--primary);
-//     }
-// }
-
-//////////////////////////////////////////////
-// B. Term 
-//////////////////////////////////////////////
-
-.term {
-    position: relative;
-    display: inline-block;
-
-    &::before,
-    &::after {
-        position: absolute;
-        content: "";
-        right: var(--padding-x);
-        left: var(--padding-x);
-
-        background-color: var(--glossary);
-
-        transition: opacity 0.2s ease-in;
-
-        opacity: 0;
-    }
-
-    &::before {
-        top: 0;
-        bottom: 0;
-        z-index: 0;
-    }
-
-    &::after {
-        bottom: 0;
-
-        height: 2px;
     }
 }
-
-//////////////////////////////////////////////
-// C. Term Highlighted
-//////////////////////////////////////////////
-
-.term.highlighted {
-    --padding-x: -0.15em;
-
-    cursor: pointer;
-
-    &::before {
-        opacity: 0.2;
-    }
-
-    &::after {
-        opacity: 1;
-    }
-}
-
-//////////////////////////////////////////////
-// D. Term Tooltip
-//////////////////////////////////////////////
-
-.term__tooltip {
-    position: absolute;
-    top:100%;
-
-    left: var(--padding-x);
-
-    margin-top: 0.5em;
-
-    background-color: var(--glossary);
-    background-color: hsl(117, 40%, 35%);
-
-    color: white;
-
-    font-size: var(--font-size-md);
-
-    padding: 0.25em 0.5em;
-
-    min-width: 200px;
-    max-width: 200px;
-
-    display: none;
-
-    filter: drop-shadow(0.25em 0.25em 0.5em hsla(0, 0%, 0%, 0.375));
-    z-index: 20000;
-}
-
-.tooltip-show {
-    .term__tooltip{
-        display: block;
-    }
-}
-
-.tooltip-header {
-    font-weight: bold;
-    display: block;
-}
-
 //////////////////////////////////////////////
 // D. NGSS
 //////////////////////////////////////////////
@@ -159,12 +37,26 @@ In this file:
     --core-ideas-hue: 25;
     --core-ideas-saturation: 75%;
     --core-ideas-lightness: 50%;
+
+    --term-highlight-hue: 123;
+    --term-highlight-saturation:43%;
+    --term-highlight-lightness:56%;
 }
 
+mark.term,
 mark.ngss {
 
+    // Term Highlight
+    --term-highlight-alpha: 0.375;
+    --term-highlight: hsla(
+        var(--term-highlight-hue),
+        var(--term-highlight-saturation),
+        var(--term-highlight-lightness),
+        var(--term-highlight-alpha)
+    );
+
     // Practices
-    --practices-alpha: 0.20;
+    --practices-alpha: 0.2;
     --ngss-practices: hsla(
         var(--practices-hue),
         var(--practices-saturation),
@@ -190,6 +82,7 @@ mark.ngss {
         var(--core-ideas-alpha)
     );
 
+
     display: inline;
 
     padding-block: 0.075em;
@@ -199,12 +92,36 @@ mark.ngss {
     transition: background-color 0.125s;
 }
 
+
+mark.term.highlighted,
 mark.ngss.highlighted {
-    position: relative;
 
     cursor: pointer;
 
     outline: solid var(--default-border-width) transparent;
+}
+
+mark.term.highlighted {
+
+    outline-color:
+        hsla(
+            var(--term-highlight-hue),
+            var(--term-highlight-saturation),
+            var(--term-highlight-lightness),
+            calc(var(--term-highlight-alpha)*2)
+        );
+    
+    background-color: var(--term-highlight);
+
+    &:hover, 
+    &:focus {
+        --term-highlight-alpha: 0.675;
+    }
+}
+
+
+mark.ngss.highlighted {
+    position: relative;
     
     &[data-ngss-cat="Practices"] {
         outline-color:
@@ -355,18 +272,4 @@ mark.ngss.highlighted {
         );
     }
 
-}
-
-.module-tools {
-
-    // outline: 2px solid blue;
-
-    button[aria-selected="true"] {
-
-    background-color: white !important;
-
-    &::before{display: none;}
-    color: var(--white-link);
-
-    }
 }
