@@ -11,8 +11,15 @@ export default class ReadingToggles {
         const ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
         const ngssTextList = document.querySelectorAll('.ngss');
 
+        const ngssDescBlock = document.querySelector('.ngss-desc-block');
+
+
         const termsToggleSwitch = document.getElementById('terms-toggle-switch');
         const termsList = document.querySelectorAll('.term');
+
+        const termDefBlock = document.querySelector('.term-def-block');
+
+        
 
         const turnOnNGSS = () => {
 
@@ -103,37 +110,36 @@ export default class ReadingToggles {
 
                 term.setAttribute('tabindex', index + 1);
 
-                // mark.addEventListener('click', () => {
+                term.addEventListener('click', () => {
 
-                //     const ngssCat = mark.getAttribute('data-ngss-cat');
-                //     const ngssText = mark.getAttribute('data-ngss');
+                    const termText = term.getAttribute('data-term-def');
 
-                //     let oldNGSSDesc = ngssDescBlock.querySelectorAll('.ngss-desc-block__text');
+                    let oldTermDef = termDefBlock.querySelectorAll('.ngss-desc-block__text');
 
-                //     oldNGSSDesc.forEach((desc) => {
-                //         desc.remove();
-                //     });
+                    oldTermDef.forEach((desc) => {
+                        desc.remove();
+                    });
 
-                //     const ngssDescHTML = (`
-                //         <article class="ngss-desc-block__text box-shadow-1" data-ngss-cat="${ngssCat}" aria-polite="live">
-                //             <p class="font-size-md text-transform-uppercase margin-bottom-1">
-                //                 <strong>
-                //                     <em>${ngssCat}</em>
-                //                 </strong>
-                //             </p>
-                //             <p>
-                //                 ${ngssText ? ngssText : 'That is not good.'}
-                //             </p>
-                //         </article>
-                //     `);
+                    const ngssDescHTML = (`
+                        <article class="ngss-desc-block__text theme-primary glossary box-shadow-1" aria-polite="live">
+                            <p class="font-size-md text-transform-uppercase margin-bottom-1">
+                                <strong>
+                                    <em>Glossary Term</em>
+                                </strong>
+                            </p>
+                            <p>
+                                ${termText ? termText : 'That is not good.'}
+                            </p>
+                        </article>
+                    `);
 
-                //     ngssDescBlock.insertAdjacentHTML('beforeend', ngssDescHTML);
+                    termDefBlock.insertAdjacentHTML('beforeend', ngssDescHTML);
 
-                //     let ngssDescBlockText = ngssDescBlock.querySelector('.ngss-desc-block__text');
+                    let termDefBlockText = termDefBlock.querySelector('.ngss-desc-block__text');
 
-                //     setTimeout(() => {ngssDescBlockText.classList.add('shown')}, 20);
+                    setTimeout(() => {termDefBlockText.classList.add('shown')}, 20);
 
-                // });
+                });
 
             });
         }
@@ -166,10 +172,6 @@ export default class ReadingToggles {
         //////////////////////////////////////////////
         // NGSS
         //////////////////////////////////////////////
-
-        const ngssDescBlock = document.querySelector('.ngss-desc-block');
-
-        // const 
 
         if(ngssToggleSwitch) {
 
