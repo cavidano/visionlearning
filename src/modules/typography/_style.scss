@@ -3,15 +3,15 @@
 In this file:
 
 // A. Modules
-// Cool
 // B. Variables
 // C. Font Weight Utilities
 // D. Font Size Utilities
 // E. Headers
 // F. Body Selectors
 // G. Text Align Utilities
-// H. Word Wrap Utilities
-// I. Truncate Text
+// H. Text Transform Utilities
+// I. Word Wrap Utilities
+// J. Truncate Text Utility
 
 */
 
@@ -294,7 +294,23 @@ figure {
 }
 
 //////////////////////////////////////////////
-// H. Word Wrap Utilities
+// H. Text Transform Utilities
+//////////////////////////////////////////////
+
+.text-transform-capitalize {
+    text-transform: capitalize;
+}
+
+.text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.text-transform-lowercase {
+    text-transform: lowercase;
+}
+
+//////////////////////////////////////////////
+// I. Word Wrap Utilities
 //////////////////////////////////////////////
 
 .nowrap {
@@ -302,19 +318,15 @@ figure {
 }
 
 .break-word {
-    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 ////////////////////////////////////////
-// I. Truncate Text
+// J. Truncate Text Utility
 ////////////////////////////////////////
 
 .truncate-text {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.text-decoration-none {
-    text-decoration: none !important;
 }

@@ -200,7 +200,7 @@ export default class ReadingToggles {
                             });
 
                             const ngssDescHTML = (`
-                                <article class="ngss-desc-block__text" data-ngss-cat="${ngssCat}">
+                                <article class="ngss-desc-block__text box-shadow-1" data-ngss-cat="${ngssCat}" aria-polite="live">
                                     <p class="font-size-md text-transform-uppercase margin-bottom-1">
                                         <strong>
                                             ${ngssCat}
@@ -214,6 +214,11 @@ export default class ReadingToggles {
 
                             ngssDescBlock.insertAdjacentHTML('beforeend', ngssDescHTML);
 
+                            let ngssDescBlockText = ngssDescBlock.querySelector('.ngss-desc-block__text');
+
+                            setTimeout(() => {ngssDescBlockText.classList.add('shown')}, 20);
+
+
                         })
                     });
 
@@ -224,6 +229,14 @@ export default class ReadingToggles {
                         mark.classList.remove('highlighted');
 
                         mark.setAttribute('tabindex', -1);
+
+                        let oldNGSSDesc = ngssDescBlock.querySelectorAll('.ngss-desc-block__text');
+
+                        oldNGSSDesc.forEach((desc) => {
+                            desc.remove();
+                        });
+
+
                     });
 
                 }

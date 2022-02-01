@@ -307,13 +307,23 @@ mark.ngss.highlighted {
 }
 
 .ngss-desc-block {
-
     // &:not(.shown) {
     //     display: none;
     // }
 }
 
 .ngss-desc-block__text {
+
+  transition: all 0.375s ease-in-out;
+  
+  opacity: 0.75;
+
+  margin-block-start: 2em;
+
+  &.shown{
+      opacity: 1;
+      margin-block-start: 0;
+  }
 
     border-radius: 0.25em;
 
@@ -347,12 +357,7 @@ mark.ngss.highlighted {
 
 }
 
-
-//
-
 .module-tools {
-
-
 
     // outline: 2px solid blue;
 
@@ -363,6 +368,3 @@ mark.ngss.highlighted {
 
     }
 }
-
-
-
