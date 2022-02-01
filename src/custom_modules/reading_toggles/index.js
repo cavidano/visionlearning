@@ -17,9 +17,7 @@ export default class ReadingToggles {
         const termsToggleSwitch = document.getElementById('terms-toggle-switch');
         const termsList = document.querySelectorAll('.term');
 
-        const termDefBlock = document.querySelector('.term-def-block');
-
-        
+        const termDefBlock = document.querySelector('.toggle-detail-container');
 
         const turnOnNGSS = () => {
 
@@ -93,11 +91,11 @@ export default class ReadingToggles {
 
                 term.setAttribute('tabindex', -1);
 
-                // let oldNGSSDesc = ngssDescBlock.querySelectorAll('.ngss-desc-block__text');
+                let oldTermDef = termDefBlock.querySelectorAll('.toggle-detail-container__text');
 
-                // oldNGSSDesc.forEach((desc) => {
-                //     desc.remove();
-                // });
+                oldTermDef.forEach((desc) => {
+                    desc.remove();
+                });
 
             });
         }
@@ -112,25 +110,36 @@ export default class ReadingToggles {
 
                 term.addEventListener('click', () => {
 
-                    const termText = term.getAttribute('data-term-def');
+                    const termTitle = term.innerHTML.toString();
 
-                    let oldTermDef = termDefBlock.querySelectorAll('.ngss-desc-block__text');
+                    const termDef = term.getAttribute('data-term-def');
+
+                    let oldTermDef = termDefBlock.querySelectorAll('.toggle-detail-container__text');
 
                     oldTermDef.forEach((desc) => {
                         desc.remove();
                     });
 
                     const ngssDescHTML = (`
-                        <article class="ngss-desc-block__text theme-primary glossary box-shadow-1" aria-polite="live">
-                            <p class="font-size-md text-transform-uppercase margin-bottom-1">
-                                <strong>
-                                    <em>Glossary Term</em>
-                                </strong>
-                            </p>
-                            <p>
-                                ${termText ? termText : 'That is not good.'}
-                            </p>
-                        </article>
+                        <article
+                            class="card theme-glossary border border-radius toggle-detail-container__text"
+                            aria-polite="live"
+                            style="--card-padding-x: var(--spacer-1);--card-padding-y: var(--spacer-2);">
+
+                            <div class="card__head border-bottom">
+                                <strong>Glossary Term</strong>
+                            </div>
+                        
+                            <div class="card__body theme-white">
+                                <h2 class="h6">
+                                    ${termTitle}
+                                </h2>
+                                <p>
+                                    ${termDef ? termDef : 'That is not good.'}
+                                </p>
+                            </div>
+                        
+                        </article>                        
                     `);
 
                     termDefBlock.insertAdjacentHTML('beforeend', ngssDescHTML);

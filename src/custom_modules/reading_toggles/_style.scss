@@ -229,17 +229,19 @@ mark.ngss.highlighted {
     // }
 }
 
+
+
 .ngss-desc-block__text {
 
-  transition: all 0.375s ease-in-out;
+  transition: opacity, transform 0.175s ease-in-out;
   
-  opacity: 0.75;
+  opacity: 0.5;
 
-  margin-block-start: 2em;
+  transform: translateY(5%);
 
   &.shown {
-      opacity: 1;
-      margin-block-start: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 
     border-radius: 0.25em;
