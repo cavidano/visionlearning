@@ -164,7 +164,7 @@ In this file:
 mark.ngss {
 
     // Practices
-    --practices-alpha: 0.25;
+    --practices-alpha: 0.20;
     --ngss-practices: hsla(
         var(--practices-hue),
         var(--practices-saturation),
@@ -173,7 +173,7 @@ mark.ngss {
     );
 
     // Crosscutting
-    --crosscutting-alpha: 0.25;
+    --crosscutting-alpha: 0.2;
     --ngss-crosscutting: hsla(
         var(--crosscutting-hue),
         var(--crosscutting-saturation),
@@ -182,7 +182,7 @@ mark.ngss {
     );
 
     // Core Ideas
-    --core-ideas-alpha: 0.25;
+    --core-ideas-alpha: 0.20;
     --ngss-core-ideas: hsla(
         var(--core-ideas-hue),
         var(--core-ideas-saturation),
@@ -192,9 +192,11 @@ mark.ngss {
 
     display: inline;
 
+    padding-block: 0.075em;
+    
     background-color: transparent;
     
-    padding: 0.075em 0;
+    transition: background-color 0.125s;
 }
 
 mark.ngss.highlighted {
@@ -202,23 +204,22 @@ mark.ngss.highlighted {
 
     cursor: pointer;
 
+    outline: solid var(--default-border-width) transparent;
+    
     &[data-ngss-cat="Practices"] {
-        outline:
-            solid
-            var(--default-border-width) 
+        outline-color:
             hsla(
                 var(--practices-hue),
                 var(--practices-saturation),
                 var(--practices-lightness),
-                calc(var(--practices-alpha)*2));
+                calc(var(--practices-alpha)*2)
+            );
         
         background-color: var(--ngss-practices);
     }
 
     &[data-ngss-cat="Crosscutting"] {
-        outline:
-            solid
-            var(--default-border-width) 
+        outline-color:
             hsla(
                 var(--crosscutting-hue),
                 var(--crosscutting-saturation),
@@ -230,9 +231,7 @@ mark.ngss.highlighted {
     }
 
     &[data-ngss-cat="Core Ideas"] {
-        outline:
-            solid
-            var(--default-border-width) 
+        outline-color:
             hsla(
                 var(--core-ideas-hue),
                 var(--core-ideas-saturation),
@@ -266,6 +265,7 @@ mark.ngss.highlighted {
         transition: opacity 0.125s ease-in;
 
         content: attr(data-ngss-cat);
+
         white-space: nowrap;
     }
     
@@ -320,7 +320,7 @@ mark.ngss.highlighted {
 
   margin-block-start: 2em;
 
-  &.shown{
+  &.shown {
       opacity: 1;
       margin-block-start: 0;
   }

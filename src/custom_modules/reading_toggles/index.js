@@ -203,7 +203,7 @@ export default class ReadingToggles {
                                 <article class="ngss-desc-block__text box-shadow-1" data-ngss-cat="${ngssCat}" aria-polite="live">
                                     <p class="font-size-md text-transform-uppercase margin-bottom-1">
                                         <strong>
-                                            ${ngssCat}
+                                            <em>${ngssCat}</em>
                                         </strong>
                                     </p>
                                     <p>
@@ -217,7 +217,6 @@ export default class ReadingToggles {
                             let ngssDescBlockText = ngssDescBlock.querySelector('.ngss-desc-block__text');
 
                             setTimeout(() => {ngssDescBlockText.classList.add('shown')}, 20);
-
 
                         })
                     });
