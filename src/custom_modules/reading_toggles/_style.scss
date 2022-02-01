@@ -11,43 +11,43 @@ In this file:
 // A. Toggle Buttons
 //////////////////////////////////////////////
 
-.button--toggle-terms,
-.button--toggle-ngss {
-    --button-border-radius: 0;
+// .button--toggle-terms,
+// .button--toggle-ngss {
+//     --button-border-radius: 0;
 
-    &.active {
+//     &.active {
 
-        &::before {
-            display: none;
-        }
+//         &::before {
+//             display: none;
+//         }
         
-        color: white;
+//         color: white;
         
-        text-shadow: 0 0 2px hsla(0, 0%, 0%, 0.15);
-    }
-}
+//         text-shadow: 0 0 2px hsla(0, 0%, 0%, 0.15);
+//     }
+// }
 
-.button--toggle-terms {
-    --subtle-fill-opacity: 0.12 !important;
-}
+// .button--toggle-terms {
+//     --subtle-fill-opacity: 0.12 !important;
+// }
 
-.button--toggle-terms {
-    color: var(--glossary);
+// .button--toggle-terms {
+//     color: var(--glossary);
 
-    &.active {
-        background-color: var(--glossary);
-    }
-}
+//     &.active {
+//         background-color: var(--glossary);
+//     }
+// }
 
-.button--toggle-ngss {
-    --subtle-fill-opacity: 0.0825 !important;
+// .button--toggle-ngss {
+//     --subtle-fill-opacity: 0.0825 !important;
     
-    color: var(--primary);
+//     color: var(--primary);
 
-    &.active {
-        background-color: var(--primary);
-    }
-}
+//     &.active {
+//         background-color: var(--primary);
+//     }
+// }
 
 //////////////////////////////////////////////
 // B. Term 
@@ -363,8 +363,10 @@ mark.ngss.highlighted {
 
     button[aria-selected="true"] {
 
-    background-color: var(--dark);
-    color: var(--dark-text);
+    background-color: white !important;
+
+    &::before{display: none;}
+    color: var(--white-link);
 
     }
 }

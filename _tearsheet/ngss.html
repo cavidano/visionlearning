@@ -9,59 +9,388 @@
         <title>NGSS • Tearsheet</title>
 
         <!-- Natura11y Icons -->
-        <link rel="stylesheet" href="../lib/icons/visionlearning-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning/lib/icons/visionlearning-icons.css">
 
     </head>
 
     <body>
 
-        <div class="ngss-desc-blockription">
+        <main>
 
-        <p>
-            Using mathematics and computational thinking: Newton used a quantitative relationship between physcial variables to make a prediction about Earth.
-        </p>
-        
-        </div>
+            <article class="article wide">
 
-        <main class="overflow-hidden">
+                <header class="article__head padding-y-3">
 
-            <div class="container narrow margin-y-5">
+                    <div class="container text-align-center">
+                        <span class="font-size-md">
+                            <strong>
+                                <em>Plate Tectonics</em>
+                            </strong>
+                        </span>
+                        <h1 class="font-weight-normal" style="font-size: 48px">
+                            Earth Structure: A Virtual Journey to the Center of Earth
+                        </h1>
+                        <p class="font-size-sm">
+                            by Anne E. Egger, Ph.D.
+                        </p>
+                    </div>
+
+                </header>
+
+                <div class="article__audio flex-column justify-content-end">
+
+                    <audio
+                        class="width-100 margin-y-2"
+                        controls
+                        src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                    </audio>
                 
-                <div class="grid grid--column-2 gap-1 font-size-md margin-y-1">
-
-                    <button class="button button--has-icon button--toggle-terms" data-toggle="glossary">
-                        <span class="icon icon-glossary-highlight button__icon"></span>
-                        <span class="button__text">Glossary Terms</span>
-                    </button>
-
-                    <button class="button button--has-icon button--toggle-ngss" data-toggle="ngss">
-                        <span class="icon icon-ngss button__icon"></span>
-                        <span class="button__text">NGSS</span>
-                    </button>
-
                 </div>
 
-            </div>
+                <div class="article__main border-top box-shadow-1">
 
-            <section class="margin-y-5">
+                    <div class="tabs">
+                    
+                        <div class="container narrow font-size-md">
 
-                <div class="container narrow">
-                    <h2>
-                        Evidence about Earth's interior
-                    </h2>
-                    <p>
-                        Isaac Newton was one of the first scientists to theorize about the structure of Earth. <mark class="ngss practices">Based on his studies of the force of gravity, Newton calculated the average density of Earth and found it to be more than twice the density of the rocks near the surface.</mark><mark class="ngss practices">From these results, Newton realized that the interior of Earth had to be much denser than the surface rocks.</mark> His findings excluded the possibility of a cavernous, fiery underworld inhabited by the dead, but still left many questions unanswered. <mark class="ngss practices">Where does the denser material begin?</mark> How does the composition differ from surface rocks?
-                    </p>
-                    <p>
-                        Volcanic vents like Shiprock occasionally bring up pieces of Earth from as deep as 150 km, but these rocks are rare, and we have little hope of taking Jules Verne's Journey to the Center of the Earth. <mark class="ngss core-ideas">Instead, much of our knowledge about the internal structure of the Earth comes from remote observations – specifically, from observations of earthquakes</mark>.
-                    </p>
-                    <p>
-                        Earthquakes can be extremely destructive for humans, but they provide a wealth of information about Earth's interior. <mark class="ngss crosscutting">This is because every earthquake sends out an array of seismic waves in all directions, similar to the way that throwing a stone into a pond sends out waves through the water. Observing the behavior of these seismic waves as they travel through the Earth gives us insight into the materials the waves move through</mark>.
-                    </p>
+                            <ul class="tabs-nav tabs-nav--horizontal library">
+                                <li>
+                                    <button
+                                        id="module-tab-button-reading"
+                                        aria-controls="module-tab-panel-reading"
+                                        aria-selected="true"
+                                        role="tab">
+                                            Reading
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                            Quiz
+                                    </button>
+                                </li>
+                                <li>
+                                    <button>
+                                        Resources
+                                    </button>
+                                </li>
+                            </ul>
+                            
+                        </div>
+
+                        <div
+                            class="tabs__panel shown"
+                            id="module-tab-panel-reading"
+                            aria-labelledby="module-tab-button-reading"
+                            role="tabpanel">
+                                
+                            <section>
+
+                                <div class="container narrow">
+                                    <h2 class="screen-reader-only">
+                                        Introduction
+                                    </h2>
+                                    <p>
+                                        The deepest places on Earth are in South Africa, where mining companies have excavated 3.5 km into Earth to extract gold. No one has seen deeper into Earth than the South African miners because the heat and pressure felt at these depths prevents humans from going much deeper. Yet Earth's radius is 6,370 km – how do we begin to know what is below the thin skin of the Earth when we cannot see it?
+                                    </p>
+                                </div>
+
+                            </section>
+
+                            <hr>
+
+                            <section>
+
+                                <div class="container narrow">
+                                    <h2>
+                                        Evidence about Earth's interior
+                                    </h2>
+                                    <p>
+                                        Isaac Newton was one of the first scientists to theorize about the structure of Earth. <mark class="ngss" data-ngss-cat="Practices" data-ngss="Using mathematics and computational thinking: Newton used a quantitative relationship between physical variables to make a prediction about Earth.">Based on his studies of the force of gravity, Newton calculated the average density of Earth and found it to be more than twice the density of the rocks near the surface.</mark><mark class="ngss" data-ngss-cat="Practices" data-ngss="Analyzing and interpreting data; constructing explanations: Newton's mathematical prediction did not match reality, which required him to develop a new explanation based on the data.">From these results, Newton realized that the interior of Earth had to be much denser than the surface rocks.</mark> His findings excluded the possibility of a cavernous, fiery underworld inhabited by the dead, but still left many questions unanswered. <mark class="ngss" data-ngss-cat="Practices" data-ngss="Asking questions: These are the kinds of questions that we ask about Earth's interior that guide further research.">Where does the denser material begin?</mark> How does the composition differ from surface rocks?
+                                    </p>
+                                    <p>
+                                        Volcanic vents like Shiprock occasionally bring up pieces of Earth from as deep as 150 km, but these rocks are rare, and we have little hope of taking Jules Verne's Journey to the Center of the Earth. Instead, much of our knowledge about the internal structure of the Earth comes from remote observations – specifically, from observations of earthquakes.
+                                    </p>
+                                    <p>
+                                        Earthquakes can be extremely destructive for humans, but they provide a wealth of information about Earth's interior. <mark class="ngss" data-ngss-cat="Crosscutting" data-ngss="PS4.A Grades 9-12: Geologists use seismic waves and their reflections at interfaces between layers to probe structures deep in the planet.">This is because every earthquake sends out an array of seismic waves in all directions, similar to the way that throwing a stone into a pond sends out waves through the water. Observing the behavior of these seismic waves as they travel through the Earth gives us insight into the materials the waves move through</mark>.
+                                    </p>
+                                </div>
+
+                            </section>
+
+                            <hr>
+
+                            <section>
+
+                                <div class="container narrow">
+                                    <h2>
+                                        Seismic waves
+                                    </h2>
+                                    <p>
+                                        An earthquake occurs when rocks in a fault zone suddenly slip past each other, releasing stress that has built up over time. The slippage releases seismic energy, which is dissipated through two kinds of waves, P-waves and S-waves. The distinction between these two waves is easy to picture with a stretched-out Slinky®. If you push on one end, a compression wave passes through the Slinky® parallel to its length (see P-waves video). If instead you move one end up and down rapidly, a "ripple" wave moves through the Slinky® (see S-waves video). The compression waves are P-waves, and the ripple waves are S-waves.
+                                    </p>
+                                    <p>
+                                        <mark class="ngss core-ideas" data-ngss-cat="Core Ideas" data-ngss="PS4.A Grades 9-12: Geologists use seismic waves and their reflections at interfaces between layers to probe structures deep in the planet.">Both kinds of waves can reflect off of boundaries between different materials: They can also refract, or bend, when they cross a boundary into a different material. But the two types of waves behave differently depending on the composition of the material they are passing through. One of the biggest differences is that S-waves cannot travel through liquids whereas P-waves can.</mark> We feel the arrival of the P- and S-waves at a given location as a ground-shaking earthquake.
+                                    </p>
+                                    <p>
+                                        <mark class="ngss core-ideas" data-ngss-cat="Core Ideas" data-ngss="Developing and using models: Models can be conceptual, in order to conduct a thought experiment, as in this case.">If Earth were the same composition all the way through its interior,</mark> seismic waves would radiate outward from their source (an earthquake) and behave exactly as other waves behave – taking longer to travel further and dying out in velocity and strength with distance, a process called attenuation (See Figure 1).
+                                    </p>
+                                    <p>
+                                        Given Newton's observations, if we assume Earth's density increases evenly with depth because of the overlying pressure, wave velocity will also increase with depth and the waves will continuously refract, traveling along curved paths back towards the surface. Figure 1 shows the kind of pattern we would expect to see in this case. By the early 1900s, when seismographs were installed worldwide, it quickly became clear that Earth could not possibly be so simple.
+                                    </p>
+                                </div>
+
+                            </section>
+
+                        </div>
+                        <!-- .tap-panel -->
+
+                    </div>
+                    <!-- .tabs -->
+
                 </div>
-                <!-- .container -->
+                <!-- .article__main -->
 
-            </section>
+                <aside class="article__did-you-know">
+
+                    <div class="container padding-y-3 font-size-md theme-dark">
+
+                        <h6 class="text-color-library">Did you know?</h6>
+                        
+                        <p>
+                            Did you know that although earthquakes can be very destructive, they provide a wealth of information about Earth's interior? Miners, geologists, and others have always wondered what lies below the surface of Earth, but heat and pressure make it impossible to explore deep into its interior. However, seismic waves produced by earthquakes reveal the structure and composition of our planet.
+                        </p>
+                        
+                    </div>
+                
+                </aside>
+
+                <div class="article__sidebar theme-light">
+
+                    <div class="position-sticky-top">
+
+                        <div class="tabs module-tools" role="tablist">
+
+                            <nav class="button-group padding-1">
+                            
+                                <button
+                                    class="button button--icon-only"
+                                    id="tab-button-example-01"
+                                    aria-controls="tab-panel-example-01"
+                                    aria-selected="true"
+                                    role="tab">
+                                        <span class="icon icon-list" aria-hidden="true"></span>
+                                </button>
+
+                                <button
+                                    class="button button--has-icon flex-grow-1"
+                                    id="tab-button-example-02"
+                                    aria-controls="tab-panel-example-02"
+                                    aria-selected="false"
+                                    role="tab">
+                                        <span class="icon icon-glossary-highlight"></span>
+                                        <span class="button__text">Terms</span>
+                                </button>
+                                <button
+                                    class="button button--has-icon flex-grow-1"
+                                    id="tab-button-example-03"
+                                    aria-controls="tab-panel-example-03"
+                                    aria-selected="false"
+                                    role="tab">
+                                        <span class="icon icon-ngss"></span>
+                                        <span class="button__text">NGSS</span>
+                                </button>
+                            </nav>
+
+                            <div
+                                class="tabs__panel shown"
+                                id="tab-panel-example-01"
+                                aria-labelledby="tab-button-example-01"
+                                role="tabpanel">
+                                <div class="padding-y-2">
+                                    <div class="accordion font-size-md">
+
+                                        <button
+                                            class="accordion__button"
+                                            id="acc-button-key-concepts"
+                                            data-toggle="accordion"
+                                            aria-controls="acc-panel-key-concepts"
+                                            aria-expanded="true">
+                                                Key Concepts
+                                        </button>
+
+                                        <div 
+                                            class="accordion__panel show"
+                                            id="acc-panel-key-concepts"
+                                            data-accordion="panel"
+                                            aria-labelledby="acc-button-key-concepts"
+                                            role="region">
+                                                <div class="accordion__panel__content">
+                                                    <ul class="list-bulleted">
+                                                        <li>
+                                                        <p>
+                                                            Cells are the basic structural and functional unit of all living things and contain inheritable genetic material.
+                                                        </p>
+                                                        </li>
+                                                        <li>
+                                                            The activity of a cell is carried out by the sub-cellular structures it possesses.
+                                                        </li>
+                                                        <li>
+                                                            Cells possess an outer boundary layer, called a cell membrane, cytoplasm, which contains organelles, and genetic material.
+                                                        </li>
+                                                        <li>
+                                                            There is considerable variety among living cells, including the function of membranes and subcellular
+                                                            structures, and the different types of functions the cells carry out, such as chemical transport, support, and other functions.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+
+                                        <button
+                                            class="accordion__button"
+                                            id="acc-button-terms-you-should-know"
+                                            data-toggle="accordion"
+                                            aria-controls="acc-panel-terms-you-should-know"
+                                            aria-expanded="false">
+                                                Terms you should know
+                                        </button>
+
+                                        <div 
+                                            class="accordion__panel"
+                                            id="acc-panel-terms-you-should-know"
+                                            data-accordion="panel"
+                                            aria-labelledby="acc-button-terms-you-should-know"
+                                            role="region">
+                                                <div class="accordion__panel__content">
+
+                                                    <dl>
+                                                        <dt>
+                                                            <a href="#1">boundary</a>
+                                                        </dt>
+                                                        <dd>
+                                                            a line or limit that divides one area from another
+                                                        </dd>
+
+                                                        <dt>
+                                                            <a href="#1">dense</a>
+                                                        </dt>
+                                                        <dd>
+                                                            compact, packed close together, having a high mass in relation to volume
+                                                        </dd>
+
+                                                        <dt>
+                                                            <a href="#1">wave</a>
+                                                        </dt>
+                                                        <dd>
+                                                            a motion of rising and falling in curves; undulation
+                                                        </dd>
+                                                    </dl>
+
+                                                </div>
+                                        </div>
+
+                                        <button
+                                            class="accordion__button"
+                                            id="acc-button-table-of-contents"
+                                            data-toggle="accordion"
+                                            aria-controls="acc-panel-table-of-contents"
+                                            aria-expanded="false">
+                                                Table of Contents
+                                        </button>
+
+                                        <div 
+                                            class="accordion__panel"
+                                            id="acc-panel-table-of-contents"
+                                            data-accordion="panel"
+                                            aria-labelledby="acc-button-table-of-contents"
+                                            role="region">
+                                                <div class="accordion__panel__content">
+
+                                                    <ul class="nav">
+                                                        <li>
+                                                            <a href="#1">
+                                                                Evidence about Earth's interior
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- .accordion -->
+                                </div>
+                            </div>
+
+                            <div
+                                class="tabs__panel"
+                                id="tab-panel-example-02"
+                                aria-labelledby="tab-button-example-02"
+                                role="tabpanel">
+                                <div class="container padding-y-2">
+
+                                    <div class="form-entry__option__switch">
+
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                name="singleOption"
+                                                id="toggle-highlight-glossary-terms"
+                                                value="option">
+                                                <span class="switch__slider"></span>
+                                                <span class="option__label text-decoration-none font-size-md">
+                                                    Highlight Terms in Reading
+                                                </span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="tabs__panel"
+                                id="tab-panel-example-03"
+                                aria-labelledby="tab-button-example-02"
+                                role="tabpanel">
+                                <div class="container padding-y-2">
+
+                                    <div class="form-entry__option__switch">
+
+                                        <label>
+                                            <input
+                                                type="checkbox"
+                                                name="singleOption2"
+                                                id="ngss-toggle-switch"
+                                                value="option">
+                                                <span class="switch__slider"></span>
+                                                <span class="option__label text-decoration-none font-size-md">
+                                                    Show NGSS Annotations
+                                                </span>
+                                        </label>
+
+                                    </div>
+
+                                    <hr class="margin-y-3" />
+
+                                    <div class="ngss-desc-block font-size-md">
+                                    
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+                    
+                    </div>
+
+                </div>
+                <!-- .article__main -->
+
+            </article>
 
         </main>
 
