@@ -8,17 +8,20 @@ In this file:
 */
 
 
-.module-tools {
+.in-this-module {
+    > nav > button:not([aria-selected="true"]) {
 
-    // outline: 2px solid blue;
+    color: var(--white-link);
+    }
 
     button[aria-selected="true"] {
 
+        opacity: 1;
+
     background-color: white !important;
 
+        color: var(--dark);
     &::before{display: none;}
-    color: var(--white-link);
-
     }
 }
 //////////////////////////////////////////////
@@ -81,7 +84,6 @@ mark.ngss {
         var(--core-ideas-lightness),
         var(--core-ideas-alpha)
     );
-
 
     display: inline;
 
@@ -223,32 +225,33 @@ mark.ngss.highlighted {
 
 }
 
-.ngss-desc-block {
-    // &:not(.shown) {
-    //     display: none;
-    // }
-}
+.reading-toggle-detail {
+
+    --padding-x: 1em;
+    --padding-y: 0.75em;
+
+    transition: opacity, transform 0.175s ease-in-out;
+    
+    opacity: 0.5;
+
+    transform: translateY(1em);
 
 
+    border-radius: 0.5em;
 
-.ngss-desc-block__text {
+    &.shown {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-  transition: opacity, transform 0.175s ease-in-out;
-  
-  opacity: 0.5;
+    &[data-term-definition]{
+        background-color: hsl(
+            var(--term-highlight-hue) 
+            var(--term-highlight-saturation)
+            var(--term-highlight-lightness)
+        );
 
-  transform: translateY(5%);
-
-  &.shown {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-    border-radius: 0.25em;
-
-    color: white;
-
-    padding: var(--spacer-2);
+    }
 
     &[data-ngss-cat="Practices"]{
         background-color: hsl(
@@ -274,4 +277,19 @@ mark.ngss.highlighted {
         );
     }
 
+    > [class*="__head"] {
+        font-weight: var(--body-font-weight-bold);
+        color: white;
+    }
+
+    > [class*="__head"],
+    > [class*="__body"] {
+        padding: var(--padding-y) var(--padding-x);
+    }
+
+}
+
+.reading-toggle-detail__body {
+    padding: var(--padding-y) var(--padding-x);
+    background-color: hsla(100, 100%, 100%, 0.875);
 }

@@ -7,17 +7,33 @@ import './_style.scss';
 export default class ReadingToggles {
 
     constructor() {
+
+        // NGSS
         
         const ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
         const ngssTextList = document.querySelectorAll('.ngss');
 
-        const ngssDescBlock = document.querySelector('.ngss-desc-block');
+        const ngssDescContainer = document.querySelector('.ngss-desc-container');
 
+        // Terms
 
         const termsToggleSwitch = document.getElementById('terms-toggle-switch');
         const termsList = document.querySelectorAll('.term');
 
-        const termDefBlock = document.querySelector('.toggle-detail-container');
+        const termDefContainer = document.querySelector('.term-def-container');
+
+        const removeOldDetails = () => {
+
+            let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
+
+            if(oldDetailList.length > 0) {
+
+                oldDetailList.forEach((item) => {
+                    item.remove();
+                });
+            }
+
+        }
 
         const turnOnNGSS = () => {
 
@@ -30,32 +46,35 @@ export default class ReadingToggles {
                 mark.addEventListener('click', () => {
 
                     const ngssCat = mark.getAttribute('data-ngss-cat');
-                    const ngssText = mark.getAttribute('data-ngss');
+                    const ngssDesc = mark.getAttribute('data-ngss');
 
-                    let oldNGSSDesc = ngssDescBlock.querySelectorAll('.ngss-desc-block__text');
-
-                    oldNGSSDesc.forEach((desc) => {
-                        desc.remove();
-                    });
+                    removeOldDetails();
 
                     const ngssDescHTML = (`
-                        <article class="ngss-desc-block__text box-shadow-1" data-ngss-cat="${ngssCat}" aria-polite="live">
-                            <p class="font-size-md text-transform-uppercase margin-bottom-1">
-                                <strong>
-                                    <em>${ngssCat}</em>
-                                </strong>
-                            </p>
-                            <p>
-                                ${ngssText ? ngssText : 'That is not good.'}
-                            </p>
-                        </article>
+
+                        <article
+                            class="reading-toggle-detail"
+                            aria-polite="live"
+                            data-ngss-cat="${ngssCat}">
+
+                            <div class="reading-toggle-detail__head">
+                                ${ngssCat}
+                            </div>
+
+                            <div class="reading-toggle-detail__body">
+                                <p>
+                                    ${ngssDesc ? ngssDesc : 'That is not good.'}
+                                </p>
+                            </div>
+                        
+                        </article>      
                     `);
 
-                    ngssDescBlock.insertAdjacentHTML('beforeend', ngssDescHTML);
+                    ngssDescContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
 
-                    let ngssDescBlockText = ngssDescBlock.querySelector('.ngss-desc-block__text');
+                    let ngssDescContainerText = ngssDescContainer.querySelector('.reading-toggle-detail');
 
-                    setTimeout(() => {ngssDescBlockText.classList.add('shown')}, 20);
+                    setTimeout(() => {ngssDescContainerText.classList.add('shown')}, 20);
 
                 });
 
@@ -72,7 +91,7 @@ export default class ReadingToggles {
 
                 mark.setAttribute('tabindex', -1);
 
-                let oldNGSSDesc = ngssDescBlock.querySelectorAll('.ngss-desc-block__text');
+                let oldNGSSDesc = ngssDescContainer.querySelectorAll('.reading-toggle-detail');
 
                 oldNGSSDesc.forEach((desc) => {
                     desc.remove();
@@ -91,11 +110,7 @@ export default class ReadingToggles {
 
                 term.setAttribute('tabindex', -1);
 
-                let oldTermDef = termDefBlock.querySelectorAll('.toggle-detail-container__text');
-
-                oldTermDef.forEach((desc) => {
-                    desc.remove();
-                });
+                removeOldDetails();
 
             });
         }
@@ -114,23 +129,19 @@ export default class ReadingToggles {
 
                     const termDef = term.getAttribute('data-term-def');
 
-                    let oldTermDef = termDefBlock.querySelectorAll('.toggle-detail-container__text');
-
-                    oldTermDef.forEach((desc) => {
-                        desc.remove();
-                    });
+                    removeOldDetails();
 
                     const ngssDescHTML = (`
                         <article
-                            class="card theme-glossary border border-radius toggle-detail-container__text"
+                            class="reading-toggle-detail"
                             aria-polite="live"
-                            style="--card-padding-x: var(--spacer-1);--card-padding-y: var(--spacer-2);">
+                            data-term-definition>
 
-                            <div class="card__head border-bottom">
+                            <div class="reading-toggle-detail__head">
                                 <strong>Glossary Term</strong>
                             </div>
                         
-                            <div class="card__body theme-white">
+                            <div class="reading-toggle-detail__body">
                                 <h2 class="h6">
                                     ${termTitle}
                                 </h2>
@@ -142,11 +153,11 @@ export default class ReadingToggles {
                         </article>                        
                     `);
 
-                    termDefBlock.insertAdjacentHTML('beforeend', ngssDescHTML);
+                    termDefContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
 
-                    let termDefBlockText = termDefBlock.querySelector('.ngss-desc-block__text');
+                    let termDefContainerText = termDefContainer.querySelector('.reading-toggle-detail');
 
-                    setTimeout(() => {termDefBlockText.classList.add('shown')}, 20);
+                    setTimeout(() => {termDefContainerText.classList.add('shown')}, 20);
 
                 });
 
