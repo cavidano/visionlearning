@@ -45,7 +45,7 @@ $base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "He
     --body-font-weight-medium: 600;
     --body-font-weight-bold: 700;
 
-    --body-font-size: 20px;
+    --body-font-size: 22px;
     --body-line-height: 1.5;
 
     // Font Sizes
@@ -89,6 +89,7 @@ $font-weights: (
 
 @each $key, $value in $font-weights {
     .font-weight-#{$key} {
+        @warn $key;
         font-weight: #{$value};
     }
 }
@@ -213,21 +214,23 @@ body {
 }
 
 p, 
-p ~ ul:not([class]),
-p ~ ol:not([class]) {
+p ~ ul,
+p ~ ol {
     &:not(:last-child){
         margin-block-end: var(--paragraph-margin-bottom);
     }
 }
 
-ul:not([class]),
-ol:not([class]) {
+.list-bulleted,
+p ~ ul,
+p ~ ol {
     li {
         margin-block-end: var(--spacer-1);
     }
 }
 
-ul:not([class]) {
+.list-bulleted,
+p ~ ul {
     --list-item-padding: 1em;
 
     li {
@@ -235,7 +238,7 @@ ul:not([class]) {
     }
 }
 
-ol:not([class]) {
+ol:not(.quiz__questions) {
     --list-item-padding: 2em;
 
     list-style: none;
