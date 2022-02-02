@@ -7,7 +7,7 @@ import './_style.scss';
 export default class ReadingToggles {
 
     constructor() {
-
+        
         // NGSS
         
         const ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
@@ -24,11 +24,11 @@ export default class ReadingToggles {
 
         const removeOldDetails = () => {
 
-            console.log("Carl, you can do this!!")
-
-            let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
+            const oldDetailList = document.querySelectorAll('.reading-toggle-detail');
 
             if(oldDetailList.length > 0) {
+
+            console.log("Remove ==> ", oldDetailList)
 
                 oldDetailList.forEach((item) => {
                     item.remove();
@@ -94,6 +94,8 @@ export default class ReadingToggles {
                 mark.setAttribute('tabindex', -1);
 
             });
+
+            removeOldDetails();
         }
 
         const turnOnTerms = () => {
@@ -109,10 +111,10 @@ export default class ReadingToggles {
                     const termTitle = term.innerHTML.toString();
 
                     const termDef = term.getAttribute('data-term-def');
-
+                        
                     removeOldDetails();
 
-                    const ngssDescHTML = (`
+                    const termDefHTML = (`
                         <article
                             class="reading-toggle-detail"
                             aria-polite="live"
@@ -134,11 +136,13 @@ export default class ReadingToggles {
                         </article>                        
                     `);
 
-                    termDefContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
+                    termDefContainer.insertAdjacentHTML('beforeend', termDefHTML);
+
+                    console.log("Carl, you can do this!!", termTitle, termDefContainer);
 
                     let termDefContainerText = termDefContainer.querySelector('.reading-toggle-detail');
 
-                    setTimeout(() => {termDefContainerText.classList.add('shown')}, 20);
+                    setTimeout(() => {termDefContainerText.classList.add('shown')}, 100);
 
                 });
 
@@ -156,6 +160,8 @@ export default class ReadingToggles {
                 term.setAttribute('tabindex', -1);
 
             });
+
+            removeOldDetails();
         }
 
         //////////////////////////////////////////////
@@ -195,7 +201,7 @@ export default class ReadingToggles {
 
                 if(highlightNGSS === true) {
 
-                    if(termsToggleSwitch) {
+                    if(termsToggleSwitch.checked === true) {
                         turnOffTerms();
                     }
 

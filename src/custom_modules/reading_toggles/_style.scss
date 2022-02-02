@@ -93,13 +93,16 @@ mark.ngss {
     background-color: transparent;
     
     transition: background-color 0.125s;
+    
+    pointer-events: none;
 }
 
 
 mark.term.highlighted,
 mark.ngss.highlighted {
-
     cursor: pointer;
+
+    pointer-events: auto;
 
     outline: solid var(--default-border-width) transparent;
 }
