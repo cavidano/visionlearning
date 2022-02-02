@@ -22,13 +22,14 @@ export default class ReadingToggles {
 
         const termDefContainer = document.querySelector('.term-def-container');
 
+        let handleNGSSClick;
+        let handleTermClick;
+
         const removeOldDetails = () => {
 
-            const oldDetailList = document.querySelectorAll('.reading-toggle-detail');
+            let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
 
             if(oldDetailList.length > 0) {
-
-            console.log("Remove ==> ", oldDetailList)
 
                 oldDetailList.forEach((item) => {
                     item.remove();
@@ -39,16 +40,16 @@ export default class ReadingToggles {
 
         const turnOnNGSS = () => {
 
-            ngssTextList.forEach((mark, index) => {
+            ngssTextList.forEach((ngss, index) => {
 
-                mark.classList.add('highlighted');
+                ngss.classList.add('highlighted');
 
-                mark.setAttribute('tabindex', index + 1);
+                ngss.setAttribute('tabindex', index + 1);
 
-                mark.addEventListener('click', () => {
+                handleNGSSClick = () => {
 
-                    const ngssCat = mark.getAttribute('data-ngss-cat');
-                    const ngssDesc = mark.getAttribute('data-ngss-desc');
+                    const ngssCat = ngss.getAttribute('data-ngss-cat');
+                    const ngssDesc = ngss.getAttribute('data-ngss-desc');
 
                     removeOldDetails();
 
@@ -78,7 +79,9 @@ export default class ReadingToggles {
 
                     setTimeout(() => {ngssDescContainerText.classList.add('shown')}, 20);
 
-                });
+                }
+
+                ngss.addEventListener('click', handleNGSSClick, true);
 
             });
         }
@@ -87,11 +90,13 @@ export default class ReadingToggles {
 
             ngssToggleSwitch.checked = false;
 
-            ngssTextList.forEach((mark) => {
+            ngssTextList.forEach((ngss) => {
 
-                mark.classList.remove('highlighted');
+                ngss.classList.remove('highlighted');
 
-                mark.setAttribute('tabindex', -1);
+                ngss.setAttribute('tabindex', -1);
+
+                ngss.removeEventListener('click', handleNGSSClick, true);
 
             });
 
@@ -106,7 +111,7 @@ export default class ReadingToggles {
 
                 term.setAttribute('tabindex', index + 1);
 
-                term.addEventListener('click', () => {
+                handleTermClick = () => {
 
                     const termTitle = term.innerHTML.toString();
 
@@ -142,9 +147,10 @@ export default class ReadingToggles {
 
                     let termDefContainerText = termDefContainer.querySelector('.reading-toggle-detail');
 
-                    setTimeout(() => {termDefContainerText.classList.add('shown')}, 100);
+                    setTimeout(() => {termDefContainerText.classList.add('shown')}, 20);
+                }
 
-                });
+                term.addEventListener('click', handleTermClick);
 
             });
         }
@@ -158,6 +164,8 @@ export default class ReadingToggles {
                 term.classList.remove('highlighted');
 
                 term.setAttribute('tabindex', -1);
+
+                term.removeEventListener('click', handleTermClick);
 
             });
 
