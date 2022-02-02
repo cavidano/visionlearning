@@ -7,23 +7,24 @@ In this file:
 
 */
 
-
 .in-this-module {
-    > nav > button:not([aria-selected="true"]) {
 
-    color: var(--white-link);
+    > nav > button:not([aria-selected="true"]) {
+        color: var(--white-link);
     }
 
     button[aria-selected="true"] {
 
         opacity: 1;
 
-    background-color: white !important;
-
         color: var(--dark);
-    &::before{display: none;}
+    
+        &::before {
+            display: none;
+        }
     }
 }
+
 //////////////////////////////////////////////
 // D. NGSS
 //////////////////////////////////////////////
@@ -226,7 +227,6 @@ mark.ngss.highlighted {
 }
 
 .reading-toggle-detail {
-
     --padding-x: 1em;
     --padding-y: 0.75em;
 
@@ -235,7 +235,6 @@ mark.ngss.highlighted {
     opacity: 0.5;
 
     transform: translateY(1em);
-
 
     border-radius: 0.5em;
 
