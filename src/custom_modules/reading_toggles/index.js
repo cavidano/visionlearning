@@ -46,7 +46,7 @@ export default class ReadingToggles {
                 mark.addEventListener('click', () => {
 
                     const ngssCat = mark.getAttribute('data-ngss-cat');
-                    const ngssDesc = mark.getAttribute('data-ngss');
+                    const ngssDesc = mark.getAttribute('data-ngss-desc');
 
                     removeOldDetails();
 
