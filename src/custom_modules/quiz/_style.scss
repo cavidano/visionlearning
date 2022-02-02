@@ -124,8 +124,10 @@ ol.quiz__questions {
 }
 
 .comprehension-checkpoint__header {
-    border-radius: var(--form-field-border-radius, 0.25em);
+
     overflow: hidden;
+
+    border-radius: var(--form-field-border-radius, 0.25em);
 
     @extend %subtle-fill-psuedo;
     --subtle-fill-opacity: 0.075;
@@ -135,8 +137,8 @@ ol.quiz__questions {
 
     color: var(--primary);
 
-    margin-left: calc(var(--button--icon-only-size) * -1);
-
+    margin-inline-start: calc(var(--button-icon-only-size) * -1);
+    
     > span {
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.075;
@@ -145,8 +147,8 @@ ol.quiz__questions {
         align-items: center;
         justify-content: center;
         
-        width: var(--button--icon-only-size);
-        height: var(--button--icon-only-size);
+        width: var(--button-icon-only-size);
+        height: var(--button-icon-only-size);
 
         margin-right: 0.5em;
     }
@@ -154,5 +156,4 @@ ol.quiz__questions {
     > span > [class*="icon"] {
         font-size: 1.5em;
     }
-
 }
