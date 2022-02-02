@@ -24,6 +24,8 @@ export default class ReadingToggles {
 
         const removeOldDetails = () => {
 
+            console.log("Carl, you can do this!!")
+
             let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
 
             if(oldDetailList.length > 0) {
@@ -91,27 +93,6 @@ export default class ReadingToggles {
 
                 mark.setAttribute('tabindex', -1);
 
-                let oldNGSSDesc = ngssDescContainer.querySelectorAll('.reading-toggle-detail');
-
-                oldNGSSDesc.forEach((desc) => {
-                    desc.remove();
-                });
-
-            });
-        }
-
-        const turnOffTerms = () => {
-
-            termsToggleSwitch.checked = false;
-
-            termsList.forEach((term) => {
-
-                term.classList.remove('highlighted');
-
-                term.setAttribute('tabindex', -1);
-
-                removeOldDetails();
-
             });
         }
 
@@ -164,6 +145,19 @@ export default class ReadingToggles {
             });
         }
 
+        const turnOffTerms = () => {
+
+            termsToggleSwitch.checked = false;
+
+            termsList.forEach((term) => {
+
+                term.classList.remove('highlighted');
+
+                term.setAttribute('tabindex', -1);
+
+            });
+        }
+
         //////////////////////////////////////////////
         // Terms
         //////////////////////////////////////////////
@@ -201,14 +195,11 @@ export default class ReadingToggles {
 
                 if(highlightNGSS === true) {
 
-                    // Turn Terms Toggle Off
-
                     if(termsToggleSwitch) {
-                        termsToggleSwitch.checked = false;
+                        turnOffTerms();
                     }
 
                     turnOnNGSS();
-                    turnOffTerms();
 
                 } else {
                     turnOffNGSS();
