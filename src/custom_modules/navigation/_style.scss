@@ -93,10 +93,14 @@
     ul {
         list-style: none;
         line-height: normal;
+        padding: initial;
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
     }
 
     li {
-        width: calc(100% / 3);
+        margin-inline-start: unset !important;
     }
 
     a {
