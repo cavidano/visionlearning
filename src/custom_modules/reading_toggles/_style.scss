@@ -280,7 +280,7 @@ mark.ngss.highlighted {
         );
     }
 
-    > [class*="__head"] {
+    &:not(.glossary-term) > [class*="__head"] {
         font-weight: var(--body-font-weight-bold);
         color: white;
     }

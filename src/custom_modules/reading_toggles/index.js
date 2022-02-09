@@ -121,7 +121,7 @@ export default class ReadingToggles {
 
                     const termDefHTML = (`
                         <article
-                            class="reading-toggle-detail"
+                            class="reading-toggle-detail glossary-term"
                             aria-polite="live"
                             data-term-definition>
 
