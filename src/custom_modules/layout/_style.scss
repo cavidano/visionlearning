@@ -321,13 +321,11 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// G. Article (Module)
+// G. Module
 //////////////////////////////////////////////
 
-.article {
+.module {
     display: grid;
-
-    // gap: var(--spacer-2);
     
     grid-template-areas:
         "head"
@@ -337,24 +335,21 @@ In this file:
         "main";
 }
 
-.article__head {
-    // border: 6px solid blue !important;
-    // background: blue !important;
-
-
+.module__head {
+    // outline: 6px solid blue;
     grid-area: head;
 }
 
-.article__audio {
-    // border: 6px solid yellow !important;
-    // background: red !important;
+.module__audio {
+    // outline: 6px solid yellow;
+    // background: red;
 
     grid-area: audio;
 }
 
-.article__main {
-    // border: 6px solid tan !important;
-    // background: tan !important;
+.module__main {
+    // outline: 6px solid tan;
+    // background: tan;
 
     position: relative;
 
@@ -387,22 +382,22 @@ In this file:
     }
 }
 
-.article__did-you-know {    
+.module__did-you-know {    
     grid-area: did-you-know;
 
     display: none;
 }
 
-.article__sidebar {    
-    // border: 6px solid red !important;
-    // background: yellow !important;
+.module__sidebar {    
+    // outline: 6px solid red;
+    // background: yellow;
 
     grid-area: sidebar;
 }
 
 @include breakpoints.breakpoints-up(lg) {
 
-    .article {
+    .module {
         grid-template-columns: 1fr 22em;
         grid-template-rows: auto auto 1fr;            
 
@@ -412,7 +407,7 @@ In this file:
             "main sidebar";
     }
 
-    .article__did-you-know {    
+    .module__did-you-know {    
         display: block;
     }
 }
