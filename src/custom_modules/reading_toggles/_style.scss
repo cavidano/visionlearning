@@ -3,9 +3,13 @@
 In this file:
 
 // A. Toggle Buttons
-// B. Term Highlighted
+// B. Glossary and NGSS toggles
 
 */
+
+//////////////////////////////////////////////
+// A. In this module block
+//////////////////////////////////////////////
 
 .in-this-module {
 
@@ -26,7 +30,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// D. NGSS
+// B. Glossary and NGSS toggles 
 //////////////////////////////////////////////
 
 :root {
@@ -85,8 +89,8 @@ mark.ngss {
         var(--core-ideas-lightness),
         var(--core-ideas-alpha)
     );
-    
-    padding-block: 0.0675em;
+
+    padding-block: 0.075em;
     
     background-color: transparent;
     
@@ -94,7 +98,6 @@ mark.ngss {
     
     pointer-events: none;
 }
-
 
 mark.term.highlighted,
 mark.ngss.highlighted {

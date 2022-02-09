@@ -28,7 +28,7 @@ In this file:
 %custom-properties {
     --body-min-width: 325px;
     --body-max-width: 100%;
-    --html-background-color: transparent;
+    --html-background-color: var(--dark);
 }
 
 ////////////////////////////////////////
@@ -102,6 +102,7 @@ html {
     @extend %custom-properties;
     
     font-size: 1rem;
+
     line-height: 1.125;
 
     text-size-adjust: 100%;
