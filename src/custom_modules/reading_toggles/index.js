@@ -130,12 +130,21 @@ export default class ReadingToggles {
                             </div>
                         
                             <div class="reading-toggle-detail__body">
+
                                 <h2 class="h6">
                                     ${termTitle}
                                 </h2>
+                            
                                 <p>
                                     ${termDef ? termDef : 'That is not good.'}
                                 </p>
+                            
+                                <p>
+                                    <a href="#">
+                                        View in Glossary
+                                    </a>
+                                </p>
+
                             </div>
                         
                         </article>                        
