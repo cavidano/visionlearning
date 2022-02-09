@@ -370,12 +370,12 @@ In this file:
     }
 
     figure {
-        display: table;
+        // display: table;
 
-        margin: var(--spacer-5) auto;
+        margin: var(--spacer-4) auto;
         
         figcaption {
-            display: table-caption;
+            // display: table-caption;
             caption-side: bottom;
         }
 
