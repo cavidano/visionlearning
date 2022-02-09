@@ -338,6 +338,12 @@ In this file:
 .module__head {
     // outline: 6px solid blue;
     grid-area: head;
+
+    h1 {
+
+      font-weight: var(--body-font-weight-normal);
+
+    }
 }
 
 .module__audio {
