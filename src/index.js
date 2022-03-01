@@ -2,112 +2,111 @@
 // Polyfills
 //////////////////////////////////////////////
 
-import "element-closest-polyfill";
+import 'element-closest-polyfill';
 
 //////////////////////////////////////////////
 // Natura11y Modules
 //////////////////////////////////////////////
 
-import "./modules/accents";
+import './modules/accents';
 
-import Accessibility from "./modules/accessibility";
-new Accessibility();
+import './modules/accessibility';
 
-import Accordion from "./modules/accordion";
+import Accordion from './modules/accordion';
 new Accordion();
 
-import Alerts from "./modules/alerts";
+import Alerts from './modules/alerts';
 new Alerts();
 
-// import "./modules/article";
+// import './modules/article';
 
-import "./modules/aspect-ratios";
+import './modules/aspect-ratios';
 
-import "./modules/backdrops";
+import './modules/backdrops';
 
-import "./modules/borders";
+import './modules/borders';
 
-import "./modules/breakpoints";
+import './modules/breakpoints';
 
-import Buttons from "./modules/buttons/";
+import Buttons from './modules/buttons/';
 new Buttons();
 
-import "./modules/cards";
+import './modules/cards';
 
-import Collapse from "./modules/collapse";
+import Collapse from './modules/collapse';
 new Collapse();
 
-import "./modules/color";
+import './modules/color';
 
-import "./modules/containers";
+import './modules/containers';
 
-import "./modules/display";
+import './modules/display';
 
-import Document from "./modules/document";
+import Document from './modules/document';
 new Document();
 
-import "./modules/flex";
+import './modules/flex';
 
-import Forms from "./modules/forms";
+import Forms from './modules/forms';
 new Forms();
 
-import "./modules/grid";
+import './modules/grid';
 
-import "./modules/icons";
+import './modules/icons';
 
-import "./modules/links";
+import './modules/links';
 
-import Modal from "./modules/modal";
+import Modal from './modules/modal';
 new Modal();
 
-import Navigation from "./modules/navigation";
+import Navigation from './modules/navigation';
 new Navigation();
 
-import "./modules/opacity";
+import './modules/opacity';
 
-import "./modules/overflow";
+import './modules/overflow';
 
-import "./modules/position";
+import './modules/position';
 
-import "./modules/shadows";
+import './modules/shadows';
 
-import "./modules/sizing";
+import './modules/sizing';
 
-import "./modules/spacing";
+import './modules/spacing';
 
-import Tabs from "./modules/tabs";
+import Tabs from './modules/tabs';
 new Tabs();
 
-import Tables from "./modules/tables";
+import Tables from './modules/tables';
 new Tables();
 
-import "./modules/typography";
+import './modules/typography';
 
-import "./modules/z-index";
+import './modules/z-index';
 
 //////////////////////////////////////////////
 // Custom Modules
 //////////////////////////////////////////////
 
-import Layout from "./custom_modules/layout"; 
+import Layout from './custom_modules/layout'; 
 new Layout();
 
-import "./custom_modules/navigation";
+import './custom_modules/navigation';
 
-import FullHeight from "./custom_modules/full-height";
+import FullHeight from './custom_modules/full-height';
 new FullHeight();
 
-import Quiz from "./custom_modules/quiz"; 
+import Quiz from './custom_modules/quiz'; 
 new Quiz();
 
-import ReadingToggles from "./custom_modules/reading_toggles"; 
+import ReadingToggles from './custom_modules/reading_toggles'; 
 new ReadingToggles();
 
-import "./custom_modules/css_variables";
+import './custom_modules/css_variables';
 
-import "./custom_modules/lists";
+import './custom_modules/lists';
 
-import "./custom_modules/color";
+import './custom_modules/color';
 
 //////////////////////////////////////////////
 // Environments (For Testing Webpack)

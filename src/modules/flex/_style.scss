@@ -204,7 +204,7 @@ In this file:
         }
 
         .align-content-stretch#{$mod} {
-            align-content: stretch;
+            align-content: stretch !important;
         }
 
     }
