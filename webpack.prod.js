@@ -55,16 +55,7 @@ module.exports = merge(common, {
                     },
                     "sass-loader",
                 ],
-            },
-            {
-                test: /\.(png|jpg|svg)$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 1,
-                    name: "[name].[ext]",
-                    publicPath: '/images'
-                }
-            },
+            }
         ],
     },
     plugins: [
