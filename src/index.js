@@ -93,9 +93,6 @@ new Layout();
 
 import './custom_modules/navigation';
 
-import FullHeight from './custom_modules/full-height';
-new FullHeight();
-
 import Quiz from './custom_modules/quiz'; 
 new Quiz();
 
