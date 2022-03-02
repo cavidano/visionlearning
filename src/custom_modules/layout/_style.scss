@@ -290,14 +290,6 @@ In this file:
 
 .grid--featured-material {
 
-  grid-template-rows: repeat(3, 1fr);
-
-  height: 100%;
-  
-  [class*="backdrop"]{
-    --backdrop-fixed-height: unset;
-  }
-
   > *:nth-child(1) {
     grid-area: primary;
   }
@@ -310,14 +302,26 @@ In this file:
     grid-area: tertiary;
   }
 
+  grid-template-areas:
+      "primary"
+      "secondary"
+      "tertiary";
+
   @include breakpoints.breakpoints-up(lg) {
 
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    [class*="backdrop"]{
+      --backdrop-fixed-height: unset;
+    }
 
-        grid-template-areas:
-            "primary primary"
-            "secondary tertiary";
+    height: 100%;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+        "primary primary"
+        "secondary tertiary";
+
   }
   
 }
@@ -494,24 +498,27 @@ In this file:
 // I. Wrap Viewport Height
 //////////////////////////////////////////////
 
-.wrap-viewport-height {
+@include breakpoints.breakpoints-up(lg) {
+  
+  .wrap-viewport-height {
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-  outline-offset: -4px;
+    min-height: 1000px;
+    height: 100vh;
 
-  min-height: 1000px;
-  height: 100vh;
-
-  main {
-    overflow: hidden;
-    flex-grow: 1;
+    main {
+      overflow: hidden;
+      flex-grow: 1;
 
 
-    // background-color: indianred;
+      // background-color: indianred;
+    }
+
+    // outline:4px solid blue;
+    // outline-offset: -4px;
+
   }
-
-  // outline:4px solid blue;
 
 }
