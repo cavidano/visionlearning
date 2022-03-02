@@ -3,239 +3,146 @@ layout: global
 title: "Glossary"
 ---
 
-<div class="theme-light full-height overflow-hidden padding-y-4">
+<div class="wrap-viewport-height">
+    
+    {% include global-header.html %}
 
-    <div class="landing wide">
+    <main id="skip-header-content">
 
-        <div class="landing__main theme-white">
-        
-            <div class="materials">
+        <div class="height-100 padding-y-4">
 
-                <div class="materials__aside font-size-md padding-2 border-right--lg">
+            <div class="landing wide">
 
-                    {% include materials-search.html search_type="Glossary" %}
+                <div class="landing__main theme-white">
+                
+                    <div class="materials">
 
-                    <ul
-                        class="tabs-nav glossary border border-radius"
-                        id="filter-by-discipline"
-                        role="menu">
-                        <li>
-                            <button
-                                id="highlights"
-                                aria-selected="true"
-                                role="tab">
-                                    Highlights
-                            </button>
-                        </li>
-                        <li>
-                            <a
-                                id="filter-all-disciplines"
-                                aria-selected="false"
-                                role="tab"
-                                href="{{ site.url }}/glossary/a-z.html">
-                                    A-Z
-                            </a>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-biology"
-                                aria-selected="false"
-                                role="tab">
-                                    Biology
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-chemistry"
-                                aria-selected="false"
-                                role="tab">
-                                    Chemistry
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-earth-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Earth Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-general-science"
-                                aria-selected="false"
-                                role="tab">
-                                    General Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-inside-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Inside Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-math-in-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Math in Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-physics"
-                                aria-selected="false"
-                                role="tab">
-                                    Physics
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-process-of-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Process  of Science
-                            </button>
-                        </li>
-                    </ul>
+                        <div class="materials__aside font-size-md padding-2 border-right--lg">
 
-                </div>
+                            {% include materials-search.html search_type="Glossary" %}
 
-                <div class="materials__main">
-
-                    <div class="padding-2 height-100">
-
-                        <div class="grid grid--featured-material gap-1">
-                            
-                            <div class="card height-100 theme-primary earth-science border-radius">
-                                    
-                                <div class="card__head border-bottom">
-                                    <strong>
-                                        <em>
-                                            Term of the Day
-                                        </em>
-                                    </strong> 
-                                </div>
-
-                                <div class="card__body margin-y-auto">
-                                    <h2 class="font-weight-normal flex-row align-items-center">
-                                        basalt
-                                        <button class="button button--icon-only font-size-rg margin-left-2">
-                                            <span class="icon icon-pronounciation"></span>
-                                        </button>
-                                    </h2>      
-                                    <p>
-                                        <em>
-                                            [noun - rocks &amp; minerals]
-                                        </em>
-                                    </p>                                    
-                                    <p>
-                                        A dark, fine-grained igneous rock formed by cooling of iron- and magnesium-rich lava above the surface of the earth. Basalt is the main component of the oceanic crust of the Earth.
-                                    </p>                                      
-                                </div>
-                                
-                                <div class="card__foot border-top">
-                                    <a class="button font-size-sm button--outline" href="{{ site.url }}/glossary/term.html">
-                                        Open in Glossary
+                            <ul
+                                class="tabs-nav glossary border border-radius"
+                                id="filter-by-discipline"
+                                role="menu">
+                                <li>
+                                    <button
+                                        id="highlights"
+                                        aria-selected="true"
+                                        role="tab">
+                                            Highlights
+                                    </button>
+                                </li>
+                                <li>
+                                    <a
+                                        id="filter-all-disciplines"
+                                        aria-selected="false"
+                                        role="tab"
+                                        href="{{ site.url }}/glossary/a-z.html">
+                                            A-Z
                                     </a>
-                                </div>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-biology"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Biology
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-chemistry"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Chemistry
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-earth-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Earth Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-general-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            General Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-inside-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Inside Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-math-in-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Math in Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-physics"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Physics
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-process-of-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Process  of Science
+                                    </button>
+                                </li>
+                            </ul>
 
-                            </div>
-                            <!-- .card -->
+                        </div>
 
-                            <div class="card theme-primary chemistry border-radius">
+                        <div class="materials__main">
+
+                            <div class="padding-2 height-100">
+
+                                <div class="grid grid--featured-material gap-1">
                                     
-                                <div class="card__head border-bottom">
-                                    <strong>
-                                        <em>
-                                            Test Your Knowledge
-                                        </em>
-                                    </strong> 
-                                </div>
-
-                                <div class="card__body font-size-md margin-y-auto quiz__questions">
-
-                                    <div class="form-entry">
-
-                                        <div class="form-entry__field">
-
-                                            <strong class="form-entry__field__label">
-                                                What is the term for a single- or multi-cellular organism whose cells contain a distinct nucleus that encloses the organism's genetic material?
-                                            </strong>
-
-                                            <div class="form-entry__option">
-
-                                                <div class="form-entry__option__radio">
-                                                    <label>
-                                                        <input type="radio" value="in a streambed near a volcano" name="quiz-question-example-01">
-                                                        <span class="option__label">
-                                                            <span class="screen-reader-only">a.</span> Prokaryote.
-                                                        </span>
-                                                    </label>
-                                                    <span class="quiz__response">
-                                                        Sorry, that is incorrect. Metamorphism involves deep burial combined with high temperature and pressure. In the photo, the rocks have been uplifted and the overlying material is being removed. Which choice names the wearing-away process we see in the photograph?
-                                                    </span>
-                                                </div>
-
-                                                <div class="form-entry__option__radio" data-answer="correct">
-                                                    <label>
-                                                        <input type="radio" name="quiz-question-example-01">
-                                                        <span class="option__label">
-                                                            <span class="screen-reader-only">b.</span> Eukaryote.
-                                                        </span>
-                                                    </label>
-                                                    <span class="quiz__response">
-                                                        Correct! Rocks that form below Earth’s surface must be uplifted. Then the overlying material must be removed through erosion in order for the rocks to be exposed. This wearing-away process can happen by the action of water, wind, or glacial ice.
-                                                    </span>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                                
-                                <div class="card__foot border-top">
-                                    <a class="button font-size-sm button--outline" href="#1">
-                                        Check Answer
-                                    </a>
-                                </div>
-
-                            </div>
-                            <!-- .card -->
-                            
-                            <div class="backdrop backdrop--fixed theme-dark border-radius">
-
-                                <div class="backdrop__image gradient-veneer-bottom border-radius">
-                                    <img class="opacity-30" src="{{ site.url }}/images/featured/04.jpg" alt="Placeholder">
-                                </div>
-
-                                <div class="backdrop__cover height-100">
-
-                                    <div class="card height-100">
-                                    
+                                    <div class="card height-100 theme-primary earth-science border-radius">
+                                            
                                         <div class="card__head border-bottom">
                                             <strong>
                                                 <em>
-                                                    Scientist Spotlight
+                                                    Term of the Day
                                                 </em>
                                             </strong> 
                                         </div>
 
                                         <div class="card__body margin-y-auto">
-                                            <h2 class="font-weight-normal">
-                                                Jane Goodall
-                                            </h2>
+                                            <h2 class="font-weight-normal flex-row align-items-center">
+                                                basalt
+                                                <button class="button button--icon-only font-size-rg margin-left-2">
+                                                    <span class="icon icon-pronounciation"></span>
+                                                </button>
+                                            </h2>      
                                             <p>
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                            </p>                                        
+                                                <em>
+                                                    [noun - rocks &amp; minerals]
+                                                </em>
+                                            </p>                                    
+                                            <p>
+                                                A dark, fine-grained igneous rock formed by cooling of iron- and magnesium-rich lava above the surface of the earth. Basalt is the main component of the oceanic crust of the Earth.
+                                            </p>                                      
                                         </div>
-
+                                        
                                         <div class="card__foot border-top">
                                             <a class="button font-size-sm button--outline" href="{{ site.url }}/glossary/term.html">
                                                 Open in Glossary
@@ -245,24 +152,127 @@ title: "Glossary"
                                     </div>
                                     <!-- .card -->
 
+                                    <div class="card theme-primary chemistry border-radius">
+                                            
+                                        <div class="card__head border-bottom">
+                                            <strong>
+                                                <em>
+                                                    Test Your Knowledge
+                                                </em>
+                                            </strong> 
+                                        </div>
+
+                                        <div class="card__body font-size-md margin-y-auto quiz__questions">
+
+                                            <div class="form-entry">
+
+                                                <div class="form-entry__field">
+
+                                                    <strong class="form-entry__field__label">
+                                                        What is the term for a single- or multi-cellular organism whose cells contain a distinct nucleus that encloses the organism's genetic material?
+                                                    </strong>
+
+                                                    <div class="form-entry__option">
+
+                                                        <div class="form-entry__option__radio">
+                                                            <label>
+                                                                <input type="radio" value="in a streambed near a volcano" name="quiz-question-example-01">
+                                                                <span class="option__label">
+                                                                    <span class="screen-reader-only">a.</span> Prokaryote.
+                                                                </span>
+                                                            </label>
+                                                            <span class="quiz__response">
+                                                                Sorry, that is incorrect. Metamorphism involves deep burial combined with high temperature and pressure. In the photo, the rocks have been uplifted and the overlying material is being removed. Which choice names the wearing-away process we see in the photograph?
+                                                            </span>
+                                                        </div>
+
+                                                        <div class="form-entry__option__radio" data-answer="correct">
+                                                            <label>
+                                                                <input type="radio" name="quiz-question-example-01">
+                                                                <span class="option__label">
+                                                                    <span class="screen-reader-only">b.</span> Eukaryote.
+                                                                </span>
+                                                            </label>
+                                                            <span class="quiz__response">
+                                                                Correct! Rocks that form below Earth’s surface must be uplifted. Then the overlying material must be removed through erosion in order for the rocks to be exposed. This wearing-away process can happen by the action of water, wind, or glacial ice.
+                                                            </span>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        
+                                        <div class="card__foot border-top">
+                                            <a class="button font-size-sm button--outline" href="#1">
+                                                Check Answer
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <!-- .card -->
+                                    
+                                    <div class="backdrop backdrop--fixed theme-dark border-radius">
+
+                                        <div class="backdrop__image gradient-veneer-bottom border-radius">
+                                            <img class="opacity-30" src="{{ site.url }}/images/featured/04.jpg" alt="Placeholder">
+                                        </div>
+
+                                        <div class="backdrop__cover height-100">
+
+                                            <div class="card height-100">
+                                            
+                                                <div class="card__head border-bottom">
+                                                    <strong>
+                                                        <em>
+                                                            Scientist Spotlight
+                                                        </em>
+                                                    </strong> 
+                                                </div>
+
+                                                <div class="card__body margin-y-auto">
+                                                    <h2 class="font-weight-normal">
+                                                        Jane Goodall
+                                                    </h2>
+                                                    <p>
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                    </p>                                        
+                                                </div>
+
+                                                <div class="card__foot border-top">
+                                                    <a class="button font-size-sm button--outline" href="{{ site.url }}/glossary/term.html">
+                                                        Open in Glossary
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <!-- .card -->
+
+                                        </div>
+
+                                    </div>
+                                    <!-- .backdrop -->
+
                                 </div>
 
                             </div>
-                            <!-- .backdrop -->
 
                         </div>
-
+                    
                     </div>
 
                 </div>
-            
+                
+                {% include landing-sidebar.html %}
+
             </div>
+            <!-- .landing -->
 
         </div>
-        
-        {% include landing-sidebar.html %}
 
-    </div>
-    <!-- .landing -->
+    </main>
 
 </div>

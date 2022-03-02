@@ -3,173 +3,182 @@ layout: global
 title: "Library"
 ---
 
-<div class="theme-light full-height overflow-hidden padding-y-4">
+<div class="wrap-viewport-height">
+    
+    {% include global-header.html %}
 
-    <div class="landing wide">
+    <main id="skip-header-content">
 
-        <div class="landing__main theme-white">
-        
-            <div class="materials">
+        <div class="height-100 padding-y-4">
 
-                <div class="materials__aside font-size-md padding-2 border-right--lg">
+            <div class="landing wide">
 
-                    {% include materials-search.html search_type="Library" %}
-
-                    <ul
-                        class="tabs-nav library border border-radius"
-                        id="filter-by-discipline"
-                        role="menu">
-
-                        <li>
-                            <a
-                                id="filter-all-disciplines"
-                                aria-selected="false"
-                                role="tab"
-                                href="{{ site.url }}/library/">
-                                    Highlights
-                            </a>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-all-disciplines"
-                                aria-selected="true"
-                                role="tab">
-                                    All Disciplines
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-biology"
-                                aria-selected="false"
-                                role="tab">
-                                    Biology
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-chemistry"
-                                aria-selected="false"
-                                role="tab">
-                                    Chemistry
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-earth-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Earth Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-general-science"
-                                aria-selected="false"
-                                role="tab">
-                                    General Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-inside-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Inside Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-math-in-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Math in Science
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-physics"
-                                aria-selected="false"
-                                role="tab">
-                                    Physics
-                            </button>
-                        </li>
-                        <li>
-                            <button
-                                id="filter-process-of-science"
-                                aria-selected="false"
-                                role="tab">
-                                    Process  of Science
-                            </button>
-                        </li>
-                    </ul>
+                <div class="landing__main theme-white">
                 
-                </div>
+                    <div class="materials">
 
-                <div class="materials__main">
+                        <div class="materials__aside font-size-md padding-2 border-right--lg">
 
-                    <div class="padding-2 position-relative">
+                            {% include materials-search.html search_type="Library" %}
 
-                        {% for item in site.data.librarySample %}
-                            {% assign header = item.Discipline %}                         
-                            {% assign slug = item.Slug %}                         
-                            {% assign subcategories = item.Subcategories %}                         
+                            <ul
+                                class="tabs-nav library border border-radius"
+                                id="filter-by-discipline"
+                                role="menu">
 
-                            <section>
+                                <li>
+                                    <a
+                                        id="filter-all-disciplines"
+                                        aria-selected="false"
+                                        role="tab"
+                                        href="{{ site.url }}/library/">
+                                            Highlights
+                                    </a>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-all-disciplines"
+                                        aria-selected="true"
+                                        role="tab">
+                                            All Disciplines
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-biology"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Biology
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-chemistry"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Chemistry
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-earth-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Earth Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-general-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            General Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-inside-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Inside Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-math-in-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Math in Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-physics"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Physics
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-process-of-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Process  of Science
+                                    </button>
+                                </li>
+                            </ul>
+                        
+                        </div>
 
-                                <header class="theme-primary {{ slug }} discipline-divider">
-                                    <h2 class="h3 discipline-divider__title">{{ header }}</h2>
-                                </header>
-                                
-                                <div class="padding-x-2 overflow-hidden">
+                        <div class="materials__main">
 
-                                {% for category in subcategories %}                
-                                    {% assign title = category.Title %}          
-                                    {% assign modules = category.Modules %}          
+                            <div class="padding-2 position-relative">
 
-                                    <div class="category margin-y-3">
+                                {% for item in site.data.librarySample %}
+                                    {% assign header = item.Discipline %}                         
+                                    {% assign slug = item.Slug %}                         
+                                    {% assign subcategories = item.Subcategories %}                         
+
+                                    <section>
+
+                                        <header class="theme-primary {{ slug }} discipline-divider">
+                                            <h2 class="h3 discipline-divider__title">{{ header }}</h2>
+                                        </header>
+                                        
+                                        <div class="padding-x-2 overflow-hidden">
+
+                                        {% for category in subcategories %}                
+                                            {% assign title = category.Title %}          
+                                            {% assign modules = category.Modules %}          
+
+                                            <div class="category margin-y-3">
+                                                            
+                                                <h2 class="h6">{{ title }}</h2>
+
+                                                <ul class="list-divider font-size-md">
                                                     
-                                        <h2 class="h6">{{ title }}</h2>
+                                                    {% for module in modules %}              
+                                                        {% assign name = module.Name %}  
 
-                                        <ul class="list-divider font-size-md">
+                                                        <li class="text-color-link">
+                                                            <span class="list-divider__cell">
+                                                                <a href="{{ site.url }}/library/module.html">
+                                                                    {{ name }}
+                                                                </a>
+                                                            </span>
+                                                            <span class="list-divider__cell">
+                                                                <div class="button-group">    
+                                                                    <button class="button button--icon-only">
+                                                                        <span class="icon icon-plus" aria-hidden="true"></span>
+                                                                    </button>
+                                                                </div>
+                                                            </span>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+
+                                            </div>
+                                        {% endfor %}
                                             
-                                            {% for module in modules %}              
-                                                {% assign name = module.Name %}  
+                                        </div>
 
-                                                <li class="text-color-link">
-                                                    <span class="list-divider__cell">
-                                                        <a href="{{ site.url }}/library/module.html">
-                                                            {{ name }}
-                                                        </a>
-                                                    </span>
-                                                    <span class="list-divider__cell">
-                                                        <div class="button-group">    
-                                                            <button class="button button--icon-only">
-                                                                <span class="icon icon-plus" aria-hidden="true"></span>
-                                                            </button>
-                                                        </div>
-                                                    </span>
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
+                                    </section>
+                                    {% endfor %}
+                            </div>
 
-                                    </div>
-                                {% endfor %}
-                                    
-                                </div>
-
-                            </section>
-                            {% endfor %}
+                        </div>
+                    
                     </div>
 
                 </div>
-            
+                
+                {% include landing-sidebar.html %}
+                
             </div>
 
         </div>
-        
-        {% include landing-sidebar.html %}
-        
-    </div>
+
+    </main>
 
 </div>
-<!-- .landing -->

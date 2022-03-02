@@ -67,8 +67,13 @@ $heights: (
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         @each $key, $value in $heights {
+
             .height-#{$key}#{$mod} {
                 height: $value;
+            }
+            
+            .min-height-#{$key}#{$mod} {
+                min-height: $value;
             }
         }
     }

@@ -10,6 +10,8 @@ In this file:
 // H. Featured Material
 // I. Article (Module)
 // J. Grid Global Foot
+// I. Wrap Viewport Height
+
 
 */
 
@@ -488,6 +490,28 @@ In this file:
     }
 }
 
+//////////////////////////////////////////////
+// I. Wrap Viewport Height
+//////////////////////////////////////////////
+
+.wrap-viewport-height {
+
+  display: flex;
+  flex-direction: column;
+
+  outline-offset: -4px;
+
+  min-height: 1000px;
+  height: 100vh;
+
+  main {
+    overflow: hidden;
+    flex-grow: 1;
 
 
+    // background-color: indianred;
+  }
 
+  // outline:4px solid blue;
+
+}
