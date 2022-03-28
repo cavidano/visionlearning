@@ -7,12 +7,11 @@ In this file:
 // C. Font Weight Utilities
 // D. Font Size Utilities
 // E. Headers
-// F. Fluid Type Utility
-// G. Body Selectors
-// H. Text Align Utilities
-// I. Text Transform Utilities
-// J. Word Wrap Utilities
-// K. Truncate Text Utility
+// F. Body Selectors
+// G. Text Align Utilities
+// H. Text Transform Utilities
+// I. Word Wrap Utilities
+// J. Truncate Text Utility
 
 */
 
@@ -28,22 +27,25 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
+// Base Font Fallback (credit: Bootstrap 4.x)
+
+$base-font-fallbacks: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
 // Import Open Source Fonts
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 :root {
 
     // Body Font Stack
 
-    --body-font-family: "Source Sans Pro", sans-serif;
+    --body-font-family: "Source Sans Pro";
     
     --body-font-weight-normal: 400;
     --body-font-weight-medium: 600;
     --body-font-weight-bold: 700;
 
     --body-font-size: 20px;
-
     --body-line-height: 1.5;
 
     // Font Sizes
@@ -51,19 +53,19 @@ In this file:
     --font-size-sm: calc(var(--body-font-size) * 0.75);  // ~ 16.5px
     --font-size-md: calc(var(--body-font-size) * 0.825);  // ~ 18px
     --font-size-rg: calc(var(--body-font-size) * 1);    // = 22px
-    --font-size-lg: calc(var(--body-font-size) * 1.375);  // ~ 26px
-    --font-size-xl: calc(var(--body-font-size) * 1.75);  // ~ 30px
+    --font-size-lg: calc(var(--body-font-size) * 1.2);  // ~ 26px
+    --font-size-xl: calc(var(--body-font-size) * 1.4);  // ~ 30px
 
     // Headers
 
-    --h1-font-size: calc(var(--body-font-size) * 3);    // ~ 60px
-    --h2-font-size: calc(var(--body-font-size) * 2.2);  // ~ 48px
-    --h3-font-size: calc(var(--body-font-size) * 1.8);  // ~ 40px
-    --h4-font-size: calc(var(--body-font-size) * 1.6);  // ~ 35px
-    --h5-font-size: calc(var(--body-font-size) * 1.4);  // ~ 30px
-    --h6-font-size: calc(var(--body-font-size) * 1.2);  // ~ 26px
+    --h1-font-size: calc(var(--body-font-size) * 2.75);    // ~ 60px
+    --h2-font-size: calc(var(--body-font-size) * 2.25);  // ~ 48px
+    --h3-font-size: calc(var(--body-font-size) * 1.75);  // ~ 40px
+    --h4-font-size: calc(var(--body-font-size) * 1.5);  // ~ 35px
+    --h5-font-size: calc(var(--body-font-size) * 1.25);  // ~ 30px
+    --h6-font-size: calc(var(--body-font-size) * 1);  // ~ 26px
 
-    --header-line-height: 1.125;
+    --header-line-height: 1.2;
 
     // Banner Headline
 
@@ -191,32 +193,17 @@ $headers: (
     font-weight: var(--banner-headline-font-weight);
     line-height: var(--header-line-height);
 
-    font-size: var(--banner-headline-font-size);
-}
-
-//////////////////////////////////////////////
-// F. Fluid Type Utility
-//////////////////////////////////////////////
-
-html {
-    --fluid-typ-min: 1rem;
-    --fluid-typ-rec: 0.6vw + 0.9rem;
-    --fluid-typ-max: 1.5rem;
-
-    &.fluid-type {
-        --body-font-size:
-            clamp(var(--fluid-typ-min), 
-                  var(--fluid-typ-rec),
-                  var(--fluid-typ-max));
+    @include breakpoints.breakpoints-up(lg){
+        font-size: var(--banner-headline-font-size);
     }
 }
 
 //////////////////////////////////////////////
-// G. Body Selectors
+// F. Body Selectors
 //////////////////////////////////////////////
 
 body {
-    font-family: var(--body-font-family);
+    font-family: var(--body-font-family, #{$base-font-fallbacks});
 
     font-size: var(--body-font-size);
     
@@ -233,14 +220,14 @@ p ~ ol:not([class]) {
     }
 }
 
-p ~ ul:not([class]),
-p ~ ol:not([class]) {
+ul:not([class]),
+ol:not([class]) {
     li {
         margin-block-end: var(--spacer-1);
     }
 }
 
-p ~ ul:not([class]) {
+ul:not([class]) {
     --list-item-padding: 1em;
 
     li {
@@ -281,7 +268,7 @@ figure {
 }
 
 //////////////////////////////////////////////
-// H. Text Align Utilities
+// G. Text Align Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -304,7 +291,7 @@ figure {
 }
 
 //////////////////////////////////////////////
-// I. Text Transform Utilities
+// H. Text Transform Utilities
 //////////////////////////////////////////////
 
 .text-transform-capitalize {
@@ -320,7 +307,7 @@ figure {
 }
 
 //////////////////////////////////////////////
-// J. Word Wrap Utilities
+// I. Word Wrap Utilities
 //////////////////////////////////////////////
 
 .nowrap {
@@ -332,7 +319,7 @@ figure {
 }
 
 ////////////////////////////////////////
-// K. Truncate Text Utility
+// J. Truncate Text Utility
 ////////////////////////////////////////
 
 .truncate-text {
