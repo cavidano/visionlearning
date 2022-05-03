@@ -6,11 +6,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devDir = './_tearsheet';
-const devIndex = 'header-footer.html';
+// const devIndex = 'header-footer.html';
 // const devIndex = 'quiz.html';
 // const devIndex = 'reading-toggles.html';
 // const devIndex = 'typography.html';
-// const devIndex = 'discipline-grid.html';
+const devIndex = 'discipline-grid.html';
 // const devIndex = 'wrapper.html';
 
 module.exports = merge(common, {

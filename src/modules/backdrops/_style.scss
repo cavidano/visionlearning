@@ -40,17 +40,37 @@ In this file:
 // D. Backdrop Elements
 //////////////////////////////////////////////
 
-.backdrop:not([class*="--stack"]):not([class*="--fixed"]) {
+.backdrop:not([class*="--stack"]):not([class*="--fixed"]){
     .backdrop__cover {
         position: absolute;
     }
 }
 
+[class*="backdrop__image"]{
+    background-color: inherit;
+}
+
 .backdrop__image {
+    position: relative;
+
     img {
         min-width: 100%;
         min-height: 100%;
     }
+}
+
+.backdrop__image__credit {
+    position: absolute;
+    inset-block-end: 0;
+    inset-inline-end: 0;
+
+    font-size: var(--font-size-sm);
+    
+    padding: 0.25rem 0.75rem;
+
+    width: auto;
+    
+    z-index: 500;
 }
 
 .backdrop__cover {
@@ -61,35 +81,23 @@ In this file:
 
     display: grid;
 
-    place-content: center;
-}
-
-.backdrop__credit {
-    position: absolute;
-    inset-block-end: 0;
-    inset-inline-end: 0;
-
-    width: auto;
-    
-    z-index: 500;
-
-    background-color: inherit;
-
-    p {
-        font-size: var(--font-size-sm);
-        padding: 0.25rem 0.75rem;
-    }
+    place-items: center;
 }
 
 //////////////////////////////////////////////
-// E. Backdrop Breakpoint Modifiers
+// E. Backdrop Stack Modifiers
 //////////////////////////////////////////////
+
+[class*="backdrop--stack"]{
+    overflow: hidden;
+}
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
     @include breakpoints.breakpoints-up($breakpoint) {
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .backdrop--stack#{$mod} {
+
             .backdrop__cover {
                 position: absolute;
             }
@@ -106,8 +114,8 @@ In this file:
 
     display: grid;
     
-    place-content: center;
-    
+    place-content: inherit;
+
     min-height: var(--backdrop-fixed-height);
 
     .backdrop__image {
@@ -125,6 +133,7 @@ In this file:
             object-position: 50% 50%;
         }
     }
+
 
     .backdrop__cover {
         position: relative;

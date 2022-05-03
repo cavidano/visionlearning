@@ -14,8 +14,8 @@
 
 				<ul class="nav nav--horizontal--lg">
 					<li>
-						<a href="#1">
-							About Us
+						<a href="/about" {% if page.url contains '/about' %} aria-current="page" {% endif %}>
+							About
 						</a>
 					</li>
 					<li>
@@ -359,3 +359,22 @@
 	</nav>
 
 {% endif %}
+
+{% if page.url contains 'about' %}
+	<nav class="module-breadcrumb display-none display-blockX--md border-bottom">
+
+		<div class="wide padding-2">
+	<ul class="nav-breadcrumb">
+    <li>
+        <a class="button button--icon-only" href="#1">
+            <span class="icon icon-home" aria-hidden="true"></span>
+        </a>
+    </li>
+    <li class="text-color-primary">
+       About
+    </li>
+</ul>
+</div>
+</nav>
+{% endif %}
+
