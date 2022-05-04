@@ -464,7 +464,6 @@
     }
 }
 
-
 .tabs-nav {
     
     > li > button::before {
@@ -491,5 +490,15 @@
 [data-logo="brand"] {
     > svg{
         fill: currentColor;
+    }
+}
+
+//////////////////////////////////////////////
+// F. About Menu
+//////////////////////////////////////////////
+
+.about-menu {
+    a:not([aria-current]){
+        color: var(--a11y-link-color);
     }
 }

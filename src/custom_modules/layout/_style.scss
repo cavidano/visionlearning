@@ -522,7 +522,6 @@ In this file:
 
 }
 
-
 //////////////////////////////////////////////
 // L. About Pages
 //////////////////////////////////////////////
@@ -530,12 +529,6 @@ In this file:
 .grid--about {
 
   gap: var(--spacer-3);
-
-  .hekp, .aside{
-    outline:4px solid blue;
-    outline-offset: -4px;
-    min-height: 100px;
-  }
 
   .summary {
     grid-area: summary;
@@ -553,13 +546,17 @@ In this file:
     grid-area: aside;
   }
 
-  grid-template-columns:  1fr 22em;
-
   grid-template-areas: 
-    "summary help"
-    "main aside";
+    "summary"
+    "aside"
+    "main"
+    "help";
+
+  @include breakpoints.breakpoints-up(lg) {
+    grid-template-columns:  1fr 22em;
+    grid-template-areas: 
+      "summary help"
+      "main aside";
+  }
+
 }
-
-
-
-
