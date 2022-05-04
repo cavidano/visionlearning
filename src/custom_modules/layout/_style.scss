@@ -10,7 +10,8 @@ In this file:
 // H. Featured Material
 // I. Article (Module)
 // J. Grid Global Foot
-// I. Wrap Viewport Height
+// K. Wrap Viewport Height
+// L. About Pages
 
 
 */
@@ -516,9 +517,49 @@ In this file:
       // background-color: indianred;
     }
 
-    // outline:4px solid blue;
-    // outline-offset: -4px;
 
   }
 
 }
+
+
+//////////////////////////////////////////////
+// L. About Pages
+//////////////////////////////////////////////
+
+.grid--about {
+
+  gap: var(--spacer-3);
+
+  .hekp, .aside{
+    outline:4px solid blue;
+    outline-offset: -4px;
+    min-height: 100px;
+  }
+
+  .summary {
+    grid-area: summary;
+  }
+
+  .help {
+    grid-area: help;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .aside {
+    grid-area: aside;
+  }
+
+  grid-template-columns:  1fr 22em;
+
+  grid-template-areas: 
+    "summary help"
+    "main aside";
+}
+
+
+
+

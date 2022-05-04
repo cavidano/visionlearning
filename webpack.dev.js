@@ -10,7 +10,8 @@ const devDir = './_tearsheet';
 // const devIndex = 'quiz.html';
 // const devIndex = 'reading-toggles.html';
 // const devIndex = 'typography.html';
-const devIndex = 'discipline-grid.html';
+// const devIndex = 'discipline-grid.html';
+const devIndex = 'about-grid.html';
 // const devIndex = 'wrapper.html';
 
 module.exports = merge(common, {
