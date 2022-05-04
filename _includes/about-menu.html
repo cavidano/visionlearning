@@ -2,12 +2,12 @@
             
     <ul class="nav nav--horizontal--lg font-size-md">
         <li>
-            <a href="#1" aria-current="page">
+            <a href="/about" {% if page.title == 'About' %} aria-current="page" {% endif %}>
                 At a Glance
             </a>
         </li>
         <li>
-            <a href="#1">
+            <a href="/about/who-we-are" {% if page.title == 'Who We Are' %} aria-current="page" {% endif %}>
                 Who We Are
             </a>
         </li>
