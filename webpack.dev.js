@@ -5,14 +5,16 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const devPages = {
+    'HeaderFooter': 'header-footer',
+    'ReadingToggles': 'reading-toggles',
+    'Typography': 'typography',
+    'Quiz': 'quiz'
+}
+
 const devDir = './_tearsheet';
-// const devIndex = 'header-footer.html';
-const devIndex = 'quiz.html';
-// const devIndex = 'reading-toggles.html';
-// const devIndex = 'typography.html';
-// const devIndex = 'discipline-grid.html';
-// const devIndex = 'about-grid.html';
-// const devIndex = 'wrapper.html';
+
+const devPage = `${devPages.HeaderFooter}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
@@ -25,7 +27,7 @@ module.exports = merge(common, {
         static: {
             directory: path.resolve(__dirname, devDir),
             staticOptions: {
-                index: devIndex
+                index: devPage
             },
         }
     },
@@ -52,7 +54,7 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: `./${devDir}/${devIndex}`,
+            template: `./${devDir}/${devPage}`,
             inject: 'body'
         })
     ]
