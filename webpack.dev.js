@@ -8,13 +8,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devPages = {
     'HeaderFooter': 'header-footer',
     'ReadingToggles': 'reading-toggles',
+    'Module': 'module',
     'Typography': 'typography',
     'Quiz': 'quiz'
 }
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.HeaderFooter}.html`;
+const devPage = `${devPages.Module}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

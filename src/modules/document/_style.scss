@@ -142,4 +142,10 @@ body {
 hr {
     border-block-start-width: var(--default-border-width);
     border-block-start-style: var(--default-border-style);
+
+    @each $name, $color-map in color.$theme-colors {
+        &.color-#{$name} {
+            border-color: var(--#{$name}) !important;
+        }
+    }
 }
