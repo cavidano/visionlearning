@@ -49,10 +49,12 @@ select,
 textarea {
     display: block;
 
+
     width: 100%;
     
     max-width: 100%;
     
+    font-family: inherit;
     font-size: inherit;
     line-height: normal;
 }
@@ -158,7 +160,7 @@ legend {
     display: flex;
     align-items: center;
 
-    justify-content: end;
+    justify-content: flex-end;
 
     padding-block: 0.25em;
 
@@ -184,10 +186,12 @@ legend {
 //////////////////////////////////////////////
 
 .form-entry {
-    
-    select,
-    textarea,
-    input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) {
+
+    :is(
+        select,
+        textarea,
+        input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) 
+    ) {
         border: 0;
         border-radius: inherit;
         background-color: transparent;
@@ -195,8 +199,10 @@ legend {
         width: 100%;
     }
 
-    button,
-    fieldset {
+    :is(
+        button,
+        fieldset 
+    ) {
         border: unset;
     }
 
@@ -208,8 +214,7 @@ legend {
 *:not([class*="grid"]) {
 
     > .form-entry ~ .form-entry {
-        margin-top: var(--spacer-4);
-        margin-bottom: var(--spacer-4);
+        margin-block: var(--spacer-4);
     }
 }
 
@@ -263,12 +268,14 @@ legend {
 
     overflow: hidden;
 
-    select, 
-    input,
-    textarea
-    {
-        padding: var(--form-field-padding-y) var(--form-field-padding-x);
+    :is(
+        select, 
+        input,
+        textarea
+    ) {
         outline: none;
+
+        padding: var(--form-field-padding-y) var(--form-field-padding-x);
     }
 
     &::after {
@@ -292,7 +299,7 @@ legend {
 .form-entry__field__input {
     display: flex;
     align-items: center;
-    
+
     height: 100%;
 
     button {
@@ -300,18 +307,23 @@ legend {
     }
 
     > .button {
+        --button-padding-y: 0;
         --button-border-radius: 0;
     }
 
-    > [class*="button--icon-only"] {
-        align-self: stretch;
-
+    > :is(
+       .button,
+       [class*="button--icon-only"] 
+    ) {
         height: unset;
+
+        align-self: stretch;
     }
 
-    > .icon,
-    > .button-group
-    {
+    > :is(
+        .icon,
+        .button-group
+    ) {
         margin-inline-start: var(--form-field-padding-x);
     }
 
@@ -329,24 +341,6 @@ legend {
     .form-entry__field__input::after,
     .form-entry__option > div > label::after {
         box-shadow: inset 0 0 0 calc( var(--default-border-width) * 3) currentColor;
-    }
-}
-
-// Field Has Button Modifier
-
-.field--has-button {
-
-    [class*="__group"] {
-        display: grid;
-        gap: var(--spacer-2);
-        grid-template-columns: 1fr auto;
-        
-        button {
-            height: unset;
-            width: unset;
-            
-            padding-inline: var(--form-field-padding-x);
-        }
     }
 }
 
@@ -393,10 +387,12 @@ legend {
     .has-value & {
 
         [class*="form-entry__field__"] {
-            select, 
-            input,
-            textarea
-            {
+
+            :is(
+                select, 
+                input,
+                textarea
+            ) {
                 padding-block-start: calc( var(--form-field-padding-y) * 1.5);
                 padding-block-end: calc( var(--form-field-padding-y) * 0.5);
             }
@@ -535,8 +531,9 @@ legend {
 .option__label {
 
     &::before {
+        @extend %icon-font-vars;
         @extend .icon_font;
-        
+
         position: absolute;
         inset-block-start: 0;
         inset-inline-start: 0;
@@ -547,54 +544,65 @@ legend {
 
 // Option Check
 
-.form-entry__option__check > label > input ~ .option__label::before {
-    content: "\f10d";
-}
+.form-entry__option__check > label > input {
 
-.form-entry__option__check > label > input:checked ~ .option__label::before {
-    content: "\f10c";
+    ~ .option__label::before {
+        content: "\f10d";
+    }
+
+    &:checked ~ .option__label::before {
+        content: "\f10c";
+    }
+
 }
 
 // Option Radio
 
-.form-entry__option__radio > label > input ~ .option__label::before {
-    content: "\f145";
-}
+.form-entry__option__radio > label > input {
 
-.form-entry__option__radio > label > input:checked ~ .option__label::before {
-    content: "\f137";
+    ~ .option__label::before {
+        content: "\f138";
+    }
+
+    &:checked ~ .option__label::before {
+        content: "\f137";
+    }
+
 }
 
 // Disabled Options
 
-[class*="form-entry__option__"] > label > input:disabled ~ .option__label::before {
-    content: "\f115";
-}
+[class*="form-entry__option__"] > label {
 
-[class*="form-entry__option__"] > label.disabled {
-    cursor: not-allowed;
-
-    [class*="__label"] {
-        opacity: 0.625;
+    > input:disabled ~ .option__label::before {
+        content: "\f115";
     }
 
-}
+    &.disabled {
+        cursor: not-allowed;
 
-// Focus State
-
-[class*="form-entry__option__"] > label > input:focus ~ .option__label {
-    text-decoration: underline;
-
-    &::before {
-        opacity: 0.75;
+        [class*="__label"] {
+            opacity: 0.625;
+        }
     }
 }
 
-// Checked State
+// Shared Focus and Checked States
 
-[class*="form-entry__option__"] > label > input:checked ~ .option__label {
-    &::before {
-        opacity: 1;
+[class*="form-entry__option__"] > label > input {
+
+    &:focus ~ .option__label {
+        text-decoration: underline;
+
+        &::before {
+            opacity: 0.75;
+        }
+    }
+
+    &:checked ~ .option__label {
+        &::before {
+            opacity: 1;
+        }
     }
 }
 
@@ -655,15 +663,19 @@ legend {
         }
     }
 
-    input:checked + .switch__slider::before {
-        background-color: var(--toggle-switch-active-color);
+    input:checked + .switch__slider {
+    
+        &::before {
+            background-color: var(--toggle-switch-active-color);
 
-        opacity: 1;
+            opacity: 1;
+        }
+
+        &::after {
+            inset-inline-start: 50%;
+        }
     }
 
-    input:checked + .switch__slider::after {
-        inset-inline-start: 50%;
-    }
 }
 
 //////////////////////////////////////////////

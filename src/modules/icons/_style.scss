@@ -17,8 +17,7 @@ In this file:
 
 %icon-font-vars {
   --icon-size: 1.25em;
-
-  --icon-font-family: 'visionlearning-icons';
+  --icon-font-family: 'natura11y-icons';
 }
 
 //////////////////////////////////////////////
@@ -34,7 +33,7 @@ span.icon {
   }
 }
 
-.visionlearning-icons-sprite {
+.natura11y-icons-sprite {
   width: 0;
   height: 0;
   display: none;
@@ -70,7 +69,6 @@ svg.icon {
 //////////////////////////////////////////////
 
 .icon_font {
-  @extend %icon-font-vars;
   font-family: var(--icon-font-family);
   font-size: var(--icon-size);
   font-style: normal;

@@ -56,12 +56,12 @@ In this file:
 
     // Headers
 
-    --h1-font-size: calc(var(--body-font-size) * 3);    // ~ 60px
-    --h2-font-size: calc(var(--body-font-size) * 2.2);  // ~ 48px
-    --h3-font-size: calc(var(--body-font-size) * 1.8);  // ~ 40px
-    --h4-font-size: calc(var(--body-font-size) * 1.6);  // ~ 35px
-    --h5-font-size: calc(var(--body-font-size) * 1.4);  // ~ 30px
-    --h6-font-size: calc(var(--body-font-size) * 1.2);  // ~ 26px
+    --h1-font-size: calc(var(--body-font-size) * 2.5);    // ~ 60px
+    --h2-font-size: calc(var(--body-font-size) * 2);  // ~ 48px
+    --h3-font-size: calc(var(--body-font-size) * 1.6);  // ~ 40px
+    --h4-font-size: calc(var(--body-font-size) * 1.4);  // ~ 35px
+    --h5-font-size: calc(var(--body-font-size) * 1.2);  // ~ 30px
+    --h6-font-size: calc(var(--body-font-size) * 1);  // ~ 26px
 
     --header-line-height: 1.125;
 
@@ -132,12 +132,14 @@ $font-sizes: (
 // E. Headers
 //////////////////////////////////////////////
 
-h1, .h1,
-h2, .h2, 
-h3, .h3,
-h4, .h4,
-h5, .h5, 
-h6, .h6 {
+:is(
+    h1, .h1,
+    h2, .h2, 
+    h3, .h3,
+    h4, .h4,
+    h5, .h5, 
+    h6, .h6 
+) {
     font-weight: var(--body-font-weight-bold);
     line-height: var(--header-line-height);
 
@@ -199,8 +201,8 @@ $headers: (
 //////////////////////////////////////////////
 
 html {
-    --fluid-typ-min: 1rem;
-    --fluid-typ-rec: 0.6vw + 0.9rem;
+    --fluid-typ-min: 0.75rem;
+    --fluid-typ-rec: 0.75vw + 1rem;
     --fluid-typ-max: 1.5rem;
 
     &.fluid-type {
@@ -233,16 +235,13 @@ p ~ ol:not([class]) {
     }
 }
 
-
-ul.bulleted,
-p ~ ul:not([class]),
-p ~ ol:not([class]) {
-    li {
-        margin-block-end: var(--spacer-1);
-    }
+:is(
+    p ~ ul:not([class]),
+    p ~ ol:not([class]) 
+) li {
+    margin-block-end: var(--spacer-1);
 }
 
-ul.bulleted,
 p ~ ul:not([class]) {
     --list-item-padding: 1em;
 

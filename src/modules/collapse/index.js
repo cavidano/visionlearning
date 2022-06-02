@@ -9,10 +9,12 @@ import { getFocusableElements } from '../../utilities/focus';
 export default class Collapse {
 
     constructor() {
+        this.collapseButtonList = document.querySelectorAll('[data-target-toggle]');
+    }
 
-        const collapseButtonList = document.querySelectorAll('[data-target-toggle]');
+    init() {
 
-        collapseButtonList.forEach((collapseButton) => {
+        this.collapseButtonList.forEach((collapseButton) => {
 
             collapseButton.setAttribute('aria-expanded', false);
     
@@ -41,20 +43,16 @@ export default class Collapse {
 
                 } else if (isExpanded === 'false') {
                     handleOpen(collapseButton, collapseTarget);
-                    firstFocusableElement.focus();
+                    if (collapseTarget.hasAttribute('data-focus-first')) {
+                        firstFocusableElement.focus();
+
+                    }
                 }
 
                 collapseTarget.addEventListener('keydown', (event) => {
 
-                    const keyCodes = {
-                        tab: 9,
-                        esc: 27
-                    };
-
-                    const key = event.keyCode;
-
-                    switch (key) {
-                        case keyCodes.tab:
+                    switch (event.code) {
+                        case 'Tab':
 
                             if(document.activeElement === firstFocusableElement){
                                 if(event.shiftKey){
@@ -65,9 +63,11 @@ export default class Collapse {
 
                             break;
                         
-                        case keyCodes.esc:
+                        case 'Escape':
                             handleClose(collapseButton, collapseTarget);
                             break;
+                        default:
+                        // do nothing
                     }
 
                 });
@@ -87,6 +87,5 @@ export default class Collapse {
             });
 
         });
-        
     }
 }

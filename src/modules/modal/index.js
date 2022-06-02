@@ -9,11 +9,14 @@ import { getFocusableElements } from '../../utilities/focus'
 export default class Modal {
 
   constructor() {
+    this.modalList = document.querySelectorAll('.modal');
+    this.modalButtonList = document.querySelectorAll('[data-modal-open]');
+  }
 
-    const modalList = document.querySelectorAll('.modal');
-    const modalButtonList = document.querySelectorAll('[data-modal-open]');
+  init() {
+  
+    const initModal = (modalTarget) => {
 
-    const initModal = modalTarget => {
       document.querySelector('body').classList.add('modal-open');
 
       modalTarget.setAttribute('aria-hidden', false);
@@ -56,16 +59,10 @@ export default class Modal {
       const firstElementOfModal = focusableElements[0];
       const lastElementOfModal = focusableElements[focusableElements.length - 1];
 
-      modalTarget.addEventListener('keydown', event => {
-        const keyCodes = {
-          tab: 9,
-          esc: 27,
-        }
+      modalTarget.addEventListener('keydown', (event) => {
 
-        const key = event.keyCode;
-
-        switch (key) {
-          case keyCodes.tab:
+        switch (event.code) {
+          case 'Tab':
             if (document.activeElement === lastElementOfModal) {
               if (!event.shiftKey) {
                 event.preventDefault();
@@ -89,10 +86,14 @@ export default class Modal {
 
             break;
 
-          case keyCodes.esc:
+          case 'Escape':
             handleClose();
             break;
+          
+          default:
+          // do nothing
         }
+        
       });
 
       modalCloseList.forEach(modalClose => {
@@ -106,7 +107,7 @@ export default class Modal {
 
     }
 
-    modalList.forEach(modal => {
+    this.modalList.forEach(modal => {
       const modalContainer = modal.querySelector('.modal__content');
 
       modalContainer.setAttribute('role', 'dialog');
@@ -115,7 +116,7 @@ export default class Modal {
       modal.setAttribute('aria-hidden', true);
     });
 
-    modalButtonList.forEach(modalButton => {
+    this.modalButtonList.forEach(modalButton => {
 
       modalButton.addEventListener('click', event => {
         const modalTargetID = event.target.getAttribute('data-modal-open').replace(/#/, '');
@@ -127,7 +128,7 @@ export default class Modal {
       });
 
     });
-
+  
   }
 
 }

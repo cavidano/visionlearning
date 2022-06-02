@@ -7,12 +7,14 @@ import "./_style.scss";
 export default class Quiz {
 
     constructor() {
+        this.quiz = document.querySelector('.quiz');
+    }
 
-        const quiz = document.querySelector('.quiz');
-        
-        if(quiz){
+    init(){
+    
+        if(this.quiz){
 
-            const submitButton = quiz.querySelector('button[type="submit"]');
+            const submitButton = this.quiz.querySelector('button[type="submit"]');
             
             console.log(submitButton);
 

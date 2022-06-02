@@ -7,10 +7,12 @@ import './_style.scss';
 export default class Tabs {
 
     constructor() {
+        this.tabsList = document.querySelectorAll('.tabs');
+    }
 
-        const tabsList = document.querySelectorAll('.tabs');
+    init() {
 
-        tabsList.forEach((tab) => {
+        this.tabsList.forEach((tab) => {
 
             const tabsButtonList = tab.querySelectorAll('[role="tab"]');
             const tabsPanelList = tab.querySelectorAll('[role="tabpanel"]');
@@ -79,31 +81,21 @@ export default class Tabs {
                         }
                     }
 
-                    const keyCodes = {
-                        arrowLeft: 37,
-                        arrowRight: 39,
-                        home: 36,
-                        end: 35
-                    };
-                    
-                    const key = event.keyCode;
-
-                    switch (key) {
-                        case keyCodes.home:
+                    switch (event.code) {
+                        case 'Home':
                             focusFirstTab(event)
                             break;
-                        case keyCodes.end:
+                        case 'End':
                             focusLastTab(event)
                             break;
-                        case keyCodes.arrowLeft:
+                        case 'ArrowLeft':
                             directionalFocus(-1);
                             break;
-                        case keyCodes.arrowRight:
+                        case 'ArrowRight':
                             directionalFocus(1);
                             break;
                         default:
                         // do nothing
-        
                     }
 
                 });

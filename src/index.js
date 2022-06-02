@@ -1,6 +1,6 @@
 
 //////////////////////////////////////////////
-// Natura11y Modules
+// A. Module Imports
 //////////////////////////////////////////////
 
 import './modules/accents';
@@ -8,12 +8,10 @@ import './modules/accents';
 import './modules/accessibility';
 
 import Accordion from './modules/accordion';
-new Accordion();
 
 import Alerts from './modules/alerts';
-new Alerts();
 
-// import './modules/article';
+import './modules/article';
 
 import './modules/aspect-ratios';
 
@@ -23,27 +21,23 @@ import './modules/borders';
 
 import './modules/breakpoints';
 
-import Buttons from './modules/buttons/';
-new Buttons();
+import Buttons from './modules/buttons';
 
 import './modules/cards';
 
 import Collapse from './modules/collapse';
-new Collapse();
 
-import './modules/color';
+// import './modules/color';
 
 import './modules/containers';
 
 import './modules/display';
 
-import Document from './modules/document';
-new Document();
+import './modules/document';
 
 import './modules/flex';
 
 import Forms from './modules/forms';
-new Forms();
 
 import './modules/grid';
 
@@ -52,10 +46,8 @@ import './modules/icons';
 import './modules/links';
 
 import Modal from './modules/modal';
-new Modal();
 
 import Navigation from './modules/navigation';
-new Navigation();
 
 import './modules/opacity';
 
@@ -70,26 +62,59 @@ import './modules/sizing';
 import './modules/spacing';
 
 import Tabs from './modules/tabs';
-new Tabs();
 
 import Tables from './modules/tables';
-new Tables();
 
 import './modules/typography';
 
-import './modules/z-index';
+import './modules/z-index/index';
+
+//////////////////////////////////////////////
+// B. Initialize JS Modules
+//////////////////////////////////////////////
+
+const accordion = new Accordion();
+accordion.init();
+
+const alerts = new Alerts();
+alerts.init();
+
+const buttons = new Buttons();
+buttons.init();
+
+const collapse = new Collapse();
+collapse.init();
+
+const forms = new Forms();
+forms.init();
+
+const modal = new Modal();
+modal.init();
+
+const navigation = new Navigation();
+navigation.init();
+
+const tabs = new Tabs();
+tabs.init();
+
+const tables = new Tables();
+tables.init();
 
 //////////////////////////////////////////////
 // Custom Modules
 //////////////////////////////////////////////
 
 import Layout from './custom_modules/layout'; 
-new Layout();
+
+const layout = new Layout();
+layout.init();
 
 import './custom_modules/navigation';
 
 import Quiz from './custom_modules/quiz'; 
-new Quiz();
+
+const quiz = new Quiz();
+quiz.init();
 
 import ReadingToggles from './custom_modules/reading_toggles'; 
 new ReadingToggles();

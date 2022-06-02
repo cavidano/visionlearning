@@ -23,6 +23,7 @@ In this file:
 @use "../accents/style" as accents;
 @use "../spacing/style" as spacing;
 @use "../collapse/style" as collapse;
+@use "../buttons/style" as buttons;
 @use "../links/style" as links;
 @use "../typography/style" as typography;
 
@@ -38,10 +39,10 @@ In this file:
     --nav-divider-padding-y: 0.625em;
     --nav-divider-padding-x: var(--spacer-3);
 
-    --primary-nav-padding-x: var(--spacer-3);
+    --primary-nav-padding-x: var(--spacer-2);
     --primary-nav-padding-y: var(--spacer-2);
 
-    --primary-nav-search-width: 200px;
+    --primary-nav-search-width: 300px;
 }
 
 ////////////////////////////////////////
@@ -79,9 +80,10 @@ In this file:
 }
 
 .nav:not([class*="nav--divider"]):not([class*="nav--breadcrumb"]) {
-    > li:not(:last-child) {
-        margin-block-end: var(--nav-gap);
-    }
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--nav-gap);
 
     > li > .button {
         min-height: 100%;
@@ -112,17 +114,8 @@ In this file:
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
         .nav:not([class*="nav--divider"]).nav--horizontal#{$mod} {
-            display: flex;
+            flex-direction: row;
             align-items: center;
-
-            margin-inline-start: calc(var(--nav-gap) * -1);
-            margin-inline-end: calc(var(--nav-gap) * -1);
-
-            > li {
-                margin-inline-start: var(--nav-gap);
-                margin-inline-end: var(--nav-gap);
-                margin-bottom: 0 !important;
-            }
 
             > li > .nav__dropdown {
                 position: absolute;
@@ -381,11 +374,11 @@ In this file:
 
 [class*="primary-nav--"] {
     position: relative;
-
+    
     display: grid;
     align-items: center;
 
-    z-index: 1000; //???
+    z-index: 10000;
 
     ul {
         @extend %list-style-nav;
@@ -393,6 +386,8 @@ In this file:
 
     > [class*="__logo"] {
         grid-area: logo;
+
+        display: flex;
 
         padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
     }
@@ -403,36 +398,53 @@ In this file:
         @extend .collapse;
 
         padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
+
+        border-top-width: var(--default-border-width);
+        border-top-style: var(--default-border-style);
+        border-top-color: inherit;
+    }
+
+    > [class*="__toggle"] {
+        grid-area: toggle;
+        
+        display: flex;
+        gap: var(--primary-nav-padding-x);
+
+        margin: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
+    }
+
+    > [class*="__search"] {
+        grid-area: search;
+
+        padding-block: var(--primary-nav-padding-y);
+        padding-inline: var(--primary-nav-padding-x);
+
+        .form-entry:not([class*="active"]) .form-entry__field__input::after {
+            display: none;
+        }
+
+        .form-entry__field {
+            height: var(--button-icon-only-size) !important;
+            border-radius: var(--button-border-radius);
+        }
     }
 
     > [class*="__actions"] {
         grid-area: buttons;
 
-        display: flex;
-        align-items: center;
-
-        padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
-
-        > .button {
-            margin-inline-end: var(--spacer-2);
-        }
-    }
-
-    .form-entry:not([class*="active"]) .form-entry__field__input::after {
-        display: none;
+        @extend .button-group;
+        
+        margin-block: var(--primary-nav-padding-y);
+        margin-inline-end: var(--primary-nav-padding-x);
     }
 }
 
 [class*="primary-nav--inline--"] {
-    --search-width: var(--primary-nav-search-width);
-
-    justify-content: space-between;
-    align-items: center;
-
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
     grid-template-areas:
-        "logo buttons"
-        "menu menu";
+        "logo toggle buttons"
+        "menu menu menu"
+        "search search search";
 
     > [class*="__menu"] {
         align-self: stretch; 
@@ -444,50 +456,37 @@ In this file:
 
     }
 
-    form[role="search"] .form-entry__field {
-        height: var(--button-icon-only-size);
-        border-radius: var(--button-border-radius);
-    }
+    > [class*="__search"] {
+        @extend .collapse;
 
-}
-
-[class*="primary-nav--below--"] {
-    grid-template-columns: 100%;
-    grid-template-areas:
-        "logo"
-        "buttons"
-        "menu";
-
-    > [class*="__logo"] {
-        display: flex;
-        justify-content: center;
-    }
-    
-    > [class*="__actions"] {
-        justify-content: space-between;
-
-        padding: var(--primary-nav-padding-y) var(--primary-nav-padding-x);
-    }
-
-    > [class*="__actions"],
-    > [class*="__menu"] {
         border-top-width: var(--default-border-width);
         border-top-style: var(--default-border-style);
         border-top-color: inherit;
     }
+}
 
-    form[role="search"]{
-        
-        .form-entry__field {
-            --form-field-border-radius: 0;
-            height: 100%;
-        } 
+[class*="primary-nav--below--"] {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "logo logo logo"
+        "toggle search buttons"
+        "menu menu menu";
+
+    > [class*="__logo"] {
+        justify-content: center;
+        border-bottom-width: var(--default-border-width);
+        border-bottom-style: var(--default-border-style);
+        border-bottom-color: inherit;
+    }
+
+    > [class*="__toggle"] {
+        margin-inline-end: unset;
     }
 }
 
 .primary-nav__menu {
 
-    > ul > li {
+   > ul > li {
         position: relative;
 
         &:not(:last-child) {
@@ -495,21 +494,19 @@ In this file:
         }
     }
 
-    > ul > li > a {
+   > ul > li > a {
         @extend .expanded-link;
-    }
-
-    form[role="search"] {
-        margin-top: var(--spacer-2);
-    }
-
-    .form-entry__field {
-        border-width: var(--default-border-width);
-        border-style: var(--default-border-style);
     }
 
     .nav__dropdown {
         padding: var(--nav-gap);
+    }
+}
+
+.primary-nav__search {
+    .form-entry__field {
+        border-width: var(--default-border-width);
+        border-style: var(--default-border-style);
     }
 }
 
@@ -522,39 +519,53 @@ In this file:
 
             [class*="__logo"] {
                 display: flex;
-                justify-content: start;
+                justify-content: flex-start;
             }
 
             [class*="__menu"] {
                 display: flex !important;
             }
 
-            [class*="__actions"] button.mobile-menu-toggle {
+            [class*="__toggle"] {
                 display: none;
             }
 
-            form[role="search"] {
+            > [class*="__menu"],
+            > [class*="__search"] {
+                display: block !important;
+            }
+
+            [class*="__search"] .form-entry {
                 max-width: var( --primary-nav-search-width);
-                margin-top: unset;
             }
         }
 
         .primary-nav--inline#{$mod} {
             grid-template-columns: 1fr auto auto;
             grid-template-areas:
-                "logo menu buttons";
+                "logo menu search buttons";
 
-            [class*="__menu"] {
-                padding: unset;
+            > [class*="__search"] {
+                border-top-style: none !important;
+            }
+
+            > [class*="__menu"] {
+                border-top-style: none !important;
+
                 justify-content: flex-end;
-
                 align-items: center;
+
+                padding: unset;
+                
+                margin-inline-end: var(--primary-nav-padding-x);
+
+                > ul {
+                    height: 100%;
+                }
 
                 > ul {
                     display: flex;
                     align-items: stretch;
-
-                    height: 100%;
 
                     > li {
                         display: flex;
@@ -580,89 +591,75 @@ In this file:
                     }
                 }
 
-                form[role="search"] {
-                    margin-inline-start: var(--primary-nav-padding-x);
-                }
-
             }
+
         }
 
         .primary-nav--below#{$mod} {
-            grid-template-columns: 1fr auto;
+            grid-template-columns: 1fr auto auto;
             grid-template-areas:
-                "logo buttons"
-                "menu menu";
+                "logo search buttons"
+                "menu menu menu";
 
-            > [class*="__actions"] {
-                border-top-style: none !important;
+            > [class*="__logo"] {
+                border-bottom-style: none !important;
             }
 
             > [class*="__menu"] {
                 padding: unset;
 
                 > ul {
-                    flex-grow: 1;
-                }
-            }
-
-            > [class*="__menu"] > ul {
-                display: flex;
-                align-items: stretch;
-
-                > li {
                     display: flex;
-                    flex: 1;
+                    align-items: stretch;
+                        
+                    > li {
+                        display: flex;
+                        
+                        flex-grow: 1;
 
-                    margin-bottom: unset !important;
-                    
-                    border-bottom-style: none !important;
-                    
-                    text-align: center;
-                }
+                        margin-bottom: unset !important;
+                        
+                        border-bottom-style: none !important;
+                        
+                        text-align: center;
+                    }
 
-                > li > button {
-                    width: 100%;
-                }
+                    > li > button {
+                        width: 100%;
+                    }
 
-                > li > a, 
-                > li > button,
-                > li > .nav__dropdown {
-                    padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
-                }
+                    > li > a, 
+                    > li > button,
+                    > li > .nav__dropdown {
+                        padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
+                    }
 
-                > li:not(:last-child){
-                    border-inline-end-width: var(--default-border-width);
-                    border-inline-end-style: var(--default-border-style);
-                }
+                    > li:not(:last-child){
+                        border-inline-end-width: var(--default-border-width);
+                        border-inline-end-style: var(--default-border-style);
+                    }
 
-                > li > a {
-                    width: 100%;
-                    
-                    padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
-                    
-                    text-align: center;
-                }
+                    > li > a {
+                        width: 100%;
+                        
+                        padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
+                        
+                        text-align: center;
+                    }
 
-                [data-toggle="dropdown"] {
-                    justify-content: center;
-                }
+                    [data-toggle="dropdown"] {
+                        justify-content: center;
+                    }
 
-                .nav__dropdown {
-                    position: absolute;
+                    .nav__dropdown {
+                        position: absolute;
 
-                    width: 100%;
-                    
-                    inset-inline-start: 0;
-                }
+                        width: 100%;
+                        
+                        inset-inline-start: 0;
+                    }
+                }   
             }
-
-            form[role="search"] .form-entry__field {
-                border-block-start-width: 0;
-                border-inline-end-width: 0;
-                border-block-end-width: 0;
-            }
-
         }
-
     }
 }

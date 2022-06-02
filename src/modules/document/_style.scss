@@ -28,7 +28,7 @@ In this file:
 %custom-properties {
     --body-min-width: 325px;
     --body-max-width: 100%;
-    --html-background-color: var(--dark);
+    --html-background-color: transparent;
 }
 
 ////////////////////////////////////////
@@ -102,7 +102,6 @@ html {
     @extend %custom-properties;
     
     font-size: 1rem;
-
     line-height: 1.125;
 
     text-size-adjust: 100%;
@@ -132,7 +131,7 @@ body {
 
     margin-inline: auto;
     
-    @extend .theme-white;
+    @extend .theme-canvas !optional;
 }
 
 ////////////////////////////////////////
@@ -142,10 +141,4 @@ body {
 hr {
     border-block-start-width: var(--default-border-width);
     border-block-start-style: var(--default-border-style);
-
-    @each $name, $color-map in color.$theme-colors {
-        &.color-#{$name} {
-            border-color: var(--#{$name}) !important;
-        }
-    }
 }

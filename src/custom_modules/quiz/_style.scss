@@ -26,6 +26,7 @@ In this file:
         background-color: var(--white-link);
         color: white !important;
     }
+
     
 }
 
@@ -33,7 +34,6 @@ ol.quiz__questions {
     list-style: none;
     counter-reset: section;
     padding: unset;
-
 
     .form-entry__field__label {
         display: flex;
@@ -61,8 +61,22 @@ ol.quiz__questions {
         font-size: 90%;
     }
 
+
+    // .form-entry__option__radio > label > input {
+
+    //     ~ .option__label::before {
+    //         content: "\f13f";
+    //     }
+
+    //     &:checked ~ .option__label::before {
+    //         content: "\f137";
+    //     }
+
+    // }
+
     .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
-        content: "\f13f";
+        content: "\f13f"; 
+        background-color: yellow;
     }
 
     .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {

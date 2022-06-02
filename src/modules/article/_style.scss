@@ -22,14 +22,14 @@ In this file:
 // Scoped to Block
 
 %article-vars {
-    --article-sidebar-width: 200px;
+    --article-sidebar-width: 260px;
 }
 
 //////////////////////////////////////////////
 // C. Article Block
 //////////////////////////////////////////////
 
-.article {
+[class*="article--"] {
     @extend %article-vars;
     
     display: grid;
@@ -43,75 +43,61 @@ In this file:
     overflow: hidden;
 }
 
-// .article__sidebar {
-//     border: 6px solid blue !important;
-// }
-
-// .article__header {
-//     border: 6px solid blueviolet !important;
-// }
-
-// .article__body {
-//     border: 6px solid burlywood !important;
-// }
-
 @include breakpoints.breakpoints-up(lg) {
 
-    [class*="article"] {
+    .article__header {
+        grid-area: header;
+    }
+    
+    .article__sidebar {
+        position: relative;
+        grid-area: sidebar;
 
-        .article__header {
-            grid-area: header;
-        }
-        
-        .article__sidebar {
-            position: relative;
-            grid-area: sidebar;
-
-            .sticky-top {
-                max-height: 100vh;
-                overflow-y: auto;
-            }
-        }
-
-        .article__body {
-            grid-area: body;
-        }
-
-        .article__related {
-            grid-area: related;
+        .sticky-top {
+            max-height: 100vh;
+            overflow-y: auto;
         }
     }
 
-    .article--three-column,
-    .article--two-column {
+    .article__body {
+        grid-area: body;
+    }
+
+    .article__related {
+        grid-area: related;
+    }
+
+    .article--column-2,
+    .article--column-3 {
         grid-template-columns: var(--article-sidebar-width) 1fr;
 
         grid-template-areas:
             "header header"
             "sidebar body"
             "related related";
+    }
 
-        header .backdrop__cover > * {
-            margin-left: var(--article-sidebar-width);
-        }
+    :is(
+        .article--column-2,
+        .article--column-3 
+    ) .article__header .backdrop__cover > * {
+        justify-self: stretch;
 
-        [dir="rtl"] & {
-            header .backdrop__cover > * {
-                margin-left: unset;
-                margin-right: var(--article-sidebar-width);
-            }
-        }
+        margin-inline-start: var(--article-sidebar-width);
     }
 }
 
 @include breakpoints.breakpoints-up(xl) {
 
-    .article--three-column {
-        --article-sidebar-width: 260px;
+    .article--column-3 {
         grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
 
         grid-template-areas:
             "header header header"
             "sidebar body related";
+
+        .article__header .backdrop__cover > * {
+            margin-inline-end: var(--article-sidebar-width);
+        }
     }
 }

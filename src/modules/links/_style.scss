@@ -53,14 +53,12 @@ p > a {
 a[data-logo="brand"] {
     display: inline-block;
 
+    &:focus {
+        opacity: 0.85;
+    }
 
     > svg {
         fill: currentColor;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
-    &:focus {
-        opacity: 0.85;
+        display: block;
     }
 }
