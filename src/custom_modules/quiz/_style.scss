@@ -62,22 +62,22 @@ ol.quiz__questions {
     }
 
 
-    // .form-entry__option__radio > label > input {
+ 
+.form-entry__option__radio:nth-child(1) > label > input {
 
-    //     ~ .option__label::before {
-    //         content: "\f13f";
-    //     }
+    ~ .option__label::before {
+        content: "\f13f";
+    }
 
-    //     &:checked ~ .option__label::before {
-    //         content: "\f137";
-    //     }
-
+    // &:checked ~ .option__label::before {
+    //     content: "cool";
     // }
 
-    .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
-        content: "\f13f"; 
-        background-color: yellow;
-    }
+}
+
+    // .form-entry__option__radio > label > input ~ .option__label::before {
+    //     content: "\f13f"; 
+    // }
 
     .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
         content: "\f140";
