@@ -61,23 +61,9 @@ ol.quiz__questions {
         font-size: 90%;
     }
 
-
- 
-.form-entry__option__radio:nth-child(1) > label > input {
-
-    ~ .option__label::before {
-        content: "\f13f";
+    .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
+        content: "\f13f"; 
     }
-
-    // &:checked ~ .option__label::before {
-    //     content: "cool";
-    // }
-
-}
-
-    // .form-entry__option__radio > label > input ~ .option__label::before {
-    //     content: "\f13f"; 
-    // }
 
     .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
         content: "\f140";
