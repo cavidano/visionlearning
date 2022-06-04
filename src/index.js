@@ -116,7 +116,7 @@ import Quiz from './custom_modules/quiz';
 const quiz = new Quiz();
 quiz.init();
 
-import ReadingToggles from './custom_modules/reading_toggles'; 
+import ReadingToggles from './custom_modules/reading_toggles';
 new ReadingToggles();
 
 import './custom_modules/css_variables';
