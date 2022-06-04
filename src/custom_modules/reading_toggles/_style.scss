@@ -14,7 +14,7 @@ In this file:
 .in-this-module {
 
     > nav > button:not([aria-selected="true"]) {
-        color: var(--white-link);
+        color: var(--canvas-link);
     }
 
     button[aria-selected="true"] {

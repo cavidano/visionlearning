@@ -374,7 +374,7 @@
     } 
 
     ul.module-breadcrumb__subcats > li > ul > li > a {
-        color: var(--white-link);
+        color: var(--canvas-link);
     }
 }
 
@@ -484,7 +484,7 @@
 }
 
 .tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
-    color: var(--white-link);
+    color: var(--canvas-link);
 }
 
 [data-logo="brand"] {

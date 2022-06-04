@@ -23,31 +23,36 @@ In this file:
     overflow: hidden;
 
     button[type="submit"]{
-        background-color: var(--white-link);
+        background-color: var(--canvas-link);
         color: white !important;
     }
-
-    
 }
 
 ol.quiz__questions {
     list-style: none;
     counter-reset: section;
-    padding: unset;
+    padding: unset;             
+
+    .form-entry {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            inset-inline-start: 0;
+
+            counter-increment: section;    
+            content: counter(section) ".";
+
+            font-weight: bold;
+
+            padding-inline-start: var(--form-field-padding-x);
+        }
+    }
 
     .form-entry__field__label {
         display: flex;
         padding: unset;
         padding-inline-start: calc( var(--form-field-padding-x) + 2em);
-        
-
-        &::before {
-            counter-increment: section;                   
-            content: counter(section) ".";
-            position: absolute;
-            inset-inline-start: 0;
-            padding-inline-start: var(--form-field-padding-x);
-        }
     }
 
     .form-entry__option {
@@ -106,18 +111,17 @@ ol.quiz__questions {
     font-style: italic;
     font-size: 90%;
 
-    color: var(--white-warn);
+    color: var(--canvas-warn);
 
     [data-answer="correct"] & {
-        color: var(--white-confirm);
+        color: var(--canvas-confirm);
     }
-
 }
 
 .quiz__score {
 
     &.passed {
-        color: var(--white-confirm);
+        color: var(--canvas-confirm);
     }
 
     display: none;
