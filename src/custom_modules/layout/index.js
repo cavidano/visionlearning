@@ -14,15 +14,21 @@ export default class Layout {
 
         const mediaQuery = window.matchMedia('(min-width: 1200px)');
 
-        mediaQuery.addEventListener('change', (event) => {
+        let isDesktop;
 
-        if (event.matches) {
-            console.log('Media Query Matched!');
-        } else {
-            console.log('Media Query not Matched!')
+        function checkMediaQuery() {
+        
+            if (mediaQuery.matches) {
+                console.log('Media Query Matched!');
+                isDesktop = true;
+            } else {
+                console.log('Media Query not Matched!');
+                isDesktop = false;
+            }
         }
 
-        });
+        mediaQuery.addEventListener('change', checkMediaQuery);
+        checkMediaQuery();
 
         ////
 
@@ -30,8 +36,8 @@ export default class Layout {
 
         this.discList.forEach((disc) => {
 
-            disc.addEventListener('mouseenter', (event) => {
-
+            const handleMouseEnter = (event) => {
+            
                 event.preventDefault();
                 
                 time = setTimeout(() => {
@@ -39,9 +45,9 @@ export default class Layout {
                     disc.classList.add('focused');
                 }, 500);
                 
-            });
+            }
 
-            disc.addEventListener('mouseleave', (event) => {
+            const handleMouseLeave = (event) => {
 
                 event.preventDefault();
                 
@@ -56,8 +62,18 @@ export default class Layout {
                         disc.classList.remove('unfocused');
                     });
                 }
+                
+            }
 
-            });
+            if(isDesktop) {
+                disc.addEventListener('mouseenter', handleMouseEnter);
+                disc.addEventListener('mouseleave', handleMouseLeave);
+            } else {
+                disc.removeEventListener('mouseenter', handleMouseEnter);
+                disc.removeEventListener('mouseleave', handleMouseLeave);
+            
+            }
+
 
         });
     }
