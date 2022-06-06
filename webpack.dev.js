@@ -6,6 +6,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devPages = {
+    'DisciplineGrid': 'discipline-grid',
     'HeaderFooter': 'header-footer',
     'ReadingToggles': 'reading-toggles',
     'Module': 'module',
@@ -15,7 +16,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Quiz}.html`;
+const devPage = `${devPages.DisciplineGrid}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

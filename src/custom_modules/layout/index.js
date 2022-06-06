@@ -11,7 +11,22 @@ export default class Layout {
     }
 
     init() {
-    
+
+        // Create a condition that targets viewports at least 768px wide
+        const mediaQuery = window.matchMedia('(min-width: 1200px)');
+
+        mediaQuery.addEventListener('change', (event) => {
+
+        if (event.matches) {
+            console.log('Media Query Matched!');
+        } else {
+            console.log('Media Query not Matched!')
+        }
+
+        });
+
+        ////
+
         let time;
 
         this.discList.forEach((disc) => {

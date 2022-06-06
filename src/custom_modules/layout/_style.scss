@@ -69,6 +69,12 @@ In this file:
 
         overflow: hidden;
 
+        aspect-ratio: 3 / 1;
+
+        min-height: unset !important;
+
+        max-width: 100%;
+
         z-index: auto;
 
         &:nth-child(1), 
@@ -100,6 +106,12 @@ In this file:
 
     @include breakpoints.breakpoints-up(md) {
       --grid-columns: 2;
+
+      .backdrop {
+        aspect-ratio: 4 / 3;
+      }
+
+
     }
 
     @include breakpoints.breakpoints-up(lg) {
