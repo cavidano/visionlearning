@@ -12,7 +12,6 @@ export default class Layout {
 
     init() {
 
-        // Create a condition that targets viewports at least 768px wide
         const mediaQuery = window.matchMedia('(min-width: 1200px)');
 
         mediaQuery.addEventListener('change', (event) => {
