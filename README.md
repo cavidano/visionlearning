@@ -8,6 +8,8 @@ An in-depth paragraph about your project and overview of use.
 
 ## Getting Started
 
+`fantasticon ./svg -o ../../dist/icons`
+
 ### Dependencies
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.

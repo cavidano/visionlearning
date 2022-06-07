@@ -236,9 +236,7 @@ button {
 
 .button-group {
     --gap-size: var(--spacer-2);
-    
-    --button-padding-y: unset;
-    
+
     display: flex;
 
     gap: var(--gap-size);
@@ -246,6 +244,9 @@ button {
     min-height: var(--button-icon-only-size);
 
     > [class*="button"]:not(.button--icon-only) {
+
+        --button-padding-y: 0;
+
         min-height: 100%;
 
         display: flex;
