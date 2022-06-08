@@ -7,112 +7,112 @@ title: "Register"
 
 <main id="skip-header-content">
 
-    <div class=" padding-y-5">
+    <form class="container narrow margin-y-5">
 
-        <form class="container wide font-size-md">
+        <h1 class="margin-bottom-4">
+            Register
+        </h1>
 
-         <div class="width-50--lg">
-             
-            <h1 class="margin-bottom-4">Register</h1>
+        <p class="required-indicator" aria-hidden="true">
+            <span class="required-indicator__text">
+                Required fields indicated with
+            </span>
+            <span class="icon icon-asterisk"></span>
+        </p>
 
-            <div class="">
+        <div class="font-size-md">
+                
+            <fieldset class="grid grid--column-3--lg gap-4 margin-bottom-4">
 
-                <div class="grid grid--column-3--lg gap-4 margin-bottom-4">
-
-                    <div class="grid__colspan-2">
-
-                        <div class="grid gap-4">
+                <div class="margin-y-3--lg order-2--lg">
                             
-                            <div
-                                class="form-entry"
-                                data-required="true"
-                                data-error-message="Custom error message">
-
-                                <label class="form-entry__field">
-
-                                    <span class="form-entry__field__label">
-                                        Create Username
-                                    </span>
-
-                                    <span class="form-entry__field__input">
-                                        <input
-                                            type="text"
-                                            name="textInputExample"
-                                            id="text-input-example"
-                                            aria-describedby="help-text-input-example">
-                                    </span>
-
-                                </label>
-
-                            </div>
-                                    
-                            <div
-                                class="form-entry" 
-                                data-required="true"
-                                data-error-message="Custom error message">
-
-                                <label class="form-entry__field">
-
-                                    <span class="form-entry__field__label">
-                                        Create Password
-                                    </span>
-
-                                    <span class="form-entry__field__input">
-                                        <input
-                                            type="password"
-                                            name="textInputExample"
-                                            id="text-input-example"
-                                            aria-describedby="help-text-input-example">
-                                    </span>
-
-                                </label>
-
-                            </div>
-                                    
-                            <div
-                                class="form-entry" 
-                                data-required="true"
-                                data-error-message="Custom error message">
-
-                                <label class="form-entry__field">
-
-                                    <span class="form-entry__field__label">
-                                        Confirm Password
-                                    </span>
-
-                                    <span class="form-entry__field__input">
-                                        <input
-                                            type="password"
-                                            name="textInputExample"
-                                            id="text-input-example"
-                                            aria-describedby="help-text-input-example">
-                                    </span>
-
-                                </label>
-
-                            </div>
-                            
-                        </div>
-                                                
-                    </div>
-
-                    <div class="margin-y-3">
-                        
-                        <p>
-                            Your information will be kept private and safe and will only be used for Visionlearning purposes.
-                        </p>
-
-                    </div>
+                    <p>
+                        Your information will be kept private and safe and will only be used for Visionlearning account purposes.
+                    </p>
 
                 </div>
 
-            </div>
+                <div class="grid__colspan-2">
 
-            <hr class="border-color-dark margin-y-5" />
+                    <div class="grid gap-4">
+                                
+                        <div
+                            class="form-entry"
+                            data-required="true"
+                            data-error-message="Custom error message">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Create Username
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="text"
+                                        name="createUsername"
+                                        id="create-username">
+                                </span>
+
+                            </label>
+
+                        </div>
+                                        
+                        <div
+                            class="form-entry" 
+                            data-required="true"
+                            data-error-message="Custom error message">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Create Password
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="password"
+                                        name="createPassword"
+                                        id="create-password">
+                                </span>
+
+                            </label>
+
+                        </div>
+                                        
+                        <div
+                            class="form-entry" 
+                            data-required="true"
+                            data-error-message="Custom error message">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Confirm Password
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="password"
+                                        name="confirmPassword"
+                                        id="confirm-password">
+                                </span>
+
+                            </label>
+
+                        </div>
+                                
+                    </div>
+                                                    
+                </div>
+
+            </fieldset>
+
+            <hr class="margin-y-4" />
 
             <h2 class="h4">Legal Agreement</h2>
 
-            <p class="font-size-md">
+            <p>
                 In order to participate in Visionlearning you must agree with and meet the following requirements and rules. Any infraction or disregard for these rules will result in immediate disqualification, and your registration will be revoked.
             </p>
 
@@ -273,17 +273,17 @@ title: "Register"
 
                     </ol>                    
                 </div>
-                
+                    
             </div>
 
-            <button class="button theme-primary" type="submit">
-                Register
+            <button
+                class="button theme-primary"
+                type="submit">
+                    Register
             </button>
 
-         </div>
+        </div>
 
-        </form>
-
-    </div>
+    </form>
 
 </main>

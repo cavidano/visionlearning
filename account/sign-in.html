@@ -9,89 +9,94 @@ title: "Sign In"
 
     <main id="skip-header-content">
 
-        <div class="height-100 padding-y-5">
+        <div class="height-100">
 
-            <div class="container wide">
+            <form class="container narrow margin-y-5">
 
-             <div class="width-50--lg">
-             
-                <h1 class="margin-bottom-4">Sign In</h1>
+                <h1 class="margin-bottom-4">
+                    Sign In
+                </h1>
 
-                <form class="font-size-md">
-
-                    <div class="grid grid--column-2--lg gap-3 margin-bottom-4">
-                            
-                        <div
-                            class="form-entry"
-                            data-required="true"
-                            data-error-message="Custom error message">
-
-                            <label class="form-entry__field">
-
-                                <span class="form-entry__field__label">
-                                    Username
-                                </span>
-
-                                <span class="form-entry__field__input">
-                                    <input
-                                        type="text"
-                                        name="textInputExample"
-                                        id="text-input-example"
-                                        aria-describedby="help-text-input-example">
-                                </span>
-
-                            </label>
-
-                            <p class="form-entry__help" id="help-text-input-example">
-                                <a href="#1">Forgot Username?</a>
-                            </p>
-
-                        </div>
-                            
-                        <div
-                            class="form-entry" 
-                            data-required="true"
-                            data-error-message="Custom error message">
-
-                            <label class="form-entry__field">
-
-                                <span class="form-entry__field__label">
-                                    Password
-                                </span>
-
-                                <span class="form-entry__field__input">
-                                    <input
-                                        type="password"
-                                        name="textInputExample"
-                                        id="text-input-example"
-                                        aria-describedby="help-text-input-example">
-                                </span>
-
-                            </label>
-
-                            <p class="form-entry__help" id="help-text-input-example">
-                                <a href="#1">Forgot Password?</a>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <button class="button theme-primary" type="submit">
-                        Sign In
-                    </button>
-
-                </form>
-
-                <hr class="border-color-dark margin-y-4" />
-
-                <p class="font-size-md">
-                    Dont have an account? <a href="/account/register">Register for free</a>.
+                <p class="required-indicator" aria-hidden="true">
+                    <span class="required-indicator__text">
+                        Required fields indicated with
+                    </span>
+                    <span class="icon icon-asterisk"></span>
                 </p>
+
+             <div class="font-size-md">
+
+                 <div class="grid grid--column-2--lg gap-3 margin-bottom-4">
+                            
+                     <div
+                         class="form-entry"
+                         data-required="true"
+                         data-error-message="Custom error message">
+
+                         <label class="form-entry__field">
+
+                             <span class="form-entry__field__label">
+                                 Username
+                             </span>
+
+                             <span class="form-entry__field__input">
+                                 <input
+                                     type="text"
+                                     name="username"
+                                     id="username">
+                             </span>
+
+                         </label>
+
+                         <p class="form-entry__help">
+                             <a href="#1">Forgot Username?</a>
+                         </p>
+
+                     </div>
+                            
+                     <div
+                         class="form-entry" 
+                         data-required="true"
+                         data-error-message="Custom error message">
+
+                         <label class="form-entry__field">
+
+                             <span class="form-entry__field__label">
+                                 Password
+                             </span>
+
+                             <span class="form-entry__field__input">
+                                 <input
+                                     type="password"
+                                     name="password"
+                                     id="password">
+                             </span>
+
+                         </label>
+
+                         <p class="form-entry__help">
+                             <a href="#1">Forgot Password?</a>
+                         </p>
+
+                     </div>
+
+                 </div>
+
+                 <button
+                    class="button theme-primary"
+                    type="submit">
+                        Sign In
+                 </button>
 
              </div>
 
-            </div>
+             <hr class="border-color-dark margin-y-4" />
+
+             <p class="font-size-md">
+                 Dont have an account? <a href="/account/register">Register for free</a>.
+             </p>
+
+            </form>
 
         </div>
 
