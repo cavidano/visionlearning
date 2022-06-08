@@ -5,7 +5,8 @@ In this file:
 // A. Modules
 // B. Variables
 // C. Color Utilities
-// D. Default Body Theme
+// D. Prefers Color Scheme Modifier
+// E. Discipline Colors
 
 */
 
@@ -270,12 +271,17 @@ body > footer:not([class*="theme-"]),
                 --warn-color: #{$warn};
             }
 
-            .background-color-#{$name}#{$mod}{
+            .background-color-#{$name}#{$mod} {
                 --background-color: #{$swatch};
                 background-color: var(--background-color) !important;
             }
 
-            .text-color-#{$name}#{$mod}{
+            .text-color-#{$name}#{$mod} {
+                --text-color: #{$swatch};
+                color: var(--text-color) !important;
+            }
+
+            .text-color-#{$name}#{$mod} {
                 --text-color: #{$swatch};
                 color: var(--text-color) !important;
             }
@@ -284,9 +290,8 @@ body > footer:not([class*="theme-"]),
 }
 
 //////////////////////////////////////////////
-// C. Prefers Color Scheme Modifier
+// D. Prefers Color Scheme Modifier
 //////////////////////////////////////////////
-
 
 @media (prefers-color-scheme: dark) {
     [class*="theme-canvas"][class*="--prefers"]{ 
@@ -300,7 +305,7 @@ body > footer:not([class*="theme-"]),
 }
 
 //////////////////////////////////////////////
-// C. Prefers Color Scheme Modifier
+// E. Discipline Colors
 //////////////////////////////////////////////
 
 .biology {
