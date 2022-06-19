@@ -17,46 +17,35 @@
         class="modal__content medium theme-primary {{ slug }} border-radius box-shadow-3"
         aria-labelledby="modal-example-01-title">
 
-		<div
-			class="bar theme-primary position-fixed box-shadow-1 width-100 z-index-2500 padding-3 display-none" data-modal-close>
-
-			<h2>{{ header }}</h2>
-		
-		</div>
-
-        <header
-			class="
+        <header class="
 			border-radius-top
-			position-relative">
-			
-			<div class="position-top-right padding-2 z-index-1500">
-				<button class="button button--icon-only" data-modal-close>
-					<span class="icon icon-close"></span>
-				</button>
-			</div>
+			position-relative
+		">
+			<!-- --> 
 
 			<div
 				class="backdrop backdrop--fixed">
 
 				<div class="backdrop__image gradient-veneer-bottom">
 					<img
-						class="opacity-40"
+						class="opacity-20"
 						src="{{ site.url }}/images/discipline-{{ slug }}-lg.jpg"
 						alt="Placeholder"
 					/>
 				</div>
 
-				<div class="backdrop__cover">
-					<div class="container grid grid--column-7--lg gap-4 margin-y-4 text-shadow">
+				<div class="backdrop__cover align-content-start">
 
-						<h1 class="
-							banner-headline
-							grid__colspan-4--lg
-							">
+					<header class="modal__content__head border-bottom width-100">
+						<h1 class="text-transform-uppercase font-size-xl text-shadow grid__colspan-4--lg">
 							{{ header }}
 						</h1>
+						<button class="button button--icon-only" data-modal-close>
+							<span class="icon icon-close"></span>
+						</button>
+					</header>
 
-
+					<div class="container grid grid--column-7--lg gap-4 margin-y-4 text-shadow">
 
 						<div class="grid__colspan-4--lg">
 							<p>
