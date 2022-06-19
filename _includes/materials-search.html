@@ -4,25 +4,36 @@
     {% assign placeholder_text = '' %}
 {% endif %}
 
-<div class="form-entry margin-bottom-2">
+<div class="grid gap-2 margin-bottom-2">
 
-    <div class="form-entry__field">
+    <div class="form-entry">
 
-        <label class="form-entry__field__label screen-reader-only" for="search-example">
-            Search
-        </label>
-        
-        <span class="form-entry__field__input">
-            <span class="opacity-50 icon icon-search" aria-hidden="true"></span>
-            <input
-                type="text"
-                name="search-example"
-                id="search-example"
-                placeholder="Search {{placeholder_text }}"
-            />
-        </span>
+        <div class="form-entry__field">
+
+            <label class="form-entry__field__label screen-reader-only" for="search-example">
+                Search
+            </label>
+            
+            <span class="form-entry__field__input">
+                <span class="opacity-50 icon icon-search" aria-hidden="true"></span>
+                <input
+                    type="text"
+                    name="search-example"
+                    id="search-example"
+                    placeholder="Search {{placeholder_text }}"
+                />
+            </span>
+
+        </div>
 
     </div>
 
+    <button
+        class="button button--has-icon display-none--lg"
+        data-toggle="collapse"
+        data-target-toggle="#filter-by-discipline">
+            <span class="icon icon-menu"></span>
+            <span class="button__text">Disciplines</span>
+    </button>
+
 </div>
-<!-- .form-entry -->
