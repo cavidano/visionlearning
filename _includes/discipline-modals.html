@@ -1,0 +1,127 @@
+
+{% assign items = site.data.librarySample %}
+        
+{% for item in items %}
+
+    {% assign header = item.Discipline %}                         
+    {% assign description = item.Description %}                         
+    {% assign slug = item.Slug %}                         
+    {% assign subcategories = item.Subcategories %}
+
+<div
+    class="modal modal--scroll-all padding-x-2 padding-y-4"
+    id="modal-discipline-{{ slug }}"
+	role="dialog">
+
+    <div
+        class="modal__content medium theme-primary {{ slug }} border-radius box-shadow-3"
+        aria-labelledby="modal-example-01-title">
+
+        <header
+			class="
+			modal__content__head
+			display-block
+			padding-0
+			border-radius-top
+			position-relative">
+			
+			<div class="position-top-right padding-2 z-index-1500">
+				<button class="button button--icon-only" data-modal-close>
+					<span class="icon icon-close"></span>
+				</button>
+			</div>
+
+			<div
+				class="backdrop backdrop--fixed"
+				style="--backdrop-fixed-height: 500px">
+
+				<div class="backdrop__image gradient-veneer-bottom">
+					<img
+						class="opacity-40"
+						src="{{ site.url }}/images/discipline-{{ slug }}-sm.jpg"
+						alt="Placeholder"
+					/>
+				</div>
+
+				<div class="backdrop__cover">
+					<div class="container">
+						<div class="container disc-banner text-shadow">
+
+							<h1 class="banner-headline">
+							{{ header }}
+							</h1>
+
+							<div class="disc-banner__teaser">
+								<h6>Misconception:</h6>
+								<p>
+									Sudden environmental change is required for evolution to
+									occur.
+								</p>
+							</div>
+
+							<div class="disc-banner__summary">
+								<p>
+									{{ description }}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+        <main class="modal__content__body border-top" id="modal-example-01-content">
+
+            <div class="container overflow-hidden">
+                      
+					{% for category in subcategories %}
+
+						{% assign title = category.Title %}          
+						{% assign modules = category.Modules %}          
+
+						<div class="category margin-y-4">
+												
+							<h2 class="h6">{{ title }}</h2>
+
+							<ul class="list-divider font-size-md">
+										
+								{% for module in modules %}              
+									{% assign name = module.Name %}  
+
+									<li class="text-color-link">
+										<span class="list-divider__cell">
+											<a href="{{ site.url }}/library/module/reading.html">
+												{{ name }}
+											</a>
+										</span>
+										<span class="list-divider__cell display-none">
+											<div class="button-group">    
+												<button class="button button--icon-only">
+													<span class="icon icon-plus" aria-hidden="true"></span>
+												</button>
+											</div>
+										</span>
+									</li>
+
+								{% endfor %}
+
+							</ul>
+
+						</div>
+
+					{% endfor %}
+
+				</div>
+
+        </main>
+
+        <footer class="modal__content__foot border-top font-size-sm text-align-center">
+			<p>
+				<button data-modal-close>Close Modal</button>
+			</p>
+        </footer>
+
+    </div>
+
+</div>
+		{% endfor %}
