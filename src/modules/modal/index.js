@@ -24,6 +24,56 @@ export default class Modal {
       const lastFocusedElement = document.activeElement;
 
       const modalContent = modalTarget.querySelector('.modal__content');
+      const modalHeader = modalTarget.querySelector('.modal__content__head');
+
+      ////////////////////////
+
+      console.log('Modal Width == ', modalContent.offsetWidth);
+      console.log('Iam  fixed == ', modalHeader);
+
+      const myNewWidth = `${modalContent.offsetWidth}px`;
+
+     const  modalHeaderHeight =  modalHeader.offsetHeight;
+
+      modalHeader.style.width = myNewWidth;
+      
+      let elDistance;
+
+      const getOffsetTop = (element) => {
+
+				let offsetTop = 0;
+
+				while (element) {
+					offsetTop += element.offsetTop;
+					element = element.offsetParent;
+				}
+
+				return offsetTop;
+			};
+
+      const stickyTop = () => {
+
+          const winScrollY = modalTarget.scrollTop;
+          const elOffset = getOffsetTop(modalContent);
+
+          elDistance = elOffset - winScrollY;
+          
+          console.log('elDistance is ======= ', elDistance);
+          
+          if (elDistance <= 0) {
+              modalHeader.classList.add('sticky', 'theme-primary', 'box-shadow-1');
+              modalHeader.nextElementSibling.style.paddingTop = `${modalHeaderHeight}px`;
+          } else {
+              modalHeader.classList.remove('sticky', 'theme-primary', 'box-shadow-1');
+              modalHeader.nextElementSibling.style.paddingTop = 'initial';
+          }        
+      }
+
+      modalTarget.addEventListener('scroll', stickyTop);
+
+        stickyTop();
+
+      ////////////////////////
 
       modalContent.setAttribute('tabindex', 0);
       modalContent.focus();

@@ -148,8 +148,24 @@ body.modal-open {
   &[aria-hidden="false"] {
     display: block;
   }
+
+  .fixed {
+
+    &.sticky {
+      position: fixed;
+      background-color: inherit !important;
+    }
+
+    inset-block-start: 0;
+
+
+    // outline: 3px solid red;
+    // outline-offset: -3px;
+
+  }
   
   .modal__content {
+    overflow-y: scroll;
     margin-block: auto;
   }
 
