@@ -1,6 +1,6 @@
 import './_style.scss';
 
-import { getFocusableElements } from '../../utilities/focus'
+import { getFocusableElements, getOffsetTop } from '../../utilities/focus'
 
 //////////////////////////////////////////////
 // Modal
@@ -39,18 +39,6 @@ export default class Modal {
       
       let elDistance;
 
-      const getOffsetTop = (element) => {
-
-				let offsetTop = 0;
-
-				while (element) {
-					offsetTop += element.offsetTop;
-					element = element.offsetParent;
-				}
-
-				return offsetTop;
-			};
-
       const stickyTop = () => {
 
           const winScrollY = modalTarget.scrollTop;
@@ -70,8 +58,8 @@ export default class Modal {
       }
 
       modalTarget.addEventListener('scroll', stickyTop);
-
-        stickyTop();
+      
+      stickyTop();
 
       ////////////////////////
 

@@ -149,11 +149,13 @@ body.modal-open {
     display: block;
   }
 
-  .fixed {
+  .modal__content__head {
+    max-width: 100%;
+      transition: background-color 0.25s;
 
     &.sticky {
       position: fixed;
-      background-color: inherit !important;
+
     }
 
     inset-block-start: 0;
