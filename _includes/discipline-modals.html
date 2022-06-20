@@ -11,7 +11,8 @@
 <div
     class="modal modal--scroll-all padding-y-4"
     id="modal-discipline-{{ slug }}"
-	role="dialog">
+	role="dialog"
+	data-modal-close-outside="true">
 
     <div
         class="modal__content medium theme-primary {{ slug }} border-radius box-shadow-3"
@@ -27,11 +28,10 @@
 				class="backdrop backdrop--fixed">
 
 				<div class="backdrop__image gradient-veneer-bottom">
-					<img
-						class="opacity-20"
-						src="{{ site.url }}/images/discipline-{{ slug }}-lg.jpg"
-						alt="Placeholder"
-					/>
+					<picture class="opacity-30 width-100">
+						<source srcset="./images/discipline-{{ slug }}-1x3.jpg" media="(min-width: 760px)">
+						<img src="./images/discipline-{{ slug }}-lg.jpg" alt="Placeholder">
+					</picture>
 				</div>
 
 				<div class="backdrop__cover align-content-start">
@@ -110,13 +110,7 @@
 				</div>
 
         </main>
-
-        <footer class="modal__content__foot border-top font-size-sm text-align-center">
-			<p>
-				<button data-modal-close>Close Modal</button>
-			</p>
-        </footer>
-
+		
     </div>
 
 </div>
