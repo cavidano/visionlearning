@@ -1,6 +1,6 @@
 import './_style.scss';
 
-import { getFocusableElements } from '../../utilities/focus'
+import { getFocusableElements, getOffsetTop } from '../../utilities/focus'
 
 //////////////////////////////////////////////
 // Modal
@@ -24,6 +24,53 @@ export default class Modal {
       const lastFocusedElement = document.activeElement;
 
       const modalContent = modalTarget.querySelector('.modal__content');
+      const modalHeader = modalTarget.querySelector('.modal__content__head');
+
+      ////////////////////////
+      // Set Dynamic Width 
+      ////////////////////////
+
+      let headerWidth;
+
+      const handleHeaderResize = () => {
+
+        headerWidth = `${modalContent.offsetWidth}px`;
+        
+        modalHeader.style.width = headerWidth;
+      
+      }
+
+      window.addEventListener('resize', handleHeaderResize);
+
+      handleHeaderResize();
+      
+      ////////////////////////
+      // Set Dynamic Width 
+      ////////////////////////
+
+      const modalHeaderHeight =  modalHeader.offsetHeight;
+      let elDistance;
+
+      const handleFixedHeader = () => {
+
+          const modalScrollY = modalTarget.scrollTop;
+          const elOffset = getOffsetTop(modalContent);
+
+          elDistance = elOffset - modalScrollY;
+          
+          if (elDistance <= 0) {
+              modalHeader.classList.add('sticky', 'theme-primary', 'box-shadow-1');
+              modalHeader.nextElementSibling.style.paddingTop = `${modalHeaderHeight}px`;
+          } else {
+              modalHeader.classList.remove('sticky', 'theme-primary', 'box-shadow-1');
+              modalHeader.nextElementSibling.style.paddingTop = 'initial';
+          }        
+      }
+
+      modalTarget.addEventListener('scroll', handleFixedHeader);
+      handleFixedHeader();
+
+      ////////////////////////
 
       modalContent.setAttribute('tabindex', 0);
       modalContent.focus();

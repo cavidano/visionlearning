@@ -45,7 +45,7 @@ import './modules/icons';
 
 import './modules/links';
 
-import Modal from './modules/modal';
+// import Modal from './modules/modal';
 
 import Navigation from './modules/navigation';
 
@@ -88,8 +88,8 @@ collapse.init();
 const forms = new Forms();
 forms.init();
 
-const modal = new Modal();
-modal.init();
+// const modal = new Modal();
+// modal.init();
 
 const navigation = new Navigation();
 navigation.init();
@@ -112,6 +112,11 @@ layout.init();
 import './custom_modules/navigation';
 
 import Quiz from './custom_modules/quiz'; 
+
+import Modal from './custom_modules/modal';
+
+const modal = new Modal();
+modal.init();
 
 const quiz = new Quiz();
 quiz.init();

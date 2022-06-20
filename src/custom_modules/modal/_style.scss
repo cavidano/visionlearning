@@ -13,7 +13,7 @@ In this file:
 // A. Modules
 //////////////////////////////////////////////
 
-@use "../spacing/style" as spacing;
+@use "../../modules/spacing/style" as spacing;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -148,9 +148,40 @@ body.modal-open {
   &[aria-hidden="false"] {
     display: block;
   }
+
+.modal__content__body {
+  flex-shrink: 1;
+  
+  overflow-y: hidden;
+  outline: 3px solid blue;
+}
+  .modal__content__head {
+    max-width: 100%;
+    
+    transition: background-color 0.25s;
+
+    &.sticky {
+      position: fixed;
+    }
+
+    inset-block-start: 0;
+
+  }
   
   .modal__content {
     margin-block: auto;
+
+  // &::before {
+  //   content: "";
+  //   position: fixed;
+  //   top: 0;
+  //   right: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: red;
+  // }
+
   }
 
 }
