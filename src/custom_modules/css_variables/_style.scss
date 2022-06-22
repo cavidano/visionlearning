@@ -71,11 +71,9 @@ In this file:
     --spacer-3: calc(var(--spacer-base) * 1.25);
     --spacer-4: calc(var(--spacer-base) * 2);
     --spacer-5: calc(var(--spacer-base) * 4);
-
 }
 
 h1 > sub {
     display: block;
     font-size: 75%;
-
 }

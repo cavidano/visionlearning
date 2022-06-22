@@ -130,6 +130,8 @@ import './custom_modules/lists';
 
 import './custom_modules/color';
 
+import './custom_modules/section_cards';
+
 //////////////////////////////////////////////
 // Environments (For Testing Webpack)
 //////////////////////////////////////////////
