@@ -30,7 +30,7 @@ In this file:
     
     --accordion-active-color: currentColor;
 
-    --accordion-animation: 0.2s ease-out;
+    // --accordion-animation: 0.2s ease-out;
 }
 
 //////////////////////////////////////////////
@@ -70,10 +70,6 @@ In this file:
     &:not([aria-expanded="true"])::before {
         transform: rotate(0deg);
     }
-    
-    &::before {
-       transition: transform var(--accordion-animation);
-    }
 
     &[aria-expanded="true"] {
         text-decoration: underline;
@@ -91,14 +87,10 @@ In this file:
 
     transition: max-height var(--accordion-animation);
 
-    // display: none;
-    
-    max-height: 0;
+    display: none;
 
     &.shown {
-    // display: block;
-
-    max-height: initial;
+        display: block;
     }
 }
 
