@@ -42,17 +42,12 @@ export default class Accordion {
 
                 if (isExpanded === 'true') {
 
-                    let openChild = currentAccordionPanel.querySelector('[data-accordion="panel"].show');
-
-
-                    // currentAccordionPanel.style.maxHeight = `${currentAccordionPanel.scrollHeight}'px'`;
                     currentAccordionPanel.classList.add('show');
 
                     setFocusableElements(currentAccordionPanel, true);
 
                 } else {
                     accordionButton.setAttribute('aria-expanded', false);
-                    // currentAccordionPanel.style.maxHeight = null;
                     currentAccordionPanel.setAttribute('aria-hidden', true);
 
                     setFocusableElements(currentAccordionPanel, false);
