@@ -1,5 +1,5 @@
 <header class="theme-canvas box-shadow-1 z-index-1500" id="global-header">
-	
+
 	<div>
 
 		<a class="focusable-only" href="#skip-header-target">
@@ -190,7 +190,9 @@
 
 {% if page.url contains 'module' %}
 
-<nav class="module-breadcrumb border-bottom display-none display-block--md" style="position:relative; z-index: 10000;">
+<nav
+	class="module-breadcrumb border-bottom display-none display-block--md"
+	style="position:relative; z-index: 10000;">
 
 	<ul class="wide margin-x-auto padding-x-1">
 
@@ -199,6 +201,7 @@
 				<span class="icon icon-home" aria-hidden="true"></span>
 			</a>
 		</li>
+
 		<li>
 
 			<button class="button" data-toggle="dropdown">
@@ -209,185 +212,181 @@
 
 				<div class="accordion font-size-sm">
 
+				{% assign items = site.data.librarySample %}
+        
+				{% for item in items %}
+
+					{% assign header = item.Discipline %}                         
+					{% assign description = item.Description %}                         
+					{% assign slug = item.Slug %}                         
+					{% assign subcategories = item.Subcategories %}
+
+					{% if header == "Biology" %}
+
+					<span class="accordion__button current" id="acc-button-{{ slug }}-oops">
+							
+						<span class="accordion__button__label">
+						<em>
+						{{ header }}
+						</em>	
+						</span>
+
+					</span>
+					
+					{% else %}
+					
 					<button
 						class="accordion__button"
-						id="acc-button-example-01"
+						id="acc-button-{{ slug }}"
 						data-accordion="button"
-						aria-controls="acc-panel-example-01"
+						aria-controls="acc-panel-{{ slug }}"
 						aria-expanded="false">
 							
 							<span class="accordion__button__label">
-								Biology
+								{{ header }}
 							</span>
 
 					</button>
 
 					<div
 						class="accordion__panel"
-						id="acc-panel-example-01"
+						id="acc-panel-{{ slug }}"
 						data-accordion="panel"
-						aria-labelledby="acc-button-example-01"
+						aria-labelledby="acc-button-{{ slug }}"
 						role="region">
 
 							<div class="accordion accordion--plus-minus">
 
-								<button
-									class="accordion__button"
-									id="acc-button-example-02"
-									data-accordion="button"
-									aria-controls="acc-panel-example-02"
-									aria-expanded="false">
+								{% for category in subcategories %}
 
-										<span class="accordion__button__label">
-											Atomic Theory and Structure
-										</span>
+									{% assign title = category.Title %}          
+									{% assign modules = category.Modules %}     
 
-								</button>
+									<button
+										class="accordion__button"
+										id="acc-button-example-02"
+										data-accordion="button"
+										aria-controls="acc-panel-example-02"
+										aria-expanded="false">
 
-								<div
-									class="accordion__panel"
-									id="acc-panel-example-02"
-									data-accordion="panel"
-									aria-labelledby="acc-button-example-02"
-									role="region">
+											<span class="accordion__button__label">
+												{{ title }}
+											</span>
 
-										<ul class="nav text-color-link">
+									</button>
 
-											<li>
-												<a href="@1">
-													Early Ideas about Matter
-												</a>
-											</li>
+									<div
+										class="accordion__panel"
+										id="acc-panel-example-02"
+										data-accordion="panel"
+										aria-labelledby="acc-button-example-02"
+										role="region">
 
-											<li>
-												<a href="@1">
-													Atomic Theory I
-												</a>
-											</li>
+											<ul class="nav text-color-link">
 
-											<li>
-												<a href="@1">
-													Atomic Theory II
-												</a>
-											</li>
+											{% for module in modules %}
 
-											<li>
-												<a href="@1">
-													Atomic Theory III
-												</a>
-											</li>
+												{% assign name = module.Name %}  
 
-											<li>
-												<a href="@1">
-													Atomic Theory IV
-												</a>
-											</li>
+												<li>
+													<a href="#1">
+														{{ name }}
+													</a>
+												</li>
 
-											<li>
-												<a href="@1">
-													The Periodic Table of Elements
-												</a>
-											</li>
+											{% endfor %}
+											
+											</ul>
+										
+									</div>
 
-											<li>
-												<a href="@1">
-													The Mole and Atomic Mass
-												</a>
-											</li>
-										</ul>
-									
-								</div>
-
-								<!-- Repeat pair above as needed -->
+								{% endfor %}
+							
 							</div>
 
 					</div>
+					{% endif %}
 
-					<button
-						class="accordion__button"
-						id="acc-button-example-02"
-						data-accordion="button"
-						aria-controls="acc-panel-example-02"
-						aria-expanded="false">
-
-							<span class="accordion__button__label">
-								Papilio Polyxenes
-							</span>
-							
-					</button>
-
-					<div
-						class="accordion__panel"
-						id="acc-panel-example-02"
-						data-accordion="panel"
-						aria-labelledby="acc-button-elephant"
-						role="region">
-
-						<div class="accordion__panel__content">
-							<p>
-								The black swallowtail, American swallowtail, or parsnip swallowtail, is a butterfly found throughout much of <a href="#1">North America</a>. It is the state butterfly of Oklahoma and New Jersey.
-							</p>
-						</div>
-
-					</div>
+				{% endfor %}
 
 				</div>
 				<!-- .accordion -->
 
-
 			</div>
 
 		</li>
+
 		<li>
+
+		{% assign items = site.data.librarySample | where:"Discipline","Biology" %}
+        
+		{% for item in items %}
+
+			{% assign header = item.Discipline %}                         
+			{% assign description = item.Description %}                         
+			{% assign slug = item.Slug %}                         
+			{% assign subcategories = item.Subcategories %}
+
 			<button class="button" data-toggle="dropdown">
-				Biology
+				{{ header }}
 			</button>
 
-			<div class="nav__dropdown box-shadow-1">
+			<div class="nav__dropdown box-shadow-1 padding-1">
 
-				<ul class="module-breadcrumb__subcats">
-					<li>
-						<button data-toggle="collapse" data-target="#nav-biological-molecules">
-							Biological Molecules
+				<div class="accordion accordion--plus-minus font-size-sm">
+
+					{% for category in subcategories %}
+
+						{% assign title = category.Title %}          
+						{% assign modules = category.Modules %}     
+
+						<button
+							class="accordion__button"
+							id="acc-button-example-02"
+							data-accordion="button"
+							aria-controls="acc-panel-example-02"
+							aria-expanded="false">
+
+								<span class="accordion__button__label">
+									{{ title }}
+								</span>
+
 						</button>
 
-						<ul class="collapse" id="nav-biological-molecules">
-							<li>
-								<a href="#1">Carbohydrates</a>
-							</li>
-							<li>
-								<a href="#1">Fats and Proteins</a>
-							</li>
-							<li>
-								<a href="#1">Biological Proteins</a>
-							</li>
-							<li>
-								<a href="#1">Blood Biology I</a>
-							</li>
-							<li>
-								<a href="#1">Lipids</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<button>
-							Energy in Living Systems
-						</button>
-					</li>
-					<li>
-						<button>
-							Evolutionary Biology
-						</button>
-					</li>
-					<li>
-						<button>
-							Genetics
-						</button>
-					</li>
-				</ul>
+						<div
+							class="accordion__panel"
+							id="acc-panel-example-02"
+							data-accordion="panel"
+							aria-labelledby="acc-button-example-02"
+							role="region">
+
+								<ul class="nav text-color-link">
+
+								{% for module in modules %}
+
+									{% assign name = module.Name %}  
+
+									<li>
+										<a href="#1">
+											{{ name }}
+										</a>
+									</li>
+
+								{% endfor %}
+								
+								</ul>
+							
+						</div>
+
+					{% endfor %}
+				
+				</div>
 
 			</div>
+			
+			{% endfor %}
 		</li>
+	
 	</ul>
 
 </nav>

@@ -277,6 +277,18 @@
     .nav__dropdown > .accordion {
         --accordion-panel-padding-x: var(--button-padding-x);
         --accordion-panel-padding-y: var(--button-padding-y);
+
+        > .accordion__button.current {
+        justify-content: start;
+        opacity: 0.75;
+        cursor: default;
+        font-weight: var(--body-font-weight-bold);
+        &::before {
+        display: none;
+        --icon-size: 1em;
+            content: '\f10e';
+        }
+        }
     }
 
 }
