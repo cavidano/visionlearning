@@ -269,7 +269,8 @@
         --button-font-weight: var(--body-font-weight-normal);
 
         &[aria-expanded="true"] {
-            color: var(--canvas-link)
+            background-color: white;
+            color: var(--canvas-link);
         }
     }
 
