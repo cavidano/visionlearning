@@ -67,7 +67,7 @@ In this file:
 
     &:hover,
     &:focus {
-        &:not([aria-disabled="true"]):not([class*="icon"]):not([class*="nav--has-icons"] > li > *) {
+        &:not([aria-disabled="true"]):not([class*="icon"]):not([class*="nav--has-icons"] > li > *):not(.accordion__button) {
             text-decoration: underline;
         }
     }

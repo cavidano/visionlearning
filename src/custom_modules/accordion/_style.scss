@@ -14,6 +14,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use "../../modules/accents/style" as accents;
+@use "../../modules/icons/style" as icons;
 
 //////////////////////////////////////////////
 // B. Variables
@@ -29,6 +30,9 @@ In this file:
     --accordion-panel-padding-y: var(--spacer-3);
     
     --accordion-active-color: currentColor;
+
+    --accordion-icon-closed: '';
+    --accordion-icon-open: '';
 
     // --accordion-animation: 0.2s ease-out;
 }
@@ -59,7 +63,13 @@ In this file:
 
     cursor: pointer;
 
-    @extend %caret;
+    &::after {
+        @extend %icon-font-vars;
+        @extend .icon_font;
+        --icon-size: 0.75em;
+
+        content: "\f118";
+    }
 
     &:not(:first-child){
         border-top-width: var(--default-border-width);
@@ -72,13 +82,19 @@ In this file:
     }
 
     &[aria-expanded="true"] {
-        text-decoration: underline;
 
         color: var(--accordion-active-color);
 
-        &::before {
+        &::after {
             transform: rotate(180deg);
         }
+    }
+}
+
+.accordion__button__label { 
+
+    [aria-expanded="true"] & {
+        text-decoration: underline;
     }
 }
 
