@@ -7,7 +7,7 @@ import './modules/accents';
 
 import './modules/accessibility';
 
-import Accordion from './modules/accordion';
+// import Accordion from './modules/accordion';
 
 import Alerts from './modules/alerts';
 
@@ -17,7 +17,7 @@ import './modules/aspect-ratios';
 
 import './modules/backdrops';
 
-import './modules/borders';
+// import './modules/borders';
 
 import './modules/breakpoints';
 
@@ -73,8 +73,8 @@ import './modules/z-index/index';
 // B. Initialize JS Modules
 //////////////////////////////////////////////
 
-const accordion = new Accordion();
-accordion.init();
+// const accordion = new Accordion();
+// accordion.init();
 
 const alerts = new Alerts();
 alerts.init();
@@ -118,6 +118,11 @@ import Modal from './custom_modules/modal';
 const modal = new Modal();
 modal.init();
 
+import Accordion from './custom_modules/accordion';
+
+const accordion = new Accordion();
+accordion.init();
+
 const quiz = new Quiz();
 quiz.init();
 
@@ -127,6 +132,8 @@ new ReadingToggles();
 import './custom_modules/css_variables';
 
 import './custom_modules/lists';
+
+import './custom_modules/borders';
 
 import './custom_modules/color';
 

@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 
         <!-- Natura11y Icons -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning@main/lib/icons/visionlearning-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning@main/dist/icons/visionlearning-icons.css">
 
     </head>
 
@@ -23,10 +23,14 @@
 
             <div class="theme-dark">
 
-                <div class="vl-hat wide">
+                <div class="vl-hat wide margin-x-auto">
 
                     <div class="vl-hat__toggle-button">
-                        <button class="button button--icon-only mobile-menu-toggle" aria-label="Menu" data-toggle="collapse" data-target="#vl-hat-nav">
+                        <button
+                            class="button button--icon-only mobile-menu-toggle"
+                            aria-label="Menu"
+                            data-toggle="collapse"
+                            data-target-toggle="#vl-hat-nav">
                             <span class="icon icon-menu" aria-hidden="true"></span>
                         </button>
                     </div>
@@ -35,23 +39,18 @@
 
                         <ul class="nav nav--horizontal--lg">
                             <li>
-                                <a href="#1">
-                                    About Us
+                                <a href="/about">
+                                    About
                                 </a>
                             </li>
                             <li>
                                 <a href="#1">
-                                    Blog
+                                    Contact
                                 </a>
                             </li>
                             <li>
                                 <a href="#1">
-                                    Help
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#1">
-                                    Resources
+                                    FAQs
                                 </a>
                             </li>
                         </ul>
@@ -61,6 +60,7 @@
                     <div class="vl-hat__actions">
 
                         <div class="button-group">
+
                             <button
                                 class="button button--icon-only"
                                 aria-label="Search"
@@ -68,12 +68,20 @@
                                 data-target-toggle="#global-search">
                                 <span class="icon icon-search" aria-hidden="true"></span>
                             </button>
-                            <button class="button button--icon-only" aria-label="Settings">
+
+                            <a class="button button--icon-only display-none" href="#1" aria-label="My Account">
                                 <span class="icon icon-person" aria-hidden="true"></span>
-                            </button>
+                            </a>
+                            
+                            <a class="button button--has-icon" href="{{ site.url }}/account/sign-in.html">
+                                <span class="icon icon-person"></span>
+                                <span class="button__text">Account</span>
+                            </a>
+
                             <a class="button" href="#1" id="es-translate">
                                 <span>Español</span>
                             </a>
+                            
                         </div>
 
                     </div>
@@ -82,41 +90,26 @@
 
             </div>
 
-            <div class="collapse padding-y-3 theme-dark border-top z-index-2000" id="global-search">
+            <div class="collapse padding-y-3 theme-dark border-top z-index-2000" id="global-search" data-focus-first>
 
                 <div class="container narrow">
 
-                    <div class="form-entry">
-
-                        <label class="form-entry__field field--has-button">
-
-                            <div class="field--has-button__group">
-                            
-                                <span class="form-entry__field__input">
-                                    <input
-                                        type="search"
-                                        name="searchWebsiteInput"
-                                        placeholder="Search"
-                                        id="search-website-input">
-                                </span>
-
-                                <button
-                                    class="button button--icon-only"
-                                    id="custom-language-update">
-                                    <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                    <div class="form-entry" aria-label="Search">
+                        <div class="form-entry__field">
+                            <span class="form-entry__field__input">
+                                <input type="text" name="global-search" autocomplete="off">
+                                <button class="button theme-canvas">
+                                    Search
                                 </button>
-
-                            </div>
-
-                        </label>
-
+                            </span>
+                        </div>
                     </div>
 
                 </div>
 
             </div>
 
-            <div class="vl-header wide">
+            <div class="vl-header wide margin-x-auto">
 
                 <div class="vl-header__logo">
 
@@ -207,7 +200,7 @@
 
         <nav class="module-breadcrumb border-bottom display-none display-block--md">
 
-            <ul class="wide padding-x-2">
+            <ul class="wide margin-x-auto padding-x-1">
                 <li>
                     <a class="button" href="#1">
                         <span class="icon icon-home" aria-hidden="true"></span>
@@ -377,8 +370,7 @@
         
         </nav>
 
-
-        <main style="height:300px;">
+        <main style="min-height:800px;">
         </main>
 
         <footer id="global-footer">

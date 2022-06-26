@@ -188,7 +188,7 @@ body > footer:not([class*="theme-"]),
 
     color: var(--text-color);
     
-    border-color: var(--border-color) !important;
+    border-color: var(--border-color);
 
     * {
         &:not([class*="theme-"]):not(textarea):not(select):not(footer) {
