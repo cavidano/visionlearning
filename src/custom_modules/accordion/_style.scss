@@ -53,6 +53,7 @@ In this file:
     position: relative;
     
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
 
     width: 100%;
@@ -100,8 +101,6 @@ In this file:
 
 .accordion__panel {
     overflow: hidden;
-
-    transition: max-height var(--accordion-animation);
 
     display: none;
 
