@@ -540,7 +540,7 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_65.mp3
       - Id: '66'
         Name: Plates, Plate Boundaries, and Driving Forces
-        Summary: >-
+        Summary: >
           Earthquakes and volcanoes can reveal a lot about plate boundaries. This
           module looks at the nature of tectonic plates and discusses the
           different boundary types that exist between them – convergent,
@@ -549,7 +549,7 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_66.mp3
       - Id: '69'
         Name: Earth Structure
-        Summary: >-
+        Summary: >
           Earth's interior structure is composed of layers that vary by
           composition and behavior. Using principles of physics like gravity and
           wave motion, this module explains how scientists have determined Earth's
@@ -561,9 +561,18 @@
     - Title: Earth Cycles
 
       Modules:
+      - Id: '99'
+        Name: The Hydrologic Cycle
+        Summary: >
+          Powered by the sun, water constantly cycles through the Earth and its
+          atmosphere. This module discusses the hydrologic cycle, including the
+          various water reservoirs in the oceans, in the air, and on the land. The
+          module addresses connections between the hydrologic cycle, climate, and
+          the impacts humans have had on the cycle.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_99.mp3
       - Id: '128'
         Name: The Rock Cycle
-        Summary: >-
+        Summary: >
           This module addresses the rock cycle, including the historical
           development of the concept. The relationships between uniformitarianism,
           the rock cycle, and plate tectonics are explored both generally and
@@ -572,7 +581,7 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_128.mp3
       - Id: '95'
         Name: The Carbon Cycle
-        Summary: >-
+        Summary: >
           Carbon, the fourth most abundant element in the universe, moves between
           the atmosphere, oceans, biosphere, and geosphere in what is called the
           <em>carbon cycle</em>. This module provides an overview of the global
@@ -583,13 +592,13 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_95.mp3
       - Id: '98'
         Name: The Nitrogen Cycle
-        Summary: >-
+        Summary: >
           This module provides an overview of the nitrogen cycle and the chemical
           changes that govern the cycle.
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_98.mp3
       - Id: '197'
         Name: The Phosphorus Cycle
-        Summary: >-
+        Summary: >
           All living organisms need phosphorous to survive and grow. This module
           describes forms that phosphorous takes in nature and how the element
           cycles through the natural world. A historical journey highlights how we
@@ -597,9 +606,13 @@
           shows the harmful effects of too much phosphorous on the environment as
           a result of human activities.
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_197.mp3
+    
+    - Title: Atmosphere and Oceans
+
+      Modules:
       - Id: '202'
         Name: History of Earth's Atmosphere I
-        Summary: >-
+        Summary: >
           This module looks at how the Earth's atmosphere has changed since the
           planet came into existence. Starting with clues provided by neon gas,
           the module traces how scientists have pieced together the story of
@@ -607,3 +620,178 @@
           concentration of elements found on Earth as well as those on planets and
           stars that are too far away to allow scientists to collect samples.
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_202.mp3
+      - Id: '203'
+        Name: History of Earth's Atmosphere II
+        Summary: >
+          The composition of Earth’s atmosphere has evolved over time. This module
+          examines how Earth came to be the only planet in the universe known to
+          contain oxygen gas. The module explores the advent and rise of oxygen in
+          Earth’s atmosphere. Evidence described includes the rock record, bands
+          of iron in sediment, microscopic fossils, and isotopes of sulfur.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_203.mp3
+      - Id: '107'
+        Name: Composition of Earth's Atmosphere
+        Summary: >
+          Earth's atmosphere contains many components that can be measured in
+          different ways. This module describes these different components and
+          shows how temperature and pressure change with altitude. The scientific
+          developments that led to an understanding of these concepts are
+          discussed.        
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_107.mp3
+      - Id: '234'
+        Name: Factors that Control Earth's Temperature
+        Summary: >
+          Based on how much sunlight hits Earth versus how much is reflected,
+          Earth’s average temperature should be well below freezing. Fortunately,
+          there are other factors that affect the planet’s temperature. This
+          module explores the effects of those factors, including distance from
+          the sun, aerosol particles floating in the air, and greenhouse gases.
+          Topics introduced include insolation and albedo. Also explored is how a
+          planet’s climate can be modeled by taking account of energy in, energy
+          lost, and energy transferred.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_234.mp3
+      - Id: '255'
+        Name: Factors that Control Regional Climate
+        Summary: >
+          Although weather can change every day, climate is the average of daily
+          weather conditions over decades. This module presents factors that
+          influence climate around the world, such as the shape, tilt, and orbit
+          of Earth. Starting with observations of early ocean travelers and
+          progressing through others’ ideas over later centuries, the module
+          describes how we came to understand Earth’s climate. Also discussed is
+          the imbalance of energy from incoming vs. outgoing radiation and its
+          effect on wind and ocean currents.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_255.mp3
+      - Id: '119'
+        Name: Defining Minerals
+        Summary: >
+          The study of minerals provides a window into the history of Earth and
+          other planets in our solar system. This first module in a three-part
+          series describes the history of our understanding of minerals and then
+          defines a mineral, focusing on chemical composition and structure.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_119.mp3
+      - Id: '130'
+        Name: Properties of Minerals
+        Summary: >
+          Minerals are classified on the basis of their chemical composition,
+          which is expressed in their physical properties. This module, the second
+          in a series on minerals, describes the physical properties that are
+          commonly used to identify minerals. These include color, crystal form,
+          hardness, density, luster, and cleavage.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_130.mp3
+      - Id: '140'
+        Name: The Silicate Minerals
+        Summary: >
+          Understanding the structure of silicate minerals makes it possible to
+          identify 95% of the rocks on Earth. This module covers the structure of
+          silicates, the most common minerals in the Earth's crust. The module
+          explains the significance of the silica tetrahedron and describes the
+          variety of shapes it takes. X-ray diffraction is discussed in relation
+          to understanding the atomic structure of minerals.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_140.mp3
+
+- Discipline: General Science
+
+  Description: >
+    Certain physical properties, processes, and concepts are fundamental to all
+    areas of scientific study. Understanding the ways in which energy transfers
+    from one object to another, for example, is as important to a biologist as
+    it is to a chemist or physicist. Our General Science library provides
+    learning modules that explain a host of universal principles, including the
+    people who contributed to their development. These readings help to lay the
+    foundation for your further exploration in science. Modules in this area
+    include basic scientific concepts such as density, temperature, the metric
+    system, and more.
+  
+  Slug: general-science
+
+  Subcategories:
+
+    - Title: Methods
+
+      Modules:
+      - Id: '45'
+        Name: The Scientific Method
+        Summary: >
+          Scientific investigation is not always a linear process that starts with
+          a hypothesis and ends with a conclusion, as portrayed in the classic
+          “Scientific Method.” The true scientific method is a much more dynamic
+          and much less predictable, and can involve various methods that may
+          overlap. This module serves as an introduction to our Practice of
+          Science series of modules, which describe key scientific methodologies.
+
+    - Title: Measurement
+      - Id: '45'
+        Name: The Metric System
+        Summary: >
+          The metric system is the standard system of measurement in science. This
+          module describes the history and basic operation of the metric system,
+          as well as scientific notation. The module explains how the simplicity
+          of the metric system stems from having only one base unit for each type
+          of quantity measured (length, volume, and mass) along with a range of
+          prefixes that indicate multiples of ten.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_47.mp3
+
+    - Title: Physical Properties
+
+- Discipline: Profiles in Science
+
+  Description: >
+    For many people, the first thing they imagine when hearing the word
+    "scientist" is a man in a white lab coat, maybe with crazy hair. But not all
+    scientific research is done in a lab, much less wearing a lab coat, and
+    science is not just for men! Scientists are diverse in their backgrounds,
+    the topics they study, and the methods they use. This section introduces
+    readers to scientists who work in the field studying big cats or penguins,
+    who do research in greenhouses and with a microscope, who design experiments
+    using novel techniques and who hail from a host of different backgrounds and
+    cultures.
+  
+  Slug: profiles-in-science
+
+- Discipline: Math in Science
+
+  Description: >
+    The German mathematician Carl Friedrich Gauss referred to mathematics as the
+    "Queen of the Sciences". In doing so, Gauss not only identified Math as a
+    science itself in that it is defined as the study of numbers and their
+    operations, but also as the underlying foundation for all other sciences 
+    allowing scientists to describe patterns in data, relationships between
+    variables, and fundamental principles discovered in our quest for knowledge.
+    From the study of a wave, which can be described by its length, height, and
+    frequency, to the measurement of the rate at which the tectonic plates in
+    the earth's crust are moving, mathematical principles are fundamental to
+    understanding and doing science. Our Math in Science modules discuss select
+    mathematical principles in context of their use across different scientific
+    disciplines, focusing explicitly on how these principles are used in
+    science.
+  
+  Slug: math-in-science
+
+- Discipline: Physics
+
+  Description: >
+    When Buzz Aldrin joined Neil Armstrong on the moon in 1969, one of the first
+    things he did was to try one-footed kangaroo hops. Why? To test out methods
+    for moving around in lunar gravity (which is 1/6th that of Earth's). Aldrin
+    was experimenting with physics, a discipline that involves the study of
+    matter and forces and how they interact in space and time. The modules
+    contained in our Physics Library explore the properties of light,
+    electromagnetism, gravity, and more.
+  
+  Slug: physics
+
+- Discipline: Process of Science
+
+  Description: >
+    What is it about a scientific theory that sets it apart from other ideas?
+    How does one conduct and control a scientific experiment? Why do statistical
+    statements weigh so heavily in science? Scientists often talk about the
+    findings of their research, but they are less likely to talk about the
+    processes and methods that lead to those discoveries. Yet these processes
+    and methods, and the surprises scientists face while pursuing them define
+    science. Our process of science modules use in-depth examples to introduce
+    the methods used by scientists, the ways that scientists work with data and
+    communicate their findings, and the culture and diversity of science.
+  
+  Slug: process-of-science
