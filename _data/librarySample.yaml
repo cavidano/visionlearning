@@ -721,7 +721,9 @@
           Science series of modules, which describe key scientific methodologies.
 
     - Title: Measurement
-      - Id: '45'
+
+      Modules:
+      - Id: '47'
         Name: The Metric System
         Summary: >
           The metric system is the standard system of measurement in science. This
@@ -733,6 +735,24 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_47.mp3
 
     - Title: Physical Properties
+
+      Modules:
+      - Id: '48'
+        Name: Temperature
+        Summary: >
+          An introduction to the relationship between energy, heat and
+          temperature.  This lesson compares the 3 major temperature scales.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_48.mp3
+      - Id: '37'
+        Name: Density
+        Summary: >
+          Density is a fundamental physical property of matter. This module
+          introduces the concept of density, explains how density is calculated,
+          and lists the densities of common substances. The relationship between
+          density and buoyancy is discussed. The module relates the concept of
+          density to the operation of large ships, submarines, and hot air
+          balloons.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_37.mp3
 
 - Discipline: Profiles in Science
 
@@ -749,6 +769,163 @@
   
   Slug: profiles-in-science
 
+  Subcategories:
+
+    - Title: Methods
+
+      Modules:
+      - Id: '217'
+        Name: Carlos J. Finlay
+        Summary: >
+          The successful construction of the Panama Canal relied as much on a
+          medical breakthrough as it did on technological advances and hard labor.
+          This module profiles Cuban doctor Carlos Finlay, who identified
+          mosquitoes as the culprits in the spread of malaria and yellow fever.
+          Tracing how our understanding of infectious disease evolved, the module
+          highlights Finlay’s perseverance in spite of initial rejection by the
+          medical community. It shows how Finlay's insights helped to stop the
+          spread of these diseases and ultimately made the Panama Canal possible.
+      - Id: '201'
+        Name: Ellen Ochoa
+        Summary: >
+          Although she was rejected by the space program initially, Ellen Ochoa
+          went on to become the first Hispanic woman to travel in space and was
+          ultimately named Director of the Johnson Space Center. This module takes
+          an in-depth look at the life and career of Ellen Ochoa, from considering
+          a flute-playing career to getting a PhD in electrical engineering and
+          becoming an astronaut. The module describes scientific research projects
+          in space and how they contribute to our understanding of Earth.
+      - Id: '205'
+        Name: Ruth Benerito
+        Summary: >
+          Wrinkle-resistant cotton is one of the most significant developments of
+          the 20th century. In the midst of an economic and social climate that
+          provided few opportunities for women in science, chemist Ruth Benerito
+          developed a method of wrinkle-proofing cotton, which was being edged out
+          of the clothing market by synthetic fabrics. This profile describes the
+          life of the chemist who is often credited with saving the US cotton
+          industry. It explains the cross-linking process that made
+          “wash-and-wear” cotton fabric possible.
+      - Id: '219'
+        Name: Franklin Chang Díaz
+        Summary: >
+          Franklin Chang Díaz, the first Latin American to travel to space, ties
+          the record for the highest number of space flights. This module traces
+          Chang Diaz’s life and career from his boyhood in Costa Rica where he
+          built his own mini rockets, to his emigration and studies of plasma
+          physics in the US, through his career as an astronaut, and beyond. The
+          module describes Chang Diaz’s work toward a plasma-based rocket engine
+          that could radically change space travel, his ongoing crusade on behalf
+          of the environment, and his induction into NASA’s Astronaut Hall of
+          Fame.
+      - Id: '221'
+        Name: Percy Lavon Julian
+        Summary: >
+          The module traces the life and career of organic chemist Percy Julian,
+          who developed a way to synthesize cortisone in large quantities, earning
+          him a place in the National Inventors Hall of Fame. The module relates
+          Julian’s accomplishments and the numerous challenges that he overcame
+          through unwavering perseverance in the face of racial barriers. From his
+          upbringing in the Deep South where public schools stopped at the eighth
+          grade for African American children, Julian went on to earn a PhD, was
+          awarded over 130 patents, revolutionized glaucoma treatment, and became
+          the second African American inducted into the National Academy of
+          Sciences.
+      - Id: '229'
+        Name: Luis Walter Alvarez
+        Summary: >
+          Luis Alvarez is less famous for his Nobel prize-winning research into
+          subatomic particles than for his theory on how dinosaurs became extinct.
+          Yet, before he started looking into dinosaurs, Alvarez was credited with
+          a lifetime of major advances in atomic physics. This module traces
+          Alvarez’s application of physics to aircraft safety, Egyptian pyramids,
+          K-electron capture, nuclear bombs, and the hydrogen bubble chamber which
+          led to the discovery of many new subatomic particles.
+      - Id: '230'
+        Name: France Anne-Dominic Córdova
+        Summary: >
+          This module profiles the career of astrophysicist France Córdova,
+          director of the National Science Foundation. The module traces Córdova's
+          path from her days at a high school that didn’t offer physics to female
+          students, to her career as a writer, and ultimately to the top post in
+          US science administration. Among her many accomplishments, this powerful
+          role model built the most powerful X-ray telescope ever sent into space,
+          published over 150 scientific papers, helped start a medical school, and
+          has been a leader at several prestigious universities.
+      - Id: '232'
+        Name: Luis E. Miramontes
+        Summary: >
+          His name may not be familiar, but Mexican chemist Luis Miramontes was
+          instrumental in a discovery that changed the course of human history:
+          the birth control pill. This module traces the life and achievements of
+          Miramontes, not only in the area of hormone synthesis, but in other
+          areas of chemistry as well. Miramontes' advances in pharmaceuticals and
+          petrochemistry are described, including his success in devising a
+          chemical process to remove pollutants from engine exhaust.
+      - Id: '237'
+        Name: Bernardo Houssay
+        Summary: >
+          Dr. Bernardo Houssay was a pioneering researcher of the endocrine
+          system, the system of glands that secrete hormones in the human body.
+          Especially important was his work on a gland at the base of the brain
+          called the pituitary and how multiple hormones enable the pituitary and
+          other glands to affect one another in what are called "hormone feedback
+          loops." That understanding resulted in  Dr. Houssay being awarded the
+          Nobel Prize.
+      - Id: '241'
+        Name: David Ho
+        Summary: >
+          This module profiles renowned AIDS researcher David Ho, who is credited
+          with inventing the “AIDS cocktail” that has saved millions of lives. The
+          module traces Ho’s journey from entering Los Angeles public schools at
+          age 12 as a Taiwanese immigrant with no English to being named Time
+          Magazine’s “Man of the Year” and being awarded the Presidential Citizens
+          Medal for combating the HIV/AIDS epidemic. Topics include how the HIV
+          virus replicates and mutates and how effective drugs target the biology
+          of HIV. Also described is Ho’s work toward equality in HIV care around
+          the world and among underserved populations in the US.
+      - Id: '244'
+        Name: Louis Tompkins Wright
+        Summary: >
+          In the first two decades of the 20th century, job opportunities for
+          African American physicians were pretty much limited to black hospitals
+          and segregated private practice. This module profiles Louis Wright, who
+          in 1920 was the first African American physician to join the staff of
+          Harlem Hospital and who ultimately became Chief of Surgery. The module
+          traces Wright's life and career, from being the only black student at
+          Harvard Medical School to pioneering surgical techniques on the
+          battlefields of World War I. Readers will see how Wright broke racial
+          barriers in many different areas of medical treatment and research.
+      - Id: '256'
+        Name: Craig Lee
+        Summary: >
+          With a warming climate around the world, astounding archaeological finds
+          have been melting out of ice patches. This module profiles the work of
+          Craig Lee, a leader in the emerging field of ice patch archaeology in
+          North America. The module emphasizes the importance of collaboration
+          between archaeologists, tribal groups, and US government entities in an
+          effort to appropriately collect, protect, and interpret culturally
+          sensitive artifacts found on ancestral Native American lands. Topics
+          include research methods and the multidisciplinary nature of the work.
+      - Id: '174'
+        Name: The Case of the Ivory-billed Woodpecker
+        Summary: >
+          This reading guide provides access to a published, peer-reviewed
+          scientific research article from the journal <i>Science</i>. Lists of
+          questions and instructions that focus on the article’s format and
+          content help readers see how research papers are organized and how
+          scientists support their hypotheses with evidence.
+      - Id: '175'
+        Name: Bone Changes in Rock Climbers
+        Summary: >
+          This reading guide provides access to a published, peer-reviewed
+          scientific research article from the <em>Journal of Anatomy</em>.
+          Questions to accompany the article help readers become familiar with the
+          structure of a scientific journal article and ensure a critical approach
+          to reading. Using the questions as a guide, readers gain a deeper
+          understanding of how scientists undertake research. Links to relevant
+          background modules are included.
+          
 - Discipline: Math in Science
 
   Description: >
