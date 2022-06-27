@@ -1,4 +1,5 @@
 - Discipline: Biology
+
   Description: >
     Life as we know it is a wonderfully diverse enterprise. Organisms pass
     traits from parent to offspring, function in a varied and changing
@@ -7,10 +8,13 @@
     larger scientific and social issues. Our biology modules reveal the
     current state of scientific understanding on topics like cell structure and
     function, genetics, taxonomy, evolution by natural selection, and more.
+
   Slug: biology
+  
   Subcategories:
 
     - Title: Biological Molecules
+      
       Modules:
       - Id: '61'
         Name: Carbohydrates
@@ -62,6 +66,7 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_207.mp3
 
     - Title: Cell Biology
+
       Modules:
       - Id: '64'
         Name: Discovery and Structure of Cells
@@ -139,6 +144,7 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_106.mp3
 
     - Title: Energy in Living Systems
+
       Modules:
       - Id: '215'
         Name: Energy Metabolism I
@@ -172,6 +178,7 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_192.mp3
 
     - Title: Evolutionary Biology
+
       Modules:
       - Id: '226'
         Name: Origins of Life I
@@ -295,6 +302,7 @@
         AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_129.mp3
 
 - Discipline: Chemistry
+
   Description: >
     The universe is a vast soup of interacting particles and energy. The ways in
     which those interactions take place, as well as the structure and
@@ -302,11 +310,14 @@
     chemistry learning modules introduce you to the world of chemistry,
     exploring current research and scientific findings on concepts like the
     structure and function of atoms, forms of energy and its transfer, chemical
-    bonding and reactions, and more..
+    bonding and reactions, and more.
+
   Slug: chemistry
+
   Subcategories:
 
     - Title: Atomic Theory and Structure
+
       Modules:
       - Id: '49'
         Name: Early Ideas about Matter
@@ -387,6 +398,7 @@
           determine the amount of a substance and its mass.
     
     - Title: Physical States and Properties
+      
       Modules:
       - Id: '120'
         Name: States of Matter
@@ -478,6 +490,7 @@
           striving to understand all the feats this simple substance can perform.
 
     - Title: Reactions and Changes
+      
       Modules:
       - Id: '54'
         Name: Chemical Reactions
@@ -505,6 +518,92 @@
           molecules are discussed.
           
 - Discipline: Earth Science
+
   Description: >
     From the deep sea vents of the Cayman Trough to the shield volcanoes of the Hawaiian islands, Earth Scientists explore the structures and processes that define our world, the forces that continue to sculpt it, and how these processes have interacted over the last 4.6 billion years of Earth's history. Our Earth science modules introduce how scientists use detailed observations, modeling, and comparative studies to develop their understanding of plate tectonics, the foundational theory of the Earth sciences, as well as biogeochemical cycles, the structure of the Earth and its atmosphere, and rocks and minerals.
+  
   Slug: earth-science
+
+  Subcategories:
+
+    - Title: Plate Tectonics
+
+      Modules:
+      - Id: '65'
+        Name: Origins of Plate Tectonic Theory
+        Summary: >
+          The theory of continental drift was the first step toward plate tectonic
+          theory, which became the foundation upon which modern geology is built. 
+          This module describes how the work of Alfred Wegener, Harry Hess, and
+          others led to our understanding of plate tectonics. It explains plate
+          tectonics as the driving force behind ongoing changes on Earth.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_65.mp3
+      - Id: '66'
+        Name: Plates, Plate Boundaries, and Driving Forces
+        Summary: >-
+          Earthquakes and volcanoes can reveal a lot about plate boundaries. This
+          module looks at the nature of tectonic plates and discusses the
+          different boundary types that exist between them – convergent,
+          divergent, and transform. Forces that drive the push and pull of these
+          landmasses are explored.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_66.mp3
+      - Id: '69'
+        Name: Earth Structure
+        Summary: >-
+          Earth's interior structure is composed of layers that vary by
+          composition and behavior. Using principles of physics like gravity and
+          wave motion, this module explains how scientists have determined Earth's
+          deep structure. Different types of seismic waves are discussed. The
+          module details both compositional and mechanical layers of Earth.
+        SubCategory: Plate Tectonics
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_69.mp3
+
+    - Title: Earth Cycles
+
+      Modules:
+      - Id: '128'
+        Name: The Rock Cycle
+        Summary: >-
+          This module addresses the rock cycle, including the historical
+          development of the concept. The relationships between uniformitarianism,
+          the rock cycle, and plate tectonics are explored both generally and
+          through the specific example of the Cascade Range in the Pacific
+          Northwest.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_128.mp3
+      - Id: '95'
+        Name: The Carbon Cycle
+        Summary: >-
+          Carbon, the fourth most abundant element in the universe, moves between
+          the atmosphere, oceans, biosphere, and geosphere in what is called the
+          <em>carbon cycle</em>. This module provides an overview of the global
+          carbon cycle, one of the major biogeochemical cycles. The module
+          explains geological and biological components of the cycle. Major
+          sources and sinks of carbon are discussed, as well as the impact of
+          human activities on global carbon levels.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_95.mp3
+      - Id: '98'
+        Name: The Nitrogen Cycle
+        Summary: >-
+          This module provides an overview of the nitrogen cycle and the chemical
+          changes that govern the cycle.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_98.mp3
+      - Id: '197'
+        Name: The Phosphorus Cycle
+        Summary: >-
+          All living organisms need phosphorous to survive and grow. This module
+          describes forms that phosphorous takes in nature and how the element
+          cycles through the natural world. A historical journey highlights how we
+          came to understand this vital element. The Experimental Lakes Project
+          shows the harmful effects of too much phosphorous on the environment as
+          a result of human activities.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_197.mp3
+      - Id: '202'
+        Name: History of Earth's Atmosphere I
+        Summary: >-
+          This module looks at how the Earth's atmosphere has changed since the
+          planet came into existence. Starting with clues provided by neon gas,
+          the module traces how scientists have pieced together the story of
+          Earth’s atmosphere. Techniques are described for determining the
+          concentration of elements found on Earth as well as those on planets and
+          stars that are too far away to allow scientists to collect samples.
+        AudioUrl: http://www.visionlearning.com/library/moduleAudio/module_202.mp3
