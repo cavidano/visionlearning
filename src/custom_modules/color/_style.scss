@@ -34,6 +34,7 @@ In this file:
     
     --dark: #14142f;
     --light: #f7f7f7;
+    --canvas: white;
 
     // Accessible Link Color
 
@@ -87,11 +88,11 @@ In this file:
     --light-confirm: #007e35;
     --light-warn: #ce1736;
 
-    // Associated Light Colors
+    // Canvas Correlated Colors
 
     --canvas-text: var(--dark);
     --canvas-border: hsla(0, 0%, 50%, 0.25);
-    --canvas-link: var(--a11y-link-color);
+    --canvas-link: var(--a11y-link);
     --canvas-confirm: #008237;
     --canvas-warn: #e4193c;
 
@@ -109,14 +110,6 @@ In this file:
 
 $theme-colors: (
 
-    "canvas": (
-        swatch: white,
-        text: var(--canvas-text),
-        border: var(--canvas-border),
-        link: var(--canvas-link),
-        confirm: var(--canvas-confirm),
-        warn: var(--canvas-warn)
-    ), 
         
     "primary": (
         swatch: var(--primary),
@@ -170,7 +163,16 @@ $theme-colors: (
         link: var(--light-link),
         confirm: var(--light-confirm),
         warn: var(--light-warn)
-    )
+    ),
+
+    "canvas": (
+        swatch: white,
+        text: var(--canvas-text),
+        border: var(--canvas-border),
+        link: var(--canvas-link),
+        confirm: var(--canvas-confirm),
+        warn: var(--canvas-warn)
+    ) 
 );
 
 //////////////////////////////////////////////
@@ -180,6 +182,7 @@ $theme-colors: (
 body:not([class*="theme-"]),
 body > footer:not([class*="theme-"]),
 [class*="theme-"],
+.backdrop__image__credit,
 [data-active-theme] [aria-current],
 [data-active-theme] [aria-expanded="true"],
 [data-active-theme] [aria-current] + .nav__dropdown {
@@ -294,13 +297,13 @@ body > footer:not([class*="theme-"]),
 //////////////////////////////////////////////
 
 @media (prefers-color-scheme: dark) {
-    [class*="theme-canvas"][class*="--prefers"]{ 
-        --background-color: var(--dark);
-        --text-color: var(--dark-text);
-        --border-color: var(--dark-border);
-        --link-color: var(--dark-link);
-        --confirm-color: var(--dark-confirm);
-        --warn-color: var(--dark-warn);
+    [class*="theme-canvas"][class*="--prefers"] {
+        --canvas: var(--dark);
+        --canvas-text: var(--dark-text);
+        --canvas-border: var(--dark-border);
+        --canvas-link: var(--dark-link);
+        --canvas-confirm: var(--dark-confirm);
+        --canvas-warn: var(--dark-warn);
     }
 }
 
