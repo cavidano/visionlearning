@@ -201,27 +201,6 @@ In this file:
 // F. Landing (Library, Glossary)
 //////////////////////////////////////////////
 
-.materials {  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-
-  grid-template-rows: auto 1fr;
-
-  height: 100%;
-
-  grid-template-areas:
-    "materials__search materials__main materials__sign-up-in"
-    "materials__filter-nav materials__main materials__sign-up-in";
-}
-
-.materials__search { grid-area: materials__search; }
-
-.materials__main { grid-area: materials__main; }
-
-.materials__filter-nav { grid-area: materials__filter-nav; }
-
-.materials__sign-up-in { grid-area: materials__sign-up-in; grid-row: span 2; }
-
-/*
 
 .landing, 
 .materials {
@@ -318,8 +297,6 @@ In this file:
           "aside main"
     }
 }
-
-*/
 
 //////////////////////////////////////////////
 // H. Featured Material

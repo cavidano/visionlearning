@@ -32,9 +32,21 @@ In this file:
     --glossary: #60BF64;
     --classroom: #3399CC;
     
-    --dark: #14142f;
-    --light: #f7f7f7;
     --canvas: white;
+
+    --light-h: 0; 
+    --light-s: 0%; 
+    --light-l: 0%;
+    --light-o: 0.0375;
+    
+    --light: hsla(
+        var(--light-h),
+        var(--light-s),
+        var(--light-l),
+        var(--light-o)
+    );
+    
+    --dark: #14142f;
 
     // Accessible Link Color
 
@@ -165,7 +177,7 @@ $theme-colors: (
     ),
 
     "canvas": (
-        swatch: white,
+        swatch: var(--canvas),
         text: var(--canvas-text),
         border: var(--canvas-border),
         link: var(--canvas-link),
