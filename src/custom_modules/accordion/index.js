@@ -89,13 +89,6 @@ export default class Accordion {
                         setFocusableElements(currentAccordionPanel, true);
                     }
 
-                    // if (currentAccordionPanel.style.maxHeight) {
-                    //     currentAccordionPanel.style.maxHeight = null;
-                    // } else {
-                    //     currentAccordionPanel.style.maxHeight = currentAccordionPanel.scrollHeight + 'px';
-                    //     currentAccordionPanel.setAttribute('aria-hidden', false);
-                    // }
-
                     let accTrigger = new Event('accTrigger', { bubbles: true });
                     document.dispatchEvent(accTrigger);
 

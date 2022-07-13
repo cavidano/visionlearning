@@ -6,6 +6,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devPages = {
+    'Accordion': 'accordion',
     'DisciplineGrid': 'discipline-grid',
     'HeaderFooter': 'header-footer',
     'ReadingToggles': 'reading-toggles',
@@ -16,7 +17,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Module}.html`;
+const devPage = `${devPages.Accordion}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
