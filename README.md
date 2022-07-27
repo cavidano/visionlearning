@@ -9,6 +9,7 @@ An in-depth paragraph about your project and overview of use.
 ## Getting Started
 
 `fantasticon ./svg -o ../../dist/icons`
+`bundle exec jekyll serve`
 
 ### Dependencies
 
