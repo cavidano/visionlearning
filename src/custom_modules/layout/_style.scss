@@ -367,19 +367,11 @@ In this file:
 }
 
 .module__audio {
-    // outline: 6px solid yellow;
-    // background: red;
-
     grid-area: audio;
 }
 
 .module__main {
-    // outline: 6px solid tan;
-    // background: tan;
-
     position: relative;
-
-    z-index: 2500;
     
     grid-area: main;
 
