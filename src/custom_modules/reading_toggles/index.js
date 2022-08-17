@@ -49,6 +49,7 @@ export default class ReadingToggles {
                 handleNGSSClick = () => {
 
                     const ngssCat = ngss.getAttribute('data-ngss-cat');
+                    const ngssCom = ngss.getAttribute('data-ngss-comment');
                     const ngssDesc = ngss.getAttribute('data-ngss-desc');
 
                     removeOldDetails();
@@ -66,7 +67,7 @@ export default class ReadingToggles {
 
                             <div class="reading-toggle-detail__body">
                                 <p>
-                                    ${ngssDesc ? ngssDesc : 'That is not good.'}
+                                    ${ngssCom ? ngssCom : ngssDesc}
                                 </p>
                             </div>
                         
@@ -116,6 +117,7 @@ export default class ReadingToggles {
                     const termTitle = term.innerHTML.toString();
 
                     const termDef = term.getAttribute('data-term-def');
+                    const termUrl = term.getAttribute('data-term-url');
                         
                     removeOldDetails();
 
@@ -140,7 +142,7 @@ export default class ReadingToggles {
                                 </p>
                             
                                 <p>
-                                    <a href="#">
+                                    <a href="${termUrl ? termUrl : '#1'}">
                                         View in Glossary
                                     </a>
                                 </p>
