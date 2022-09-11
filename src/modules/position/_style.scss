@@ -24,19 +24,14 @@ $positions: static, relative, absolute, fixed;
 // B. Position Utilities
 //////////////////////////////////////////////
 
-
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
     @include breakpoints.breakpoints-up($breakpoint) {
         $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
+
         @each $position in $positions {
             .position-#{$position}#{$mod} {
                 position: $position;
-
-                 @if $position == fixed {
-                    inset-inline-start: 0 !important;
-                    inset-inline-end: 0 !important;
-                 }
             }
         }
         .position-absolute#{$mod},

@@ -8,8 +8,8 @@ import { getFocusableElements } from '../../utilities/focus';
 
 export default class Collapse {
 
-    constructor() {
-        this.collapseButtonList = document.querySelectorAll('[data-target-toggle]');
+    constructor(collapseButton) {
+        this.collapseButtonList = document.querySelectorAll(collapseButton);
     }
 
     init() {

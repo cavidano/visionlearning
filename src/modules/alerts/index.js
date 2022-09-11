@@ -6,9 +6,9 @@ import './_style.scss';
 
 export default class Alerts {
 
-    constructor() {
-        this.alertDismissableList = document.querySelectorAll('.alert--dismissable');
-    
+    constructor(alertDismissable) {
+        this.alertDismissableList = document.querySelectorAll(alertDismissable);
+
         this.closeButtonHTML = (`
             <button class="button button--icon-only">
                 <span class="icon icon-close" aria-label="Close" aria-hidden="true">
@@ -17,12 +17,12 @@ export default class Alerts {
     }
 
     init() {
-
+    
         this.alertDismissableList.forEach((alertDismissable) => {
             
             alertDismissable.insertAdjacentHTML('afterbegin', this.closeButtonHTML);
 
-            const alertCloseButton = alertDismissable.querySelector("button");
+            const alertCloseButton = alertDismissable.querySelector('button');
 
             alertCloseButton.addEventListener('click', (event) => {
                 

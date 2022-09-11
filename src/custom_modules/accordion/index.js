@@ -8,8 +8,8 @@ import { getFocusableElements } from '../../utilities/focus';
 
 export default class Accordion {
 
-    constructor() {
-        this.accordionList = document.querySelectorAll('.accordion');
+    constructor(accordion) {
+        this.accordionList = document.querySelectorAll(accordion);
     }
 
     init() {

@@ -73,32 +73,32 @@ import './modules/z-index/index';
 // B. Initialize JS Modules
 //////////////////////////////////////////////
 
-// const accordion = new Accordion();
+// const accordion = new Accordion('.accordion');
 // accordion.init();
 
-const alerts = new Alerts();
+const alerts = new Alerts('.alert--dismissable');
 alerts.init();
 
-const buttons = new Buttons();
+const buttons = new Buttons('.button--icon-only');
 buttons.init();
 
-const collapse = new Collapse();
+const collapse = new Collapse('[data-target-toggle]');
 collapse.init();
 
-const forms = new Forms();
+const forms = new Forms('form[novalidate]', '.form-entry', '.file-upload');
 forms.init();
 
-// const modal = new Modal();
+// const modal = new Modal('.modal', '[data-modal-open]');
 // modal.init();
 
-const navigation = new Navigation();
+const navigation = new Navigation('[data-toggle="dropdown"]');
 navigation.init();
 
-const tabs = new Tabs();
-tabs.init();
-
-const tables = new Tables();
+const tables = new Tables('[class*="table--stack"]', '.table-scroll');
 tables.init();
+
+const tabs = new Tabs('.tabs');
+tabs.init();
 
 //////////////////////////////////////////////
 // Custom Modules
@@ -106,7 +106,7 @@ tables.init();
 
 import Layout from './custom_modules/layout'; 
 
-const layout = new Layout();
+const layout = new Layout('.grid--discipline .backdrop');
 layout.init();
 
 import './custom_modules/navigation';
@@ -115,12 +115,12 @@ import Quiz from './custom_modules/quiz';
 
 import Modal from './custom_modules/modal';
 
-const modal = new Modal();
+const modal = new Modal('.modal', '[data-modal-open]');
 modal.init();
 
 import Accordion from './custom_modules/accordion';
 
-const accordion = new Accordion();
+const accordion = new Accordion('.accordion');
 accordion.init();
 
 const quiz = new Quiz();
@@ -138,13 +138,3 @@ import './custom_modules/borders';
 import './custom_modules/color';
 
 import './custom_modules/section_cards';
-
-//////////////////////////////////////////////
-// Environments (For Testing Webpack)
-//////////////////////////////////////////////
-
-if (process.env.NODE_ENV === 'development') {
-    console.log("Development Mode");
-} else if (process.env.NODE_ENV === 'production') {
-    console.log("Production Mode");
-}

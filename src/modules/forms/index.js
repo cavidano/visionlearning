@@ -6,12 +6,10 @@ import './_style.scss';
 
 export default class Forms {
 
-    constructor() {
-
-        this.formList = document.querySelectorAll('form[novalidate]');
-        this.formEntryList = document.querySelectorAll('.form-entry');
-        this.fileUploadList = document.querySelectorAll('.file-upload');
-
+    constructor(form, formEntry, fileUpload) {
+        this.formList = document.querySelectorAll(form);
+        this.formEntryList = document.querySelectorAll(formEntry);
+        this.fileUploadList = document.querySelectorAll(fileUpload);
     }
 
     init() {

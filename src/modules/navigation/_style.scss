@@ -117,8 +117,6 @@ In this file:
             flex-direction: row;
             align-items: center;
 
-            gap: calc(var(--nav-gap) * 1.5);
-
             > li > .nav__dropdown {
                 position: absolute;
 
@@ -157,7 +155,7 @@ In this file:
     > li > button {
         position: relative;
 
-        display: flex;
+        display: block;
 
         width: 100%;
     }

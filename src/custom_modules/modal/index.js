@@ -8,9 +8,9 @@ import { getFocusableElements, getOffsetTop } from '../../utilities/focus'
 
 export default class Modal {
 
-  constructor() {
-    this.modalList = document.querySelectorAll('.modal');
-    this.modalButtonList = document.querySelectorAll('[data-modal-open]');
+  constructor(modal, modalButton) {
+    this.modalList = document.querySelectorAll(modal);
+    this.modalButtonList = document.querySelectorAll(modalButton);
   }
 
   init() {

@@ -6,8 +6,8 @@ import "./_style.scss";
 
 export default class Layout {
 
-    constructor() {
-        this.discList = document.querySelectorAll('.grid--discipline .backdrop');
+    constructor(gridDiscBackdrop) {
+        this.discList = document.querySelectorAll(gridDiscBackdrop);
     }
 
     init() {

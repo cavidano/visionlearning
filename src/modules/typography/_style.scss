@@ -6,13 +6,14 @@ In this file:
 // B. Variables
 // C. Font Weight Utilities
 // D. Font Size Utilities
-// E. Headers
-// F. Fluid Type Utility
+// E. Headings
+// F. Banner Headline Utility
 // G. Body Selectors
 // H. Text Align Utilities
 // I. Text Transform Utilities
-// J. Word Wrap Utilities
-// K. Truncate Text Utility
+// J. Text Decoration Utilities
+// K. Word Wrap Utilities
+// L. Truncate Text Utility
 
 */
 
@@ -65,9 +66,12 @@ In this file:
 
     --header-line-height: 1.125;
 
+    --header-margin-bottom: 0.375em;
+
     // Banner Headline
 
-    --banner-headline-font-size: calc(var(--body-font-size) * 3.8);
+    --banner-headline-font-size-sm: calc(var(--body-font-size) * 2.75);
+    --banner-headline-font-size-lg: calc(var(--body-font-size) * 4);
     --banner-headline-font-weight: var(--body-font-weight-normal);
 
     // Paragraph
@@ -118,18 +122,24 @@ $font-sizes: (
     )
 );
 
-@each $key, $font-size-map in $font-sizes {
-    .font-size-#{$key} {
-        font-size: map.get($font-size-map, "size") !important;
+@each $breakpoint in map.keys(breakpoints.$breakpoints) {
+    @include breakpoints.breakpoints-up($breakpoint) {
+        $mod: breakpoints.breakpoint-modifier($breakpoint, breakpoints.$breakpoints);
 
-        @if map.has-key($font-size-map, "line-height") {
-            line-height: map.get($font-size-map, "line-height");
+        @each $key, $font-size-map in $font-sizes {
+            .font-size-#{$key}#{$mod} {
+                font-size: map.get($font-size-map, "size") !important;
+
+                @if map.has-key($font-size-map, "line-height") {
+                    line-height: map.get($font-size-map, "line-height");
+                }
+            }
         }
     }
 }
 
 //////////////////////////////////////////////
-// E. Headers
+// E. Headings
 //////////////////////////////////////////////
 
 :is(
@@ -144,7 +154,7 @@ $font-sizes: (
     line-height: var(--header-line-height);
 
     &:not(.accordion__button):not(.alert__title):not(:last-child){
-        margin-block-end: var(--spacer-2);
+        margin-block-end: var(--header-margin-bottom);
     }
 }
 
@@ -189,27 +199,19 @@ $headers: (
     }
 }
 
+//////////////////////////////////////////////
+// F. Banner Headline Utility
+//////////////////////////////////////////////
+
 .banner-headline {
     font-weight: var(--banner-headline-font-weight);
+
+    font-size: var(--banner-headline-font-size-sm);
+
     line-height: var(--header-line-height);
 
-    font-size: var(--banner-headline-font-size);
-}
-
-//////////////////////////////////////////////
-// F. Fluid Type Utility
-//////////////////////////////////////////////
-
-html {
-    --fluid-typ-min: 0.75rem;
-    --fluid-typ-rec: 0.75vw + 1rem;
-    --fluid-typ-max: 1.5rem;
-
-    &.fluid-type {
-        --body-font-size:
-            clamp(var(--fluid-typ-min), 
-                  var(--fluid-typ-rec),
-                  var(--fluid-typ-max));
+    @include breakpoints.breakpoints-up(lg) {
+        font-size: var(--banner-headline-font-size-lg);
     }
 }
 
@@ -282,6 +284,10 @@ figure {
     }
 }
 
+.blockquote {
+    margin-block-end: var(--paragraph-margin-bottom);
+}
+
 //////////////////////////////////////////////
 // H. Text Align Utilities
 //////////////////////////////////////////////
@@ -322,7 +328,27 @@ figure {
 }
 
 //////////////////////////////////////////////
-// J. Word Wrap Utilities
+// J. Text Decoration Utilities
+//////////////////////////////////////////////
+
+[class*="text-decoration-"] {
+    --line-thickness: auto;
+}
+
+.text-decoration-underline {
+    text-decoration: underline var(--line-thickness);
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through var(--line-thickness);
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+//////////////////////////////////////////////
+// K. Word Wrap Utilities
 //////////////////////////////////////////////
 
 .nowrap {
@@ -334,7 +360,7 @@ figure {
 }
 
 ////////////////////////////////////////
-// K. Truncate Text Utility
+// L. Truncate Text Utility
 ////////////////////////////////////////
 
 .truncate-text {
