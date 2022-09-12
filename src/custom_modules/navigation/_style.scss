@@ -263,7 +263,6 @@
     }
 
     > ul > li > .button {
-        --button-padding-x: 0.875em;
         --button-padding-y: 0.75em;
         --button-border-radius: 0;
         --button-font-weight: var(--body-font-weight-normal);
@@ -275,19 +274,34 @@
     }
 
     .nav__dropdown > .accordion {
+        
         --accordion-panel-padding-x: var(--button-padding-x);
         --accordion-panel-padding-y: var(--button-padding-y);
 
         > .accordion__button.current {
-        justify-content: start;
-        opacity: 0.75;
-        cursor: default;
-        font-weight: var(--body-font-weight-bold);
-        &::before {
-        display: none;
-        --icon-size: 1em;
-            content: '\f10e';
+            justify-content: start;
+            opacity: 0.75;
+            cursor: default;
+            font-weight: var(--body-font-weight-bold);
+
+            &::before {
+                --icon-size: 1em;
+                content: '\f10e';
+                
+                display: none;
+            }
         }
+
+        > .accordion__button {
+            
+            &:hover,
+            &:focus { 
+                text-decoration: none;
+
+                [class*="__label"] {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 
