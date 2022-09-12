@@ -18,96 +18,111 @@ title: "Library"
                     <div class="materials">
 
                         <div class="materials__aside font-size-md padding-2 border-right--lg">
+                            
+                            <div class="grid gap-3">
 
-                            {% include materials-search.html search_type="Library" %}
+                                {% include materials-sidebar-mobile-buttons.html %}
 
-                            <ul
-                                class="tabs-nav library border border-radius collapse display-block--lg"
-                                id="filter-by-discipline"
-                                role="menu">
+                                {% include materials-sidebar-search.html search_type="Library" %}
 
-                                <li>
-                                    <button
-                                        id="highlights"
-                                        aria-selected="true"
-                                        role="tab">
-                                            Highlights
-                                    </button>
-                                </li>
-                                <li>
-                                    <a
-                                        id="filter-all-disciplines"
-                                        aria-selected="false"
-                                        role="tab"
-                                        href="{{ site.url }}/library/all-disciplines.html">
-                                            All Disciplines
+                                <nav class="collapse display-block--lg" id="material-nav">
+                                    
+                                    <ul
+                                        class="tabs-nav library border border-radius"
+                                        id="material-nav"
+                                        role="menu">
+
+                                        <li>
+                                            <button
+                                                id="highlights"
+                                                aria-selected="true"
+                                                role="tab">
+                                                    Highlights
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <a
+                                                id="filter-all-disciplines"
+                                                aria-selected="false"
+                                                role="tab"
+                                                href="{{ site.url }}/library/all-disciplines.html">
+                                                    All Disciplines
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-biology"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    Biology
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-chemistry"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    Chemistry
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-earth-science"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    Earth Science
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-general-science"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    General Science
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-profiles-in-science"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    Inside Science
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-math-in-science"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    Math in Science
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-physics"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    Physics
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button
+                                                id="filter-process-of-science"
+                                                aria-selected="false"
+                                                role="tab">
+                                                    Process of Science
+                                            </button>
+                                        </li>
+                                    </ul>
+
+                                    <a class="button button--has-icon--disperse margin-y-2" href="#1">
+                                        <span class="button__text">Interactive Animations</span>
+                                        <span class="icon icon-open-new"></span>
                                     </a>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-biology"
-                                        aria-selected="false"
-                                        role="tab">
-                                            Biology
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-chemistry"
-                                        aria-selected="false"
-                                        role="tab">
-                                            Chemistry
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-earth-science"
-                                        aria-selected="false"
-                                        role="tab">
-                                            Earth Science
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-general-science"
-                                        aria-selected="false"
-                                        role="tab">
-                                            General Science
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-profiles-in-science"
-                                        aria-selected="false"
-                                        role="tab">
-                                            Inside Science
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-math-in-science"
-                                        aria-selected="false"
-                                        role="tab">
-                                            Math in Science
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-physics"
-                                        aria-selected="false"
-                                        role="tab">
-                                            Physics
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        id="filter-process-of-science"
-                                        aria-selected="false"
-                                        role="tab">
-                                            Process of Science
-                                    </button>
-                                </li>
-                            </ul>
+
+                                </nav>
+
+                            </div>
                         
                         </div>
 
