@@ -1,0 +1,46 @@
+- Title: Moho
+
+  Description: >
+    This animation simulates what Andrija Mohorovičić observed in 1909 - that seismic waves travel faster in the mantle than they do in the crust because it is composed of denser material.
+
+  imgSlug: moho
+  Module: Earth Structure
+  LinkURL: https://google.com
+
+- Title: Atomic and ionic structure of the first 12 elements
+
+  Description: >
+    This animation provides the planetary and quantum view of the electron configuration for the first 12 elements on the periodic table. In addition, users can select a view of the nucleus of each atom and configuration of the major ion formed by the atom. Simply click on an element from the table above to proceed.
+
+  imgSlug: atomic-and-ionic-structure
+  Module: Atomic Theory I
+  LinkURL: https://google.com
+
+- Title: Prokaryote vs. Eukaryote Cell Division
+
+  Description: >
+    Overview of cell division in prokaryotic and eukaryotic cells, showing how similar processes of replication, segregation, and cytokinesis occur.
+
+
+  imgSlug: prokaryote-vs-eukaryote
+  Module: The Discovery and Structure of Cells
+  LinkURL: https://google.com
+
+- Title: Acceleration during Free Fall
+
+  Description: >
+    Demonstration of how the rate of acceleration of an object is independent of the object's mass, showing two objects with different masses falling at the same rate (if we ignore air resistance).
+
+  imgSlug: acceleration-during-free-fall
+  Module: Gravity
+  LinkURL: https://google.com
+
+
+- Title: Overview of Photosynthesis
+
+  Description: >
+    Overview of Photosynthesis provides a short illustration of the light-dependent reactions that take place in a chloroplast during photosynthesis.
+
+  imgSlug: overview-of-photosynthesis
+  Module: GravitPhotosynthesis I
+  LinkURL: https://google.com
