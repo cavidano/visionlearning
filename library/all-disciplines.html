@@ -115,9 +115,8 @@ title: "Library"
                                         </li>
                                     </ul>
 
-                                    <a class="button button--has-icon--disperse margin-y-2" href="#1">
+                                    <a class="button margin-y-2 text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
                                         <span class="button__text">Interactive Animations</span>
-                                        <span class="icon icon-open-new"></span>
                                     </a>
 
                                 </nav>
@@ -131,9 +130,9 @@ title: "Library"
                             <div class="padding-2 position-relative">
 
                                 {% for item in site.data.librarySample %}
-                                    {% assign header = item.Title %}                         
-                                    {% assign description = item.Description %}                         
-                                    {% assign subcategories = item.Subcategories %}                         
+                                    {% assign header = item.Discipline %}                         
+                                    {% assign slug = item.Slug %}                         
+                                    {% assign subcategories = item.Subcategories %}                          
 
                                     <section>
 

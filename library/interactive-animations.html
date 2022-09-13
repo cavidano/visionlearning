@@ -3,13 +3,13 @@ layout: global
 title: "Library"
 ---
 
-<div class="wrap-viewport-height">
+<div class="wrap-viewport-heightX">
     
     {% include global-header.html %}
 
     <main id="skip-header-content">
 
-        <div class="height-100 padding-y-5">
+        <div class="padding-y-5">
 
             <div class="landing wide margin-x-auto theme-canvas border-radius">
 
@@ -19,7 +19,7 @@ title: "Library"
 
                         <div class="materials__aside font-size-md padding-2 border-right--lg">
 
-                            <div class="grid gap-3">
+                            <div class="grid gap-3 position-sticky-top--lg">
 
                                 {% include materials-sidebar-mobile-buttons.html %}
 
@@ -115,10 +115,9 @@ title: "Library"
                                             </button>
                                         </li>
                                     </ul>
-
-                                    <a class="button button--has-icon--disperse margin-y-2" href="#1">
+                                    
+                                    <a class="button margin-y-2 text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
                                         <span class="button__text">Interactive Animations</span>
-                                        <span class="icon icon-open-new"></span>
                                     </a>
 
                                 </nav>
@@ -131,67 +130,58 @@ title: "Library"
 
                             <div class="padding-2 position-relative">
                   
+                                <header class="container padding-y-3 theme-library border-radius" style="--backdrop-fixed-height: unset">
 
-                                    <section>
+                                    <h2>Interactive Animations</h2>
+                                    <p>
+                                        Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
+                                    </p>
 
-                                        <header class="theme-light {{ slug }} discipline-divider">
+                                </header>
 
-                                        <h2>Interactive animations</h2>
-                                            
-                                        </header>
-                                        
-                                        <div class="padding-x-2 overflow-hidden">
+                                <hr class="margin-y-3" />
 
+                                <section class="grid grid--column-2--md gap-2">
+
+                                {% for item in site.data.interactiveAnimations %}
+                                    {% assign title = item.Title %}                         
+                                    {% assign description = item.Description %}                       
+                                    {% assign imgSlug = item.ImgSlug %}                       
+                                    {% assign relatedModule = item.Module %}                      
+                                    {% assign url = item.LinkURL %}                      
+
+                                    <div class="card border">
+
+                                        <img class="border-bottom" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
+
+                                        <div class="card__body font-size-md">
+                                            <h2 class="h5">
+                                                {{ title }}
+                                            </h2>
                                             <p>
-                                                Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
+                                                {{ description }}
                                             </p>
-                                            
-                                        </div>
-
-                                    </section>
-
-                                    <hr class="margin-y-3" />
-
-                                    <section class="grid grid--column-2--md grid--column-3--lg gap-2">
-
-                                    {% for item in site.data.interactiveAnimations %}
-                                        {% assign title = item.Title %}                         
-                                        {% assign description = item.Description %}                       
-                                        {% assign imgSlug = item.ImgSlug %}                       
-                                        {% assign relatedModule = item.Module %}                      
-                                        {% assign url = item.LinkURL %}                      
-
-                                        <div class="card border">
-
-                                            <img class="border-bottom" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
-
-                                            <div class="card__body font-size-md">
-                                                <h2 class="h5">
-                                                    {{ title }}
-                                                </h2>
-                                                <p>
-                                                    {{ description }}
-                                                </p>
-                                                <p>
-                                                <em> 
-                                                    Reading:
-                                                    <a href="#1" class="text-color-link">
-                                                        {{ relatedModule }}
-                                                    </a>
-                                                </em>
-                                                </p>
-                                            </div>
-
-                                            <div class="card__foot border-top font-size-sm">
-                                                <a class="button width-100 text-color-link" href="#1">
-                                                    Secondary Action
+                                            <p>
+                                            <em> 
+                                                Reading:
+                                                <a href="#1" class="text-color-link">
+                                                    {{ relatedModule }}
                                                 </a>
-                                            </div>
-
+                                            </em>
+                                            </p>
                                         </div>
-                                    {% endfor %}
 
-                                    </section>
+                                        <div class="card__foot border-top font-size-sm">
+                                            <a class="button width-100 text-color-link" href="#1">
+                                                Secondary Action
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                {% endfor %}
+
+                                </section>
                             
                             </div>
 
