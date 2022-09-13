@@ -3,7 +3,7 @@
   Description: >
     This animation simulates what Andrija Mohorovičić observed in 1909 - that seismic waves travel faster in the mantle than they do in the crust because it is composed of denser material.
 
-  imgSlug: moho
+  ImgSlug: moho
   Module: Earth Structure
   LinkURL: https://google.com
 
@@ -12,7 +12,7 @@
   Description: >
     This animation provides the planetary and quantum view of the electron configuration for the first 12 elements on the periodic table. In addition, users can select a view of the nucleus of each atom and configuration of the major ion formed by the atom. Simply click on an element from the table above to proceed.
 
-  imgSlug: atomic-and-ionic-structure
+  ImgSlug: atomic-and-ionic-structure
   Module: Atomic Theory I
   LinkURL: https://google.com
 
@@ -22,7 +22,7 @@
     Overview of cell division in prokaryotic and eukaryotic cells, showing how similar processes of replication, segregation, and cytokinesis occur.
 
 
-  imgSlug: prokaryote-vs-eukaryote
+  ImgSlug: prokaryote-vs-eukaryote
   Module: The Discovery and Structure of Cells
   LinkURL: https://google.com
 
@@ -31,16 +31,78 @@
   Description: >
     Demonstration of how the rate of acceleration of an object is independent of the object's mass, showing two objects with different masses falling at the same rate (if we ignore air resistance).
 
-  imgSlug: acceleration-during-free-fall
+  ImgSlug: acceleration-during-free-fall
   Module: Gravity
   LinkURL: https://google.com
-
 
 - Title: Overview of Photosynthesis
 
   Description: >
     Overview of Photosynthesis provides a short illustration of the light-dependent reactions that take place in a chloroplast during photosynthesis.
 
-  imgSlug: overview-of-photosynthesis
+  ImgSlug: overview-of-photosynthesis
   Module: GravitPhotosynthesis I
+  LinkURL: https://google.com
+
+- Title: Dalton's Playhouse
+
+  Description: >
+    Dalton's Playhouse simulates the experiments conducted by Priestley and Lavosier that led to Dalton's theory of matter.
+
+  ImgSlug: daltons-playhouse
+  Module: Early Ideas about Matter
+  LinkURL: https://google.com
+
+- Title: Mid-Ocean Ridges
+
+  Description: >
+    Mid-Ocean Ridges provides a detailed graphic depiction of the geological process that occur at spreading ridges and subduction zones.
+
+  ImgSlug: midocean-ridges
+  Module: The Origins of Plate Tectonic Theory
+  LinkURL: https://google.com
+
+- Title: The Structure of Animal Cells
+
+  Description: >
+    The Structure of Animal Cells presents the sub-cellular world of a typical animal cell with detailed descriptions of core organelles and their function.
+
+  ImgSlug: animal-cell
+  Module: Discovery and Structure of Cells
+  LinkURL: https://google.com
+
+- Title: The Structure of Plant Cells
+
+  Description: >
+    The Structure of Plant Cells presents the sub-cellular world of a typical plant cell with detailed descriptions of core organelles and their function.
+
+  ImgSlug: plant-cell
+  Module: Discovery and Structure of Cells
+  LinkURL: https://google.com
+
+- Title: Fission of U235
+
+  Description: >
+    Illustrates a nuclear fission reaction.
+
+  ImgSlug: fission
+  Module: Nuclear Chemistry
+  LinkURL: https://google.com
+
+- Title: Bohr's Atom
+
+  Description: >
+    Neils Bohr proposed that electrons resided in specific orbitals within atoms in his groundbreaking work on atomic theory. This animation allows you to add different amounts of energy to see how the electron in a hydrogen atom responds, and then manually allow that electron to relax to specific orbitals within the atom.
+
+  ImgSlug: bohrs-atom
+  Module: Atomic Theory II
+  LinkURL: https://google.com
+
+- Title: The Illustrated Periodic Table
+
+  Description: >
+    The Illustrated Periodic Table presents a conceptual representation of the planetary model structure of the first eleven elements on the periodic table and their major ions.
+
+  ImgSlug: illustrated-periodic-table
+  Module: The Periodic Table of Elements
   LinkURL: https://google.com
