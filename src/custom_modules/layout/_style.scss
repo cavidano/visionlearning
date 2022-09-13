@@ -208,18 +208,11 @@ In this file:
 }
 
 .landing {
-    // border: 6px solid blue !important;
-
-    // gap: var(--spacer-3);
-    
     grid-template-areas:
       "main"
       "aside";
 
     height: 100%;
-    // overflow: hidden;
-
-
 }
 
 .landing__main {
@@ -228,7 +221,7 @@ In this file:
     grid-area: main;
 
     height: 100%;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .landing__aside {    

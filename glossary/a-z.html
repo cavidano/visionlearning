@@ -3,216 +3,212 @@ layout: global
 title: "Glossary"
 ---
 
-<div class="wrap-viewport-height">
-    
-    {% include global-header.html %}
+{% include global-header.html %}
 
-    <main id="skip-header-content">
+<main id="skip-header-content">
 
-        <div class="height-100 padding-y-5">
+    <div class="padding-y-5">
 
-            <div class="landing wide margin-x-auto theme-canvas">
+        <div class="landing wide margin-x-auto theme-canvas">
 
-                <div class="landing__main theme-canvas">
+            <div class="landing__main">
                 
-                    <div class="materials">
+                <div class="materials">
 
-                        <div class="materials__aside font-size-md padding-2 border-right--lg">
+                    <div class="materials__aside font-size-md padding-2 border-right--lg">
 
-                            <div class="grid gap-3">
+                        <div class="grid gap-3">
 
-                                {% include materials-sidebar-mobile-buttons.html %}
+                            {% include materials-sidebar-mobile-buttons.html %}
 
-                                {% include materials-sidebar-search.html search_type="Glossary" %}
+                            {% include materials-sidebar-search.html search_type="Glossary" %}
 
-                                <nav class="collapse display-block--lg" id="material-nav">
+                            <nav class="collapse display-block--lg" id="material-nav">
                                     
-                                    <ul
-                                        class="tabs-nav glossary border border-radius"
-                                        id="material-nav"
-                                        role="menu">
+                                <ul
+                                    class="tabs-nav glossary border border-radius"
+                                    id="material-nav"
+                                    role="menu">
 
-                                        <li>
-                                            <a
-                                                id="highlights"
-                                                aria-selected="false"
-                                                href="{{ site.url }}/glossary"
-                                                role="tab">
-                                                    Highlights
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-all-disciplines"
-                                                aria-selected="true"
-                                                role="tab">
-                                                    A-Z
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-biology"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Biology
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-chemistry"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Chemistry
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-earth-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Earth Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-general-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    General Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-profiles-in-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Inside Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-math-in-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Math in Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-physics"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Physics
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-process-of-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Process of Science
-                                            </button>
-                                        </li>
-                                    </ul>
+                                    <li>
+                                        <a
+                                            id="highlights"
+                                            aria-selected="false"
+                                            href="{{ site.url }}/glossary"
+                                            role="tab">
+                                                Highlights
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-all-disciplines"
+                                            aria-selected="true"
+                                            role="tab">
+                                                A-Z
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-biology"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Biology
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-chemistry"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Chemistry
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-earth-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Earth Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-general-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                General Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-profiles-in-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Inside Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-math-in-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Math in Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-physics"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Physics
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-process-of-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Process of Science
+                                        </button>
+                                    </li>
+                                </ul>
 
-                                </nav>
-
-                            </div>
+                            </nav>
 
                         </div>
 
-                        <div class="materials__main">
-
-                            <div class="padding-2 position-relative">
-
-                                <div id="module-list-view">
-                                    
-                                    <section>
-
-                                        <header>
-                                            <h2 class="screen-reader-only">Alphabetical</h2>
-                                        </header>
-
-                                        <nav class="theme-glossary padding-2 border-radius">
-
-                                            <div class="terms-alphabetical">                                
-                                                <button aria-current="page">
-                                                <span>A</span>
-                                                </button>
-                                                <button>B</button>
-                                                <button>C</button>
-                                                <button>D</button>
-                                                <button>E</button>
-                                                <button>F</button>
-                                                <button>G</button>
-                                                <button>H</button>
-                                                <button>I</button>
-                                                <button>J</button>
-                                                <button>K</button>
-                                                <button>L</button>
-                                                <button>M</button>
-                                                <button>N</button>
-                                                <button>O</button>
-                                                <button>P</button>
-                                                <button>Q</button>
-                                                <button>R</button>
-                                                <button>S</button>
-                                                <button>T</button>
-                                                <button>U</button>
-                                                <button>V</button>
-                                                <button>W</button>
-                                                <button>X</button>
-                                                <button>Y</button>
-                                                <button>Z</button>
-                                            </div>
-                                        
-                                        </nav>
-
-                                        <div class="margin-y-2 font-size-md">
-                                            <ul class="list-divider">
-                                                {% for item in site.data.glossarySample %}
-                                                    {% assign term = item.Name %}
-                                                    {% assign pronounciation = item.Pronounciation %}
-                                                    <li>
-                                                        <span class="list-divider__cell">
-                                                            <a class="text-color-link" href="{{ site.url }}/glossary/term.html">
-                                                            {{ term }} 
-                                                            </a>
-                                                        </span>
-                                                        <span class="list-divider__cell">
-                                                        {% if pronounciation != null %}
-                                                        <div class="button-group text-color-link">
-                                                            <button
-                                                                class="button button--icon-only">
-                                                                <span class="icon icon-pronounciation" aria-hidden="true"></span>
-                                                            </button>                                                
-                                                        </div>
-                                                        {% endif %}
-                                                        </span>
-                                                    </li>
-                                                {% endfor %}
-                                            </ul>
-                                        </div>
-
-                                    </section>
-
-                                </div>
-                            
-                            </div>
-
-                        </div>
-                    
                     </div>
 
+                    <div class="materials__main">
+
+                        <div class="padding-2 position-relative">
+
+                            <div id="module-list-view">
+                                    
+                                <section>
+
+                                    <header>
+                                        <h2 class="screen-reader-only">Alphabetical</h2>
+                                    </header>
+
+                                    <nav class="theme-glossary padding-2 border-radius">
+
+                                        <div class="terms-alphabetical">                                
+                                            <button aria-current="page">
+                                            <span>A</span>
+                                            </button>
+                                            <button>B</button>
+                                            <button>C</button>
+                                            <button>D</button>
+                                            <button>E</button>
+                                            <button>F</button>
+                                            <button>G</button>
+                                            <button>H</button>
+                                            <button>I</button>
+                                            <button>J</button>
+                                            <button>K</button>
+                                            <button>L</button>
+                                            <button>M</button>
+                                            <button>N</button>
+                                            <button>O</button>
+                                            <button>P</button>
+                                            <button>Q</button>
+                                            <button>R</button>
+                                            <button>S</button>
+                                            <button>T</button>
+                                            <button>U</button>
+                                            <button>V</button>
+                                            <button>W</button>
+                                            <button>X</button>
+                                            <button>Y</button>
+                                            <button>Z</button>
+                                        </div>
+                                        
+                                    </nav>
+
+                                    <div class="margin-y-2 font-size-md">
+                                        <ul class="list-divider">
+                                            {% for item in site.data.glossarySample %}
+                                                {% assign term = item.Name %}
+                                                {% assign pronounciation = item.Pronounciation %}
+                                                <li>
+                                                    <span class="list-divider__cell">
+                                                        <a class="text-color-link" href="{{ site.url }}/glossary/term.html">
+                                                        {{ term }} 
+                                                        </a>
+                                                    </span>
+                                                    <span class="list-divider__cell">
+                                                    {% if pronounciation != null %}
+                                                    <div class="button-group text-color-link">
+                                                        <button
+                                                            class="button button--icon-only">
+                                                            <span class="icon icon-pronounciation" aria-hidden="true"></span>
+                                                        </button>                                                
+                                                    </div>
+                                                    {% endif %}
+                                                    </span>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+
+                                </section>
+
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    
                 </div>
-                
-                {% include landing-sidebar.html %}
 
             </div>
-            <!-- .landing -->
+                
+            {% include landing-sidebar.html %}
 
         </div>
+        <!-- .landing -->
 
-    </main>
+    </div>
 
-</div>
+</main>
