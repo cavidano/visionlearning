@@ -150,29 +150,40 @@ title: "Library"
 
                                 <div class="card border">
 
-                                    <img class="border-bottom" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
+                                    <a href="{{ url }}" target="_blank">
+                                        <img class="box-shadow-1x" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
+                                    </a>
 
                                     <div class="card__body font-size-md">
+
                                         <h2 class="h5">
-                                            {{ title }}
+                                            <a href="{{ url }}" target="_blank">{{ title }}</a>
                                         </h2>
+
                                         <p>
                                             {{ description }}
                                         </p>
-                                        <p>
-                                        <em> 
-                                            Reading:
-                                            <a href="#1" class="text-color-link">
-                                                {{ relatedModule }}
-                                            </a>
-                                        </em>
+
+                                        <p>                                        
+                                            <em> 
+                                                Reading:
+                                                <a href="#1" class="text-color-link">
+                                                    {{ relatedModule }}
+                                                </a>
+                                            </em>
                                         </p>
+                                        
                                     </div>
 
                                     <div class="card__foot border-top font-size-sm">
-                                        <a class="button width-100 text-color-link" href="#1">
-                                            Secondary Action
+
+                                        <a class="button button--has-icon--disperse text-color-link" href="{{ url }}" target="_blank">
+                                            <span class="button__text">
+                                                View Animation
+                                            </span>
+                                            <span class="icon icon-arrow-right"></span>
                                         </a>
+                                        
                                     </div>
 
                                 </div>
