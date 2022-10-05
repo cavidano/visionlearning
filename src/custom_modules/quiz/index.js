@@ -4,18 +4,9 @@ import "./_style.scss";
 // Quiz
 //////////////////////////////////////////////
 
-export default class Quiz {
+export class Quiz {
 
 	#quiz = document.querySelectorAll('.quiz');
-	#compCheck = document.querySelectorAll('.comprehension-checkpoint');
-
-	#hideResponses() {
-		const quizResponseList = document.querySelectorAll('.quiz__response');
-
-		quizResponseList.forEach((response) => {
-			response.classList.remove('display-block');
-		});
-	}
 
 	init() {
 		if (this.#quiz) {
@@ -64,19 +55,49 @@ export default class Quiz {
 				submitButton.addEventListener('click', scoreQuiz);
 			});
 		}
+	}
+}
 
-		if (this.#compCheck) {
-			this.#compCheck.forEach((question) => {
+export class CompCheck {
+
+	#compCheckList = document.querySelectorAll('.comprehension-checkpoint');
+
+	#compCheckInputsList = document.querySelectorAll('.comprehension-checkpoint input');
+	#compCheckResponseList = document.querySelectorAll('.quiz__response');
+
+	#handleResponse = (event) => {
+
+        const currentInput = event.currentTarget;
+
+		this.#compCheckInputsList.forEach((input) => {
+            if (input !== currentInput) {
+    			input.checked = false;
+            }
+		});
+
+		this.#compCheckResponseList.forEach((response) => {
+			response.classList.remove('display-block');
+		});
+
+        const answer = currentInput.closest('label').nextElementSibling;
+
+        if (event.currentTarget.checked) {
+            answer.classList.add('display-block');
+        }
+	};
+
+	init() {
+
+		if (this.#compCheckList) {
+
+			this.#compCheckList.forEach((question) => {
+
 				const questionInputList = question.querySelectorAll('input');
 
 				questionInputList.forEach((option) => {
-					option.addEventListener('change', (event) => {
-						const answerResponse = event.currentTarget.closest('label').nextElementSibling;
 
-						if (event.currentTarget.checked) {
-							this.#hideResponses();
-							answerResponse.classList.add('display-block');
-						}
+					option.addEventListener('change', (event) => {
+                        this.#handleResponse(event);
 					});
 				});
 			});

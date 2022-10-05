@@ -111,8 +111,6 @@ layout.init();
 
 import './custom_modules/navigation';
 
-import Quiz from './custom_modules/quiz'; 
-
 import Modal from './custom_modules/modal';
 
 const modal = new Modal();
@@ -123,8 +121,13 @@ import Accordion from './custom_modules/accordion';
 const accordion = new Accordion();
 accordion.init();
 
+import { Quiz, CompCheck } from './custom_modules/quiz'; 
+
 const quiz = new Quiz();
 quiz.init();
+
+const compCheck = new CompCheck();
+compCheck.init();
 
 import ReadingToggles from './custom_modules/reading_toggles';
 new ReadingToggles();
