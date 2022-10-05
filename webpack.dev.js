@@ -12,12 +12,13 @@ const devPages = {
     'ReadingToggles': 'reading-toggles',
     'Module': 'module',
     'Typography': 'typography',
-    'Quiz': 'quiz'
+    'Quiz': 'quiz',
+    'CompCheck': 'comp-check'
 }
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.HeaderFooter}.html`;
+const devPage = `${devPages.CompCheck}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

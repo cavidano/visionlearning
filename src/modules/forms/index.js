@@ -193,7 +193,7 @@ export default class Forms {
                 
                 formEntryInput.addEventListener('change', () => {
 
-                    console.log("My value is", formEntryInput.value);
+                    // console.log("My value is", formEntryInput.value);
 
                     if (formSubmitAttempted === true && isRequired === true) {
                         checkIfEmpty(formEntryInput);

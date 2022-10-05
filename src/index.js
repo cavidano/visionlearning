@@ -91,13 +91,13 @@ forms.init();
 // const modal = new Modal('.modal', '[data-modal-open]');
 // modal.init();
 
-const navigation = new Navigation('[data-toggle="dropdown"]');
+const navigation = new Navigation();
 navigation.init();
 
-const tables = new Tables('[class*="table--stack"]', '.table-scroll');
+const tables = new Tables();
 tables.init();
 
-const tabs = new Tabs('.tabs');
+const tabs = new Tabs();
 tabs.init();
 
 //////////////////////////////////////////////
@@ -106,7 +106,7 @@ tabs.init();
 
 import Layout from './custom_modules/layout'; 
 
-const layout = new Layout('.grid--discipline .backdrop');
+const layout = new Layout();
 layout.init();
 
 import './custom_modules/navigation';
@@ -115,12 +115,12 @@ import Quiz from './custom_modules/quiz';
 
 import Modal from './custom_modules/modal';
 
-const modal = new Modal('.modal', '[data-modal-open]');
+const modal = new Modal();
 modal.init();
 
 import Accordion from './custom_modules/accordion';
 
-const accordion = new Accordion('.accordion');
+const accordion = new Accordion();
 accordion.init();
 
 const quiz = new Quiz();

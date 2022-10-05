@@ -6,15 +6,14 @@ import "./_style.scss";
 
 export default class Quiz {
 
-    constructor() {
-        this.quiz = document.querySelectorAll('.quiz');
-    }
+    #quiz = document.querySelectorAll('.quiz');
+    #compCheck = document.querySelectorAll('.comprehension-checkpoint');
 
     init() {
     
-        if(this.quiz) {
+        if(this.#quiz) {
 
-            this.quiz.forEach((quiz) => {
+            this.#quiz.forEach((quiz) => {
 
                 const submitButton = quiz.querySelector('button[type="submit"]');
 
@@ -64,6 +63,20 @@ export default class Quiz {
                 
             });
 
+        }
+
+        if (this.#compCheck) {
+            this.#compCheck.forEach((question) => {
+                console.log(question);
+
+                const questionInputList = question.querySelectorAll('input');
+
+                questionInputList.forEach((option, index) => {
+                    option.addEventListener('change', () => {
+                        console.log('My value is', option.value);
+                    });
+                });
+            });
         }
           
     }

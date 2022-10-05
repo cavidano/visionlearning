@@ -6,9 +6,7 @@ import "./_style.scss";
 
 export default class Layout {
 
-    constructor(gridDiscBackdrop) {
-        this.discList = document.querySelectorAll(gridDiscBackdrop);
-    }
+    #discList = document.querySelectorAll('.grid--discipline .backdrop');
 
     init() {
 
@@ -34,7 +32,7 @@ export default class Layout {
 
         let time;
 
-        this.discList.forEach((disc) => {
+        this.#discList.forEach((disc) => {
 
             const handleMouseEnter = (event) => {
             
@@ -71,7 +69,6 @@ export default class Layout {
             } else {
                 disc.removeEventListener('mouseenter', handleMouseEnter);
                 disc.removeEventListener('mouseleave', handleMouseLeave);
-            
             }
 
 
