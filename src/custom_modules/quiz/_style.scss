@@ -105,8 +105,9 @@ ol.quiz__questions {
 
 .quiz__response {
     display: none;
-    margin-top: var(--form-field-padding-y);
+    
     padding-left: calc(1.25em + var(--form-field-padding-x));
+    margin-top: calc(var(--form-field-padding-y) * 2);
     
     font-style: italic;
     font-size: 90%;
