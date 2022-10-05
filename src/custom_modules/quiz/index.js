@@ -6,96 +6,80 @@ import "./_style.scss";
 
 export default class Quiz {
 
-    #quiz = document.querySelectorAll('.quiz');
-    #compCheck = document.querySelectorAll('.comprehension-checkpoint');
+	#quiz = document.querySelectorAll('.quiz');
+	#compCheck = document.querySelectorAll('.comprehension-checkpoint');
 
-    init() {
-    
-        if(this.#quiz) {
+	#hideResponses() {
+		const quizResponseList = document.querySelectorAll('.quiz__response');
 
-            this.#quiz.forEach((quiz) => {
+		quizResponseList.forEach((response) => {
+			response.classList.remove('display-block');
+		});
+	}
 
-                const submitButton = quiz.querySelector('button[type="submit"]');
+	init() {
+		if (this.#quiz) {
+			this.#quiz.forEach((quiz) => {
+				const submitButton = quiz.querySelector('button[type="submit"]');
 
-                const scoreQuiz = (event) => {
+				const scoreQuiz = (event) => {
+					event.preventDefault();
 
-                    event.preventDefault();
+					const quizQuestionsParent = quiz.querySelector('.quiz__questions');
+					const quizQuestionsList = quizQuestionsParent.querySelectorAll('li.form-entry');
+					const quizResponsesList = quiz.querySelectorAll('.quiz__response');
 
-                    const quizQuestionsParent = quiz.querySelector('.quiz__questions');
-                    const quizQuestionsList = quizQuestionsParent.querySelectorAll('li.form-entry');
-                    const quizResponsesList = quiz.querySelectorAll('.quiz__response');
+					const quizScore = quiz.querySelector('.quiz__score');
 
-                    const quizScore = quiz.querySelector('.quiz__score');
+					quizResponsesList.forEach((quizResponse) => {
+						quizResponse.classList.remove('display-block');
+					});
 
-                    quizResponsesList.forEach((quizResponse) => {
-                        quizResponse.classList.remove('display-block');
-                    });
+					quizQuestionsList.forEach((quizQuestion) => {
+						let quizQuestionOptions = quizQuestion.querySelector(
+							'.form-entry__option'
+						);
+						let answered = quizQuestionOptions.querySelector('input:checked');
 
-                    quizQuestionsList.forEach((quizQuestion) => {
+						if (answered) {
+							let answerResponse = answered.closest('label').nextElementSibling;
+							answerResponse.classList.add('display-block');
+						}
+					});
 
-                        let quizQuestionOptions = quizQuestion.querySelector('.form-entry__option');
-                        let answered = quizQuestionOptions.querySelector('input:checked');
+					// Scroll to quizScore
 
-                        if (answered) {
-                            let answerResponse = answered.closest('label').nextElementSibling;
-                            answerResponse.classList.add('display-block');
-                        }
+					if (quizScore) {
+						quizScore.style.display = 'block';
 
-                    });
+						let myScroll = quizScore.offsetTop - 16;
 
-                    // Scroll to quizScore
+						window.scrollTo({
+							top: myScroll,
+							behavior: 'smooth',
+						});
+					}
+				};
 
-                    if (quizScore) {
+				submitButton.addEventListener('click', scoreQuiz);
+			});
+		}
 
-                        quizScore.style.display = "block";
+		if (this.#compCheck) {
+			this.#compCheck.forEach((question) => {
+				const questionInputList = question.querySelectorAll('input');
 
-                        let myScroll = quizScore.offsetTop - 16;
+				questionInputList.forEach((option) => {
+					option.addEventListener('change', (event) => {
+						const answerResponse = event.currentTarget.closest('label').nextElementSibling;
 
-                        window.scrollTo({
-                            top: myScroll,
-                            behavior: "smooth"
-                        });
-                    }
-
-                };
-
-                submitButton.addEventListener('click', scoreQuiz);
-                
-            });
-
-        }
-
-        if (this.#compCheck) {
-
-            this.#compCheck.forEach((question) => {
-
-                const questionInputList = question.querySelectorAll('input');
-                const questionResponseList = question.querySelectorAll('.quiz__response');
-
-                const hideResponses = () => {
-
-                    questionResponseList.forEach((response) => {
-                        response.classList.remove('display-block');
-                    });
-                    
-                }
-
-                questionInputList.forEach((option) => {
-
-                    option.addEventListener('change', (event) => {
-                        
-                        const answerResponse = event.currentTarget.closest('label').nextElementSibling;
-
-                        if (event.currentTarget.checked) {
-                            hideResponses();
-                            answerResponse.classList.add('display-block');
-                        }
-                    });
-
-                });
-
-            });
-        }
-          
-    }
+						if (event.currentTarget.checked) {
+							this.#hideResponses();
+							answerResponse.classList.add('display-block');
+						}
+					});
+				});
+			});
+		}
+	}
 }
