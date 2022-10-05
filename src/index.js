@@ -132,6 +132,8 @@ compCheck.init();
 import ReadingToggles from './custom_modules/reading_toggles';
 new ReadingToggles();
 
+import './custom_modules/audio-player';
+
 import './custom_modules/css_variables';
 
 import './custom_modules/lists';
