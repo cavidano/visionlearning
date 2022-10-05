@@ -178,65 +178,14 @@ title: "Module Reading"
                         In 1914, Beno Gutenberg, a German seismologist, used these shadow zones to calculate the size of another layer inside of the Earth, called its core. He defined a sharp core-mantle boundary at a depth of 2,900 km, where P-waves were refracted and slowed and S-waves were stopped.
                     </p>
 
-                    <div class="comprehension-checkpoint margin-y-4">
 
-                        <h6 class="comprehension-checkpoint__header">
-                            <span>
-                                <span class="icon icon-question-mark"></span>
-                            </span>
-                            Comprehension Checkpoint
-                        </h6>
-
-                        <form class="quiz__questions" name="cc7424">
-
-                            <div class="form-entry">
-
-                                <div class="form-entry__field">
-
-                                    <span class="form-entry__field__label">
-                                        Scientists figured out that there is a liquid layer deep within Earth by observing
-                                    </span>
-
-                                    <div class="form-entry__option">
-
-                                        <div class="form-entry__option__radio">
-                                            <label>
-                                                <input
-                                                    type="radio"
-                                                    value="earthquakes"
-                                                    name="quiz-question-example-01">
-                                                    <span class="option__label">
-                                                        <span class="screen-reader-only">a.</span> when there is an earthquake, S-waves - which cannot travel through liquid - die out at 105 degrees.
-                                                    </span>
-                                            </label>
-                                            <span class="quiz__response">
-                                                Correct!
-                                            </span>
-                                        </div>
-
-                                        <div class="form-entry__option__radio" data-answer="correct">
-                                            <label>
-                                                <input
-                                                    type="radio"
-                                                    name="quiz-question-example-01">
-                                                    <span class="option__label">
-                                                        <span class="screen-reader-only">b.</span> that ponds of water have eaves after an earthquake.
-                                                    </span>
-                                            </label>
-                                            <span class="quiz__response">
-                                                Incorrect.
-                                            </span>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </form>
-
-                    </div>
+                    {% include comprehension-checkpoint.html
+                    
+                        cp_label='Scientists figured out that there is a liquid layer deep within Earth by observing'
+                        option_A = 'when there is an earthquake, S-waves - which cannot travel through liquid - die out at 105 degrees.'
+                        option_B = 'that ponds of water have eaves after an earthquake.'
+                    
+                    %}
                     
                 </div>
                     
@@ -276,65 +225,14 @@ title: "Module Reading"
                         These compositional layers are shown in Figure 3.
                     </p>
 
-                    <div class="comprehension-checkpoint margin-y-4">
 
-                        <h6 class="comprehension-checkpoint__header">
-                            <span>
-                                <span class="icon icon-question-mark"></span>
-                            </span>
-                            Comprehension Checkpoint
-                        </h6>
-
-                        <form class="quiz__questions" name="cc7424">
-
-                            <div class="form-entry">
-
-                                <div class="form-entry__field">
-
-                                    <span class="form-entry__field__label">
-                                        The crust, mantle, and core are defined as compositional layers of Earth because
-                                    </span>
-
-                                    <div class="form-entry__option">
-
-                                        <div class="form-entry__option__radio">
-                                            <label>
-                                                <input
-                                                    type="radio"
-                                                    value="earthquakes"
-                                                    name="quiz-question-example-01">
-                                                    <span class="option__label">
-                                                        <span class="screen-reader-only">a.</span> they are made of different things.
-                                                    </span>
-                                            </label>
-                                            <span class="quiz__response">
-                                                Correct!
-                                            </span>
-                                        </div>
-
-                                        <div class="form-entry__option__radio" data-answer="correct">
-                                            <label>
-                                                <input
-                                                    type="radio"
-                                                    name="quiz-question-example-01">
-                                                    <span class="option__label">
-                                                        <span class="screen-reader-only">b.</span> they behave differently.
-                                                    </span>
-                                            </label>
-                                            <span class="quiz__response">
-                                                Incorrect.
-                                            </span>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </form>
-
-                    </div>
+                    {% include comprehension-checkpoint.html
+                    
+                        cp_label='The crust, mantle, and core are defined as compositional layers of Earth because'
+                        option_A = 'they are made of different things.'
+                        option_B = 'they behave differently.'
+                    
+                    %}
 
                     <h3>
                         Mechanical layers
