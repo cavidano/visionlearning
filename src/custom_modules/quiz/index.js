@@ -66,14 +66,37 @@ export default class Quiz {
         }
 
         if (this.#compCheck) {
+
             this.#compCheck.forEach((question) => {
                 console.log(question);
 
                 const questionInputList = question.querySelectorAll('input');
 
+                const questionResponseList = question.querySelectorAll('.quiz__response');
+
+                function hideResponses(){
+
+                    questionResponseList.forEach((response) => {
+                    response.classList.remove('display-block')
+                    });
+
+                
+                }
+
                 questionInputList.forEach((option, index) => {
-                    option.addEventListener('change', () => {
+                    option.addEventListener('change', (event) => {
+
                         console.log('My value is', option.value);
+                        
+                        const answerResponse = event.currentTarget.closest('label').nextElementSibling;
+
+                        if (event.currentTarget.checked) {
+                            // alert('checked');
+                            hideResponses()
+                            answerResponse.classList.add('display-block');
+                        } else {
+                            // alert('not checked');
+                        }
                     });
                 });
             });
