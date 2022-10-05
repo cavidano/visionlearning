@@ -76,7 +76,7 @@ import './modules/z-index/index';
 // const accordion = new Accordion('.accordion');
 // accordion.init();
 
-const alerts = new Alerts('.alert--dismissable');
+const alerts = new Alerts();
 alerts.init();
 
 const buttons = new Buttons('.button--icon-only');

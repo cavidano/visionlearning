@@ -239,9 +239,9 @@ button {
 //////////////////////////////////////////////
 
 .button-group {
-    --gap-size: var(--spacer-2);
+    --gap-size: var(--spacer-1);
     
-    --button-padding-y: unset;
+    --button-padding-y: 0;
     
     display: flex;
 
