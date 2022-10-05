@@ -68,37 +68,32 @@ export default class Quiz {
         if (this.#compCheck) {
 
             this.#compCheck.forEach((question) => {
-                console.log(question);
 
                 const questionInputList = question.querySelectorAll('input');
-
                 const questionResponseList = question.querySelectorAll('.quiz__response');
 
-                function hideResponses(){
+                const hideResponses = () => {
 
                     questionResponseList.forEach((response) => {
-                    response.classList.remove('display-block')
+                        response.classList.remove('display-block');
                     });
-
-                
+                    
                 }
 
-                questionInputList.forEach((option, index) => {
-                    option.addEventListener('change', (event) => {
+                questionInputList.forEach((option) => {
 
-                        console.log('My value is', option.value);
+                    option.addEventListener('change', (event) => {
                         
                         const answerResponse = event.currentTarget.closest('label').nextElementSibling;
 
                         if (event.currentTarget.checked) {
-                            // alert('checked');
-                            hideResponses()
+                            hideResponses();
                             answerResponse.classList.add('display-block');
-                        } else {
-                            // alert('not checked');
                         }
                     });
+
                 });
+
             });
         }
           
