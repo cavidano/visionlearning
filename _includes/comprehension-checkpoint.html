@@ -1,0 +1,87 @@
+{% if include.cp_label %}
+    {% assign label_text = include.cp_label %}
+{% else %}
+    {% assign label_text = 'Comprehension checkpoint label text' %}
+{% endif %}
+
+{% if include.option_A %}
+    {% assign option_a_text = include.option_A %}
+{% else %}
+    {% assign option_a_text = 'Option A text' %}
+{% endif %}
+
+{% if include.option_B %}
+    {% assign option_b_text = include.option_B %}
+{% else %}
+    {% assign option_b_text = 'Option B text' %}
+{% endif %}
+
+
+
+
+
+
+<div class="comprehension-checkpoint">
+
+    <h6 class="comprehension-checkpoint__header">
+        <span>
+            <span class="icon icon-question-mark"></span>
+        </span>
+        Comprehension Checkpoint
+    </h6>
+
+    <form class="quiz__questions">
+
+        <div class="form-entry">
+
+            <div class="form-entry__field">
+
+                <span class="form-entry__field__label">
+                    {{ label_text }}
+                </span>
+
+                <div class="form-entry__option">
+
+                    <div class="form-entry__option__radio" data-answer="correct">
+                        <label>
+                            <input
+                                type="radio"
+                                value="earthquakes"
+                                name="quiz-question-example-01">
+                                <span class="option__label">
+                                    <span class="screen-reader-only">a.</span> {{ option_a_text }}
+                                </span>
+                        </label>
+                        <span class="quiz__response">
+                            <strong>
+                                You are correct!
+                            </strong>
+                        </span>
+                    </div>
+
+                    <div class="form-entry__option__radio" data-answer="incorrect">
+                        <label>
+                            <input
+                                type="radio"
+                                value="deep mine shafts"
+                                name="quiz-question-example-01">
+                                <span class="option__label">
+                                    <span class="screen-reader-only">b.</span> {{ option_b_text }}
+                                </span>
+                        </label>
+                        <span class="quiz__response">
+                            <strong>
+                                Sorry, that is incorrect!
+                            </strong>  
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
