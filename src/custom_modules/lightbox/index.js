@@ -1,26 +1,37 @@
 import './_style.scss';
 
+import { getFilteredElements } from '../../utilities/focus';
+
 //////////////////////////////////////////////
 // Lightbox
 //////////////////////////////////////////////
 
 export default class Lightbox {
 
-  #lightboxImages = document.querySelectorAll('img');
-
   #lightbox = document.createElement('div');
+  #lightboxImages = document.querySelectorAll('img[data-lightbox]');
 
   #lightboxHTML = (`
     <div class="lightbox__container">
-    <button class="lightbox__close button button--icon-only">
-        <span class="icon icon-close" aria-label="Close" aria-hidden="true">
-    </button>
-        <img class="lightbox__image" src="https://source.unsplash.com/1600x900" />
-        <p class="lightbox__caption">A caption for the image.</p>
+      <button class="lightbox__close button button--icon-only" data-lightbox-close>
+          <span class="icon icon-close" aria-label="Close" aria-hidden="true">
+      </button>
+      <img class="lightbox__image" src="https://source.unsplash.com/1600x900" />
+      <p class="lightbox__caption">A caption for the image.</p>
     </div>
   `);
-  
+
   init() {
+
+    const handleLightboxClose = (e) => {
+
+      if (e.target !== e.currentTarget) return;
+
+      this.#lightbox.setAttribute('aria-hidden', true);
+
+      document.querySelector('body').classList.remove('modal-open');
+
+    };
 
     this.#lightbox.classList.add('lightbox');
 
@@ -30,6 +41,7 @@ export default class Lightbox {
 
     document.body.appendChild(this.#lightbox);
 
+    const lightboxClose = document.querySelector('[data-lightbox-close]');
     const lightboxIMG = document.querySelector('.lightbox__image');
     const lightboxCaption = document.querySelector('.lightbox__caption');
 
@@ -41,7 +53,7 @@ export default class Lightbox {
 
         this.#lightbox.setAttribute('aria-hidden', false);
 
-        lightboxIMG.classList.add('box-shadow-3', 'border-radius');
+        lightboxIMG.classList.add('box-shadow-3');
 
         lightboxIMG.src = image.src;
         lightboxIMG.alt = image.alt;
@@ -51,16 +63,8 @@ export default class Lightbox {
     
     });
 
-    this.#lightbox.addEventListener('click', (e)  => {
-
-      if(e.target !== e.currentTarget) return;
-
-      this.#lightbox.setAttribute('aria-hidden', true);
-      
-      document.querySelector('body').classList.remove('modal-open');
-        
-    }); 
-
+    lightboxClose.addEventListener('click', handleLightboxClose); 
+    this.#lightbox.addEventListener('click', handleLightboxClose);
 
   }
 
