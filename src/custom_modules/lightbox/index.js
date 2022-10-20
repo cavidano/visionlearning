@@ -6,35 +6,44 @@ import './_style.scss';
 
 export default class Lightbox {
 
-  #lightbox = document.createElement('div');
   #lightboxImages = document.querySelectorAll('img');
 
+  #lightbox = document.createElement('div');
+
+  #lightboxHTML = (`
+    <div class="lightbox__container">
+        <img class="lightbox__image" src="https://source.unsplash.com/1600x900" />
+        <p class="lightbox__caption">A caption for the image.</p>
+    </div>
+  `);
+  
   init() {
 
     this.#lightbox.classList.add('lightbox');
+
+    this.#lightbox.innerHTML = this.#lightboxHTML;
+
     this.#lightbox.setAttribute('aria-hidden', true);
 
     document.body.appendChild(this.#lightbox);
 
+    const lightboxIMG = document.querySelector('.lightbox__image');
+    const lightboxCaption = document.querySelector('.lightbox__caption');
+
     this.#lightboxImages.forEach((image) => {
 
-      image.addEventListener('click', (e)  => {
+      image.addEventListener('click', ()  => {
 
         document.querySelector('body').classList.add('modal-open');
 
         this.#lightbox.setAttribute('aria-hidden', false);
 
-        const img = document.createElement('img');
+        lightboxIMG.classList.add('box-shadow-3', 'border-radius');
 
-        img.src = image.src;
-        img.classList.add('box-shadow-3', 'border-radius');
+        lightboxIMG.src = image.src;
+        lightboxIMG.alt = image.alt;
+        lightboxCaption.innerHTML = image.alt;
 
-        while(this.#lightbox.firstChild) {
-          this.#lightbox.removeChild(this.#lightbox.firstChild);
-        }
-
-        this.#lightbox.appendChild(img);
-      
       }); 
     
     });

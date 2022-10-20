@@ -80,7 +80,8 @@ In this file:
   img {
     max-width: 80vw;
     max-height: 80vh;
-    margin-inline: auto;
+
+    cursor: pointer;
   }
 
   display: none;
@@ -89,4 +90,15 @@ In this file:
     display: flex;
   }
 
+}
+
+.lightbox__container {
+    margin-inline: auto;
+}
+
+.lightbox__caption {
+    color: white;
+    font-size: var(--font-size-md);
+    text-align: center;
+    margin-block-start: 0.5em;
 }
