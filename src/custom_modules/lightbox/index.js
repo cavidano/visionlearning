@@ -12,6 +12,9 @@ export default class Lightbox {
 
   #lightboxHTML = (`
     <div class="lightbox__container">
+    <button class="lightbox__close button button--icon-only">
+        <span class="icon icon-close" aria-label="Close" aria-hidden="true">
+    </button>
         <img class="lightbox__image" src="https://source.unsplash.com/1600x900" />
         <p class="lightbox__caption">A caption for the image.</p>
     </div>

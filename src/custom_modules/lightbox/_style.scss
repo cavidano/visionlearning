@@ -92,6 +92,13 @@ In this file:
 
 }
 
+.lightbox__close {
+  position: absolute !important;
+  inset-block-start: var(--spacer-2);
+  inset-inline-end: var(--spacer-2);
+  color: white;
+}
+
 .lightbox__container {
     margin-inline: auto;
 }
