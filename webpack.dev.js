@@ -9,6 +9,7 @@ const devPages = {
     'Accordion': 'accordion',
     'DisciplineGrid': 'discipline-grid',
     'HeaderFooter': 'header-footer',
+    'Lightbox': 'lightbox',
     'ReadingToggles': 'reading-toggles',
     'Module': 'module',
     'Typography': 'typography',
@@ -18,7 +19,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.CompCheck}.html`;
+const devPage = `${devPages.Lightbox}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

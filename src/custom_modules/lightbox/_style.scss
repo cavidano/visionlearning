@@ -1,0 +1,92 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Accordion Block
+// D. Accordion Elements
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "../../modules/accents/style" as accents;
+@use "../../modules/icons/style" as icons;
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%lightbox-vars {
+  --lightbox-padding-x: var(--spacer-2);
+  --lightbox-padding-y: var(--spacer-2);
+
+  --lightbox-overlay-color: black;
+  --lightbox-overlay-opacity: 0.875;
+  
+  --lightbox-z-index: 100000;
+}
+
+//////////////////////////////////////////////
+// C. Lightbox Block
+//////////////////////////////////////////////
+
+.lightbox {
+    @extend %lightbox-vars;
+}
+
+
+.lightbox,
+.lightbox::before {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+.lightbox {
+  @extend %lightbox-vars;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  z-index: var(--lightbox-z-index);
+  
+  padding: var(--lightbox-padding);
+
+  &[class*="theme-"]{
+    background-color: transparent !important;
+  }
+  
+  &::before {
+      content: "";
+
+      background-color: var(--lightbox-overlay-color);
+      
+      opacity: var(--lightbox-overlay-opacity);
+      z-index: -1;
+      pointer-events: none;
+  }
+
+  img {
+    max-width: 80vw;
+    max-height: 80vh;
+    margin-inline: auto;
+  }
+
+  display: none;
+
+  &[aria-hidden="false"] {
+    display: flex;
+  }
+
+}
