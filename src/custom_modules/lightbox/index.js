@@ -30,8 +30,17 @@ export default class Lightbox {
       this.#lightbox.setAttribute('aria-hidden', true);
 
       document.querySelector('body').classList.remove('modal-open');
+      window.addEventListener('keyup', handleLightboxUpdate);
 
     };
+
+    const updateLighbox = (current) => {
+
+        lightboxIMG.src = lightboxes[current].imgSRC;
+        lightboxIMG.alt = lightboxes[current].imgALT;
+        lightboxCaption.innerHTML = lightboxes[current].imgALT;
+    
+    } 
 
     this.#lightbox.classList.add('lightbox');
 
@@ -45,9 +54,20 @@ export default class Lightbox {
     const lightboxIMG = document.querySelector('.lightbox__image');
     const lightboxCaption = document.querySelector('.lightbox__caption');
 
-    this.#lightboxImages.forEach((image) => {
+    let lightboxes = [];
+
+    let currentLB;
+
+    this.#lightboxImages.forEach((image, index) => {
+
+      lightboxes.push({
+        imgSRC : image.src,
+        imgALT : image.alt,
+      });
 
       image.addEventListener('click', ()  => {
+
+        currentLB = index;
 
         document.querySelector('body').classList.add('modal-open');
 
@@ -55,16 +75,53 @@ export default class Lightbox {
 
         lightboxIMG.classList.add('box-shadow-3');
 
-        lightboxIMG.src = image.src;
-        lightboxIMG.alt = image.alt;
-        lightboxCaption.innerHTML = image.alt;
+        updateLighbox(index);
 
-      }); 
+        window.addEventListener('keyup', handleLightboxUpdate); 
     
+      });
+
+      const handleLightboxUpdate = (e) => {
+
+				console.log(`currentLB === ${currentLB}`);
+
+				const directionalFocus = (dir) => {
+					e.preventDefault();
+
+					currentLB = parseInt(currentLB) + dir;
+
+					if (dir === -1 && currentLB < 0) {
+						currentLB = lightboxes.length - 1;
+						console.log(`left arrow <<<< ${currentLB}`);
+					} else if (dir === 1 && currentLB >= lightboxes.length) {
+						currentLB = 0;
+						console.log(`left arrow >>>>  ${currentLB}`);
+					} else {
+						console.log(`My target is ????? ${currentLB}`);
+					}
+          
+          updateLighbox(currentLB);
+
+				};
+
+				switch (e.code) {
+					case 'ArrowLeft':
+						directionalFocus(-1);
+						break;
+					case 'ArrowRight':
+						directionalFocus(1);
+						break;
+					default:
+					// do nothing
+				}
+			};
+
     });
 
     lightboxClose.addEventListener('click', handleLightboxClose); 
     this.#lightbox.addEventListener('click', handleLightboxClose);
+    
+    console.log(`Here are our lightboxes ${lightboxes[0].imgSRC}`);
 
   }
 
