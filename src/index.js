@@ -1,127 +1,112 @@
+/*
+
+In this file:
+
+// A. SCSS
+// B. JS
+
+*/
 
 //////////////////////////////////////////////
-// A. Module Imports
+// A. SCSS
 //////////////////////////////////////////////
 
-import './modules/accents';
-
-import './modules/accessibility';
-
-// import Accordion from './modules/accordion';
-
-import Alerts from './modules/alerts';
-
-import './modules/article';
-
-import './modules/aspect-ratios';
-
-import './modules/backdrops';
-
-// import './modules/borders';
-
-import './modules/breakpoints';
-
-import Buttons from './modules/buttons';
-
-import './modules/cards';
-
-import Collapse from './modules/collapse';
-
-// import './modules/color';
-
-import './modules/containers';
-
-import './modules/display';
-
-import './modules/document';
-
-import './modules/flex';
-
-import Forms from './modules/forms';
-
-import './modules/grid';
-
-import './modules/icons';
-
-import './modules/links';
-
-// import Modal from './modules/modal';
-
-import Navigation from './modules/navigation';
-
-import './modules/opacity';
-
-import './modules/overflow';
-
-import './modules/position';
-
-import './modules/shadows';
-
-import './modules/sizing';
-
-import './modules/spacing';
-
-import Tabs from './modules/tabs';
-
-import Tables from './modules/tables';
-
-import './modules/typography';
-
-import './modules/z-index/index';
+import './scss/accent.scss';
+import './scss/accessibility.scss';
+// import './scss/accordion.scss';
+import './scss/alert.scss';
+import './scss/article.scss';
+import './scss/aspect-ratio.scss';
+import './scss/backdrop.scss';
+import './scss/border.scss';
+import './scss/breakpoint.scss';
+import './scss/button.scss';
+import './scss/card.scss';
+import './scss/collapse.scss';
+import './scss/color.scss';
+import './scss/container.scss';
+import './scss/display.scss';
+import './scss/document.scss';
+import './scss/flex.scss';
+import './scss/form.scss';
+import './scss/grid.scss';
+import './scss/icon.scss';
+import './scss/link.scss';
+// import './scss/modal.scss';
+import './scss/navigation.scss';
+import './scss/opacity.scss';
+import './scss/overflow.scss';
+import './scss/position.scss';
+import './scss/shadow.scss';
+import './scss/sizing.scss';
+import './scss/spacing.scss';
+import './scss/tab.scss';
+import './scss/table.scss';
+import './scss/typography.scss';
+import './scss/z-index.scss';
 
 //////////////////////////////////////////////
-// B. Initialize JS Modules
+// B. JS
 //////////////////////////////////////////////
 
-// const accordion = new Accordion('.accordion');
+// import Accordion from './js/accordion';
+// const accordion = new Accordion();
 // accordion.init();
 
-const alerts = new Alerts();
-alerts.init();
+import Alert from './js/alert';
+const alert = new Alert();
+alert.init();
 
-const buttons = new Buttons('.button--icon-only');
-buttons.init();
+import Button from './js/button';
+const button = new Button();
+button.init();
 
-const collapse = new Collapse('[data-target-toggle]');
+import Collapse from './js/collapse'
+const collapse = new Collapse();
 collapse.init();
 
-const forms = new Forms('form[novalidate]', '.form-entry', '.file-upload');
-forms.init();
+import Form from './js/form';
+const form = new Form();
+form.init();
 
-// const modal = new Modal('.modal', '[data-modal-open]');
+// import Modal from './js/modal';
+// const modal = new Modal();
 // modal.init();
 
+import Navigation from './js/navigation';
 const navigation = new Navigation();
 navigation.init();
 
-const tables = new Tables();
-tables.init();
+import Table from './js/table';
+const table = new Table();
+table.init();
 
-const tabs = new Tabs();
-tabs.init();
+import Tab from './js/tab';
+const tab = new Tab();
+tab.init();
 
 //////////////////////////////////////////////
 // Custom Modules
 //////////////////////////////////////////////
 
-import Layout from './custom_modules/layout'; 
+import Layout from './customModules/layout'; 
 
 const layout = new Layout();
 layout.init();
 
-import './custom_modules/navigation';
+import './customModules/navigation';
 
-import Modal from './custom_modules/modal';
+import Modal from './customModules/modal';
 
 const modal = new Modal();
 modal.init();
 
-import Accordion from './custom_modules/accordion';
+import Accordion from './customModules/accordion';
 
 const accordion = new Accordion();
 accordion.init();
 
-import { Quiz, CompCheck } from './custom_modules/quiz'; 
+import { Quiz, CompCheck } from './customModules/quiz'; 
 
 const quiz = new Quiz();
 quiz.init();
@@ -129,22 +114,17 @@ quiz.init();
 const compCheck = new CompCheck();
 compCheck.init();
 
-import ReadingToggles from './custom_modules/reading_toggles';
+import ReadingToggles from './customModules/reading_toggles';
 new ReadingToggles();
 
-import Lightbox from './custom_modules/lightbox'
+import Lightbox from './customModules/lightbox'
 const lightbox = new Lightbox();
-
 lightbox.init();
 
-import './custom_modules/audio-player';
+import './customModules/css_variables';
 
-import './custom_modules/css_variables';
+import './customModules/lists';
 
-import './custom_modules/lists';
+import './customModules/color';
 
-import './custom_modules/borders';
-
-import './custom_modules/color';
-
-import './custom_modules/section_cards';
+import './customModules/section_cards';
