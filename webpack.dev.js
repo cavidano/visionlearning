@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devPages = {
     'Accordion': 'accordion',
+    'AudioPlayer': 'audio-player',
     'DisciplineGrid': 'discipline-grid',
     'HeaderFooter': 'header-footer',
     'Lightbox': 'lightbox',
@@ -19,7 +20,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Lightbox}.html`;
+const devPage = `${devPages.AudioPlayer}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

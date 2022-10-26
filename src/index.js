@@ -137,6 +137,8 @@ const lightbox = new Lightbox();
 
 lightbox.init();
 
+import './custom_modules/audio-player';
+
 import './custom_modules/css_variables';
 
 import './custom_modules/lists';

@@ -42,7 +42,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "fantasticon": "^1.2.3"
+    "fantasticon": "^1.2.3",
+    "lottie-web": "^5.9.6"
   },
   "main": "webpack.config.js",
   "browserslist": [
