@@ -80,14 +80,14 @@ In this file:
 
 $theme-colors: (
         
-    "primary": (
-        swatch: var(--primary),
-        text: var(--primary-text),
-        border: var(--primary-border),
-        link: var(--primary-link),
-        confirm: var(--primary-confirm),
-        warn: var(--primary-warn)
-    ), 
+    // "primary": (
+    //     swatch: var(--primary),
+    //     text: var(--primary-text),
+    //     border: var(--primary-border),
+    //     link: var(--primary-link),
+    //     confirm: var(--primary-confirm),
+    //     warn: var(--primary-warn)
+    // ), 
     
     "secondary": (
         swatch: var(--secondary),

@@ -3,7 +3,7 @@ const common = require('./webpack.common.js');
 
 const path = require('path');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = merge(common, {
@@ -11,7 +11,8 @@ module.exports = merge(common, {
     target: 'browserslist',
     output: {
         filename: 'js/[name].js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist'),
+        iife: true,
     },
     module: {
         rules: [
@@ -19,16 +20,16 @@ module.exports = merge(common, {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader',
                     options: {
                         presets: [
                             [
-                                "@babel/preset-env"
+                                '@babel/preset-env'
                             ]
                         ],
                         plugins: [
-                            "@babel/plugin-transform-shorthand-properties",
-                            "@babel/plugin-proposal-object-rest-spread"
+                            '@babel/plugin-transform-shorthand-properties',
+                            '@babel/plugin-proposal-object-rest-spread'
                         ]
                     }
                 }
@@ -36,31 +37,30 @@ module.exports = merge(common, {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    
                     {
                         loader: MiniCssExtractPlugin.loader
                     },
-                    "css-loader",
+                    'css-loader',
                     {
-                        loader: "postcss-loader",
+                        loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
                                 plugins: [
                                     [
-                                        "autoprefixer"
+                                        'autoprefixer'
                                     ],
                                 ],
                             },
                         },
                     },
-                    "sass-loader",
+                    'sass-loader',
                 ],
-            }
+            },
         ],
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "css/[name].css",
+            filename: 'css/[name].css',
         }),
         new CssMinimizerPlugin()
     ]
