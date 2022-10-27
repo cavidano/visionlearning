@@ -334,7 +334,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// G. Module
+// G. Article (Module)
 //////////////////////////////////////////////
 
 .module {
@@ -376,12 +376,10 @@ In this file:
     }
 
     figure {
-        // display: table;
 
         margin: var(--spacer-4) auto;
         
         figcaption {
-            // display: table-caption;
             caption-side: bottom;
         }
 
@@ -399,10 +397,7 @@ In this file:
     display: none;
 }
 
-.module__sidebar {    
-    // outline: 6px solid red;
-    // background: yellow;
-
+.module__sidebar {
     grid-area: sidebar;
 }
 
@@ -519,18 +514,22 @@ In this file:
 // L. About Pages
 //////////////////////////////////////////////
 
+
+// .module {
+//     display: grid;
+    
+//     grid-template-areas:
+//         "head"
+//         "audio"
+//         "did-you-know"
+//         "sidebar"
+//         "main";
+// }
+
 .grid--about {
 
-  background-color: aqua;
-
-  // gap: var(--spacer-3);
-
-  .summary {
-    grid-area: summary;
-  }
-
-  .help {
-    grid-area: help;
+  .header {
+    grid-area: header;
   }
 
   .main {
@@ -542,7 +541,7 @@ In this file:
   }
 
   grid-template-areas: 
-    "summary"
+    "header"
     "aside"
     "main"
     "help";
@@ -550,7 +549,7 @@ In this file:
   @include breakpoint.breakpoint-up(lg) {
     grid-template-columns:  1fr 22em;
     grid-template-areas: 
-      "summary help"
+      "header ."
       "main aside";
   }
 
