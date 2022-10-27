@@ -21,7 +21,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "../../scss/breakpoint" as breakpoint;
+@use "../../scss/breakpoint";
 
 //////////////////////////////////////////////
 // C. Grid Overview (Homepage)
@@ -500,21 +500,16 @@ In this file:
 @include breakpoint.breakpoint-up(lg) {
   
   .wrap-viewport-height {
-
     display: flex;
     flex-direction: column;
 
-    min-height: 1000px;
+    min-height: 60rem;
     height: 100vh;
 
     main {
       overflow: hidden;
       flex-grow: 1;
-
-
-      // background-color: indianred;
     }
-
 
   }
 
@@ -525,6 +520,8 @@ In this file:
 //////////////////////////////////////////////
 
 .grid--about {
+
+  background-color: aqua;
 
   // gap: var(--spacer-3);
 
