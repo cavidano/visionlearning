@@ -13,8 +13,8 @@ In this file:
 // A. Modules
 //////////////////////////////////////////////
 
-@use "../../modules/accents/style" as accents;
-@use "../../modules/icons/style" as icons;
+@use '../../scss/accent';
+@use '../../scss/icon';
 
 //////////////////////////////////////////////
 // B. Variables

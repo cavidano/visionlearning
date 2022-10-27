@@ -1,6 +1,6 @@
 import './_style.scss';
 
-import { getFilteredElements } from '../../utilities/focus';
+import { getFilteredElements } from '../../js/utilities';
 
 //////////////////////////////////////////////
 // Lightbox

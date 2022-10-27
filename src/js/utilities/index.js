@@ -22,12 +22,10 @@ export const getFocusableElements = (element = document) => {
       '[tabindex]:not([tabindex="-1"])'
     ];
 
-    return [...element.querySelectorAll(
-      els
-      // 'a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])' 
-    )].filter(el => !el.hasAttribute('disabled') && !el.getAttribute("aria-hidden"));
-};
-
+    return [...element.querySelectorAll(els)].filter(
+      (el) => !el.hasAttribute('disabled') && !el.getAttribute('aria-hidden')
+    );
+}
 
 //////////////////////////////////////////////
 // B. Get Filtered Elements

@@ -1,6 +1,6 @@
 import './_style.scss';
 
-import { getFocusableElements, getOffsetTop } from '../../utilities/focus'
+import { getFocusableElements, getOffsetTop } from '../../js/utilities'
 
 //////////////////////////////////////////////
 // Modal

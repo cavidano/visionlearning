@@ -11,9 +11,8 @@ In this file:
 // A. Modules
 //////////////////////////////////////////////
 
-@use "sass:map";
-@use "../../modules/accents/style" as accents;
-@use "../../modules/icons/style" as icons;
+@use "../../scss/accent" as accent;
+@use "../../scss/icon" as icon;
 
 //////////////////////////////////////////////
 // B. Quiz Block

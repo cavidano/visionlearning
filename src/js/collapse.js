@@ -1,4 +1,4 @@
-import { getFocusableElements } from './utilities/focus';
+import { getFocusableElements } from './utilities';
 
 //////////////////////////////////////////////
 // Collapse

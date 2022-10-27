@@ -21,7 +21,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use "sass:map";
-@use "../../modules/breakpoints/style" as breakpoints;
+@use "../../scss/breakpoint" as breakpoint;
 
 //////////////////////////////////////////////
 // C. Grid Overview (Homepage)
@@ -31,7 +31,7 @@ In this file:
     --columns: 2;
     --grid-gap: var(--spacer-4);
 
-    @include breakpoints.breakpoints-up(lg) {
+    @include breakpoint.breakpoint-up(lg) {
       
       [class*="--discipline"] {
         grid-area: disciplines;
@@ -104,7 +104,7 @@ In this file:
         }
     }
 
-    @include breakpoints.breakpoints-up(md) {
+    @include breakpoint.breakpoint-up(md) {
       --grid-columns: 2;
 
       .backdrop {
@@ -114,7 +114,7 @@ In this file:
 
     }
 
-    @include breakpoints.breakpoints-up(lg) {
+    @include breakpoint.breakpoint-up(lg) {
       --grid-columns: 4;
     }
 
@@ -228,7 +228,7 @@ In this file:
     grid-area: aside;
 }
 
-@include breakpoints.breakpoints-up(lg) {
+@include breakpoint.breakpoint-up(lg) {
     .landing {
         grid-template-columns: 1fr 16em;
 
@@ -282,7 +282,7 @@ In this file:
 
 }
 
-@include breakpoints.breakpoints-up(lg) {
+@include breakpoint.breakpoint-up(lg) {
     .materials {
       grid-template-columns: 16em 1fr;
     
@@ -314,7 +314,7 @@ In this file:
       "secondary"
       "tertiary";
 
-  @include breakpoints.breakpoints-up(lg) {
+  @include breakpoint.breakpoint-up(lg) {
 
     [class*="backdrop"]{
       --backdrop-fixed-height: unset;
@@ -406,7 +406,7 @@ In this file:
     grid-area: sidebar;
 }
 
-@include breakpoints.breakpoints-up(lg) {
+@include breakpoint.breakpoint-up(lg) {
 
     .module {
         grid-template-columns: 1fr 22em;
@@ -453,7 +453,7 @@ In this file:
       "ctas ctas"
       "connect connect";
 
-    @include breakpoints.breakpoints-up(lg) {
+    @include breakpoint.breakpoint-up(lg) {
 
       grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
 
@@ -486,7 +486,7 @@ In this file:
     "acc acc"
     "terms ngss";
 
-    @include breakpoints.breakpoints-up(lg) {
+    @include breakpoint.breakpoint-up(lg) {
       grid-template-areas:
         "terms ngss"
         "acc acc";
@@ -497,7 +497,7 @@ In this file:
 // I. Wrap Viewport Height
 //////////////////////////////////////////////
 
-@include breakpoints.breakpoints-up(lg) {
+@include breakpoint.breakpoint-up(lg) {
   
   .wrap-viewport-height {
 
@@ -550,7 +550,7 @@ In this file:
     "main"
     "help";
 
-  @include breakpoints.breakpoints-up(lg) {
+  @include breakpoint.breakpoint-up(lg) {
     grid-template-columns:  1fr 22em;
     grid-template-areas: 
       "summary help"

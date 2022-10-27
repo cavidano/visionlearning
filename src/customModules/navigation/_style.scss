@@ -3,13 +3,13 @@
 // A. Modules
 //////////////////////////////////////////////
 
-@use "../../modules/accents/style" as accents;
-@use "../../modules/breakpoints/style" as breakpoints;
-@use "../../modules/borders/style" as borders;
-@use "../../modules/color/style" as color;
-@use "../../modules/collapse/style" as collapse;
-@use "../../modules/navigation/style" as navigation;
-@use "../../modules/icons/style" as icons;
+@use "../../scss/accent" as accent;
+@use "../../scss/breakpoint" as breakpoint;
+@use "../../scss/border" as border;
+@use "../../scss/color" as color;
+@use "../../scss/collapse" as collapse;
+@use "../../scss/navigation" as navigation;
+@use "../../scss/icon" as icon;
 
 //////////////////////////////////////////////
 // B. VL Hat
@@ -44,7 +44,7 @@
     padding: var(--spacer-1);
 }
 
-@include breakpoints.breakpoints-down(lg) {
+@include breakpoint.breakpoint-down(lg) {
 
     .vl-hat__menu {
         padding-top: var(--spacer-2);
@@ -53,7 +53,7 @@
 
 }
 
-@include breakpoints.breakpoints-up(lg) {
+@include breakpoint.breakpoint-up(lg) {
     
     .vl-hat__toggle-button {
         display: none;
@@ -190,7 +190,7 @@
     
 }
 
-@include breakpoints.breakpoints-down(lg) {
+@include breakpoint.breakpoint-down(lg) {
 
     .vl-header__logo,
     .vl-header__menu {
@@ -208,7 +208,7 @@
     }
 }
 
-@include breakpoints.breakpoints-up(lg) {
+@include breakpoint.breakpoint-up(lg) {
     .vl-header {
         display: flex;
         align-items: stretch;
