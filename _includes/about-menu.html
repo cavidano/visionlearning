@@ -1,18 +1,18 @@
-<nav class="about-menu border-bottom padding-y-4">
+<nav class="about-menu font-size-md padding-y-3 border-bottom">
             
-    <ul class="nav nav--horizontal--lg font-size-md">
+    <ul class="nav medium container nav--horizontal--lg justify-content-around">
         <li>
             <a href="/about" {% if page.title == 'About' %} aria-current="page" {% endif %}>
                 At a Glance
             </a>
         </li>
         <li>
-            <a href="/about/who-we-are">
+            <a href="/about/who-we-are" {% if page.title == 'Who We Are' %} aria-current="page" {% endif %}>
                 Who We Are
             </a>
         </li>
         <li>
-            <a href="/about/ngss" {% if page.title == 'Who We Are' %} aria-current="page" {% endif %}>
+            <a href="/about/ngss" {% if page.title == 'NGSS' %} aria-current="page" {% endif %}>
                 NGSS
             </a>
         </li>

@@ -5,139 +5,122 @@ title: "About"
 
 {% include global-header.html %}
 
-<div class="container wide">
-
-    <h1 class="screen-reader-only">
-        About Visionlearning
-    </h1>
+<div class="wide margin-x-auto">
 
     {% include about-menu.html %}
 
-    <div class="grid grid--about">
+    <header class="header text-align-center padding-y-5">
 
-        <header class="summary padding-y-4">
+        <h1 class="container medium font-weight-normal">
+            Visionlearning At a Glance
+        </h1>
 
-            <h2 class="font-weight-normal">
-                We provide high-quality, accessible learning material in science, technology, engineering, and math.
-            </h2>
+    </header>
 
-        </header>
+    <main class="grid grid--column-4 theme-canvas">
 
-        <div class="help"></div>
+        <article class="border-right--lg height-100 grid__colspan-3">
 
-        <main class="main">
+            <section class="padding-3">
 
-            <section>
-            
-                <div class="grid grid--column-2--lg gap-2">
+                <h2 class="screen-reader-only">About Visionlearning</h2>
                 
-                    <div class="card theme-canvas">
+                <div class="grid gap-4 grid--divider--fill-x grid--column-2--lg">
 
-                        <img class="margin-2 border-radius" src="/images/at-a-glance-process-of-science.jpg" alt="">
+                    {% capture process_content %}
+                        <p>
+                            We go beyond facts and dates to examine how we've come to understand the concepts, the people who have contributed to our understanding, and the ongoing research that builds our scientific knowledge.
+                        </p>
+                    {% endcapture %}
 
-                        <div class="card__body">
-                            <h2 class="h6">
-                                Learn the process of science
-                            </h2>
-                            <p>
-                                We go beyond facts and dates to examine how we've come to understand the concepts, the people who have contributed to our understanding, and the ongoing research that builds our scientific knowledge.
-                            </p>
-                        </div>
+                    {%
+                        include at-a-glance-image-card.html
+                        image_src='/images/at-a-glance-process-of-science.jpg'
+                        title='Learn the process of science'
+                        content=process_content
+                        button_label='Explore Our Library'
+                    %}
 
-                        <div class="card__foot">
-                            <a class="button button--has-icon font-size-md text-color-link" href="#1">
-                                <span class="button__text">Explore Our Library</span>
-                                <span class="icon icon-caret-right"></span>
-					        </a>   
-                        </div>
+                    {% capture ngss_content %}
+                        <p>
+                            Our exclusive content integrates science and engineering practices with disciplinary core ideas and cross-cutting concepts in alignment with the Next Generation Science Standards.
+                        </p>
+                    {% endcapture %}
 
-                    </div>
-                
-                    <div class="card theme-canvas">
+                    {%
+                        include at-a-glance-image-card.html
+                        image_src='/images/at-a-glance-process-ngss.jpg'
+                        title='Next Generation Science Standards'
+                        content=ngss_content
+                        button_label='About NGSS'
+                    %}
 
-                        <img class="margin-2 border-radius" src="/images/at-a-glance-process-ngss.jpg" alt="">
+                    {% capture comprehension_content %}
+                        <p>
+                            Our exclusive content integrates science and engineering practices with disciplinary core ideas and cross-cutting concepts in alignment with the Next Generation Science Standards.
+                        </p>
+                    {% endcapture %}
 
-                        <div class="card__body">
-                            <h2 class="h6">
-                                Next Generation Science Standards
-                            </h2>
-                            <p>
-                                Our exclusive content integrates science and engineering practices with disciplinary core ideas and cross-cutting concepts in alignment with the Next Generation Science Standards.
-                            </p>
-                        </div>
+                    {%
+                        include at-a-glance-image-card.html
+                        image_src='/images/at-a-glance-process-comprehension.jpg'
+                        title='Reinforce your comprehension'
+                        content=comprehension_content
+                        button_label='Our Content'
+                    %}
 
-                        <div class="card__foot">
-                            <a class="button button--has-icon font-size-md text-color-link" href="#1">
-                                <span class="button__text">About NGSS</span>
-                                <span class="icon icon-caret-right"></span>
-                            </a> 
-                        </div>
+                    {% capture classroom_content %}
+                        <p>
+                            In our Classroom, instructors can select content from across the Visionlearning site to integrate the process of science into their teaching. 
+                        </p>
+                    {% endcapture %}
 
-                    </div>
-                
-                    <div class="card theme-canvas">
-
-                        <img class="margin-2 border-radius" src="/images/at-a-glance-process-comprehension.jpg" alt="">
-
-                        <div class="card__body">
-                            <h2 class="h6">
-                                Reinforce your comprehension
-                            </h2>
-                            <p>
-                                From questions to stimulate prior knowledge in the Pre-Reader to Checkpoints strategically placed in the readings to gauge comprehension, our goal is to assist the learning process.
-                            </p>
-                        </div>
-
-                        <div class="card__foot">
-                            <a class="button button--has-icon font-size-md text-color-link" href="#1">
-                                <span class="button__text">Our Content</span>
-                                <span class="icon icon-caret-right"></span>
-                            </a> 
-                        </div>
-
-                    </div>
-                
-                    <div class="card theme-canvas">
-
-                        <img class="margin-2 border-radius" src="/images/at-a-glance-process-classroom.jpg" alt="">
-
-                        <div class="card__body">
-                            <h2 class="h6">
-                                Create Customized Classrooms
-                            </h2>
-                            <p>
-                                In our Classroom, instructors can select content from across the Visionlearning site to integrate the process of science into their teaching. 
-                            </p>
-                        </div>
-
-                        <div class="card__foot">
-                            <a class="button button--has-icon font-size-md text-color-link" href="#1">
-                                <span class="button__text">Classroom</span>
-                                <span class="icon icon-caret-right"></span>
-                            </a> 
-                        </div>
-
-                    </div>
+                    {%
+                        include at-a-glance-image-card.html
+                        image_src='/images/at-a-glance-process-classroom.jpg'
+                        title='Create Customized Classrooms'
+                        content=classroom_content
+                        button_label='Classroom'
+                    %}
                 
                 </div>
-                
+                    
             </section>
 
-            <section class="padding-y-4">
+            <hr />
 
-            <p>teacher testimonials</p>
+            <section>
+
+            <div class="padding-3">
+            
+                <h2>Our Leadership</h2>
+
+                <div class="grid grid--column-2">
+
+                <article>
+
+                <h3></h3>
+                
+                </article>
+                
+                </div>
+
+            </div>
+
+
+
             
             </section>
-        
-        </main>
+            
+        </article>
 
-        <aside class="aside">
+        <aside>
 
-            <div class="grid gap-2">
-
-                <div class="theme-canvas border-radius box-shadow-1 display-flex align-items-center padding-2">
-
-                    <div class="opacity-80 margin-right-2" data-logo="brand">
+        <div class="padding-3">
+            
+            <ul class="grid grid--divider gap-4">
+                <li class="display-flex align-items-center">
+                    <div class="opacity-70 margin-right-2" data-logo="brand">
                         <span class="icon icon-globe" style="font-size: 200%"></span>
                     </div>
 
@@ -147,43 +130,39 @@ title: "About"
                             Our modules and quizzes are offered in both English and Spanish.
                         </p>
                     </div>
-                
-                </div>
-
-                <div class="theme-canvas border-radius box-shadow-1 display-flex align-items-center padding-2">
-
-                    <div class="opacity-80 margin-right-2" data-logo="brand">
+                </li>
+                <li class="display-flex align-items-center">
+                    <div class="opacity-70 margin-right-2" data-logo="brand">
                         <span class="icon icon-pronounciation" style="font-size: 200%"></span>
                     </div>
 
                     <div class="text font-size-md">
                         <strong>Listen to Our Content</strong>
                         <p>
-                            Many of our modules and glossary terms include an audio recording. 
+                            Many of our modules and glossary terms include an audio recording.
                         </p>
                     </div>
-                
-                </div>
-            
-                <div class="theme-canvas border-radius box-shadow-1 display-flex align-items-center padding-2">
-
-                    <div class="opacity-80 margin-right-2" data-logo="brand">
+                </li>
+                <li class="display-flex align-items-center">
+                    <div class="opacity-70 margin-right-2" data-logo="brand">
                         <span class="icon icon-glossary-highlight" style="font-size: 200%"></span>
                     </div>
 
                     <div class="text font-size-md">
                         <strong>Integrated Glossary</strong>
                         <p>
-                            Vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo. 
+                            Vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo.
                         </p>
                     </div>
-                
-                </div>
+                </li>
+            </ul>
             
-            </div>
+        </div>
+
+            
 
         </aside>
 
-    </div>
+    </main>
 
 </div>

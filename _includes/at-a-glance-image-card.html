@@ -1,0 +1,49 @@
+{% if include.image_src %}
+    {% assign src = include.image_src %}
+{% else %}
+    {% assign src = 'https://via.placeholder.com/1200x400' %}
+{% endif %}
+
+{% if include.title %}
+    {% assign title = include.title %}
+{% else %}
+    {% assign title = 'Lorem Ipsum Dolor Sit Amet' %}
+{% endif %}
+
+{% if include.content %}
+    {% assign content = include.content %}
+{% else %}
+    {% assign content = 'Lorem Ipsum Dolor Sit Amet' %}
+{% endif %}
+
+{% if include.button_label %}
+    {% assign label = include.button_label %}
+{% else %}
+    {% assign label = 'Button' %}
+{% endif %}
+
+{% if include.link_url %}
+    {% assign url = include.link_url %}
+{% else %}
+    {% assign url = '#1' %}
+{% endif %}
+
+<article class="flex-column align-items-start">
+    
+    <img class="border-radius margin-bottom-3" src="{{ src }}" alt="Placeholder" />
+
+    <h2 class="h5">
+        {{ title }}
+    </h2>
+
+    {{ content }}
+
+    <a class="button button--has-icon font-size-md text-color-link margin-top-auto" href="{{ url }}">
+        <span class="button__text">
+        {{ label }}
+        </span>
+        <span class="icon icon-caret-right"></span>
+    </a> 
+    
+</article>
+                
