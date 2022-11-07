@@ -1,0 +1,90 @@
+/*
+
+In this file:
+
+// A. Variables
+
+*/
+
+//////////////////////////////////////////////
+// A. Variables
+//////////////////////////////////////////////
+
+:root {
+
+    // Body Font Stack
+
+    --body-font-family: 'Open Sans', sans-serif;
+    
+    --body-font-weight-normal: 400;
+    --body-font-weight-medium: 600;
+    --body-font-weight-bold: 700;
+
+    --body-font-size: 20px;
+
+    // Banner Headline
+
+
+    --banner-headline-font-size: calc(var(--body-font-size) * 3.25);
+    --banner-headline-font-weight: var(--body-font-weight-normal);
+
+    // Headers
+
+    --h1-font-size: calc(var(--body-font-size) * 2); // ~ 60px
+    --h2-font-size: calc(var(--body-font-size) * 1.75);  // ~ 48px
+    --h3-font-size: calc(var(--body-font-size) * 1.5);  // ~ 40px
+    --h4-font-size: calc(var(--body-font-size) * 1.25);  // ~ 35px
+    --h5-font-size: calc(var(--body-font-size) * 1.125);  // ~ 30px
+    --h6-font-size: calc(var(--body-font-size) * 1);  // ~ 26px
+
+    --header-line-height: 1.25;
+
+    // Containers
+
+    --narrow-width: 46rem;
+    --medium-width: calc( var(--narrow-width) * 1.75);
+    --wide-width: calc( var(--narrow-width) * 2.5);
+
+    // Bordr Radius
+
+    --border-radius: 0.25em;
+
+    // Buttons
+
+    --button-padding-x: 1.25em;
+
+    --button-icon-only-size: 2.25em;
+    
+    --button-outline-border-width: var(--border-width);
+
+    // Spacing
+
+    --spacer-3: calc(var(--spacer-base) * 1.25);
+    --spacer-4: calc(var(--spacer-base) * 2);
+    --spacer-5: calc(var(--spacer-base) * 4);
+}
+
+h1 > sub {
+    display: block;
+    font-size: 75%;
+}
+
+
+.section-card {
+
+position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+
+            width: var(--tab-accent-bar-size);
+            
+            background-color: currentColor;
+            
+            opacity: 0;
+        }
+}

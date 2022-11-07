@@ -1,0 +1,146 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Accordion Block
+// D. Accordion Elements
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use '../accent';
+@use '../icon';
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+// Scoped to Block
+
+%accordion-vars {
+    --accordion-button-padding-x: var(--spacer-3);
+    --accordion-button-padding-y: var(--button-padding-y);
+
+    --accordion-panel-padding-x: var(--spacer-3);
+    --accordion-panel-padding-y: var(--spacer-3);
+    
+    --accordion-active-color: currentColor;
+
+    --accordion-icon-closed: '\f118';
+    --accordion-icon-open: '\f11b';
+}
+
+//////////////////////////////////////////////
+// C. Accordion Block
+//////////////////////////////////////////////
+
+.accordion {
+    @extend %accordion-vars;
+}
+
+//////////////////////////////////////////////
+// D. Accordion Elements
+//////////////////////////////////////////////
+
+.accordion__button {
+    position: relative;
+    
+    display: flex;
+    align-items: baseline;
+
+    width: 100%;
+
+    padding-block: var(--accordion-button-padding-y);
+    padding-inline: var(--accordion-button-padding-x);
+
+    margin-bottom: 0;
+
+    cursor: pointer;
+
+    &::before {
+        @extend %icon-font-vars;
+        @extend .icon_font;
+
+        --icon-size: 0.75em;
+        
+        content: var(--accordion-icon-closed);
+    }
+
+    &[aria-expanded="true"] {
+
+        color: var(--accordion-active-color);
+
+        &::before {
+            content: var(--accordion-icon-open);
+        }
+    }
+}
+
+.accordion:not([class*="--plus-minus"]) {
+
+    > .accordion__button {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        &:not(:first-child){
+            border-top-width: var(--border-width);
+            border-top-style: var(--default-border-style);
+            border-top-color: inherit;
+        }
+
+    }
+}
+
+.accordion__button__label { 
+
+    [aria-expanded="true"] & {
+        // text-decoration: underline;
+    }
+}
+
+.accordion__panel {
+    overflow: hidden;
+
+    display: none;
+    
+    padding-inline: var(--accordion-panel-padding-x);
+    padding-block: var(--accordion-panel-padding-y);
+
+    &.shown {
+        display: block;
+    }
+}
+
+//////////////////////////////////////////////
+// D. Accordion Modifier
+//////////////////////////////////////////////
+
+.accordion.accordion--plus-minus {
+
+    --accordion-button-padding-y: 0.5em;
+    --accordion-button-padding-x: 1.25em;
+    --accordion-panel-padding-x: var(--accordion-button-padding-x);
+    --accordion-panel-padding-y: var(--accordion-button-padding-y);
+
+    --accordion-icon-closed: '\f13b';
+    --accordion-icon-open: '\f130';
+
+    > .accordion__button {
+        justify-content: start;
+
+        position: relative;
+
+        &::before{
+            position: absolute;
+            inset-inline-start: 0;
+            inset-block-start: 50%;
+            transform: translateY(-50%);
+            width: var(--accordion-button-padding-x);
+        }
+    }
+}
