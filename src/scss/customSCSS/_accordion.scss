@@ -89,7 +89,7 @@ In this file:
 
         &:not(:first-child){
             border-top-width: var(--border-width);
-            border-top-style: var(--default-border-style);
+            border-top-style: var(--border-style);
             border-top-color: inherit;
         }
 
