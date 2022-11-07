@@ -24,7 +24,7 @@ In this file:
 
     --narrow-width: 44rem;
     --medium-width: calc( var(--narrow-width) * 1.75);
-    --wide-width: calc( var(--narrow-width) * 2.5);
+    --wide-width: calc( var(--narrow-width) * 2.25);
 
     // Bordr Radius
 
@@ -43,10 +43,15 @@ In this file:
     --spacer-3: calc(var(--spacer-base) * 1.25);
     --spacer-4: calc(var(--spacer-base) * 2);
     --spacer-5: calc(var(--spacer-base) * 4);
+
+    // 
+
+
+    --button-icon-only-size: 2.25em;
 }
 
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 1000px) {
 
     :root{
         --base-font-size: 0.75rem; // 16px
