@@ -18,146 +18,149 @@ In this file:
 // B. Quiz Block
 //////////////////////////////////////////////
 
-.quiz {
-    overflow: hidden;
+@layer component {
 
-    button[type="submit"]{
-        background-color: var(--canvas-link);
-        color: white !important;
-    }
-}
+    .quiz {
+        overflow: hidden;
 
-ol.quiz__questions {
-    list-style: none;
-    counter-reset: section;
-    padding: unset;             
-
-    .form-entry {
-        position: relative;
-
-        &::before {
-            position: absolute;
-            inset-inline-start: 0;
-
-            counter-increment: section;    
-            content: counter(section) ".";
-
-            font-weight: bold;
-
-            padding-inline-start: var(--form-field-padding-x);
+        button[type="submit"]{
+            background-color: var(--canvas-link);
+            color: white !important;
         }
     }
 
-    .form-entry__field__label {
-        display: flex;
-        padding: unset;
-        padding-inline-start: calc( var(--form-field-padding-x) + 2em);
+    ol.quiz__questions {
+        list-style: none;
+        counter-reset: section;
+        padding: unset;             
+
+        .form-entry {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                inset-inline-start: 0;
+
+                counter-increment: section;    
+                content: counter(section) ".";
+
+                font-weight: bold;
+
+                padding-inline-start: var(--form-field-padding-x);
+            }
+        }
+
+        .form-entry__field__label {
+            display: flex;
+            padding: unset;
+            padding-inline-start: calc( var(--form-field-padding-x) + 2em);
+        }
+
+        .form-entry__option {
+            margin-top: 0.75em;
+        }
     }
 
-    .form-entry__option {
-        margin-top: 0.75em;
+    .quiz__questions {
+
+        .form-entry__option__radio {
+            font-size: 90%;
+        }
+
+        .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
+            content: "\f13f"; 
+        }
+
+        .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
+            content: "\f140";
+        }
+
+        .form-entry__option__radio:nth-child(3) > label > input ~ .option__label::before {
+            content: "\f141";
+        }
+
+        .form-entry__option__radio:nth-child(4) > label > input ~ .option__label::before {
+            content: "\f143";
+        }
+
+        .form-entry__option__radio:nth-child(5) > label > input ~ .option__label::before {
+            content: "\f144";
+        }
+
+        .form-entry__option__radio > label > input:checked ~ .option__label::before {
+        content: "\f142";
+        }
+
+        .form-entry__option__radio > label > input:not(:checked) ~ .option__label::before {
+            opacity: 1;
+            color: var(--link-color);
+        }
+
     }
-}
 
-.quiz__questions {
+    .quiz__image {
+        overflow: hidden;
+        border-radius: var(--form-field-border-radius);
+        margin-bottom: var(--spacer-3);
+    }
 
-    .form-entry__option__radio {
+    .quiz__response {
+        display: none;
+        
+        padding-left: calc(1.25em + var(--form-field-padding-x));
+        margin-top: calc(var(--form-field-padding-y) * 2);
+        
+        font-style: italic;
         font-size: 90%;
+
+        color: var(--canvas-warn);
+
+        [data-answer="correct"] & {
+            color: var(--canvas-confirm);
+        }
     }
 
-    .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
-        content: "\f13f"; 
+    .quiz__score {
+
+        &.passed {
+            color: var(--canvas-confirm);
+        }
+
+        display: none;
     }
 
-    .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
-        content: "\f140";
-    }
+    .comprehension-checkpoint__header {
 
-    .form-entry__option__radio:nth-child(3) > label > input ~ .option__label::before {
-        content: "\f141";
-    }
+        overflow: hidden;
 
-    .form-entry__option__radio:nth-child(4) > label > input ~ .option__label::before {
-        content: "\f143";
-    }
+        border-radius: var(--form-field-border-radius, 0.25em);
 
-    .form-entry__option__radio:nth-child(5) > label > input ~ .option__label::before {
-        content: "\f144";
-    }
-
-    .form-entry__option__radio > label > input:checked ~ .option__label::before {
-    content: "\f142";
-    }
-
-    .form-entry__option__radio > label > input:not(:checked) ~ .option__label::before {
-        opacity: 1;
-        color: var(--link-color);
-    }
-
-}
-
-.quiz__image {
-    overflow: hidden;
-    border-radius: var(--form-field-border-radius);
-    margin-bottom: var(--spacer-3);
-}
-
-.quiz__response {
-    display: none;
-    
-    padding-left: calc(1.25em + var(--form-field-padding-x));
-    margin-top: calc(var(--form-field-padding-y) * 2);
-    
-    font-style: italic;
-    font-size: 90%;
-
-    color: var(--canvas-warn);
-
-    [data-answer="correct"] & {
-        color: var(--canvas-confirm);
-    }
-}
-
-.quiz__score {
-
-    &.passed {
-        color: var(--canvas-confirm);
-    }
-
-    display: none;
-}
-
-.comprehension-checkpoint__header {
-
-    overflow: hidden;
-
-    border-radius: var(--form-field-border-radius, 0.25em);
-
-    @extend %subtle-fill-psuedo;
-    --subtle-fill-opacity: 0.075;
-
-    display: flex;
-    align-items: center;
-
-    color: var(--primary);
-
-    margin-inline-start: calc(var(--button-icon-only-size) * -1);
-    
-    > span {
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.075;
 
         display: flex;
         align-items: center;
-        justify-content: center;
+
+        color: var(--primary);
+
+        margin-inline-start: calc(var(--button-icon-only-size) * -1);
         
-        width: var(--button-icon-only-size);
-        height: var(--button-icon-only-size);
+        > span {
+            @extend %subtle-fill-psuedo;
+            --subtle-fill-opacity: 0.075;
 
-        margin-right: 0.5em;
-    }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            width: var(--button-icon-only-size);
+            height: var(--button-icon-only-size);
 
-    > span > [class*="icon"] {
-        font-size: 1.5em;
+            margin-right: 0.5em;
+        }
+
+        > span > [class*="icon"] {
+            font-size: 1.5em;
+        }
     }
 }

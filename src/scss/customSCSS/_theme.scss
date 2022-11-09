@@ -24,7 +24,7 @@ In this file:
 
     --narrow-width: 44rem;
     --medium-width: calc( var(--narrow-width) * 1.75);
-    --wide-width: calc( var(--narrow-width) * 2.25);
+    --wide-width: calc( var(--narrow-width) * 2.5);
 
     // Bordr Radius
 
@@ -54,7 +54,7 @@ In this file:
 @media screen and (max-width: 1000px) {
 
     :root{
-        --base-font-size: 0.75rem; // 16px
+        --base-font-size: 0.875rem; // 16px
 
         --type-scale: 1.175; // Minor Third
     }
@@ -64,4 +64,8 @@ In this file:
 h1 > sub {
     display: block;
     font-size: 75%;
+}
+
+[class*="grid--divider"] {
+    // --grid-divider-border-y-color: currentColor;
 }

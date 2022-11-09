@@ -9,229 +9,225 @@ title: "Library"
 
     <main id="skip-header-content">
 
-        <div class="height-100 padding-y-5">
+        <div class="padding-y-5 height-100">
 
-            <div class="landing wide margin-x-auto theme-canvas">
+            <div class="container wide height-100">
 
-                <div class="landing__main">
-                
-                    <div class="materials">
+                <div class="grid grid--column-6--lg grid--divider--fill-y height-100">
 
-                        <div class="materials__aside font-size-md padding-2 border-right--lg">
-                            
-                            <div class="grid gap-3">
+                    <div>
 
-                                {% include materials-sidebar-mobile-buttons.html %}
-
-                                {% include materials-sidebar-search.html search_type="Library" %}
-
-                                <nav class="collapse display-block--lg" id="material-nav">
-                                    
-                                    <ul
-                                        class="tabs-nav library border border-radius"
-                                        id="material-nav"
-                                        role="menu">
-
-                                        <li>
-                                            <button
-                                                id="highlights"
-                                                aria-selected="true"
-                                                role="tab">
-                                                    Highlights
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <a
-                                                id="filter-all-disciplines"
-                                                aria-selected="false"
-                                                role="tab"
-                                                href="{{ site.url }}/library/all-disciplines.html">
-                                                    All Disciplines
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-biology"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Biology
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-chemistry"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Chemistry
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-earth-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Earth Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-general-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    General Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-profiles-in-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Inside Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-math-in-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Math in Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-physics"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Physics
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-process-of-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Process of Science
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                    <a class="button margin-y-2 text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
-                                        <span class="button__text">Interactive Animations</span>
-                                    </a>
-
-                                </nav>
-
-                            </div>
+                        <div class="grid grid--divider font-size-md">
                         
-                        </div>
+                            {% include materials-sidebar-mobile-buttons.html %}
+                            {% include materials-sidebar-search.html search_type="Library" %}
 
-                        <div class="materials__main">
-
-                            <div class="padding-2 height-100">
-
-                                <div class="grid grid--featured-material gap-1">
-                                    
-                                    <div class="backdrop backdrop--fixed theme-primary chemistry border-radius flex-row">
-
-                                        <div class="backdrop__image gradient-veneer-bottom">
-                                            <img class="opacity-30" src="{{ site.url }}/images/featured/01.jpg" alt="Placeholder">
-                                        </div>
-
-                                        <div class="backdrop__cover align-items-end">
-
-                                            <div class="container narrow margin-y-4">
-                                                <strong>
-                                                    <em>
-                                                        Atomic Theory and Structure
-                                                    </em>
-                                                </strong> 
-                                                <h2 class="font-weight-normal">
-                                                    Early Ideas about Matter
-                                                </h2>
-                                                <p>
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eos repellendus vitae aspernatur quas distinctio.
-                                                </p>
-                                                <a class="button font-size-sm button--outline" href="{{ site.url }}/library/module/reading.html">
-                                                    Go to Module
-                                                </a>                                        
-                                            </div>
+                            <nav class="collapse display-block--lg" id="material-nav">
                                 
-                                        </div>
+                                <ul
+                                    class="tabs-nav library border border-radius"
+                                    id="material-nav"
+                                    role="menu">
 
-                                    </div>
-                                    <!-- .backdrop -->
-                                    
-                                    <div class="backdrop backdrop--fixed theme-primary biology border-radius flex-row">
+                                    <li>
+                                        <button
+                                            id="highlights"
+                                            aria-selected="true"
+                                            role="tab">
+                                                Highlights
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <a
+                                            id="filter-all-disciplines"
+                                            aria-selected="false"
+                                            role="tab"
+                                            href="{{ site.url }}/library/all-disciplines.html">
+                                                All Disciplines
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-biology"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Biology
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-chemistry"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Chemistry
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-earth-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Earth Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-general-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                General Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-profiles-in-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Inside Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-math-in-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Math in Science
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-physics"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Physics
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            id="filter-process-of-science"
+                                            aria-selected="false"
+                                            role="tab">
+                                                Process of Science
+                                        </button>
+                                    </li>
+                                </ul>
 
-                                        <div class="backdrop__image gradient-veneer-bottom">
-                                            <img class="opacity-30" src="{{ site.url }}/images/featured/02.jpg" alt="Placeholder">
-                                        </div>
+                            </nav>
 
-                                        <div class="backdrop__cover align-items-end">
-
-                                            <div class="container narrow margin-y-4">
-                                                <strong>
-                                                    <em>
-                                                        Scientific Research
-                                                    </em>
-                                                </strong> 
-                                                <h2 class="font-weight-normal">
-                                                    Barbara McClintock
-                                                </h2>
-                                                <p>
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                                </p>
-                                                <a class="button font-size-sm button--outline" href="{{ site.url }}/library/module/reading.html">
-                                                    Go to Module
-                                                </a>                                        
-                                            </div>
-                                
-                                        </div>
-
-                                    </div>
-                                    <!-- .backdrop -->
-                                    
-                                    <div class="backdrop backdrop--fixed theme-primary profiles-in-science border-radius flex-row">
-
-                                        <div class="backdrop__image gradient-veneer-bottom">
-                                            <img class="opacity-30" src="{{ site.url }}/images/featured/03.jpg" alt="Placeholder">
-                                        </div>
-
-                                        <div class="backdrop__cover align-items-end">
-
-                                            <div class="container narrow margin-y-4">
-                                                <strong>
-                                                    <em>
-                                                        Cell Biology
-                                                    </em>
-                                                </strong> 
-                                                <h2 class="font-weight-normal">
-                                                    Discovery and Structure of Cells
-                                                </h2>
-                                                <p>
-                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                                </p>
-                                                <a class="button font-size-sm button--outline" href="{{ site.url }}/library/module/reading.html">
-                                                    Go to Module
-                                                </a>                                        
-                                            </div>
-                                
-                                        </div>
-
-                                    </div>
-                                    <!-- .backdrop -->
-
-                                </div>
-
+                            <div>
+                                <a class="button text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
+                                    <span class="button__text">Interactive Animations</span>
+                                </a>
                             </div>
 
                         </div>
-                    
                     </div>
 
+                    <div class="grid__colspan-4--lg">
+
+                        <ul class="grid grid--divider grid--column-2--lg grid--row-2 height-100">
+
+                            <li class="grid__colspan-2--lg">
+                            
+                                <div class="backdrop backdrop--fixed theme-primary chemistry" style="--backdrop-fixed-height: 100%">
+
+                                    <div class="backdrop__image gradient-veneer-bottom">
+                                        <img class="opacity-30" src="{{ site.url }}/images/featured/01.jpg" alt="Placeholder">
+                                    </div>
+
+                                    <div class="backdrop__cover justify-content-start align-items-end">
+
+                                        <div class="container narrow margin-y-4">
+                                            <strong>
+                                                <em>
+                                                    Atomic Theory and Structure
+                                                </em>
+                                            </strong> 
+                                            <h2 class="font-weight-normal">
+                                                Early Ideas about Matter
+                                            </h2>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eos repellendus vitae aspernatur quas distinctio.
+                                            </p>
+                                            <a class="button font-size-sm button--outline" href="{{ site.url }}/library/module/reading.html">
+                                                Go to Module
+                                            </a>                                        
+                                        </div>
+                            
+                                    </div>
+
+                                </div>
+                                <!-- .backdrop -->
+                            </li>
+
+                            <li>
+                                <article class="backdrop backdrop--fixed theme-primary biology" style="--backdrop-fixed-height: 100%">
+
+                                    <div class="backdrop__image gradient-veneer-bottom">
+                                        <img class="opacity-30" src="{{ site.url }}/images/featured/02.jpg" alt="Placeholder">
+                                    </div>
+
+                                    <div class="backdrop__cover align-items-end">
+
+                                        <div class="container narrow margin-y-4">
+                                            <strong>
+                                                <em>
+                                                    Scientific Research
+                                                </em>
+                                            </strong> 
+                                            <h2 class="font-weight-normal">
+                                                Barbara McClintock
+                                            </h2>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                            </p>
+                                            <a class="button font-size-sm button--outline" href="{{ site.url }}/library/module/reading.html">
+                                                Go to Module
+                                            </a>                                        
+                                        </div>
+                            
+                                    </div>
+
+                                </article>
+                            </li>
+                            <li>                            
+                                <article class="backdrop backdrop--fixed theme-primary profiles-in-science" style="--backdrop-fixed-height: 100%">
+
+                                    <div class="backdrop__image gradient-veneer-bottom">
+                                        <img class="opacity-30" src="{{ site.url }}/images/featured/03.jpg" alt="Placeholder">
+                                    </div>
+
+                                    <div class="backdrop__cover align-items-end">
+
+                                        <div class="container narrow margin-y-4">
+                                            <strong>
+                                                <em>
+                                                    Cell Biology
+                                                </em>
+                                            </strong> 
+                                            <h2 class="font-weight-normal">
+                                                Discovery and Structure of Cells
+                                            </h2>
+                                            <p>
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                            </p>
+                                            <a class="button font-size-sm button--outline" href="{{ site.url }}/library/module/reading.html">
+                                                Go to Module
+                                            </a>                                        
+                                        </div>
+                            
+                                    </div>
+
+                                </article>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    {% include landing-sidebar.html %}
+
                 </div>
-                
-                {% include landing-sidebar.html %}
 
             </div>
 
