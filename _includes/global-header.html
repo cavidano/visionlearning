@@ -170,13 +170,13 @@
 					</a>
 				</li>
 				<li class="glossary">
-					<a href="{{ site.url }}/glossary/"  {% if page.url contains '/glossary' %} aria-current="page" {% endif %}>
+					<a href="{{ site.url }}/glossary/" {% if page.url contains '/glossary' %} aria-current="page" {% endif %}>
 						<span class="title">Glossary</span>
 						<span class="tagline">Science terms</span>
 					</a>
 				</li>
 				<li class="classroom">
-					<a href="#1">
+					<a href="{{ site.url }}/classroom/"{% if page.url contains '/classroom' %} aria-current="page" {% endif %}>
 						<span class="title">Classroom</span>
 						<span class="tagline">Custom courses</span>
 					</a>
