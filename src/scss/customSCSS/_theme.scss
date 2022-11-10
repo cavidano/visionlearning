@@ -7,7 +7,7 @@ In this file:
 */
 
 //////////////////////////////////////////////
-// A. Variables
+// A. Custom Properties
 //////////////////////////////////////////////
 
 :root {
@@ -38,16 +38,16 @@ In this file:
     
     --button-outline-border-width: var(--border-width);
 
+    --button-icon-only-size: 2.25em;
+
     // Spacing
 
     --spacer-3: calc(var(--spacer-base) * 1.25);
     --spacer-4: calc(var(--spacer-base) * 2);
     --spacer-5: calc(var(--spacer-base) * 4);
+    
+    --grid-divider-gap: var(--spacer-3);
 
-    // 
-
-
-    --button-icon-only-size: 2.25em;
 }
 
 
@@ -55,6 +55,10 @@ In this file:
     --backdrop-fixed-height: 450px;
 }
 
+
+hr.divider {
+    margin-block: calc(var(--grid-divider-gap) * 0.5) ;
+}
 
 @media screen and (max-width: 1000px) {
 
@@ -69,8 +73,4 @@ In this file:
 h1 > sub {
     display: block;
     font-size: 75%;
-}
-
-[class*="grid--divider"] {
-    // --grid-divider-border-y-color: currentColor;
 }

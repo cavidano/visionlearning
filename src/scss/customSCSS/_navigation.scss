@@ -1,321 +1,317 @@
+/*
+
+In this file:
+
+// A. Variables
+// B. Components
+
+*/
 
 //////////////////////////////////////////////
 // A. Modules
 //////////////////////////////////////////////
 
-@use "../accent" as accent;
-@use "../breakpoint" as breakpoint;
-@use "../border" as border;
-@use "../color" as color;
-@use "../collapse" as collapse;
-@use "../navigation" as navigation;
-@use "../icon" as icon;
+@use "../accent";
+@use "../breakpoint";
+@use "../border";
+@use "../color";
+@use "../collapse";
+@use "../navigation";
+@use "../icon";
 
 //////////////////////////////////////////////
 // B. VL Hat
 //////////////////////////////////////////////
 
-.vl-hat {
-    display: grid;
+@layer component {
 
-    grid-template-columns: 1fr auto;
-
-    grid-template-areas: 
-        "toggle actions"
-        "menu menu";
-}
-
-.vl-hat__toggle-button {
-    grid-area: toggle;
-    padding: var(--spacer-1);
-}
-
-.vl-hat__menu {
-    grid-area: menu;
-    font-size: var(--font-size-md);
-
-    padding: var(--spacer-1) var(--spacer-2);
-
-    @extend .collapse;
-}
-
-.vl-hat__actions {
-    grid-area: actions;
-    padding: var(--spacer-1);
-}
-
-@include breakpoint.breakpoint-down(lg) {
-
-    .vl-hat__menu {
-        padding-top: var(--spacer-2);
-        padding-bottom: var(--spacer-2);
-    }
-
-}
-
-@include breakpoint.breakpoint-up(lg) {
-    
-    .vl-hat__toggle-button {
-        display: none;
-    }
-    
-    .vl-hat__menu,
-    .vl-hat__menu.shown  {
-        display: flex !important;
-    }
+    // VL Hat
 
     .vl-hat {
-        grid-template-areas: 
-            "menu actions";
-    }
-}
-
-//////////////////////////////////////////////
-// C. VL Header
-//////////////////////////////////////////////
-
-.vl-header {
-    position: relative;
-    z-index: 1000;
-}
-
-.vl-header__logo {
-    padding: var(--spacer-2);
-}
-
-.vl-header__menu {
-
-    :is(ul, li, a) {
-        display: flex;
-        height: 100%;
-    }
-
-    ul {
-        list-style: none;
-        line-height: normal;
-        padding: initial;
         display: grid;
 
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr auto;
+
+        grid-template-areas: 
+            "toggle actions"
+            "menu menu";
     }
 
-    li {
-        margin-inline-start: unset !important;
+    .vl-hat__toggle-button {
+        grid-area: toggle;
+        padding: var(--spacer-1);
     }
 
-    a {
-        position: relative;
-        flex-direction: column;
-        justify-content: center;
+    .vl-hat__menu {
+        grid-area: menu;
+        font-size: var(--font-size-md);
+
+        padding: var(--spacer-1) var(--spacer-2);
+
+        @extend .collapse;
+    }
+
+    .vl-hat__actions {
+        grid-area: actions;
+        padding: var(--spacer-1);
+    }
+
+    @include breakpoint.breakpoint-down(lg) {
+
+        .vl-hat__menu {
+            padding-top: var(--spacer-2);
+            padding-bottom: var(--spacer-2);
+        }
+
+    }
+
+    @include breakpoint.breakpoint-up(lg) {
         
-        padding: var(--spacer-2);
-
-
-        width: 100%;
-
-        &::before {
-            content: "";
-            
-            position: absolute;
-            top: unset;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            height: calc(var(--border-width) * 2);
+        .vl-hat__toggle-button {
+            display: none;
+        }
+        
+        .vl-hat__menu,
+        .vl-hat__menu.shown  {
+            display: flex !important;
         }
 
-        &[aria-current] {
-            color: var(--dark);
-        }
-
-        &[aria-current]::before {
-            top: 0;
-            height: unset;
-
-            color: var(--dark);
-
-            background-image: linear-gradient(hsla(0, 0%, 100%, 0.25), hsla(0, 0%, 100%, 0.125));
-            opacity: 1;
+        .vl-hat {
+            grid-template-areas: 
+                "menu actions";
         }
     }
 
-    a > span{
-        z-index: 5;
-    }
+    // VL Header
 
-    span {
-        display: block;
-    } 
-
-    span.title {
-        font-weight: var(--body-font-weight-bold);
-    }
-
-    span.tagline {
-        font-size: var(--font-size-sm);
-        opacity: 0.75;
-    }
-
-    li {
-        --current-color: null;
-        a:not([aria-current])::before, 
-        a[aria-current] {
-            background-color: var(--current-color);
-        }
-    }
-
-    li.library {
-        --current-color: var(--library);
-    }
-
-    li.glossary {
-        --current-color: var(--glossary);
-    }
-
-    li.classroom {
-        --current-color: var(--classroom);
-    }
-
-}
-
-#es-translate {
-
-    color: white;
-
-    span {
+    .vl-header {
         position: relative;
-        z-index: 5;
-    }
-    
-    &::before {
-        background-image: linear-gradient(#d2593f,#bf3823);
-        opacity: 1;
-        z-index: 1;
-    }
-
-    &::after {
-        z-index: 10;
-    }
-    
-}
-
-@include breakpoint.breakpoint-down(lg) {
-
-    .vl-header__logo,
-    .vl-header__menu {
-        text-align: center;
+        z-index: 1000;
     }
 
     .vl-header__logo {
-        border-bottom-width: var(--border-width);
-        border-bottom-style: var(--border-style);
-        border-bottom-color: inherit;
+        padding: var(--spacer-2);
     }
 
-   span.tagline {
-       display: none;
-    }
-}
-
-@include breakpoint.breakpoint-up(lg) {
-    .vl-header {
-        display: flex;
-        align-items: stretch;
-    }
-
-    .vl-header__logo,
     .vl-header__menu {
-        flex: 1 1 50%;
-    }
 
-    span.title {
-        font-size: var(--font-size-lg);
-    }
-}
+        :is(ul, li, a) {
+            display: flex;
+            height: 100%;
+        }
 
-//////////////////////////////////////////////
-// D. Nav Module Breadcrumb
-//////////////////////////////////////////////
+        ul {
+            list-style: none;
+            line-height: normal;
+            padding: initial;
+            display: grid;
 
-.module-breadcrumb {
-
-    ul {
-        @extend %list-style-nav;
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         li {
+            margin-inline-start: unset !important;
+        }
+
+        a {
             position: relative;
-        }
-
-        > li > .nav__dropdown {
-            position: absolute;
-
-            width: 300px;
+            flex-direction: column;
+            justify-content: center;
             
-            background-color: white;
-        }
-    }
+            padding: var(--spacer-2);
 
-    > ul {
-        display: flex;
-        align-items: center;
-        font-size: var(--font-size-md);
-    }
 
-    > ul > li:not(:last-child) {
-        border-right-width: var(--border-width);
-        border-right-style: var(--border-style);
-        border-right-color: inherit;
-    }
-
-    > ul > li:first-child > a {
-        --subtle-fill-opacity: 0 !important;
-    }
-
-    > ul > li > .button {
-        --button-padding-y: 0.75em;
-        --button-border-radius: 0;
-        --button-font-weight: var(--body-font-weight-normal);
-
-        &[aria-expanded="true"] {
-            background-color: white;
-            color: var(--canvas-link);
-        }
-    }
-
-    .nav__dropdown > .accordion {
-        
-        --accordion-panel-padding-x: var(--button-padding-x);
-        --accordion-panel-padding-y: var(--button-padding-y);
-
-        > .accordion__button.current {
-            justify-content: start;
-            opacity: 0.75;
-            cursor: default;
-            font-weight: var(--body-font-weight-bold);
+            width: 100%;
 
             &::before {
-                --icon-size: 1em;
-                content: '\f10e';
+                content: "";
                 
-                display: none;
+                position: absolute;
+                top: unset;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                height: calc(var(--border-width) * 2);
+            }
+
+            &[aria-current] {
+                color: var(--dark);
+            }
+
+            &[aria-current]::before {
+                top: 0;
+                height: unset;
+
+                color: var(--dark);
+
+                background-image: linear-gradient(hsla(0, 0%, 100%, 0.25), hsla(0, 0%, 100%, 0.125));
+                opacity: 1;
             }
         }
 
-        > .accordion__button {
-            
-            &:hover,
-            &:focus { 
-                text-decoration: none;
+        a > span{
+            z-index: 5;
+        }
 
-                [class*="__label"] {
-                    text-decoration: underline;
+        span {
+            display: block;
+        } 
+
+        span.title {
+            font-weight: var(--body-font-weight-bold);
+        }
+
+        span.tagline {
+            font-size: var(--font-size-sm);
+            opacity: 0.75;
+        }
+
+        li {
+            --current-color: null;
+            a:not([aria-current])::before, 
+            a[aria-current] {
+                background-color: var(--current-color);
+            }
+        }
+
+        li.library {
+            --current-color: var(--library);
+        }
+
+        li.glossary {
+            --current-color: var(--glossary);
+        }
+
+        li.classroom {
+            --current-color: var(--classroom);
+        }
+
+    }
+
+    #es-translate {
+        color: white;
+        
+        background-image: linear-gradient(#d2593f,#bf3823);
+        
+    }
+
+    @include breakpoint.breakpoint-down(lg) {
+
+        .vl-header__logo,
+        .vl-header__menu {
+            text-align: center;
+        }
+
+        .vl-header__logo {
+            border-bottom-width: var(--border-width);
+            border-bottom-style: var(--border-style);
+            border-bottom-color: inherit;
+        }
+
+    span.tagline {
+        display: none;
+        }
+    }
+
+    @include breakpoint.breakpoint-up(lg) {
+        .vl-header {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .vl-header__logo,
+        .vl-header__menu {
+            flex: 1 1 50%;
+        }
+
+        span.title {
+            font-size: var(--font-size-lg);
+        }
+    }
+
+    // Module Breadcrumb
+
+    .module-breadcrumb {
+
+        ul {
+            @extend %list-style-nav;
+
+            li {
+                position: relative;
+            }
+
+            > li > .nav__dropdown {
+                position: absolute;
+
+                width: 300px;
+                
+                background-color: white;
+            }
+        }
+
+        > ul {
+            display: flex;
+            align-items: center;
+            font-size: var(--font-size-md);
+        }
+
+        > ul > li:not(:last-child) {
+            border-right-width: var(--border-width);
+            border-right-style: var(--border-style);
+            border-right-color: inherit;
+        }
+
+        > ul > li:first-child > a {
+            --subtle-fill-opacity: 0 !important;
+        }
+
+        > ul > li > .button {
+            --button-padding-y: 0.75em;
+            --button-border-radius: 0;
+            --button-font-weight: var(--body-font-weight-normal);
+
+            &[aria-expanded="true"] {
+                background-color: white;
+                color: var(--canvas-link);
+            }
+        }
+
+        .nav__dropdown > .accordion {
+            
+            --accordion-panel-padding-x: var(--button-padding-x);
+            --accordion-panel-padding-y: var(--button-padding-y);
+
+            > .accordion__button.current {
+                justify-content: start;
+                opacity: 0.75;
+                cursor: default;
+                font-weight: var(--body-font-weight-bold);
+
+                &::before {
+                    --icon-size: 1em;
+                    content: '\f10e';
+                    
+                    display: none;
+                }
+            }
+
+            > .accordion__button {
+                
+                &:hover,
+                &:focus { 
+                    text-decoration: none;
+
+                    [class*="__label"] {
+                        text-decoration: underline;
+                    }
                 }
             }
         }
+
     }
 
-}
+} // end @layer
 
 //////////////////////////////////////////////
 // E. All Modules

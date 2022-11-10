@@ -30,10 +30,15 @@ In this file:
 $columns: 12;
 $rows: math.div($columns, 2);
 
+// Scoped to Root
+
+:root {
+    --grid-divider-gap: var(--spacer-3);
+}
+
 // Scoped to Block
 
 %grid-divider-vars {
-    --grid-divider-gap: var(--spacer-3);
 
     --grid-divider-border-width: var(--border-width);
     --grid-divider-border-width: var(--border-width);
