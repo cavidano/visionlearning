@@ -57,7 +57,7 @@ In this file:
 
     --dark-text: white;
     --dark-border: hsla(0, 0%, 100%, 0.125);
-    --dark-link: #21b2fa;
+    --dark-link: #32baff;
     --dark-confirm: #00a242;
     --dark-warn: #fe3c3e;
 
@@ -242,7 +242,7 @@ $theme-colors: (
             --background-color: var(--dark);
             --text-color: var(--dark-text);
             --border-color: var(--dark-border);
-            --link-color: var(--dark-link);
+            --canvas-link: var(--dark-link);
             --confirm-color: var(--dark-confirm);
             --warn-color: var(--dark-warn);
         }

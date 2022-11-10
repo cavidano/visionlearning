@@ -311,126 +311,124 @@ In this file:
 
     }
 
-} // end @layer
+    //////////////////////////////////////////////
+    // E. All Modules
+    //////////////////////////////////////////////
 
-//////////////////////////////////////////////
-// E. All Modules
-//////////////////////////////////////////////
+    .discipline-divider {
+        padding: var(--spacer-4) var(--spacer-2);
 
-.discipline-divider {
-    padding: var(--spacer-4) var(--spacer-2);
+        h2.h3 {
+            margin-bottom: unset;
+            line-height: unset;
+        }
 
-    h2.h3 {
-        margin-bottom: unset;
-        line-height: unset;
     }
 
-}
+    .discipline-divider {
+        background-position: center right;
+        background-size: contain;
+        background-repeat: no-repeat;
 
-.discipline-divider {
-    background-position: center right;
-    background-size: contain;
-    background-repeat: no-repeat;
+        &.biology {
+            background-image: url(~/images/discipline-biology-3x2.jpg);
+        }
 
-    &.biology {
-        background-image: url(~/images/discipline-biology-3x2.jpg);
+        &.chemistry {
+            background-image: url(~/images/discipline-chemistry-3x2.jpg);
+        }
+
+        &.earth-science {
+            background-image: url(~/images/discipline-earth-science-3x2.jpg);
+        }
+
+        &.general-science {
+            background-image: url(~/images/discipline-general-science-3x2.jpg);
+        }
+
+        &.profiles-in-science {
+            background-image: url(~/images/discipline-profiles-in-science-3x2.jpg);
+        }
+
+        &.math-in-science {
+            background-image: url(~/images/discipline-math-in-science-3x2.jpg);
+        }
+
+        &.physics {
+            background-image: url(~/images/discipline-physics-3x2.jpg);
+        }
+
+        &.process-of-science {
+            background-image: url(~/images/discipline-process-of-science-3x2.jpg);
+        }
     }
 
-    &.chemistry {
-        background-image: url(~/images/discipline-chemistry-3x2.jpg);
+    //////////////////////////////////////////////
+    // E. All Modules
+    //////////////////////////////////////////////
+
+    .terms-alphabetical {
+        font-size: var(--font-size-sm);
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        > button {
+            border-radius: var(--button-border-radius);
+            padding: var(--button-padding-y) var(--button-padding-x);
+            // margin: 0.125em;
+        }
+
+        > button[aria-current] {
+            font-weight: bold;
+            text-decoration: underline;
+            background-color: white;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+
+            span {
+                display: block;
+                transform: scale(1.25);
+            }
+            
+        }
     }
 
-    &.earth-science {
-        background-image: url(~/images/discipline-earth-science-3x2.jpg);
-    }
-
-    &.general-science {
-        background-image: url(~/images/discipline-general-science-3x2.jpg);
-    }
-
-    &.profiles-in-science {
-        background-image: url(~/images/discipline-profiles-in-science-3x2.jpg);
-    }
-
-    &.math-in-science {
-        background-image: url(~/images/discipline-math-in-science-3x2.jpg);
-    }
-
-    &.physics {
-        background-image: url(~/images/discipline-physics-3x2.jpg);
-    }
-
-    &.process-of-science {
-        background-image: url(~/images/discipline-process-of-science-3x2.jpg);
-    }
-}
-
-//////////////////////////////////////////////
-// E. All Modules
-//////////////////////////////////////////////
-
-.terms-alphabetical {
-    font-size: var(--font-size-sm);
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    > button {
-        border-radius: var(--button-border-radius);
-        padding: var(--button-padding-y) var(--button-padding-x);
-        // margin: 0.125em;
-    }
-
-    > button[aria-current] {
-        font-weight: bold;
-        text-decoration: underline;
-        background-color: white;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
-
-         span {
-            display: block;
-            transform: scale(1.25);
-         }
+    .tabs-nav {
         
+        > li > button::before {
+            background-color: var(--dark);
+        }
+
+        &.library > li > *::before {
+            background-color: var(--library);
+        }
+
+        &.glossary > li > *::before {
+            background-color: var(--glossary);
+        }
+
+        &.classroom > li > *::before {
+            background-color: var(--classroom);
+        }
     }
-}
 
-.tabs-nav {
-    
-    > li > button::before {
-        background-color: var(--dark);
+    .tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
+        color: var(--canvas-link);
     }
 
-    &.library > li > *::before {
-        background-color: var(--library);
+    [data-logo="brand"] {
+        > svg{
+            fill: currentColor;
+        }
     }
 
-    &.glossary > li > *::before {
-        background-color: var(--glossary);
+    // About Menu
+
+    .about-menu {
+        a:not([aria-current]){
+            color: var(--a11y-link-color);
+        }
     }
 
-    &.classroom > li > *::before {
-        background-color: var(--classroom);
-    }
-}
-
-.tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
-    color: var(--canvas-link);
-}
-
-[data-logo="brand"] {
-    > svg{
-        fill: currentColor;
-    }
-}
-
-//////////////////////////////////////////////
-// F. About Menu
-//////////////////////////////////////////////
-
-.about-menu {
-    a:not([aria-current]){
-        color: var(--a11y-link-color);
-    }
-}
+} // end @layer

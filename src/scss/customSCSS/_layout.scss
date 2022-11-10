@@ -3,16 +3,7 @@
 In this file:
 
 // A. Modules
-// C. Grid Overview (Homepage)
-// D. Grid Discipline
-// E. Discipline Banner (Modal)
-// F. Landing (Library, Glossary)
-// H. Featured Material
-// I. Article (Module)
-// J. Grid Global Foot
-// K. Wrap Viewport Height
-// L. About Pages
-
+// B. Components
 
 */
 
@@ -24,35 +15,7 @@ In this file:
 @use "../breakpoint";
 
 //////////////////////////////////////////////
-// C. Grid Overview (Homepage)
-//////////////////////////////////////////////
-
-.grid--introduction {
-    --columns: 2;
-    --grid-gap: var(--spacer-4);
-
-    @include breakpoint.breakpoint-up(lg) {
-      
-      [class*="--discipline"] {
-        grid-area: disciplines;
-      }
-
-      .vl {
-        grid-area: vl;
-      }
-
-      .ngss {
-        grid-area: ngss;
-      }
-      
-      grid-template-areas: 
-        "disciplines disciplines"
-        "vl ngss";
-    }
-}
-
-//////////////////////////////////////////////
-// D. Grid Discipline
+// B. Components
 //////////////////////////////////////////////
 
 // Grid Discipline Component
@@ -111,13 +74,11 @@ In this file:
         aspect-ratio: 4 / 3;
       }
 
-
     }
 
     @include breakpoint.breakpoint-up(lg) {
       --grid-columns: 4;
     }
-
 }
 
 // Grid Discipline Info
