@@ -1,205 +1,68 @@
 ---
-layout: global
-title: "Glossary Term"
+layout: landing
+title: Glossary • Term
 ---
 
-<div class="wrap-viewport-height">
-    
-    {% include global-header.html %}
+<div class="position-relative">
 
-    <main id="skip-header-content">
+    <div id="module-list-view">
 
-        <div class="height-100 padding-y-5">
+        <section>
 
-            <div class="landing wide margin-x-auto theme-canvas">
+            <header>
+                <h2 class="screen-reader-only">Alphabetical</h2>
+            </header>
 
-                <div class="landing__main theme-canvas">
+            <div class="button-group theme-glossary border-radius padding-2 justify-content-between">
+
+                <button class="button button--has-icon button--outline" id="go-back">
+                    <span class="icon icon-arrow-left"></span>
+                    <span class="button__text">Back</span> 
+                </button>
                 
-                    <div class="materials">
-
-                        <div class="materials__aside font-size-md padding-2 border-right--lg">
-
-                            <div class="grid gap-3">
-
-                                {% include materials-sidebar-mobile-buttons.html %}
-
-                                {% include materials-sidebar-search.html search_type="Glossary" %}
-
-                                <nav class="collapse display-block--lg" id="material-nav">
-                                    
-                                    <ul
-                                        class="tabs-nav glossary border border-radius"
-                                        id="material-nav"
-                                        role="menu">
-
-                                        <li>
-                                            <button
-                                                id="highlights"
-                                                aria-selected="true"
-                                                role="tab">
-                                                    Highlights
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <a
-                                                id="filter-all-disciplines"
-                                                aria-selected="false"
-                                                role="tab"
-                                                href="{{ site.url }}/glossary/a-z.html">
-                                                    A-Z
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-biology"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Biology
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-chemistry"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Chemistry
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-earth-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Earth Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-general-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    General Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-profiles-in-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Inside Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-math-in-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Math in Science
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-physics"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Physics
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button
-                                                id="filter-process-of-science"
-                                                aria-selected="false"
-                                                role="tab">
-                                                    Process of Science
-                                            </button>
-                                        </li>
-                                    </ul>
-
-                                </nav>
-
-                            </div>
-
-                        </div>
-
-                        <div class="materials__main">
-
-                            <div class="padding-2 position-relative">
-
-                                <div id="module-list-view">
-                            
-                                    <section>
-
-                                        <header>
-                                            <h2 class="screen-reader-only">Alphabetical</h2>
-                                        </header>
-
-                                        <div class="button-group theme-glossary border-radius padding-2 justify-content-between">
-
-                                            <button class="button button--has-icon button--outline" id="go-back">
-                                                <span class="icon icon-arrow-left"></span>
-                                                <span class="button__text">Back</span> 
-                                            </button>
-                                            
-                                        </div>
-
-                                        <section class="container margin-y-4" >
-
-                                                <h1 class="h2 flex-row">
-                                                    Absolute Zero 
-                                                    <a class="button button--icon-only font-size-lg margin-left-2" href="#1" aria-label="Home">
-                                                        <span class="icon icon-pronounciation" aria-hidden="true"></span>
-                                                    </a>
-                                                </h1>
-
-                                                <p>
-                                                    <em>
-                                                        [noun]
-                                                    </em>
-                                                </p>
-
-                                                <p>
-                                                    The theoretical lowest temperature possible at which all molecular motion ceases. Absolute zero, 0 K or -273.15°C, has never been reached.
-                                                </p>
-
-                                                <h2 class="h6">Appears in modules:</h2>
-                                            
-                                                <ul class="font-size-md">
-                                                    <li>
-                                                        <p>
-                                                            <a href="#1">Energy</a>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <a href="#1">States of Matter</a>
-                                                        </p>
-                                                    </li>
-                                                    <li>
-                                                        <p>
-                                                            <a href="#1">Temperature</a>
-                                                        </p>
-                                                    </li>
-                                                </ul>
-
-                                            </section>
-
-                                    </section>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-                    </div>
-
-                </div>
-                
-                {% include landing-sidebar.html %}
-
             </div>
-            <!-- .landing -->
 
-        </div>
+            <section class="container margin-y-4" >
 
-    </main>
-    
+                    <h1 class="h2 flex-row">
+                        Absolute Zero 
+                        <a class="button button--icon-only font-size-lg margin-left-2" href="#1" aria-label="Home">
+                            <span class="icon icon-pronounciation" aria-hidden="true"></span>
+                        </a>
+                    </h1>
+
+                    <p>
+                        <em>
+                            [noun]
+                        </em>
+                    </p>
+
+                    <p>
+                        The theoretical lowest temperature possible at which all molecular motion ceases. Absolute zero, 0 K or -273.15°C, has never been reached.
+                    </p>
+
+                    <h2 class="h6">Appears in modules:</h2>
+                
+                    <ul class="font-size-md">
+                        <li>
+                            <p>
+                                <a href="#1">Energy</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#1">States of Matter</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a href="#1">Temperature</a>
+                            </p>
+                        </li>
+                    </ul>
+
+                </section>
+
+        </section>
+    </div>
 </div>

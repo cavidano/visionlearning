@@ -1,1 +1,152 @@
+{% if include.search_type %}
+    {% assign placeholder_text = include.search_type %}
+{% else %}
+    {% assign placeholder_text = '' %}
+{% endif %}
 
+<div class="grid grid--column-2 gap-1 display-none--lg">
+
+    <button
+        class="button button--has-icon text-color-link"
+        data-toggle="collapse"
+        data-target-toggle="#material-nav"
+        data-target-close="#material-search">
+            <span class="icon icon-menu"></span>
+            <span class="button__text">Browse</span>
+    </button>
+
+    <button
+        class="button button--has-icon text-color-link"
+        data-toggle="collapse"
+        data-target-toggle="#material-search"
+        data-target-close="#material-nav">
+            <span class="icon icon-search"></span>
+            <span class="button__text">Search</span>
+    </button>
+    
+</div>
+
+<div
+    class="form-entry collapse display-block--lg"
+    id="material-search"
+    data-focus-first>
+
+    <div class="form-entry__field">
+
+        <label class="form-entry__field__label screen-reader-only" for="search-example">
+            Search
+        </label>
+        
+        <span class="form-entry__field__input">
+            <span class="opacity-50 icon icon-search" aria-hidden="true"></span>
+            <input
+                type="text"
+                name="search-example"
+                id="search-example"
+                placeholder="Search {{ placeholder_text }}"
+                autocomplete="off"
+            />
+        </span>
+
+    </div>
+
+</div>
+
+<nav class="collapse display-block--lg" id="material-nav">
+        
+    <ul
+        class="tabs-nav library border border-radius"
+        id="material-nav"
+        role="menu">
+
+        <li>
+            <a
+                href="{{ site.url }}/library"
+                {% if page.title == 'Library • Highlights' %}
+                aria-current="page"
+                {% endif %}>
+                    Highlights
+            </a>
+        </li>
+        <li>
+            <a
+                href="{{ site.url }}/library/all-disciplines.html"
+                {% if page.title == 'Library • All Disciplines' %}
+                aria-current="page"
+                {% endif %}>
+                    All Disciplines
+            </a>
+        </li>
+        <li>
+            <button
+                id="filter-biology"
+                aria-selected="false"
+                role="tab">
+                    Biology
+            </button>
+        </li>
+        <li>
+            <button
+                id="filter-chemistry"
+                aria-selected="false"
+                role="tab">
+                    Chemistry
+            </button>
+        </li>
+        <li>
+            <button
+                id="filter-earth-science"
+                aria-selected="false"
+                role="tab">
+                    Earth Science
+            </button>
+        </li>
+        <li>
+            <button
+                id="filter-general-science"
+                aria-selected="false"
+                role="tab">
+                    General Science
+            </button>
+        </li>
+        <li>
+            <button
+                id="filter-profiles-in-science"
+                aria-selected="false"
+                role="tab">
+                    Inside Science
+            </button>
+        </li>
+        <li>
+            <button
+                id="filter-math-in-science"
+                aria-selected="false"
+                role="tab">
+                    Math in Science
+            </button>
+        </li>
+        <li>
+            <button
+                id="filter-physics"
+                aria-selected="false"
+                role="tab">
+                    Physics
+            </button>
+        </li>
+        <li>
+            <button
+                id="filter-process-of-science"
+                aria-selected="false"
+                role="tab">
+                    Process of Science
+            </button>
+        </li>
+    </ul>
+
+</nav>
+
+<div>
+    <a class="button text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
+        <span class="button__text">Interactive Animations</span>
+    </a>
+</div>
