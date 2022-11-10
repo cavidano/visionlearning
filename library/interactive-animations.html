@@ -1,209 +1,72 @@
 ---
-layout: global
+layout: landing
 title: "Library"
 ---
 
-{% include global-header.html %}
+<div class="position-relative">
 
-<main id="skip-header-content">
+    <header class="container padding-y-3 theme-library border-radius" style="--backdrop-fixed-height: unset">
 
-    <div class="padding-y-5">
+        <h2>Interactive Animations</h2>
+        <p>
+            Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
+        </p>
 
-        <div class="landing wide margin-x-auto theme-canvas">
+    </header>
 
-            <div class="landing__main">
+    <hr class="margin-y-3" />
+
+    <section class="grid grid--column-2--md gap-2">
+
+    {% for item in site.data.interactiveAnimations %}
+        {% assign title = item.Title %}                         
+        {% assign description = item.Description %}                       
+        {% assign imgSlug = item.ImgSlug %}                       
+        {% assign relatedModule = item.Module %}                      
+        {% assign url = item.LinkURL %}                      
+
+        <div class="card border">
+
+            <a href="{{ url }}" target="_blank">
+                <img class="box-shadow-1x" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
+            </a>
+
+            <div class="card__body font-size-md">
+
+                <h2 class="h5">
+                    <a href="{{ url }}" target="_blank">{{ title }}</a>
+                </h2>
+
+                <p>
+                    {{ description }}
+                </p>
+
+                <p>                                        
+                    <em> 
+                        Reading:
+                        <a href="#1" class="text-color-link">
+                            {{ relatedModule }}
+                        </a>
+                    </em>
+                </p>
                 
-                <div class="materials">
-
-                    <div class="materials__aside font-size-md padding-2 border-right--lg">
-
-                        <div class="grid gap-3">
-
-                            {% include materials-sidebar-mobile-buttons.html %}
-
-                            {% include materials-sidebar-search.html search_type="Library" %}
-
-                            <nav class="collapse display-block--lg" id="material-nav">
-                                    
-                                <ul
-                                    class="tabs-nav library border border-radius"
-                                    id="material-nav"
-                                    role="menu">
-
-                                    <li>
-                                        <a
-                                            id="highlights"
-                                            aria-selected="false"
-                                            href="{{ site.url }}/library"
-                                            role="tab">
-                                                Highlights
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            id="filter-all-disciplines"
-                                            aria-selected="false"
-                                            role="tab"
-                                            href="{{ site.url }}/library/all-disciplines.html">
-                                                All Disciplines
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-biology"
-                                            aria-selected="false"
-                                            role="tab">
-                                                Biology
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-chemistry"
-                                            aria-selected="false"
-                                            role="tab">
-                                                Chemistry
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-earth-science"
-                                            aria-selected="false"
-                                            role="tab">
-                                                Earth Science
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-general-science"
-                                            aria-selected="false"
-                                            role="tab">
-                                                General Science
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-profiles-in-science"
-                                            aria-selected="false"
-                                            role="tab">
-                                                Inside Science
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-math-in-science"
-                                            aria-selected="false"
-                                            role="tab">
-                                                Math in Science
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-physics"
-                                            aria-selected="false"
-                                            role="tab">
-                                                Physics
-                                        </button>
-                                    </li>
-                                    <li>
-                                        <button
-                                            id="filter-process-of-science"
-                                            aria-selected="false"
-                                            role="tab">
-                                                Process of Science
-                                        </button>
-                                    </li>
-                                </ul>
-                                    
-                                <a class="button margin-y-2 text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
-                                    <span class="button__text">Interactive Animations</span>
-                                </a>
-
-                            </nav>
-
-                        </div>
-
-                    </div>
-
-                    <div class="materials__main">
-
-                        <div class="padding-2 position-relative">
-                  
-                            <header class="container padding-y-3 theme-library border-radius" style="--backdrop-fixed-height: unset">
-
-                                <h2>Interactive Animations</h2>
-                                <p>
-                                    Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
-                                </p>
-
-                            </header>
-
-                            <hr class="margin-y-3" />
-
-                            <section class="grid grid--column-2--md gap-2">
-
-                            {% for item in site.data.interactiveAnimations %}
-                                {% assign title = item.Title %}                         
-                                {% assign description = item.Description %}                       
-                                {% assign imgSlug = item.ImgSlug %}                       
-                                {% assign relatedModule = item.Module %}                      
-                                {% assign url = item.LinkURL %}                      
-
-                                <div class="card border">
-
-                                    <a href="{{ url }}" target="_blank">
-                                        <img class="box-shadow-1x" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
-                                    </a>
-
-                                    <div class="card__body font-size-md">
-
-                                        <h2 class="h5">
-                                            <a href="{{ url }}" target="_blank">{{ title }}</a>
-                                        </h2>
-
-                                        <p>
-                                            {{ description }}
-                                        </p>
-
-                                        <p>                                        
-                                            <em> 
-                                                Reading:
-                                                <a href="#1" class="text-color-link">
-                                                    {{ relatedModule }}
-                                                </a>
-                                            </em>
-                                        </p>
-                                        
-                                    </div>
-
-                                    <div class="card__foot border-top font-size-sm">
-
-                                        <a class="button button--has-icon--disperse text-color-link" href="{{ url }}" target="_blank">
-                                            <span class="button__text">
-                                                View Animation
-                                            </span>
-                                            <span class="icon icon-arrow-right"></span>
-                                        </a>
-                                        
-                                    </div>
-
-                                </div>
-
-                            {% endfor %}
-
-                            </section>
-                            
-                        </div>
-
-                    </div>
-                    
-                </div>
-
             </div>
+
+            <div class="card__foot border-top font-size-sm">
+
+                <a class="button button--has-icon--disperse text-color-link" href="{{ url }}" target="_blank">
+                    <span class="button__text">
+                        View Animation
+                    </span>
+                    <span class="icon icon-arrow-right"></span>
+                </a>
                 
-            {% include landing-sidebar.html %}
-                
+            </div>
+
         </div>
 
-    </div>
+    {% endfor %}
 
-</main>
+    </section>
+    
+</div>

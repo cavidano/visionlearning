@@ -1,0 +1,138 @@
+---
+layout: global
+---
+
+{% include global-header.html %}
+
+<main id="skip-header-content">
+
+    <div class="padding-y-5">
+
+        <div class="container wide">
+
+            <div class="grid grid--column-6--lg grid--divider--fill-y">
+
+                <div>
+
+                    <div class="grid grid--divider font-size-md">
+                        
+                        {% include materials-sidebar-mobile-buttons.html %}
+                        {% include materials-sidebar-search.html search_type="Library" %}
+
+                        <nav class="collapse display-block--lg" id="material-nav">
+                                
+                            <ul
+                                class="tabs-nav library border border-radius"
+                                id="material-nav"
+                                role="menu">
+
+                                <li>
+                                    <a
+                                        href="{{ site.url }}/library"
+                                        {% if page.title == 'Library • Highlights' %}
+                                        aria-current="page"
+                                        {% endif %}>
+                                            Highlights
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="{{ site.url }}/library/all-disciplines.html"
+                                        {% if page.title == 'Library • All Disciplines' %}
+                                        aria-current="page"
+                                        {% endif %}>
+                                            All Disciplines
+                                    </a>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-biology"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Biology
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-chemistry"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Chemistry
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-earth-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Earth Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-general-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            General Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-profiles-in-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Inside Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-math-in-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Math in Science
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-physics"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Physics
+                                    </button>
+                                </li>
+                                <li>
+                                    <button
+                                        id="filter-process-of-science"
+                                        aria-selected="false"
+                                        role="tab">
+                                            Process of Science
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </nav>
+
+                        <div>
+                            <a class="button text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
+                                <span class="button__text">Interactive Animations</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="grid__colspan-4--lg">
+
+                    {{ content }}
+
+                </div>
+
+                {% include landing-sidebar.html %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
