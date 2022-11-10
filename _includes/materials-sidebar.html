@@ -1,33 +1,35 @@
-{% if include.search_type %}
-    {% assign placeholder_text = include.search_type %}
-{% else %}
-    {% assign placeholder_text = '' %}
+{% if page.title contains 'Library' %}
+    {% assign placeholder_text = 'Library' %}
+    {% assign class_name = 'library' %}
+{% else if page.title contains 'Glossary'  %}
+    {% assign placeholder_text = 'Glossary' %}
+    {% assign class_name = 'glossary' %}
 {% endif %}
-
-<div class="grid grid--column-2 gap-1 display-none--lg">
-
-    <button
-        class="button button--has-icon text-color-link"
-        data-toggle="collapse"
-        data-target-toggle="#material-nav"
-        data-target-close="#material-search">
-            <span class="icon icon-menu"></span>
-            <span class="button__text">Browse</span>
-    </button>
-
-    <button
-        class="button button--has-icon text-color-link"
-        data-toggle="collapse"
-        data-target-toggle="#material-search"
-        data-target-close="#material-nav">
-            <span class="icon icon-search"></span>
-            <span class="button__text">Search</span>
-    </button>
-    
-</div>
 
 <div class="grid grid--divider font-size-md">
 
+    <div class="grid grid--column-2 gap-1 display-none--lg">
+
+        <button
+            class="button button--has-icon text-color-link"
+            data-toggle="collapse"
+            data-target-toggle="#material-nav"
+            data-target-close="#material-search">
+                <span class="icon icon-menu"></span>
+                <span class="button__text">Browse</span>
+        </button>
+
+        <button
+            class="button button--has-icon text-color-link"
+            data-toggle="collapse"
+            data-target-toggle="#material-search"
+            data-target-close="#material-nav">
+                <span class="icon icon-search"></span>
+                <span class="button__text">Search</span>
+        </button>
+            
+    </div>
+        
     <div
         class="form-entry collapse display-block--lg"
         id="material-search"
@@ -38,7 +40,7 @@
             <label class="form-entry__field__label screen-reader-only" for="search-example">
                 Search
             </label>
-            
+                
             <span class="form-entry__field__input">
                 <span class="opacity-50 icon icon-search" aria-hidden="true"></span>
                 <input
@@ -55,11 +57,13 @@
     </div>
 
     <nav class="collapse display-block--lg" id="material-nav">
-            
+                
         <ul
-            class="tabs-nav library border border-radius"
+            class="tabs-nav {{ class_name }} border border-radius"
             id="material-nav"
             role="menu">
+
+            {% if page.title contains 'Library' %}
 
             <li>
                 <a
@@ -70,6 +74,7 @@
                         Highlights
                 </a>
             </li>
+                
             <li>
                 <a
                     href="{{ site.url }}/library/all-disciplines.html"
@@ -79,6 +84,31 @@
                         All Disciplines
                 </a>
             </li>
+
+            {% else if page.title contains 'Glossary'  %}
+
+            <li>
+                <a
+                    href="{{ site.url }}/glossary"
+                    {% if page.title == 'Glossary • Highlights' %}
+                    aria-current="page"
+                    {% endif %}>
+                        Highlights
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="{{ site.url }}/glossary/a-z.html"
+                    {% if page.title == 'Glossary • A-Z' %}
+                    aria-current="page"
+                    {% endif %}>
+                        A-Z
+                </a>
+            </li>
+
+            {% endif %}
+
             <li>
                 <button
                     id="filter-biology"
@@ -145,12 +175,21 @@
             </li>
         </ul>
 
-    </nav>
+        </nav>
 
-    <div>
-        <a class="button text-color-link width-100" href="{{ site.url }}/library/interactive-animations.html">
+        {% if page.title contains 'Library' %}
+
+        <div>
+        
+        <a
+            class="button text-color-link width-100"
+            href="{{ site.url }}/library/interactive-animations.html">
             <span class="button__text">Interactive Animations</span>
         </a>
-    </div>
+        </div>
+            
+
+        {% endif %}
+
 
 </div>
