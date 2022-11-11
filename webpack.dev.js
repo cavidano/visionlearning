@@ -22,7 +22,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.ReadingToggles}.html`;
+const devPage = `${devPages.Color}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

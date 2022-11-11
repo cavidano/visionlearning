@@ -37,7 +37,7 @@ In this file:
     --light-h: 0; 
     --light-s: 0%; 
     --light-l: 0%;
-    --light-o: 0.0375;
+    --light-o: 0.0625;
     
     --light: hsla(
         var(--light-h),
@@ -85,22 +85,6 @@ In this file:
     --classroom-confirm: #41e0f2;
     --classroom-warn: #ffa3a4;
 
-    // Associated Dark Colors
-
-    --dark-text: white;
-    --dark-border: hsla(0, 0%, 100%, 0.125);
-    --dark-link: #65a9cc;
-    --dark-confirm: #00a242;
-    --dark-warn: #fe3c3e;
-
-    // Associated Light Colors
-
-    --light-text: var(--dark);
-    --light-border: hsla(0, 0%, 50%, 0.25);
-    --light-link: #00549a;
-    --light-confirm: #007e35;
-    --light-warn: #ce1736;
-
     // Canvas Correlated Colors
 
     --canvas-text: var(--dark);
@@ -108,6 +92,22 @@ In this file:
     --canvas-link: #00549a;
     --canvas-confirm: #008237;
     --canvas-warn: #e4193c;
+
+    // Associated Light Colors
+
+    --light-text: currentColor;
+    --light-border: hsla(0, 0%, 50%, 0.25);
+    --light-link: var(--canvas-link);
+    --light-confirm: #007e35;
+    --light-warn: #ce1736;
+
+    // Associated Dark Colors
+
+    --dark-text: white;
+    --dark-border: hsla(0, 0%, 100%, 0.125);
+    --dark-link: #65a9cc;
+    --dark-confirm: #00a242;
+    --dark-warn: #fe3c3e;
 
     // Discipline Colors
 
@@ -298,10 +298,15 @@ $theme-colors: (
         }
     }
 
-
 } // end @layer
 
     @media (prefers-color-scheme: dark) {
+
+        :root {
+            --light-l: 70%;
+
+            --canvas-link: var(--dark-link);
+        }
 
         .theme-canvas--prefers {
             --background-color: var(--dark);
@@ -312,6 +317,7 @@ $theme-colors: (
             --warn-color: var(--dark-warn);
         }
     }
+
 //////////////////////////////////////////////
 // E. Discipline Utilities
 //////////////////////////////////////////////
