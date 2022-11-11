@@ -6,6 +6,7 @@ title: Library • Interactive Animations
 <header class="container padding-y-3 theme-library">
 
     <h2>Interactive Animations</h2>
+
     <p>
         Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
     </p>
@@ -14,7 +15,7 @@ title: Library • Interactive Animations
 
 <hr class="divider" />
 
-<section class="grid grid--column-2--md gap-2">
+<section class="grid grid--column-2--md grid--divider--fill-y">
 
 {% for item in site.data.interactiveAnimations %}
     {% assign title = item.Title %}                         
@@ -23,7 +24,7 @@ title: Library • Interactive Animations
     {% assign relatedModule = item.Module %}                      
     {% assign url = item.LinkURL %}                      
 
-    <div class="card border">
+    <div class="card">
 
         <a href="{{ url }}" target="_blank">
             <img class="box-shadow-1x" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
