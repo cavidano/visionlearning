@@ -4,6 +4,9 @@
 {% else if page.title contains 'Glossary'  %}
     {% assign placeholder_text = 'Glossary' %}
     {% assign class_name = 'glossary' %}
+{% else if page.title contains 'Classroom'  %}
+    {% assign placeholder_text = 'Courses' %}
+    {% assign class_name = 'glossary' %}
 {% endif %}
 
 <div class="grid grid--divider font-size-md">
