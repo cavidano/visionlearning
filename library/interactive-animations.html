@@ -24,10 +24,14 @@ title: Library • Interactive Animations
     {% assign relatedModule = item.Module %}                      
     {% assign url = item.LinkURL %}                      
 
-    <div class="card">
+    <div class="card theme-light">
 
         <a href="{{ url }}" target="_blank">
-            <img class="box-shadow-1x" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
+
+            <div class="padding-2">
+                <img class="border-radius box-shadow-1" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg" alt="Placeholder" />
+            </div>
+            
         </a>
 
         <div class="card__body font-size-md">

@@ -37,7 +37,7 @@ In this file:
     --light-h: 0; 
     --light-s: 0%; 
     --light-l: 0%;
-    --light-o: 0.0625;
+    --light-o: 0.05;
     
     --light: hsla(
         var(--light-h),
@@ -304,6 +304,7 @@ $theme-colors: (
 
         :root {
             --light-l: 70%;
+            --light-o: 0.0625;
 
             --canvas-link: var(--dark-link);
         }
