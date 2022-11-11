@@ -3,70 +3,66 @@ layout: landing
 title: Library • Interactive Animations
 ---
 
-<div class="position-relative">
+<header class="container padding-y-3 theme-library">
 
-    <header class="container padding-y-3 theme-library border-radius" style="--backdrop-fixed-height: unset">
+    <h2>Interactive Animations</h2>
+    <p>
+        Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
+    </p>
 
-        <h2>Interactive Animations</h2>
-        <p>
-            Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
-        </p>
+</header>
 
-    </header>
+<hr class="divider" />
 
-    <hr class="margin-y-3" />
+<section class="grid grid--column-2--md gap-2">
 
-    <section class="grid grid--column-2--md gap-2">
+{% for item in site.data.interactiveAnimations %}
+    {% assign title = item.Title %}                         
+    {% assign description = item.Description %}                       
+    {% assign imgSlug = item.ImgSlug %}                       
+    {% assign relatedModule = item.Module %}                      
+    {% assign url = item.LinkURL %}                      
 
-    {% for item in site.data.interactiveAnimations %}
-        {% assign title = item.Title %}                         
-        {% assign description = item.Description %}                       
-        {% assign imgSlug = item.ImgSlug %}                       
-        {% assign relatedModule = item.Module %}                      
-        {% assign url = item.LinkURL %}                      
+    <div class="card border">
 
-        <div class="card border">
+        <a href="{{ url }}" target="_blank">
+            <img class="box-shadow-1x" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
+        </a>
 
-            <a href="{{ url }}" target="_blank">
-                <img class="box-shadow-1x" src="{{ site.url }}/images/interactive-animation-thumbnails/i-a-{{ imgSlug }}.jpg">
-            </a>
+        <div class="card__body font-size-md">
 
-            <div class="card__body font-size-md">
+            <h2 class="h5">
+                <a href="{{ url }}" target="_blank">{{ title }}</a>
+            </h2>
 
-                <h2 class="h5">
-                    <a href="{{ url }}" target="_blank">{{ title }}</a>
-                </h2>
+            <p>
+                {{ description }}
+            </p>
 
-                <p>
-                    {{ description }}
-                </p>
-
-                <p>                                        
-                    <em> 
-                        Reading:
-                        <a href="#1" class="text-color-link">
-                            {{ relatedModule }}
-                        </a>
-                    </em>
-                </p>
+            <p>                                        
+                <em> 
+                    Reading:
+                    <a href="#1" class="text-color-link">
+                        {{ relatedModule }}
+                    </a>
+                </em>
+            </p>
                 
-            </div>
-
-            <div class="card__foot border-top font-size-sm">
-
-                <a class="button button--has-icon--disperse text-color-link" href="{{ url }}" target="_blank">
-                    <span class="button__text">
-                        View Animation
-                    </span>
-                    <span class="icon icon-arrow-right"></span>
-                </a>
-                
-            </div>
-
         </div>
 
-    {% endfor %}
+        <div class="card__foot border-top font-size-sm">
 
-    </section>
-    
-</div>
+            <a class="button button--has-icon--disperse text-color-link" href="{{ url }}" target="_blank">
+                <span class="button__text">
+                    View Animation
+                </span>
+                <span class="icon icon-arrow-right"></span>
+            </a>
+                
+        </div>
+
+    </div>
+
+{% endfor %}
+
+</section>

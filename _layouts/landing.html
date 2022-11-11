@@ -24,6 +24,42 @@ layout: global
 
                 </div>
 
+                {% if page.title contains 'Classroom' %}
+
+                <div>
+                    <aside class="font-size-md text-align-center">
+
+                        <h6>
+                            Registration is Free
+                        </h6>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolorum suscipit. Repudiandae sed ipsum ad ea natus vero quisquam.
+                        </p>
+
+                        <ul class="grid grid--divider text-color-link">
+
+                            <li>                    
+                                <a class="button button--has-icon--disperse" href="#1">
+                                    <span class="button__text">Register</span>
+                                    <span class="icon icon-caret-right"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="button button--has-icon--disperse" href="#1">
+                                    <span class="button__text">Sign In</span>
+                                    <span class="icon icon-caret-right"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </aside>
+                </div>
+                
+                {% else %}
+
                 <div class="font-size-md text-align-center">
 
                     <h2 class="screen-reader-only">
@@ -44,6 +80,8 @@ layout: global
                     </p>
 
                 </div>
+                
+                {% endif %}
 
             </div>
 
