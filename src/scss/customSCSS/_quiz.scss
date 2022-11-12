@@ -3,7 +3,8 @@
 In this file:
 
 // A. Modules
-// B. Quiz Selectors
+// B. Variables
+// C. Component
 
 */
 
@@ -15,7 +16,20 @@ In this file:
 @use "../../scss/icon" as icon;
 
 //////////////////////////////////////////////
-// B. Quiz Block
+// B. Variables
+//////////////////////////////////////////////
+
+:root {
+    --icon-question-a: "\f15f";
+    --icon-question-b: "\f160";
+    --icon-question-c: "\f161";
+    --icon-question-d: "\f163";
+    --icon-question-e: "\f164";
+    --icon-question-checked: "\f162";
+}
+
+//////////////////////////////////////////////
+// C. Component
 //////////////////////////////////////////////
 
 @layer component {
@@ -68,27 +82,27 @@ In this file:
         }
 
         .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
-            content: "\f13f"; 
+            content: var(--icon-question-a); 
         }
 
         .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
-            content: "\f140";
+            content: var(--icon-question-b);
         }
 
         .form-entry__option__radio:nth-child(3) > label > input ~ .option__label::before {
-            content: "\f141";
+            content: var(--icon-question-c);
         }
 
         .form-entry__option__radio:nth-child(4) > label > input ~ .option__label::before {
-            content: "\f143";
+            content: var(--icon-question-d);
         }
 
         .form-entry__option__radio:nth-child(5) > label > input ~ .option__label::before {
-            content: "\f144";
+            content: var(--icon-question-e);
         }
 
         .form-entry__option__radio > label > input:checked ~ .option__label::before {
-        content: "\f142";
+            content: var(--icon-question-checked);
         }
 
         .form-entry__option__radio > label > input:not(:checked) ~ .option__label::before {

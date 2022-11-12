@@ -2,7 +2,7 @@ const codepoints = require('./visionlearning-icons.json');
 
 module.exports = {
   inputDir: './original-svg', // (required)
-  outputDir: './dist', // (required)
+  outputDir: './dist/icons', // (required)
   fontTypes: ['ttf', 'woff2', 'woff'],
   assetTypes: ['css', 'json', 'html'],
   name: 'visionlearning-icons',

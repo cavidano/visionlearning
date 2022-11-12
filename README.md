@@ -55,11 +55,14 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Acknowledgments
+## Steps to Make Icons
 
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+1.) Save SVG to *original-svg* dir
+
+2.) Run saved icons through svgo:
+
+`svgo -f ./src/icons/original-svg -o ./src/icons/optimized-svg`
+
+3.) Run fantasticon
+
+`fantasticon ./src/icons/optimized-svg -o ./dist/icons`
