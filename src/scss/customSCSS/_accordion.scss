@@ -31,8 +31,8 @@ In this file:
     
     --accordion-active-color: currentColor;
 
-    --accordion-icon-closed: '\f118';
-    --accordion-icon-open: '\f11b';
+    --accordion-icon-closed: "\f116";
+    --accordion-icon-open: "\f119";
 }
 
 //////////////////////////////////////////////
@@ -68,7 +68,7 @@ In this file:
             @extend %icon-font-vars;
             @extend .icon_font;
 
-            --icon-size: 0.5em;
+            --icon-size: 0.25em;
             
             content: var(--accordion-icon-closed);
         }
@@ -127,8 +127,8 @@ In this file:
         --accordion-panel-padding-x: var(--accordion-button-padding-x);
         --accordion-panel-padding-y: var(--accordion-button-padding-y);
 
-        --accordion-icon-closed: '\f13b';
-        --accordion-icon-open: '\f130';
+        --accordion-icon-closed: "\f12a";
+        --accordion-icon-open: "\f134";
 
         > .accordion__button {
             justify-content: start;
