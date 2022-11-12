@@ -32,11 +32,6 @@ In this file:
     --light: #f2edeb;
     --canvas: white;
 
-    // Accessible Link Color
-    // (Used with Canvas and Light Themes)
-
-    --a11y-link: #0066cc;
-
     // Primary Correlated Colors
 
     --primary-text: white;
@@ -57,7 +52,7 @@ In this file:
 
     --dark-text: white;
     --dark-border: hsla(0, 0%, 100%, 0.125);
-    --dark-link: #32baff;
+    --dark-link: #21b2fa;
     --dark-confirm: #00a242;
     --dark-warn: #fe3c3e;
 
@@ -65,7 +60,7 @@ In this file:
 
     --light-text: var(--dark);
     --light-border: hsla(0, 0%, 50%, 0.25);
-    --light-link: var(--a11y-link);
+    --light-link: #0066cc;
     --light-confirm: #007e35;
     --light-warn: #ce1736;
 
@@ -73,7 +68,7 @@ In this file:
 
     --canvas-text: var(--dark);
     --canvas-border: hsla(0, 0%, 50%, 0.25);
-    --canvas-link: var(--a11y-link);
+    --canvas-link: #0066cc;
     --canvas-confirm: #008237;
     --canvas-warn: #e4193c;
 }
@@ -242,7 +237,7 @@ $theme-colors: (
             --background-color: var(--dark);
             --text-color: var(--dark-text);
             --border-color: var(--dark-border);
-            --canvas-link: var(--dark-link);
+            --link-color: var(--dark-link);
             --confirm-color: var(--dark-confirm);
             --warn-color: var(--dark-warn);
         }
