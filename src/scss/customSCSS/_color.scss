@@ -49,10 +49,6 @@ In this file:
     // --dark: #14142f;
     --dark: #131322;
 
-    // Accessible Link Color
-
-    --a11y-link-color: #00549a;
-
     // Associated Primary Colors
 
     --primary-text: white;
@@ -310,7 +306,7 @@ $theme-colors: (
         --light-l: 70%;
         --light-o: 0.0625;
 
-        --canvas-link: var(--dark-link);
+        // --canvas-link: var(--dark-link);
     }
 
     .theme-canvas--prefers {
