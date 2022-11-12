@@ -13,520 +13,322 @@ In this file:
 
 @use "sass:map";
 @use "../breakpoint";
+@use "../grid";
 
 //////////////////////////////////////////////
 // B. Components
 //////////////////////////////////////////////
 
-// Grid Discipline Component
+@layer component {
 
-.grid--discipline {
+  // Grid Discipline Component
 
-    --grid-columns: 1;
-    --grid-gap: null;
+  .grid--discipline {
 
-    grid-template-columns: repeat(var(--grid-columns), 1fr);
+      --grid-columns: 1;
+      --grid-gap: null;
 
-    .backdrop {
-        position: relative;
-
-        overflow: hidden;
-
-        aspect-ratio: 8 / 3;
-
-        min-height: unset;
-
-        max-width: 100%;
-
-        z-index: auto;
-
-        &:nth-child(1), 
-        &:nth-child(5) {
-            transform-origin: left;
-        }
-
-        &:nth-child(4), 
-        &:nth-child(8) {
-            transform-origin: right;
-        }
-
-        &.focused, 
-        &.unfocused {
-            animation-duration: 0.25s;
-            animation-fill-mode: forwards;
-            z-index: 1500;
-        }
-
-        &.focused {
-            overflow: visible;
-            animation-name: scaleUp;
-        }
-
-        &.unfocused {
-            animation-name: scaleDown;
-        }
-    }
-
-    @include breakpoint.breakpoint-up(md) {
-      --grid-columns: 2;
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
 
       .backdrop {
-        aspect-ratio: 4 / 3;
+          position: relative;
+
+          overflow: hidden;
+
+          aspect-ratio: 8 / 3;
+
+          min-height: unset;
+
+          max-width: 100%;
+
+          z-index: auto;
+
+          &:nth-child(1), 
+          &:nth-child(5) {
+              transform-origin: left;
+          }
+
+          &:nth-child(4), 
+          &:nth-child(8) {
+              transform-origin: right;
+          }
+
+          &.focused, 
+          &.unfocused {
+              animation-duration: 0.25s;
+              animation-fill-mode: forwards;
+              z-index: 1500;
+          }
+
+          &.focused {
+              overflow: visible;
+              animation-name: scaleUp;
+          }
+
+          &.unfocused {
+              animation-name: scaleDown;
+          }
       }
 
+      @include breakpoint.breakpoint-up(md) {
+        --grid-columns: 2;
+
+        .backdrop {
+          aspect-ratio: 4 / 3;
+        }
+
+      }
+
+      @include breakpoint.breakpoint-up(lg) {
+        --grid-columns: 4;
+      }
+  }
+
+  // Grid Discipline Info
+
+  .grid--discipline__info {
+      position: absolute;
+      top: calc(100% - 1px);
+
+      background-color: inherit;
+
+      padding-left: var(--spacer-3);
+      padding-right: var(--spacer-3);
+      padding-bottom: var(--spacer-3);
+      
+      font-size: calc( var(--font-size-md) * 0.875);
+      line-height: 1.5;
+      transition: opacity 0.125s;
+      pointer-events: inherit;
+
+      text-align: left;
+  }
+
+  // Keyframe Animations
+
+  @keyframes scaleUp {
+
+    from {
+      transform: scale(1);
+      filter: none;
     }
 
-    @include breakpoint.breakpoint-up(lg) {
-      --grid-columns: 4;
+    to {
+      transform: scale(1.25);
+      filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
     }
-}
-
-// Grid Discipline Info
-
-.grid--discipline__info {
-    position: absolute;
-    top: calc(100% - 1px);
-
-    background-color: inherit;
-
-    padding-left: var(--spacer-3);
-    padding-right: var(--spacer-3);
-    padding-bottom: var(--spacer-3);
     
-    font-size: calc( var(--font-size-md) * 0.875);
-    line-height: 1.5;
-    transition: opacity 0.125s;
-    pointer-events: inherit;
-
-    text-align: left;
-}
-
-// Keyframe Animations
-
-@keyframes scaleUp {
-
-  from {
-    transform: scale(1);
-    filter: none;
   }
 
-  to {
-    transform: scale(1.25);
-    filter: drop-shadow(0 0 0.5em hsla(0, 0%, 0%, 0.375));
-  }
-  
-}
+  @keyframes scaleDown {
 
-@keyframes scaleDown {
+    from {
+      transform: scale(1.25);
+    }
 
-  from {
-    transform: scale(1.25);
-  }
-
-  to {
-    transform: scale(1);
-  }
-
-}
-
-//////////////////////////////////////////////
-// E. Discipline Banner (Modal)
-//////////////////////////////////////////////
-
-.disc-banner {
-
-  display: grid;
-  gap: var(--spacer-5);
-
-  > .banner-headline {
-    grid-area: headline;
-  }
-
-  > .disc-banner__teaser {
-    grid-area: teaser;
+    to {
+      transform: scale(1);
+    }
 
   }
-  > .disc-banner__summary {
-    grid-area: summary;
 
-  }
-  
-  grid-template-columns: 66% auto;
+  // Discipline Banner (Modal)
 
-  grid-template-areas:
-    "headline headline"
-    "summary teaser";
-}
+  .disc-banner {
 
-//////////////////////////////////////////////
-// F. Landing (Library, Glossary)
-//////////////////////////////////////////////
-
-
-.landing, 
-.materials {
     display: grid;
-}
+    gap: var(--spacer-5);
 
-.landing {
-    grid-template-areas:
-      "main"
-      "aside";
-
-    height: 100%;
-}
-
-.landing__main {
-    // border: 6px solid green !important;
-
-    grid-area: main;
-
-    height: 100%;
-    // overflow: hidden;
-}
-
-.landing__aside {    
-    grid-area: aside;
-}
-
-@include breakpoint.breakpoint-up(lg) {
-    .landing {
-        grid-template-columns: 1fr 16em;
-
-        grid-template-areas:
-            "main aside";
+    > .banner-headline {
+      grid-area: headline;
     }
-}
 
-// Materials 
+    > .disc-banner__teaser {
+      grid-area: teaser;
 
-.materials {
-    // border: 6px solid purple !important;
-
-  grid-template-areas:
-    "aside"
-    "main";
-
-    height: 100%;
-
-}
-
-.materials__aside {    
-    grid-area: aside;
-
-    [aria-selected="true"] {
-      font-weight: var(--body-font-weight-bold);
-      position: relative;
-
-      &::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        bottom: 0;
-        left: 0;
-
-        width: calc(var(--border-width) * 3);
-        
-        background-color: var(--library);
-      }
     }
-}
+    > .disc-banner__summary {
+      grid-area: summary;
 
-.materials__main {
-    // border: 6px solid pink !important;
-
-    grid-area: main;
-
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-
-}
-
-@include breakpoint.breakpoint-up(lg) {
-    .materials {
-      grid-template-columns: 16em 1fr;
+    }
     
+    grid-template-columns: 66% auto;
+
+    grid-template-areas:
+      "headline headline"
+      "summary teaser";
+  }
+
+  // Article (Module)
+
+  .module {
+      display: grid;
+      
       grid-template-areas:
-          "aside main"
-    }
-}
-
-//////////////////////////////////////////////
-// H. Featured Material
-//////////////////////////////////////////////
-
-.grid--featured-material {
-
-  > *:nth-child(1) {
-    grid-area: primary;
+          "head"
+          "audio"
+          "did-you-know"
+          "sidebar"
+          "main";
   }
 
-  > *:nth-child(2) {
-    grid-area: secondary;
+  .module__head {
+      grid-area: head;
+
+      h1 {
+        font-weight: var(--body-font-weight-normal);
+      }
   }
 
-  > *:nth-child(3) {
-    grid-area: tertiary;
+  .module__audio {
+      grid-area: audio;
   }
 
-  grid-template-areas:
-      "primary"
-      "secondary"
-      "tertiary";
+  .module__main {
+      position: relative;
+      
+      grid-area: main;
+
+      align-items: start;
+
+      section {
+          margin-top: var(--spacer-4);
+          margin-bottom: var(--spacer-4);
+      }
+
+      figure {
+
+          margin: var(--spacer-4) auto;
+          
+          figcaption {
+              caption-side: bottom;
+          }
+
+          img {
+              min-width: unset !important;
+              width: auto !important;
+          }
+
+      }
+  }
+
+  .module__did-you-know {    
+      grid-area: did-you-know;
+
+      display: none;
+  }
+
+  .module__sidebar {
+      grid-area: sidebar;
+  }
 
   @include breakpoint.breakpoint-up(lg) {
 
-    [class*="backdrop"]{
-      --backdrop-fixed-height: unset;
-    }
+      .module {
+          grid-template-columns: 1fr 22em;
+          grid-template-rows: auto auto 1fr;            
 
-    height: 100%;
+          grid-template-areas:
+              "head audio"
+              "main did-you-know"
+              "main sidebar";
+      }
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+      .module__did-you-know {    
+          display: block;
+      }
 
-    grid-template-areas:
-        "primary primary"
-        "secondary tertiary";
+      .module__did-you-know {
+        padding-block-start: calc(var(--grid-divider-gap) * 0.5);
+        padding-inline-start: calc(var(--grid-divider-gap) * 0.5);
+      }
 
+      .module__main,
+      .module__did-you-know { 
+        border-block-start: var(--border-width) var(--border-style);
+      }
+
+      
+    .module__main { 
+        border-inline-end: var(--border-width) var(--border-style);
+      }
   }
-  
-}
 
-//////////////////////////////////////////////
-// G. Article (Module)
-//////////////////////////////////////////////
+  // Grid Global Foot
 
-.module {
-    display: grid;
-    
-    grid-template-areas:
-        "head"
-        "audio"
-        "did-you-know"
-        "sidebar"
-        "main";
-}
+  .grid--global-foot {
+      --grid-gap: var(--spacer-4);
+      
+      font-size: var(--font-size-md);
 
-.module__head {
-    // outline: 6px solid blue;
-    grid-area: head;
+      .nav-primary {
+        grid-area: nav-primary;
+      }
 
-    h1 {
+      .nav-secondary {
+        grid-area: nav-secondary;
+      }
 
-      font-weight: var(--body-font-weight-normal);
+      .ctas {
+        grid-area: ctas;
+      }
 
-    }
-}
-
-.module__audio {
-    grid-area: audio;
-}
-
-.module__main {
-    position: relative;
-    
-    grid-area: main;
-
-    align-items: start;
-
-    section {
-        margin-top: var(--spacer-4);
-        margin-bottom: var(--spacer-4);
-    }
-
-    figure {
-
-        margin: var(--spacer-4) auto;
-        
-        figcaption {
-            caption-side: bottom;
-        }
-
-        img {
-            min-width: unset !important;
-            width: auto !important;
-        }
-
-    }
-}
-
-.module__did-you-know {    
-    grid-area: did-you-know;
-
-    display: none;
-}
-
-.module__sidebar {
-    grid-area: sidebar;
-}
-
-@include breakpoint.breakpoint-up(lg) {
-
-    .module {
-        grid-template-columns: 1fr 22em;
-        grid-template-rows: auto auto 1fr;            
-
-        grid-template-areas:
-            "head audio"
-            "main did-you-know"
-            "main sidebar";
-    }
-
-    .module__did-you-know {    
-        display: block;
-    }
-}
-
-//////////////////////////////////////////////
-// H. Grid Global Foot
-//////////////////////////////////////////////
-
-.grid--global-foot {
-    --grid-gap: var(--spacer-4);
-    
-    font-size: var(--font-size-md);
-
-    .nav-primary {
-      grid-area: nav-primary;
-    }
-
-    .nav-secondary {
-      grid-area: nav-secondary;
-    }
-
-    .ctas {
-      grid-area: ctas;
-    }
-
-    .connect {
-      grid-area: connect;
-    }
-
-    grid-template-areas: 
-      "nav-primary nav-secondary"
-      "ctas ctas"
-      "connect connect";
-
-    @include breakpoint.breakpoint-up(lg) {
-
-      grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+      .connect {
+        grid-area: connect;
+      }
 
       grid-template-areas: 
-        "nav-primary nav-secondary ctas connect";
+        "nav-primary nav-secondary"
+        "ctas ctas"
+        "connect connect";
+
+      @include breakpoint.breakpoint-up(lg) {
+
+        grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+
+        grid-template-areas: 
+          "nav-primary nav-secondary ctas connect";
+      }
+  }
+
+  .grid--about {
+
+    .header {
+      grid-area: header;
     }
-}
 
-// Module Helper
+    .main {
+      grid-area: main;
+    }
 
-.grid--module-helper {
+    .aside {
+      grid-area: aside;
+    }
 
-  gap: var(--border-width);
-
-  .button--toggle-terms {
-    grid-area: terms;
-  }
-
-  .button--toggle-ngss {
-    grid-area: ngss;
-  }
-
-  .accordion {
-    grid-area: acc;
-  }
-
-  grid-template-columns: 1fr 1fr;
-
-  grid-template-areas:
-    "acc acc"
-    "terms ngss";
+    grid-template-areas: 
+      "header"
+      "aside"
+      "main"
+      "help";
 
     @include breakpoint.breakpoint-up(lg) {
-      grid-template-areas:
-        "terms ngss"
-        "acc acc";
-    }
-}
-
-//////////////////////////////////////////////
-// I. Wrap Viewport Height
-//////////////////////////////////////////////
-
-@include breakpoint.breakpoint-up(lg) {
-  
-  .wrap-viewport-height {
-    display: flex;
-    flex-direction: column;
-
-    min-height: 60rem;
-    height: 100vh;
-
-    main {
-      overflow: hidden;
-      flex-grow: 1;
+      grid-template-columns:  1fr 22em;
+      grid-template-areas: 
+        "header ."
+        "main aside";
     }
 
-    background-color: bisque;
-
   }
 
-}
+  /////////////////////
 
-//////////////////////////////////////////////
-// L. About Pages
-//////////////////////////////////////////////
+  .float-right {
 
+  max-width: 300px;
 
-// .module {
-//     display: grid;
-    
-//     grid-template-areas:
-//         "head"
-//         "audio"
-//         "did-you-know"
-//         "sidebar"
-//         "main";
-// }
-
-.grid--about {
-
-  .header {
-    grid-area: header;
+    float: right;
+    margin-inline-start: var(--spacer-4);
+    margin-block-end: var(--spacer-2);
+    margin-inline-end: calc( var(--spacer-4) * -1);
   }
-
-  .main {
-    grid-area: main;
-  }
-
-  .aside {
-    grid-area: aside;
-  }
-
-  grid-template-areas: 
-    "header"
-    "aside"
-    "main"
-    "help";
-
-  @include breakpoint.breakpoint-up(lg) {
-    grid-template-columns:  1fr 22em;
-    grid-template-areas: 
-      "header ."
-      "main aside";
-  }
-
-}
-
-
-/////////////////////@at-root
-
-.float-right {
-
-max-width: 300px;
-
-  float: right;
-  margin-inline-start: var(--spacer-4);
-  margin-block-end: var(--spacer-2);
-  margin-inline-end: calc( var(--spacer-4) * -1);
-}
+} // end @layer

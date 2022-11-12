@@ -39,7 +39,6 @@ In this file:
 // C. Component
 //////////////////////////////////////////////
 
-
 @layer component {
 
     // Accordion Block
@@ -69,7 +68,7 @@ In this file:
             @extend %icon-font-vars;
             @extend .icon_font;
 
-            --icon-size: 0.75em;
+            --icon-size: 0.5em;
             
             content: var(--accordion-icon-closed);
         }
@@ -136,7 +135,7 @@ In this file:
 
             position: relative;
 
-            &::before{
+            &::before {
                 position: absolute;
                 inset-inline-start: 0;
                 inset-block-start: 50%;
