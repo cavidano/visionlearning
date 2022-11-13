@@ -43,14 +43,10 @@ In this file:
   flex-direction: column;
   align-content: center;
 
-  z-index: var(--lightbox-z-index);
-  
   padding: var(--lightbox-padding);
-
-  &[class*="theme-"]{
-    background-color: transparent !important;
-  }
   
+  z-index: var(--lightbox-z-index);
+
   &::before {
       content: "";
 
@@ -62,7 +58,7 @@ In this file:
   }
 
   img {
-    max-width: 80vw;
+    max-width: 90vw;
     max-height: 80vh;
 
     cursor: pointer;
