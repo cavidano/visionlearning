@@ -11,13 +11,22 @@ export default class Lightbox {
   #lightboxImages = document.querySelectorAll('img[data-lightbox]');
 
   #lightboxHTML = (`
-    <div class="lightbox__container">
-      <button class="lightbox__close button button--icon-only" data-lightbox-close>
+    <div class="button-group lightbox__buttons">
+      <button class="button button--icon-only">
+          <span class="icon icon-arrow-left" aria-label="Close" aria-hidden="true">
+      </button>
+      <button class="button button--icon-only">
+          <span class="icon icon-arrow-right" aria-label="Close" aria-hidden="true">
+      </button>
+      <button class="button button--icon-only" data-lightbox-close>
           <span class="icon icon-close" aria-label="Close" aria-hidden="true">
       </button>
-      <img class="lightbox__image" src="https://source.unsplash.com/1600x900" />
-      <p class="lightbox__caption">A caption for the image.</p>
     </div>
+
+    <figure class="lightbox__container">
+      <img class="lightbox__image" src="https://source.unsplash.com/1600x900" />
+      <figcaption class="lightbox__caption">A caption for the image.</figcaption>
+    </figure>
   `);
 
   init() {
