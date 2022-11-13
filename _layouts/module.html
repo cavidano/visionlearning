@@ -1,0 +1,289 @@
+---
+layout: global
+---
+
+<main id="skip-header-content">
+
+    
+    <article class="module wide margin-x-auto">
+    
+    {% include module-header.html %}
+        {% if page.tab == 'reading' %}
+
+        <div class="module__audio flex-column justify-content-end">
+
+            <audio
+                class="width-100 margin-y-2"
+                controls
+                src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        
+        </div>
+
+        {% endif %}
+
+        <div class="module__main">
+
+            {% include module-tabs.html %}
+
+            {{ content }}
+
+        </div>
+        <!-- .module__main -->
+
+        {% if page.tab == 'reading' %}
+
+        <aside class="module__did-you-know">
+
+            <div class="container padding-y-3 font-size-md theme-light">
+
+                <p class="text-transform-uppercase">
+                    <strong>Did you know?</strong>
+                </p>
+                
+                <p>
+                    Did you know that although earthquakes can be very destructive, they provide a wealth of information about Earth's interior? Miners, geologists, and others have always wondered what lies below the surface of Earth, but heat and pressure make it impossible to explore deep into its interior. However, seismic waves produced by earthquakes reveal the structure and composition of our planet.
+                </p>
+                
+            </div>
+
+            <hr class="divider" />
+        
+        </aside>
+
+        <div class="module__sidebar">
+
+            <div class="position-sticky-top">
+
+                <div class="in-this-module tabs" role="tablist">
+
+                    <nav class="button-group">
+                    
+                        <button
+                            class="button button--icon-only"
+                            id="tab-button-in-this-module"
+                            aria-controls="tab-panel-in-this-module"
+                            aria-selected="true"
+                            role="tab">
+                                <span class="screen-reader-only">In this module</span>
+                                <span class="icon icon-list" aria-hidden="true"></span>
+                        </button>
+
+                        <button
+                            class="button button--has-icon flex-grow-1"
+                            id="tab-button-toggle-terms"
+                            aria-controls="tab-panel-toggle-terms"
+                            aria-selected="false"
+                            role="tab">
+                                <span class="icon icon-glossary-highlight"></span>
+                                <span class="button__text">Glossary</span>
+                        </button>
+
+                        <button
+                            class="button button--has-icon flex-grow-1"
+                            id="tab-button-toggle-ngss"
+                            aria-controls="tab-panel-toggle-ngss"
+                            aria-selected="false"
+                            role="tab">
+                                <span class="icon icon-ngss"></span>
+                                <span class="button__text">NGSS</span>
+                        </button>
+
+                    </nav>
+
+                    <div
+                        class="tabs__panel shown"
+                        id="tab-panel-in-this-module"
+                        aria-labelledby="tab-button-in-this-module"
+                        role="tabpanel">
+                        <div class="padding-y-2">
+
+                            <div class="accordion font-size-md">
+
+                                <button
+                                    class="accordion__button"
+                                    id="acc-button-key-concepts"
+                                    data-accordion="button"
+                                    aria-controls="acc-panel-key-concepts"
+                                    aria-expanded="true">
+                                        Key concepts
+                                </button>
+
+                                <div 
+                                    class="accordion__panel shown"
+                                    id="acc-panel-key-concepts"
+                                    data-accordion="panel"
+                                    aria-labelledby="acc-button-key-concepts"
+                                    role="region">
+                                        <div class="accordion__panel__content">
+                                            <p>
+                                            
+                                            <ul>
+                                                <li>
+                                                Cells are the basic structural and functional unit of all living things and contain inheritable genetic material.
+                                                </li>
+                                                <li>
+                                                    The activity of a cell is carried out by the sub-cellular structures it possesses.
+                                                </li>
+                                                <li>
+                                                    Cells possess an outer boundary layer, called a cell membrane, cytoplasm, which contains organelles, and genetic material.
+                                                </li>
+                                                <li>
+                                                    There is considerable variety among living cells, including the function of membranes and subcellular structures, and the different types of functions the cells carry out, such as chemical transport, support, and other functions.
+                                                </li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                </div>
+
+                                <button
+                                    class="accordion__button"
+                                    id="acc-button-terms-you-should-know"
+                                    data-accordion="button"
+                                    aria-controls="acc-panel-terms-you-should-know"
+                                    aria-expanded="false">
+                                        Terms you should know
+                                </button>
+
+                                <div 
+                                    class="accordion__panel"
+                                    id="acc-panel-terms-you-should-know"
+                                    data-accordion="panel"
+                                    aria-labelledby="acc-button-terms-you-should-know"
+                                    role="region">
+                                        <div class="accordion__panel__content">
+
+                                            <dl>
+                                                <dt>
+                                                    <a href="#1">boundary</a>
+                                                </dt>
+                                                <dd>
+                                                    a line or limit that divides one area from another
+                                                </dd>
+
+                                                <dt>
+                                                    <a href="#1">dense</a>
+                                                </dt>
+                                                <dd>
+                                                    compact, packed close together, having a high mass in relation to volume
+                                                </dd>
+
+                                                <dt>
+                                                    <a href="#1">wave</a>
+                                                </dt>
+                                                <dd>
+                                                    a motion of rising and falling in curves; undulation
+                                                </dd>
+                                            </dl>
+
+                                        </div>
+                                </div>
+
+                                <button
+                                    class="accordion__button"
+                                    id="acc-button-table-of-contents"
+                                    data-accordion="button"
+                                    aria-controls="acc-panel-table-of-contents"
+                                    aria-expanded="false">
+                                        Table of contents
+                                </button>
+
+                                <div 
+                                    class="accordion__panel"
+                                    id="acc-panel-table-of-contents"
+                                    data-accordion="panel"
+                                    aria-labelledby="acc-button-table-of-contents"
+                                    role="region">
+                                        <div class="accordion__panel__content">
+
+                                            <ul class="nav">
+                                                <li>
+                                                    <a href="#1">
+                                                        Evidence about Earth's interior
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                </div>
+
+                            </div>
+                            <!-- .accordion -->
+
+                        </div>
+                    </div>
+
+                    <div
+                        class="tabs__panel"
+                        id="tab-panel-toggle-terms"
+                        aria-labelledby="tab-button-toggle-terms"
+                        role="tabpanel">
+                        <div class="container padding-y-2">
+
+                            <div class="form-entry__option__switch">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="termsToggleSwitch"
+                                        id="terms-toggle-switch">
+                                        <span class="switch__slider"></span>
+                                        <span class="option__label text-decoration-none font-size-md">
+                                            Highlight Glossary Terms in Reading
+                                        </span>
+                                </label>
+
+                            </div>
+
+                            <hr class="margin-y-3" />
+
+                            <div class="term-def-container font-size-md"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="tabs__panel"
+                        id="tab-panel-toggle-ngss"
+                        aria-labelledby="tab-button-toggle-ngss"
+                        role="tabpanel">
+                        <div class="container padding-y-2">
+
+                            <div class="form-entry__option__switch">
+
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="ngssToggleSwitch"
+                                        id="ngss-toggle-switch">
+                                        <span class="switch__slider"></span>
+                                        <span class="option__label text-decoration-none font-size-md">
+                                            Show NGSS Annotations
+                                        </span>
+                                </label>
+
+                            </div>
+
+                            <hr class="margin-y-3" />
+
+                            <div class="ngss-desc-container font-size-md">
+                            <!-- Popup alert -->
+                            </div>
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </article>
+
+</main>

@@ -232,27 +232,38 @@ In this file:
               "head audio"
               "main did-you-know"
               "main sidebar";
+
+          overflow: unset;
       }
 
       .module__did-you-know {    
           display: block;
       }
 
-      .module__did-you-know {
-        padding-block-start: calc(var(--grid-divider-gap) * 0.5);
-        padding-inline-start: calc(var(--grid-divider-gap) * 0.5);
-      }
+      .module__head {
 
-      .module__main,
-      .module__did-you-know { 
-        border-block-start: var(--border-width) var(--border-style);
+      &::after {
+      display: none;
       }
-
       
-    .module__main { 
-        border-inline-end: var(--border-width) var(--border-style);
       }
-  }
+
+      // .module__did-you-know {
+      //   padding-block-start: calc(var(--grid-divider-gap) * 0.5);
+      //   padding-inline-start: calc(var(--grid-divider-gap) * 0.5);
+      // }
+
+      // .module__main,
+      // .module__did-you-know { 
+      //   border-block-start: var(--border-width) var(--border-style);
+      // }
+
+
+      // .module__main { 
+      //   border-inline-end: var(--border-width) var(--border-style);
+      // }
+
+      }
 
   // Grid Global Foot
 

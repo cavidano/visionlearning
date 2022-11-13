@@ -2,23 +2,21 @@
 layout: global
 ---
 
-{% include global-header.html %}
-
 <main id="skip-header-content">
 
     <div class="padding-y-5">
 
         <div class="container wide">
 
-            <div class="grid grid--column-6--lg grid--divider--fill-y">
+            <div class="grid grid--column-12--lg grid--divider--fill-y">
 
-                <div>
+                <div class="grid__colspan-3--lg">
                 
                     {% include materials-sidebar.html %}
                     
                 </div>
 
-                <div class="grid__colspan-4--lg">
+                <div class="grid__colspan-6--lg">
 
                     {{ content }}
 
@@ -26,7 +24,7 @@ layout: global
 
                 {% if page.title contains 'Classroom' %}
 
-                <div>
+                <div class="grid__colspan-3--lg">
                     <aside class="font-size-md text-align-center">
 
                         <h6>
@@ -60,7 +58,7 @@ layout: global
                 
                 {% else %}
 
-                <div class="font-size-md text-align-center">
+                <div class="font-size-md text-align-center grid__colspan-3--lg">
 
                     <h2 class="screen-reader-only">
                         You are not signed in.
