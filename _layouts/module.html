@@ -4,9 +4,6 @@ layout: global
 
 <main id="skip-header-content">
 
-    
-    <article class="module wide margin-x-auto">
-    
     {% include module-header.html %}
         {% if page.tab == 'reading' %}
 
@@ -24,6 +21,8 @@ layout: global
 
         {% endif %}
 
+    <article class="grid grid--article-column-2 wide margin-x-auto">
+    
         <div class="module__main">
 
             {% include module-tabs.html %}
@@ -35,23 +34,6 @@ layout: global
 
         {% if page.tab == 'reading' %}
 
-        <aside class="module__did-you-know">
-
-            <div class="container padding-y-3 font-size-md theme-light">
-
-                <p class="text-transform-uppercase">
-                    <strong>Did you know?</strong>
-                </p>
-                
-                <p>
-                    Did you know that although earthquakes can be very destructive, they provide a wealth of information about Earth's interior? Miners, geologists, and others have always wondered what lies below the surface of Earth, but heat and pressure make it impossible to explore deep into its interior. However, seismic waves produced by earthquakes reveal the structure and composition of our planet.
-                </p>
-                
-            </div>
-
-            <hr class="divider" />
-        
-        </aside>
 
         <div class="module__sidebar">
 

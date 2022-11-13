@@ -161,6 +161,77 @@ In this file:
 
   // Article (Module)
 
+  [class*="grid--article-column"] {
+    @extend %grid-divider-vars;
+  
+    --gap: var(--gap-size, var(--grid-divider-gap));
+
+    // display: grid;
+
+    gap: var(--gap);
+
+    > * {
+        position: relative;
+    }
+
+    > * {
+      &::before,
+      &::after { 
+          --shift-divider: calc(var(--gap) * 0.5);
+          --shift-border: calc(var(--grid-divider-border-width) * 0.5);
+          position: absolute;
+          content: "";
+      }
+    }
+
+    > *:not(:last-child)::before {
+      inset-block-start: 100%;
+      inset-inline-start: 0;
+
+      width: 100%;
+
+      height: var(--grid-divider-border-width);
+
+      margin-block-start: calc( var(--shift-divider) - var(--shift-border));
+      
+      background-color: var(--grid-divider-border-x-color); 
+    }
+
+    > *:not(:last-child)::after {
+        inset-block-start: 0;
+        inset-inline-end: 0;
+
+        height: 100%;
+
+        width: var(--grid-divider-border-width);
+
+        margin-inline-end: calc( calc(var(--shift-divider) + var(--shift-border)) * -1 );
+
+        background-color: var(--grid-divider-border-y-color); 
+        
+        display: none; 
+    }
+  }
+
+  @include breakpoint.breakpoint-up(lg) {
+
+      .grid--article-column-2 {
+        
+        grid-template-columns: 1fr 22em; 
+
+          > *::before {
+            display: none;
+          }
+
+          > *:not(:last-child)::after {
+            display: block;
+          }
+      }
+
+  }
+
+  // Article (Module)
+
   .module {
       display: grid;
       

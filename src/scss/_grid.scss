@@ -206,7 +206,6 @@ $rows: math.div($columns, 2);
             margin-block-start: calc( var(--shift-divider) - var(--shift-border));
             
             background-color: var(--grid-divider-border-x-color); 
-
         }
 
         > *::after {
