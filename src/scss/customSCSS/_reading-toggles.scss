@@ -35,28 +35,6 @@ In this file:
 
 @layer component {
 
-    // In this Module
-
-    .in-this-module {
-
-        > nav > button:not([aria-selected="true"]) {
-            color: var(--canvas-link);
-        }
-
-        button[aria-selected="true"] {
-
-            opacity: 1;
-
-            color: var(--dark);
-        
-            &::before {
-                display: none;
-            }
-        }
-    }
-
-    // Glossary and NGSS toggles 
-
     mark.term,
     mark.ngss {
 
