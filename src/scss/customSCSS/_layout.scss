@@ -168,11 +168,10 @@ In this file:
       "summary teaser";
   }
 
-  // Article (Module)
+  // Article (2 and 3 column)
 
   [class*="grid--article-column"] {
     @extend %grid-divider-vars;
-
   
     --gap: var(--gap-size, var(--grid-divider-gap));
 
@@ -312,33 +311,6 @@ In this file:
 
           overflow: unset;
       }
-
-      .module__did-you-know {    
-          display: block;
-      }
-
-      .module__head {
-
-      &::after {
-      display: none;
-      }
-      
-      }
-
-      // .module__did-you-know {
-      //   padding-block-start: calc(var(--grid-divider-gap) * 0.5);
-      //   padding-inline-start: calc(var(--grid-divider-gap) * 0.5);
-      // }
-
-      // .module__main,
-      // .module__did-you-know { 
-      //   border-block-start: var(--border-width) var(--border-style);
-      // }
-
-
-      // .module__main { 
-      //   border-inline-end: var(--border-width) var(--border-style);
-      // }
 
       }
 

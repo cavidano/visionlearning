@@ -45,32 +45,38 @@ In this file:
     --primary-nav-search-width: 300px;
 }
 
-////////////////////////////////////////
-// C.  Placeholders 
-////////////////////////////////////////
-
-%list-style-nav {
-    list-style: none;
-
-    line-height: normal;
-
-    > li {
-        position: relative;
-    }
-
-    [aria-selected="true"],
-    [aria-current] {
-        font-weight: var(--body-font-weight-bold);
-
-        text-decoration: underline;
-    }
-}
 
 ////////////////////////////////////////
 // D. Components
 ////////////////////////////////////////
 
 @layer component {
+
+    // Placeholders 
+
+    %list-style-nav {
+        list-style: none;
+
+        line-height: normal;
+
+        > li {
+            position: relative;
+        }
+
+        [aria-selected="true"],
+        [aria-current] {
+            font-weight: var(--body-font-weight-bold);
+        }
+
+        &:not([class*="nav--has-icons"]) {
+            
+            [aria-selected="true"],
+            [aria-current] {
+                text-decoration: underline;
+            }
+        }
+
+    }
 
     // Nav
 
