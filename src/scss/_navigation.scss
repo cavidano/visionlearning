@@ -39,30 +39,33 @@ In this file:
     --primary-nav-search-width: 300px;
 }
 
-    // Placeholders 
 
-    %list-style-nav {
-        list-style: none;
+////////////////////////////////////////
+// C. Placeholders
+//////////////////////////////////////// 
 
-        line-height: normal;
+%list-style-nav {
+    list-style: none;
 
-        > li {
-            position: relative;
-        }
+    line-height: normal;
 
+    > li {
+        position: relative;
+    }
+
+    [aria-selected="true"],
+    [aria-current] {
+        font-weight: var(--body-font-weight-bold);
+    }
+
+    &:not([class*="nav--has-icons"]) {
         [aria-selected="true"],
         [aria-current] {
-            font-weight: var(--body-font-weight-bold);
-        }
-
-        &:not([class*="nav--has-icons"]) {
-            
-            [aria-selected="true"],
-            [aria-current] {
-                text-decoration: underline;
-            }
+            text-decoration: underline;
         }
     }
+}
+
 ////////////////////////////////////////
 // D. Components
 ////////////////////////////////////////
