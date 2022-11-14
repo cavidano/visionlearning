@@ -4,13 +4,7 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. Placeholders 
-// D. Nav Component 
-// F. Nav Divider Modifier
-// G. Nav Has Icons Modifier
-// H. Nav Breadcrumb Component
-// I. Nav Dropdown Elements 
-// J. Primary Nav Components
+// C. Components
 
 */
 
@@ -45,13 +39,6 @@ In this file:
     --primary-nav-search-width: 300px;
 }
 
-
-////////////////////////////////////////
-// D. Components
-////////////////////////////////////////
-
-@layer component {
-
     // Placeholders 
 
     %list-style-nav {
@@ -75,8 +62,12 @@ In this file:
                 text-decoration: underline;
             }
         }
-
     }
+////////////////////////////////////////
+// D. Components
+////////////////////////////////////////
+
+@layer component {
 
     // Nav
 
@@ -200,8 +191,9 @@ In this file:
                     border-bottom-style: none;
 
                     flex-grow: 1;
-                    flex-shrink: 0;
-                    
+                    flex-shrink: 1;
+                    flex-basis: 100%;
+
                     display: flex;
                     align-items: stretch;
                 }
