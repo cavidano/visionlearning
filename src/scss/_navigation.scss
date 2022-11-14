@@ -4,7 +4,13 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. Components
+// C. Placeholders 
+// D. Nav Component 
+// F. Nav Divider Modifier
+// G. Nav Has Icons Modifier
+// H. Nav Breadcrumb Component
+// I. Nav Dropdown Elements 
+// J. Primary Nav Components
 
 */
 
@@ -39,10 +45,9 @@ In this file:
     --primary-nav-search-width: 300px;
 }
 
-
 ////////////////////////////////////////
-// C. Placeholders
-//////////////////////////////////////// 
+// C. Placeholders 
+////////////////////////////////////////
 
 %list-style-nav {
     list-style: none;
@@ -52,7 +57,7 @@ In this file:
     > li {
         position: relative;
     }
-
+    
     [aria-selected="true"],
     [aria-current] {
         font-weight: var(--body-font-weight-bold);
@@ -196,7 +201,7 @@ In this file:
                     flex-grow: 1;
                     flex-shrink: 1;
                     flex-basis: 100%;
-
+                    
                     display: flex;
                     align-items: stretch;
                 }

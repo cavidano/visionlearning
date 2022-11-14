@@ -20,7 +20,7 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-  --article-sidebar-width: 18em;
+  --article-sidebar-width: 20em;
 }
 
 //////////////////////////////////////////////
@@ -173,7 +173,7 @@ In this file:
   [class*="grid--article-column"] {
     @extend %grid-divider-vars;
   
-    --gap: var(--gap-size, var(--grid-divider-gap));
+    --gap: var(--grid-divider-gap);
 
     // display: grid;
 
@@ -201,7 +201,7 @@ In this file:
 
       height: var(--grid-divider-border-width);
 
-      margin-block-start: calc( var(--shift-divider) - var(--shift-border));
+      margin-block-start: calc(var(--shift-divider) - var(--shift-border));
       
       background-color: var(--grid-divider-border-x-color); 
     }
@@ -287,32 +287,6 @@ In this file:
 
       }
   }
-
-  .module__did-you-know {    
-      grid-area: did-you-know;
-
-      display: none;
-  }
-
-  .module__sidebar {
-      grid-area: sidebar;
-  }
-
-  @include breakpoint.breakpoint-up(lg) {
-
-      .module {
-          grid-template-columns: 1fr 22em;
-          grid-template-rows: auto auto 1fr;            
-
-          grid-template-areas:
-              "head audio"
-              "main did-you-know"
-              "main sidebar";
-
-          overflow: unset;
-      }
-
-      }
 
   // Grid Global Foot
 

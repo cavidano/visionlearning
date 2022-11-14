@@ -45,16 +45,12 @@ In this file:
     --spacer-3: calc(var(--spacer-base) * 1.25);
     --spacer-4: calc(var(--spacer-base) * 2);
     --spacer-5: calc(var(--spacer-base) * 4);
-    
-    --grid-divider-gap: var(--spacer-3);
 
 }
-
 
 .backdrop {
     --backdrop-fixed-height: 450px;
 }
-
 
 hr.divider {
     margin-block: calc(var(--grid-divider-gap) * 0.5) ;
