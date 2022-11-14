@@ -19,6 +19,14 @@ In this file:
 // B. Components
 //////////////////////////////////////////////
 
+:root {
+  --article-sidebar-width: 18em;
+}
+
+//////////////////////////////////////////////
+// B. Components
+//////////////////////////////////////////////
+
 @layer component {
 
   // Grid Discipline Component
@@ -147,6 +155,7 @@ In this file:
       grid-area: teaser;
 
     }
+
     > .disc-banner__summary {
       grid-area: summary;
 
@@ -163,6 +172,7 @@ In this file:
 
   [class*="grid--article-column"] {
     @extend %grid-divider-vars;
+
   
     --gap: var(--gap-size, var(--grid-divider-gap));
 
@@ -213,13 +223,16 @@ In this file:
     }
   }
 
+  .module__head {
+    display: grid;
+    align-items: end;
+  }
+
   @include breakpoint.breakpoint-up(lg) {
 
-      .grid--article-column-2 {
-        
-        grid-template-columns: 1fr 22em; 
+      [class*="grid--article-column"] {
 
-          > *::before {
+          > *:not(:last-child)::before {
             display: none;
           }
 
@@ -228,27 +241,20 @@ In this file:
           }
       }
 
-  }
-
-  // Article (Module)
-
-  .module {
-      display: grid;
-      
-      grid-template-areas:
-          "head"
-          "audio"
-          "did-you-know"
-          "sidebar"
-          "main";
-  }
-
-  .module__head {
-      grid-area: head;
-
-      h1 {
-        font-weight: var(--body-font-weight-normal);
+      .module__head,
+      .grid--article-column-2 {
+        grid-template-columns: 1fr var(--article-sidebar-width);
       }
+
+  }
+
+  // 
+
+  #module-tabs {
+    --shift: calc(var(--grid-divider-gap) * 0.5);
+
+    margin-block-start: calc(var(--shift) * -1);
+    margin-block-end: var(--grid-divider-gap);
   }
 
   .module__audio {
