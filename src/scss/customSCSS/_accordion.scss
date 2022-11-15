@@ -50,6 +50,7 @@ In this file:
     // Accordion Elements
 
     .accordion__button {
+
         position: relative;
         
         display: flex;
@@ -65,10 +66,9 @@ In this file:
         cursor: pointer;
 
         &::before {
-            @extend %icon-font-vars;
             @extend .icon_font;
 
-            --icon-size: 0.25em;
+            --icon-size: 0.75em;
             
             content: var(--accordion-icon-closed);
         }
