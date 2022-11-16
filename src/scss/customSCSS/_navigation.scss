@@ -233,20 +233,17 @@ In this file:
     // Module Breadcrumb
 
     .module-breadcrumb {
+        --module-breadcrumb-background-color: hsla(0, 100%, 100%, 0.95);
 
         ul {
             @extend %list-style-nav;
 
-            li {
-                position: relative;
-            }
-
             > li > .nav__dropdown {
                 position: absolute;
 
-                width: 300px;
+                width: 320px;
                 
-                background-color: hsla(0, 100%, 100%, 0.875);
+                background-color: var(--module-breadcrumb-background-color);
                 backdrop-filter: blur(4px);
             }
         }
@@ -258,13 +255,11 @@ In this file:
         }
 
         > ul > li:not(:last-child) {
-            border-right-width: var(--border-width);
-            border-right-style: var(--border-style);
-            border-right-color: inherit;
+            border-inline-end: var(--border-width) var(--border-style);
         }
 
         > ul > li:first-child > a {
-            --subtle-fill-opacity: 0 !important;
+            --subtle-fill-opacity: 0;
         }
 
         > ul > li > .button {
@@ -273,43 +268,56 @@ In this file:
             --button-font-weight: var(--body-font-weight-normal);
 
             &[aria-expanded="true"] {
-                background-color: white;
-                color: var(--canvas-link);
+                 background-color: var(--module-breadcrumb-background-color);
             }
         }
 
         .nav__dropdown > .accordion {
-            
-            --accordion-panel-padding-x: var(--button-padding-x);
-            --accordion-panel-padding-y: var(--button-padding-y);
+            font-size: var(--font-size-sm);
 
             > .accordion__button.current {
-                justify-content: start;
-                opacity: 0.75;
-                cursor: default;
                 font-weight: var(--body-font-weight-bold);
 
+                justify-content: start;
+
+                opacity: 0.75;
+                
+                cursor: default;
+                
                 &::before {
-                    --icon-size: 1em;
-                    content: '\f10e';
-                    
                     display: none;
                 }
             }
 
             > .accordion__button {
-                
                 &:hover,
                 &:focus { 
                     text-decoration: none;
-
-                    [class*="__label"] {
-                        text-decoration: underline;
-                    }
                 }
             }
         }
 
+        .accordion__panel > .accordion {
+            --accordion-icon-closed: "\f134";
+            --accordion-icon-open: "\f12a";
+            --accordion-button-padding-x: 0;
+            --accordion-button-padding-y: 0.2em;
+            --accordion-panel-padding-x: 1.675em;
+        }
+
+        .accordion__panel .accordion__button {
+            justify-content: start;
+            flex-direction: row;
+
+            font-weight: var(--body-font-weight-normal);
+
+            border-block-start: unset;
+
+            &::before {
+                margin: unset;
+                width: var(--accordion-panel-padding-x);
+            }
+        }
     }
 
     //////////////////////////////////////////////

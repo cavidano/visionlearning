@@ -48,11 +48,13 @@ In this file:
         
         font-family: inherit;
 
-        &:not([class*="theme-"]){
+        text-align: start;
+
+        &:not([class*="theme-"]) {
             background-color: transparent;
         }
 
-        &:not([class*="border-"]){
+        &:not([class*="border-"]) {
             border: none;
         }
 

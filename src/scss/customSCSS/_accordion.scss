@@ -22,20 +22,17 @@ In this file:
 
 // Scoped to Block
 
-%accordion-vars {
-    --accordion-button-padding-x: var(--spacer-3);
+:root {
+    --accordion-button-padding-x: 1em;
     --accordion-button-padding-y: var(--button-padding-y);
 
-    --accordion-panel-padding-x: var(--spacer-3);
+    --accordion-panel-padding-x: var(--accordion-button-padding-x);
     --accordion-panel-padding-y: 1em;
     
     --accordion-active-color: currentColor;
 
     --accordion-icon-closed: "\f116";
     --accordion-icon-open: "\f119";
-
-    --accordion-icon-closed: "\f134";
-    --accordion-icon-open: "\f12a";
 }
 
 //////////////////////////////////////////////
@@ -44,13 +41,17 @@ In this file:
 
 @layer component {
 
-    // Accordion Block
-
-    .accordion {
-        @extend %accordion-vars;
-    }
-
     // Accordion Elements
+
+    .accordion__button {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+
+        &:not(:first-child){
+            border-block-start: var(--border-width) var(--border-style);
+        }
+
+    }
 
     .accordion__button {
         position: relative;
@@ -72,11 +73,11 @@ In this file:
         &::before {
             @extend .icon_font;
 
-            --icon-size: 0.75em;
+            --icon-size: 0.875em;
             
             content: var(--accordion-icon-closed);
 
-            margin-inline-end: 1em;
+            margin-inline-start: 0.75em;
         }
 
         &[aria-expanded="true"] {
@@ -86,21 +87,6 @@ In this file:
             &::before {
                 content: var(--accordion-icon-open);
             }
-        }
-    }
-
-    .accordion:not([class*="--plus-minus"]) {
-
-        > .accordion__button {
-            // justify-content: space-between;
-            // flex-direction: row-reverse;
-
-            &:not(:first-child){
-                border-top-width: var(--border-width);
-                border-top-style: var(--border-style);
-                border-top-color: inherit;
-            }
-
         }
     }
 
