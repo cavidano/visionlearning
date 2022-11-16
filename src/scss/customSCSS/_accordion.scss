@@ -27,12 +27,15 @@ In this file:
     --accordion-button-padding-y: var(--button-padding-y);
 
     --accordion-panel-padding-x: var(--spacer-3);
-    --accordion-panel-padding-y: var(--spacer-3);
+    --accordion-panel-padding-y: 1em;
     
     --accordion-active-color: currentColor;
 
     --accordion-icon-closed: "\f116";
     --accordion-icon-open: "\f119";
+
+    --accordion-icon-closed: "\f134";
+    --accordion-icon-open: "\f12a";
 }
 
 //////////////////////////////////////////////
@@ -50,11 +53,12 @@ In this file:
     // Accordion Elements
 
     .accordion__button {
-
         position: relative;
         
         display: flex;
         align-items: baseline;
+
+        font-weight: var(--body-font-weight-bold);
 
         width: 100%;
 
@@ -71,6 +75,8 @@ In this file:
             --icon-size: 0.75em;
             
             content: var(--accordion-icon-closed);
+
+            margin-inline-end: 1em;
         }
 
         &[aria-expanded="true"] {
@@ -86,8 +92,8 @@ In this file:
     .accordion:not([class*="--plus-minus"]) {
 
         > .accordion__button {
-            justify-content: space-between;
-            flex-direction: row-reverse;
+            // justify-content: space-between;
+            // flex-direction: row-reverse;
 
             &:not(:first-child){
                 border-top-width: var(--border-width);
@@ -96,13 +102,6 @@ In this file:
             }
 
         }
-    }
-
-    .accordion__button__label { 
-
-        // [aria-expanded="true"] & {
-        //     text-decoration: underline;
-        // }
     }
 
     .accordion__panel {
@@ -115,33 +114,6 @@ In this file:
 
         &.shown {
             display: block;
-        }
-    }
-
-    // Accordion Modifier
-
-    .accordion.accordion--plus-minus {
-
-        --accordion-button-padding-y: 0.5em;
-        --accordion-button-padding-x: 0.75em;
-        --accordion-panel-padding-x: var(--accordion-button-padding-x);
-        --accordion-panel-padding-y: var(--accordion-button-padding-y);
-
-        --accordion-icon-closed: "\f12a";
-        --accordion-icon-open: "\f134";
-
-        > .accordion__button {
-            justify-content: start;
-
-            position: relative;
-
-            &::before {
-                position: absolute;
-                inset-inline-start: 0;
-                inset-block-start: 50%;
-                transform: translateY(-50%);
-                width: var(--accordion-button-padding-x);
-            }
         }
     }
     
