@@ -8,15 +8,15 @@ layout: global
 
         <div class="container wide">
 
-            <div class="grid grid--column-12--lg grid--divider--fill-y">
+            <div class="grid grid--fixed-sidebar-column-3">
 
-                <div class="grid__colspan-3--lg">
+                <div>
                 
                     {% include materials-sidebar.html %}
                     
                 </div>
 
-                <div class="grid__colspan-6--lg">
+                <div>
 
                     {{ content }}
 
@@ -24,7 +24,7 @@ layout: global
 
                 {% if page.title contains 'Classroom' %}
 
-                <div class="grid__colspan-3--lg">
+                <div>
                     <aside class="font-size-md text-align-center">
 
                         <h6>
@@ -58,7 +58,7 @@ layout: global
                 
                 {% else %}
 
-                <div class="font-size-md text-align-center grid__colspan-3--lg">
+                <div class="font-size-md text-align-center">
 
                     <h2 class="screen-reader-only">
                         You are not signed in.

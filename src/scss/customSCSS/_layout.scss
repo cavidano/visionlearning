@@ -170,7 +170,7 @@ In this file:
 
   // Article (2 and 3 column)
 
-  [class*="grid--article-column"] {
+  [class*="grid--fixed-sidebar-column"] {
     @extend %grid-divider-vars;
   
     --gap: var(--grid-divider-gap);
@@ -229,7 +229,7 @@ In this file:
 
   @include breakpoint.breakpoint-up(lg) {
 
-      [class*="grid--article-column"] {
+      [class*="grid--fixed-sidebar-column"] {
 
           > *:not(:last-child)::before {
             display: none;
@@ -241,8 +241,11 @@ In this file:
       }
 
       .module__head,
-      .grid--article-column-2 {
+      .grid--fixed-sidebar-column-2 {
         grid-template-columns: 1fr var(--article-sidebar-width);
+      }
+      .grid--fixed-sidebar-column-3 {
+        grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
       }
 
   }

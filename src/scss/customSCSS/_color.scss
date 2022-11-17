@@ -305,12 +305,10 @@ $theme-colors: (
     :root {
         --light-l: 70%;
         --light-o: 0.0625;
-
-        // --canvas-link: var(--dark-link);
     }
 
     .module-breadcrumb {
-        --module-breadcrumb-background-color: hsla(0, 0%, 0%, 0.85) !important;
+        --module-breadcrumb-background-color: hsla(0, 0%, 0%, 0.75) !important;
     }
 
     .theme-canvas--prefers {
