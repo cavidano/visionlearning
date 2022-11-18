@@ -293,40 +293,40 @@ In this file:
 
   // Grid Global Foot
 
-  .grid--global-foot {
-      --grid-gap: var(--spacer-4);
+  // .grid--global-foot {
+  //     --grid-gap: var(--spacer-4);
       
-      font-size: var(--font-size-md);
+  //     font-size: var(--font-size-md);
 
-      .nav-primary {
-        grid-area: nav-primary;
-      }
+  //     .nav-primary {
+  //       grid-area: nav-primary;
+  //     }
 
-      .nav-secondary {
-        grid-area: nav-secondary;
-      }
+  //     .nav-secondary {
+  //       grid-area: nav-secondary;
+  //     }
 
-      .ctas {
-        grid-area: ctas;
-      }
+  //     .ctas {
+  //       grid-area: ctas;
+  //     }
 
-      .connect {
-        grid-area: connect;
-      }
+  //     .connect {
+  //       grid-area: connect;
+  //     }
 
-      grid-template-areas: 
-        "nav-primary nav-secondary"
-        "ctas ctas"
-        "connect connect";
+  //     grid-template-areas: 
+  //       "nav-primary nav-secondary"
+  //       "ctas ctas"
+  //       "connect connect";
 
-      @include breakpoint.breakpoint-up(lg) {
+  //     @include breakpoint.breakpoint-up(lg) {
 
-        grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+  //       grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
 
-        grid-template-areas: 
-          "nav-primary nav-secondary ctas connect";
-      }
-  }
+  //       grid-template-areas: 
+  //         "nav-primary nav-secondary ctas connect";
+  //     }
+  // }
 
   .grid--about {
 
