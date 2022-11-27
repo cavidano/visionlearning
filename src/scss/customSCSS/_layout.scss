@@ -245,6 +245,7 @@ In this file:
         grid-template-columns: 1fr var(--article-sidebar-width);
       }
       .grid--fixed-sidebar-column-3 {
+        --article-sidebar-width: 16em;
         grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
       }
 
@@ -291,42 +292,7 @@ In this file:
       }
   }
 
-  // Grid Global Foot
-
-  // .grid--global-foot {
-  //     --grid-gap: var(--spacer-4);
-      
-  //     font-size: var(--font-size-md);
-
-  //     .nav-primary {
-  //       grid-area: nav-primary;
-  //     }
-
-  //     .nav-secondary {
-  //       grid-area: nav-secondary;
-  //     }
-
-  //     .ctas {
-  //       grid-area: ctas;
-  //     }
-
-  //     .connect {
-  //       grid-area: connect;
-  //     }
-
-  //     grid-template-areas: 
-  //       "nav-primary nav-secondary"
-  //       "ctas ctas"
-  //       "connect connect";
-
-  //     @include breakpoint.breakpoint-up(lg) {
-
-  //       grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
-
-  //       grid-template-areas: 
-  //         "nav-primary nav-secondary ctas connect";
-  //     }
-  // }
+  // Grid About
 
   .grid--about {
 
