@@ -14,6 +14,8 @@ In this file:
 .list-divider { 
     list-style: none;
 
+    background-color: yellow;
+
     > li {
         display: flex;
         justify-content: space-between;
@@ -43,12 +45,12 @@ ul.bulleted {
     padding-inline: 1em;
 
     li:not(:last-child) {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.25em;
     }
 }
 
 //////////////////////////////////////////////
-// B. Description List
+// C. Description List
 //////////////////////////////////////////////
 
 dl > dt {
@@ -59,4 +61,26 @@ dl > dt {
 dd {
     margin-bottom: 1em;
     margin-left: 1em;
+}
+
+//////////////////////////////////////////////
+// D. Info List
+//////////////////////////////////////////////
+
+.info-list {
+    list-style: none;
+
+    li {
+        display: flex;
+
+        &:not(:last-child) {
+        margin-bottom: 0.5em;
+        }
+    }
+
+    li > strong,
+    li > span {
+        width: 50%;
+    }
+
 }

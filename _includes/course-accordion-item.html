@@ -1,0 +1,54 @@
+{% if include.count %}
+    {% assign cnt = include.count %}
+{% endif %}
+{% if include.title %}
+    {% assign title = include.count %}
+{% else %}
+    {% assign title = 'Title' %}
+{% endif %}
+
+<button
+    class="accordion__button h6"
+    id="course-overview-button-{{ cnt }}"
+    data-accordion="button"
+    aria-controls="course-overview-panel-{{ cnt }}"
+    aria-expanded="false">
+        6th grade science
+</button>
+
+<div
+    class="accordion__panel"
+    id="course-overview-panel-{{ cnt }}"
+    data-accordion="panel"
+    aria-labelledby="course-overview-button-{{ cnt }}"
+    role="region">
+
+    <div class="accordion__panel__content font-size-md">
+        
+        <ul class="info-list margin-bottom-2">
+            <li>
+                <strong>Course Number</strong>
+                6th Science
+            </li>
+            <li>
+                <strong>Course Level</strong>
+                Middle School
+            </li>
+            <li>
+                <strong>Course Start Date</strong>
+                09/14/22
+            </li>
+            <li>
+                <strong>Course Close Date</strong>
+                03/13/23
+            </li>
+        </ul>
+
+        <a class="button button--has-icon font-size-sm theme-classroom" href="#1">
+            <span class="button__text">Enroll in Course</span>
+            <span class="icon icon-caret-right"></span>
+        </a>
+
+    </div>
+
+</div>

@@ -11,9 +11,11 @@ const devPages = {
     'AudioPlayer': 'audio-player',
     'Color': 'color',
     'DisciplineGrid': 'discipline-grid',
+    'Form': 'form',
     'Grid': 'grid',
     'HeaderFooter': 'header-footer',
     'Lightbox': 'lightbox',
+    'List': 'list',
     'ReadingToggles': 'reading-toggles',
     'Module': 'module',
     'Typography': 'typography',
@@ -23,7 +25,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Lightbox}.html`;
+const devPage = `${devPages.Form}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
