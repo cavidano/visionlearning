@@ -15,6 +15,23 @@ title: Classroom • Course • Title
 
             <div class="main">
 
+                <header class="container padding-y-3 theme-classroom">
+
+                <div class="flex-row align-items-center justify-content-between">
+                
+                    <h2 class="margin-bottom-0">Physics 101</h2>
+
+                    <button class="button button--has-icon button--outline font-size-md" id="go-back">
+                    <span class="button__text">Course Info</span> 
+                    <span class="icon icon-arrow-pencil"></span>
+
+                
+                </div>
+
+                </button>
+
+                </header>
+
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maxime a dolores. Eos, dolor, nemo ea excepturi nostrum laudantium, est optio accusantium non neque numquam aut ullam consequatur! Dicta, quibusdam.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maxime a dolores. Eos, dolor, nemo ea excepturi nostrum laudantium, est optio accusantium non neque numquam aut ullam consequatur! Dicta, quibusdam.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate maxime a dolores. Eos, dolor, nemo ea excepturi nostrum laudantium, est optio accusantium non neque numquam aut ullam consequatur! Dicta, quibusdam.</p>
@@ -34,9 +51,9 @@ title: Classroom • Course • Title
                 <div class="collapse display-block--lg" id="material-nav">
                     
                     <nav class="font-size-md">
-                        
+                    
                         <ul
-                            class="tabs-nav classroom border border-radius"
+                            class="nav nav--divider border border-radius"
                             id="material-nav"
                             role="menu">
 
@@ -46,19 +63,34 @@ title: Classroom • Course • Title
                                     {% if page.title == 'Classroom • Course • Title' %}
                                     aria-current="page"
                                     {% endif %}>
-                                        Qverview
+                                        Overview
                                 </a>
                             </li>
                                 
                             <li>
-                                <a
-                                    href="{{ site.url }}/library/all-disciplines.html"
-                                    {% if page.title == 'Library • All Disciplines' %}
-                                    aria-current="page"
-                                    {% endif %}>
-                                        All Disciplines
+                                <a href="#1">
+                                    Reminders
                                 </a>
                             </li>
+                                
+                            <li>
+
+                                <button data-toggle="dropdown">Modules</button>
+                                
+                                <ul class="nav__dropdown">
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">Link</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+
                         
                         </ul>
 
