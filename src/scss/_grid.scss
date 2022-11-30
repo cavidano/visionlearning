@@ -34,17 +34,14 @@ $rows: math.div($columns, 2);
 
 :root {
     --grid-divider-gap: var(--spacer-3);
-}
-
-// Scoped to Block
-
-%grid-divider-vars {
 
     --grid-divider-border-width: var(--border-width);
     --grid-divider-border-width: var(--border-width);
 
     --grid-divider-border-x-color: var(--canvas-border);
     --grid-divider-border-y-color: var(--canvas-border);
+
+    --grid-sidebar-width: var(--article-sidebar-width);
 }
 
 //////////////////////////////////////////////
@@ -165,7 +162,6 @@ $rows: math.div($columns, 2);
     // Grid Divider Modifier
     
     [class*="grid--divider"] {
-        @extend %grid-divider-vars;
         --gap: var(--gap-size, var(--grid-divider-gap));
     }
 
@@ -233,15 +229,13 @@ $rows: math.div($columns, 2);
     // Grid Sidebar
 
     [class*="grid--sidebar"] {
-
-
          &[class*="grid--divider"] > *::after {
             display: none;
         }
     }
 
-    @include breakpoint.breakpoint-up(xl) {
-
+    @include breakpoint.breakpoint-up(lg) {
+    
         [class*="grid--sidebar"][class*="grid--divider"] {
             overflow: visible;
 
@@ -255,16 +249,21 @@ $rows: math.div($columns, 2);
         }
 
         .grid--sidebar-left {
-            grid-template-columns: 1fr var(--article-sidebar-width);
+            grid-template-columns: 1fr var(--grid-sidebar-width);
         }
 
         .grid--sidebar-right {
-            grid-template-columns: var(--article-sidebar-width) 1fr;
+            grid-template-columns: var(--grid-sidebar-width) 1fr;
         }
         
+    }
+
+    @include breakpoint.breakpoint-up(xl) {
+
         .grid--sidebar-left-right {
-            grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
+            grid-template-columns: var(--grid-sidebar-width) 1fr var(--grid-sidebar-width);
         }
+
     }
 
 } // end @layer
