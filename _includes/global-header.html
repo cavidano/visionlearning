@@ -11,19 +11,18 @@
 	
 	</div>
 
+	<div class="theme-light" id="account-bar">
 
-	<div class="account-bar theme-primary padding-y-2">
-
-		<div class="container wide font-size-md">
+		<div class="container wide flex-row justify-content-between font-size-md padding-y-1">
 			<p>
-				<strong>Welcome, Carl.</strong>
-				You are signed in.
-				<a href="#1">Sign Out</a>
+				Welcome back,
+				<a href="{{ site.url }}/account/profile.html">
+					<strong>Carl</strong>
+				</a>.
 			</p>
 		</div>
 
 	</div>
-
 
 	<div class="border-bottom">
 
@@ -73,7 +72,7 @@
 						<span class="icon icon-search" aria-hidden="true"></span>
 					</button>
 					
-					<a class="button button--has-icon text-color-primary" href="{{ site.url }}/account/sign-in.html">
+					<a class="button button--has-icon" href="{{ site.url }}/account/sign-in.html">
 						<span class="icon icon-person"></span>
 						<span class="button__text">Account</span>
 					</a>

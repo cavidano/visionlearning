@@ -37,23 +37,23 @@ In this file:
             "menu menu";
     }
 
+    [class*="vl-hat__"]{
+        padding: var(--spacer-1) var(--spacer-2);
+    }
+
     .vl-hat__toggle-button {
         grid-area: toggle;
-        padding: var(--spacer-1);
     }
 
     .vl-hat__menu {
         grid-area: menu;
         font-size: var(--font-size-md);
 
-        padding: var(--spacer-1) var(--spacer-2);
-
         @extend .collapse;
     }
 
     .vl-hat__actions {
         grid-area: actions;
-        padding: var(--spacer-1);
     }
 
     @include breakpoint.breakpoint-down(lg) {
