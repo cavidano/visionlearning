@@ -96,7 +96,7 @@ In this file:
 
   .grid--discipline__info {
       position: absolute;
-      top: calc(100% - 1px);
+      inset-block-start: calc(100% - 1px);
 
       background-color: inherit;
 
@@ -105,11 +105,13 @@ In this file:
       padding-bottom: var(--spacer-3);
       
       font-size: calc( var(--font-size-md) * 0.875);
+
+      text-align: start;
       line-height: 1.5;
+
       transition: opacity 0.125s;
       pointer-events: inherit;
 
-      text-align: left;
   }
 
   // Keyframe Animations
@@ -172,10 +174,10 @@ In this file:
 
   [class*="grid--fixed-sidebar-column"] {
     @extend %grid-divider-vars;
+
+    background-color: yellow;
   
     --gap: var(--grid-divider-gap);
-
-    // display: grid;
 
     gap: var(--gap);
 
@@ -244,6 +246,7 @@ In this file:
       .grid--fixed-sidebar-column-2 {
         grid-template-columns: 1fr var(--article-sidebar-width);
       }
+      
       .grid--fixed-sidebar-column-3 {
         --article-sidebar-width: 16em;
         grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
