@@ -440,4 +440,20 @@ In this file:
         }
     }
 
+    // Course Modules
+
+    .course-modules__header {
+
+    }
+
+    .course-modules__nav {
+        @extend .nav;
+
+        padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
+
+        a{ color: var(--canvas-link)};
+    
+    }
+
+
 } // end @layer

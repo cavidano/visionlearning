@@ -277,6 +277,10 @@ In this file:
 
         font-size: var(--breadcrumb-font-size);
 
+        > li:first-child {
+            flex-shrink: 0;
+        }
+
         > li:last-child {
             font-style: italic;
             font-weight: bold;
