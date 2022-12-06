@@ -8,6 +8,12 @@ In this file:
 */
 
 //////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use '../breakpoint';
+
+//////////////////////////////////////////////
 // A. Variables
 //////////////////////////////////////////////
 
@@ -281,6 +287,20 @@ In this file:
     .reading-toggle-detail__body {
         padding: var(--padding-y) var(--padding-x);
         background-color: hsla(100, 100%, 100%, 0.875);
+    }
+
+    @include breakpoint.breakpoint-down(lg) {
+
+        .reading-toggle-detail {
+        
+            position: fixed;
+            top: 20px;
+            margin-inline: 20px;
+
+            z-index: 100000;
+        
+        }
+
     }
 
 } // end @layer
