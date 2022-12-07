@@ -3,7 +3,8 @@
 In this file:
 
 // A. Modules
-// B. Components
+// B. Variables
+// C. Components
 
 */
 
@@ -16,12 +17,12 @@ In this file:
 @use "../grid";
 
 //////////////////////////////////////////////
-// B. Components
+// B. Variables
 //////////////////////////////////////////////
 
-:root {
-  --article-sidebar-width: 20em;
-}
+// :root {
+//   --article-sidebar-width: 20em;
+// }
 
 //////////////////////////////////////////////
 // B. Components
@@ -169,164 +170,6 @@ In this file:
       "headline headline"
       "summary teaser";
   }
-
-  // Article (2 and 3 column)
-
-  // [class*="grid--fixed-sidebar-column"] {
-
-  //   // background-color: yellow;
-  
-  //   --gap: var(--grid-divider-gap);
-
-  //   gap: var(--gap);
-
-  //   > * {
-  //       position: relative;
-  //   }
-
-  //   > * {
-  //     &::before,
-  //     &::after { 
-  //         --shift-divider: calc(var(--gap) * 0.5);
-  //         --shift-border: calc(var(--grid-divider-border-width) * 0.5);
-  //         position: absolute;
-  //         content: "";
-  //     }
-  //   }
-
-  //   > *:not(:last-child)::before {
-  //     inset-block-start: 100%;
-  //     inset-inline-start: 0;
-
-  //     width: 100%;
-
-  //     height: var(--grid-divider-border-width);
-
-  //     margin-block-start: calc(var(--shift-divider) - var(--shift-border));
-      
-  //     background-color: var(--grid-divider-border-x-color); 
-  //   }
-
-  //   > *:not(:last-child)::after {
-  //       inset-block-start: 0;
-  //       inset-inline-end: 0;
-
-  //       height: 100%;
-
-  //       width: var(--grid-divider-border-width);
-
-  //       margin-inline-end: calc( calc(var(--shift-divider) + var(--shift-border)) * -1 );
-
-  //       background-color: var(--grid-divider-border-y-color); 
-        
-  //       display: none; 
-  //   }
-  // }
-
-  // .module__head {
-  //   display: grid;
-  //   align-items: end;
-  //   background-color: antiquewhite;
-  // }
-
-  // @include breakpoint.breakpoint-up(lg) {
-
-  //     [class*="grid--fixed-sidebar-column"] {
-
-  //         > *:not(:last-child)::before {
-  //           display: none;
-  //         }
-
-  //         > *:not(:last-child)::after {
-  //           display: block;
-  //         }
-  //     }
-
-  //     .module__head,
-  //     .grid--fixed-sidebar-column-2 {
-  //       grid-template-columns: 1fr var(--article-sidebar-width);
-  //     }
-      
-  //     .grid--fixed-sidebar-column-3 {
-  //       --article-sidebar-width: 16em;
-  //       grid-template-columns: var(--article-sidebar-width) 1fr var(--article-sidebar-width);
-  //     }
-
-  // }
-
-  // 
-
-  #module-tabs {
-    --shift: calc(var(--grid-divider-gap) * 0.5);
-
-    margin-block-start: calc(var(--shift) * -1);
-    margin-block-end: var(--grid-divider-gap);
-  }
-
-  // .module__audio {
-  //     grid-area: audio;
-  // }
-
-  // .module__main {
-  //     position: relative;
-      
-  //     grid-area: main;
-
-  //     align-items: start;
-
-  //     section {
-  //         margin-top: var(--spacer-4);
-  //         margin-bottom: var(--spacer-4);
-  //     }
-
-  //     figure {
-
-  //         margin: var(--spacer-5) auto;
-
-  //         background-color: yellow;
-          
-  //         figcaption {
-  //             caption-side: bottom;
-  //         }
-
-  //         img {
-  //             min-width: unset !important;
-  //             width: auto !important;
-  //         }
-
-  //     }
-  // }
-
-  // // Grid About
-
-  // .grid--about {
-
-  //   .header {
-  //     grid-area: header;
-  //   }
-
-  //   .main {
-  //     grid-area: main;
-  //   }
-
-  //   .aside {
-  //     grid-area: aside;
-  //   }
-
-  //   grid-template-areas: 
-  //     "header"
-  //     "aside"
-  //     "main"
-  //     "help";
-
-  //   @include breakpoint.breakpoint-up(lg) {
-  //     grid-template-columns:  1fr 22em;
-  //     grid-template-areas: 
-  //       "header ."
-  //       "main aside";
-  //   }
-
-  // }
 
   /////////////////////
 

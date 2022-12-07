@@ -1,0 +1,58 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Variables
+// C. Components
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoint";
+
+//////////////////////////////////////////////
+// B. Variables
+//////////////////////////////////////////////
+
+:root {
+}
+
+//////////////////////////////////////////////
+// C. Components
+//////////////////////////////////////////////
+
+@layer component {
+
+    // Did you know
+
+    .did-you-know {
+
+        border-left-color: currentColor;
+
+        h2 { 
+            font-size: var(--font-size-md) !important;
+            text-transform: uppercase;
+        }
+
+        p {
+            padding-inline-start: var(--spacer-3);
+
+            border-inline-start: var(--border-width) var(--border-style) currentColor;
+        }
+    }
+
+    // Module Tabs
+
+    #module-tabs {
+        --shift: calc(var(--grid-divider-gap) * 0.5);
+
+        margin-block-start: calc(var(--shift) * -1);
+        margin-block-end: var(--grid-divider-gap);
+    }
+
+} // end @layer
