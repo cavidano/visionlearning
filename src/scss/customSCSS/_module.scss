@@ -62,4 +62,13 @@ In this file:
         margin-block-end: var(--grid-divider-gap);
     }
 
+    //@at-root
+
+    .in-this-module {
+        .button-group button:not([aria-selected="true"]) {
+            color: var(--link-color);
+            // --subtle-fill-opacity: 0
+        }
+    }
+
 } // end @layer

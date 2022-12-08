@@ -19,6 +19,10 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
+:root {
+    --position-sticky-top-margin: var(--spacer-2);
+}
+
 $positions: static, relative, absolute, fixed;
 
 //////////////////////////////////////////////
@@ -74,6 +78,7 @@ $positions: static, relative, absolute, fixed;
             .position-sticky-top#{$mod} {
                 position: sticky;
                 inset-block-start: 0;
+                top: var(--position-sticky-top-margin)
             }
 
         }
