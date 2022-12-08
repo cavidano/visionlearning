@@ -19,7 +19,9 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-:root {
+.module {
+
+    --grid-sidebar-width: 20em;
 }
 
 //////////////////////////////////////////////
@@ -40,15 +42,20 @@ In this file:
         }
 
         p {
+            --border-color: currentColor;
+
             padding-inline-start: var(--spacer-3);
 
-            border-inline-start: var(--border-width) var(--border-style) currentColor;
+            border-inline-start:
+               var(--border-width)
+               var(--border-style)
+               var(--border-color);
         }
     }
 
     // Module Tabs
 
-    #module-tabs {
+    .module-tabs {
         --shift: calc(var(--grid-divider-gap) * 0.5);
 
         margin-block-start: calc(var(--shift) * -1);
