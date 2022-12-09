@@ -66,14 +66,28 @@ export default class Lightbox {
 
     let currentLB;
 
+    const wrap = (el, wrapper) => {
+			if (el && el.parentNode) {
+				el.parentNode.insertBefore(wrapper, el);
+				wrapper.appendChild(el);
+			}
+		}
+
+
     this.#lightboxImages.forEach((image, index) => {
+
+    const wrapper = document.createElement('button');
+    wrapper.setAttribute('class', 'lightbox-element');
+    wrap(image, wrapper);
 
       lightboxes.push({
         imgSRC : image.src,
         imgALT : image.alt,
       });
 
-      image.addEventListener('click', ()  => {
+      const imageBtn = image.closest('button');
+
+      imageBtn.addEventListener('click', ()  => {
 
         currentLB = index;
 

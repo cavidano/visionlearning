@@ -2,18 +2,25 @@
 
 In this file:
 
-// A. Variables
-// B. Lightbox Block
+// A. Modules
+// B. Variables
+// C. Lightbox Block
 
 */
 
+////////////////////////////////////////
+// A. Modules
+////////////////////////////////////////
+
+@use "../../scss/icon" as icon;
+
 //////////////////////////////////////////////
-// A. Variables
+// B. Variables
 //////////////////////////////////////////////
 
 // Scoped to Block
 
-%lightbox-vars {
+:root {
   --lightbox-padding-x: var(--spacer-2);
   --lightbox-padding-y: var(--spacer-2);
 
@@ -24,7 +31,7 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Lightbox Block
+// C. Lightbox Block
 //////////////////////////////////////////////
 
 .lightbox,
@@ -37,7 +44,6 @@ In this file:
 }
 
 .lightbox {
-  @extend %lightbox-vars;
 
   display: flex;
   flex-direction: column;
@@ -91,4 +97,42 @@ In this file:
     font-size: var(--font-size-md);
     text-align: center;
     margin-block-start: 1em;
+}
+
+
+.lightbox-element {
+    --button-icon-only-size: 1.75em;
+    display: block;
+
+    position: relative;
+    
+    cursor: pointer;
+
+    &::after {
+
+        @extend .icon_font;
+        content: '\f13d';
+
+        display: inline-flex;
+        flex-shrink: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        width: var(--button-icon-only-size);
+        height: var(--button-icon-only-size);
+
+        position: absolute;
+        inset-block-end: 0;
+        inset-inline-end: 0;
+
+        color: white;
+
+        opacity: 0.875;
+        
+        background-color: var(--lightbox-overlay-color);
+        aspect-ratio: 1 / 1;
+    }
+
+
 }
