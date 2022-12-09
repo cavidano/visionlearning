@@ -3,13 +3,13 @@ layout: global
 title: "About"
 ---
 
-<div class="wide margin-x-auto">
+<div class="container wide--xl">
 
     {% include about-menu.html %}
 
     <header class="header text-align-center padding-y-4">
 
-        <h1 class="container medium font-weight-normal">
+        <h1 class="medium font-weight-normal">
             Visionlearning is a Free, Online Learning Space for Science Educators and Students.
         </h1>
 
@@ -17,13 +17,11 @@ title: "About"
 
     <hr class="divider" />
 
-    <main class="grid grid--divider grid--column-6--lg">
+    <main class="grid grid--sidebar-right grid--divider">
 
-        <article class="grid__colspan-4">
+        <section>
 
-            <section>
-
-                <h2 class="screen-reader-only">About Visionlearning</h2>
+            <h2 class="screen-reader-only">About Visionlearning</h2>
                 
                 <div class="grid grid--divider--fill-x grid--column-2--lg">
 
@@ -85,106 +83,49 @@ title: "About"
                 
                 </div>
                     
-            </section>
+        </section>
+    
+        <div>
+            <ul class="grid grid--divider">
+                <li class="display-flex align-items-center">
+                    <div class="opacity-70 margin-right-3" data-logo="brand">
+                        <span class="icon icon-globe" style="font-size: 200%"></span>
+                    </div>
 
-            <hr />
+                    <div class="text font-size-md">
+                        <strong>English and Spanish</strong>
+                        <p>
+                            Our modules and quizzes are offered in both English and Spanish.
+                        </p>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center">
+                    <div class="opacity-70 margin-right-3" data-logo="brand">
+                        <span class="icon icon-pronounciation" style="font-size: 200%"></span>
+                    </div>
 
-            <section>
+                    <div class="text font-size-md">
+                        <strong>Listen to Our Content</strong>
+                        <p>
+                            Many of our modules and glossary terms include an audio recording.
+                        </p>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center">
+                    <div class="opacity-70 margin-right-3" data-logo="brand">
+                        <span class="icon icon-glossary-highlight" style="font-size: 200%"></span>
+                    </div>
 
-            <div class="padding-3">
-            
-                <h2>Meet Our Leadership</h2>
-
-                <div class="grid grid--column-2 gap-4 margin-y-4">
-
-                    <article class="display-flex align-items-start font-size-md">
-
-                        <img width="180" src="./images/bio-anthony-carpi.jpg" alt="">
-
-                        <div class="margin-left-3">
-                        
-                            <h3 class="h5">Anthony Carpi, Ph.D.</h3>
-
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex deleniti consequuntur eius? Beatae debitis molestias cumque facilis praesentium maiores quam tempore pariatur delectus maxime quo dolores provident totam culpa
-                            </p>
-
-                        </div>
-                                    
-                    </article>
-
-                    <article class="display-flex align-items-start font-size-md">
-
-                        <img width="180" src="./images/bio-anne-egger.jpg" alt="">
-
-                        <div class="margin-left-3">
-                        
-                            <h3 class="h5">Anne E. Egger, Ph.D.</h3>
-
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ex deleniti consequuntur eius? Beatae debitis molestias cumque facilis praesentium maiores quam tempore pariatur delectus maxime quo dolores provident totam culpa
-                            </p>
-
-                        </div>
-                                    
-                    </article>
-                
-                </div>
-
-            </div>
-
-
-
-            
-            </section>
-            
-        </article>
-
-        <aside class="grid__colspan-2">
-
-        <ul class="grid grid--divider gap-4">
-            <li class="display-flex align-items-center">
-                <div class="opacity-70 margin-right-3" data-logo="brand">
-                    <span class="icon icon-globe" style="font-size: 200%"></span>
-                </div>
-
-                <div class="text font-size-md">
-                    <strong>English and Spanish</strong>
-                    <p>
-                        Our modules and quizzes are offered in both English and Spanish.
-                    </p>
-                </div>
-            </li>
-            <li class="display-flex align-items-center">
-                <div class="opacity-70 margin-right-3" data-logo="brand">
-                    <span class="icon icon-pronounciation" style="font-size: 200%"></span>
-                </div>
-
-                <div class="text font-size-md">
-                    <strong>Listen to Our Content</strong>
-                    <p>
-                        Many of our modules and glossary terms include an audio recording.
-                    </p>
-                </div>
-            </li>
-            <li class="display-flex align-items-center">
-                <div class="opacity-70 margin-right-3" data-logo="brand">
-                    <span class="icon icon-glossary-highlight" style="font-size: 200%"></span>
-                </div>
-
-                <div class="text font-size-md">
-                    <strong>Integrated Glossary</strong>
-                    <p>
-                        Vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo.
-                    </p>
-                </div>
-            </li>
-        </ul>
-
-            
-
-        </aside>
+                    <div class="text font-size-md">
+                        <strong>Integrated Glossary</strong>
+                        <p>
+                            Vitae nunc sed velit dignissim sodales ut eu sem integer vitae justo.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
 
     </main>
-
+    
 </div>
