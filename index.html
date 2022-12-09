@@ -372,139 +372,111 @@ title: Home
 			<ul class="grid grid--column-2--md grid--column-4--lg grid--divider">
 
 				<li>
-					<article class="card theme-light">
 
-						<div class="margin-2">
-							<img class="border-radius box-shadow-1" src="images/module-hero-carbohydrates.jpg" alt="Placeholder" />
-						</div>
-					
-						<div class="card__body">
+					{% capture module_01_content %}
+					<strong class="font-size-sm">
+						<em>
+							Atomic Theory and Structure
+						</em>
+					</strong>                       
 
-							<strong class="font-size-sm">
-								<em>
-									Atomic Theory and Structure
-								</em>
-							</strong>                       
+					<h2 class="h3 font-weight-normal">
+						Carbohydrates
+					</h2>
 
-							<h2 class="h3 font-weight-normal">
-								Carbohydrates
-							</h2>
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
+					</p>
+                    {% endcapture %}
 
-							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
-							</p>
-								
-						</div>
-
-						<div class="card__foot border-top">
-							<a class="button text-color-link font-size-md" href="#1">
-								Read Module
-							</a>              
-						</div>
-
-					</article>
+					{%
+						include card-summary.html
+						image_src='images/module-hero-carbohydrates.jpg'
+						content=module_01_content
+						button_label='Read Module'
+					%}
+				
 				</li>
 
 				<li>
-					<article class="card theme-light">
 
-						<div class="padding-2">
-							<img class="border-radius box-shadow-1" src="/images/module-hero-early-ideas-about-matter.jpg" alt="Placeholder" />
-						</div>
+					{% capture module_02_content %}
+					<strong class="font-size-sm">
+						<em>
+							Atomic Theory and Structure
+						</em>
+					</strong>                       
 
-						<div class="card__body">
+					<h2 class="h3 font-weight-normal">
+						Early Ideas about Matter
+					</h2>
 
-							<strong class="font-size-sm">
-								<em>
-									Atomic Theory and Structure
-								</em>
-							</strong>                       
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
+					</p>
+                    {% endcapture %}
 
-							<h2 class="h3 font-weight-normal">
-								Early Ideas about Matter
-							</h2>
-
-							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
-							</p>
-								
-						</div>
-
-						<div class="card__foot border-top">
-							<a class="button text-color-link font-size-md" href="#1">
-								Read Module
-							</a>              
-						</div>
-
-					</article>
+					{%
+						include card-summary.html
+						image_src='/images/module-hero-early-ideas-about-matter.jpg'
+						content=module_02_content
+						button_label='Read Module'
+					%}
+				
 				</li>
 
 				<li>
-					<article class="card theme-light">
 
-						<div class="margin-2">
-							<img class="border-radius box-shadow-1" src="/images/module-hero-origins-of-plate-tectonic-theory.jpg" alt="Placeholder" />
-						</div>
+					{% capture module_03_content %}
+					<strong class="font-size-sm">
+						<em>
+							The Culture of Science
+						</em>
+					</strong>                       
 
-						<div class="card__body">
+					<h2 class="h3 font-weight-normal">
+						Scientists and the Scientific Community
+					</h2>
 
-							<strong class="font-size-sm">
-								<em>
-									Plate Tectonics
-								</em>
-							</strong>                       
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
+					</p>
+                    {% endcapture %}
 
-							<h2 class="h3 font-weight-normal">
-								Origins of Plate Tectonic Theory
-							</h2>
-
-							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
-							</p>
-								
-						</div>
-
-						<div class="card__foot border-top">
-							<a class="button text-color-link font-size-md" href="#1">
-								Read Module
-							</a>              
-						</div>
-
-					</article>
+					{%
+						include card-summary.html
+						image_src='/images/module-hero-scientists-and-the-scientific-community.jpg'
+						content=module_03_content
+						button_label='Read Module'
+					%}
+				
 				</li>
 
 				<li>
-					<article class="card theme-light">
 
-						<div class="padding-2">
-							<img class="border-radius box-shadow-1" src="images/module-hero-scientists-and-the-scientific-community.jpg" alt="Placeholder" />
-						</div>
+					{% capture module_04_content %}
+					<strong class="font-size-sm">
+						<em>
+							Plate Tectonics
+						</em>
+					</strong>                       
 
-						<div class="card__body">
+					<h2 class="h3 font-weight-normal">
+						Origins of Plate Tectonic Theory
+					</h2>
 
-							<strong class="font-size-sm">
-								<em>
-									The Culture of Science
-								</em>
-							</strong>                       
+					<p>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
+					</p>
+                    {% endcapture %}
 
-							<h2 class="h3 font-weight-normal">
-								Scientists and the Scientific Community
-							</h2>
-
-							<p>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi reiciendis, excepturi non, ea quis consectetur quos similique.
-							</p>
-								
-						</div>
-
-						<div class="card__foot border-top">
-							<a class="button text-color-link font-size-md" href="#1">
-								Read Module
-							</a>              
-						</div>
-
-					</article>
+					{%
+						include card-summary.html
+						image_src='/images/module-hero-origins-of-plate-tectonic-theory.jpg'
+						content=module_04_content
+						button_label='Read Module'
+					%}
+				
 				</li>
 
 			</ul>

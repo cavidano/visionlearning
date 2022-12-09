@@ -1,0 +1,46 @@
+{% if include.image_src %}
+    {% assign src = include.image_src %}
+{% else %}
+    {% assign src = 'https://via.placeholder.com/1200x400' %}
+{% endif %}
+
+{% if include.content %}
+    {% assign content = include.content %}
+{% else %}
+    {% assign content = 'Lorem Ipsum Dolor Sit Amet' %}
+{% endif %}
+
+{% if include.button_label %}
+    {% assign label = include.button_label %}
+{% else %}
+    {% assign label = 'Button' %}
+{% endif %}
+
+{% if include.link_url %}
+    {% assign url = include.link_url %}
+{% else %}
+    {% assign url = '#1' %}
+{% endif %}
+
+<article class="card theme-light">
+
+    <div class="margin-2">
+        <img class="border-radius box-shadow-1" src="{{ src }}" alt="Placeholder" />
+    </div>
+
+    <div class="card__body">
+
+        {{ content }}
+            
+    </div>
+
+    <div class="card__foot border-top">
+        <a class="button button--has-icon--disperse text-color-link font-size-md" href="{{ url }}">
+        <span class="button__text">
+        {{ label }}
+        </span>
+        <span class="icon icon-caret-right"></span>
+        </a>              
+    </div>
+
+</article>
