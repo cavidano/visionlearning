@@ -6,7 +6,7 @@ layout: global
 
     <div class="padding-y-5">
 
-        <div class="container medium wide--xl">
+        <div class="container wide--xl">
 
             <div class="grid grid--sidebars grid--divider">
 
@@ -22,70 +22,39 @@ layout: global
 
                 </div>
 
-                {% if page.title contains 'Classroom' %}
+                <div class="font-size-md">
 
-                <div>
-
-                    <aside class="font-size-md text-align-center">
-
-                        <div class="padding-x-2 margin-bottom-2">
+                    <div class="padding-x-2 margin-bottom-2 text-align-center">
                             
-                            <h6>
-                                You are not signed in
-                            </h6>
+                        <h6>
+                            Sign in or register
+                        </h6>
 
-                            <p>
-                                To access the Visionlearning Classroom, sign in or register.
-                            </p>
+                        <p>
+                            For an ad-free experience and access the Visionlearning Classroom, sign in or register.
+                        </p>
 
-                        </div>
+                    </div>
 
-                        <ul class="grid grid--divider text-color-link">
+                    <ul class="grid grid--divider text-color-link">
 
-                            <li>
-                                <a class="button button--has-icon--disperse" href="#1">
-                                    <span class="button__text">Sign In</span>
-                                    <span class="icon icon-caret-right"></span>
-                                </a>
-                            </li>
+                        <li>
+                            <a class="button button--has-icon--disperse" href="#1">
+                                <span class="button__text">Sign In</span>
+                                <span class="icon icon-caret-right"></span>
+                            </a>
+                        </li>
 
-                            <li>                    
-                                <a class="button button--has-icon--disperse" href="#1">
-                                    <span class="button__text">Register for Free</span>
-                                    <span class="icon icon-caret-right"></span>
-                                </a>
-                            </li>
+                        <li>                    
+                            <a class="button button--has-icon--disperse" href="#1">
+                                <span class="button__text">Register for Free</span>
+                                <span class="icon icon-caret-right"></span>
+                            </a>
+                        </li>
 
-                        </ul>
-
-                    </aside>
+                    </ul>
 
                 </div>
-                
-                {% else %}
-
-                <div class="font-size-md text-align-center">
-
-                    <h2 class="screen-reader-only">
-                        You are not signed in.
-                    </h2>
-
-                    <p>
-                        Want an ad-free experience?
-                    </p>
-
-                    <a class="button button--has-icon margin-bottom-2 text-color-link font-size-sm" href="#1">
-                        <span class="button__text">Sign In</span>
-                        <span class="icon icon-caret-right"></span>
-                    </a>
-
-                    <p>
-                        Or <a href="#1">register for free</a>.
-                    </p>
-
-                </div>
-                
-                {% endif %}
 
             </div>
 
