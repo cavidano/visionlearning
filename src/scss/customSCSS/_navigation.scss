@@ -56,7 +56,7 @@ In this file:
         grid-area: actions;
     }
 
-    @include breakpoint.breakpoint-down(lg) {
+    @include breakpoint.breakpoint-down(xl) {
 
         .vl-hat__menu {
             padding-top: var(--spacer-2);
@@ -65,7 +65,7 @@ In this file:
 
     }
 
-    @include breakpoint.breakpoint-up(lg) {
+    @include breakpoint.breakpoint-up(xl) {
         
         .vl-hat__toggle-button {
             display: none;
@@ -193,10 +193,9 @@ In this file:
         color: white;
         
         background-image: linear-gradient(#d2593f,#bf3823);
-        
     }
 
-    @include breakpoint.breakpoint-down(lg) {
+    @include breakpoint.breakpoint-down(xl) {
 
         .vl-header__logo,
         .vl-header__menu {
@@ -214,7 +213,7 @@ In this file:
         }
     }
 
-    @include breakpoint.breakpoint-up(lg) {
+    @include breakpoint.breakpoint-up(xl) {
         .vl-header {
             display: flex;
             align-items: stretch;
