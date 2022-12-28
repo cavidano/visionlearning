@@ -422,7 +422,7 @@ In this file:
     }
 
     .tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
-        color: var(--canvas-link);
+        color: var(--link-color);
     }
 
     [data-logo="brand"] {
@@ -435,7 +435,7 @@ In this file:
 
     .about-menu {
         a:not([aria-current]){
-            color: var(--a11y-link-color);
+            color: var(--link-color);
         }
     }
 

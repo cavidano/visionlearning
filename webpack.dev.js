@@ -10,22 +10,23 @@ const devPages = {
     'Accordion': 'accordion',
     'AudioPlayer': 'audio-player',
     'Color': 'color',
+    'CompCheck': 'comp-check',
     'DisciplineGrid': 'discipline-grid',
     'Form': 'form',
     'Grid': 'grid',
     'HeaderFooter': 'header-footer',
     'Lightbox': 'lightbox',
     'List': 'list',
-    'ReadingToggles': 'reading-toggles',
     'Module': 'module',
+    'Navigation': 'navigation',
+    'ReadingToggles': 'reading-toggles',
     'Typography': 'typography',
-    'Quiz': 'quiz',
-    'CompCheck': 'comp-check'
+    'Quiz': 'quiz'
 }
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Module}.html`;
+const devPage = `${devPages.Navigation}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
