@@ -1,3 +1,4 @@
+import { matchMedia } from '../utilities';
 
 //////////////////////////////////////////////
 // Grid
@@ -9,27 +10,9 @@ export default class Layout {
 
     init() {
 
-        const mediaQuery = window.matchMedia('(min-width: 1200px)');
-
-        let isDesktop;
-
-        function checkMediaQuery() {
-        
-            if (mediaQuery.matches) {
-                console.log('Media Query Matched!');
-                isDesktop = true;
-            } else {
-                console.log('Media Query not Matched!');
-                isDesktop = false;
-            }
-        }
-
-        mediaQuery.addEventListener('change', checkMediaQuery);
-        checkMediaQuery();
-
-        ////
-
         let time;
+
+        let isDesktop = matchMedia(1200);
 
         this.#discList.forEach((disc) => {
 

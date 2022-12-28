@@ -32,12 +32,11 @@ In this file:
     // Did you know
 
     .did-you-know {
-
-        margin-inline-start: calc(var(--button-icon-only-size) * -1);
-        
         background-color: var(--light);
         background: linear-gradient(to right, var(--light), hsla(0, 0%, 100%, 0));
-        padding: var(--spacer-4) calc(var(--button-icon-only-size));
+
+        padding-block: var(--spacer-4);
+        padding-inline: var(--spacer-3);
 
             border-inline-start:
                var(--border-width)
@@ -48,6 +47,15 @@ In this file:
             text-transform: uppercase;
             color: var(--primary);
         }
+    }
+
+    @media screen and (min-width: 1000px) {
+
+        .did-you-know {
+            padding-inline: calc(var(--button-icon-only-size));
+            margin-inline-start: calc(var(--button-icon-only-size) * -1);
+        }
+
     }
 
     // Module Tabs

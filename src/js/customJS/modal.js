@@ -1,4 +1,4 @@
-import { getFocusableElements, getOffsetTop } from '../utilities'
+import { getFocusableElements, getOffsetTop } from '../utilities';
 
 //////////////////////////////////////////////
 // Modal

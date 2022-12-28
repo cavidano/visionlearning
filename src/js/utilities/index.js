@@ -70,3 +70,13 @@ export const getOffsetTop = (element) => {
 
   return offsetTop;
 };
+
+//////////////////////////////////////////////
+// D. Match Media
+//////////////////////////////////////////////
+
+export const matchMedia = ((size) => {
+
+  return window.matchMedia(`(min-width: ${size}px)`);
+
+});
