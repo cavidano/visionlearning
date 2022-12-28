@@ -20,7 +20,6 @@ In this file:
 //////////////////////////////////////////////
 
 .module {
-
     --grid-sidebar-width: 20em;
 }
 
@@ -28,28 +27,26 @@ In this file:
 // C. Components
 //////////////////////////////////////////////
 
-@layer component {
+@layer {
 
     // Did you know
 
     .did-you-know {
 
-        border-left-color: currentColor;
-
-        h2 { 
-            font-size: var(--font-size-md) !important;
-            text-transform: uppercase;
-        }
-
-        p {
-            --border-color: currentColor;
-
-            padding-inline-start: var(--spacer-3);
+        margin-inline-start: calc(var(--button-icon-only-size) * -1);
+        
+        background-color: var(--light);
+        background: linear-gradient(to right, var(--light), hsla(0, 0%, 100%, 0));
+        padding: var(--spacer-4) calc(var(--button-icon-only-size));
 
             border-inline-start:
                var(--border-width)
                var(--border-style)
-               var(--border-color);
+               var(--primary);
+        h2 { 
+            font-size: var(--font-size-rg);
+            text-transform: uppercase;
+            color: var(--primary);
         }
     }
 
@@ -62,12 +59,11 @@ In this file:
         margin-block-end: var(--grid-divider-gap);
     }
 
-    //@at-root
+    // @at-root
 
     .in-this-module {
         .button-group button:not([aria-selected="true"]) {
             color: var(--link-color);
-            // --subtle-fill-opacity: 0
         }
     }
 
