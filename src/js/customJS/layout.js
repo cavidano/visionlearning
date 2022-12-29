@@ -53,7 +53,6 @@ export default class Layout {
                 disc.removeEventListener('mouseleave', handleMouseLeave);
             }
 
-
         });
     }
 }
