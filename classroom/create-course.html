@@ -1,0 +1,397 @@
+---
+layout: global
+title: "Create New Course"
+account: Signed In
+---
+
+<div class="wrap-viewport-height">
+
+    <main id="skip-header-content">
+
+        <div class="height-100">
+
+            <form class="container narrow margin-y-5">
+
+                <h1 class="margin-bottom-4">
+                     {{ page.title }}
+                </h1>
+
+                <div
+                    class="alert text-color-classroom margin-bottom-3"
+                    aria-labelledby="alert-label"
+                    aria-describedby="alert-description"
+                    role="alert">
+
+                    <div class="alert__title h5">
+                        <span class="icon icon-warn" aria-hidden="true"></span>
+                        <span class="alert__title__text" id="alert-label">
+                            Before you proceed
+                        </span>
+                    </div>
+
+                    <div class="alert__description" id="alert-description">
+                        <p>
+                            Courses are designed for teachers and/or home-schoolers with students enrolled in a course. Completing this form will create a public classroom.
+                        </p>
+                    </div>
+
+                </div>
+
+                <p class="required-indicator" aria-hidden="true">
+                    <span class="required-indicator__text">
+                        Required fields indicated with
+                    </span>
+                    <span class="icon icon-asterisk"></span>
+                </p>
+
+                <fieldset>
+                    
+                    <legend class="opacity-80 margin-bottom-3">
+                        <strong>
+                            General information
+                        </strong>
+                    </legend>
+
+                    <div
+                        class="form-entry"
+                        data-required="true"
+                        data-error-message="Custom error message">
+
+                        <label class="form-entry__field">
+
+                            <span class="form-entry__field__label">
+                                Course Title
+                            </span>
+
+                            <span class="form-entry__field__input">
+                                <input
+                                    type="text"
+                                    name="courseTitle"
+                                    id="course-title"
+                                />
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <div
+                        class="form-entry">
+
+                        <label class="form-entry__field">
+
+                            <span class="form-entry__field__label">
+                                Course Number
+                            </span>
+
+                            <span class="form-entry__field__input">
+                                <input
+                                    type="text"
+                                    name="courseNumber"
+                                    id="course-number"
+                                />
+                            </span>
+
+                        </label>
+
+                    </div>
+                            
+                    <div class="form-entry">
+
+                        <label class="form-entry__field">
+
+                            <span class="form-entry__field__label">
+                                Course Level
+                            </span>
+
+                            <span class="form-entry__field__select">
+                                <select
+                                    id="course-level"
+                                    name="courseLevel">
+                                        <option>Select</option>
+                                        <option value="1">Middle School</option>
+                                        <option value="2">High School</option>
+                                        <option value="3">Undergraduate</option>
+                                        <option value="4">Graduate</option>
+                                </select>
+                            </span>
+
+                        </label>
+
+                    </div>
+                            
+                    <div class="form-entry">
+
+                        <div class="form-entry__field">
+
+                            <span class="form-entry__field__label" id="switch-option-label">
+                                Student Screening
+                            </span>
+
+                            <div class="form-entry__option">
+
+                                <div class="form-entry__option__switch">
+
+                                    <label aria-labeledby="switch-option-label">
+                                        <input
+                                            type="checkbox"
+                                            name="singleOption"
+                                            id="studentScreaning"
+                                            value="option">
+                                            <span class="switch__slider"></span>
+                                            <span class="option__label">
+                                                Recieve Notifications
+                                            </span>
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-entry">
+
+                        <label class="form-entry__field">
+
+                            <span class="form-entry__field__label">
+                            Degree
+                            </span>
+
+                            <span class="form-entry__field__input">
+                            <input
+                                type="text"
+                                name="degree"
+                                id="degree"
+                            />
+                            </span>
+
+                        </label>
+
+                    </div>
+                    
+                    <div
+                        class="form-entry">
+
+                        <label class="form-entry__field">
+
+                            <span class="form-entry__field__label">
+                                Email Adress
+                            </span>
+
+                            <span class="form-entry__field__input">
+                            <input
+                                type="text"
+                                name="email"
+                                id="email"
+                                value="cavidano@gmail.com"
+                            />
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <div
+                        class="form-entry">
+
+                        <label class="form-entry__field">
+
+                            <span class="form-entry__field__label">
+                                Home phone
+                            </span>
+
+                            <span class="form-entry__field__input">
+                            <input
+                                type="text"
+                                name="homePhone"
+                                id="home-phone"
+                            />
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    </fieldset>
+
+                    
+                    <hr class="border-color-dark margin-y-4" />
+
+                    <fieldset>
+                    
+                        <legend class="opacity-80 margin-bottom-3">
+                            <strong>Address Information</strong>
+                        </legend>
+
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Street Address
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="text"
+                                        name="streetAddress"
+                                        id="street-address"
+                                    />
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Street Address 2
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="text"
+                                        name="streetAddress2"
+                                        id="street-address-2"
+                                    />
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    City
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="text"
+                                        name="city"
+                                        id="city"
+                                    />
+                                </span>
+
+                            </label>
+
+                        </div>
+                    
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    State
+                                </span>
+
+                                <span class="form-entry__field__select">
+                                    <select
+                                        id="select-example"
+                                        name="selectExample"
+                                        aria-describedby="help-select-example">
+                                            <option>Select</option>
+                                            <option value="Option One">Option One</option>
+                                            <option value="Option Two">Option Two</option>
+                                            <option value="Option Three">Option Three</option>
+                                            <option value="Option Four">Option Four</option>
+                                            <option value="Option Five">Option Five</option>
+                                    </select>
+                                </span>
+
+                            </label>
+
+                        </div>
+                    
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Province
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="text"
+                                        name="province"
+                                        id="province"
+                                    />
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Postal Code
+                                </span>
+
+                                <span class="form-entry__field__input">
+                                    <input
+                                        type="text"
+                                        name="postalCode"
+                                        id="postal-code"
+                                    />
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                        <div class="form-entry">
+
+                            <label class="form-entry__field">
+
+                                <span class="form-entry__field__label">
+                                    Country
+                                </span>
+
+                                <span class="form-entry__field__select">
+                                    <select
+                                        id="select-example"
+                                        name="selectExample"
+                                        aria-describedby="help-select-example">
+                                            <option>Select</option>
+                                            <option value="Option One">Option One</option>
+                                            <option value="Option Two">Option Two</option>
+                                            <option value="Option Three">Option Three</option>
+                                            <option value="Option Four">Option Four</option>
+                                            <option value="Option Five">Option Five</option>
+                                    </select>
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <button
+                        class="button width-100 margin-top-3"
+                        type="submit">
+                            Sign In
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+</div>
