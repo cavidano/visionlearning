@@ -15,24 +15,14 @@ In this file:
     list-style: none;
 
     > li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    > li:not(:last-child) {
-        border-bottom-width: var(--border-width);
-        border-bottom-style: var(--border-style);
-        border-bottom-color: inherit;
-    }
-
-}
-
-.list-divider__cell {
-    &:nth-child(1) {
         padding-block: 0.75em;
         padding-inline: 0.5em;
     }
+    
+    > li:not(:last-child) {
+        border-block-end: var(--border-width) var(--border-style) var(--border-color);
+    }
+
 }
 
 //////////////////////////////////////////////
