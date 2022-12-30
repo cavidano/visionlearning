@@ -1,0 +1,127 @@
+---
+layout: global
+---
+
+<main id="skip-header-content">
+
+    <div class="container wide">
+
+        <nav class="font-size-md padding-y-3 border-bottom">
+
+            <ul class="nav-breadcrumb">
+
+                <li>
+                    <a href="/classroom/my-courses" class="text-color-classroom">
+                        <strong>
+                            My Courses
+                        </strong>
+                    </a>                    
+                </li>
+                <li>
+                    Origins: From the Big Bang to Life on Earth - FALL 2022</a>
+                </li>
+            </ul>
+
+        </nav>
+
+    </div>
+
+    <div class="padding-y-1 padding-y-5--lg">
+
+        <div class="container wide">
+
+            <div class="grid grid--sidebar-left grid--divider">
+
+                <div class="font-size-md">
+
+                    <div class="display-none--lg">
+
+                        <button
+                            class="button button--has-icon text-color-link width-100"
+                            data-toggle="collapse"
+                            data-target-toggle="#classroom-nav"
+                            data-target-close="#classroom-edit">
+                                <span class="icon icon-menu"></span>
+                                <span class="button__text">Course Menu</span>
+                        </button>
+
+                    </div>
+                    
+                    <div class="collapse display-block--lg padding-y-1 padding-y-0--lg" id="classroom-nav">
+                        
+                        <nav class="font-size-md">
+
+                            <ul
+                                class="tabs-nav classroom border border-radius"
+                                role="menu">
+
+                                <li>
+                                    <a href="{{ site.url }}/classroom/course" {% if page.title contains 'Overview' %} aria-current="page" {% endif %}>
+                                        Overview
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ site.url }}/classroom/course/reminders" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
+                                        Reminders
+                                    </a>
+                                </li>
+                                    
+                                <li>
+                                    <a href="#1">
+                                        Students
+                                    </a>
+                                </li>
+                                    
+                                <li>
+                                    <a href="#1">
+                                        Quizzes
+                                    </a>
+                                </li>
+                                    
+                            </ul>
+
+                            <hr class="divider" />
+
+                            <div class="course-modules">
+
+                                <div class="course-modules__header">
+                                    <strong>
+                                        Course Modules
+                                    </strong>
+                                </div>
+
+                                <ul class="course-modules__nav">
+                                    <li>
+                                        <a href="{{ site.url }}/classroom/course/module.html">
+                                            Earth Structure: A Virtual Journey to the Center of Earth
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#1">
+                                            Defining Minerals
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </nav>
+                                
+                    </div>
+
+                </div>
+
+                <div class="main">
+
+                    {{ content }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
