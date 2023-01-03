@@ -18,154 +18,13 @@
 
 				<figure class="container medium margin-y-5">
 
-                    <div class="grid grid--column-2 grid--column-3--md gap-2" id="swatches"></div>
+                    <div class="grid grid--column-2 grid--column-3--md gap-2" id="principle-swatches"></div>
                 
                 </figure>
 
                 <figure class="container medium margin-y-5">
 
-                    <div class="grid grid--column-2 grid--column-4--md gap-1">
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end biology">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-biology.jpg" alt="">
-                            </div>
-
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2 text-shadow">Biology</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end chemistry">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-chemistry.jpg" alt="">
-                            </div>
-                            
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2 text-shadow">Chemistry</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end earth-science">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-earth-science.jpg" alt="">
-                            </div>
-
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2">Earth Science</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end general-science">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-general-science.jpg" alt="">
-                            </div>
-
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2 text-shadow">General Science</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end profiles-in-science">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-profiles-in-science.jpg" alt="">
-                            </div>
-
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2 text-shadow">Inside Science</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end math-in-science">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-math-in-science.jpg" alt="">
-                            </div>
-
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2 text-shadow">Math in Science</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end physics">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-physics.jpg" alt="">
-                            </div>
-
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2 text-shadow">Physics</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end process-of-science">
-
-                            <div class="backdrop__image gradient-veneer-bottom">
-                                <img class="opacity-40" src="./images/discipline-process-of-science.jpg" alt="">
-                            </div>
-
-                            <div class="backdrop__cover">
-                                <h2 class="h6 margin-2 text-shadow">Process of Science</h2>
-                                <div class="padding-2 background-color-primary border-top font-size-md">               
-                                    <p>
-                                        #00492f
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    
-                    </div>
+                    <div class="grid grid--column-2 gap-2" id="discipline-swatches"></div>
                 
                 </figure>
 
@@ -177,7 +36,9 @@
 
     <script>
 
-        const colorPalette = {
+        // Primary Palette
+
+        const principlePalette = {
             Primary: '#582273',
             Library: '#FAB957',
             Glossary: '#60BF64',
@@ -186,9 +47,21 @@
             Light: 'hsla(0, 0%, 0%, 0.05)',
         }
 
-        const swatchContainer = document.getElementById('swatches');
+        const disciplinePalette = {
+            'Biology': '#00492f',
+            'Chemistry': '#29417c',
+            'Earth Science': '#552c39',
+            'General Science': '#c13926',
+            'Profiles in Science': '#4c3463',
+            'Math in Science': '#016a7c',
+            'Physics': '#1b3639',
+            'Process of science': '#661430',
+        }
+
+        const principleSwatchContainer = document.getElementById('principle-swatches');
+        const disciplineSwatchContainer = document.getElementById('discipline-swatches');
         
-        const swatches = Object.entries(colorPalette).map(([key, value]) => {
+        const principleSwatches = Object.entries(principlePalette).map(([key, value]) => {
 
             const utility = key.toLowerCase();
 
@@ -207,21 +80,45 @@
                     </div>
 
                     <div class="card__foot border-top font-size-sm">
-                        <ul class="nav nav--horizontal justify-content-between">
-                            <li>
-                                <a href="#1">Secondary Action</a>
-                            </li>
-                            <li>
-                                <a class="button button--outline width-100" href="#1">Primary Action</a>
-                            </li>
-                        </ul>
+                        <a class="button button width-100" href="#1">Primary Action</a>
                     </div>
                 </div>
             `);
         
         }).join('');
+        
+        const disciplineSwatches = Object.entries(disciplinePalette).map(([key, value]) => {
 
-        swatchContainer.innerHTML = swatches;
+            const slugify = key => key.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+
+            const slug = slugify(key)
+
+            return (`
+                <div class="backdrop backdrop--fixed aspect-ratio-3x2 theme-primary ${slug}">
+
+                        <div class="backdrop__image gradient-veneer-bottom">
+                            <img class="opacity-60" src="./images/discipline-${slug}-3x2.jpg" alt="">
+                        </div>
+
+                        <div class="backdrop__cover align-items-end justify-items-stretch">
+                            <div>
+                                <h2 class="h6 margin-2 text-shadow">${key}</h2>
+                                <div class="padding-2 background-color-primary border-top font-size-md">               
+                                    <p>
+                                        #00492f
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            `);
+        
+        }).join('');
+
+        principleSwatchContainer.innerHTML = principleSwatches;
+
+        disciplineSwatchContainer.innerHTML = disciplineSwatches;
 
     </script>
 
