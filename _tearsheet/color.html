@@ -8,9 +8,6 @@
 
         <title>Color • Tearsheet</title>
 
-        <!-- Natura11y Icons -->
-        <link rel="stylesheet" href="../lib/icons/visionlearning-icons.css">
-
     </head>
 
     <body>
@@ -21,34 +18,7 @@
 
 				<figure class="container medium margin-y-5">
 
-                    <div class="grid grid--column-2 grid--column-3--md grid--divider">
-
-                        <div class="card theme-primary">
-
-                            <div class="card__head border-bottom">
-                                <p>Theme Color</p>
-                            </div>
-
-                            <div class="card__body">
-                                <h2 class="h4">Primary</h2>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi non suscipit voluptas eaque, error accusamus, autem inventore beatae aspernatur quos officia.
-                                </p>
-                            </div>
-
-                            <div class="card__foot border-top font-size-sm">
-                                <ul class="nav nav--horizontal justify-content-between">
-                                    <li>
-                                        <a href="#1">Secondary Action</a>
-                                    </li>
-                                    <li>
-                                        <a class="button button--outline width-100" href="#1">Primary Action</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                    </div>
+                    <div class="grid grid--column-2 grid--column-3--md gap-2" id="swatches"></div>
                 
                 </figure>
 
@@ -140,7 +110,6 @@
                                 </div>
                             </div>
 
-
                         </div>
 
                         <div class="backdrop aspect-ratio-custom theme-primary backdrop--fixed justify-content-end math-in-science">
@@ -205,5 +174,55 @@
         </main>
 
     </body>
+
+    <script>
+
+        const colorPalette = {
+            Primary: '#582273',
+            Library: '#FAB957',
+            Glossary: '#60BF64',
+            Classroom: '#2B9FD9',
+            Dark: '#1E1A33',
+            Light: 'hsla(0, 0%, 0%, 0.05)',
+        }
+
+        const swatchContainer = document.getElementById('swatches');
+        
+        const swatches = Object.entries(colorPalette).map(([key, value]) => {
+
+            const utility = key.toLowerCase();
+
+            return (`
+                <div class="card theme-${utility}">
+
+                    <div class="card__head border-bottom">
+                        <p>Theme Color</p>
+                    </div>
+
+                    <div class="card__body">
+                        <h2 class="h4">${key}</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi non suscipit voluptas eaque, error accusamus, autem inventore beatae aspernatur quos officia.
+                        </p>
+                    </div>
+
+                    <div class="card__foot border-top font-size-sm">
+                        <ul class="nav nav--horizontal justify-content-between">
+                            <li>
+                                <a href="#1">Secondary Action</a>
+                            </li>
+                            <li>
+                                <a class="button button--outline width-100" href="#1">Primary Action</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            `);
+        
+        }).join('');
+
+        swatchContainer.innerHTML = swatches;
+
+    </script>
 
 </html>
