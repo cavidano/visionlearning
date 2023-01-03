@@ -46,7 +46,11 @@ In this file:
         var(--light-o)
     );
     
-    --dark: #1E1A33;
+    --dark: #161326;
+
+    //
+
+    --a11y-link: #00549a;
 
     // Associated Primary Colors
 
@@ -92,7 +96,7 @@ In this file:
 
     --light-text: currentColor;
     --light-border: hsla(0, 0%, 50%, 0.25);
-    --light-link: var(--canvas-link);
+    --light-link: var(--a11y-link);
     --light-confirm: #007e35;
     --light-warn: #ce1736;
 
@@ -304,6 +308,9 @@ $theme-colors: (
     :root {
         --light-l: 70%;
         --light-o: 0.0625;
+        --a11y-link: var(--dark-link);
+
+    --primary: #8c28bd;
     }
 
     .module-breadcrumb {

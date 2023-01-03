@@ -33,7 +33,7 @@ In this file:
 
     .did-you-know {
         background-color: var(--light);
-        background: linear-gradient(to right, var(--light), hsla(0, 0%, 100%, 0));
+        background: linear-gradient(45deg, var(--light), hsla(0, 0%, 100%, 0));
 
         padding-block: var(--spacer-4);
         padding-inline: var(--spacer-3);

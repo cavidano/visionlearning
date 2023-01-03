@@ -422,7 +422,7 @@ In this file:
     }
 
     .tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
-        color: var(--link-color);
+        color: var(--a11y-link);
     }
 
     [data-logo="brand"] {
@@ -435,7 +435,7 @@ In this file:
 
     .about-menu {
         a:not([aria-current]){
-            color: var(--link-color);
+            color: var(--a11y-link);
         }
     }
 
@@ -450,7 +450,7 @@ In this file:
 
         padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
 
-        a{ color: var(--canvas-link)};
+        a{ color: var(--a11y-link)};
     
     }
 
