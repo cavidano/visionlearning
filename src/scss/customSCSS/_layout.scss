@@ -17,12 +17,23 @@ In this file:
 @use "../grid";
 
 //////////////////////////////////////////////
-// B. Variables
+// B. Base
 //////////////////////////////////////////////
 
-// :root {
-//   --article-sidebar-width: 20em;
-// }
+@layer base {
+
+  body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    > footer {
+      margin-block-start: auto; 
+    }
+  }
+
+} // end @layer
 
 //////////////////////////////////////////////
 // B. Components

@@ -4,31 +4,35 @@ title: Classroom • My Courses
 account: Signed In
 ---
 
-<div class="container medium margin-y-5">
+<main>
 
-    <header class="flex-row--md align-items-center justify-content-between">
+    <div class="container medium margin-y-5">
 
-        <h2 class="margin-bottom-0--md">My Courses</h2>
+        <header class="flex-row--md align-items-center justify-content-between">
 
-        <a class="button button--has-icon theme-classroom font-size-md" href="{{ site.url }}/classroom/create-course.html">
-            <span class="button__text">Create Course</span>
-            <span class="icon icon-plus"></span>
-        </a>
+            <h2 class="margin-bottom-0--md">My Courses</h2>
 
-    </header>
+            <a class="button button--has-icon theme-classroom font-size-md" href="{{ site.url }}/classroom/create-course.html">
+                <span class="button__text">Create Course</span>
+                <span class="icon icon-plus"></span>
+            </a>
 
-    <hr class="divider" />
+        </header>
 
-    <ul class="list-divider font-size-md">
+        <hr class="divider" />
 
-        {% include course-list-item.html %}
-        {% include course-list-item.html %}
-        {% include course-list-item.html %}
-        {% include course-list-item.html %}
-        {% include course-list-item.html %}
-        {% include course-list-item.html %}
-        {% include course-list-item.html %}
+        <ul class="list-divider font-size-md">
 
-    </ul>
+            {% include course-list-item.html %}
+            {% include course-list-item.html %}
+            {% include course-list-item.html %}
+            {% include course-list-item.html %}
+            {% include course-list-item.html %}
+            {% include course-list-item.html %}
+            {% include course-list-item.html %}
 
-</div>
+        </ul>
+
+    </div>
+
+</main>
