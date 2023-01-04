@@ -1,49 +1,52 @@
 ---
 layout: global
 ---
+<main id="skip-header-content">
 
-<div class="container wide">
+    <div class="container wide">
 
-    {% include about-menu.html %}
+        {% include about-menu.html %}
 
-    <div class="margin-bottom-5">
-        
-        <header class="text-align-center padding-y-4">
+        <div class="margin-bottom-5">
+            
+            <header class="text-align-center padding-y-4">
 
-            <h1 class="container medium font-weight-normal">
-                {{ page.title }}
-            </h1>
+                <h1 class="container medium font-weight-normal">
+                    {{ page.title }}
+                </h1>
 
-        </header>
+            </header>
 
-        <hr class="divider" />
+            <hr class="divider" />
 
-        <main class="grid grid--sidebar-right grid--divider">
+            <main class="grid grid--sidebar-right grid--divider">
 
-            <article>
+                <article>
 
-            {{ content }}
-                
-            </article>
+                {{ content }}
+                    
+                </article>
 
-            <aside>
-                
-                <ul class="nav font-size-md padding-4 position-sticky-top">
-                    <li>
-                        <a href="#1" aria-current="page">Leadership</a>
-                    </li>
-                    <li>
-                        <a href="#1">Authors</a>
-                    </li>
-                    <li>
-                        <a href="#1">Contributors</a>
-                    </li>
-                </ul>
+                <aside>
+                    
+                    <ul class="nav font-size-md padding-4 position-sticky-top">
+                        <li>
+                            <a href="#1" aria-current="page">Leadership</a>
+                        </li>
+                        <li>
+                            <a href="#1">Authors</a>
+                        </li>
+                        <li>
+                            <a href="#1">Contributors</a>
+                        </li>
+                    </ul>
 
-            </aside>
+                </aside>
 
-        </main>
+            </main>
+
+        </div>
 
     </div>
 
-</div>
+</main>
