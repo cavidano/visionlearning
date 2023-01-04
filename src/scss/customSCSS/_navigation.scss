@@ -86,7 +86,6 @@ In this file:
 
     .vl-header {
         position: relative;
-        // z-index: 1000;
     }
 
     .vl-header__logo {
@@ -148,10 +147,6 @@ In this file:
                 background-image: linear-gradient(hsla(0, 0%, 100%, 0.25), hsla(0, 0%, 100%, 0.125));
                 opacity: 1;
             }
-        }
-
-        a > span{
-            z-index: 5;
         }
 
         span {
