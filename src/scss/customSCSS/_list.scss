@@ -14,15 +14,30 @@ In this file:
 .list-divider { 
     list-style: none;
 
-    > li {
-        padding-block: 0.75em;
-        padding-inline: 0.5em;
-    }
-    
     > li:not(:last-child) {
         border-block-end: var(--border-width) var(--border-style) var(--border-color);
     }
 
+    > li {
+        padding-block: 0.5em;
+        padding-inline: 0.75em;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: var(--spacer-4);
+
+    }
+
+    > li > [class*="__cell"]:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        min-height: var(--button-icon-only-size);
+    }
+    
 }
 
 //////////////////////////////////////////////
