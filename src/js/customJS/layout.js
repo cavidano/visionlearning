@@ -12,7 +12,9 @@ export default class Layout {
 
         let time;
 
-        let isDesktop = matchMedia(1200);
+        let isDesktop = matchMedia(1200).matches;
+
+        console.log(isDesktop)
 
         this.#discList.forEach((disc) => {
 

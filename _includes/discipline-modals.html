@@ -18,17 +18,12 @@
         class="modal__content medium theme-primary {{ slug }} border-radius box-shadow-3"
         aria-labelledby="modal-example-01-title">
 
-        <header class="
-			border-radius-top
-			position-relative
-		">
-			<!-- --> 
+        <header class="position-relative">
 
-			<div
-				class="backdrop backdrop--fixed" style="--backdrop-fixed-height: 600px;">
+			<div class="backdrop backdrop--fixed">
 
 				<div class="backdrop__image gradient-veneer-bottom">
-					<picture class="opacity-30 width-100">
+					<picture class="opacity-20 width-100">
 						<source srcset="./images/discipline-{{ slug }}-1x3.jpg" media="(min-width: 760px)">
 						<img src="./images/discipline-{{ slug }}-3x2.jpg" alt="Placeholder">
 					</picture>
@@ -36,7 +31,7 @@
 
 				<div class="backdrop__cover align-content-start">
 
-					<header class="modal__content__head border-bottom width-100">
+					<header class="modal__content__head border-bottom">
 						<h1 class="text-transform-uppercase font-size-lg text-shadow grid__colspan-4--lg">
 							{{ header }}
 						</h1>
@@ -45,9 +40,9 @@
 						</button>
 					</header>
 
-					<div class="container grid grid--column-7--lg gap-4 margin-y-6 text-shadow">
+					<div class="container grid grid--column-8--lg gap-4 margin-y-6 text-shadow border">
 
-						<div class="grid__colspan-4--lg">
+						<div class="grid__colspan-5--lg">
 							<p>
 								{{ description }}
 							</p>
