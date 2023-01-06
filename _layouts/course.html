@@ -83,26 +83,34 @@ layout: global
 
                             <hr class="divider" />
 
-                            <div class="course-modules">
+                            <div class="card border border-radius">
 
-                                <div class="course-modules__header">
-                                    <strong>
-                                        Course Modules
-                                    </strong>
+                                <div class="card__head border-bottom">
+                                    <strong class="">Course Modules</strong>
                                 </div>
 
-                                <ul class="course-modules__nav">
-                                    <li>
-                                        <a href="{{ site.url }}/classroom/course/module.html">
-                                            Earth Structure: A Virtual Journey to the Center of Earth
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#1">
-                                            Defining Minerals
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="card__body">
+                                    <ul class="nav text-color-link">
+                                        <li>
+                                            <a href="{{ site.url }}/classroom/course/module.html">
+                                                Earth Structure
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#1">
+                                                Defining Minerals
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="card__foot border-top font-size-md">
+                                    <a href="{{ site.url }}/classroom/course/add-modules.html" class="text-decoration-underline">
+                                    Add</a> or 
+                                    <a href="{{ site.url }}/classroom/course/edit-modules.html" class="text-decoration-underline">
+                                    Edit</a>
+                                    modules
+                                </div>
 
                             </div>
 
