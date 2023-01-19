@@ -32,9 +32,28 @@ In this file:
     // Did you know
 
     .figure {
-        margin-block: var(--figure-margin-y);
         display: flex;
         justify-content: center;
+
+        margin-block: var(--figure-margin-y);
+        
+        // background-color: antiquewhite;
+
+        gap: var(--spacer-4);
+
+
+        figure {
+            display: flex;
+            flex-direction: column;
+            width: min(600px, 80%);
+            // max-width: 50%;
+// width: max-content;
+        }
+
+        figure img {
+            min-width: 300px;
+            // min-width: 100%;
+        }
     }
 
 } // end @layer

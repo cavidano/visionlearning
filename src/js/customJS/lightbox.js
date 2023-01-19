@@ -42,6 +42,10 @@ export default class Lightbox {
 			lightboxIMG.src = lightboxes[current].imgSRC;
 			lightboxIMG.alt = lightboxes[current].imgALT;
 			lightboxCaption.innerHTML = lightboxes[current].imgALT;
+      if (lightboxes[current].imgWidth !== null) {
+      
+			lightboxIMG.setAttribute('width', lightboxes[current].imgWidth);
+      }
 		};
 
 		this.#lightbox.classList.add('lightbox');
@@ -77,8 +81,9 @@ export default class Lightbox {
         wrap(image, wrapper);
 
         lightboxes.push({
-          imgSRC: image.src,
-          imgALT: image.alt,
+          imgSRC: image.src ? image.src : null,
+          imgALT: image.alt ? image.alt : null,
+          imgWidth: image.getAttribute('width') ? image.getAttribute('width') : null,
         });
 
         const imageBtn = image.closest('button');
