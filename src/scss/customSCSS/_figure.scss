@@ -33,6 +33,8 @@ In this file:
 
     .figure {
         margin-block: var(--figure-margin-y);
+        display: flex;
+        justify-content: center;
     }
 
 } // end @layer

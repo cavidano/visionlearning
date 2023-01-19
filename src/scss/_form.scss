@@ -22,8 +22,6 @@ In this file:
 // B. Variables
 //////////////////////////////////////////////
 
-// Scoped to Root
-
 :root {
     --form-field-padding-x: var(--spacer-3);
     --form-field-padding-y: var(--button-padding-y);
@@ -264,7 +262,7 @@ In this file:
             display: none;
 
             [data-required="true"] & { 
-                display: block !important;
+                display: inline-block !important;
             }
         }
     }
@@ -347,8 +345,7 @@ In this file:
 
     .active {
         .form-entry__field__select::after,
-        .form-entry__field__input::after,
-        .form-entry__option > div > label::after {
+        .form-entry__field__input::after {
             box-shadow: inset 0 0 0 calc( var(--border-width) * 3) currentColor;
         }
     }
@@ -486,6 +483,14 @@ In this file:
             border-block-end-color: inherit;
         }
 
+        > div > label:focus-within {
+        
+            &::before {
+                background-color: currentColor;
+            }
+        
+        }
+
         > div > label {
             position: relative;
 
@@ -503,9 +508,6 @@ In this file:
                 opacity: 0.05;
             }
 
-            &.active::before {
-                background-color: currentColor;
-            }
         }
     }
 
@@ -773,20 +775,17 @@ In this file:
 
     .form-entry__feedback {
         order: 3;
+        display: flex;
+        align-items: center;
 
-        padding-inline: calc( var(--form-field-padding-x) * 0.5);
-
+        font-size: 0.8em;
+       
         margin-block-start: 0.5rem;
 
-        > small {
-            display: flex;
-            align-items: center;
+        padding-inline: calc(var(--form-field-padding-x) * 0.5);
 
-            font-size: 0.8em;
-        }
-
-        > small > .icon,
-        > small strong {
+        > .icon,
+        > .message > strong {
             margin-inline-end: var(--spacer-1);
         }
     }
