@@ -29,30 +29,27 @@ In this file:
 
 @layer component {
 
-    // Did you know
-
     .figure {
         display: flex;
+        align-items: flex-start;
         justify-content: center;
 
-        margin-block: var(--figure-margin-y);
-        
-        // background-color: antiquewhite;
-
         gap: var(--spacer-4);
-
+        
+        margin-block: var(--figure-margin-y);
 
         figure {
-            display: flex;
-            flex-direction: column;
-            width: min(600px, 80%);
-            // max-width: 50%;
-// width: max-content;
+            // background-color: antiquewhite;
+
+            display: table;
+            caption-side: bottom;
+
+            overflow-x: auto;
+
         }
 
-        figure img {
-            min-width: 300px;
-            // min-width: 100%;
+        figure > figcaption{
+            display: table-caption;
         }
     }
 

@@ -100,8 +100,12 @@ In this file:
 }
 
 .lightbox-element {
-    --button-icon-only-size: 1.75em;
-    display: block;
+    --button-icon-only-size: 1em;
+
+    display: flex;
+    flex-shrink: 1;
+
+    text-align: center;
 
     position: relative;
     
@@ -120,6 +124,8 @@ In this file:
 
         width: var(--button-icon-only-size);
         height: var(--button-icon-only-size);
+
+        padding: 20px;
 
         position: absolute;
         inset-block-end: 0;
