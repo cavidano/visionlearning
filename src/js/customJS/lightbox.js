@@ -121,7 +121,6 @@ export default class Lightbox {
 
         wrap(image, wrapper);
 
-
         const setImgSrc = () => {
 					const lbSrc = image.getAttribute('data-lightbox-source');
 
@@ -130,7 +129,7 @@ export default class Lightbox {
 					} else if (image.src) {
 						return image.src;
 					} else {
-						return 'https://via.placeholder.com/350x150';
+						return null;
 					}
 				};
 
@@ -158,10 +157,21 @@ export default class Lightbox {
 					}
 				};
 
+        const setlbWidth = () => {
+					const lbWidth = image.getAttribute('data-lightbox-width');
+
+					if (lbWidth) {
+						return lbWidth;
+					} else {
+						return null;
+					}
+				};
+
         lightboxes.push({
           imgSrc: setImgSrc(),
           imgCaption: setImgCaption(),
-          imgAlt: setImgAlt()
+          imgAlt: setImgAlt(),
+          imgWidth: setlbWidth()
         });
 
         const imageBtn = image.closest('button');

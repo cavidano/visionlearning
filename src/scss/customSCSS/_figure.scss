@@ -39,13 +39,10 @@ In this file:
         margin-block: var(--figure-margin-y);
 
         figure {
-            // background-color: antiquewhite;
-
             display: table;
             caption-side: bottom;
 
             overflow-x: auto;
-
         }
 
         figure > figcaption{
