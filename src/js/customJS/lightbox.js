@@ -122,7 +122,7 @@ export default class Lightbox {
         wrap(image, wrapper);
 
         const setImgSrc = () => {
-					const lbSrc = image.getAttribute('data-lightbox-source');
+					const lbSrc = image.getAttribute('data-lightbox-src');
 
 					if (lbSrc) {
 						return lbSrc;

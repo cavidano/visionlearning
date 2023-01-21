@@ -45,8 +45,13 @@ In this file:
             overflow-x: auto;
         }
 
-        figure > figcaption{
+        figure > figcaption {
             display: table-caption;
+        }
+
+        figure span.credit {
+            filter: opacity(75%);
+            display: block;
         }
     }
 
