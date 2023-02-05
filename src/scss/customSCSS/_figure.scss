@@ -30,11 +30,13 @@ In this file:
 @layer component {
 
     .figure {
+        outline: 3px solid blue;
         display: flex;
+
         align-items: flex-start;
         justify-content: center;
 
-        gap: var(--spacer-4);
+        gap: var(--spacer-3);
         
         margin-block: var(--figure-margin-y);
 
