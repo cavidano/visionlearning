@@ -1,8 +1,8 @@
 @font-face {
     font-family: "visionlearning-icons";
-    src: url("./visionlearning-icons.ttf?bb91c296c30908aaef3895968c2caee4") format("truetype"),
-url("./visionlearning-icons.woff2?bb91c296c30908aaef3895968c2caee4") format("woff2"),
-url("./visionlearning-icons.woff?bb91c296c30908aaef3895968c2caee4") format("woff");
+    src: url("./visionlearning-icons.ttf?6d56b0a18c316147633a04d6622829c5") format("truetype"),
+url("./visionlearning-icons.woff2?6d56b0a18c316147633a04d6622829c5") format("woff2"),
+url("./visionlearning-icons.woff?6d56b0a18c316147633a04d6622829c5") format("woff");
 }
 
 .icon:before {
@@ -315,4 +315,13 @@ url("./visionlearning-icons.woff?bb91c296c30908aaef3895968c2caee4") format("woff
 }
 .icon.icon-quiz-option-e:before {
     content: "\f164";
+}
+.icon.icon-car:before {
+    content: "\f165";
+}
+.icon.icon-sign-in:before {
+    content: "\f166";
+}
+.icon.icon-sign-out:before {
+    content: "\f167";
 }
