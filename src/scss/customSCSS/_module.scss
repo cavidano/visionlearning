@@ -29,19 +29,50 @@ In this file:
 
 @layer {
 
+        // outline: 3px solid blue;
+
+    .module__section {
+        --offest-x: calc(var(--container-padding-x-lg) * 2);
+
+        margin-block-end: var(--spacer-5);
+        position: relative;
+    
+    }
+
+    .module__section:not(.did-you-know):not(.introduction)  {
+
+        padding-block-start: var(--spacer-5);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset-block-start: calc(var(--border-width) * -2);
+
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+
+            width: calc(var(--narrow-width) - var(--offest-x));
+            height: var(--border-width);
+
+            background-color: currentColor;
+        }
+    
+    }
+
     // Did you know
 
-    .did-you-know {
+    .did-you-know__box {
         background-color: var(--light);
         background: linear-gradient(45deg, var(--light), hsla(0, 0%, 100%, 0));
 
         padding-block: var(--spacer-4);
         padding-inline: var(--spacer-3);
 
-            border-inline-start:
-               var(--border-width)
-               var(--border-style)
-               var(--primary);
+        border-inline-start:
+            var(--border-width)
+            var(--border-style)
+            var(--primary);
+
         h2 { 
             font-size: var(--font-size-rg);
             text-transform: uppercase;
@@ -51,7 +82,7 @@ In this file:
 
     @media screen and (min-width: 1000px) {
 
-        .did-you-know {
+        .did-you-know__box {
             padding-inline: calc(var(--button-icon-only-size));
             margin-inline-start: calc(var(--button-icon-only-size) * -1);
         }
