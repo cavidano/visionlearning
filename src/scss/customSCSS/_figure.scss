@@ -14,6 +14,7 @@ In this file:
 
 @use "sass:map";
 @use "../breakpoint";
+@use "../color";
 
 //////////////////////////////////////////////
 // B. Variables
@@ -54,6 +55,20 @@ In this file:
         figure span.credit {
             filter: opacity(75%);
             display: block;
+        }
+    }
+
+    .interactive-animation-cta {
+
+        background-color: var(--light);
+        
+        display: flex;
+        align-items: center;
+        padding: 0.5em;
+        margin-block: 1.5em;
+
+        img {
+        margin-inline-end: 1em;
         }
     }
 
