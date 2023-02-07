@@ -319,7 +319,8 @@ In this file:
     //////////////////////////////////////////////
 
     .discipline-divider {
-        padding: var(--spacer-4) var(--spacer-2);
+        display: flex;
+        justify-content: space-between;
 
         h2.h3 {
             margin-bottom: unset;
@@ -328,42 +329,18 @@ In this file:
 
     }
 
+    .discipline-divider__title {
+        padding: var(--spacer-4) var(--spacer-2);
+    }
+
+    .discipline-divider__image {
+        max-width: 180px;
+    }
+
     .discipline-divider {
         background-position: center right;
         background-size: contain;
         background-repeat: no-repeat;
-
-        &.biology {
-            background-image: url(~/images/discipline-biology-3x2.jpg);
-        }
-
-        &.chemistry {
-            background-image: url(~/images/discipline-chemistry-3x2.jpg);
-        }
-
-        &.earth-science {
-            background-image: url(~/images/discipline-earth-science-3x2.jpg);
-        }
-
-        &.general-science {
-            background-image: url(~/images/discipline-general-science-3x2.jpg);
-        }
-
-        &.profiles-in-science {
-            background-image: url(~/images/discipline-profiles-in-science-3x2.jpg);
-        }
-
-        &.math-in-science {
-            background-image: url(~/images/discipline-math-in-science-3x2.jpg);
-        }
-
-        &.physics {
-            background-image: url(~/images/discipline-physics-3x2.jpg);
-        }
-
-        &.process-of-science {
-            background-image: url(~/images/discipline-process-of-science-3x2.jpg);
-        }
     }
 
     //////////////////////////////////////////////
