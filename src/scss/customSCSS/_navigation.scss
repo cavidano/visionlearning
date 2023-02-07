@@ -20,7 +20,7 @@ In this file:
 @use "../icon";
 
 //////////////////////////////////////////////
-// B. VL Hat
+// B. Components
 //////////////////////////////////////////////
 
 @layer component {
@@ -203,12 +203,13 @@ In this file:
             border-bottom-color: inherit;
         }
 
-    span.tagline {
-        display: none;
+        span.tagline {
+            display: none;
         }
     }
 
     @include breakpoint.breakpoint-up(xl) {
+    
         .vl-header {
             display: flex;
             align-items: stretch;
@@ -314,9 +315,7 @@ In this file:
         }
     }
 
-    //////////////////////////////////////////////
-    // E. All Modules
-    //////////////////////////////////////////////
+    // Discipline Divider
 
     .discipline-divider {
         display: flex;
@@ -343,9 +342,7 @@ In this file:
         background-repeat: no-repeat;
     }
 
-    //////////////////////////////////////////////
-    // E. All Modules
-    //////////////////////////////////////////////
+    // Terms
 
     .terms-alphabetical {
         font-size: var(--font-size-sm);
@@ -373,6 +370,8 @@ In this file:
             
         }
     }
+
+    // Tabs
 
     .tabs-nav {
         
@@ -409,12 +408,6 @@ In this file:
         a:not([aria-current]){
             color: var(--a11y-link);
         }
-    }
-
-    // Course Modules
-
-    .course-modules__header {
-
     }
 
     .course-modules__nav {
