@@ -126,23 +126,10 @@ In this file:
         
         position: relative;
 
-        &::after {        
-            position: absolute;
-            content: "";
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+        z-index: 0;
 
-            background-image: linear-gradient( var(--gradient-direction), hsla(0, 0%, 100%, 0) var(--gradient-veneer-start), var(--gradient-color) );
-            background-clip: border-box;
-
-            opacity: var(--gradient-veneer-opacity);
-
-            pointer-events: none;
-            
-            display: none;
-        }
+        -webkit-mask-image: linear-gradient( var(--gradient-direction), black, var(--gradient-veneer-start), transparent);
+        mask-image: linear-gradient( var(--gradient-direction), black, var(--gradient-veneer-start), transparent);
     }
 
     [class*="gradient-veneer-top"] {

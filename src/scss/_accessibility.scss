@@ -30,15 +30,36 @@ In this file:
 
     &:hover,
     &:focus {
-        &:not([aria-disabled="true"]):not([class*="icon"]):not([class*="accordion__button"]):not([class*="nav--has-icons"] > li > *):not(p > a) {
+        &:not([class*="backdrop"]):not([class*="icon"]):not([class*="accordion__button"]):not([aria-disabled="true"]):not([class*="nav--has-icons"] > li > *):not(p > a) {
             text-decoration: underline;
         }
     }
 
-    &:focus-visible {
+    &:not([class*="backdrop"]):focus-visible {
         outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+
         outline-offset: var(--focus-outline-distance);
     }
+
+    // &[class*="backdrop"] {
+    //     --focus-outline-size: 0.5em;
+    //     --focus-outline-color: yellow;
+    //     position: relative;
+    //     &::after{
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    //     outline-style: double;
+
+    //     outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+
+    //     outline-offset: var(--focus-outline-distance);
+    //     }
+    // }
+    
 }
 
 @layer base {
@@ -52,7 +73,8 @@ In this file:
             --focus-outline-distance: calc(var(--focus-outline-size) * -2);
         }
         
-        &.button--outline {
+        &.button--outline,
+        &.backdrop {
             --focus-outline-distance: calc(var(--focus-outline-size) * -3);
         }
     }
