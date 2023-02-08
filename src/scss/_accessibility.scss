@@ -30,7 +30,15 @@ In this file:
 
     &:hover,
     &:focus {
-        &:not([class*="backdrop"]):not([class*="icon"]):not([class*="accordion__button"]):not([aria-disabled="true"]):not([class*="nav--has-icons"] > li > *):not(p > a) {
+        &:not(
+            [class*="no-hover-focus"],
+            [class*="icon"],
+            [class*="backdrop"],
+            [class*="accordion__button"],
+            [aria-disabled="true"],
+            [class*="nav--has-icons"] > li > *,
+            p > a
+        ) {
             text-decoration: underline;
         }
     }
