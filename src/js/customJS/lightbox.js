@@ -8,7 +8,7 @@ export default class Lightbox {
 
 	#lightbox = document.createElement('div');
 	#lightboxImages = document.querySelectorAll('img[data-lightbox]');
-
+      
 	#lightboxHTML = (`
     <div class="button-group lightbox__buttons">
       <button class="button button--icon-only">
@@ -23,16 +23,17 @@ export default class Lightbox {
     </div>
 
     <figure class="lightbox__container">
-      <img class="lightbox__image" src="https://source.unsplash.com/1600x900" />
+        <div class="lightbox__image"></div>           
       <figcaption class="lightbox__caption">A caption for the image.</figcaption>
     </figure>
   `);
 
+  #lightboxVideoHTML = (`<video controls><source src="" type="video/mp4"></video>`);
+  #lightboxElementHTML = (`<img src="https://source.unsplash.com/1600x900" />`);
+
 	init() {
 
     if(this.#lightboxImages.length) {
-
-      console.log(`Has lightbox`);
     
       const handleLightboxUpdate = (e) => {
 
@@ -81,26 +82,37 @@ export default class Lightbox {
 
       const updateLighbox = (current) => {
 
-        lightboxIMG.src = lightboxes[current].imgSrc;
-        lightboxIMG.alt = lightboxes[current].imgAlt;
+        let lightboxElementTarget = null;
+
+        if (lightboxes[current].imgType === 'video') {
+          lightboxElement.innerHTML = this.#lightboxVideoHTML;
+          lightboxElementTarget = lightboxElement.querySelector('source');
+        } else {
+          lightboxElement.innerHTML = this.#lightboxElementHTML;
+
+          lightboxElementTarget = lightboxElement.querySelector('img');
+          
+          lightboxElementTarget.alt = lightboxes[current].imgAlt;
+        }
+
+        lightboxElementTarget.src = lightboxes[current].imgSrc;
         lightboxCaption.innerHTML = lightboxes[current].imgCaption;
 
         if (lightboxes[current].imgWidth !== null) {
-          lightboxIMG.setAttribute('width', lightboxes[current].imgWidth);
+          lightboxElementTarget.setAttribute('width', lightboxes[current].imgWidth);
         }
 
       };
 
       this.#lightbox.classList.add('lightbox');
+      this.#lightbox.setAttribute('aria-hidden', true);
 
       this.#lightbox.innerHTML = this.#lightboxHTML;
-
-      this.#lightbox.setAttribute('aria-hidden', true);
 
       document.body.appendChild(this.#lightbox);
 
       const lightboxClose = document.querySelector('[data-lightbox-close]');
-      const lightboxIMG = document.querySelector('.lightbox__image');
+      const lightboxElement = document.querySelector('.lightbox__image');
       const lightboxCaption = document.querySelector('.lightbox__caption');
 
       const wrap = (el, wrapper) => {
@@ -120,6 +132,16 @@ export default class Lightbox {
         wrapper.setAttribute('class', 'lightbox-element');
 
         wrap(image, wrapper);
+
+        const setType = () => {
+					const lbType = image.getAttribute('data-lightbox');
+
+					if (lbType === 'video') {
+						return 'video';
+					} else {
+						return 'image';
+					}
+				};
 
         const setImgSrc = () => {
 					const lbSrc = image.getAttribute('data-lightbox-src');
@@ -168,6 +190,7 @@ export default class Lightbox {
 				};
 
         lightboxes.push({
+          imgType: setType(),
           imgSrc: setImgSrc(),
           imgCaption: setImgCaption(),
           imgAlt: setImgAlt(),
@@ -184,7 +207,7 @@ export default class Lightbox {
 
           this.#lightbox.setAttribute('aria-hidden', false);
 
-          lightboxIMG.classList.add('box-shadow-3');
+          lightboxElement.classList.add('box-shadow-3');
 
           updateLighbox(index);
 
