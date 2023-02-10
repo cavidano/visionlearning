@@ -1,0 +1,62 @@
+---
+layout: landing
+title: Library • Interactive Animations
+---
+
+<header class="container padding-y-3 theme-library">
+
+    <h2>Research Videos</h2>
+
+    <p>
+        Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
+    </p>
+
+</header>
+
+<hr class="divider" />
+
+<section class="grid grid--column-2--md gap-1">    
+
+{% for item in site.data.researchVideos %}
+    {% assign title = item.Title %}                         
+    {% assign description = item.Description %}                       
+    {% assign imgSlug = item.ImgSlug %}                       
+    {% assign relatedModule = item.Module %}                      
+    {% assign url = item.LinkURL %}           
+
+    <div class="card theme-light">
+
+        <a href="#1" target="_blank">
+
+            <div class="margin-2">
+                <img class="border-radius box-shadow-1" src="{{ site.url }}/images/research-videos/{{ imgSlug }}.jpg" alt="Placeholder" />
+            </div>
+            
+        </a>
+
+        <div class="card__body">
+
+            <h2 class="h5">
+                <a href="#1" target="_blank">Episode 2: What is Research</a>
+            </h2>
+
+            <p>
+                Anne and Anthony introduce themselves, their own research areas, and their experience mentoring students in research and directing research programs. They describe how you might use these videos to supplement your own mentoring and teaching, and give an overview of the topics covered.
+            </p>
+                
+        </div>
+
+        <div class="card__foot border-top">
+            <a class="button button--has-icon text-color-link font-size-md width-100" href="{{ url }}">
+                <span class="icon icon-youtube"></span>
+                <span class="button__text">
+                    Watch on YouTube
+                </span>
+            </a>              
+        </div>
+
+    </div>
+
+{% endfor %}
+
+</section>
