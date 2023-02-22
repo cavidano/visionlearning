@@ -27,7 +27,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Figure}.html`;
+const devPage = `${devPages.Module}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
