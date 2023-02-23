@@ -64,26 +64,6 @@ In this file:
         font-size: var(--font-size-sm);    
     }
 
-    .title-list {
-        margin-block-end: 1.5em;
-    }
-
-    .title-list__list  {
-        list-style: none;
-
-        font-size: var(--font-size-md);
-        
-        padding-inline-start: 1em;
-
-        > li:not(:last-child) {
-            margin-block-end: 0.5em;    
-        }
-
-        > li > a {
-            color: var(--link-color);    
-        }
-    }
-
     // Did you know
 
     .did-you-know__box {
