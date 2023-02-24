@@ -46,14 +46,12 @@ export default class Form {
             }
             
             return (`
-                <div class="form-entry__feedback">
-                    <small>
-                        <span class="icon icon-warn" aria-hidden="true"></span>
-                        <span class="message">
-                            <strong>${desc}</strong> ${inst !== undefined ? inst : ''}
-                        </span>
-                    </small>
-                </div>
+                <small class="form-entry__feedback">
+                    <span class="icon icon-warn" aria-hidden="true"></span>
+                    <span class="message">
+                        <strong>${desc}</strong> ${inst !== undefined ? inst : ''}
+                    </span>
+                </small>
             `);
         });
 
@@ -159,7 +157,7 @@ export default class Form {
                     const inputType = formEntryInput.getAttribute('type');
 
                     if (inputType === 'radio' || inputType === 'checkbox') {
-                        activeTarget = 'label';
+                        // activeTarget = 'label';
                         
                         if (formEntryInput.disabled) {
                             formEntryInput.closest('label').classList.add('disabled');
@@ -195,11 +193,11 @@ export default class Form {
                         checkIfEmpty(formEntryInput);
                     }
 
-                    if (formEntryInput.value !== '') {
-                        formEntryInput.closest('.form-entry').classList.add('has-value');
-                    } else {
-                        formEntryInput.closest('.form-entry').classList.remove('has-value');
-                    }
+                    // if (formEntryInput.value !== '') {
+                    //     formEntryInput.closest('.form-entry').classList.add('has-value');
+                    // } else {
+                    //     formEntryInput.closest('.form-entry').classList.remove('has-value');
+                    // }
                 });
 
                 if (isInputText) {

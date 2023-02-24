@@ -107,16 +107,23 @@
 
 		<div class="container narrow">
 
-			<div class="form-entry" aria-label="Search">
-				<div class="form-entry__field">
-					<span class="form-entry__field__input">
-						<input type="text" name="global-search" autocomplete="off">
-						<button class="button">
-							Search
-						</button>
-					</span>
-				</div>
-			</div>
+					<form class="form-entry" action="{{ site.url }}/search/results.html" aria-label="Search">
+                        <div class="form-entry__field">
+                            <span class="form-entry__field__input">
+                                <input
+                                    type="search"
+                                    name="global-search"
+                                    autocomplete="off"
+                                    placeholder="Search..."
+                                >
+                                <button
+                                    class="button button--icon-only"
+                                    type="submit">
+                                    <span class="icon icon-search" aria-hidden="true"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
 
 		</div>
 

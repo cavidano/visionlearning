@@ -199,7 +199,12 @@ In this file:
         :is(
             select,
             textarea,
-            input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="range"]) 
+            input:not(
+                [type="radio"],
+                [type="checkbox"],
+                [type="file"],
+                [type="range"]
+            ) 
         ) {
             border: 0;
             border-radius: inherit;
@@ -313,20 +318,25 @@ In this file:
             flex-shrink: 0;
         }
 
+        > [class*="button--icon-only"] {
+            padding-inline: calc(var(--form-field-padding-x) * 0.325);
+        }
+
+        
         > .button {
             --button-padding-y: 0;
             --button-border-radius: 0;
         }
 
         > :is(
-        .button,
-        [class*="button--icon-only"] 
+            .button,
+            [class*="button--icon-only"] 
         ) {
             height: unset;
 
             align-self: stretch;
         }
-
+        
         > :is(
             .icon,
             .button-group
