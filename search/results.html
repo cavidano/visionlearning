@@ -1,1 +1,39 @@
-p
+---
+layout: global
+title: Search Results
+---
+
+<main id="skip-header-content">
+
+    <div class="container narrow margin-y-5" action="">
+
+        <h1 class="margin-bottom-4">
+            Search Results
+        </h1>
+
+
+        <form class="form-entry" action="{{ site.url }}/search/results.html" aria-label="Search">
+            <div class="form-entry__field">
+                <span class="form-entry__field__input">
+                    <input
+                        type="search"
+                        name="global-search"
+                        autocomplete="off"
+                        value="cells"
+                        placeholder="Search..."
+                    >
+                    <button
+                        class="button button--icon-only"
+                        type="submit">
+                        <span class="icon icon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+            </div>
+        </form>
+
+        <hr class="divider" />
+
+    </div>
+
+
+</main>
