@@ -17,12 +17,13 @@ layout: global
                 </span>
 
                 <h1 class="font-weight-normal">
-                    Earth structure:
+                    {{ page.title}}{% if page.subtitle != null  %}:
                     <sub>
                         <em>
-                            A Virtual Journey to the Center of Earth
+                            {{ page.subtitle }}
                         </em>
                     </sub>
+					{% endif %}
                 </h1>
 
                 <p class="font-size-sm">

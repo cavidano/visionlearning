@@ -72,25 +72,6 @@ In this file:
         
     }
 
-    // Info List
-
-    .info-list {
-        list-style: none;
-
-        li {
-            display: flex;
-
-            &:not(:last-child) {
-            margin-bottom: 0.5em;
-            }
-        }
-
-        li > strong,
-        li > span {
-            width: 50%;
-        }
-    }
-
     // Title list
 
     .title-list {
@@ -110,6 +91,25 @@ In this file:
 
         > li > a {
             color: var(--link-color);    
+        }
+    }
+
+    // Info List
+
+    .info-list {
+        list-style: none;
+
+        li {
+            display: flex;
+
+            &:not(:last-child) {
+                margin-bottom: 0.5em;
+            }
+        }
+
+        li > strong,
+        li > span {
+            width: 50%;
         }
     }
 
