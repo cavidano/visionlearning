@@ -34,7 +34,6 @@ module.exports = merge(common, {
     devtool: 'eval-cheap-source-map',
     target: 'web',
     devServer: {
-        port: 8081, 
         hot: true,
         open: true,
         static: {
