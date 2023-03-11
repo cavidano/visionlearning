@@ -43,29 +43,10 @@ In this file:
         }
     }
 
-    &:not([class*="backdrop"]):focus-visible {
+    &:focus-visible {
         outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
-
         outline-offset: var(--focus-outline-distance);
     }
-
-    // &[class*="backdrop"] {
-    //     position: relative;
-    //     &::after{
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     outline-style: double;
-
-    //     outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
-
-    //     outline-offset: var(--focus-outline-distance);
-    //     }
-    // }
-    
 }
 
 @layer base {
@@ -79,8 +60,7 @@ In this file:
             --focus-outline-distance: calc(var(--focus-outline-size) * -2);
         }
         
-        &.button--outline,
-        &.backdrop {
+        &.button--outline {
             --focus-outline-distance: calc(var(--focus-outline-size) * -3);
         }
     }
