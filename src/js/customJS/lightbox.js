@@ -54,13 +54,12 @@ export default class Lightbox {
           } else {
             console.log(`My target is ????? ${currentLB}`);
           }
-
           updateLighbox(currentLB);
         };
 
         if (e.target.hasAttribute('data-lightbox-previous')) {
 					directionalFocus(-1);
-				} else if(e.target.hasAttribute('data-lightbox-next')) {
+				} else if (e.target.hasAttribute('data-lightbox-next')) {
 					directionalFocus(1);
 				}
 
