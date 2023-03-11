@@ -11,10 +11,10 @@ export default class Lightbox {
       
 	#lightboxHTML = (`
     <div class="button-group lightbox__buttons">
-      <button class="button button--icon-only">
+      <button class="button button--icon-only" data-lightbox-previous>
           <span class="icon icon-arrow-left" aria-label="Close" aria-hidden="true">
       </button>
-      <button class="button button--icon-only">
+      <button class="button button--icon-only" data-lightbox-next>
           <span class="icon icon-arrow-right" aria-label="Close" aria-hidden="true">
       </button>
       <button class="button button--icon-only" data-lightbox-close>
@@ -34,7 +34,7 @@ export default class Lightbox {
 	init() {
 
     if(this.#lightboxImages.length) {
-    
+
       const handleLightboxUpdate = (e) => {
 
         console.log(`currentLB === ${currentLB}`);
@@ -43,7 +43,7 @@ export default class Lightbox {
 
           e.preventDefault();
 
-          currentLB = parseInt(currentLB) + dir;
+          currentLB = parseInt(currentLB) + dir; 
 
           if (dir === -1 && currentLB < 0) {
             currentLB = lightboxes.length - 1;
@@ -58,6 +58,12 @@ export default class Lightbox {
           updateLighbox(currentLB);
         };
 
+        if (e.target.hasAttribute('data-lightbox-previous')) {
+					directionalFocus(-1);
+				} else if(e.target.hasAttribute('data-lightbox-next')) {
+					directionalFocus(1);
+				}
+
         switch (e.code) {
           case 'ArrowLeft':
             directionalFocus(-1);
@@ -68,6 +74,7 @@ export default class Lightbox {
           default:
           // do nothing
         }
+
       };
 
       const handleLightboxClose = (e) => {
@@ -111,6 +118,8 @@ export default class Lightbox {
 
       document.body.appendChild(this.#lightbox);
 
+      const lightboxPrevious = document.querySelector('[data-lightbox-previous]'); 
+      const lightboxNext = document.querySelector('[data-lightbox-next]'); 
       const lightboxClose = document.querySelector('[data-lightbox-close]');
       const lightboxElement = document.querySelector('.lightbox__image');
       const lightboxCaption = document.querySelector('.lightbox__caption');
@@ -212,11 +221,15 @@ export default class Lightbox {
           updateLighbox(index);
 
           window.addEventListener('keyup', handleLightboxUpdate);
+  
         });
 
       });
 
       lightboxClose.addEventListener('click', handleLightboxClose);
+      lightboxPrevious.addEventListener('click', handleLightboxUpdate);
+      lightboxNext.addEventListener('click', handleLightboxUpdate);
+
       this.#lightbox.addEventListener('click', handleLightboxClose);
 
     } // end
