@@ -1,24 +1,40 @@
 <nav class="about-menu font-size-md padding-y-3 border-bottom">
             
-    <ul class="nav medium container nav--horizontal--md justify-content-around">
+    <ul class="container medium nav nav--horizontal--md justify-content-around">
         <li>
-            <a href="{{ site.url }}/about" {% if page.title == 'About' %} aria-current="page" {% endif %}>
-                At a Glance
+            <a
+                href="{{ site.url }}/about"
+                {% if page.title == 'About' %}
+                aria-current="page"
+                {% endif %}>
+                    At a Glance
             </a>
         </li>
         <li>
-            <a href="{{ site.url }}/about/who-we-are" {% if page.title == 'Who We Are' %} aria-current="page" {% endif %}>
-                Who We Are
+            <a
+                href="{{ site.url }}/about/who-we-are"
+                {% if page.title == 'Who We Are' %}
+                aria-current="page"
+                {% endif %}>
+                    Who We Are
             </a>
         </li>
         <li>
-            <a href="{{ site.url }}/about/ngss" {% if page.title == 'Next Generation Science Standards' %} aria-current="page" {% endif %}>
-                NGSS
+            <a
+                href="{{ site.url }}/about/ngss" 
+                {% if page.title == 'NGSS' %}
+                aria-current="page"
+                {% endif %}>
+                    NGSS
             </a>
         </li>
         <li>
-            <a href="{{ site.url }}/about/mission-and-goals" {% if page.title == 'Mission and Goals' %} aria-current="page" {% endif %}>
-                Mission and Goals
+            <a
+                href="{{ site.url }}/about/mission-and-goals"
+                {% if page.title == 'Mission and Goals' %}
+                aria-current="page"
+                {% endif %}>
+                    Mission and Goals
             </a>
         </li>
     </ul>

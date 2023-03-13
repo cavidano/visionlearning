@@ -1,6 +1,7 @@
 ---
 layout: global
 ---
+
 <main id="skip-header-content">
 
     <div class="container wide">
@@ -19,7 +20,38 @@ layout: global
 
             <hr class="divider" />
 
-            <main class="grid grid--sidebar-right grid--divider">
+            <main class="grid grid--sidebars grid--divider">
+
+                <div class="font-size-md">
+                    
+                    <ul
+                        class="tabs-nav {{ class_name }} border border-radius"
+                        id="material-nav"
+                        role="menu">
+
+                        <li>
+                            <a
+                                href="{{ site.url }}/library"
+                                {% if page.title == 'About • Authors' %}
+                                aria-current="page"
+                                {% endif %}>
+                                    Authors
+                            </a>
+                        </li>
+                            
+                        <li>
+                            <a
+                                href="{{ site.url }}/library/all-disciplines.html"
+                                {% if page.title == 'Library • All Disciplines' %}
+                                aria-current="page"
+                                {% endif %}>
+                                    Contributors
+                            </a>
+                        </li>
+                    
+                    </ul>
+                
+                </div>
 
                 <article>
 
@@ -27,21 +59,31 @@ layout: global
                     
                 </article>
 
-                <aside>
-                    
-                    <ul class="nav font-size-md padding-4 position-sticky-top">
-                        <li>
-                            <a href="#1" aria-current="page">Leadership</a>
-                        </li>
-                        <li>
-                            <a href="#1">Authors</a>
-                        </li>
-                        <li>
-                            <a href="#1">Contributors</a>
-                        </li>
-                    </ul>
+                <div class="font-size-md">
 
-                </aside>
+                    <a
+                        class="no-hover-focus display-block theme-light padding-2 font-size-sm text-align-center margin-bottom-1"
+                        href="http://www.lulu.com/us/en/shop/anthony-carpi-anne-egger/the-process-of-science-revised-edition/paperback/product-16507360.html?codekitCB=406218852.341107"
+                        target="blank">
+                            <img
+                        src="{{ site.url }}/images/process-of-science-book.png"
+                        width="90"
+                    />
+                    
+                        <p class="margin-bottom-0">
+                            <strong>
+                                The Process of Science
+                                <em class="display-block">Revised Edition</em>
+                            </strong>
+                        </p>
+
+                        <p>Get the paperback by Anthony Carpi and Anne Egger</p>
+                        <p>$15.99 - <strong>Buy Now</strong></p>
+                    
+                    </a>
+
+                </div>
+
 
             </main>
 
