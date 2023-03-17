@@ -2,6 +2,20 @@
 layout: global
 ---
 
+
+{% capture anchor_links %}
+<li>
+    <a href="{{ site.url }}/about/who-we-are.html#section-1">
+        Leadership
+    </a>
+</li>
+<li>
+    <a href="{{ site.url }}/about/who-we-are.html#section-2">
+        Authors
+    </a>
+</li>
+{% endcapture %}
+
 <main id="skip-header-content">
 
     <article class="container wide">
@@ -25,17 +39,7 @@ layout: global
                 <div class="font-size-md">
                     
                     <ul class="nav position-sticky-top margin-y-3">
-                        <li>
-                            <a href="{{ site.url }}/about/who-we-are.html#section-1">
-                                Leadership
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ site.url }}/about/who-we-are.html#section-2">
-                                Authors
-                            </a>
-                        </li>
-                        
+                        {{ anchor_links }}
                     </ul>
                 
                 </div>
@@ -48,26 +52,7 @@ layout: global
 
                 <div class="font-size-md">
 
-                    <a
-                        class="no-hover-focus display-block theme-light padding-2 font-size-sm text-align-center margin-bottom-1"
-                        href="http://www.lulu.com/us/en/shop/anthony-carpi-anne-egger/the-process-of-science-revised-edition/paperback/product-16507360.html?codekitCB=406218852.341107"
-                        target="blank">
-                            <img
-                        src="{{ site.url }}/images/process-of-science-book.png"
-                        width="90"
-                    />
-                    
-                        <p class="margin-bottom-0">
-                            <strong>
-                                The Process of Science
-                                <em class="display-block">Revised Edition</em>
-                            </strong>
-                        </p>
-
-                        <p>Get the paperback by Anthony Carpi and Anne Egger</p>
-                        <p>$15.99 - <strong>Buy Now</strong></p>
-                    
-                    </a>
+                    {% include process-of-science-book.html %}
 
                 </div>
 
