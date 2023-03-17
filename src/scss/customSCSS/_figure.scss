@@ -31,8 +31,6 @@ In this file:
 @layer component {
 
     .figure {
-        // outline: 3px solid blue;
-
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -56,6 +54,16 @@ In this file:
             filter: opacity(75%);
             display: block;
         }
+    }
+
+    .figure--right {
+
+        max-width: 260px;
+
+        float: right;
+
+        margin-inline-start: var(--spacer-4);
+        margin-block-end: var(--spacer-2);
     }
 
     .interactive-animation-cta {

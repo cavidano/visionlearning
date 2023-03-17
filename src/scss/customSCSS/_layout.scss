@@ -182,16 +182,4 @@ In this file:
       "summary teaser";
   }
 
-  /////////////////////
-
-  .float-right {
-
-    max-width: 300px;
-
-    float: right;
-    margin-inline-start: var(--spacer-4);
-    margin-block-end: var(--spacer-2);
-    margin-inline-end: calc( var(--spacer-4) * -1);
-  }
-
 } // end @layer
