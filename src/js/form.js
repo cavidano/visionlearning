@@ -85,7 +85,7 @@ export default class Form {
 
                     let entryHelpText;
 
-                    if(formEntryHelp) {
+                    if (formEntryHelp) {
                         entryHelpText = formEntryHelp.innerHTML.toString();
                     }
 
@@ -106,7 +106,6 @@ export default class Form {
                 }
                 
                 // Scroll to first error
-
                 let firstError = form.querySelector('[class*="alert"], [class*="invalid"]');
                 
                 if (firstError) {

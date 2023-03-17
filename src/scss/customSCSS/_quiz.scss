@@ -65,7 +65,6 @@ In this file:
         }
 
         .form-entry__field__label {
-            display: flex;
             padding: unset;
             padding-inline-start: calc( var(--form-field-padding-x) + 2em);
         }

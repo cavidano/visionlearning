@@ -1,4 +1,3 @@
-
 //////////////////////////////////////////////
 // Quiz
 //////////////////////////////////////////////
@@ -58,45 +57,41 @@ export class Quiz {
 }
 
 export class CompCheck {
-
 	#compCheckList = document.querySelectorAll('.comprehension-checkpoint');
 
-	#compCheckInputsList = document.querySelectorAll('.comprehension-checkpoint input');
+	#compCheckInputsList = document.querySelectorAll(
+		'.comprehension-checkpoint input'
+	);
 	#compCheckResponseList = document.querySelectorAll('.quiz__response');
 
 	#handleResponse = (event) => {
-
-        const currentInput = event.currentTarget;
+		const currentInput = event.currentTarget;
 
 		this.#compCheckInputsList.forEach((input) => {
-            if (input !== currentInput) {
-    			input.checked = false;
-            }
+			if (input !== currentInput) {
+				input.checked = false;
+			}
 		});
 
 		this.#compCheckResponseList.forEach((response) => {
 			response.classList.remove('display-block');
 		});
 
-        const answer = currentInput.closest('label').nextElementSibling;
+		const answer = currentInput.closest('label').nextElementSibling;
 
-        if (event.currentTarget.checked) {
-            answer.classList.add('display-block');
-        }
+		if (event.currentTarget.checked) {
+			answer.classList.add('display-block');
+		}
 	};
 
 	init() {
-
 		if (this.#compCheckList) {
-
 			this.#compCheckList.forEach((question) => {
-
 				const questionInputList = question.querySelectorAll('input');
 
 				questionInputList.forEach((option) => {
-
 					option.addEventListener('change', (event) => {
-                        this.#handleResponse(event);
+						this.#handleResponse(event);
 					});
 				});
 			});

@@ -66,8 +66,8 @@ accordion.init();
 
 import { Quiz, CompCheck } from './js/customJS/quiz'; 
 
-const quiz = new Quiz();
-quiz.init();
+// const quiz = new Quiz();
+// quiz.init();
 
 const compCheck = new CompCheck();
 compCheck.init();

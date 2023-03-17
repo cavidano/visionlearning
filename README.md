@@ -6,6 +6,8 @@ This is the front end development stack for the 2023 Visionlearning redesign.
 
 `bundle exec jekyll serve`
 
+http://127.0.0.1:4001
+
 ## Steps to Make Icons
 
 1.) Save SVG to *original-svg* dir
