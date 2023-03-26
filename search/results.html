@@ -11,26 +11,97 @@ title: Search Results
             Search Results
         </h1>
 
-        <form class="form-entry" action="{{ site.url }}/search/results.html" aria-label="Search">
-            <div class="form-entry__field">
-                <span class="form-entry__field__input">
-                    <input
-                        type="search"
-                        name="global-search"
-                        autocomplete="off"
-                        value="cells"
-                        placeholder="Search..."
-                    >
-                    <button
-                        class="button button--icon-only"
-                        type="submit">
-                        <span class="icon icon-search" aria-hidden="true"></span>
-                    </button>
-                </span>
+        <form class="primary-nav__search" action="{{ site.url }}/search/results.html" aria-label="Search">
+
+            <div class="form-entry">
+                <div class="form-entry__field">
+                    <span class="form-entry__field__input">
+                        <input
+                            type="text"
+                            name="global-search"
+                            value="cells"
+                        >
+                        <a class="button theme- button--icon-only" href="#1" aria-label="Home">
+                            <span class="icon icon-close" aria-hidden="true"></span>
+                        </a>
+                        <button class="button text-color-link" data-clear-input>
+                            Search
+                        </button>
+                    </span>
+                </div>
             </div>
+
         </form>
 
-        <hr class="divider" />
+        <hr class="margin-y-4" />
+
+        <section class="font-size-md">
+
+            <h2 class="screen-reader-only">
+                Search results
+            </h2>
+
+            <ul class="tabs-nav tabs-nav--horizontal--md margin-bottom-5">
+                <li>
+                    <button
+                        id="tab-button-example-01"
+                        aria-controls="tab-panel-example-01"
+                        aria-selected="true"
+                        role="tab">
+                            Library (41)
+                    </button>
+                </li>
+                <li>
+                    <button
+                        id="tab-button-example-02"
+                        aria-controls="tab-panel-example-02"
+                        aria-selected="false"
+                        role="tab">
+                            Glossary (9)
+                    </button>
+                </li>
+                <li>
+                    <button id="tab-button-example-03"
+                        aria-controls="tab-panel-example-03"
+                        aria-selected="false"
+                        role="tab">
+                            Classroom (3)
+                    </button>
+                </li>
+            </ul>
+
+
+            <section>
+
+                <h3>Library</h3>
+                <p>(41) results</p>
+
+                <div class="grid grid--divider gap-5">
+
+                    <article>
+                        <h4>Discovery and Structure of Cells</h4>
+                        <p>
+                            Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
+                        </p>
+                    </article>
+                    <article>
+                        <h4>Discovery and Structure of Cells</h4>
+                        <p>
+                            Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
+                        </p>
+                    </article>
+                    <article>
+                        <h4>Discovery and Structure of Cells</h4>
+                        <p>
+                            Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
+                        </p>
+                    </article>
+                </div>
+                
+            </section>
+        
+        
+        </section>
 
     </div>
 

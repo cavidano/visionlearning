@@ -107,22 +107,19 @@
 
 		<div class="container narrow">
 
-			<form class="form-entry" action="{{ site.url }}/search/results.html" aria-label="Search">
-				<div class="form-entry__field">
-					<span class="form-entry__field__input">
-						<input
-							type="search"
-							name="global-search"
-							autocomplete="off"
-							placeholder="Search..."
-						>
-						<button
-							class="button button--icon-only"
-							type="submit">
-							<span class="icon icon-search" aria-hidden="true"></span>
-						</button>
-					</span>
+			<form class="primary-nav__search" action="{{ site.url }}/search/results.html" aria-label="Search">
+
+				<div class="form-entry">
+					<div class="form-entry__field">
+						<span class="form-entry__field__input">
+							<input type="text" name="global-search">
+							<button class="button text-color-link">
+								Search
+							</button>
+						</span>
+					</div>
 				</div>
+
 			</form>
 
 		</div>
@@ -254,9 +251,9 @@
 					<span class="accordion__button current" id="acc-button-{{ slug }}-oops">
 							
 						<span class="accordion__button__label">
-						<em>
-						{{ header }}
-						</em>	
+							<em>
+							{{ header }}
+							</em>	
 						</span>
 
 					</span>

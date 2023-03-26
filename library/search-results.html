@@ -1,0 +1,53 @@
+---
+layout: landing
+title: Library • Search Results
+---
+
+<div class="position-relative">
+
+    {% for item in site.data.librarySample %}
+        {% assign header = item.Discipline %}                         
+        {% assign slug = item.Slug %}                         
+        {% assign subcategories = item.Subcategories %}                          
+
+        <section>
+
+            <header class="container theme-library padding-y-3">
+                <h2 class="h6">40 search results for “Anthony Carpi”</h2>
+            </header>
+                        
+            <div class="padding-x-2 overflow-hidden">
+
+            {% for category in subcategories %}                
+                {% assign title = category.Title %}          
+                {% assign modules = category.Modules %}          
+
+                <div class="category margin-y-3">
+                                            
+                    <h2 class="h6">{{ title }}</h2>
+
+                    <ul class="list-divider font-size-md">
+                                    
+                        {% for module in modules %}              
+                            {% assign name = module.Name %}  
+
+                            <li class="text-color-link">
+                                <span class="list-divider__cell">
+                                    <a href="{{ site.url }}/library/module/reading.html">
+                                        {{ name }}
+                                    </a>
+                                </span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+            {% endfor %}
+                            
+            </div>
+
+        </section>
+                    
+    {% endfor %}
+            
+</div>
