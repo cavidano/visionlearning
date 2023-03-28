@@ -106,8 +106,15 @@ In this file:
     // In this module
 
     .in-this-module {
-        .button-group button:not([aria-selected="true"]) {
-            color: var(--link-color);
+        .button-group {
+            button:not([aria-selected="true"]) {
+                color: var(--link-color);
+            }
+
+            button[aria-selected="true"] {
+                background-color: var(--link-color);
+                color: white;
+            }
         }
     }
 
