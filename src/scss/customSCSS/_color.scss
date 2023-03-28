@@ -305,17 +305,17 @@ $theme-colors: (
 
 @media (prefers-color-scheme: dark) {
 
-    :root {
-        --light-l: 70%;
-        --light-o: 0.0625;
-        --a11y-link: var(--dark-link);
+    // :root {
+    //     --light-l: 70%;
+    //     --light-o: 0.0625;
+    //     --a11y-link: var(--dark-link);
 
-    --primary: #8c28bd;
-    }
+    // --primary: #8c28bd;
+    // }
 
-    .module-breadcrumb {
-        --module-breadcrumb-background-color: hsla(0, 0%, 0%, 0.75) !important;
-    }
+    // .module-breadcrumb {
+    //     --module-breadcrumb-background-color: hsla(0, 0%, 0%, 0.75) !important;
+    // }
 
     .theme-canvas--prefers {
         --background-color: var(--dark);
