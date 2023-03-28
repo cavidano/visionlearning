@@ -78,3 +78,12 @@ new ReadingToggles();
 import Lightbox from './js/customJS/lightbox'
 const lightbox = new Lightbox();
 lightbox.init();
+
+import { TableOfContents } from './js/customJS/toc';
+
+// Create a new instance of the TableOfContents class
+const toc = new TableOfContents();
+
+// Call the methods to create the list items and append them to the container
+toc.createListItems();
+toc.appendToContainer();
