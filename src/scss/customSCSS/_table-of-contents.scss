@@ -1,0 +1,41 @@
+/*
+
+In this file:
+
+// A. List Divider
+// B. Description List
+
+*/
+
+//////////////////////////////////////////////
+// B. Components
+//////////////////////////////////////////////
+
+@layer component {
+
+    .table-of-contents {
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-block-end: 0.75em;
+        }
+
+        ul > li > ul {
+            margin-block-start: 0.5em;
+            padding-inline: 0.75em;
+        }
+        
+        ul > li > a {
+            font-size: var(--font-size-md);
+        }
+
+        ul > li > ul > li > a{
+            font-size: var(--font-size-sm);
+        }
+
+    }
+
+} // end @layer

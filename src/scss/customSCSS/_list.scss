@@ -113,26 +113,4 @@ In this file:
         }
     }
 
-    #table-of-contents {
-
-        background-color: antiquewhite;
-
-        ul {
-            list-style: none;
-        }
-
-        > ul {
-
-            outline: 1px solid red ;
-        
-        }
-        > ul ul{
-            margin-inline: 1em;
-            outline: 1px solid red ;
-        }
-
-
-    
-    }
-
 } // end @layer

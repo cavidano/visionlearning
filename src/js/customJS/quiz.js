@@ -2,7 +2,7 @@
 // Quiz
 //////////////////////////////////////////////
 
-export class Quiz {
+export default class Quiz {
 
 	#quiz = document.querySelectorAll('.quiz');
 
