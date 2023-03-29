@@ -371,37 +371,6 @@ In this file:
         }
     }
 
-    // Tabs
-
-    .tabs-nav {
-        
-        > li > button::before {
-            background-color: var(--dark);
-        }
-
-        &.library > li > *::before {
-            background-color: var(--library);
-        }
-
-        &.glossary > li > *::before {
-            background-color: var(--glossary);
-        }
-
-        &.classroom > li > *::before {
-            background-color: var(--classroom);
-        }
-    }
-
-    .tabs-nav > li > *:not([aria-selected="true"]):not([aria-current]) {
-        color: var(--a11y-link);
-    }
-
-    [data-logo="brand"] {
-        > svg{
-            fill: currentColor;
-        }
-    }
-
     // About Menu
 
     .about-menu {
@@ -415,9 +384,9 @@ In this file:
 
         padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
 
-        a{ color: var(--a11y-link)};
-    
+        a { 
+            color: var(--a11y-link)
+        };
     }
-
 
 } // end @layer
