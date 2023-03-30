@@ -8,7 +8,7 @@ export default class Search {
 		this.#clearButton.style.display = searchValue ? 'flex' : 'none';
 	}
 
-	#handleSearchChange = (e) => {
+	#handleSearchChange = () => {
         const isHidden = this.#clearButton.getAttribute('aria-hidden') === 'true';
         this.#clearButton.setAttribute('aria-hidden', !isHidden);
 	}

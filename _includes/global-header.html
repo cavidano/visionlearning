@@ -66,6 +66,8 @@
 
 				<div class="button-group gap-1">
 
+					{% if page.title != 'Site Search' %}
+					
 					<button
 						class="button button--icon-only"
 						aria-label="Search"
@@ -74,6 +76,8 @@
 						data-target-close="#vl-hat-nav">
 						<span class="icon icon-search" aria-hidden="true"></span>
 					</button>
+
+					{% endif %}
 
 					{% if page.account == 'Signed In' %}
 					
@@ -103,28 +107,23 @@
 
 	</div>
 
+	{% if page.title != 'Site Search' %}
+
 	<div class="collapse padding-y-3 border-bottom" id="global-search" data-focus-first>
 
 		<div class="container narrow">
 
-			<form class="primary-nav__search" action="{{ site.url }}/search/results.html" aria-label="Search">
+			<form class="primary-nav__search" action="{{ site.url }}/search/site-search.html" aria-label="Search">
 
-				<div class="form-entry">
-					<div class="form-entry__field">
-						<span class="form-entry__field__input">
-							<input type="text" name="global-search">
-							<button class="button text-color-link">
-								Search
-							</button>
-						</span>
-					</div>
-				</div>
+				{% include search.html %}
 
 			</form>
 
 		</div>
 
 	</div> 
+
+	{% endif %}
 
 	<div class="vl-header wide margin-x-auto">
 
