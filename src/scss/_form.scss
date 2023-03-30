@@ -346,6 +346,29 @@ In this file:
         }
     }
 
+    // Clear Input
+
+    .form-entry__field__input__clear {
+
+        font-size: 0.75em;
+
+        margin-inline: 0.75em;
+        padding: 0.25em;
+
+        filter: opacity(50%);
+
+        &:hover, 
+        &:focus {
+
+        filter: unset;
+        
+        } 
+
+        &[aria-hidden="true"]{
+            display: none;
+        }
+    }
+
     // Active Fields
 
     .active {

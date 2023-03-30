@@ -23,12 +23,13 @@ const devPages = {
     'ReadingToggles': 'reading-toggles',
     'Typography': 'typography',
     'Tab': 'tab',
+    'Search': 'search',
     'Quiz': 'quiz'
 }
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Tab}.html`;
+const devPage = `${devPages.Search}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

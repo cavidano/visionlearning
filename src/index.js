@@ -86,3 +86,7 @@ const toc = new TableOfContents();
 
 // Call the methods to create the list items and append them to the container
 toc.init();
+
+import Search from './js/customJS/search';
+const search = new Search();
+search.init();
