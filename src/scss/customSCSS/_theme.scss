@@ -53,14 +53,6 @@ In this file:
     --spacer-5: calc(var(--spacer-base) * 4);
 }
 
-.backdrop {
-    --backdrop-fixed-height: 450px;
-}
-
-hr.divider {
-    margin-block: calc(var(--grid-divider-gap) * 0.5) ;
-}
-
 @media screen and (max-width: 1000px) {
 
     :root {
@@ -74,4 +66,25 @@ hr.divider {
 h1 > sub {
     display: block;
     font-size: 75%;
+}
+
+.backdrop {
+    --backdrop-fixed-height: 450px;
+}
+
+hr.divider {
+    margin-block: calc(var(--grid-divider-gap) * 0.5);
+}
+
+.tabs-nav {
+    --tab-active-bar-color: var(--primary);
+    &.library {
+        --tab-active-bar-color: var(--library);
+    }
+    &.glossary {
+        --tab-active-bar-color: var(--glossary);
+    }
+    &.classroom {
+        --tab-active-bar-color: var(--classroom);
+    }
 }

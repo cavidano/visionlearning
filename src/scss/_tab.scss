@@ -23,11 +23,11 @@ In this file:
     --tab-button-padding-x: var(--spacer-3);
     --tab-button-padding-y: var(--button-padding-y);
 
-    --tab-active-bar-size: calc(var(--border-width) * 3);
+    --tab-button-color: var(--link-color, currentColor);
+    --tab-active-button-color: currentColor;
 
-    --tab-active-bar-color: var(--primary);
-    --tab-active-text-color: currentColor;
-    --tab-link-color: var(--link-color, currentColor);
+    --tab-active-bar-size: calc(var(--border-width) * 3);
+    --tab-active-bar-color: currentColor;
 }
 
 ////////////////////////////////////////
@@ -45,6 +45,7 @@ In this file:
 
         > li {
             position: relative;
+            --separator-size: calc(var(--border-width) * 2);
 
             &::before {
                 position: absolute;
@@ -53,9 +54,9 @@ In this file:
                 inset-inline-end: 0;
                 inset-inline-start: 0;
 
-                height: calc(var(--border-width) * 2);
+                height: var(--separator-size);
 
-                // transform: translateY(calc(var(--tab-active-bar-size) * -0.5));
+                transform: translateY(calc(var(--separator-size) * -0.5));
                 
                 background-color: var(--border-color);
             }
@@ -79,7 +80,7 @@ In this file:
 
             line-height: normal;
 
-            color: var(--tab-link-color);
+            color: var(--tab-button-color);
         
             &::before {
                 position: absolute;
@@ -102,7 +103,7 @@ In this file:
         ) {
             font-weight: var(--body-font-weight-bold);
 
-            color: var(--tab-active-text-color);
+            color: var(--tab-active-button-color);
 
             &::before {
                 opacity: 1;
