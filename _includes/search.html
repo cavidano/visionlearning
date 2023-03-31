@@ -1,11 +1,21 @@
 <div class="form-entry">
     <div class="form-entry__field">
         <span class="form-entry__field__input">
-            <input
-                type="text"
-                name="searchInput"
-                id="search-input"
-            >
+            {% if page.title != 'Site Search' %}
+                <input
+                    type="text"
+                    name="searchInput"
+                    id="search-input"
+                    autocomplete="off"
+                />
+            {% else %}
+                <input
+                    type="text"
+                    name="searchInput"
+                    id="search-input"
+                    value="cells"
+                />
+            {% endif %}
             <button
                 class="form-entry__field__input__clear"
                 id="search-clear"

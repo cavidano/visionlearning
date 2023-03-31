@@ -8,7 +8,7 @@ title: Site Search
     <div class="container narrow margin-y-5">
 
         <h1 class="margin-bottom-4">
-            Site Search
+            Sitewide Search
         </h1>
 
         <form class="margin-bottom-4" aria-label="Search">
@@ -60,14 +60,20 @@ title: Site Search
 
             <ul class="grid grid--divider gap-5">
 
+            {% for item in site.data.searchResultsLibrary %}
+                {% assign title = item.Title %}                         
+                {% assign summary = item.Summary %} 
+                {% assign subcategory = item.Subcategory %} 
+
                 <li>
 
                     <a href="#1" class="no-hover-focus">
                 
                         <article>
-                            <h4 class="text-color-link">Discovery and Structure of Cells</h4>
+                            <em class="font-size-sm">{{ subcategory }}</em>
+                            <h4 class="text-color-link">{{ title }}</h4>
                             <p>
-                                Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
+                                {{ summary }}
                             </p>
                         </article>
                     
@@ -75,52 +81,9 @@ title: Site Search
 
                 </li>
 
-                <li>
-                
-                    <article>
-                        <h4>Discovery and Structure of Cells</h4>
-                        <p>
-                            Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
-                        </p>
-                    </article>
-
-                </li>
-
-                <li>
-                
-                    <article>
-                        <h4>Discovery and Structure of Cells</h4>
-                        <p>
-                            Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
-                        </p>
-                    </article>
-
-                </li>
-
-                <li>
-                
-                    <article>
-                        <h4>Discovery and Structure of Cells</h4>
-                        <p>
-                            Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
-                        </p>
-                    </article>
-
-                </li>
-
-                <li>
-                
-                    <article>
-                        <h4>Discovery and Structure of Cells</h4>
-                        <p>
-                            Cells are the basic structural and functional unit of life. This module traces the discovery of the cell in the 1600s and the development of modern cell theory. The module looks at similarities and differences between different types of cells and the relationship between cell structure and function. The Theory of Universal Common Descent is presented along with evidence that all living things on Earth descended from a common ancestor.
-                        </p>
-                    </article>
-
-                </li>
+            {% endfor %}
 
             </ul>
-        
         
         </section>
 

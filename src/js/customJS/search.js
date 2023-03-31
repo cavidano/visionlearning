@@ -23,12 +23,17 @@ export default class Search {
 
     init() {
 
-        this.#handleSearchChange();
+        if(this.#searchInput) {
+    
+            if(this.#searchInput.value) {        
+                this.#clearButton.style.display = 'flex';
+                this.#clearButton.setAttribute('aria-hidden', false);
+            }
 
-        this.#searchInput.addEventListener('input', this.#handleSearchInput);
-        this.#searchInput.addEventListener('change', this.#handleSearchChange);
+            this.#searchInput.addEventListener('input', this.#handleSearchInput);
+            this.#searchInput.addEventListener('change', this.#handleSearchChange);
 
-        this.#clearButton.addEventListener('click', this.#handleClearButtonClick);
-
+            this.#clearButton.addEventListener('click', this.#handleClearButtonClick);
+        }
     }
 }
