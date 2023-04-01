@@ -60,11 +60,11 @@ title: Site Search
                     
                     <div class="container padding-y-2 border-radius theme-light margin-bottom-4">
                         <p>
-                            Library: <strong>(41)</strong> results for <em>"celcls"</em>
+                            Library: <strong>(41)</strong> results for <em>"cells"</em>
                         </p>
                     </div>
 
-                    <ul class="grid grid--divider gap-5">
+                    <ul class="grid grid--divider gap-5" id="search-results">
 
                         {% for item in site.data.searchResultsLibrary %}
                             {% assign title = item.Title %}                         
@@ -156,57 +156,5 @@ title: Site Search
         </section>
 
     </div>
-
-    <script>
-
-        const highlightWords = (target, word) => {
-
-            // Create a regular expression to match all occurrences of the word, including partial-birth matches
-            var regex = new RegExp(word, 'gi');
-
-            // Get all the text nodes on the page
-            var nodes = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
-
-            // Loop through each text node
-            while (nodes.nextNode()) {
-
-                const node = nodes.currentNode;
-                const text = node.nodeValue;
-
-                // Check if the node contains the word
-                if (text && regex.test(text)) {
-
-                // Split the text node into parts, one for each occurrence of the word
-                const parts = text.split(regex);
-
-                // Create a new document fragment to hold the new nodes
-                const fragment = document.createDocumentFragment();
-                
-                // Loop through the parts and add new nodes to the fragment
-                parts.forEach(function(part, i) {
-                    fragment.appendChild(document.createTextNode(part));
-                    if (i < parts.length - 1) {
-                        const span = document.createElement("span");
-                        span.style.backgroundColor = "yellow";
-                        span.appendChild(document.createTextNode(word));
-                        fragment.appendChild(span);
-                    }
-                });
-
-                // Replace the original text node with the new nodes
-                const parent = node.parentNode;
-                parent.replaceChild(fragment, node);
-
-                // Continue searching the new nodes for additional matches
-                nodes.currentNode = parent;
-                }
-            }
-        }
-
-        const rootNode = document.getElementById('tab-panel-example-01');
-
-        highlightWords(rootNode, 'cell');
-    
-    </script>
 
 </main>
