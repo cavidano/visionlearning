@@ -8,7 +8,9 @@ title: Glossary • A-Z
     <section>
 
         <header>
-            <h2 class="screen-reader-only">Alphabetical</h2>
+            <h2 class="screen-reader-only">
+                Alphabetical list of glossary terms
+            </h2>
         </header>
 
         <nav class="theme-glossary padding-2">
@@ -51,23 +53,22 @@ title: Glossary • A-Z
                 {% for item in site.data.glossarySample %}
                     {% assign term = item.Name %}
                     {% assign pronounciation = item.Pronounciation %}
+
                     <li>
                         <span class="list-divider__cell">
                             <a class="text-color-link" href="{{ site.url }}/glossary/term.html">
                             {{ term }} 
                             </a>
                         </span>
-                        <span class="list-divider__cell">
                         {% if pronounciation != null %}
-                        <div class="button-group text-color-link">
-                            <button
-                                class="button button--icon-only">
+                        <span class="list-divider__cell">
+                            <button class="button button--icon-only">
                                 <span class="icon icon-pronounciation" aria-hidden="true"></span>
-                            </button>                                                
-                        </div>
-                        {% endif %}
+                            </button>
                         </span>
+                        {% endif %}
                     </li>
+                    
                 {% endfor %}
             </ul>
         </div>
