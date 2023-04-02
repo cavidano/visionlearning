@@ -314,22 +314,38 @@ In this file:
 
         height: 100%;
 
-        button {
-            flex-shrink: 0;
+        input {
+            flex-shrink: 1;
+            background-color: antiquewhite !important;
         }
 
         > .button {
-            --button-padding-y: 0;
+            flex-grow: 1;
+            --button-padding-y: unset;
             --button-border-radius: 0;
         }
 
-        > :is(
-        .button,
-        [class*="button--icon-only"] 
-        ) {
-            height: unset;
-
+        > .button {
             align-self: stretch;
+        }
+
+        > .button--icon-only {
+
+        aspect-ratio: auto 1;
+        height: unset;
+
+        padding-inline: 1.5em;
+        
+
+        // --button-icon-only-size: 2.25em;
+        // width: 2.75em;
+        // margin-inline: 0.3em;
+        // height: calc(100% * 1 / 1);
+            // padding:calc(--form-field-padding-y * 2); // --button-padding-y
+            // width: auto;
+            // outline: 1px solid red;
+            // aspect-ratio: 1;            
+
         }
 
         > :is(
