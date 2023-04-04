@@ -29,7 +29,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Search}.html`;
+const devPage = `${devPages.Form}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

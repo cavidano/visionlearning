@@ -250,7 +250,7 @@ In this file:
     }
 
     .form-entry__field:not([class*="--float"]) .form-entry__field__label {
-        margin-block-end: calc(var(--form-field-padding-y) * 0.75);
+        margin-block-end: 0.5em;
 
         &::before {
             @extend %required-icon;
@@ -286,7 +286,7 @@ In this file:
 
         display: flex;
 
-        gap: var(--gap);
+        // gap: var(--gap);
 
         :is(
             select, 
@@ -296,6 +296,10 @@ In this file:
             outline: none;
 
             padding-inline: var(--form-field-padding-x);
+        }
+
+        .icon + input  {
+            // background-color: red;
         }
 
         &::after {
@@ -324,12 +328,13 @@ In this file:
         height: 100%;
 
         input {
-        align-self: stretch;
+            align-self: stretch;
             flex-shrink: 1;
         }
 
         > button {
             flex-grow: 1;
+            flex-shrink: 0;
             --button-border-radius: 0;
         }
 
@@ -351,11 +356,11 @@ In this file:
             margin-inline-start: var(--form-field-padding-x);
         }
 
-        > .button-group {
-            margin-inline-end: calc(var(--form-field-padding-x) * 0.5);
+        // > .button-group {
+        //     margin-inline-end: calc(var(--form-field-padding-x) * 0.5);
 
-            font-size: 75%;
-        }
+        //     font-size: 75%;
+        // }
     }
 
     // Clear Input
@@ -371,9 +376,7 @@ In this file:
 
         &:hover, 
         &:focus {
-
-        filter: unset;
-        
+            filter: unset;
         } 
 
         &[aria-hidden="true"]{
@@ -406,7 +409,7 @@ In this file:
 
             z-index: 1000;
 
-            padding-block: var(--form-field-padding-y);
+            padding-block: 0.75em;
 
             pointer-events: none;
 
@@ -514,7 +517,8 @@ In this file:
         > div {
             position: relative;
 
-            padding: var(--form-field-padding-y) var(--form-field-padding-x);
+            padding: var(--button-padding-y) var(--form-field-padding-x);
+            min-height: var(--form-field-min-height);
         }
 
         > div:not(:last-child) {
