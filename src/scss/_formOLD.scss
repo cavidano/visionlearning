@@ -23,8 +23,8 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
+    --form-field-min-height: 3em;
     --form-field-padding-x: var(--spacer-3);
-    --form-field-padding-y: var(--button-padding-y);
 
     --form-field-border-radius: 0.25em;
 
@@ -250,7 +250,7 @@ In this file:
     }
 
     .form-entry__field:not([class*="--float"]) .form-entry__field__label {
-        margin-block-end: calc(var(--form-field-padding-y) * 0.75);
+        margin-block-end: 0.5em;
 
         &::before {
             @extend %required-icon;
@@ -274,11 +274,19 @@ In this file:
 
     .form-entry__field__select,
     .form-entry__field__input {
+        --gap: 0.3em;
+
         position: relative;
 
         border-radius: var(--form-field-border-radius);
 
         overflow: hidden;
+
+        min-height: var(--form-field-min-height);
+
+        display: flex;
+
+        // gap: var(--gap);
 
         :is(
             select, 
@@ -287,7 +295,11 @@ In this file:
         ) {
             outline: none;
 
-            padding: var(--form-field-padding-y) var(--form-field-padding-x);
+            padding-inline: var(--form-field-padding-x);
+        }
+
+        .icon + input  {
+            // background-color: red;
         }
 
         &::after {
@@ -309,27 +321,32 @@ In this file:
     }
 
     .form-entry__field__input {
+
         display: flex;
         align-items: center;
 
         height: 100%;
 
-        button {
-            flex-shrink: 0;
+        input {
+            align-self: stretch;
+            flex-shrink: 1;
         }
 
-        > .button {
-            --button-padding-y: 0;
+        > button {
+            flex-grow: 1;
+            flex-shrink: 0;
             --button-border-radius: 0;
         }
 
-        > :is(
-        .button,
-        [class*="button--icon-only"] 
-        ) {
-            height: unset;
-
+        > .button:not([class*=button--icon-only])  {
             align-self: stretch;
+            --button-padding-y: 0;
+        }
+
+        > .button--icon-only {
+            --button-icon-only-size: calc(var(--form-field-min-height) - calc(var(--gap) * 2));
+            margin: var(--gap);
+            border-radius: inherit;
         }
 
         > :is(
@@ -339,10 +356,31 @@ In this file:
             margin-inline-start: var(--form-field-padding-x);
         }
 
-        > .button-group {
-            margin-inline-end: calc(var(--form-field-padding-x) * 0.5);
+        // > .button-group {
+        //     margin-inline-end: calc(var(--form-field-padding-x) * 0.5);
 
-            font-size: 75%;
+        //     font-size: 75%;
+        // }
+    }
+
+    // Clear Input
+
+    .form-entry__field__input__clear {
+
+        font-size: 0.75em;
+
+        margin-inline: 0.75em;
+        padding: 0.25em;
+
+        filter: opacity(50%);
+
+        &:hover, 
+        &:focus {
+            filter: unset;
+        } 
+
+        &[aria-hidden="true"]{
+            display: none;
         }
     }
 
@@ -371,7 +409,7 @@ In this file:
 
             z-index: 1000;
 
-            padding-block: var(--form-field-padding-y);
+            padding-block: 0.75em;
 
             pointer-events: none;
 
@@ -479,7 +517,8 @@ In this file:
         > div {
             position: relative;
 
-            padding: var(--form-field-padding-y) var(--form-field-padding-x);
+            padding: var(--button-padding-y) var(--form-field-padding-x);
+            min-height: var(--form-field-min-height);
         }
 
         > div:not(:last-child) {
