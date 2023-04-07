@@ -101,34 +101,41 @@
         </button>
             
     </div>
+
+    <form class="search-bar collapse display-block--xl" action="{{ site.url }}/library/search-results.html">
         
-    <div
-        class="form-entry collapse display-block--xl"
-        id="material-search"
-        data-focus-first>
+        <div
+            class="form-entry"
+            id="material-search"
+            data-focus-first>
 
-        <div class="form-entry__field">
+            <div class="form-entry__field">
 
-            <label class="form-entry__field__label screen-reader-only" for="search-example">
-                Search
-            </label>
-                
-            <span class="form-entry__field__input">
-                <input
-                    type="text"
-                    name="search-example"
-                    id="search-example"
-                    placeholder="Search {{ search_text }}"
-                    autocomplete="off"
-                />
-                <button class="button button--icon-only padding-x-3">
-                    <span class="icon icon-search" aria-hidden="true"></span>
-                </button>
-            </span>
+                <label class="form-entry__field__label screen-reader-only" for="search-example">
+                    Search
+                </label>
+                    
+                <span class="form-entry__field__input">
+                    <input
+                        type="search"
+                        name="search-example"
+                        id="search-example"
+                        placeholder="Search Library"
+                        autocomplete="off"
+                    />
+                    <button
+                        class="button button--icon-only theme-light border-radius-circle margin-1"
+                        type="submit"  
+                    >
+                        <span class="icon icon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+
+            </div>
 
         </div>
-
-    </div>
+    
+    </form>
 
     <div class="collapse display-block--xl" id="material-nav">
         

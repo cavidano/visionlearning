@@ -135,15 +135,13 @@ In this file:
 
     .quiz__score {
 
-        &.passed {
+        &.pass {
             color: var(--canvas-confirm);
         }
 
         &.fail {
             color: var(--canvas-warn);
         }
-
-        // display: none;
     }
 
     .comprehension-checkpoint__header {

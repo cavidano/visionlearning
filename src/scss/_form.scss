@@ -318,14 +318,13 @@ In this file:
             flex-shrink: 0;
         }
 
+        input[type="search"]::-webkit-search-cancel-button {
+            display: none;
+        }
+        
         > .button {
             --button-padding-y: 0;
             --button-border-radius: 0;
-        }
-
-        > .button--icon-only {
-            padding-inline: 1.5em;
-            aspect-ratio: auto;
         }
 
         > :is(
