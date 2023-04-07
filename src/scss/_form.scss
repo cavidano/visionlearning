@@ -323,9 +323,14 @@ In this file:
             --button-border-radius: 0;
         }
 
+        > .button--icon-only {
+            padding-inline: 1.5em;
+            aspect-ratio: auto;
+        }
+
         > :is(
-        .button,
-        [class*="button--icon-only"] 
+            .button,
+            [class*="button--icon-only"] 
         ) {
             height: unset;
 

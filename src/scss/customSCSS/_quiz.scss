@@ -139,7 +139,11 @@ In this file:
             color: var(--canvas-confirm);
         }
 
-        display: none;
+        &.fail {
+            color: var(--canvas-warn);
+        }
+
+        // display: none;
     }
 
     .comprehension-checkpoint__header {
