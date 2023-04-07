@@ -4,7 +4,7 @@ layout: global
 
 {% capture anchor_links %}
 <li>
-    <a href="{{ site.url }}/about/who-we-are.html#section-1">
+    <a href="{{ site.url }}/about/who-we-are.html#section-1" aria-selected="true">
         Leadership
     </a>
 </li>
@@ -35,9 +35,9 @@ layout: global
 
             <main class="grid grid--sidebars grid--divider">
 
-                <div class="font-size-md">
+                <div class="font-size-md position-sticky-top margin-y-3">
                     
-                    <ul class="nav position-sticky-top margin-y-3">
+                    <ul class="tabs-nav border border-radius">
                         {{ anchor_links }}
                     </ul>
                 
