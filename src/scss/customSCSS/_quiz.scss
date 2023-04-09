@@ -118,10 +118,13 @@ In this file:
     }
 
     .quiz__response {
-        display: none;
         
         padding-left: calc(1.25em + var(--form-field-padding-x));
-        margin-top: calc(var(--form-field-padding-y) * 2);
+        margin-top: var(--form-field-padding-y);
+
+        // outline: 1px solid red;
+
+        display: block;
         
         font-style: italic;
         font-size: 90%;

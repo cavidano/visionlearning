@@ -100,6 +100,7 @@
    "quiz-option-d": 61795,
    "quiz-option-e": 61796,
    "car": 61797,
-   "sign-in": 61798,
-   "sign-out": 61799
+   "clear": 61798,
+   "sign-in": 61799,
+   "sign-out": 61800
 }
