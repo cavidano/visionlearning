@@ -20,21 +20,14 @@ In this file:
 // B. Variables
 ////////////////////////////////////////
 
-// Scoped to Root
-
 :root {
-    --subtle-fill-opacity: 0.05;
-}
 
-// Scoped to Block
+    // Subtle Fill
 
-%caret-vars {
-    --caret-size: 0.25em;
+    --subtle-fill-opacity: 0.075;
 
-    --caret-margin: 0.375em;
-}
+    // Gradient Veneer
 
-%gradient-veneer-vars {
     --gradient-veneer-start: 50%;
 
     --gradient-veneer-opacity: 1;
@@ -69,8 +62,9 @@ In this file:
 }
 
 %caret {
-    @extend %caret-vars;
-    
+    --caret-size: 0.25em;
+    --caret-margin: 0.375em;
+
     display: inline-flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -120,16 +114,27 @@ In this file:
     // Gradient Veneer Utilities
 
     [class*="gradient-veneer"] {
-        @extend %gradient-veneer-vars;
-
         --gradient-direction: to bottom;
         
         position: relative;
 
-        z-index: 0;
+        &::after {        
+            position: absolute;
+            content: "";
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
 
-        -webkit-mask-image: linear-gradient( var(--gradient-direction), black, var(--gradient-veneer-start), transparent);
-        mask-image: linear-gradient( var(--gradient-direction), black, var(--gradient-veneer-start), transparent);
+            background-image: linear-gradient( var(--gradient-direction), hsla(0, 0%, 100%, 0) var(--gradient-veneer-start), var(--gradient-color) );
+            background-clip: border-box;
+
+            opacity: var(--gradient-veneer-opacity);
+
+            pointer-events: none;
+            
+            display: none;
+        }
     }
 
     [class*="gradient-veneer-top"] {
