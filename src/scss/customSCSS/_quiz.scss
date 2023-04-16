@@ -147,11 +147,21 @@ In this file:
         }
     }
 
+    // Comprehension check point
+
+    .comprehension-checkpoint {
+
+        
+        container-type: inline-size;
+        container-name: comp-check;
+    
+    }
+
     .comprehension-checkpoint__header {
 
         overflow: hidden;
 
-        border-radius: var(--form-field-border-radius, 0.25em);
+        border-radius: var(--form-field-border-radius);
 
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.075;
@@ -161,8 +171,6 @@ In this file:
 
         color: var(--primary);
 
-        margin-inline-start: calc(var(--button-icon-only-size) * -1);
-        
         > span {
             @extend %subtle-fill-psuedo;
             --subtle-fill-opacity: 0.075;
@@ -178,7 +186,13 @@ In this file:
         }
 
         > span > [class*="icon"] {
-            font-size: 1.5em;
+            font-size: 1.5em; 
         }
+    }
+
+    @container comp-check (inline-size >= 768px) {
+      .comprehension-checkpoint__header {
+        margin-inline-start: calc(var(--button-icon-only-size) * -1);
+      }
     }
 }
