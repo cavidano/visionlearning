@@ -27,7 +27,12 @@ In this file:
 // C. Components
 //////////////////////////////////////////////
 
-@layer {
+@layer component {
+
+    .module__main {
+        container-type: inline-size;
+        container-name: module-main;
+    }
 
     .module__section,
     .module__footer {
@@ -67,6 +72,8 @@ In this file:
     // Did you know
 
     .did-you-know__box {
+        --border-color: var(--primary);
+        
         background-color: var(--light);
         background: linear-gradient(45deg, var(--light), hsla(0, 0%, 100%, 0));
 

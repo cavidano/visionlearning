@@ -149,14 +149,6 @@ In this file:
 
     // Comprehension check point
 
-    .comprehension-checkpoint {
-
-        
-        container-type: inline-size;
-        container-name: comp-check;
-    
-    }
-
     .comprehension-checkpoint__header {
 
         overflow: hidden;
@@ -190,7 +182,7 @@ In this file:
         }
     }
 
-    @container comp-check (inline-size >= 768px) {
+    @container module-main (inline-size >= 768px) {
       .comprehension-checkpoint__header {
         margin-inline-start: calc(var(--button-icon-only-size) * -1);
       }

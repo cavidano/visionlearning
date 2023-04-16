@@ -17,7 +17,6 @@ const devPages = {
     'HeaderFooter': 'header-footer',
     'Lightbox': 'lightbox',
     'List': 'list',
-    'Module': 'module',
     'Navigation': 'navigation',
     'ReadingToggles': 'reading-toggles',
     'Typography': 'typography',
