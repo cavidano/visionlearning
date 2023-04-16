@@ -21,6 +21,15 @@
         </li>
         <li>
             <a
+                href="{{ site.url }}/about/our-content" 
+                {% if page.title == 'Our Content' %}
+                aria-current="page"
+                {% endif %}>
+                    Our Content
+            </a>
+        </li>
+        <li>
+            <a
                 href="{{ site.url }}/about/ngss" 
                 {% if page.title == 'NGSS' %}
                 aria-current="page"

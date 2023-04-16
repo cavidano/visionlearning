@@ -13,6 +13,11 @@ layout: global
         Authors
     </a>
 </li>
+<li>
+    <a href="{{ site.url }}/about/who-we-are.html#section-2">
+        Peer Reviewers
+    </a>
+</li>
 {% endcapture %}
 
 <main id="skip-header-content">
@@ -35,13 +40,17 @@ layout: global
 
             <main class="grid grid--sidebars grid--divider">
 
-                <div class="font-size-md position-sticky-top margin-y-3">
-                    
-                    <ul class="tabs-nav border border-radius">
-                        {{ anchor_links }}
-                    </ul>
+                <nav>
                 
-                </div>
+                    <div class="font-size-md position-sticky-top">
+                        
+                        <ul class="tabs-nav border border-radius">
+                            {{ anchor_links }}
+                        </ul>
+                    
+                    </div>
+
+                </nav>
 
                 <article>
 

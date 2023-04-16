@@ -19,22 +19,36 @@
 {% if include.link_url %}
     {% assign url = include.link_url %}
 {% else %}
-    {% assign url = '#1' %}
+    {% assign url = '/library/module/reading.html' %}
 {% endif %}
 
-<a class="no-hover-focus" href="{{ url }}">
+{% if include.link_text %}
+    {% assign link_text = include.link_text %}
+{% endif %}
 
-<article class="card theme-light">
+<a class="no-hover-focus" href="{{ site.url }}{{ url }}">
 
-    <div class="margin-2">
-        <img class="border-radius box-shadow-1" src="{{ site.url }}{{ src }}" alt="Placeholder" />
-    </div>
+    <article class="card theme-light">
 
-    <div class="card__body">
+        <div class="margin-2 margin-bottom-0">
+            <img class="border-radius box-shadow-1" src="{{ site.url }}{{ src }}" alt="Placeholder" />
+        </div>
 
-        {{ content }}
-            
-    </div>
+        <div class="card__body">
+            {{ content }}
+        </div>
 
-</article>
+        {% if include.link_text %}
+        
+        <div class="card__foot border-top">
+
+            <strong class="font-size-sm text-color-link text-transform-uppercase">
+                {{ link_text }}
+            </strong>            
+        
+        </div>
+        
+        {% endif %}
+
+    </article>
 </a>
