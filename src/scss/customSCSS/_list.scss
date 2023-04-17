@@ -74,7 +74,7 @@ In this file:
 
     // Title list
 
-    .title-list {
+    .title-list:not(:last-child) {
         margin-block-end: 1.5em;
     }
 

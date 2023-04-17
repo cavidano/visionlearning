@@ -43,14 +43,10 @@ In this file:
 
     // Accordion Block
 
-    .accordion:not([class*="--cool"]) {
+    .accordion:not([class*="--primary"]) {
     
-        .accordion__button {
-
-            &:not(:first-child) {
-                border-block-start: var(--border-width) var(--border-style);
-            }
-
+        .accordion__button:not(:first-child) {
+            border-block-start: var(--border-width) var(--border-style);
         }
     }
 
@@ -60,7 +56,6 @@ In this file:
         justify-content: space-between;
         flex-direction: row-reverse;
     }
-
 
     .accordion__button {
         position: relative;
@@ -114,13 +109,13 @@ In this file:
         }
     }
 
-    // profiles
+    // Primary Accordion
 
-    .accordion--cool {
+    .accordion--primary {
 
         .accordion__button {
-            --subtle-fill-opacity: 0.05;
-            
+            --subtle-fill-opacity: 0.0375;
+
             --subtle-fill-color: hsla(
                 var(--default-link-color-h),
                 var(--default-link-color-s),
@@ -140,13 +135,19 @@ In this file:
             }
 
             &[aria-expanded="true"] {
-                --subtle-fill-opacity: 0.1;
+                --subtle-fill-opacity: 0.075;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
             }
         }
 
         .accordion__panel {
             background-color: var(--canvas);
-            filter: drop-shadow(0 0.25rem 4px hsla(0, 0%, 50%, 0.2));
+
+            filter: drop-shadow(0 0.25rem 4px hsla(0, 0%, 50%, 0.25));
+            
+            border-bottom-left-radius: var(--button-border-radius);
+            border-bottom-right-radius: var(--button-border-radius);
         }
     
     }

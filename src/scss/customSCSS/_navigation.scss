@@ -375,7 +375,7 @@ In this file:
 
     .about-menu {
         a:not([aria-current]){
-            color: var(--a11y-link);
+            color: var(--default-link-color);
         }
     }
 
@@ -385,7 +385,7 @@ In this file:
         padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
 
         a { 
-            color: var(--a11y-link)
+            color: var(--default-link-color)
         };
     }
 
