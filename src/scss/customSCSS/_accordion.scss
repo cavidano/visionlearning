@@ -41,17 +41,26 @@ In this file:
 
 @layer component {
 
+    // Accordion Block
+
+    .accordion:not([class*="--cool"]) {
+    
+        .accordion__button {
+
+            &:not(:first-child) {
+                border-block-start: var(--border-width) var(--border-style);
+            }
+
+        }
+    }
+
     // Accordion Elements
 
     .accordion__button {
         justify-content: space-between;
         flex-direction: row-reverse;
-
-        &:not(:first-child){
-            border-block-start: var(--border-width) var(--border-style);
-        }
-
     }
+
 
     .accordion__button {
         position: relative;
@@ -69,6 +78,8 @@ In this file:
         margin-bottom: 0;
 
         cursor: pointer;
+
+        text-align: start;
 
         &::before {
             @extend .icon_font;
@@ -101,6 +112,43 @@ In this file:
         &.shown {
             display: block;
         }
+    }
+
+    // profiles
+
+    .accordion--cool {
+
+        .accordion__button {
+            --subtle-fill-opacity: 0.05;
+            
+            --subtle-fill-color: hsla(
+                var(--default-link-color-h),
+                var(--default-link-color-s),
+                var(--default-link-color-l),
+                var(--subtle-fill-opacity)
+            );
+
+            overflow: hidden;
+            border-radius: var(--button-border-radius);
+
+            color: var(--link-color);
+
+            background-color: var(--subtle-fill-color);
+
+            &:not(:first-child){
+                margin-block-start: var(--spacer-1);
+            }
+
+            &[aria-expanded="true"] {
+                --subtle-fill-opacity: 0.1;
+            }
+        }
+
+        .accordion__panel {
+            background-color: var(--canvas);
+            filter: drop-shadow(0 0.25rem 4px hsla(0, 0%, 50%, 0.2));
+        }
+    
     }
     
 } // end @layer

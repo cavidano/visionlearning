@@ -50,7 +50,19 @@ In this file:
 
     //
 
-    --a11y-link: #00549a;
+    --default-link-color-h: 240;
+    --default-link-color-s: 100%;
+    --default-link-color-l: 30%;
+    --default-link-color-a: 1;
+    
+    --default-link-color: hsla(
+        var(--default-link-color-h),
+        var(--default-link-color-s),
+        var(--default-link-color-l),
+        var(--default-link-color-o)
+    );
+
+    --default-link-color: #00549a;
 
     // Associated Primary Colors
 
@@ -88,7 +100,7 @@ In this file:
 
     --canvas-text: var(--dark);
     --canvas-border: hsla(0, 0%, 50%, 0.3);
-    --canvas-link: #00549a;
+    --canvas-link: var(--default-link-color);
     --canvas-confirm: #008237;
     --canvas-warn: #e4193c;
 
@@ -96,7 +108,7 @@ In this file:
 
     --light-text: currentColor;
     --light-border: hsla(0, 0%, 50%, 0.25);
-    --light-link: var(--a11y-link);
+    --light-link: var(--default-link-color);
     --light-confirm: #007e35;
     --light-warn: #ce1736;
 
@@ -308,7 +320,7 @@ $theme-colors: (
     // :root {
     //     --light-l: 70%;
     //     --light-o: 0.0625;
-    //     --a11y-link: var(--dark-link);
+    //     --link-color: var(--dark-link);
 
     // --primary: #8c28bd;
     // }
