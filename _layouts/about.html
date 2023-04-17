@@ -4,17 +4,17 @@ layout: global
 
 {% capture anchor_links %}
 <li>
-    <a href="{{ site.url }}/about/who-we-are.html#section-1" aria-selected="true">
+    <a class="nav-link" href="{{ site.url }}/about/who-we-are.html#section-1">
         Leadership
     </a>
 </li>
 <li>
-    <a href="{{ site.url }}/about/who-we-are.html#section-2">
+    <a class="nav-link" href="{{ site.url }}/about/who-we-are.html#section-2">
         Additional Authors
     </a>
 </li>
 <li>
-    <a href="{{ site.url }}/about/who-we-are.html#section-2">
+    <a class="nav-link" href="{{ site.url }}/about/who-we-are.html#section-3">
         Peer Reviewers
     </a>
 </li>
@@ -40,7 +40,7 @@ layout: global
 
             <main class="grid grid--sidebars grid--divider">
 
-                <nav>
+                <nav class="display-none display-block--lg">
                 
                     <div class="font-size-md position-sticky-top">
                         
@@ -71,3 +71,36 @@ layout: global
     </article>
 
 </main>
+
+<script>
+
+// Smooth scrolling to section when link is clicked
+document.querySelectorAll('a.nav-link').forEach(link => {
+  const sectionId = link.getAttribute('href').split('#')[1];
+//   link.setAttribute('href', `${baseUrl}#${sectionId}`);
+  
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    const section = document.querySelector(`#${sectionId}`);
+    section.scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Update `aria-selected` attribute of navigation links when scrolling
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('a.nav-link');
+  const currentSection = sections.length - [...sections].reverse().findIndex(section => window.scrollY >= section.offsetTop - 100) - 1;
+
+  navLinks.forEach(link => {
+    link.setAttribute('aria-selected', 'false');
+  });
+  navLinks[currentSection].setAttribute('aria-selected', 'true');
+});
+
+
+
+
+</script>
