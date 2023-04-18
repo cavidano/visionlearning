@@ -4,7 +4,7 @@ layout: global
 
 {% capture anchor_links %}
 <li>
-    <a class="nav-link" href="{{ site.url }}/about/who-we-are.html#section-1">
+    <a class="nav-link" href="{{ site.url }}/about/who-we-are.html#section-1" aria-selected="true">
         Leadership
     </a>
 </li>
@@ -71,36 +71,3 @@ layout: global
     </article>
 
 </main>
-
-<script>
-
-// Smooth scrolling to section when link is clicked
-document.querySelectorAll('a.nav-link').forEach(link => {
-  const sectionId = link.getAttribute('href').split('#')[1];
-//   link.setAttribute('href', `${baseUrl}#${sectionId}`);
-  
-  link.addEventListener('click', function(event) {
-    event.preventDefault();
-    const section = document.querySelector(`#${sectionId}`);
-    section.scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-
-// Update `aria-selected` attribute of navigation links when scrolling
-window.addEventListener('scroll', function() {
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('a.nav-link');
-  const currentSection = sections.length - [...sections].reverse().findIndex(section => window.scrollY >= section.offsetTop - 100) - 1;
-
-  navLinks.forEach(link => {
-    link.setAttribute('aria-selected', 'false');
-  });
-  navLinks[currentSection].setAttribute('aria-selected', 'true');
-});
-
-
-
-
-</script>

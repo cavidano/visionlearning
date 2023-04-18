@@ -87,6 +87,14 @@ const toc = new TableOfContents();
 // Call the methods to create the list items and append them to the container
 toc.init();
 
+import { AnchorNav } from './js/customJS/table-of-contents';
+
+// Create a new instance of the TableOfContents class
+const anchorNav = new AnchorNav();
+
+// Call the methods to create the list items and append them to the container
+anchorNav.init();
+
 import Search from './js/customJS/search';
 const search = new Search();
 search.init();

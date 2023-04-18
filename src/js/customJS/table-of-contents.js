@@ -68,4 +68,44 @@ export default class TableOfContents {
 			this.#tocContainer.appendChild(this.#tocList);
 		}
 	}
+
 }
+
+export class AnchorNav {
+  #sections = document.querySelectorAll('section');
+  #navLinks = document.querySelectorAll('a.nav-link');
+
+  addClickListeners() {
+    this.#navLinks.forEach(link => {
+      const sectionId = link.getAttribute('href').split('#')[1];
+
+      link.addEventListener('click', event => {
+        event.preventDefault();
+
+        const section = document.querySelector(`#${sectionId}`);
+
+        section.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  }
+
+  addScrollListeners() {
+    window.addEventListener('scroll', () => {
+      const currentSection = this.#sections.length - [...this.#sections].reverse().findIndex(section => window.scrollY >= section.offsetTop - 100) - 1;
+
+      this.#navLinks.forEach(link => {
+        link.setAttribute('aria-selected', 'false');
+      });
+
+      this.#navLinks[currentSection].setAttribute('aria-selected', 'true');
+    });
+  }
+
+  init() {
+    this.addClickListeners();
+    this.addScrollListeners();
+  }
+}
+
