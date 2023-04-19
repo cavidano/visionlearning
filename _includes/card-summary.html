@@ -39,12 +39,13 @@
         </div>
 
         {% if include.link_text %}
-        
-        <div class="card__foot border-top">
 
-            <strong class="font-size-sm text-color-link text-transform-uppercase">
-                {{ link_text }}
-            </strong>            
+        <div class="card__foot border-top font-size-md">
+
+            <span class="button button--has-icon text-transform-uppercase">
+                <span class="button__text">{{ link_text }}</span>
+                <span class="icon icon-caret-right"></span>
+            </span>
         
         </div>
         

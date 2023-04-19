@@ -88,3 +88,13 @@ hr.divider {
         --tab-active-bar-color: var(--classroom);
     }
 }
+
+.button.text-transform-uppercase{
+
+    // background-color: red;
+    --subtle-fill-opacity: 0;
+    --button-padding-x: 0;
+    --button-padding-y: 0;
+    color: var(--link-color);
+    width: auto;
+}
