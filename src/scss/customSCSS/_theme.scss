@@ -46,11 +46,18 @@ In this file:
 
     --button-icon-only-size: 2.25em;
 
+    --button-group-gap: 0.125em;
+
     // Spacing
 
     --spacer-3: calc(var(--spacer-base) * 1.25);
     --spacer-4: calc(var(--spacer-base) * 2);
     --spacer-5: calc(var(--spacer-base) * 4);
+
+    // Form
+
+
+    --form-field-border-color: var(--border-color);
 }
 
 @media screen and (max-width: 1000px) {
@@ -90,11 +97,9 @@ hr.divider {
 }
 
 .button.text-transform-uppercase{
-
-    // background-color: red;
     --subtle-fill-opacity: 0;
     --button-padding-x: 0;
     --button-padding-y: 0;
+
     color: var(--link-color);
-    width: auto;
 }

@@ -31,8 +31,6 @@ In this file:
 // B. Variables
 ////////////////////////////////////////
 
-// Scoped to Root
-
 :root {
     --nav-gap: 0.75em;
 
@@ -41,8 +39,6 @@ In this file:
 
     --primary-nav-padding-x: var(--spacer-2);
     --primary-nav-padding-y: var(--spacer-2);
-
-    --primary-nav-search-width: 300px;
 }
 
 ////////////////////////////////////////
@@ -277,15 +273,11 @@ In this file:
 
         font-size: var(--breadcrumb-font-size);
 
-        > li:first-child {
-            flex-shrink: 0;
-        }
-
         > li:last-child {
             font-style: italic;
             font-weight: bold;
 
-            @extend .truncate-text;
+            // @extend .truncate-text;
         }
         
         > li:not(:last-child) {
@@ -538,9 +530,6 @@ In this file:
                     display: block !important;
                 }
 
-                [class*="__search"] .form-entry {
-                    max-width: var( --primary-nav-search-width);
-                }
             }
 
             .primary-nav--inline#{$mod} {
