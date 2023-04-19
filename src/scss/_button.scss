@@ -33,6 +33,8 @@ In this file:
     --button-outline-border-width: calc( var(--border-width) * 2);
 
     --button-icon-only-size: 2.5em;
+    
+    --button-group-gap: 0.5em;
 }
 
 //////////////////////////////////////////////
@@ -162,6 +164,8 @@ In this file:
         width: var(--button-icon-only-size);
         height: var(--button-icon-only-size);
 
+        aspect-ratio: 1;
+
         [class*="icon-"] {
             --icon-size: 1.25em;
 
@@ -233,9 +237,7 @@ In this file:
     // Button Group
 
     .button-group {
-        --gap-size: var(--spacer-2);
-        
-        padding-block: unset;
+        --gap-size: var(--button-group-gap);
         
         display: flex;
 
@@ -244,7 +246,9 @@ In this file:
         min-height: var(--button-icon-only-size);
 
         > [class*="button"]:not(.button--icon-only) {
-            min-height: 100%;
+            --button-padding-y: 0;
+
+            align-self: stretch;
 
             display: flex;
             align-items: center;

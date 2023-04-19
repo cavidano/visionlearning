@@ -27,7 +27,7 @@ In this file:
     --form-field-padding-y: var(--button-padding-y);
 
     --form-field-border-radius: 0.25em;
-    --form-field-border-color: var(--border-color);
+    --form-field-border-color: currentColor;
 
     // Icons
 
@@ -211,7 +211,6 @@ In this file:
             border-radius: inherit;
             background-color: transparent;
             color: inherit;
-            width: 100%;
         }
 
         :is(
@@ -294,10 +293,10 @@ In this file:
         &::after {
             position: absolute;
             content: "";
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            inset-block-start: 0;
+            inset-inline-end: 0;
+            inset-block-end: 0;
+            inset-inline-start: 0;
 
             border-radius: inherit;
 
@@ -310,65 +309,35 @@ In this file:
     }
 
     .form-entry__field__input {
+
         display: flex;
         align-items: center;
 
         height: 100%;
 
+        input {
+            flex-grow: 1;
+        }
+
         button {
             flex-shrink: 0;
         }
 
-        input[type="search"]::-webkit-search-cancel-button {
-            display: none;
-        }
-        
         > .button {
             --button-padding-y: 0;
             --button-border-radius: 0;
-        }
-
-        > :is(
-            .button,
-            [class*="button--icon-only"] 
-        ) {
-            height: unset;
 
             align-self: stretch;
+            
+            height: unset;
         }
 
-        > :is(
-            .icon,
-            .button-group
-        ) {
+        > .icon {
             margin-inline-start: var(--form-field-padding-x);
         }
 
         > .button-group {
-            margin-inline-end: calc(var(--form-field-padding-x) * 0.5);
-
-            font-size: 75%;
-        }
-    }
-
-    // Clear
-
-    .form-entry__field__input__clear {
-
-        font-size: 0.75em;
-
-        margin-inline: 0.75em;
-        padding: 0.25em;
-
-        filter: opacity(50%);
-
-        &:hover, 
-        &:focus {
-            filter: unset;
-        } 
-
-        &[aria-hidden="true"]{
-            display: none;
+            margin: var(--gap-size);
         }
     }
 
@@ -799,17 +768,12 @@ In this file:
 
     // Form Feedback
 
-    [data-alert="form-errors"],
-    .form-entry__feedback {
-        display: none;
-    }
-
     .form-entry__feedback {
         order: 3;
         display: flex;
         align-items: center;
 
-        font-size: 0.8em;
+        font-size: 80%;
        
         margin-block-start: 0.5rem;
 
@@ -821,6 +785,11 @@ In this file:
         }
     }
 
+    [data-alert="form-errors"],
+    .form-entry:not(.is-invalid) .form-entry__feedback {
+        display: none;
+    }
+    
     .is-invalid {
 
         .form-entry__help {
