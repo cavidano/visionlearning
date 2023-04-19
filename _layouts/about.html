@@ -26,47 +26,43 @@ layout: global
 
         {% include about-menu.html %}
 
-        <div class="margin-bottom-5">
-            
-            <header class="text-align-center padding-y-4">
+        <header class="text-align-center padding-y-4">
 
-                <h1 class="container medium font-weight-normal">
-                    {{ page.title }}
-                </h1>
+            <h1 class="container medium font-weight-normal">
+                {{ page.title }}
+            </h1>
 
-            </header>
+        </header>
 
-            <hr class="divider" />
+        <hr class="divider" />
 
-            <main class="grid grid--sidebars grid--divider">
+        <main class="grid grid--sidebars grid--divider">
 
-                <nav class="display-none display-block--lg">
+            <nav class="display-none display-block--xl">
                 
-                    <div class="font-size-md position-sticky-top">
+                <div class="font-size-md position-sticky-top">
                         
-                        <ul class="tabs-nav border border-radius">
-                            {{ anchor_links }}
-                        </ul>
+                    <ul class="tabs-nav border border-radius">
+                        {{ anchor_links }}
+                    </ul>
                     
-                    </div>
-
-                </nav>
-
-                <article>
-
-                {{ content }}
-                    
-                </article>
-
-                <div class="font-size-md">
-
-                    {% include process-of-science-book.html %}
-
                 </div>
 
-            </main>
+            </nav>
 
-        </div>
+            <article class="module__main">
+
+            {{ content }}
+                    
+            </article>
+
+            <div class="font-size-md">
+
+                {% include process-of-science-book.html %}
+
+            </div>
+
+        </main>
 
     </article>
 

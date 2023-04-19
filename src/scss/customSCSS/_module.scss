@@ -34,21 +34,22 @@ In this file:
         container-name: module-main;
     }
 
-    .module__section,
+    .module__main section,
     .module__footer {
-        --offest-x: calc(var(--container-padding-x-lg) * 2);
+        --offset-x: calc(var(--container-padding-x-lg) * 2);
 
-        margin-block-end: var(--spacer-5);
+        // margin-block-end: var(--spacer-5);
         position: relative;
-    
     }
 
-    .module__section:not(.did-you-know):not(.introduction),
+    .module__main section:not(.did-you-know):not(.introduction),
     .module__footer {
 
-        padding-block-start: var(--spacer-5);
+        padding-block: var(--spacer-5);
 
-        &::before {
+        // background-color: yellow;
+
+        &:not(:first-child)::before {
             content: '';
             position: absolute;
             inset-block-start: calc(var(--border-width) * -2);
@@ -56,17 +57,12 @@ In this file:
             inset-inline-start: 50%;
             transform: translateX(-50%);
 
-            width: calc(var(--narrow-width) - var(--offest-x));
+            width: calc(var(--narrow-width) - var(--offset-x));
             height: var(--border-width);
 
             background-color: currentColor;
         }
     
-    }
-
-    .citation {
-        filter: opacity(75%);
-        font-size: var(--font-size-sm);    
     }
 
     // Did you know
@@ -123,6 +119,13 @@ In this file:
                 color: white;
             }
         }
+    }
+
+    //Citation
+
+    .citation {
+        filter: opacity(75%);
+        font-size: var(--font-size-sm);    
     }
 
 } // end @layer

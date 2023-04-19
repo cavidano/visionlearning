@@ -85,7 +85,7 @@ export class AnchorNav {
         const section = document.querySelector(`#${sectionId}`);
 
         section.scrollIntoView({
-          behavior: 'smooth'
+          behavior: 'instant'
         });
       });
     });
