@@ -234,7 +234,7 @@
 
 			<div class="nav__dropdown box-shadow-1">
 
-				<div class="accordion font-size-sm">
+				<div class="accordion accordion--secondary">
 
 				{% assign items = site.data.librarySample %}
         
@@ -279,7 +279,7 @@
 						aria-labelledby="acc-button-{{ slug }}"
 						role="region">
 
-							<div class="accordion accordion--plus-minus">
+							<div class="accordion accordion--secondary">
 
 								{% for category in subcategories %}
 
@@ -355,9 +355,9 @@
 				{{ header }}
 			</button>
 
-			<div class="nav__dropdown box-shadow-1 padding-1">
+			<div class="nav__dropdown box-shadow-1">
 
-				<div class="accordion accordion--plus-minus font-size-sm">
+				<div class="accordion accordion--secondary">
 
 					{% for category in subcategories %}
 
