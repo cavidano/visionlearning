@@ -48,6 +48,8 @@ In this file:
     .module__main section:not(:nth-of-type(1)),
     .module__footer {
 
+        // outline: 3px solid red;
+
         margin-block: var(--spacer-4);
 
         // background-color: yellow;
@@ -112,12 +114,11 @@ In this file:
     // In this module
 
     .module__tools {
-        // background-color: bisque;
-
         border: var(--border-width) var(--border-style) var(--border-color);
         border-radius: var(--border-radius);
+
         padding: var(--spacer-1);
-        
+
         .button-group {
             button:not([aria-selected="true"]) {
                 color: var(--link-color);
