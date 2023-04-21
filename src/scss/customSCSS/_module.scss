@@ -41,7 +41,7 @@ In this file:
         --offset-x: calc(var(--container-padding-x-lg) * 2);
 
         position: relative;
-        
+
         // outline: 1px solid red;
     }
 
@@ -111,7 +111,13 @@ In this file:
 
     // In this module
 
-    .in-this-module {
+    .module__tools {
+        // background-color: bisque;
+
+        border: var(--border-width) var(--border-style) var(--border-color);
+        border-radius: var(--border-radius);
+        padding: var(--spacer-1);
+        
         .button-group {
             button:not([aria-selected="true"]) {
                 color: var(--link-color);
