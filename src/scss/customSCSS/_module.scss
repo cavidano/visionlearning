@@ -42,14 +42,11 @@ In this file:
 
         position: relative;
 
-        // outline: 1px solid red;
+        outline: 3px solid red;
     }
 
     .module__main section:not(:nth-of-type(1)),
     .module__footer {
-
-        // outline: 3px solid red;
-
         margin-block: var(--spacer-5);
     }
 
@@ -80,7 +77,7 @@ In this file:
         }
     }
 
-    //Citation
+    // Citation
 
     .citation {
         filter: opacity(75%);
