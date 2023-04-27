@@ -1,78 +1,78 @@
 ---
 layout: landing
-title: Glossary • Highlights
+title: Glossary • A-Z
 ---
 
-<ul class="grid grid--column-2--lg grid--row-2 gap-1">
+<div id="module-list-view">
+            
+    <section>
 
-    <li class="grid__colspan-2--lg">
+        <header>
+            <h2 class="screen-reader-only">
+                Alphabetical list of glossary terms
+            </h2>
+        </header>
 
-        <div class="card theme-primary earth-science" style="min-height: 450px">
-                    
-            <div class="card__head border-bottom">
-                <strong>
-                    <em>
-                        Term of the Day
-                    </em>
-                </strong> 
-            </div>
+        <nav class="theme-glossary padding-2">
 
-            <div class="card__body flex-column flex-grow-1 justify-content-center">
-                <h2 class="font-weight-normal flex-row align-items-center">
-                    basalt
-                    <button class="button button--icon-only font-size-rg margin-left-2">
-                        <span class="icon icon-pronounciation"></span>
-                    </button>
-                </h2>      
-                <p>
-                    <em>
-                        [noun - rocks &amp; minerals]
-                    </em>
-                </p>                                    
-                <p>
-                    A dark, fine-grained igneous rock formed by cooling of iron- and magnesium-rich lava above the surface of the earth. Basalt is the main component of the oceanic crust of the Earth.
-                </p>                                      
+            <div class="container narrow terms-alphabetical">                                
+                <button aria-current="page">
+                <span>A</span>
+                </button>
+                <button>B</button>
+                <button>C</button>
+                <button>D</button>
+                <button>E</button>
+                <button>F</button>
+                <button>G</button>
+                <button>H</button>
+                <button>I</button>
+                <button>J</button>
+                <button>K</button>
+                <button>L</button>
+                <button>M</button>
+                <button>N</button>
+                <button>O</button>
+                <button>P</button>
+                <button>Q</button>
+                <button>R</button>
+                <button>S</button>
+                <button>T</button>
+                <button>U</button>
+                <button>V</button>
+                <button>W</button>
+                <button>X</button>
+                <button>Y</button>
+                <button>Z</button>
             </div>
                 
-            <div class="card__foot border-top">
-                <a class="button font-size-sm button--outline" href="{{ site.url }}/glossary/term.html">
-                    Open in Glossary
-                </a>
-            </div>
+        </nav>
 
+        <div class="margin-y-2 font-size-md">
+            <ul class="list-divider">
+                {% for item in site.data.glossarySample %}
+                    {% assign term = item.Name %}
+                    {% assign pronounciation = item.Pronounciation %}
+
+                    <li>
+                        <span class="list-divider__cell">
+                            <a class="text-color-link" href="{{ site.url }}/glossary/term.html">
+                            {{ term }} 
+                            </a>
+                        </span>
+                        {% if pronounciation != null %}
+                        <span class="list-divider__cell">
+                            <button class="button button--icon-only">
+                                <span class="icon icon-pronounciation" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                        {% endif %}
+                    </li>
+                    
+                {% endfor %}
+            </ul>
         </div>
 
-    </li>
+    </section>
 
-    <li class="grid__colspan-2--lg">
-
-        <a class="backdrop backdrop--fixed theme-primary profiles-in-science" href="/glossary/term.html">
-
-            <div class="backdrop__image gradient-veneer-bottom">
-                <img class="opacity-30" src="{{ site.url }}/images/feature/244.jpg" alt="Placeholder">
-            </div>
-
-            <div class="backdrop__cover justify-content-start align-items-end">
-
-                <div class="container narrow margin-y-4">
-                    <strong>
-                        <em>
-                            Profiles in Science
-                        </em>
-                    </strong>
-
-                    <h3 class="font-weight-normal">
-                        Louis Tompkins Wright
-                    </h3>
-
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eos repellendus vitae aspernatur quas distinctio.
-                    </p>                                       
-                </div>
-        
-            </div>
-        </a>
-        
-    </li>
-
-</ul>
+</div>
