@@ -79,13 +79,12 @@ import Lightbox from './js/customJS/lightbox'
 const lightbox = new Lightbox();
 lightbox.init();
 
-import TableOfContents from './js/customJS/table-of-contents';
+// import TableOfContents from './js/customJS/table-of-contents';
 
 // Create a new instance of the TableOfContents class
-const toc = new TableOfContents();
+// const toc = new TableOfContents();
 
-// Call the methods to create the list items and append them to the container
-toc.init();
+// toc.init();
 
 import { AnchorNav } from './js/customJS/table-of-contents';
 

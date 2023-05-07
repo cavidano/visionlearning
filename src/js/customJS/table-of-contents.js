@@ -104,8 +104,9 @@ export class AnchorNav {
   }
 
   init() {
-    this.addClickListeners();
-    this.addScrollListeners();
+	if(this.#navLinks){
+		this.addClickListeners();
+		this.addScrollListeners();
+	}
   }
 }
-
