@@ -124,7 +124,7 @@ In this file:
 
         // outline: 1px solid red;
 
-        display: block;
+        // display: block;
         
         font-style: italic;
         font-size: 90%;
@@ -181,6 +181,17 @@ In this file:
             font-size: 1.5em; 
         }
     }
+
+    .comprehension-checkpoint {
+
+        .form-entry__option__radio {
+            --subtle-fill-opacity: 0;
+        }
+
+        .quiz__response:not(.shown) {
+            display: none;
+        }
+    } 
 
     @container module-main (inline-size >= 768px) {
       .comprehension-checkpoint__header {

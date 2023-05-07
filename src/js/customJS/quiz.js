@@ -59,9 +59,7 @@ export default class Quiz {
 export class CompCheck {
 	#compCheckList = document.querySelectorAll('.comprehension-checkpoint');
 
-	#compCheckInputsList = document.querySelectorAll(
-		'.comprehension-checkpoint input'
-	);
+	#compCheckInputsList = document.querySelectorAll('.comprehension-checkpoint input');
 	#compCheckResponseList = document.querySelectorAll('.quiz__response');
 
 	#handleResponse = (event) => {
@@ -74,13 +72,13 @@ export class CompCheck {
 		});
 
 		this.#compCheckResponseList.forEach((response) => {
-			response.classList.remove('display-block');
+			response.classList.remove('shown');
 		});
 
 		const answer = currentInput.closest('label').nextElementSibling;
 
 		if (event.currentTarget.checked) {
-			answer.classList.add('display-block');
+			answer.classList.add('shown');
 		}
 	};
 

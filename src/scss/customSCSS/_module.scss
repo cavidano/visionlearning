@@ -38,23 +38,26 @@ In this file:
 
     .module__main section,
     .module__footer {
-        --offset-x: calc(var(--container-padding-x-lg) * 2);
-
         position: relative;
 
         // outline: 3px solid red;
     }
 
-    .module__main section:not(:nth-of-type(1)),
+    .module__main section,
     .module__footer {
         margin-block: var(--spacer-5);
     }
 
-    .module-tabs {
+    .module__main__tabs {
         --shift: calc(var(--grid-divider-gap) * 0.5);
 
         margin-block-start: calc(var(--shift) * -1);
         margin-block-end: var(--grid-divider-gap);
+        margin-inline: auto;
+
+        max-width: var(--narrow-width);
+
+        font-size: var(--font-size-md);
     }
 
     // In this module
