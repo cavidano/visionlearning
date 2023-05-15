@@ -99,14 +99,16 @@ export class AnchorNav {
         link.setAttribute('aria-selected', 'false');
       });
 
-      this.#navLinks[currentSection].setAttribute('aria-selected', 'true');
+      if (currentSection >= 0) { // Prevents setting attributes on non-existing elements
+        this.#navLinks[currentSection].setAttribute('aria-selected', 'true');
+      }
     });
   }
 
   init() {
-	if(this.#navLinks){
-		this.addClickListeners();
-		this.addScrollListeners();
-	}
+    if (this.#navLinks.length > 0 && this.#sections.length > 0) {
+      this.addClickListeners();
+      this.addScrollListeners();
+    }
   }
 }

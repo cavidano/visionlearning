@@ -90,6 +90,19 @@ In this file:
 
 .lightbox__container {
     margin: auto;
+
+    min-width: 350px;
+
+    display: table;
+
+    caption-side: bottom;
+
+    > figcaption {
+        display: table-caption;
+        text-align: left;
+    }
+
+    img{min-width: 100%;}
 }
 
 .lightbox__caption {
