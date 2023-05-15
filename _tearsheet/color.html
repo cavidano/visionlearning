@@ -32,94 +32,94 @@
 
         </main>
 
-    </body>
+        <script>
 
-    <script>
+            // Primary Palette
 
-        // Primary Palette
+            const principlePalette = {
+                Primary: '#582273',
+                Library: '#FAB957',
+                Glossary: '#60BF64',
+                Classroom: '#2B9FD9',
+                Dark: '#1E1A33',
+                Light: 'hsla(0, 0%, 0%, 0.05)',
+            }
 
-        const principlePalette = {
-            Primary: '#582273',
-            Library: '#FAB957',
-            Glossary: '#60BF64',
-            Classroom: '#2B9FD9',
-            Dark: '#1E1A33',
-            Light: 'hsla(0, 0%, 0%, 0.05)',
-        }
+            const disciplinePalette = {
+                'Biology': '#00492f',
+                'Chemistry': '#29417c',
+                'Earth Science': '#552c39',
+                'General Science': '#c13926',
+                'Profiles in Science': '#4c3463',
+                'Math in Science': '#016a7c',
+                'Physics': '#1b3639',
+                'Process of science': '#661430',
+            }
 
-        const disciplinePalette = {
-            'Biology': '#00492f',
-            'Chemistry': '#29417c',
-            'Earth Science': '#552c39',
-            'General Science': '#c13926',
-            'Profiles in Science': '#4c3463',
-            'Math in Science': '#016a7c',
-            'Physics': '#1b3639',
-            'Process of science': '#661430',
-        }
+            const principleSwatchContainer = document.getElementById('principle-swatches');
+            const disciplineSwatchContainer = document.getElementById('discipline-swatches');
+            
+            const principleSwatches = Object.entries(principlePalette).map(([key, value]) => {
 
-        const principleSwatchContainer = document.getElementById('principle-swatches');
-        const disciplineSwatchContainer = document.getElementById('discipline-swatches');
-        
-        const principleSwatches = Object.entries(principlePalette).map(([key, value]) => {
+                const utility = key.toLowerCase();
 
-            const utility = key.toLowerCase();
+                return (`
+                    <div class="card theme-${utility}">
 
-            return (`
-                <div class="card theme-${utility}">
+                        <div class="card__head border-bottom">
+                            <p>Theme Color</p>
+                        </div>
 
-                    <div class="card__head border-bottom">
-                        <p>Theme Color</p>
-                    </div>
+                        <div class="card__body">
+                            <h2 class="h4">${key}</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi non suscipit voluptas eaque, error accusamus, autem inventore beatae aspernatur quos officia.
+                            </p>
+                        </div>
 
-                    <div class="card__body">
-                        <h2 class="h4">${key}</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi non suscipit voluptas eaque, error accusamus, autem inventore beatae aspernatur quos officia.
-                        </p>
-                    </div>
-
-                    <div class="card__foot border-top font-size-sm">
-                        <a class="button button width-100" href="#1">Primary Action</a>
-                    </div>
-                </div>
-            `);
-        
-        }).join('');
-        
-        const disciplineSwatches = Object.entries(disciplinePalette).map(([key, value]) => {
-
-            const slugify = key => key.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
-
-            const slug = slugify(key)
-
-            return (`
-                <div class="backdrop backdrop--fixed aspect-ratio-3x2 theme-primary ${slug}">
-
-                    <div class="backdrop__image gradient-veneer-bottom">
-                        <img class="opacity-60" src="./images/discipline-${slug}-3x2.jpg" alt="">
-                    </div>
-
-                    <div class="backdrop__cover align-items-end justify-items-stretch">
-                        <div>
-                            <h2 class="h6 margin-2 text-shadow">${key}</h2>
-                            <div class="padding-2 background-color-primary border-top font-size-md">               
-                                <p>
-                                    #00492f
-                                </p>
-                            </div>
+                        <div class="card__foot border-top font-size-sm">
+                            <a class="button button width-100" href="#1">Primary Action</a>
                         </div>
                     </div>
+                `);
+            
+            }).join('');
+            
+            const disciplineSwatches = Object.entries(disciplinePalette).map(([key, value]) => {
 
-                </div>
-            `);
-        
-        }).join('');
+                const slugify = key => key.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
 
-        principleSwatchContainer.innerHTML = principleSwatches;
+                const slug = slugify(key)
 
-        disciplineSwatchContainer.innerHTML = disciplineSwatches;
+                return (`
+                    <div class="backdrop backdrop--fixed aspect-ratio-3x2 theme-primary ${slug}">
 
-    </script>
+                        <div class="backdrop__image gradient-veneer-bottom">
+                            <img class="opacity-60" src="./images/discipline-${slug}-3x2.jpg" alt="">
+                        </div>
+
+                        <div class="backdrop__cover align-items-end justify-items-stretch">
+                            <div>
+                                <h2 class="h6 margin-2 text-shadow">${key}</h2>
+                                <div class="padding-2 background-color-primary border-top font-size-md">               
+                                    <p>
+                                        #00492f
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                `);
+            
+            }).join('');
+
+            principleSwatchContainer.innerHTML = principleSwatches;
+
+            disciplineSwatchContainer.innerHTML = disciplineSwatches;
+
+        </script>
+
+    </body>
 
 </html>
