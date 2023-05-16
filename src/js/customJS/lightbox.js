@@ -1,67 +1,64 @@
-import { getFilteredElements } from '../utilities';
-
-//////////////////////////////////////////////
-// Lightbox
-//////////////////////////////////////////////
-
 export default class Lightbox {
 
-	#lightbox = document.createElement('div');
-	#lightboxImages = document.querySelectorAll('img[data-lightbox]');
-      
-	#lightboxHTML = (`
+  #lightbox = document.createElement('div');
+  #lightboxImages = document.querySelectorAll('img[data-lightbox]');
+  #scrollPosition = 0;
+
+  #lightboxHTML = `
     <div class="button-group lightbox__buttons">
       <button class="button button--icon-only" data-lightbox-previous>
-          <span class="icon icon-arrow-left" aria-label="Close" aria-hidden="true">
+          <span class="icon icon-arrow-left" aria-label="Previous" aria-hidden="true"></span>
       </button>
       <button class="button button--icon-only" data-lightbox-next>
-          <span class="icon icon-arrow-right" aria-label="Close" aria-hidden="true">
+          <span class="icon icon-arrow-right" aria-label="Next" aria-hidden="true"></span>
       </button>
       <button class="button button--icon-only" data-lightbox-close>
-          <span class="icon icon-close" aria-label="Close" aria-hidden="true">
+          <span class="icon icon-close" aria-label="Close" aria-hidden="true"></span>
       </button>
     </div>
-
     <figure class="lightbox__container">
         <div class="lightbox__image"></div>           
       <figcaption class="lightbox__caption">A caption for the image.</figcaption>
     </figure>
-  `);
+  `;
 
-  #lightboxVideoHTML = (`<video controls><source src="" type="video/mp4"></video>`);
-  #lightboxElementHTML = (`<img src="https://source.unsplash.com/1600x900" />`);
+  #lightboxVideoHTML = '<video controls><source src="" type="video/mp4"></video>';
+  #lightboxElementHTML = '<img src="https://source.unsplash.com/1600x900" />';
 
-	init() {
-
-    if(this.#lightboxImages.length) {
+  init() {
+    if (this.#lightboxImages.length) {
 
       const handleLightboxUpdate = (e) => {
 
-        console.log(`currentLB === ${currentLB}`);
+        e.preventDefault();
+
+        this.#scrollPosition = window.pageYOffset;
+        
+        window.scrollTo({ top: this.#scrollPosition, behavior: 'instant' });
+        document.body.style.position = '';
+        document.body.style.top = '';
+			  document.body.style.width = '';
 
         const directionalFocus = (dir) => {
 
           e.preventDefault();
 
-          currentLB = parseInt(currentLB) + dir; 
+          currentLB = parseInt(currentLB) + dir;
 
           if (dir === -1 && currentLB < 0) {
             currentLB = lightboxes.length - 1;
-            console.log(`left arrow <<<< ${currentLB}`);
           } else if (dir === 1 && currentLB >= lightboxes.length) {
             currentLB = 0;
-            console.log(`left arrow >>>>  ${currentLB}`);
-          } else {
-            console.log(`My target is ????? ${currentLB}`);
           }
+
           updateLighbox(currentLB);
         };
 
         if (e.target.hasAttribute('data-lightbox-previous')) {
-					directionalFocus(-1);
-				} else if (e.target.hasAttribute('data-lightbox-next')) {
-					directionalFocus(1);
-				}
+          directionalFocus(-1);
+        } else if (e.target.hasAttribute('data-lightbox-next')) {
+          directionalFocus(1);
+        }
 
         switch (e.code) {
           case 'ArrowLeft':
@@ -71,9 +68,8 @@ export default class Lightbox {
             directionalFocus(1);
             break;
           default:
-          // do nothing
+            // do nothing
         }
-
       };
 
       const handleLightboxClose = (e) => {
@@ -81,13 +77,17 @@ export default class Lightbox {
         if (e.target !== e.currentTarget) return;
 
         this.#lightbox.setAttribute('aria-hidden', true);
-
         document.querySelector('body').classList.remove('modal-open');
         window.addEventListener('keyup', handleLightboxUpdate);
+
+        window.scrollTo({ top: this.#scrollPosition, behavior: 'instant' });
+        document.body.style.position = '';
+        document.body.style.top = '';
+			  document.body.style.width = '';
+
       };
 
       const updateLighbox = (current) => {
-
         let lightboxElementTarget = null;
 
         if (lightboxes[current].imgType === 'video') {
@@ -97,7 +97,6 @@ export default class Lightbox {
           lightboxElement.innerHTML = this.#lightboxElementHTML;
 
           lightboxElementTarget = lightboxElement.querySelector('img');
-          
           lightboxElementTarget.alt = lightboxes[current].imgAlt;
         }
 
@@ -114,7 +113,6 @@ export default class Lightbox {
       this.#lightbox.setAttribute('aria-hidden', true);
 
       this.#lightbox.innerHTML = this.#lightboxHTML;
-
       document.body.appendChild(this.#lightbox);
 
       const lightboxPrevious = document.querySelector('[data-lightbox-previous]'); 
@@ -131,74 +129,27 @@ export default class Lightbox {
       };
 
       let lightboxes = [];
-
       let currentLB;
-        
-      this.#lightboxImages.forEach((image, index) => {
 
+      this.#lightboxImages.forEach((image, index) => {
+      
         const wrapper = document.createElement('button');
         wrapper.setAttribute('class', 'lightbox-element');
 
         wrap(image, wrapper);
 
-        const setType = () => {
-					const lbType = image.getAttribute('data-lightbox');
+        const setImgType = () => {
+          const lbType = image.getAttribute('data-lightbox');
+          return lbType === 'video' ? 'video' : 'image';
+        };
 
-					if (lbType === 'video') {
-						return 'video';
-					} else {
-						return 'image';
-					}
-				};
-
-        const setImgSrc = () => {
-					const lbSrc = image.getAttribute('data-lightbox-src');
-
-					if (lbSrc) {
-						return lbSrc;
-					} else if (image.src) {
-						return image.src;
-					} else {
-						return null;
-					}
-				};
-
-        const setImgCaption = () => {
-					const lbCaption = image.getAttribute('data-lightbox-caption');
-
-					if (lbCaption) {
-						return lbCaption;
-					} else if (image.alt) {
-						return image.alt;
-					} else {
-						return null;
-					}
-				};
-
-        const setImgAlt = () => {
-					const lbAlt = image.getAttribute('data-lightbox-alt');
-
-					if (lbAlt) {
-						return lbAlt;
-					} else if (image.alt) {
-						return image.alt;
-					} else {
-						return '';
-					}
-				};
-
-        const setlbWidth = () => {
-					const lbWidth = image.getAttribute('data-lightbox-width');
-
-					if (lbWidth) {
-						return lbWidth;
-					} else {
-						return null;
-					}
-				};
+        const setImgSrc = () => image.getAttribute('data-lightbox-src') || image.src || null;
+        const setImgCaption = () => image.getAttribute('data-lightbox-caption') || image.alt || null;
+        const setImgAlt = () => image.getAttribute('data-lightbox-alt') || image.alt || '';
+        const setlbWidth = () => image.getAttribute('data-lightbox-width') || null;
 
         lightboxes.push({
-          imgType: setType(),
+          imgType: setImgType(),
           imgSrc: setImgSrc(),
           imgCaption: setImgCaption(),
           imgAlt: setImgAlt(),
@@ -207,22 +158,24 @@ export default class Lightbox {
 
         const imageBtn = image.closest('button');
 
-        imageBtn.addEventListener('click', () => {
-
+        imageBtn.addEventListener('click', (e) => {
+          e.preventDefault();
           currentLB = index;
 
           document.querySelector('body').classList.add('modal-open');
-
           this.#lightbox.setAttribute('aria-hidden', false);
+
+          this.#scrollPosition = window.pageYOffset;
+          document.body.style.position = 'fixed';
+			    document.body.style.width = '100%';
+          document.body.style.top = `-${this.#scrollPosition}px`;
 
           lightboxElement.classList.add('box-shadow-3');
 
           updateLighbox(index);
 
           window.addEventListener('keyup', handleLightboxUpdate);
-  
         });
-
       });
 
       lightboxClose.addEventListener('click', handleLightboxClose);
@@ -230,7 +183,6 @@ export default class Lightbox {
       lightboxNext.addEventListener('click', handleLightboxUpdate);
 
       this.#lightbox.addEventListener('click', handleLightboxClose);
-
-    } // end
-	}
+    }
+  }
 }

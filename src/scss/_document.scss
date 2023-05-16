@@ -5,6 +5,7 @@ In this file:
 // A. Modules
 // B. Variables
 // C. Selector Resets
+// D. Overlay Class (set via JS)
 
 */
 
@@ -134,3 +135,23 @@ In this file:
     }
 
 } // end @layer
+
+
+//////////////////////////////////////////////
+// D. Overlay Class (set via JS)
+//////////////////////////////////////////////
+
+@layer base {
+
+  body.has-overlay {
+    --top: var(--scroll-position, 0);
+
+    position: fixed;
+    top: var(--top);
+
+    overflow: hidden;
+
+    width: 100%;
+  }
+
+}

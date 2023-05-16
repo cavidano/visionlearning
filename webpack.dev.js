@@ -15,6 +15,7 @@ const devPages = {
     'Form': 'form',
     'Figure': 'figure',
     'Grid': 'grid',
+    'Modal': 'modal',
     'HeaderFooter': 'header-footer',
     'Lightbox': 'lightbox',
     'List': 'list',
@@ -28,7 +29,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Typography}.html`;
+const devPage = `${devPages.Modal}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
