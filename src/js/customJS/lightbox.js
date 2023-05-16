@@ -30,15 +30,6 @@ export default class Lightbox {
 
       const handleLightboxUpdate = (e) => {
 
-        e.preventDefault();
-
-        this.#scrollPosition = window.pageYOffset;
-        
-        window.scrollTo({ top: this.#scrollPosition, behavior: 'instant' });
-        document.body.style.position = '';
-        document.body.style.top = '';
-			  document.body.style.width = '';
-
         const directionalFocus = (dir) => {
 
           e.preventDefault();
@@ -77,14 +68,12 @@ export default class Lightbox {
         if (e.target !== e.currentTarget) return;
 
         this.#lightbox.setAttribute('aria-hidden', true);
-        document.querySelector('body').classList.remove('modal-open');
-        window.addEventListener('keyup', handleLightboxUpdate);
+
+        document.querySelector('body').classList.remove('has-overlay');
 
         window.scrollTo({ top: this.#scrollPosition, behavior: 'instant' });
-        document.body.style.position = '';
-        document.body.style.top = '';
-			  document.body.style.width = '';
 
+        window.removeEventListener('keyup', handleLightboxUpdate);
       };
 
       const updateLighbox = (current) => {
@@ -159,16 +148,18 @@ export default class Lightbox {
         const imageBtn = image.closest('button');
 
         imageBtn.addEventListener('click', (e) => {
+
           e.preventDefault();
+          
           currentLB = index;
 
-          document.querySelector('body').classList.add('modal-open');
-          this.#lightbox.setAttribute('aria-hidden', false);
-
           this.#scrollPosition = window.pageYOffset;
-          document.body.style.position = 'fixed';
-			    document.body.style.width = '100%';
-          document.body.style.top = `-${this.#scrollPosition}px`;
+          document.body.style.setProperty('--scroll-position', `-${this.#scrollPosition}px`);
+
+          document.querySelector('body').classList.add('has-overlay');
+
+
+          this.#lightbox.setAttribute('aria-hidden', false);
 
           lightboxElement.classList.add('box-shadow-3');
 
@@ -176,6 +167,7 @@ export default class Lightbox {
 
           window.addEventListener('keyup', handleLightboxUpdate);
         });
+
       });
 
       lightboxClose.addEventListener('click', handleLightboxClose);
