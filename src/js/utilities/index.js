@@ -28,7 +28,7 @@ export const getFocusableElements = (element = document) => {
 }
 
 //////////////////////////////////////////////
-// B. Get Filtered Elements
+// B. Filtered Elements
 //////////////////////////////////////////////
 
 export const getFilteredElements = (

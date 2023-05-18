@@ -14,7 +14,6 @@ export default class Modal {
   
     const initModal = (modalTarget) => {
 
-
       if (!modalTarget) {
         console.warn('Modal target not found.');
         return;
