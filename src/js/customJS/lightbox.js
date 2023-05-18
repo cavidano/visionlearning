@@ -69,7 +69,7 @@ export default class Lightbox {
 
         this.#lightbox.setAttribute('aria-hidden', true);
 
-        document.querySelector('body').classList.remove('has-overlay');
+        document.querySelector('html').classList.remove('has-overlay');
 
         window.scrollTo({ top: this.#scrollPosition, behavior: 'instant' });
 
@@ -155,9 +155,9 @@ export default class Lightbox {
 
           this.#scrollPosition = window.pageYOffset;
 
-          document.body.style.setProperty('--scroll-position', `-${this.#scrollPosition}px`);
+          document.querySelector('html').style.setProperty('--scroll-position', `-${this.#scrollPosition}px`);
 
-          document.querySelector('body').classList.add('has-overlay');
+          document.querySelector('html').classList.add('has-overlay');
 
           this.#lightbox.setAttribute('aria-hidden', false);
 

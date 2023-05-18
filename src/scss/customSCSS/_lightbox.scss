@@ -25,7 +25,7 @@ In this file:
   --lightbox-padding-y: var(--spacer-2);
 
   --lightbox-overlay-color: black;
-  --lightbox-overlay-opacity: 0.875;
+  --lightbox-overlay-opacity: 0.8;
   
   --lightbox-z-index: 100000;
 }
@@ -37,14 +37,14 @@ In this file:
 .lightbox,
 .lightbox::before {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+
+  width: 100%;
+  height: 100%;
 }
 
 .lightbox {
-
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -59,7 +59,9 @@ In this file:
       background-color: var(--lightbox-overlay-color);
       
       opacity: var(--lightbox-overlay-opacity);
+
       z-index: -1;
+      
       pointer-events: none;
   }
 
@@ -83,7 +85,7 @@ In this file:
   margin-block: 1em;
   color: white;
 
-  button{
+  button {
     backdrop-filter: blur(4px) brightness(50%);
   }
 }
@@ -148,6 +150,7 @@ In this file:
         opacity: 0.875;
         
         background-color: var(--lightbox-overlay-color);
+        
         aspect-ratio: 1 / 1;
     }
 }

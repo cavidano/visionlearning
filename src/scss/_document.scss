@@ -130,7 +130,7 @@ In this file:
 
     // Horizontal Rule
 
-    hr {
+    hr { 
         border-block-start: var(--border-width) var(--border-style);
     }
 
@@ -143,16 +143,22 @@ In this file:
 
 @layer base {
 
-  body.has-overlay {
-    --top: var(--scroll-position, 0);
+    html.has-overlay,
+    html.has-overlay > body {
+        position: fixed;
+        width: 100%;
+    }
 
-    position: fixed;
-    top: var(--top);
+    html.has-overlay {
+        --top: var(--scroll-position, 0);
 
-    overflow: hidden;
+        height: 100%;
 
-    width: 100%;
-    // height: 100vh;
-  }
+        overflow: hidden;
+
+        body {
+            top: var(--top);
+        }
+    }
 
 }
