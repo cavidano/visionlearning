@@ -166,6 +166,7 @@ export default class Lightbox {
           updateLighbox(index);
 
           window.addEventListener('keyup', handleLightboxUpdate);
+          
         });
 
       });
