@@ -64,10 +64,7 @@ import Accordion from './js/customJS/accordion';
 const accordion = new Accordion();
 accordion.init();
 
-import { Quiz, CompCheck } from './js/customJS/quiz'; 
-
-// const quiz = new Quiz();
-// quiz.init();
+import { CompCheck } from './js/customJS/quiz'; 
 
 const compCheck = new CompCheck();
 compCheck.init();
@@ -75,23 +72,14 @@ compCheck.init();
 import ReadingToggles from './js/customJS/reading-toggles';
 new ReadingToggles();
 
-import Lightbox from './js/customJS/lightbox'
+import Lightbox from './js/lightbox'
 const lightbox = new Lightbox();
 lightbox.init();
-
-// import TableOfContents from './js/customJS/table-of-contents';
-
-// Create a new instance of the TableOfContents class
-// const toc = new TableOfContents();
-
-// toc.init();
 
 import { AnchorNav } from './js/customJS/table-of-contents';
 
 // Create a new instance of the TableOfContents class
 const anchorNav = new AnchorNav();
-
-// Call the methods to create the list items and append them to the container
 anchorNav.init();
 
 import Search from './js/customJS/search';
