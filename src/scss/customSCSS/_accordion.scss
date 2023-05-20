@@ -132,27 +132,15 @@ In this file:
     }
 
     .accordion__panel {
+        overflow: hidden;
 
         display: none;
         
-
-        display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-in;  
-        &.shown {
-  grid-template-rows: 1fr;
-        }
-    }
-
-    .accordion__panel__content {  
-        overflow: hidden;
         padding-inline: var(--accordion-panel-padding-x);
-        transition: opacity 0.3s ease-in-out, padding-block .6s ease-in-out;
-        opacity: 0;
+        padding-block: var(--accordion-panel-padding-y);
 
-        .shown & {
-            padding-block: var(--accordion-panel-padding-y);
-            opacity: 1;
+        &.shown {
+            display: block;
         }
     }
 
