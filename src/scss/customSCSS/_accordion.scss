@@ -68,6 +68,7 @@ In this file:
 
             &[aria-expanded="true"] {
                 --subtle-fill-opacity: 0.075;
+
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
             }
@@ -76,14 +77,39 @@ In this file:
         .accordion__panel {
             background-color: var(--canvas);
 
-            filter: drop-shadow(0 0.25rem 4px hsla(0, 0%, 50%, 0.25));
+            box-shadow: 0 0.25rem 4px hsla(0, 0%, 50%, 0.2);
             
             border-bottom-left-radius: var(--button-border-radius);
             border-bottom-right-radius: var(--button-border-radius);
+
+            display: grid;
+            grid-template-rows: 0fr;
+
+            transition: grid-template-rows 0.3s ease-in;
         }
-    
+
+        .accordion__panel__content {
+            overflow: hidden;
+            padding-inline: var(--accordion-panel-padding-x);
+            
+            transition: 
+                opacity 0.3s ease-in-out, 
+                padding-top 0.5s ease-in-out,
+                padding-bottom 0.5s ease-in-out;
+
+            opacity: 0;
+        }
+
+        .accordion__panel.shown {
+            grid-template-rows: 1fr;
+
+            .accordion__panel__content {
+                padding-top: var(--accordion-panel-padding-y);
+                padding-bottom: var(--accordion-panel-padding-y);
+                opacity: 1;
+            }
+        }
     }
-    
 
     // Accordion Elements
 
@@ -133,23 +159,25 @@ In this file:
 
     .accordion__panel {
         overflow: hidden;
-
-        display: none;
-        
-        padding-inline: var(--accordion-panel-padding-x);
-        padding-block: var(--accordion-panel-padding-y);
-
-        &.shown {
-            display: block;
-        }
     }
 
     // Accordion Modifier
 
     .accordion--secondary {
-    
+
         .accordion__button:not(:first-child) {
             border-block-start: var(--border-width) var(--border-style);
+        }
+
+        .accordion__panel {
+            display: none;
+
+            padding-inline: var(--accordion-panel-padding-x);
+            padding-block: var(--accordion-panel-padding-y);
+
+            &.shown {
+                display: block;
+            }
         }
     }
 } // end @layer
