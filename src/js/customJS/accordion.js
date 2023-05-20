@@ -1,4 +1,4 @@
-import { getFocusableElements } from '../utilities';
+import { getFocusableElements } from '../utilities/focus';
 
 //////////////////////////////////////////////
 // Accordion
