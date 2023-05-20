@@ -43,7 +43,7 @@ In this file:
 @use './flex';
 @use './form'; 
 @use './grid'; 
-// @use './modal';
+@use './lightbox';
 @use './navigation';
 @use './opacity';
 @use './overflow';
@@ -64,7 +64,6 @@ In this file:
 @use './customSCSS/color';
 @use './customSCSS/figure';
 @use './customSCSS/layout';
-@use './customSCSS/lightbox';
 @use './customSCSS/list';
 @use './customSCSS/modal';
 @use './customSCSS/module';

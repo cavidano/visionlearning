@@ -17,6 +17,7 @@ import './scss/styles.scss';
 // B. JS
 //////////////////////////////////////////////
 
+
 import Alert from './js/alert';
 const alert = new Alert();
 alert.init();
@@ -49,6 +50,10 @@ tab.init();
 // Custom Modules
 //////////////////////////////////////////////
 
+import Accordion from './js/customJS/accordion';
+const accordion = new Accordion();
+accordion.init();
+
 import Layout from './js/customJS/layout'; 
 
 const layout = new Layout();
@@ -59,10 +64,6 @@ import Modal from './js/customJS/modal';
 const modal = new Modal();
 modal.init();
 
-import Accordion from './js/customJS/accordion';
-
-const accordion = new Accordion();
-accordion.init();
 
 import { CompCheck } from './js/customJS/quiz'; 
 

@@ -1,4 +1,4 @@
-import { getFocusableElements } from '../utilities';
+import { getFocusableElements } from '../utilities/focus';
 
 //////////////////////////////////////////////
 // Accordion
@@ -8,94 +8,81 @@ export default class Accordion {
 
     #accordionList = document.querySelectorAll('.accordion');
 
+    setFocusableElements(element = document, focusable = false) {
+        const focusableElementList = getFocusableElements(element);
+        for (const focusableElement of focusableElementList) {
+            if (focusable === true) {
+                focusableElement.setAttribute('tabindex', 0);
+            } else if (focusable === false) {
+                focusableElement.setAttribute('tabindex', -1);
+            }
+        }
+    }
+
+    initAccordion(event, accordionButton, currentAccordionPanel, accordionPanelList) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        for (const otherAccordionPanel of accordionPanelList) {
+            otherAccordionPanel.classList.remove('show');
+
+            if (otherAccordionPanel !== currentAccordionPanel) {
+                otherAccordionPanel.classList.remove('shown');
+                otherAccordionPanel.style.maxHeight = null;
+                otherAccordionPanel.previousElementSibling.setAttribute('aria-expanded', false);
+                otherAccordionPanel.setAttribute('aria-hidden', true);
+
+                this.setFocusableElements(otherAccordionPanel, false);
+            }
+        }
+
+        currentAccordionPanel.classList.toggle('shown');
+
+        let isExpanded = accordionButton.getAttribute('aria-expanded');
+
+        if (isExpanded === 'true') {
+            accordionButton.setAttribute('aria-expanded', false);
+            currentAccordionPanel.setAttribute('aria-hidden', true);
+
+            this.setFocusableElements(currentAccordionPanel, false);
+
+        } else if (isExpanded === 'false') {
+            accordionButton.setAttribute('aria-expanded', true);
+            currentAccordionPanel.setAttribute('aria-hidden', false);
+
+            this.setFocusableElements(currentAccordionPanel, true);
+        }
+
+        let accTrigger = new Event('accTrigger', { bubbles: true });
+        document.dispatchEvent(accTrigger);
+    }
+
     init() {
-
         this.#accordionList.forEach((accordion) => {
-
             const accordionButtonList = accordion.querySelectorAll(':scope > [data-accordion="button"]');
             const accordionPanelList = accordion.querySelectorAll(':scope > [data-accordion="panel"]');
 
-            const setFocusableElements = (element = document, focusable = false) => {
-
-                const focusableElementList = getFocusableElements(element);
-
-                for (const focusableElement of focusableElementList) {
-                    if (focusable === true) {
-                        focusableElement.setAttribute('tabindex', 0);
-                    } else if (focusable === false) {
-                        focusableElement.setAttribute('tabindex', -1);
-                    }
-                }
-            }
-
             accordionButtonList.forEach((accordionButton, index) => {
-
                 const currentAccordionPanel = accordionButton.nextElementSibling;
-
                 let isExpanded = accordionButton.getAttribute('aria-expanded');
 
                 accordionButton.setAttribute('tabindex', 0);
 
                 if (isExpanded === 'true') {
-
                     currentAccordionPanel.classList.add('show');
-
-                    setFocusableElements(currentAccordionPanel, true);
-
+                    this.setFocusableElements(currentAccordionPanel, true);
                 } else {
                     accordionButton.setAttribute('aria-expanded', false);
                     currentAccordionPanel.setAttribute('aria-hidden', true);
-
-                    setFocusableElements(currentAccordionPanel, false);
-                }
-
-                const initAccordion = (event) => {
-
-                    event.preventDefault();
-                    event.stopPropagation();
-                    
-                    for (const otherAccordionPanel of accordionPanelList) {
-
-                        otherAccordionPanel.classList.remove('show');
-                        
-                        if (otherAccordionPanel !== currentAccordionPanel) {
-                            otherAccordionPanel.classList.remove('shown');
-                            otherAccordionPanel.style.maxHeight = null;
-                            otherAccordionPanel.previousElementSibling.setAttribute('aria-expanded', false);
-                            otherAccordionPanel.setAttribute('aria-hidden', true);
-
-                            setFocusableElements(otherAccordionPanel, false);
-                        }
-                    }
-
-                    currentAccordionPanel.classList.toggle('shown');
-
-                    isExpanded = accordionButton.getAttribute('aria-expanded');
-                    
-                    if (isExpanded === 'true') {
-                        accordionButton.setAttribute('aria-expanded', false);
-                        currentAccordionPanel.setAttribute('aria-hidden', true);
-                        
-                        setFocusableElements(currentAccordionPanel, false);
-
-                    } else if (isExpanded === 'false') {
-                        accordionButton.setAttribute('aria-expanded', true);
-                        currentAccordionPanel.setAttribute('aria-hidden', false);
-
-                        setFocusableElements(currentAccordionPanel, true);
-                    }
-
-                    let accTrigger = new Event('accTrigger', { bubbles: true });
-                    document.dispatchEvent(accTrigger);
-
+                    this.setFocusableElements(currentAccordionPanel, false);
                 }
 
                 accordionButton.addEventListener('click', (event) => {
-                    initAccordion(event);
+                    this.initAccordion(event, accordionButton, currentAccordionPanel, accordionPanelList);
                 });
 
                 accordionButton.addEventListener('keydown', (event) => {
-
                     const directionalFocus = (dir) => {
                         event.preventDefault();
 
@@ -111,26 +98,25 @@ export default class Accordion {
                     }
 
                     switch (event.code) {
+                        case 'ArrowLeft':
                         case 'ArrowUp':
                             directionalFocus(-1);
                             break;
+                        case 'ArrowRight':
                         case'ArrowDown':
                             directionalFocus(1);
                             break;
                         default:
-                        // do nothing
+                            // do nothing
                     }
-
                 });
 
                 accordionButton.addEventListener('keyup', (event) => {
                     if (event.code === 'Enter' && event.target.tagName !== 'BUTTON') {
-                        initAccordion(event);
+                        this.initAccordion(event, accordionButton, currentAccordionPanel, accordionPanelList);
                     }
                 });
-
             });
-
         });
     }
 }
