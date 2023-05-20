@@ -44,6 +44,7 @@ $opacities: (
             @each $name, $value in $opacities {
                 .opacity-#{$name}#{$mod} {
                     filter: opacity($value);
+
                 }
             }
         }

@@ -74,7 +74,8 @@ const modal = new Modal();
 modal.init();
 
 import ReadingToggles from './js/customJS/reading-toggles';
-new ReadingToggles();
+const readingToggles = new ReadingToggles();
+readingToggles.init();
 
 import Search from './js/customJS/search';
 const search = new Search();

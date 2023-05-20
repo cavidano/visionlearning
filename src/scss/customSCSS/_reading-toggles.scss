@@ -290,11 +290,15 @@ In this file:
     }
 
     @include breakpoint.breakpoint-down(lg) {
-
+        .cool,
         .reading-toggle-detail {
+
+            outline: 4px solid rgb(11, 152, 124);
         
             position: fixed;
-            top: 20px;
+            top: 50px;
+            left: 0;
+            // bottom: 0;
             margin-inline: 20px;
 
             z-index: 100000;
