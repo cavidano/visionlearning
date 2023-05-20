@@ -28,7 +28,6 @@ export default class Accordion {
             otherAccordionPanel.classList.remove('show');
             if (otherAccordionPanel !== currentAccordionPanel) {
                 otherAccordionPanel.classList.remove('shown');
-                otherAccordionPanel.style.maxHeight = null;
                 otherAccordionPanel.previousElementSibling.setAttribute('aria-expanded', false);
                 otherAccordionPanel.setAttribute('aria-hidden', true);
                 this.setFocusableElements(otherAccordionPanel, false);
