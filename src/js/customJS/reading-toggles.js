@@ -12,6 +12,12 @@ export default class ReadingToggles {
 	#termsList = document.querySelectorAll('.term');
 	#termDefContainer = document.querySelector('.term-def-container');
 
+	#closeButton = `
+		<button class="button button--icon-only" aria-label="Remove">
+			<span class="icon icon-close" aria-hidden="true"></span>
+		</button>
+	`;
+
 	removeOldDetails = () => {
 		let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
 		if (oldDetailList.length > 0) {
@@ -36,6 +42,8 @@ export default class ReadingToggles {
 
                 <div class="reading-toggle-detail__head">
                     ${ngssCat}
+                    ${this.#closeButton}
+
                 </div>
 
                 <div class="reading-toggle-detail__body">
@@ -48,6 +56,9 @@ export default class ReadingToggles {
         `;
 
 		this.#ngssDescContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
+		
+		let closeButton = this.#ngssDescContainer.querySelector('.button--icon-only');
+		closeButton.addEventListener('click', this.removeOldDetails);
 
 		let ngssDescContainerText = this.#ngssDescContainer.querySelector(
 			'.reading-toggle-detail'
@@ -72,6 +83,7 @@ export default class ReadingToggles {
 
                 <div class="reading-toggle-detail__head">
                     <strong>Glossary Term</strong>
+                    ${this.#closeButton}
                 </div>
             
                 <div class="reading-toggle-detail__body">
@@ -96,6 +108,9 @@ export default class ReadingToggles {
         `;
 
 		this.#termDefContainer.insertAdjacentHTML('beforeend', termDefHTML);
+
+		let closeButton = this.#termDefContainer.querySelector('.button--icon-only');
+		closeButton.addEventListener('click', this.removeOldDetails);
 
 		let termDefContainerText = this.#termDefContainer.querySelector(
 			'.reading-toggle-detail'
