@@ -63,10 +63,6 @@ In this file:
     // In this module
 
     .module__tools {
-        border: var(--border-width) var(--border-style) var(--border-color);
-        border-radius: var(--border-radius);
-
-        padding: var(--spacer-1);
 
         .button-group {
             button:not([aria-selected="true"]) {
