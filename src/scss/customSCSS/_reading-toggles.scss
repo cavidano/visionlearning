@@ -118,7 +118,6 @@ In this file:
         }
     }
 
-
     mark.ngss.highlighted {
         position: relative;
         
@@ -224,31 +223,15 @@ In this file:
 
     // Reading Toggle
 
-    .module__tools {
-        // border: var(--border-width) var(--border-style) var(--border-color);
-        border-radius: var(--border-radius);
-
-        .tabs__panel{
-
-        // background-color: aqua;
-        padding: var(--spacer-2);
-        
-        }
-    }
-
     .reading-toggle {
 
         font-size: var(--font-size-md);
-
-        // &__description {
-        // }
 
         [class*="__switch"] {
             border-top: var(--border-width) var(--border-style) var(--border-color);
             margin-block: var(--spacer-2);
             label {
             font-size: var(--font-size-lg);
-                // outline: 3px solid red;
                 padding-block: var(--spacer-2);
             }        
         }
@@ -342,9 +325,8 @@ In this file:
     
         .reading-toggle__detail {
 
-        
             position: fixed;
-            top: 50px;
+            top: var(--spacer-3);
             left: 0;
             // bottom: 0;
             margin-inline: 20px;
