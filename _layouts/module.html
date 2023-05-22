@@ -94,9 +94,9 @@ layout: global
 
             {% if page.tab == 'reading' %}
 
-            <div class="order-1 order-2--lg">
+            <div class="order-1 order-2--lg module__tools">
 
-                <div class="module__tools position-sticky-top">
+                <div class="narrow margin-x-auto position-sticky-top">
 
 					<div class="tabs" role="tablist">
 
@@ -137,63 +137,61 @@ layout: global
 							aria-labelledby="tab-button-module__tools"
 							role="tabpanel">
 
-							<div class="padding-x-2 padding-y-3">
-							
-								<p class="opacity-70 margin-bottom-2">
-									<strong>
-										Table of Contents:
-									</strong>		
-								</p>
+							<p class="margin-y-2">
+								<strong>
+									<em>
+										Table of Contents
+									</em>
+								</strong>		
+							</p>
 
-								<div class="table-of-contents">
-									<ul>
-										<li>
-											<a href="{{ site.url }}/library/module/reading.html#toc_1">
-												Introduction
-											</a>
-										</li>
-										<li>
-											<a href="{{ site.url }}/library/module/reading.html#toc_1">
-												Evidence about Earth's interior
-											</a>
-										</li>
-										<li>
-											<a href="{{ site.url }}/library/module/reading.html#toc_2">
-												Seismic waves
-											</a>
-										</li>
-										<li>
-											<a href="{{ site.url }}/library/module/reading.html#toc_3">
-												The Moho
-											</a>
-										</li>
-										<li>
-											<a href="{{ site.url }}/library/module/reading.html#toc_4">
-												Shadow zones
-											</a>
-										</li>
-										<li>
-											<a href="{{ site.url }}/library/module/reading.html#toc_5">
-												The layers of Earth
-											</a>
-										</li>
-										<li>
-											<ul>
-												<li>
-													<a href="{{ site.url }}/library/module/reading.html#toc2_1">
-														Compositional layers
-													</a>
-												</li>
-												<li>
-													<a href="{{ site.url }}/library/module/reading.html#toc2_2">
-														Mechanical layers
-													</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
-
-								</div>
+							<div class="table-of-contents">
+								<ul>
+									<li>
+										<a href="{{ site.url }}/library/module/reading.html#toc_1">
+											Introduction
+										</a>
+									</li>
+									<li>
+										<a href="{{ site.url }}/library/module/reading.html#toc_1">
+											Evidence about Earth's interior
+										</a>
+									</li>
+									<li>
+										<a href="{{ site.url }}/library/module/reading.html#toc_2">
+											Seismic waves
+										</a>
+									</li>
+									<li>
+										<a href="{{ site.url }}/library/module/reading.html#toc_3">
+											The Moho
+										</a>
+									</li>
+									<li>
+										<a href="{{ site.url }}/library/module/reading.html#toc_4">
+											Shadow zones
+										</a>
+									</li>
+									<li>
+										<a href="{{ site.url }}/library/module/reading.html#toc_5">
+											The layers of Earth
+										</a>
+									</li>
+									<li>
+										<ul>
+											<li>
+												<a href="{{ site.url }}/library/module/reading.html#toc2_1">
+													Compositional layers
+												</a>
+											</li>
+											<li>
+												<a href="{{ site.url }}/library/module/reading.html#toc2_2">
+													Mechanical layers
+												</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
 
 							</div>
 
@@ -205,9 +203,17 @@ layout: global
 							aria-labelledby="tab-button-toggle-terms"
 							role="tabpanel">
 
-							<div class="padding-x-1 padding-y-2">
+							<div class="reading-toggle">
 
-								<div class="form-entry__option__switch margin-2">
+								<div class="reading-toggle__description">								
+									<p>
+										<em>
+											Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
+										</em>
+									</p>
+								</div>
+
+								<div class="form-entry__option__switch">
 
 									<label>
 										<input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch">
@@ -219,9 +225,9 @@ layout: global
 
 								</div>
 
-								<div class="term-def-container font-size-md"></div>
-
 							</div>
+							
+							<div class="term-def-container font-size-md"></div>
 
 						</div>
 
@@ -231,29 +237,31 @@ layout: global
 							aria-labelledby="tab-button-toggle-ngss"
 							role="tabpanel">
 
-							<div class="padding-y-3">
+							<div class="reading-toggle">
 
-								<div class="container">
-									
-									<div class="form-entry__option__switch">
+								<div class="reading-toggle__description">								
+									<p>
+										<em>
+											Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
+										</em>
+									</p>
+								</div>
 
-										<label>
-											<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
-											<span class="switch__slider"></span>
-											<span class="option__label text-decoration-none font-size-md">
-												Show NGSS Annotations
-											</span>
-										</label>
+								<div class="form-entry__option__switch">
 
-									</div>
+									<label>
+										<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
+										<span class="switch__slider"></span>
+										<span class="option__label text-decoration-none font-size-md">
+											Show NGSS Annotations
+										</span>
+									</label>
 
 								</div>
 
-								<hr class="divider">
-
-								<div class="ngss-desc-container font-size-md"></div>
-
 							</div>
+							
+							<div class="ngss-desc-container font-size-md"></div>
 
 						</div>
 
