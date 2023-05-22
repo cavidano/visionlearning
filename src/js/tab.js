@@ -50,6 +50,7 @@ export default class Tab {
 	// Init method
 	init() {
 		this.#tabsList.forEach((tab) => {
+		
 			const tabsButtonList = tab.querySelectorAll('[role="tab"]');
 			const tabsPanelList = tab.querySelectorAll('[role="tabpanel"]');
 

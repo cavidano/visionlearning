@@ -20,7 +20,7 @@ In this file:
 //////////////////////////////////////////////
 
 .module {
-    --grid-sidebar-width: 20em;
+    --grid-sidebar-width: 22em;
 }
 
 //////////////////////////////////////////////
@@ -29,38 +29,52 @@ In this file:
 
 @layer component {
 
-    .module__main {
-        container-type: inline-size;
-        container-name: module-main;
+    // Module Header
 
-        // background-color: bisque;
+    .module__header {
+        gap: var(--grid-divider-gap);
+        align-items: end;
     }
 
-    .module__main section,
-    .module__footer {
+    .module__header__title {
         position: relative;
+        
+        padding-block: var(--spacer-2);
 
-        // outline: 3px solid red;
+        text-align: center;
+
+        h1 {
+            font-weight: normal;
+        }
+
+        .subcategory,
+        .byline {
+            font-size: var(--font-size-sm);        
+        }
     }
 
-    .module__main section,
-    .module__footer {
-        margin-block: var(--spacer-5);
+    .module_header_audio {
+        display: flex;
     }
 
-    .module__main__tabs {
-        --shift: calc(var(--grid-divider-gap) * 0.5);
-
-        margin-block-start: calc(var(--shift) * -1);
-        margin-block-end: var(--grid-divider-gap);
-        margin-inline: auto;
-
-        max-width: var(--narrow-width);
-
-        font-size: var(--font-size-md);
+    @include breakpoint.breakpoint-down(lg) {
+        .module__header__tabs {
+            margin-inline: calc(var(--container-padding-x-sm) * -1);
+        }
     }
 
-    // In this module
+    @include breakpoint.breakpoint-up(lg) {
+        .module__header__tabs {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+
+            width: 100%;
+        }
+    }
+
+    // Module Tools
 
     .module__tools {
 
@@ -74,6 +88,32 @@ In this file:
                 color: white;
             }
         }
+    }
+
+    // Module Body
+
+    .module__main {
+        container-type: inline-size;
+        container-name: module-main;
+    }
+
+    .module__main section,
+    .module__footer {
+        margin-block: var(--spacer-4);
+    }
+
+    .module__header__tabs {
+        --shift: calc(var(--grid-divider-gap) * 0.5);
+
+        font-size: var(--font-size-md);
+        
+        margin-block-start: var(--shift);
+
+        ul {
+            max-width: var(--narrow-width);
+            margin-inline: auto;
+        }
+
     }
 
     // Citation

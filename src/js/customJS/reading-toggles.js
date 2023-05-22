@@ -19,7 +19,7 @@ export default class ReadingToggles {
 	`;
 
 	removeOldDetails = () => {
-		let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
+		let oldDetailList = document.querySelectorAll('.reading-toggle__detail');
 		if (oldDetailList.length > 0) {
 			oldDetailList.forEach((item) => {
 				item.remove();
@@ -36,17 +36,16 @@ export default class ReadingToggles {
 
 		const ngssDescHTML = `
             <article
-                class="reading-toggle-detail"
+                class="reading-toggle__detail"
                 aria-polite="live"
                 data-ngss-cat="${ngssCat}">
 
-                <div class="reading-toggle-detail__head">
+                <div class="reading-toggle__detail__head">
                     ${ngssCat}
                     ${this.#closeButton}
-
                 </div>
 
-                <div class="reading-toggle-detail__body">
+                <div class="reading-toggle__detail__body">
                     <p>
                         ${ngssCom ? ngssCom : ngssDesc}
                     </p>
@@ -61,7 +60,7 @@ export default class ReadingToggles {
 		closeButton.addEventListener('click', this.removeOldDetails);
 
 		let ngssDescContainerText = this.#ngssDescContainer.querySelector(
-			'.reading-toggle-detail'
+			'.reading-toggle__detail'
 		);
 		setTimeout(() => {
 			ngssDescContainerText.classList.add('shown');
@@ -77,20 +76,18 @@ export default class ReadingToggles {
 
 		const termDefHTML = `
             <article
-                class="reading-toggle-detail glossary-term"
+                class="reading-toggle__detail glossary-term"
                 aria-polite="live"
                 data-term-definition>
 
-                <div class="reading-toggle-detail__head">
-                    <strong>Glossary Term</strong>
-                    ${this.#closeButton}
-                </div>
-            
-                <div class="reading-toggle-detail__body">
-
+                <div class="reading-toggle__detail__head">
                     <h2 class="h6">
                         ${termTitle}
                     </h2>
+                    ${this.#closeButton}
+                </div>
+            
+                <div class="reading-toggle__detail__body">
                 
                     <p>
                         ${termDef ? termDef : 'That is not good.'}
@@ -113,7 +110,7 @@ export default class ReadingToggles {
 		closeButton.addEventListener('click', this.removeOldDetails);
 
 		let termDefContainerText = this.#termDefContainer.querySelector(
-			'.reading-toggle-detail'
+			'.reading-toggle__detail'
 		);
 		setTimeout(() => {
 			termDefContainerText.classList.add('shown');

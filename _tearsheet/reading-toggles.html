@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<title>NGSS • Tearsheet</title>
+		<title>Reading Toggles • Tearsheet</title>
 
 		<!-- Visionlearning Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning/dist/icons/visionlearning-icons.css">
@@ -17,54 +17,32 @@
 
 		<main id="skip-header-content">
 
-			<article class="wide margin-x-auto module">
+    		<article class="container wide module">
 
 				<header class="grid grid--sidebar-right module__header">
 
-					<div class="container medium text-align-center padding-y-2">
-
-						<span class="font-size-sm">
+					<div class="module__header__title">
+					
+						<span class="subcategory">
 							<strong>
 								<em>Plate Tectonics</em>
 							</strong>
 						</span>
 
-						<h1 class="font-weight-normal">
+						<h1>
 							Earth Structure:
 							<sub>
 								<em>
 									A Virtual Journey to the Center of Earth
 								</em>
 							</sub>
-
 						</h1>
 
-						<p class="font-size-sm">
+						<p class="byline">
 							by Anne E. Egger, Ph.D.
 						</p>
 
-					</div>
-
-					<div class="flex-column justify-content-end">
-
-						<audio class="display-inline-block width-100" controls="" src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3">
-							Your browser does not support the
-							<code>audio</code>
-							element.
-						</audio>
-
-					</div>
-
-
-				</header>
-
-				<hr class="divider">
-
-				<div class="grid grid--sidebar-right grid--divider">
-
-					<div class="order-2 order-1--lg module__main">
-
-						<nav class="module__main__tabs">
+						<nav class="module__header__tabs">
 
 							<ul class="tabs-nav tabs-nav--horizontal library">
 								<li>
@@ -86,9 +64,29 @@
 
 						</nav>
 
-						<div class="container narrow margin-y-5">
+					</div>
 
-							<div class="accordion margin-bottom-5">
+					<div class="module_header_audio">
+
+						<audio class="display-inline-block width-100" controls="" src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3">
+							Your browser does not support the
+							<code>audio</code>
+							element.
+						</audio>
+
+					</div>
+
+				</header>
+
+				<hr class="divider" />
+
+				<div class="grid grid--sidebar-right grid--divider">
+
+					<div class="order-2 order-1--lg module__main">
+
+						<div class="container narrow margin-y-3 margin-y-5--lg">
+
+							<div class="accordion margin-x-n2">
 
 								<button class="accordion__button" id="acc-button-key-concepts" data-accordion="button" aria-controls="acc-panel-key-concepts" aria-expanded="true" tabindex="0">
 									Did you know?
@@ -699,7 +697,7 @@
 
 					<div class="order-1 order-2--lg">
 
-						<div class="module__tools position-sticky-top">
+						<div class="module__tools narrow margin-x-auto position-sticky-top">
 
 							<div class="tabs" role="tablist">
 
@@ -717,7 +715,7 @@
 									<button
 										class="button button--has-icon flex-grow-1"
 										aria-controls="tab-panel-toggle-terms"
-										aria-selected="true"
+										aria-selected="false"
 										role="tab">
 											<span class="icon icon-glossary-highlight"></span>
 											<span class="button__text">Glossary</span>
@@ -736,67 +734,65 @@
 
 								<div class="tabs__panel" id="tab-panel-module__tools" aria-labelledby="tab-button-module__tools" role="tabpanel" hidden="">
 
-									<div class="padding-x-2 padding-y-3">
+									<p class="opacity-70 margin-bottom-2">
+										<strong>
+											Table of Contents:
+										</strong>
+									</p>
 
-										<p class="opacity-70 margin-bottom-2">
-											<strong>
-												Table of Contents:
-											</strong>
-										</p>
-
-										<div class="table-of-contents">
-											<ul>
-												<li>
-													<a href="http://localhost:4001/library/module/reading.html#toc_1">
-														Introduction
-													</a>
-												</li>
-												<li>
-													<a href="http://localhost:4001/library/module/reading.html#toc_1">
-														Evidence about Earth's interior
-													</a>
-												</li>
-												<li>
-													<a href="http://localhost:4001/library/module/reading.html#toc_2">
-														Seismic waves
-													</a>
-												</li>
-												<li>
-													<a href="http://localhost:4001/library/module/reading.html#toc_3">
-														The Moho
-													</a>
-												</li>
-												<li>
-													<a href="http://localhost:4001/library/module/reading.html#toc_4">
-														Shadow zones
-													</a>
-												</li>
-												<li>
-													<a href="http://localhost:4001/library/module/reading.html#toc_5">
-														The layers of Earth
-													</a>
-												</li>
-												<li>
-													<ul>
-														<li><a href="http://localhost:4001/library/module/reading.html#toc2_1">Compositional layers</a></li>
-														<li><a href="http://localhost:4001/library/module/reading.html#toc2_2">Mechanical layers</a></li>
-													</ul>
-												</li>
-											</ul>
-
-										</div>
+									<div class="table-of-contents">
+										<ul>
+											<li>
+												<a href="http://localhost:4001/library/module/reading.html#toc_1">
+													Introduction
+												</a>
+											</li>
+											<li>
+												<a href="http://localhost:4001/library/module/reading.html#toc_1">
+													Evidence about Earth's interior
+												</a>
+											</li>
+											<li>
+												<a href="http://localhost:4001/library/module/reading.html#toc_2">
+													Seismic waves
+												</a>
+											</li>
+											<li>
+												<a href="http://localhost:4001/library/module/reading.html#toc_3">
+													The Moho
+												</a>
+											</li>
+											<li>
+												<a href="http://localhost:4001/library/module/reading.html#toc_4">
+													Shadow zones
+												</a>
+											</li>
+											<li>
+												<a href="http://localhost:4001/library/module/reading.html#toc_5">
+													The layers of Earth
+												</a>
+											</li>
+											<li>
+												<ul>
+													<li><a href="http://localhost:4001/library/module/reading.html#toc2_1">Compositional layers</a></li>
+													<li><a href="http://localhost:4001/library/module/reading.html#toc2_2">Mechanical layers</a></li>
+												</ul>
+											</li>
+										</ul>
 
 									</div>
 
 								</div>
 
-								<div class="tabs__panel shown" id="tab-panel-toggle-terms" aria-labelledby="tab-button-toggle-terms" role="tabpanel">
+								<div class="tabs__panel" id="tab-panel-toggle-terms" aria-labelledby="tab-button-toggle-terms" role="tabpanel">
 
-									<div class="margin-2">
+									<div class="reading-toggle">
 
-										<div class="font-size-md">											
+										<div class="reading-toggle__description">								
 											<p>
-												Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
+												<em>
+													Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
+												</em>
 											</p>
 										</div>
 
@@ -812,23 +808,25 @@
 
 										</div>
 
-										<div class="term-def-container font-size-md"></div>
-
 									</div>
+									
+									<div class="term-def-container font-size-md"></div>
 
 								</div>
 
 								<div class="tabs__panel" id="tab-panel-toggle-ngss" aria-labelledby="tab-button-toggle-ngss" role="tabpanel" hidden="">
+					
+									<div class="reading-toggle">
 
-									<div class="margin-2">
-
-										<div class="font-size-md">											
+										<div class="reading-toggle__description">								
 											<p>
-												Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view their definitions directly in the text.
+												<em>
+													Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
+												</em>
 											</p>
 										</div>
 
-										<div class="form-entry__option__switch border padding-2 border-radius margin-y-2">
+										<div class="form-entry__option__switch">
 
 											<label>
 												<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
@@ -840,9 +838,9 @@
 
 										</div>
 
-										<div class="ngss-desc-container font-size-md"></div>
-
 									</div>
+									
+									<div class="ngss-desc-container font-size-md"></div>
 
 								</div>
 
