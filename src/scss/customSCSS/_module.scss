@@ -69,6 +69,7 @@ In this file:
             top: 100%;
             left: 0;
             right: 0;
+            z-index: 10000;
 
             width: 100%;
         }
@@ -99,6 +100,7 @@ In this file:
     .module__main {
         container-type: inline-size;
         container-name: module-main;
+        padding-top: var(--spacer-4);
     }
 
     .module__main section,
