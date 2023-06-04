@@ -55,6 +55,14 @@ In this file:
         outline-offset: var(--focus-outline-distance);
     }
 
+    &[class*="backdrop"]:focus-visible {
+          position: relative;
+          z-index: 1;
+
+        > * {
+            z-index: -1;
+        }
+    }
 }
 
 @layer base {
@@ -64,7 +72,7 @@ In this file:
 
         @extend %hover-focus;
         
-        &.button{
+        &.button {
             --focus-outline-distance: calc(var(--focus-outline-size) * -2);
         }
         
@@ -110,21 +118,15 @@ In this file:
 
         display: inline-block;
 
+        font-size: var(--font-size-sm);
+        
+        color: var(--link-color);
+
         text-decoration: none !important;
-
-
 
         padding: 0.5em 1em;
 
         margin: 0.5em;
-
-        font-size: var(--font-size-sm);
-        
-        color: var(--link-color);
-        
-        // background-color: rgba( white, 0.95);
-        
-        // box-shadow: 0 0 0.25rem currentColor;
         
     }
 
