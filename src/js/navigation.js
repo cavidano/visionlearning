@@ -1,20 +1,14 @@
-//////////////////////////////////////////////
-// Navigation
-//////////////////////////////////////////////
-
 export default class Navigation {
 
+    // Private properties
+    
     #dropdownButtonList = document.querySelectorAll('[data-toggle="dropdown"]');
+
+    // Private methods
 
     #toggleDropdown(dropdownButton, dropdownMenu) {
         dropdownMenu.classList.toggle('shown');
-        let expanded = dropdownButton.getAttribute('aria-expanded');
-
-        if (expanded === 'true') {
-            dropdownButton.setAttribute('aria-expanded', 'false');
-        } else if (expanded === 'false') {
-            dropdownButton.setAttribute('aria-expanded', 'true');
-        }
+        dropdownButton.setAttribute('aria-expanded', dropdownButton.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
     }
 
     #closeDropdown(dropdownButton, dropdownMenu) {
@@ -22,15 +16,10 @@ export default class Navigation {
         dropdownButton.setAttribute('aria-expanded', 'false');
     }
 
-    init() {
-	
-        // Check if there are dropdown buttons
-        if (!this.#dropdownButtonList) {
-            console.warn('No dropdown buttons found');
-            return;
-        }
+    // Public methods
 
-        // Single click listener for window
+    init() {
+
         window.addEventListener('click', (event) => {
             this.#dropdownButtonList.forEach((dropdownButton) => {
                 let dropdownButtonParent = dropdownButton.closest('li');
@@ -46,7 +35,6 @@ export default class Navigation {
         this.#dropdownButtonList.forEach((dropdownButton) => {
             let dropdownMenu = dropdownButton.nextElementSibling;
 
-            // Check if dropdown button has corresponding dropdown menu
             if (!dropdownMenu) {
                 console.warn(`No dropdown menu found for dropdown button ${dropdownButton}`);
                 return;
@@ -55,7 +43,6 @@ export default class Navigation {
             dropdownButton.setAttribute('aria-expanded', 'false');
             dropdownButton.setAttribute('aria-haspopup', 'true');
 
-            // Handle click event on the dropdown button
             dropdownButton.addEventListener('click', (event) => {
                 event.preventDefault();
                 this.#toggleDropdown(dropdownButton, dropdownMenu);

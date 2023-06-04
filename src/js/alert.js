@@ -1,40 +1,45 @@
-//////////////////////////////////////////////
-// Alert
-//////////////////////////////////////////////
+export default class AlertDismissable {
 
-export default class Alert {
+  // Private properties
+  
+  #alertDismissableList = document.querySelectorAll('.alert--dismissable');
 
-    #alertDismissableList = document.querySelectorAll('.alert--dismissable');
+  #closeButtonHTML = `
+    <button class="button button--icon-only">
+        <span class="icon icon-close" aria-label="Close" aria-hidden="true">
+    </button>
+  `;
 
-    #closeButtonHTML = `
-        <button class="button button--icon-only">
-            <span class="icon icon-close" aria-label="Close" aria-hidden="true">
-        </button>
-    `;
+  // Private methods
 
-    closeAlert(event, alertDismissable) {
-        event.preventDefault();
+  #handleAlertClose = (alertDismissable) => {
+    return (event) => {
 
-        alertDismissable.classList.add('dismissed');
+      event.preventDefault();
+    
+      alertDismissable.classList.add('dismissed');
 
-        const dismissed = document.querySelector('.dismissed');
+      const dismissed = document.querySelector('.dismissed');
 
-        dismissed.addEventListener('animationend', () => {
-            alertDismissable.remove();
-        });
+      dismissed.addEventListener('animationend', () => {
+        alertDismissable.remove();
+      });
     }
+  }
 
-    init() {
-        this.#alertDismissableList.forEach((alertDismissable) => {
+  // Public methods
 
-            alertDismissable.insertAdjacentHTML('afterbegin', this.#closeButtonHTML);
+  init() {
+    
+    this.#alertDismissableList.forEach((alertDismissable) => {
+          
+        alertDismissable.insertAdjacentHTML('afterbegin', this.#closeButtonHTML);
 
-            const alertCloseButton = alertDismissable.querySelector('button');
+        const alertCloseButton = alertDismissable.querySelector('button');
 
-            alertCloseButton.addEventListener('click', (event) => {
-                this.closeAlert(event, alertDismissable);
-            });
+        alertCloseButton.addEventListener('click', this.#handleAlertClose(alertDismissable));
 
-        });
-    }
+    });
+    
+  }
 }

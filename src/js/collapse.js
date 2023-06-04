@@ -1,103 +1,87 @@
-//////////////////////////////////////////////
-// Collapse
-//////////////////////////////////////////////
-
 import { getFocusableElements } from './utilities/focus';
 
 export default class Collapse {
 
-	#collapseButtonList = document.querySelectorAll('[data-target-toggle]');
+  // Private properties
 
-	handleClose(button, target) {
-		button.setAttribute('aria-expanded', false);
-		target.classList.remove('shown');
-	}
+  #collapseButtonList  = document.querySelectorAll('[data-target-toggle]');
 
-	handleOpen(button, target, focusFirst) {
-		button.setAttribute('aria-expanded', true);
-		target.classList.add('shown');
-		if (focusFirst) {
-			focusFirst.focus();
-		}
-	}
+  // Private methods
+  
+  #handleCollapseClose(button, target) {
+    button.setAttribute('aria-expanded', false);
+    target.classList.remove('shown');
+  }
 
-	toggleCollapse(event, collapseButton) {
-		const collapseTargetID = event.target
-			.getAttribute('data-target-toggle')
-			.replace(/#/, '');
-            
-		const collapseTarget = document.getElementById(collapseTargetID);
+  #handleCollapseOpen(button, target, focusFirst) {
+    button.setAttribute('aria-expanded', true);
+    target.classList.add('shown');
+    if (focusFirst) {
+      focusFirst.focus();
+    }
+  }
 
-		const focusableElements = getFocusableElements(collapseTarget);
-		const firstFocusableElement = focusableElements[0];
+  #handleKeyDown(collapseButton, collapseTarget, firstFocusableElement) {
+    return (event) => {
+      switch (event.code) {
+        case 'Tab':
+          if (document.activeElement === firstFocusableElement && event.shiftKey) {
+            event.preventDefault();
+            collapseButton.focus();
+          }
+          break;
+        case 'Escape':
+          this.#handleCollapseClose(collapseButton, collapseTarget);
+          break;
+        default:
+          // do nothing
+      }
+    };
+  }
 
-		const isExpanded = collapseButton.getAttribute('aria-expanded');
+  #toggleCollapse(event, collapseButton) {
+    const collapseTargetID = event.target.getAttribute('data-target-toggle').replace(/#/, '');
+    const collapseTarget = document.getElementById(collapseTargetID);
+    const focusableElements = getFocusableElements(collapseTarget);
+    const firstFocusableElement = focusableElements[0];
+    const isExpanded = collapseButton.getAttribute('aria-expanded');
 
-		if (isExpanded === 'true') {
-			this.handleClose(collapseButton, collapseTarget);
-		} else if (isExpanded === 'false') {
-			this.handleOpen(
-				collapseButton,
-				collapseTarget,
-				collapseTarget.hasAttribute('data-focus-first')
-					? firstFocusableElement
-					: null
-			);
-		}
+    if (isExpanded === 'true') {
+      this.#handleCollapseClose(collapseButton, collapseTarget);
+    } else if (isExpanded === 'false') {
+      this.#handleCollapseOpen(
+        collapseButton,
+        collapseTarget,
+        collapseTarget.hasAttribute('data-focus-first') ? firstFocusableElement : null
+      );
+    }
 
-		return { collapseTarget, firstFocusableElement };
-	}
+    collapseTarget.addEventListener('keydown', this.#handleKeyDown(collapseButton, collapseTarget, firstFocusableElement));
+  }
 
-	handleKeyDown(event, collapseButton, collapseTarget, firstFocusableElement) {
-		switch (event.code) {
-			case 'Tab':
-				if (
-					document.activeElement === firstFocusableElement &&
-					event.shiftKey
-				) {
-					event.preventDefault();
-					collapseButton.focus();
-				}
-				break;
-			case 'Escape':
-				this.handleClose(collapseButton, collapseTarget);
-				break;
-			default:
-			// do nothing
-		}
-	}
+  // Public methods
 
-	init() {
-		this.#collapseButtonList.forEach((collapseButton) => {
-			collapseButton.setAttribute('aria-expanded', false);
+  init() {
 
-			collapseButton.addEventListener('click', (event) => {
-				const { collapseTarget, firstFocusableElement } = this.toggleCollapse(
-					event,
-					collapseButton
-				);
+    this.#collapseButtonList.forEach((collapseButton) => {
 
-				collapseTarget.addEventListener('keydown', (event) => {
-					this.handleKeyDown(
-						event,
-						collapseButton,
-						collapseTarget,
-						firstFocusableElement
-					);
-				});
+      collapseButton.setAttribute('aria-expanded', false);
 
-				if (collapseButton.hasAttribute('data-target-close')) {
-					const closeTargetID = event.target
-						.getAttribute('data-target-close')
-						.replace(/#/, '');
-					const closeTarget = document.getElementById(closeTargetID);
-					const closeTargetButton = document.querySelector(
-						`[data-target-toggle="#${closeTargetID}"]`
-					);
+      collapseButton.addEventListener('click', (event) => {
+      
+        this.#toggleCollapse(event, collapseButton);
 
-					this.handleClose(closeTargetButton, closeTarget);
-				}
-			});
-		});
-	}
+        if (collapseButton.hasAttribute('data-target-close')) {
+          const closeTargetID = event.target.getAttribute('data-target-close').replace(/#/, '');
+          const closeTarget = document.getElementById(closeTargetID);
+          const closeTargetButton = document.querySelector(`[data-target-toggle="#${closeTargetID}"]`);
+
+          this.#handleCollapseClose(closeTargetButton, closeTarget);
+        }
+
+      });
+
+    });
+
+  }
 }

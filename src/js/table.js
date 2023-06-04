@@ -1,13 +1,13 @@
-//////////////////////////////////////////////
-// Table
-//////////////////////////////////////////////
-
 export default class Table {
+
+	// Private properties
 
 	#tableStackList = document.querySelectorAll('[class*="table--stack"]');
 	#tableScrollList = document.querySelectorAll('.table-scroll');
 
-	populateHeaders(tableStack) {
+	// Private methods
+
+	#populateHeaders(tableStack) {
 		const tableHeaderList = tableStack.querySelectorAll('thead th');
 		const tableRowList = tableStack.querySelectorAll('tbody tr');
 		let headers = [];
@@ -23,25 +23,23 @@ export default class Table {
 			const tableDataList = tableRow.querySelectorAll('td');
 
 			tableDataList.forEach((tableData, index) => {
-				let tableDataHTML = tableData.innerHTML;
-
-				let myNewContent = `
-                    <div class="td-content">
-                        ${tableDataHTML}
-                    </div>
-                `;
-
-				tableData.innerHTML = myNewContent;
+				tableData.innerHTML = this.#createNewTableDataContent(tableData.innerHTML);
 				tableData.setAttribute('data-header', headers[index]);
 			});
 		});
 	}
 
-	initTableScroll() {
+	#createNewTableDataContent(oldContent) {
+		return `
+			<div class="td-content">
+				${oldContent}
+			</div>
+		`;
+	}
+
+	#handleTableScroll() {
 		this.#tableScrollList.forEach((scrollElement) => {
-			let scrollTarget = scrollElement.querySelector(
-				'.table-scroll__container'
-			);
+			let scrollTarget = scrollElement.querySelector('.table-scroll__container');
 			let maxWidth = scrollElement.offsetWidth;
 			let scrollWidth = scrollTarget.scrollWidth;
 
@@ -62,12 +60,15 @@ export default class Table {
 		});
 	}
 
+	// Public methods
+
 	init() {
+	
 		this.#tableStackList.forEach((tableStack) => {
-			this.populateHeaders(tableStack);
+			this.#populateHeaders(tableStack);
 		});
 
-		this.initTableScroll();
-		window.addEventListener('resize', () => this.initTableScroll());
+		this.#handleTableScroll();
+		window.addEventListener('resize', this.#handleTableScroll.bind(this));
 	}
 }

@@ -1,7 +1,3 @@
-//////////////////////////////////////////////
-// Reading Toggles
-//////////////////////////////////////////////
-
 export default class ReadingToggles {
 
 	#ngssToggleSwitch = document.getElementById('ngss-toggle-switch');

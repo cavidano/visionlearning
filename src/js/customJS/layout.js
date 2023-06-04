@@ -1,9 +1,5 @@
 import { matchMedia } from '../utilities';
 
-//////////////////////////////////////////////
-// Grid
-//////////////////////////////////////////////
-
 export default class Layout {
 
     #discList = document.querySelectorAll('.grid--discipline .backdrop');

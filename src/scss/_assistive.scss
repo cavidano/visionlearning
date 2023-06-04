@@ -9,6 +9,12 @@ In this file:
 */
 
 ////////////////////////////////////////
+// A. Modules
+////////////////////////////////////////
+
+@use './accent';
+
+////////////////////////////////////////
 // A. Variables
 ////////////////////////////////////////
 
@@ -77,7 +83,6 @@ In this file:
 
     // Shared Utilities
 
-    .focusable-only, 
     .screen-reader-only {
         position: absolute;
     }
@@ -103,20 +108,24 @@ In this file:
             @extend .screen-reader-only;
         }
 
-        inset-block-start: var(--spacer-1);
-        inset-inline-start: var(--spacer-1);
+        display: inline-block;
 
-        padding: var(--button-padding-y) var(--button-padding-x);
+        text-decoration: none !important;
+
+
+
+        padding: 0.5em 1em;
+
+        margin: 0.5em;
 
         font-size: var(--font-size-sm);
         
-        color: var(--dark);
+        color: var(--link-color);
         
-        background-color: rgba( white, 0.95);
+        // background-color: rgba( white, 0.95);
         
-        box-shadow: 0 0 0.25rem currentColor;
+        // box-shadow: 0 0 0.25rem currentColor;
         
-        z-index: 12000;
     }
 
     .no-hover-focus {

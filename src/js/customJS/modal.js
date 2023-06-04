@@ -1,9 +1,5 @@
 import { getFocusableElements, getOffsetTop } from '../utilities';
 
-//////////////////////////////////////////////
-// Modal
-//////////////////////////////////////////////
-
 export default class Modal {
 
   #modalList = document.querySelectorAll('.modal');
