@@ -1,8 +1,8 @@
 @font-face {
     font-family: "visionlearning-icons";
-    src: url("./visionlearning-icons.ttf?44f39bb7631c73b0e6dfe334a34426ae") format("truetype"),
-url("./visionlearning-icons.woff2?44f39bb7631c73b0e6dfe334a34426ae") format("woff2"),
-url("./visionlearning-icons.woff?44f39bb7631c73b0e6dfe334a34426ae") format("woff");
+    src: url("./visionlearning-icons.ttf?5a08491ce923c1d88eede18209285d90") format("truetype"),
+url("./visionlearning-icons.woff2?5a08491ce923c1d88eede18209285d90") format("woff2"),
+url("./visionlearning-icons.woff?5a08491ce923c1d88eede18209285d90") format("woff");
 }
 
 .icon:before {
@@ -322,9 +322,15 @@ url("./visionlearning-icons.woff?44f39bb7631c73b0e6dfe334a34426ae") format("woff
 .icon.icon-clear:before {
     content: "\f166";
 }
-.icon.icon-sign-in:before {
+.icon.icon-interactive-animations:before {
     content: "\f167";
 }
-.icon.icon-sign-out:before {
+.icon.icon-science-research:before {
     content: "\f168";
+}
+.icon.icon-sign-in:before {
+    content: "\f169";
+}
+.icon.icon-sign-out:before {
+    content: "\f16a";
 }

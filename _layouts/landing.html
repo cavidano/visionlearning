@@ -100,8 +100,6 @@ discipline_links:
                                             autocomplete="off"
                                         />
                                         <div class="button-group">
-                                        
-                                        
                                         <button
                                             class="button button--icon-only theme-light border-radius-circle margin-1"
                                             type="submit"  
@@ -122,7 +120,7 @@ discipline_links:
                             <nav>
                                 
                                 {% if page.title contains 'Library' %}
-                                
+
                                 <ul
                                     class="tabs-nav {{ class_name }} border border-radius"
                                     id="material-nav"
@@ -137,7 +135,9 @@ discipline_links:
                                                 Highlights
                                         </a>
                                     </li>
-                                        
+                                    
+                                    <!-- Russ D., We seem to be missing the 'All Disciplines' link on the beta -->
+                                    
                                     <li>
                                         <a
                                             href="{{ site.url }}/library/all-disciplines.html"
@@ -156,17 +156,17 @@ discipline_links:
 
                                 <hr class="divider" />
 
-                                <div class="grid gap-1">
-                                
-                                    <a
-                                        class="button text-color-link width-100"
-                                        href="{{ site.url }}/library/interactive-animations.html">
-                                        <span class="button__text">Interactive Animations</span>
+                                <div class="grid gap-1 font-size-sm">
+
+                                    <a class="button 👉 button--has-icon text-color-link width-100" href="#1">
+                                        <span class="icon icon-interactive-animations"></span>
+                                        <span class="button__text">Interactive Animations?</span>
                                     </a>
                                 
                                     <a
-                                        class="button text-color-link width-100"
+                                        class="button 👉 button--has-icon text-color-link width-100"
                                         href="{{ site.url }}/library/research-videos.html">
+                                        <span class="icon icon-science-research"></span>
                                         <span class="button__text">Research Videos</span>
                                     </a>
 

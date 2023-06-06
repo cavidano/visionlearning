@@ -18,4 +18,4 @@ http://127.0.0.1:4001
 
 3.) Run fantasticon (from ./src/icons)
 
-`fantasticon ./optimized-svg ../../dist/icons`
+`fantasticon ./optimized-svg -o ../../dist/icons`
