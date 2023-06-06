@@ -1,12 +1,3 @@
-/*
-
-In this file:
-
-// A. SCSS
-// B. JS
-
-*/
-
 //////////////////////////////////////////////
 // A. SCSS
 //////////////////////////////////////////////
@@ -14,69 +5,83 @@ In this file:
 import './scss/styles.scss';
 
 //////////////////////////////////////////////
-// B. JS Modules
+// B. JS
 //////////////////////////////////////////////
 
-import Alert from './js/alert';
-const alert = new Alert();
-alert.init();
+// Natura11y JS Modules
 
+import AlertDismissable from './js/alert';
 import Button from './js/button';
-const button = new Button();
-button.init();
-
-import Collapse from './js/collapse'
-const collapse = new Collapse();
-collapse.init();
-
-import Form from './js/form';
-const form = new Form();
-form.init();
-
+import Collapse from './js/collapse';
+import FormInput, { FormSubmission, FormFileUpload } from './js/form';
 import Lightbox from './js/lightbox';
-const lightbox = new Lightbox();
-lightbox.init();
-
 import Navigation from './js/navigation';
-const navigation = new Navigation();
-navigation.init();
-
 import Table from './js/table';
-const table = new Table();
-table.init();
-
 import Tab from './js/tab';
-const tab = new Tab();
-tab.init();
 
-//////////////////////////////////////////////
-// C. Custom JS Modules
-//////////////////////////////////////////////
+// Custom JS Modules
 
 import Accordion from './js/customJS/accordion';
-const accordion = new Accordion();
-accordion.init();
-
 import { AnchorNav } from './js/customJS/table-of-contents';
-const anchorNav = new AnchorNav();
-anchorNav.init();
-
 import { CompCheck } from './js/customJS/quiz'; 
-const compCheck = new CompCheck();
-compCheck.init();
-
 import Layout from './js/customJS/layout'; 
-const layout = new Layout();
-layout.init();
-
 import Modal from './js/customJS/modal';
-const modal = new Modal();
-modal.init();
-
 import ReadingToggles from './js/customJS/reading-toggles';
-const readingToggles = new ReadingToggles();
-readingToggles.init();
 
-import Search from './js/customJS/search';
-const search = new Search();
-search.init();
+//////////////////////////////////////////////
+// C. Class Instantiation
+//////////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const alertDismissable = new AlertDismissable();
+    alertDismissable.init();
+
+    const button = new Button();
+    button.init();
+
+    const collapse = new Collapse();
+    collapse.init();
+
+    const formInput = new FormInput();
+    formInput.init();
+
+    const formSubmission = new FormSubmission();
+    formSubmission.init();
+
+    const formFileUpload = new FormFileUpload();
+    formFileUpload.init();
+
+    const lightbox = new Lightbox();
+    lightbox.init();
+
+    const navigation = new Navigation();
+    navigation.init();
+
+    const table = new Table();
+    table.init();
+
+    const tab = new Tab();
+    tab.init();
+
+    const accordion = new Accordion();
+    accordion.init();
+
+    // Custom JS Modules
+
+    const anchorNav = new AnchorNav();
+    anchorNav.init();
+
+    const compCheck = new CompCheck();
+    compCheck.init();
+
+    const layout = new Layout();
+    layout.init();
+
+    const modal = new Modal();
+    modal.init();
+
+    const readingToggles = new ReadingToggles();
+    readingToggles.init();
+
+});

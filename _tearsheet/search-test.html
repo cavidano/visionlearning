@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .clearable {
+            width: 200px;
+            height: 25px;
+        }
+
+        .clear-btn {
+            display: none;
+            cursor: pointer;
+        }
+
+        .clearable-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Suppress the default clear button in IE and Chrome */
+        .clearable::-ms-clear {
+            display: none;
+        }
+
+        .clearable::-webkit-search-decoration,
+        .clearable::-webkit-search-cancel-button,
+        .clearable::-webkit-search-results-button,
+        .clearable::-webkit-search-results-decoration {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="clearable-wrapper">
+        <input type="text" class="clearable">
+        <span class="clear-btn">X</span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var clearableElements = document.querySelectorAll('.clearable');
+            clearableElements.forEach(function(input) {
+                var clearBtn = input.nextElementSibling;
+
+                clearBtn.addEventListener('click', function() {
+                    input.value = '';
+                    clearBtn.style.display = 'none';
+                });
+
+                input.addEventListener('input', function() {
+                    clearBtn.style.display = input.value ? 'inline' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

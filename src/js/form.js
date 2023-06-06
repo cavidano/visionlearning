@@ -22,6 +22,19 @@ export default class FormInput {
     #invalidClasses = ['is-invalid'];
     #formSubmitAttempted = false;
 
+    // #clearableInputList = document.querySelectorAll('[data-clearable-input]');
+
+    // #clearInputButtonHTML = (`
+    //     <button
+    //         class="form-entry__field__input__clear"
+    //         id="search-clear"
+    //         aria-hidden="true"
+    //         data-clear-btn
+    //     >
+    //         <span class="icon icon-close" aria-hidden="true"></span>
+    //     </button>
+    // `)
+
     // Private methods
 
     #isEmpty(value = null) {
@@ -136,9 +149,41 @@ export default class FormInput {
     // Public methods
 
     init() {
+
         this.#formEntryList.forEach((formEntry) =>
             this.#handleFormInputs(formEntry)
         );
+
+        // this.#clearableInputList.forEach((clearableInput) => {
+        
+        //     clearableInput.parentNode.style.backgroundColor = 'pink';
+
+        //     const clearBtn = this.#clearInputButtonHTML
+            
+        //     clearBtn.insertAdjacentHTML('afterend', this.#clearInputButton);
+
+        //     console.log(clearBtn);
+
+        //     clearableInput.addEventListener('input', () => {
+        //         console.log('input');
+        //     });
+
+        //     // const clearBtn = clearableInput.parentNode.querySelector('[data-clear-btn]');
+
+        //         // clearBtn.style.display = clearableInput.value ? 'inline' : 'none';
+
+        //     // clearBtn.addEventListener('click', function(e) {
+        //     //     e.preventDefault();
+        //     //     input.value = '';
+        //     //     clearBtn.style.display = 'none';
+        //     // });
+
+        //     // clearableInput.addEventListener('input', function() {
+        //     //     clearBtn.style.display = clearableInput.value ? 'inline' : 'none';
+        //     // });
+        
+        // });
+
     }
 }
 

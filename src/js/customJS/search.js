@@ -1,6 +1,7 @@
 import { highlightMatchedWord } from '../utilities';
 
 export default class Search {
+
 	#searchInput = document.querySelector('#search-input');
 	#clearButton = document.querySelector('#search-clear');
 	
@@ -32,6 +33,7 @@ export default class Search {
     }
 
 	init() {
+
 		if (this.#searchInput) {
 
 			if (this.#searchInput.value) {
@@ -45,5 +47,6 @@ export default class Search {
 			this.#clearButton.addEventListener('click', this.#handleClearButtonClick);
             this.#searchInput.addEventListener('keydown', this.#handleFormSubmit);
 		}
+		
 	}
 }
