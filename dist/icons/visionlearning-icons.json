@@ -102,7 +102,9 @@
    "car": 61797,
    "clear": 61798,
    "interactive-animations": 61799,
-   "science-research": 61800,
-   "sign-in": 61801,
-   "sign-out": 61802
+   "pause": 61800,
+   "play": 61801,
+   "science-research": 61802,
+   "sign-in": 61803,
+   "sign-out": 61804
 }

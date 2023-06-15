@@ -19,20 +19,40 @@
 
 			<div class="margin-y-5">
 
-                <div id="audio-player">
+            <div class="container narrow">
+            
+                <div class="audio-player" id="module-audio">
+
                     <audio id="audio">
                         <source src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                     </audio>
-                    <div id="controls">
-                        <button id="play-pause-button">Play</button>
-                        <div id="progress-bar">
+
+                    <div class="audio-player__controls" id="controls">
+
+                        <button class="button button--icon-only" aria-label="Play" id="play-pause-button">
+                            <span class="icon icon-play" aria-hidden="true"></span>
+                        </button>
+
+                        <div
+                            class="audio-player__progress"
+                            id="progress-bar">
                             <div id="progress"></div>
                         </div>
-                        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                        <input
+                            type="range"
+                            class="audio-player__progress"
+                            id="volume-slider"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="1"
+                        />
                         <span id="timestamp">00:00</span>
                     </div>
                 </div>
+            </div>
+
 
 			</div>
 
@@ -74,7 +94,6 @@
                 audio.currentTime = (progressPercentage / 100) * audio.duration;
             });
 
-                
         </script>
 
     </body>
