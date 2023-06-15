@@ -56,7 +56,6 @@ In this file:
 
     // Form
 
-
     --form-field-border-color: var(--border-color);
 }
 
@@ -103,14 +102,3 @@ hr.divider {
 
     color: var(--link-color);
 }
-
-.cool {
-     position: fixed;
-     top: 0;
-     left: 0;
-}
-
-/* Suppress the default clear button in IE and Chrome */
-// ::-ms-clear {
-//     display: none !important;
-// }

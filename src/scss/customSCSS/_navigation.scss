@@ -379,14 +379,20 @@ In this file:
         }
     }
 
-    .course-modules__nav {
-        @extend .nav;
+    // Course Modules
 
-        padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
+    // .course-modules__nav {
+    //     @extend .nav;
 
-        a { 
-            color: var(--default-link-color)
-        };
-    }
+    //     padding: var(--nav-divider-padding-y) var(--nav-divider-padding-x);
+
+    //     a { 
+    //         color: var(--default-link-color)
+    //     };
+    // }
+
+    // Tabs
+
+
 
 } // end @layer

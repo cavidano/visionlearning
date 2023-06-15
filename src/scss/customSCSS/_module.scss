@@ -80,6 +80,7 @@ In this file:
     .module__tools {
 
         .button-group {
+
             button:not([aria-selected="true"]) {
                 color: var(--link-color);
             }
