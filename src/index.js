@@ -21,6 +21,8 @@ import Tab from './js/tab';
 
 // Custom JS Modules
 
+import AudioPlayer from './js/customJS/audio-player';
+
 import Accordion from './js/customJS/accordion';
 import { AnchorNav } from './js/customJS/table-of-contents';
 import { CompCheck } from './js/customJS/quiz'; 
@@ -68,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
     accordion.init();
 
     // Custom JS Modules
+
+    // const audioPlayer = new AudioPlayer('audio-player');
+    // audioPlayer.init();
 
     const anchorNav = new AnchorNav();
     anchorNav.init();
