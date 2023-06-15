@@ -121,7 +121,7 @@ In this file:
     mark.ngss.highlighted {
         position: relative;
         
-        &[data-ngss-cat="Practices"] {
+        &[data-ngss-cat*="Practices"] {
             outline-color:
                 hsla(
                     var(--practices-hue),
@@ -133,7 +133,7 @@ In this file:
             background-color: var(--ngss-practices);
         }
 
-        &[data-ngss-cat="Crosscutting"] {
+        &[data-ngss-cat*="Crosscutting"] {
             outline-color:
                 hsla(
                     var(--crosscutting-hue),
@@ -145,7 +145,7 @@ In this file:
             background-color: var(--ngss-crosscutting);
         }
 
-        &[data-ngss-cat="Core Ideas"] {
+        &[data-ngss-cat*="Core Ideas"] {
             outline-color:
                 hsla(
                     var(--core-ideas-hue),
@@ -184,7 +184,7 @@ In this file:
             white-space: nowrap;
         }
         
-        &[data-ngss-cat="Practices"]::before {
+        &[data-ngss-cat*="Practices"]::before {
             background-color: hsl(
                 var(--practices-hue) 
                 var(--practices-saturation)
@@ -192,7 +192,7 @@ In this file:
             );
         }
 
-        &[data-ngss-cat="Crosscutting"]::before {
+        &[data-ngss-cat*="Crosscutting"]::before {
             background-color: hsl(
                 var(--crosscutting-hue) 
                 var(--crosscutting-saturation)
@@ -200,7 +200,7 @@ In this file:
             );
         }
 
-        &[data-ngss-cat="Core Ideas"]::before {
+        &[data-ngss-cat*="Core Ideas"]::before {
             background-color: hsl(
                 var(--core-ideas-hue) 
                 var(--core-ideas-saturation)
@@ -265,7 +265,7 @@ In this file:
 
         }
 
-        &[data-ngss-cat="Practices"]{
+        &[data-ngss-cat*="Practices"]{
             background-color: hsl(
                 var(--practices-hue) 
                 var(--practices-saturation)
@@ -273,7 +273,7 @@ In this file:
             );
         }
 
-        &[data-ngss-cat="Crosscutting"]{
+        &[data-ngss-cat*="Crosscutting"]{
             background-color: hsl(
                 var(--crosscutting-hue) 
                 var(--crosscutting-saturation)
@@ -281,7 +281,7 @@ In this file:
             );
         }
 
-        &[data-ngss-cat="Core Ideas"]{
+        &[data-ngss-cat*="Core Ideas"]{
             background-color: hsl(
                 var(--core-ideas-hue) 
                 var(--core-ideas-saturation)
@@ -317,18 +317,17 @@ In this file:
 
     @include breakpoint.breakpoint-up(lg) {
         .reading-toggle__detail {
-                margin-inline: calc(var(--spacer-2) * -1) ;
+            margin-inline: calc(var(--spacer-2) * -1) ;
         }
     }
 
     @include breakpoint.breakpoint-down(lg) {
     
         .reading-toggle__detail {
-
             position: fixed;
-            top: var(--spacer-3);
-            left: 0;
-            // bottom: 0;
+            inset-block-start: var(--spacer-3);
+            inset-inline-start: 0;
+
             margin-inline: 20px;
 
             z-index: 100000;
