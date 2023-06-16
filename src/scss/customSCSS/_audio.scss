@@ -34,7 +34,7 @@ In this file:
     --track-thumb-width: 0.5rem;
     --track-thumb-height: calc(var(--track-height) * 1.5);
     --track-thumb-background-color: var(--canvas);
-    --track-thumb-focus-shadow: 0px 0px 7px 3px #0065c4;
+    --track-thumb-focus-shadow: 0px 0px 3px var(--link-color);
 
     display: flex;
     flex-direction: column;
@@ -64,6 +64,7 @@ In this file:
     background-color: var(--light);
 
     border-radius: calc(var(--border-radius) * 0.5);
+    overflow: hidden;
 
     #progress {
       height: 100%;
@@ -75,10 +76,11 @@ In this file:
   }
 
   .audio-player__volume {
-    width: 100%;
-    margin: 10px 0;
+    display: flex;
+    align-items: center;
 
-    transform: rotateX('angle');
+    font-size: var(--font-size-sm);
+    gap: var(--spacer-1);
   }
 
   .audio-player__timestamp {
@@ -96,6 +98,7 @@ In this file:
     max-width: 6rem;
 
     background: transparent; 
+    border-radius: calc(var(--border-radius) * 0.5);
   }
 
   input[type=range]:focus {
@@ -126,7 +129,6 @@ In this file:
   input[type=range]::-ms-fill-lower {
     background: transparent;
   }
-
 
 } // end @layer
 
