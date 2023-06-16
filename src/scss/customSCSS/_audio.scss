@@ -81,6 +81,12 @@ In this file:
     transform: rotateX('angle');
   }
 
+  .audio-player__timestamp {
+
+    font-size: var(--font-size-sm);
+  
+  }
+
   // Track
 
   input[type=range] {
