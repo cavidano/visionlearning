@@ -4,10 +4,10 @@ export default class Lightbox {
   
   // Private properties
 
-  #lightboxImages = document.querySelectorAll('img[data-lightbox]');
+  #lightboxTargetList = document.querySelectorAll('[data-lightbox]');
 
   #lightboxHTML = (`
-    <div class="button-group lightbox__buttons">
+    <div class="lightbox__buttons button-group">
       <button class="button button--icon-only" data-lightbox-previous>
         <span class="icon icon-arrow-left" aria-label="Previous" aria-hidden="true"></span>
       </button>
@@ -19,23 +19,38 @@ export default class Lightbox {
       </button>
     </div>
     <figure class="lightbox__container">
-      <div class="lightbox__image"></div>           
-      <figcaption class="lightbox__caption">A caption for the image.</figcaption>
+      <div class="lightbox__media"></div>           
+      <figcaption class="lightbox__caption"></figcaption>
     </figure>
   `);
 
-  #lightboxVideoHTML = `<video controls><source src="" type="video/mp4"></video>`;
+  #lightboxVideoHTML = (`
+    <video controls>
+      <source type="video/mp4">
+    </video>
+  `);
+
+  #lighboxLoaderHTML = (`
+    <div class="lightbox__media__loader">
+      <span class="icon icon-loading icon--rotate" aria-hidden="true"></span>
+    </div>
+    <div class="lightbox__media__error" style="display: none;">
+      <span class="icon icon-warn" aria-hidden="true"></span>
+      <p>Failed to load content. Please try again later.</p>
+    </div>
+  `);
+  
   #lightboxElementHTML = `<img src="https://source.unsplash.com/1600x900" />`;
   
   #lightboxes = [];
 
   // Private methods
 
-  #handleLightboxOpen = (image, index) => (e) => {
+  #handleLightboxOpen = (index) => (e) => {
 
-	const hasLightbox = document.querySelector('.lightbox');
+    const lightbox = document.querySelector('.lightbox');
 
-	if (hasLightbox) return;
+    if (lightbox) return;
 
     e.preventDefault();
 
@@ -46,6 +61,7 @@ export default class Lightbox {
     handleOverlayOpen(this.lightbox);
     
     this.#updateLightbox(index);
+
   };
 
   #handleLightboxClose = (e) => {
@@ -58,6 +74,11 @@ export default class Lightbox {
     this.lightbox.parentElement.removeChild(this.lightbox);
 
     window.removeEventListener('keyup', this.#handleLightboxUpdateKey);
+  };
+
+  #handleCaptionDisplay = (show = false) => {
+    const captionElement = this.lightbox.querySelector('.lightbox__caption');
+    captionElement.style.display = show ? 'block' : 'none';
   };
 
   #handleLightboxUpdateClick = (e) => {
@@ -74,6 +95,10 @@ export default class Lightbox {
 
   #handleLightboxUpdateKey = (e) => {
     e.preventDefault();
+
+    if (this.#lightboxes.length <= 1 && (e.code === 'ArrowLeft' || e.code === 'ArrowRight')) {
+      return;
+    }
 
     switch (e.code) {
       case 'ArrowLeft':
@@ -105,29 +130,97 @@ export default class Lightbox {
   }
 
   #updateLightbox(index) {
-    const lightboxElement = this.lightbox.querySelector('.lightbox__image');
+
+    const lightboxElement = this.lightbox.querySelector('.lightbox__media');
     const lightboxCaption = this.lightbox.querySelector('.lightbox__caption');
 
     let lightboxElementTarget;
 
-    if (this.#lightboxes[index].imgType === 'video') {
-      lightboxElement.innerHTML = this.#lightboxVideoHTML;
-      lightboxElementTarget = lightboxElement.querySelector('source');
-    } else {
-      lightboxElement.innerHTML = this.#lightboxElementHTML;
-      lightboxElementTarget = lightboxElement.querySelector('img');
-      lightboxElementTarget.alt = this.#lightboxes[index].imgAlt;
+    // Extract lightbox object data into variables
+    const { 
+      lbType, 
+      lbSrc, 
+      lbAlt, 
+      lbCaption
+    } = this.#lightboxes[index];
+
+    // Update caption display based on attribute presence
+    const shouldDisplayCaption = lbCaption !== null;
+    this.#handleCaptionDisplay(shouldDisplayCaption);
+
+    switch (lbType) {
+
+      case 'image':
+        // Call image update function
+        lightboxElementTarget = this.#updateLightboxImage(lightboxElement, lbSrc, lbAlt);
+        break;
+
+      case 'video':
+        // Call video update function
+        lightboxElementTarget = this.#updateLightboxVideo(lightboxElement, lbSrc);
+        break;
+    
+      default:
+        break;
     }
 
-    lightboxElementTarget.src = this.#lightboxes[index].imgSrc;
-    lightboxCaption.innerHTML = this.#lightboxes[index].imgCaption;
-
-    if (this.#lightboxes[index].imgWidth) {
-      lightboxElementTarget.setAttribute('width', this.#lightboxes[index].imgWidth);
+    if (shouldDisplayCaption) {
+      lightboxCaption.innerHTML = lbCaption;
     }
   }
 
+  #updateLightboxImage(lightboxElement, lbSrc, lbAlt) {
+
+    if (lightboxElement.hasAttribute('style')) {
+      lightboxElement.removeAttribute('style');
+    }
+
+    lightboxElement.innerHTML = this.#lightboxElementHTML;
+
+    const loader = this.#createLoader();
+    lightboxElement.appendChild(loader);
+  
+    const lightboxElementTarget = lightboxElement.querySelector('img');
+  
+    lightboxElementTarget.alt = lbAlt;
+    lightboxElementTarget.src = lbSrc;
+
+    this.#handleMediaLoading(lightboxElementTarget, loader);
+
+    return lightboxElementTarget;
+  }
+
+  #updateLightboxVideo(lightboxElement, lbSrc) {
+  
+    lightboxElement.innerHTML = this.#lightboxVideoHTML;
+
+    const loader = this.#createLoader();
+    lightboxElement.appendChild(loader);
+  
+    const lightboxElementTarget = lightboxElement.querySelector('source');
+    const video = lightboxElement.querySelector('video');
+
+    video.addEventListener('loadedmetadata', () => {
+      // The intrinsic width and height of the video
+      let intrinsicWidth = video.videoWidth;
+      let intrinsicHeight = video.videoHeight;
+
+      // The aspect ratio of the video
+      lightboxElement.style.maxWidth = `${intrinsicWidth}px`;
+      lightboxElement.style.aspectRatio = `${intrinsicWidth} / ${intrinsicHeight}`;
+    });
+
+    this.#handleMediaLoading(lightboxElementTarget, loader);
+
+    lightboxElementTarget.src = lbSrc;
+
+    return lightboxElementTarget;
+  }
+
   #createLightbox() {
+
+    console.log('my lbs', this.#lightboxes);
+
     const lightbox = document.createElement('div');
 
     lightbox.classList.add('lightbox');
@@ -140,7 +233,13 @@ export default class Lightbox {
     const lightboxNext = lightbox.querySelector('[data-lightbox-next]');
     const lightboxClose = lightbox.querySelector('[data-lightbox-close]');
 
-    lightbox.querySelector('.lightbox__image').classList.add('box-shadow-3');
+    if (this.#lightboxes.length <= 1) {
+      lightboxPrevious.setAttribute('disabled', true);
+      lightboxNext.setAttribute('disabled', true);
+      lightboxPrevious.style.display = 'none';
+      lightboxNext.style.display = 'none';
+    };
+
     lightbox.addEventListener('click', this.#handleLightboxClose);
     lightboxClose.addEventListener('click', this.#handleLightboxClose);
 
@@ -153,11 +252,42 @@ export default class Lightbox {
   }
 
   #configureLightboxElements() {
-    this.#lightboxImages.forEach((image, index) => {
-      const wrapper = document.createElement('button');
-      wrapper.setAttribute('class', 'lightbox-element');
-      this.#wrapWithButton(image, wrapper);
-      this.#lightboxes.push(this.#setImgProperties(image));
+
+    this.#lightboxTargetList.forEach((lightboxTarget) => {
+      
+      let lightboxButton;
+
+      if (lightboxTarget.nodeName === 'IMG') {
+
+        lightboxButton = document.createElement('button');
+
+        lightboxButton.classList.add('lightbox-button');
+        lightboxButton.classList.add('lightbox-button--icon');
+        
+        this.#wrapWithButton(lightboxTarget, lightboxButton);
+
+        lightboxButton.setAttribute('data-lightbox', lightboxTarget.getAttribute('data-lightbox'));
+
+        lightboxButton.setAttribute('data-lightbox-src', lightboxTarget.getAttribute('data-lightbox-src') || null);
+
+        let caption = lightboxTarget.getAttribute('data-lightbox-caption');
+
+        if (caption !== null) {
+          lightboxButton.setAttribute('data-lightbox-caption', caption);
+        }
+
+        lightboxButton.setAttribute('data-lightbox-src', lightboxTarget.getAttribute('data-lightbox-src') || null);
+
+        lightboxTarget.removeAttribute('data-lightbox');
+        lightboxTarget.removeAttribute('data-lightbox-src');
+        lightboxTarget.removeAttribute('data-lightbox-caption');
+
+      } else {
+        lightboxButton = lightboxTarget;
+        lightboxButton.classList.add('lightbox-button');
+      };
+
+      this.#lightboxes.push(this.#setLightboxProperties(lightboxButton));
     });
   }
 
@@ -166,59 +296,72 @@ export default class Lightbox {
     wrapper.appendChild(el);
   }
 
-  #setImgProperties(image) {
-    const lbType = image.getAttribute('data-lightbox') || 'image';
-    const lbSrc = image.getAttribute('data-lightbox-src') || image.src || null;
-    const lbCaption = image.getAttribute('data-lightbox-caption') || image.alt || null;
-    const lbAlt = image.getAttribute('data-lightbox-alt') || image.alt || '';
-    const lbWidth = image.getAttribute('data-lightbox-width') || null;
+  #setLightboxProperties(lightboxButton) {
+
+    let defaultSrc = null;
+    let defaultAlt = '';
+
+    const hasImage = lightboxButton.querySelector('img') !== null;
+
+    if (hasImage) {
+      defaultSrc = lightboxButton.querySelector('img').src || null;
+      defaultAlt = lightboxButton.querySelector('img').alt || '';
+    }
+
+    const lbType = lightboxButton.getAttribute('data-lightbox') || 'image';
+    const lbSrc = lightboxButton.getAttribute('data-lightbox-src') || defaultSrc;
+    const lbCaption = lightboxButton.getAttribute('data-lightbox-caption') || null;
+    const lbAlt = lightboxButton.getAttribute('data-lightbox-alt') || defaultAlt;
 
     return {
-      imgType: lbType,
-      imgSrc: lbSrc,
-      imgCaption: lbCaption,
-      imgAlt: lbAlt,
-      imgWidth: lbWidth,
+      lbType: lbType,
+      lbSrc: lbSrc,
+      lbCaption: lbCaption,
+      lbAlt: lbAlt
     };
   }
 
-  #initLazyLoading() {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1 
-    };
+  #createLoader = () => {
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const lazyImage = entry.target;
-          observer.unobserve(lazyImage);
+    const loader = document.createElement('div');
+  
+    loader.className = 'lightbox__media__loader';
+    loader.innerHTML = this.#lighboxLoaderHTML;
+    return loader;
+  };
 
-          // Create and load hidden large image
-          const hiddenLargeImage = new Image();
-          hiddenLargeImage.src = lazyImage.dataset.lightboxSrc || lazyImage.src;
-          hiddenLargeImage.style.display = 'none';
+  #handleMediaLoading = (media, loader) => {
+    const mediaLoadEvent = media.nodeName === 'SOURCE' ? 'loadeddata' : 'load';
 
-          document.body.appendChild(hiddenLargeImage);
-          
-		      this.#lightboxes[Number(lazyImage.dataset.index)].hiddenImage = hiddenLargeImage;
-        }
-      });
-    }, options);
+    media.closest(media.nodeName === 'SOURCE' ? 'video' : 'img').addEventListener(mediaLoadEvent, () => {
+      if (loader && loader.parentNode) {
+        loader.parentNode.removeChild(loader);
+      }
 
-    this.#lightboxImages.forEach((image, index) => {
-      image.dataset.index = index;
-      observer.observe(image);
+      // Ensure the caption is visible when the media is loaded correctly, only if lbCaption is present
+      if(this.#lightboxes[this.currentLB].lbCaption !== null) {
+        this.#handleCaptionDisplay(true);
+      }
     });
-  }
+
+    media.onerror = () => {
+      const loaderIcon = loader.querySelector('.lightbox__media__loader');
+      const errorMessage = loader.querySelector('.lightbox__media__error');
+    
+      // Hide the media on error
+      media.style.display = 'none';
+      this.#handleCaptionDisplay(false);
+
+      loaderIcon.style.display = 'none';
+      errorMessage.style.display = 'block';
+    };
+  };
 
   #initEventListeners() {
-    this.#lightboxImages.forEach((image, index) => {
-      const imageBtn = image.closest('button');
-      imageBtn.addEventListener('click', this.#handleLightboxOpen(image, index));
+    document.querySelectorAll('.lightbox-button').forEach((lbButton, index) => {
+      lbButton.addEventListener('click', this.#handleLightboxOpen(index));
     });
-  }
+  };
 
   // Public methods
 
@@ -226,7 +369,7 @@ export default class Lightbox {
 
     this.#configureLightboxElements();
     this.#initEventListeners();
-    this.#initLazyLoading();
     
   }
+
 }
