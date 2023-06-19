@@ -112,12 +112,22 @@ export default class AudioPlayer {
         const x = e.clientX - rect.left;  // x position within the element
         const width = rect.right - rect.left;
         if (x >= 0 && x <= width) {
+            const progressPercentage = (x / width) * 100;
             const clickEvent = new MouseEvent('click', {
                 clientX: x + rect.left,
             });
             setFunction(clickEvent);
+
+            // Update the progress thumb position in real-time
+            const thumb = slider.querySelector('.audio-player__thumb');
+            thumb.style.left = `${progressPercentage}%`;
+
+            // Update the progress fill width in real-time
+            const progressFill = slider.querySelector('.audio-player__progress__fill');
+            progressFill.style.width = `${progressPercentage}%`;
         }
     }
+
 
     #stopDrag = () => {
         document.removeEventListener('mousemove', this.#drag);
@@ -127,6 +137,12 @@ export default class AudioPlayer {
     // Public methods
 
     init() {
+    
+        this.#audio = document.querySelector('#audio');
+        
+        if (!this.#audio) {
+        return; // No audio element found, exit the initialization
+        }
 
         this.#audio = document.querySelector('#audio');
         this.#playPauseButton = document.querySelector('#play-pause-button');
