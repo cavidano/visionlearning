@@ -55,6 +55,8 @@ In this file:
 
   .audio-player__progress,
   .audio-player__volume {
+
+    position: relative;
     display: flex;
     flex-direction: row;
   
@@ -64,7 +66,7 @@ In this file:
     background-color: var(--light);
 
     border-radius: calc(var(--border-radius) * 0.5);
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   .audio-player__volume {
@@ -79,6 +81,19 @@ In this file:
 
     background-color: var(--audio-player-track-fill-color);
   }
+
+  .audio-player__thumb {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #000;
+    border-radius: 100%;
+    transform: translate(50%, -50%);
+}
+
 
   .audio-player__timestamp {
     font-size: var(--font-size-sm);

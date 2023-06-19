@@ -6,10 +6,14 @@ export default class AudioPlayer {
     #playPauseButton;
     #progressBar;
     #progress;
+    #progressThumb;
     #volumeSlider;
     #volumeLevel;
+    #volumeThumb;
     #timestamp;
     #isPlaying;
+    #dragType;
+
 
     // Private methods
 
@@ -44,6 +48,9 @@ export default class AudioPlayer {
         const totalSeconds = Math.floor(this.#audio.duration - totalMinutes * 60);
 
         this.#timestamp.innerText = `${currentMinutes.toString().padStart(2, '0')}:${currentSeconds.toString().padStart(2, '0')} / ${totalMinutes.toString().padStart(2, '0')}:${totalSeconds.toString().padStart(2, '0')}`;
+    
+        const progressThumb = this.#progress.querySelector('.audio-player__thumb');
+        progressThumb.style.left = `${progressPercentage}%`;
     }
 
     #setTime(e) {
@@ -62,6 +69,9 @@ export default class AudioPlayer {
     #setVolumeLevel() {
         const volumePercentage = this.#audio.volume * 100;
         this.#volumeLevel.style.width = `${volumePercentage}%`;
+
+        const volumeThumb = this.#volumeLevel.querySelector('.audio-player__thumb');
+        volumeThumb.style.left = `${volumePercentage}%`;
     }
 
     #handleKeyDown(e) {
@@ -78,6 +88,40 @@ export default class AudioPlayer {
                 this.#setVolumeLevel();
             }
         }
+    }
+
+    // Private methods
+
+    #startDrag = (e, type) => {
+        e.preventDefault();
+        document.addEventListener('mousemove', this.#drag);
+        document.addEventListener('mouseup', this.#stopDrag);
+        this.#dragType = type;
+    }
+
+    #drag = (e) => {
+        let slider, setFunction;
+        if (this.#dragType === 'progress') {
+            slider = this.#progressBar;
+            setFunction = this.#setTime;
+        } else {
+            slider = this.#volumeSlider;
+            setFunction = this.#setVolume;
+        }
+        const rect = slider.getBoundingClientRect();
+        const x = e.clientX - rect.left;  // x position within the element
+        const width = rect.right - rect.left;
+        if (x >= 0 && x <= width) {
+            const clickEvent = new MouseEvent('click', {
+                clientX: x + rect.left,
+            });
+            setFunction(clickEvent);
+        }
+    }
+
+    #stopDrag = () => {
+        document.removeEventListener('mousemove', this.#drag);
+        document.removeEventListener('mouseup', this.#stopDrag);
     }
 
     // Public methods
@@ -98,11 +142,18 @@ export default class AudioPlayer {
         this.#audio.addEventListener('timeupdate', () => this.#updateProgress());
         this.#progressBar.addEventListener('click', (e) => this.#setTime(e));
         this.#volumeSlider.addEventListener('click', (e) => this.#setVolume(e));
+        
         this.#progressBar.addEventListener('keydown', (e) => this.#handleKeyDown(e));
         this.#volumeSlider.addEventListener('keydown', (e) => this.#handleKeyDown(e));
         this.#audio.addEventListener('loadedmetadata', () => this.#updateProgress());
 
         this.#setVolumeLevel();
+
+        this.#progressThumb = this.#progress.querySelector('.audio-player__thumb');
+        this.#volumeThumb = this.#volumeLevel.querySelector('.audio-player__thumb');
+
+        this.#progressThumb.addEventListener('mousedown', this.#startDrag(this.#progressThumb, 'progress'));
+        this.#volumeThumb.addEventListener('mousedown', this.#startDrag(this.#volumeThumb, 'volume'));
     }
 
 }
