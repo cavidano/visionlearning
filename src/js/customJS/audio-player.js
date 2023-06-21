@@ -94,13 +94,17 @@ export default class AudioPlayer {
 
     #startDrag = (e, type) => {
         e.preventDefault();
+
         document.addEventListener('mousemove', this.#drag);
         document.addEventListener('mouseup', this.#stopDrag);
+        
         this.#dragType = type;
     }
 
     #drag = (e) => {
+
         let slider, setFunction;
+        
         if (this.#dragType === 'progress') {
             slider = this.#progressBar;
             setFunction = this.#setTime;
@@ -108,14 +112,18 @@ export default class AudioPlayer {
             slider = this.#volumeSlider;
             setFunction = this.#setVolume;
         }
+
         const rect = slider.getBoundingClientRect();
         const x = e.clientX - rect.left;  // x position within the element
         const width = rect.right - rect.left;
+        
         if (x >= 0 && x <= width) {
             const progressPercentage = (x / width) * 100;
+
             const clickEvent = new MouseEvent('click', {
                 clientX: x + rect.left,
             });
+
             setFunction(clickEvent);
 
             // Update the progress thumb position in real-time
@@ -123,11 +131,10 @@ export default class AudioPlayer {
             thumb.style.left = `${progressPercentage}%`;
 
             // Update the progress fill width in real-time
-            const progressFill = slider.querySelector('.audio-player__progress__fill');
+            const progressFill = slider.querySelector('[class*="__fill"]');
             progressFill.style.width = `${progressPercentage}%`;
         }
     }
-
 
     #stopDrag = () => {
         document.removeEventListener('mousemove', this.#drag);
