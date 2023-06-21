@@ -14,7 +14,6 @@ export default class AudioPlayer {
     #isPlaying;
     #dragType;
 
-
     // Private methods
 
     #toggleClasses(element, class1 = null, class2 = null) {
@@ -37,7 +36,7 @@ export default class AudioPlayer {
         this.#toggleClasses(this.#playPauseButton.querySelector('span.icon'), 'icon-play', 'icon-pause');
     }
 
-    #updateProgress() {
+    #updateProgress = () => {
         const progressPercentage = (this.#audio.currentTime / this.#audio.duration) * 100;
         this.#progress.style.width = `${progressPercentage}%`;
 
@@ -53,20 +52,21 @@ export default class AudioPlayer {
         progressThumb.style.left = `${progressPercentage}%`;
     }
 
-    #setTime(e) {
+    #setTime = (e) => {
         const clickPositionInBar = e.clientX - this.#progressBar.getBoundingClientRect().left;
         const progressPercentage = (clickPositionInBar / this.#progressBar.offsetWidth) * 100;
         this.#audio.currentTime = (progressPercentage / 100) * this.#audio.duration;
     }
 
-    #setVolume(e) {
+    #setVolume = (e) => {
+        console.log("hello", this.#volumeSlider);
         const clickPositionInBar = e.clientX - this.#volumeSlider.getBoundingClientRect().left;
         const volumePercentage = (clickPositionInBar / this.#volumeSlider.offsetWidth) * 100;
         this.#audio.volume = volumePercentage / 100;
         this.#setVolumeLevel();
     }
 
-    #setVolumeLevel() {
+    #setVolumeLevel = () => {
         const volumePercentage = this.#audio.volume * 100;
         this.#volumeLevel.style.width = `${volumePercentage}%`;
 
