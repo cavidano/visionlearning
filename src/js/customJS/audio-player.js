@@ -141,7 +141,7 @@ export default class AudioPlayer {
         this.#audio = document.querySelector('#audio');
         
         if (!this.#audio) {
-        return; // No audio element found, exit the initialization
+            return; // No audio element found, exit the initialization
         }
 
         this.#audio = document.querySelector('#audio');
@@ -168,8 +168,16 @@ export default class AudioPlayer {
         this.#progressThumb = this.#progress.querySelector('.audio-player__thumb');
         this.#volumeThumb = this.#volumeLevel.querySelector('.audio-player__thumb');
 
-        this.#progressThumb.addEventListener('mousedown', this.#startDrag(this.#progressThumb, 'progress'));
-        this.#volumeThumb.addEventListener('mousedown', this.#startDrag(this.#volumeThumb, 'volume'));
+
+        if (!this.#volumeSlider) {
+            console.error('Volume slider element not found');
+            return; // Exit the initialization if the volume slider element is not found
+        }
+
+        this.#progressThumb.addEventListener('mousedown', (e) => this.#startDrag(e, 'progress'));
+        this.#volumeThumb.addEventListener('mousedown', (e) => this.#startDrag(e, 'volume'));
+
+
     }
 
 }
