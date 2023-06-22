@@ -77,6 +77,8 @@ In this file:
   .audio-player__progress,
   .audio-player__volume {
 
+    --focus-outline-color: var(--default-link-color);
+
     position: relative;
     display: flex;
     flex-direction: row;
@@ -87,7 +89,11 @@ In this file:
     background-color: var(--light);
 
     border-radius: calc(var(--border-radius) * 0.5);
-    // overflow: hidden;
+    
+    &:focus-visible {
+      outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color)  ;
+      outline-offset: var(--focus-outline-size);
+    }
   }
 
   .audio-player__volume {
