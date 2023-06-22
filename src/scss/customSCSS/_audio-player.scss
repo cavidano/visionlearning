@@ -57,6 +57,9 @@ In this file:
     }
   }
 
+  .audio-player__controls {
+    
+  }
   .audio-player__controls,
   .audio-player__volume-container {
     display: flex;
@@ -67,11 +70,12 @@ In this file:
 
     width: 100%;
 
-    gap: var(--spacer-1);
+    gap: var(--spacer-2);
+
   }
 
   .audio-player__volume-container {
-    max-width: 6rem;
+    max-width: 8rem;
   }
 
   .audio-player__progress,
@@ -86,7 +90,7 @@ In this file:
     width: 100%;
     height: var(--audio-player-track-height);
 
-    background-color: var(--light);
+    background-color: hsla(0, 0%, 0%, 0.125);
 
     border-radius: calc(var(--border-radius) * 0.5);
     
