@@ -306,48 +306,10 @@ export default class Lightbox {
 	}
 
 	#configureLightboxElements() {
-
-    this.#lightboxTargetList.forEach((lightboxTarget) => {
-      
-      let lightboxButton;
-
-      if (lightboxTarget.nodeName === 'IMG') {
-
-        lightboxButton = document.createElement('button');
-
-        lightboxButton.classList.add('lightbox-button');
-        lightboxButton.classList.add('lightbox-button--icon');
-        
-        this.#wrapWithButton(lightboxTarget, lightboxButton);
-
-        lightboxButton.setAttribute('data-lightbox', lightboxTarget.getAttribute('data-lightbox'));
-
-        lightboxButton.setAttribute('data-lightbox-src', lightboxTarget.getAttribute('data-lightbox-src') || null);
-
-        let caption = lightboxTarget.getAttribute('data-lightbox-caption');
-
-        if (caption !== null) {
-          lightboxButton.setAttribute('data-lightbox-caption', caption);
-        }
-
-        lightboxButton.setAttribute('data-lightbox-src', lightboxTarget.getAttribute('data-lightbox-src') || null);
-
-        lightboxTarget.removeAttribute('data-lightbox');
-        lightboxTarget.removeAttribute('data-lightbox-src');
-        lightboxTarget.removeAttribute('data-lightbox-caption');
-
-      } else {
-        lightboxButton = lightboxTarget;
-      };
-
-      this.#lightboxes.push(this.#setLightboxProperties(lightboxButton));
-    });
-  }
-
-  #wrapWithButton(el, wrapper) {
-    el.parentNode.insertBefore(wrapper, el);
-    wrapper.appendChild(el);
-  }
+		this.#lightboxTargetList.forEach((lightboxTarget) => {
+			this.#lightboxes.push(this.#setLightboxProperties(lightboxTarget));
+		});
+	}
 
 	#createLoader = () => {
 		const loader = document.createElement('div');
