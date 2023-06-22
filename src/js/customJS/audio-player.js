@@ -59,10 +59,10 @@ export default class AudioPlayer {
     }
 
     #setVolume = (e) => {
-        console.log("hello", this.#volumeSlider);
         const clickPositionInBar = e.clientX - this.#volumeSlider.getBoundingClientRect().left;
         const volumePercentage = (clickPositionInBar / this.#volumeSlider.offsetWidth) * 100;
-        this.#audio.volume = volumePercentage / 100;
+        const volume = volumePercentage / 100;
+        this.#audio.volume = Math.min(1, volume);
         this.#setVolumeLevel();
     }
 

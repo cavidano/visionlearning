@@ -59,19 +59,19 @@ In this file:
 
   .audio-player__controls,
   .audio-player__volume-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      
-      padding: var(--spacer-1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-      width: 100%;
-      
-      gap: var(--spacer-1);
+    padding: var(--spacer-1);
+
+    width: 100%;
+
+    gap: var(--spacer-1);
   }
 
   .audio-player__volume-container {
-      max-width: 6rem;
+    max-width: 6rem;
   }
 
   .audio-player__progress,
@@ -80,10 +80,10 @@ In this file:
     position: relative;
     display: flex;
     flex-direction: row;
-  
+
     width: 100%;
     height: var(--audio-player-track-height);
-    
+
     background-color: var(--light);
 
     border-radius: calc(var(--border-radius) * 0.5);
@@ -102,13 +102,12 @@ In this file:
 
     background-color: var(--audio-player-track-fill-color);
 
-
     border-top-left-radius: calc(var(--border-radius) * 0.5);
     border-bottom-left-radius: calc(var(--border-radius) * 0.5);
   }
 
   .audio-player__thumb {
-    --size: calc(var(--audio-player-track-height) * 1.5);
+    --size: calc(var(--audio-player-track-height) * 2);
     display: block;
     position: absolute;
     top: 50%;
@@ -119,10 +118,8 @@ In this file:
     background-color: var(--audio-player-track-fill-color);
     border-radius: 100%;
     transform: translate(-50%, -50%);
-}
-
-
-  .audio-player__timestamp {
   }
 
-} // end @layer
+}
+
+// end @layer
