@@ -5,12 +5,16 @@
 
   ImgSlug: episode-1a
 
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
+
 - Title: 'Episode 1b: Introduction (for instructors)'
 
   Description: >
     Anne and Anthony introduce themselves, their own research areas, and the students that they have mentored in research. They give an overview of the series of videos about understanding research, and why you might want to watch them and get involved in research yourself.
 
   ImgSlug: episode-1b
+
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
 
 - Title: 'Episode 2: What is Research'
 
@@ -19,9 +23,22 @@
 
   ImgSlug: episode-2
 
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
+
 - Title: 'Episode 3: Thinking like a Scientist'
 
   Description: >
     Anne and Anthony introduce themselves, their own research areas, and the students that they have mentored in research. They give an overview of the series of videos about understanding research, and why you might want to watch them and get involved in research yourself.
 
   ImgSlug: episode-3
+
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
+
+- Title: 'Episode 4: Thinking like a Scientist'
+
+  Description: >
+    Anne and Anthony introduce themselves, their own research areas, and the students that they have mentored in research. They give an overview of the series of videos about understanding research, and why you might want to watch them and get involved in research yourself.
+
+  ImgSlug: episode-4
+
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw

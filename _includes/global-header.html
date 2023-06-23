@@ -14,6 +14,85 @@
 	
 	</div>
 
+	<!-- Russ D., I have created a banner for launch -->
+
+	<div class="theme-primary display-none" id="message-box" role="banner">
+
+		<div class="container medium padding-y-4 text-align-center">
+			<p class="h6">
+				What's new at Visionlearning
+			</p>
+			<p>
+				We're excited to announce several new features, designed to support your learning or teaching experience. With a focus on interactive engagement, and comprehensive resources, our latest updates empower students and educators to engage in exploring STEM.
+			</p>
+
+			<div class="button-group justify-content-center font-size-md gap-3">
+				<a class="button theme-canvas button--has-icon" href="{{ site.url }}/about/our-content">
+					<span class="icon icon-caret-right"></span>
+					<span class="button__text">Explore New Features</span>
+				</a>
+				<button class="button button--has-icon" id="close-button">
+					<span class="icon icon-close"></span>
+					<span class="button__text">Close This Message</span>
+				</button>
+			</div>
+	
+		</div>
+
+	</div>
+
+	<!-- Russ D., I am unsure where you want to place the script that manages the cookie for the announcement message, but it should be separate from the main script. -->
+
+	<script>
+
+		// Check if the message should be displayed based on the cookie
+		const shouldDisplayMessage = () => {
+			const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)hideMessage\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+			return cookieValue !== "true";
+		};
+
+		// Display the message box if it should be shown
+		const showMessage = () => {
+			const messageBox = document.getElementById("message-box");
+			if (shouldDisplayMessage()) {
+				messageBox.classList.remove("display-none");
+			}
+		};
+
+		// Close the message box and set the cookie to remember the user's choice
+		const closeMessage = () => {
+			const messageBox = document.getElementById("message-box");
+			messageBox.classList.add("display-none");
+
+			// Set the cookie to remember the user's choice
+			document.cookie = "hideMessage=true; expires=Thu, 1 Jan 2099 00:00:00 UTC; path=/";
+		};
+
+		// Attach the event listener to the close button
+		const attachCloseEvent = () => {
+			const closeButton = document.getElementById("close-button");
+			closeButton.addEventListener("click", closeMessage);
+		};
+
+		// Initialize the message box
+		const initMessageBox = () => {
+			showMessage();
+			attachCloseEvent();
+		};
+
+		// Call the initialization function when the DOM is ready
+		document.addEventListener("DOMContentLoaded", initMessageBox);
+
+		// Clear the "hideMessage" cookie
+		const clearCookie = () => {
+			document.cookie = "hideMessage=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+		};
+
+		// Call the clearCookie function to remove the cookie
+		clearCookie();
+	
+	</script>
+
 	{% if page.account == 'Signed In' %}
 
 	<div class="theme-classroom" id="account-bar">

@@ -22,22 +22,25 @@ title: Library • Interactive Animations
     {% assign description = item.Description %}                       
     {% assign imgSlug = item.ImgSlug %}                       
     {% assign relatedModule = item.Module %}                      
-    {% assign url = item.LinkURL %}           
+    {% assign url = item.VideoUrl %}           
 
     <div class="card theme-light">
 
-        <a href="#1" target="_blank">
-
+        <button target="_blank"        
+            data-lightbox="video"
+            data-lightbox-caption="{{ title }}"
+            data-lightbox-src="{{ url }}"
+        >
             <div class="margin-2">
                 <img class="border-radius box-shadow-1" src="{{ site.url }}/images/research-videos/{{ imgSlug }}.jpg" alt="Placeholder" />
             </div>
             
-        </a>
+        </button>
 
         <div class="card__body">
 
             <h2 class="h5">
-                <a href="#1" target="_blank">Episode 2: What is Research</a>
+                {{ title }}
             </h2>
 
             <p>
@@ -48,10 +51,15 @@ title: Library • Interactive Animations
 
         <div class="card__foot border-top font-size-md">
 
-            <a class="button button--has-icon text-transform-uppercase" href="{{ url }}" target="_blank">
-                <span class="button__text">Watch on YouTube</span>
-                <span class="icon icon-youtube"></span>
-            </a>
+            <button 
+                class="button text-transform-uppercase"
+                data-lightbox="video"
+                data-lightbox-caption="{{ title }}"
+                data-lightbox-src="{{ url }}"
+            >
+                <span class="icon icon-play"></span>
+                <span class="button__text">Watch Video</span>
+            </button>
         
         </div>
 

@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Custom JS Modules
 
-    // const audioPlayer = new AudioPlayer('audio-player');
-    // audioPlayer.init();
+    const audioPlayer = new AudioPlayer();
+    audioPlayer.init();
 
     const anchorNav = new AnchorNav();
     anchorNav.init();

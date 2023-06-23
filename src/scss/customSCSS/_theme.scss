@@ -57,6 +57,11 @@ In this file:
     // Form
 
     --form-field-border-color: var(--border-color);
+
+    // Lightbox Icons
+
+    --lightbox-button-icon-image: "\f13d";
+    --lightbox-button-icon-video: "\f169";
 }
 
 @media screen and (max-width: 1000px) {

@@ -63,6 +63,11 @@ In this file:
             z-index: -1;
         }
     }
+    
+    &.button--outline,
+    &.lightbox-button--icon {
+        --focus-outline-distance: calc(var(--focus-outline-size) * -3);
+    }
 }
 
 @layer base {
