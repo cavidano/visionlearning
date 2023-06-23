@@ -8,6 +8,7 @@ export default class AudioPlayer {
     #progress;
     #progressThumb;
     #volumeSlider;
+    #volumeContainer;
     #volumeLevel;
     #volumeThumb;
     #timestamp;
@@ -72,6 +73,10 @@ export default class AudioPlayer {
 
         const volumeThumb = this.#volumeLevel.querySelector('.audio-player__thumb');
         volumeThumb.style.left = `${volumePercentage}%`;
+
+        // if (this.#audio.volume <= 0.1) {
+        //     this.#toggleClasses(this.#volumeContainer.querySelector('span.icon'), 'icon-pronounciation', 'icon-home');
+        // }
     }
 
     #handleKeyDown(e) {
@@ -156,6 +161,7 @@ export default class AudioPlayer {
         this.#progressBar = document.querySelector('.audio-player__progress');
         this.#progress = document.querySelector('.audio-player__progress__fill');
         this.#volumeSlider = document.querySelector('.audio-player__volume');
+        this.#volumeContainer = document.querySelector('.audio-player__volume-container');
         this.#volumeLevel = document.querySelector('.audio-player__volume__fill');
         this.#timestamp = document.querySelector('#timestamp');
 

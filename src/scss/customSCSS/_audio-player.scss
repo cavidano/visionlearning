@@ -117,7 +117,7 @@ In this file:
   }
 
   .audio-player__thumb {
-    --size: calc(var(--audio-player-track-height) * 2);
+    --size: calc(var(--audio-player-track-height) * 2.25);
     display: block;
     position: absolute;
     top: 50%;
