@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const audioPlayer = new AudioPlayer();
     audioPlayer.init();
 
-    const anchorNav = new AnchorNav();
-    anchorNav.init();
+    // const anchorNav = new AnchorNav();
+    // anchorNav.init();
 
     const compCheck = new CompCheck();
     compCheck.init();
