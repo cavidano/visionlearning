@@ -14,7 +14,7 @@
 
   ImgSlug: episode-1b
 
-  VideoUrl: /videos/pexels-dmitry-varennikov-5527699-1280x720-30fps.mp4
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
 
 - Title: 'Episode 2: What is Research'
 
@@ -23,7 +23,7 @@
 
   ImgSlug: episode-2
 
-  VideoUrl: /videos/pexels-dmitry-varennikov-5527699-1280x720-30fps.mp4
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
 
 - Title: 'Episode 3: Thinking like a Scientist'
 
@@ -32,4 +32,13 @@
 
   ImgSlug: episode-3
 
-  VideoUrl: /videos/pexels-dmitry-varennikov-5527699-1280x720-30fps.mp4
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
+
+- Title: 'Episode 4: Thinking like a Scientist'
+
+  Description: >
+    Anne and Anthony introduce themselves, their own research areas, and the students that they have mentored in research. They give an overview of the series of videos about understanding research, and why you might want to watch them and get involved in research yourself.
+
+  ImgSlug: episode-4
+
+  VideoUrl: https://www.youtube.com/embed/ZcX6KvMGhgw
