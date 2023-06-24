@@ -33,6 +33,9 @@ In this file:
     --button-outline-border-width: calc( var(--border-width) * 2);
 
     --button-icon-only-size: 2.5em;
+
+    --button--icon-label-width: 5.5rem; 
+    --button--icon-label-border-radius: var(--button-border-radius); 
     
     --button-group-gap: 0.25em;
 }
@@ -233,6 +236,66 @@ In this file:
             opacity: 1;
         }
 
+    }
+
+    // Button Icon Label Modifier
+
+    .button--icon-label {
+        --font-size-sm: 0.675rem;
+        --focus-outline-offset: -4px;
+
+        color: var(--default-link-color);
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        text-align: center;
+        
+        gap: 0.25em;
+
+        width: var(--button--icon-label-width);
+
+        span.icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            padding: 0.25em;
+
+            margin-inline: auto;
+
+            width: var(--button-icon-only-size);
+            height: var(--button-icon-only-size);
+
+            aspect-ratio: 1;
+
+            border-radius: var(--button--icon-label-border-radius);
+
+            @extend %subtle-fill-psuedo;
+        }
+
+        &:focus-visible {
+
+            outline: unset;
+
+            > [class*="icon"] {
+                outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+                outline-offset: var(--focus-outline-offset);
+            }
+        }
+
+        &[aria-selected="true"] [class*="icon"] {
+            background-color: var(--default-link-color);
+            color: var(--canvas);
+        }
+
+        [class*="__text"] {
+            min-width: 100%;
+
+            font-size: var(--font-size-sm);
+            font-weight: var(--body-font-weight-bold);
+        }
     }
 
     // Button Group
