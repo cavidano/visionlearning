@@ -200,186 +200,188 @@
 
                 </figure>
 
-				<figure class="container medium margin-y-5">
+				<figure class="container medium margin-y-5 module">
 
-                    <div class="module__tools" style="max-width: 22em">
+                    <div class="module__tools" style="max-width: var(--grid-sidebar-width)">
 
-                        <div class="narrow margin-x-auto position-sticky-top">
+						<div class="tabs" role="tablist">
 
-                            <div class="tabs" role="tablist">
+							<nav>
 
-                                <nav class="display-flex gap-1 align-items-baseline font-size-md">
+								<button
+									class="button button--icon-label"
+									aria-label="In this module"
+									aria-controls="tab-panel-module__tools"
+									aria-selected="true"
+									role="tab">
+									<span class="icon icon-list" aria-hidden="true"></span>
+									<span class="button__text">Contents</span>
 
-                                    <button
-                                        class="button button--icon-label"
-                                        aria-label="In this module"
-                                        aria-controls="tab-panel-module__tools"
-                                        aria-selected="true"
-                                        role="tab">
-                                        <span class="icon icon-list" aria-hidden="true"></span>
-                                        <span class="button__text">Contents</span>
+								</button>
 
-                                    </button>
+								<button
+									class="button button--icon-label"
+									aria-controls="tab-panel-toggle-terms"
+									aria-selected="false"
+									role="tab">
+									<span class="icon icon-glossary-highlight"></span>
+									<span class="button__text">Glossary Terms</span>
+								</button>
 
-                                    <button
-                                        class="button button--icon-label"
-                                        aria-controls="tab-panel-toggle-terms"
-                                        aria-selected="false"
-                                        role="tab">
-                                        <span class="icon icon-glossary-highlight"></span>
-                                        <span class="button__text">Glossary Terms</span>
-                                    </button>
+								<button
+									class="button button--icon-label"
+									aria-controls="tab-panel-toggle-ngss"
+									aria-selected="false"
+									role="tab">
+									<span class="icon icon-ngss"></span>
+									<span class="button__text">NGSS</span>
+								</button>
 
-                                    <button
-                                        class="button button--icon-label"
-                                        aria-controls="tab-panel-toggle-ngss"
-                                        aria-selected="false"
-                                        role="tab">
-                                        <span class="icon icon-ngss"></span>
-                                        <span class="button__text">NGSS</span>
-                                    </button>
+							</nav>
 
-                                </nav>
+							<hr class="divider" />
 
-                                <div
-                                    class="tabs__panel shown"
-                                    id="tab-panel-module__tools"
-                                    aria-labelledby="tab-button-module__tools"
-                                    role="tabpanel">
+							<div
+								class="tabs__panel shown"
+								id="tab-panel-module__tools"
+								aria-labelledby="tab-button-module__tools"
+								role="tabpanel">
 
-                                    <p class="margin-y-2">
-                                        <strong>
-                                            <em>
-                                                Table of Contents
-                                            </em>
-                                        </strong>		
-                                    </p>
+								<p class="module__tools__title">
+								    Table of Contents
+								</p>
 
-                                    <div class="table-of-contents">
-                                        <ul>
-                                            <li>
-                                                <a href="{{ site.url }}/library/module/reading.html#toc_1">
-                                                    Introduction
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ site.url }}/library/module/reading.html#toc_1">
-                                                    Evidence about Earth's interior
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ site.url }}/library/module/reading.html#toc_2">
-                                                    Seismic waves
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ site.url }}/library/module/reading.html#toc_3">
-                                                    The Moho
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ site.url }}/library/module/reading.html#toc_4">
-                                                    Shadow zones
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ site.url }}/library/module/reading.html#toc_5">
-                                                    The layers of Earth
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <ul>
-                                                    <li>
-                                                        <a href="{{ site.url }}/library/module/reading.html#toc2_1">
-                                                            Compositional layers
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="{{ site.url }}/library/module/reading.html#toc2_2">
-                                                            Mechanical layers
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+								<div class="table-of-contents">
+									<ul>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_1">
+												Introduction
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_1">
+												Evidence about Earth's interior
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_2">
+												Seismic waves
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_3">
+												The Moho
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_4">
+												Shadow zones
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_5">
+												The layers of Earth
+											</a>
+										</li>
+										<li>
+											<ul>
+												<li>
+													<a href="{{ site.url }}/library/module/reading.html#toc2_1">
+														Compositional layers
+													</a>
+												</li>
+												<li>
+													<a href="{{ site.url }}/library/module/reading.html#toc2_2">
+														Mechanical layers
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
 
-                                    </div>
+								</div>
 
-                                </div>
+							</div>
 
-                                <div
-                                    class="tabs__panel"
-                                    id="tab-panel-toggle-terms"
-                                    aria-labelledby="tab-button-toggle-terms"
-                                    role="tabpanel">
+							<div
+								class="tabs__panel"
+								id="tab-panel-toggle-terms"
+								aria-labelledby="tab-button-toggle-terms"
+								role="tabpanel">
 
-                                    <div class="reading-toggle">
+								<p class="module__tools__title">
+								    Glossary Terms
+								</p>
+	
+								<div class="reading-toggle">
 
-                                        <div class="reading-toggle__description">								
-                                            <p>
-                                                <em>
-                                                    Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
-                                                </em>
-                                            </p>
-                                        </div>
+									<div class="reading-toggle__description">								
+										<p>
+											<em>
+												Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
+											</em>
+										</p>
+									</div>
 
-                                        <div class="form-entry__option__switch">
+									<div class="form-entry__option__switch">
 
-                                            <label>
-                                                <input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch">
-                                                <span class="switch__slider"></span>
-                                                <span class="option__label text-decoration-none font-size-md">
-                                                    Highlight Glossary Terms
-                                                </span>
-                                            </label>
+										<label>
+											<input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch">
+											<span class="switch__slider"></span>
+											<span class="option__label text-decoration-none font-size-md">
+												Highlight Glossary Terms
+											</span>
+										</label>
 
-                                        </div>
+									</div>
 
-                                    </div>
-                                    
-                                    <div class="term-def-container font-size-md"></div>
+								</div>
+								
+								<div class="term-def-container font-size-md"></div>
 
-                                </div>
+							</div>
 
-                                <div
-                                    class="tabs__panel"
-                                    id="tab-panel-toggle-ngss"
-                                    aria-labelledby="tab-button-toggle-ngss"
-                                    role="tabpanel">
+							<div
+								class="tabs__panel"
+								id="tab-panel-toggle-ngss"
+								aria-labelledby="tab-button-toggle-ngss"
+								role="tabpanel">
 
-                                    <div class="reading-toggle">
+                                <p class="module__tools__title">
+                                    NGSS Annotations
+                                </p>
 
-                                        <div class="reading-toggle__description">								
-                                            <p>
-                                                <em>
-                                                    Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
-                                                </em>
-                                            </p>
-                                        </div>
+								<div class="reading-toggle">
 
-                                        <div class="form-entry__option__switch">
+									<div class="reading-toggle__description">								
+										<p>
+											<em>
+												Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
+											</em>
+										</p>
+									</div>
 
-                                            <label>
-                                                <input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
-                                                <span class="switch__slider"></span>
-                                                <span class="option__label text-decoration-none font-size-md">
-                                                    Show NGSS Annotations
-                                                </span>
-                                            </label>
+									<div class="form-entry__option__switch">
 
-                                        </div>
+										<label>
+											<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
+											<span class="switch__slider"></span>
+											<span class="option__label text-decoration-none font-size-md">
+												Show NGSS Annotations
+											</span>
+										</label>
 
-                                    </div>
-                                    
-                                    <div class="ngss-desc-container font-size-md"></div>
+									</div>
 
-                                </div>
+								</div>
+								
+								<div class="ngss-desc-container font-size-md"></div>
 
-                            </div>
+							</div>
 
-                        </div>
-
-                    </div>
+						</div>
+                        
+				    </div>
 
                 </figure>
 

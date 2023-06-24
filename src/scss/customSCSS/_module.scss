@@ -66,9 +66,10 @@ In this file:
     @include breakpoint.breakpoint-up(lg) {
         .module__header__tabs {
             position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
+            inset-block-start: 100%;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            
             z-index: 10000;
 
             width: 100%;
@@ -99,6 +100,27 @@ In this file:
             max-width: var(--narrow-width);
             margin-inline: auto;
         }
+    }
+
+    // Module Tools
+
+    .module__tools {
+
+        nav {
+            display:flex; 
+            align-items: baseline;
+            justify-content: center;
+            
+            gap: var(--spacer-1);
+
+            font-size: var(--font-size-md);
+        }
+
+        .module__tools__title {
+            font-weight: var(--body-font-weight-bold);
+            margin-block-end: 0.5em;
+        }
+        
     }
 
     // Citation
