@@ -43,7 +43,7 @@ In this file:
         }
     }
 
-    ol.quiz__questions {
+    .quiz__questions {
         list-style: none;
         counter-reset: section;
         padding: unset;             
@@ -119,12 +119,10 @@ In this file:
 
     .quiz__response {
         
-        padding-left: calc(1.25em + var(--form-field-padding-x));
+        padding-inline-start: calc(1.25em + var(--form-field-padding-x));
         margin-top: var(--form-field-padding-y);
 
-        // outline: 1px solid red;
-
-        // display: block;
+        display: block;
         
         font-style: italic;
         font-size: 90%;
@@ -191,7 +189,7 @@ In this file:
         .quiz__response:not(.shown) {
             display: none;
         }
-    } 
+    }
 
     @container module-main (inline-size >= 768px) {
       .comprehension-checkpoint__header {

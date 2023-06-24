@@ -4,323 +4,327 @@ layout: global
 
 <main id="skip-header-content">
 
-    <article class="container wide module">
+	<div class="margin-bottom-5">
+	
+		<article class="container wide module">
 
-        <header class="grid grid--sidebar-right module__header">
+			<header class="grid grid--sidebar-right module__header">
 
-            <div class="module__header__title">
+				<div class="module__header__title">
 
-				<span class="subcategory">
-					<strong>
-						<em>Plate Tectonics</em>
-					</strong>
-				</span>
+					<span class="subcategory">
+						<strong>
+							<em>Plate Tectonics</em>
+						</strong>
+					</span>
 
-                <h1>
-                    {{ page.title}}{% if page.subtitle != null  %}:
-                    <sub>
-                        <em>
-                            {{ page.subtitle }}
-                        </em>
-                    </sub>
-					{% endif %}
-                </h1>
+					<h1>
+						{{ page.title}}{% if page.subtitle != null  %}:
+						<sub>
+							<em>
+								{{ page.subtitle }}
+							</em>
+						</sub>
+						{% endif %}
+					</h1>
 
-                <p class="byline">
-                    by Anne E. Egger, Ph.D.
-                </p>
+					<p class="byline">
+						by Anne E. Egger, Ph.D.
+					</p>
 
-				<nav class="module__header__tabs">
+					<nav class="module__header__tabs">
 
-                    <ul class="tabs-nav tabs-nav--horizontal library">
-                        <li>
-                            <a
-                                href="{{ site.url }}/library/module/reading.html"
-                                {% if page.url contains '/reading.html' %}
-                                aria-current="page" 
-                                {% endif %}>
-                                    Reading
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="{{ site.url }}/library/module/quiz.html"
-                                {% if page.url contains '/quiz.html' %}
-                                aria-current="page" 
-                                {% endif %}>
-                                	Quiz
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="{{ site.url }}/library/module/teach.html"
-                                {% if page.url contains '/teach.html' %}
-                                aria-current="page" 
-                                {% endif %}>
-                                	Teach with this
-                            </a>
-                        </li>
-                    </ul>
+						<ul class="tabs-nav tabs-nav--horizontal library">
+							<li>
+								<a
+									href="{{ site.url }}/library/module/reading.html"
+									{% if page.url contains '/reading.html' %}
+									aria-current="page" 
+									{% endif %}>
+										Reading
+								</a>
+							</li>
+							<li>
+								<a
+									href="{{ site.url }}/library/module/quiz.html"
+									{% if page.url contains '/quiz.html' %}
+									aria-current="page" 
+									{% endif %}>
+										Quiz
+								</a>
+							</li>
+							<li>
+								<a
+									href="{{ site.url }}/library/module/teach.html"
+									{% if page.url contains '/teach.html' %}
+									aria-current="page" 
+									{% endif %}>
+										Teach with this
+								</a>
+							</li>
+						</ul>
 
-                </nav>
+					</nav>
 
-            </div>
+				</div>
 
-            {% if page.tab == 'reading' %}
+				{% if page.tab == 'reading' %}
 
-            <div class="module_header_audio">
+				<div class="module_header_audio">
 
-				<div class="audio-player">
+					<div class="audio-player">
 
-                        <audio id="audio">
-                            <source src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
+							<audio id="audio">
+								<source src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
 
-                        <div class="audio-player__title">
-                            <p>Listen to this reading</p>
+							<div class="audio-player__title">
+								<p>Listen to this reading</p>
 
-                            <span class="audio-player__timestamp" id="timestamp">
-                                00:00
-                            </span>
-                        </div>
+								<span class="audio-player__timestamp" id="timestamp">
+									00:00
+								</span>
+							</div>
 
-                        <div
-                            class="audio-player__controls"
-                            id="controls"
-                        >
+							<div
+								class="audio-player__controls"
+								id="controls"
+							>
 
-                            <button
-                                class="button button--icon-only"
-                                id="play-pause-button"
-                            >
-                                <span class="icon icon-play" aria-hidden="true"></span>
-                            </button>
+								<button
+									class="button button--icon-only"
+									id="play-pause-button"
+								>
+									<span class="icon icon-play" aria-hidden="true"></span>
+								</button>
 
-                            <div 
-                                class="audio-player__progress" 
-                                id="progress-bar" 
-                                tabindex="0"  
-                                aria-valuemin="0" 
-                                aria-valuemax="100" 
-                                aria-valuenow="0" 
-                                aria-label="Use arrow keys to forward or rewind the audio"
-                                role="slider"
-                            >
-                                <div class="audio-player__progress__fill">
-                                    <span class="audio-player__thumb"></span>
-                                </div>
-                            </div>
+								<div 
+									class="audio-player__progress" 
+									id="progress-bar" 
+									tabindex="0"  
+									aria-valuemin="0" 
+									aria-valuemax="100" 
+									aria-valuenow="0" 
+									aria-label="Use arrow keys to forward or rewind the audio"
+									role="slider"
+								>
+									<div class="audio-player__progress__fill">
+										<span class="audio-player__thumb"></span>
+									</div>
+								</div>
 
-                            <div class="audio-player__volume-container">
+								<div class="audio-player__volume-container">
 
-                                <span class="icon icon-pronounciation"></span>
+									<span class="icon icon-pronounciation"></span>
 
-                                <div 
-                                    class="audio-player__volume"
-                                    tabindex="0" 
-                                    aria-valuemin="0" 
-                                    aria-valuemax="100" 
-                                    aria-valuenow="100" 
-                                    aria-label="Use arrow keys to adjust volume"
-                                    role="slider" 
-                                >
-                                    <div class="audio-player__volume__fill">
-                                        <span class="audio-player__thumb"></span>
-                                    </div>
-                                </div>
-                            
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-            {% endif %}
-
-        </header>
-
-        <hr class="divider" />
-
-        <div class="grid grid--sidebar-right grid--divider">
-        
-            <div class="order-2 order-1--lg module__main">
-
-                {{ content }}
-
-            </div>
-
-            {% if page.tab == 'reading' %}
-
-            <div class="order-1 order-2--lg module__tools">
-
-                <div class="narrow margin-x-auto position-sticky-top">
-
-					<div class="tabs" role="tablist">
-
-						<nav class="button-group gap-1 font-size-md">
-
-							<button
-								class="button button--icon-only"
-								aria-label="In this module"
-								aria-controls="tab-panel-module__tools"
-								aria-selected="true"
-								role="tab">
-								<span class="icon icon-list" aria-hidden="true"></span>
-							</button>
-
-							<button
-								class="button button--has-icon flex-grow-1"
-								aria-controls="tab-panel-toggle-terms"
-								aria-selected="false"
-								role="tab">
-								<span class="icon icon-glossary-highlight"></span>
-								<span class="button__text">Glossary</span>
-							</button>
-
-							<button
-								class="button button--has-icon flex-grow-1"
-								aria-controls="tab-panel-toggle-ngss"
-								aria-selected="false"
-								role="tab">
-								<span class="icon icon-ngss"></span>
-								<span class="button__text">NGSS</span>
-							</button>
-
-						</nav>
-
-						<div
-							class="tabs__panel shown"
-							id="tab-panel-module__tools"
-							aria-labelledby="tab-button-module__tools"
-							role="tabpanel">
-
-							<p class="margin-y-2">
-								<strong>
-									<em>
-										Table of Contents
-									</em>
-								</strong>		
-							</p>
-
-							<div class="table-of-contents">
-								<ul>
-									<li>
-										<a href="{{ site.url }}/library/module/reading.html#toc_1">
-											Introduction
-										</a>
-									</li>
-									<li>
-										<a href="{{ site.url }}/library/module/reading.html#toc_1">
-											Evidence about Earth's interior
-										</a>
-									</li>
-									<li>
-										<a href="{{ site.url }}/library/module/reading.html#toc_2">
-											Seismic waves
-										</a>
-									</li>
-									<li>
-										<a href="{{ site.url }}/library/module/reading.html#toc_3">
-											The Moho
-										</a>
-									</li>
-									<li>
-										<a href="{{ site.url }}/library/module/reading.html#toc_4">
-											Shadow zones
-										</a>
-									</li>
-									<li>
-										<a href="{{ site.url }}/library/module/reading.html#toc_5">
-											The layers of Earth
-										</a>
-									</li>
-									<li>
-										<ul>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc2_1">
-													Compositional layers
-												</a>
-											</li>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc2_2">
-													Mechanical layers
-												</a>
-											</li>
-										</ul>
-									</li>
-								</ul>
+									<div 
+										class="audio-player__volume"
+										tabindex="0" 
+										aria-valuemin="0" 
+										aria-valuemax="100" 
+										aria-valuenow="100" 
+										aria-label="Use arrow keys to adjust volume"
+										role="slider" 
+									>
+										<div class="audio-player__volume__fill">
+											<span class="audio-player__thumb"></span>
+										</div>
+									</div>
+								
+								</div>
 
 							</div>
 
 						</div>
 
-						<div
-							class="tabs__panel"
-							id="tab-panel-toggle-terms"
-							aria-labelledby="tab-button-toggle-terms"
-							role="tabpanel">
 
-							<div class="reading-toggle">
+				{% endif %}
 
-								<div class="reading-toggle__description">								
-									<p>
+			</header>
+
+			<hr class="divider" />
+
+			<div class="grid grid--sidebar-right grid--divider">
+			
+				<div class="order-2 order-1--lg module__main">
+
+					{{ content }}
+
+				</div>
+
+				{% if page.tab == 'reading' %}
+
+				<div class="order-1 order-2--lg module__tools">
+
+					<div class="narrow margin-x-auto position-sticky-top">
+
+						<div class="tabs" role="tablist">
+
+							<nav class="button-group gap-1 font-size-md">
+
+								<button
+									class="button button--icon-only"
+									aria-label="In this module"
+									aria-controls="tab-panel-module__tools"
+									aria-selected="true"
+									role="tab">
+									<span class="icon icon-list" aria-hidden="true"></span>
+								</button>
+
+								<button
+									class="button button--has-icon flex-grow-1"
+									aria-controls="tab-panel-toggle-terms"
+									aria-selected="false"
+									role="tab">
+									<span class="icon icon-glossary-highlight"></span>
+									<span class="button__text">Glossary</span>
+								</button>
+
+								<button
+									class="button button--has-icon flex-grow-1"
+									aria-controls="tab-panel-toggle-ngss"
+									aria-selected="false"
+									role="tab">
+									<span class="icon icon-ngss"></span>
+									<span class="button__text">NGSS</span>
+								</button>
+
+							</nav>
+
+							<div
+								class="tabs__panel shown"
+								id="tab-panel-module__tools"
+								aria-labelledby="tab-button-module__tools"
+								role="tabpanel">
+
+								<p class="margin-y-2">
+									<strong>
 										<em>
-											Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
+											Table of Contents
 										</em>
-									</p>
-								</div>
+									</strong>		
+								</p>
 
-								<div class="form-entry__option__switch">
-
-									<label>
-										<input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch">
-										<span class="switch__slider"></span>
-										<span class="option__label text-decoration-none font-size-md">
-											Highlight Glossary Terms
-										</span>
-									</label>
+								<div class="table-of-contents">
+									<ul>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_1">
+												Introduction
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_1">
+												Evidence about Earth's interior
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_2">
+												Seismic waves
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_3">
+												The Moho
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_4">
+												Shadow zones
+											</a>
+										</li>
+										<li>
+											<a href="{{ site.url }}/library/module/reading.html#toc_5">
+												The layers of Earth
+											</a>
+										</li>
+										<li>
+											<ul>
+												<li>
+													<a href="{{ site.url }}/library/module/reading.html#toc2_1">
+														Compositional layers
+													</a>
+												</li>
+												<li>
+													<a href="{{ site.url }}/library/module/reading.html#toc2_2">
+														Mechanical layers
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
 
 								</div>
 
 							</div>
-							
-							<div class="term-def-container font-size-md"></div>
 
-						</div>
+							<div
+								class="tabs__panel"
+								id="tab-panel-toggle-terms"
+								aria-labelledby="tab-button-toggle-terms"
+								role="tabpanel">
 
-						<div
-							class="tabs__panel"
-							id="tab-panel-toggle-ngss"
-							aria-labelledby="tab-button-toggle-ngss"
-							role="tabpanel">
+								<div class="reading-toggle">
 
-							<div class="reading-toggle">
+									<div class="reading-toggle__description">								
+										<p>
+											<em>
+												Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
+											</em>
+										</p>
+									</div>
 
-								<div class="reading-toggle__description">								
-									<p>
-										<em>
-											Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
-										</em>
-									</p>
-								</div>
+									<div class="form-entry__option__switch">
 
-								<div class="form-entry__option__switch">
+										<label>
+											<input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch">
+											<span class="switch__slider"></span>
+											<span class="option__label text-decoration-none font-size-md">
+												Highlight Glossary Terms
+											</span>
+										</label>
 
-									<label>
-										<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
-										<span class="switch__slider"></span>
-										<span class="option__label text-decoration-none font-size-md">
-											Show NGSS Annotations
-										</span>
-									</label>
+									</div>
 
 								</div>
+								
+								<div class="term-def-container font-size-md"></div>
 
 							</div>
-							
-							<div class="ngss-desc-container font-size-md"></div>
+
+							<div
+								class="tabs__panel"
+								id="tab-panel-toggle-ngss"
+								aria-labelledby="tab-button-toggle-ngss"
+								role="tabpanel">
+
+								<div class="reading-toggle">
+
+									<div class="reading-toggle__description">								
+										<p>
+											<em>
+												Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
+											</em>
+										</p>
+									</div>
+
+									<div class="form-entry__option__switch">
+
+										<label>
+											<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
+											<span class="switch__slider"></span>
+											<span class="option__label text-decoration-none font-size-md">
+												Show NGSS Annotations
+											</span>
+										</label>
+
+									</div>
+
+								</div>
+								
+								<div class="ngss-desc-container font-size-md"></div>
+
+							</div>
 
 						</div>
 
@@ -328,12 +332,12 @@ layout: global
 
 				</div>
 
-            </div>
+				{% endif %}
 
-            {% endif %}
+			</div>
 
-        </div>
+		</article>
 
-	</article>
+	</div>
 
 </main>
