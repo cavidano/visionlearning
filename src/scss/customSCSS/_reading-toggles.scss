@@ -229,7 +229,7 @@ In this file:
 
         [class*="__switch"] {
             border-top: var(--border-width) var(--border-style) var(--border-color);
-            margin-block: var(--spacer-2);
+            margin-block-start: var(--spacer-2);
             label {
             font-size: var(--font-size-lg);
                 padding-block: var(--spacer-2);

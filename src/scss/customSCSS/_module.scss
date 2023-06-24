@@ -75,27 +75,6 @@ In this file:
         }
     }
 
-    // Module Tools
-
-    .module__tools {
-
-        .button-group {
-
-            button:not([aria-selected="true"]) {
-                color: var(--link-color);
-            }
-
-            button[aria-selected="true"] {
-                background-color: var(--link-color);
-                color: white;
-            }
-        }
-
-        .tabs__panel {
-            padding: var(--spacer-2);
-        }
-    }
-
     // Module Body
 
     .module__main {

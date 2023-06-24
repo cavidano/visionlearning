@@ -93,6 +93,7 @@ In this file:
 
         &:not(
             [class*="button--outline"],
+            [class*="button--icon-label"],
             [class*="theme-"],
             [class*="background-color"],
             [data-toggle="dropdown"]
@@ -107,7 +108,7 @@ In this file:
             opacity: var(--button-opacity-hover);
         }
 
-        &:not([class*="button--icon-only"]) {
+        &:not([class*="button--icon-only"]):not([class*="button--icon-label"]) {
             padding: var(--button-padding-y) var(--button-padding-x);
             font-weight: var(--button-font-weight);
         }
@@ -245,7 +246,7 @@ In this file:
 
         min-height: var(--button-icon-only-size);
 
-        > [class*="button"]:not(.button--icon-only) {
+        > [class*="button"]:not(.button--icon-only):not(.button--icon-label) {
             --button-padding-y: 0;
 
             align-self: stretch;

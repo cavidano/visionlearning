@@ -43,7 +43,7 @@ In this file:
         }
     }
 
-    .quiz__questions {
+    ol.quiz__questions {
         list-style: none;
         counter-reset: section;
         padding: unset;             
