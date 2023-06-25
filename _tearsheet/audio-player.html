@@ -21,74 +21,72 @@
 
 			<div class="margin-y-5">
 
-                <div class="container narrow">
-                
-                    <div class="audio-player">
+                <div class="audio-player narrow margin-x-auto border-radius box-shadow-1">
 
-                        <audio id="audio">
-                            <source src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
+                    <audio id="audio">
+                        <source src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
 
-                        <div class="audio-player__title">
-                            <p>Listen to this reading</p>
+                    <div class="audio-player__title">
+                        <p>Listen to this reading</p>
 
-                            <span class="audio-player__timestamp" id="timestamp">
-                                00:00
-                            </span>
+                        <span class="audio-player__timestamp" id="timestamp">
+                            00:00
+                        </span>
+                    </div>
+
+                    <div
+                        class="audio-player__controls"
+                        id="controls"
+                    >
+
+                        <button
+                            class="button button--icon-only"
+                            id="play-pause-button"
+                        >
+                            <span class="icon icon-play" aria-hidden="true"></span>
+                        </button>
+
+                        <div 
+                            class="audio-player__progress" 
+                            id="progress-bar" 
+                            tabindex="0"  
+                            aria-valuemin="0" 
+                            aria-valuemax="100" 
+                            aria-valuenow="0" 
+                            aria-label="Use arrow keys to forward or rewind the audio"
+                            role="slider"
+                        >
+                            <div class="audio-player__progress__fill">
+                                <span class="audio-player__thumb"></span>
+                            </div>
                         </div>
 
-                        <div
-                            class="audio-player__controls"
-                            id="controls"
-                        >
-
-                            <button
-                                class="button button--icon-only"
-                                id="play-pause-button"
-                            >
-                                <span class="icon icon-play" aria-hidden="true"></span>
+                        <div class="audio-player__volume-container">
+                            <button id="mute-button">
+                            
+                            <span class="icon icon-volume"></span>
                             </button>
 
                             <div 
-                                class="audio-player__progress" 
-                                id="progress-bar" 
-                                tabindex="0"  
+                                class="audio-player__volume"
+                                tabindex="0" 
                                 aria-valuemin="0" 
                                 aria-valuemax="100" 
-                                aria-valuenow="0" 
-                                aria-label="Use arrow keys to forward or rewind the audio"
-                                role="slider"
+                                aria-valuenow="100" 
+                                aria-label="Use arrow keys to adjust volume"
+                                role="slider" 
                             >
-                                <div class="audio-player__progress__fill">
+                                <div class="audio-player__volume__fill">
                                     <span class="audio-player__thumb"></span>
                                 </div>
                             </div>
-
-                            <div class="audio-player__volume-container">
-
-                                <span class="icon icon-volume"></span>
-
-                                <div 
-                                    class="audio-player__volume"
-                                    tabindex="0" 
-                                    aria-valuemin="0" 
-                                    aria-valuemax="100" 
-                                    aria-valuenow="100" 
-                                    aria-label="Use arrow keys to adjust volume"
-                                    role="slider" 
-                                >
-                                    <div class="audio-player__volume__fill">
-                                        <span class="audio-player__thumb"></span>
-                                    </div>
-                                </div>
-                            
-                            </div>
-
+                        
                         </div>
 
                     </div>
-                    
+
                 </div>
 
 			</div>
