@@ -98,13 +98,16 @@ export default class AudioPlayer {
 	};
 
 	#setVolumeLevel() {
+
+		console.log(this.#audio.volume);
+
 		const volumePercentage = this.#audio.volume * 100;
 		this.#volumeLevel.style.width = `${volumePercentage}%`;
 
 		const volumeThumb = this.#volumeLevel.querySelector('.audio-player__thumb');
 		volumeThumb.style.left = `${volumePercentage}%`;
 
-		const isMuted = this.#audio.volume === 0;
+		const isMuted = this.#audio.volume < 0.1;
 		const volumeIcon = this.#muteButton.querySelector('span.icon');
 
 		if (isMuted) {
@@ -194,9 +197,7 @@ export default class AudioPlayer {
 		this.#progress = document.querySelector('.audio-player__progress__fill');
 		this.#volumeSlider = document.querySelector('.audio-player__volume');
 		this.#muteButton = document.querySelector('#mute-button');
-		this.#volumeContainer = document.querySelector(
-			'.audio-player__volume-container'
-		);
+		this.#volumeContainer = document.querySelector('.audio-player__volume-container');
 		this.#volumeLevel = document.querySelector('.audio-player__volume__fill');
 		this.#timestamp = document.querySelector('#timestamp');
 
