@@ -30,7 +30,7 @@ const devPages = {
 
 const devDir = './_tearsheet';
 
-const devPage = `${devPages.Navigation}.html`;
+const devPage = `${devPages.AudioPlayer}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

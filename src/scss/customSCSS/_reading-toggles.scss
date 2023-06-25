@@ -321,8 +321,6 @@ In this file:
         }
     }
 
-    @include breakpoint.breakpoint-down(lg) {
-    
         .reading-toggle__detail {
             position: fixed;
             inset-block-start: var(--spacer-3);
@@ -333,6 +331,8 @@ In this file:
             z-index: 100000;
         
         }
+    @include breakpoint.breakpoint-down(lg) {
+    
 
     }
 

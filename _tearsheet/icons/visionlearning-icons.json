@@ -106,5 +106,7 @@
    "play": 61801,
    "science-research": 61802,
    "sign-in": 61803,
-   "sign-out": 61804
+   "sign-out": 61804,
+   "volume-mute": 61805,
+   "volume": 61806
 }

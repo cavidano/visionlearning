@@ -74,9 +74,9 @@ export default class AudioPlayer {
         const volumeThumb = this.#volumeLevel.querySelector('.audio-player__thumb');
         volumeThumb.style.left = `${volumePercentage}%`;
 
-        // if (this.#audio.volume <= 0.1) {
-        //     this.#toggleClasses(this.#volumeContainer.querySelector('span.icon'), 'icon-pronounciation', 'icon-home');
-        // }
+        if (this.#audio.volume <= 0.1) {
+            this.#toggleClasses(this.#volumeContainer.querySelector('span.icon'), 'icon-volume', 'icon-volume-mute');
+        }
     }
 
     #handleKeyDown(e) {

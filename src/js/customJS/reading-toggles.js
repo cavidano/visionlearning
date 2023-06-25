@@ -1,3 +1,5 @@
+import { handleOverlayOpen, handleOverlayClose } from '../utilities/overlay';
+
 export default class ReadingToggles {
 
 	#ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
@@ -21,6 +23,7 @@ export default class ReadingToggles {
 				item.remove();
 			});
 		}
+
 	};
 
 	handleNGSSClick = (ngss) => {

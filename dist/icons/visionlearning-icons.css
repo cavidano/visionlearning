@@ -1,8 +1,8 @@
 @font-face {
     font-family: "visionlearning-icons";
-    src: url("./visionlearning-icons.ttf?f6b925d0b25354384c5e8c9719e4cd72") format("truetype"),
-url("./visionlearning-icons.woff2?f6b925d0b25354384c5e8c9719e4cd72") format("woff2"),
-url("./visionlearning-icons.woff?f6b925d0b25354384c5e8c9719e4cd72") format("woff");
+    src: url("./visionlearning-icons.ttf?a830ba4d34900911c90630af9d9ba0ca") format("truetype"),
+url("./visionlearning-icons.woff2?a830ba4d34900911c90630af9d9ba0ca") format("woff2"),
+url("./visionlearning-icons.woff?a830ba4d34900911c90630af9d9ba0ca") format("woff");
 }
 
 .icon:before {
@@ -339,4 +339,10 @@ url("./visionlearning-icons.woff?f6b925d0b25354384c5e8c9719e4cd72") format("woff
 }
 .icon.icon-sign-out:before {
     content: "\f16c";
+}
+.icon.icon-volume-mute:before {
+    content: "\f16d";
+}
+.icon.icon-volume:before {
+    content: "\f16e";
 }
