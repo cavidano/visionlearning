@@ -61,6 +61,7 @@ export default class ReadingToggles {
 		let ngssDescContainerText = this.#ngssDescContainer.querySelector(
 			'.reading-toggle__detail'
 		);
+
 		setTimeout(() => {
 			ngssDescContainerText.classList.add('shown');
 		}, 20);
@@ -126,11 +127,13 @@ export default class ReadingToggles {
 
 	turnOffNGSS = () => {
 		this.#ngssToggleSwitch.checked = false;
+		
 		this.#ngssTextList.forEach((ngss) => {
 			ngss.classList.remove('highlighted');
 			ngss.setAttribute('tabindex', -1);
 			ngss.removeEventListener('click', () => this.handleNGSSClick(ngss), true);
 		});
+
 		this.removeOldDetails();
 	};
 
