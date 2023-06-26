@@ -72,73 +72,73 @@ layout: global
 
 				<div class="module_header_audio">
 
-					<div class="audio-player narrow margin-x-auto border-radius box-shadow-1">
+					<div class="audio-player border border-radius">
 
-                    <audio id="audio">
-                        <source src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
+						<audio id="audio">
+							<source src="https://www.visionlearning.com/img/library/moduleAudio/module_64.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
 
-                    <div class="audio-player__title">
-                        <p>Listen to this reading</p>
+						<div class="audio-player__title">
+							<p>Listen to this reading</p>
 
-                        <span class="audio-player__timestamp" id="timestamp">
-                            00:00
-                        </span>
-                    </div>
+							<span class="audio-player__timestamp" id="timestamp">
+								00:00
+							</span>
+						</div>
 
-                    <div
-                        class="audio-player__controls"
-                        id="controls"
-                    >
+						<div
+							class="audio-player__controls"
+							id="controls"
+						>
 
-                        <button
-                            class="button button--icon-only"
-                            id="play-pause-button"
-                        >
-                            <span class="icon icon-play" aria-hidden="true"></span>
-                        </button>
+							<button
+								class="button button--icon-only"
+								id="play-pause-button"
+							>
+								<span class="icon icon-play" aria-hidden="true"></span>
+							</button>
 
-                        <div 
-                            class="audio-player__progress" 
-                            id="progress-bar" 
-                            tabindex="0"  
-                            aria-valuemin="0" 
-                            aria-valuemax="100" 
-                            aria-valuenow="0" 
-                            aria-label="Use arrow keys to forward or rewind the audio"
-                            role="slider"
-                        >
-                            <div class="audio-player__progress__fill">
-                                <span class="audio-player__thumb"></span>
-                            </div>
-                        </div>
+							<div 
+								class="audio-player__progress" 
+								id="progress-bar" 
+								tabindex="0"  
+								aria-valuemin="0" 
+								aria-valuemax="100" 
+								aria-valuenow="0" 
+								aria-label="Use arrow keys to forward or rewind the audio"
+								role="slider"
+							>
+								<div class="audio-player__progress__fill">
+									<span class="audio-player__thumb"></span>
+								</div>
+							</div>
 
-                        <div class="audio-player__volume-container">
-                            <button id="mute-button">
-                            
-                            <span class="icon icon-volume"></span>
-                            </button>
+							<div class="audio-player__volume-container">
+								<button id="mute-button">
+								
+								<span class="icon icon-volume"></span>
+								</button>
 
-                            <div 
-                                class="audio-player__volume"
-                                tabindex="0" 
-                                aria-valuemin="0" 
-                                aria-valuemax="100" 
-                                aria-valuenow="100" 
-                                aria-label="Use arrow keys to adjust volume"
-                                role="slider" 
-                            >
-                                <div class="audio-player__volume__fill">
-                                    <span class="audio-player__thumb"></span>
-                                </div>
-                            </div>
-                        
-                        </div>
+								<div 
+									class="audio-player__volume"
+									tabindex="0" 
+									aria-valuemin="0" 
+									aria-valuemax="100" 
+									aria-valuenow="100" 
+									aria-label="Use arrow keys to adjust volume"
+									role="slider" 
+								>
+									<div class="audio-player__volume__fill">
+										<span class="audio-player__thumb"></span>
+									</div>
+								</div>
+							
+							</div>
 
-                    </div>
+						</div>
 
-                </div>
+					</div>
 				
 				</div>
 
@@ -162,7 +162,7 @@ layout: global
 
 					<div class="narrow margin-x-auto position-sticky-top font-size-md">
 
-						<div class="padding-2 border-radius box-shadow-1">
+						<div class="padding-2 border-radius box-shadow-1--lg">
 						
 							<div class="tabs" role="tablist">
 
@@ -173,17 +173,18 @@ layout: global
 										aria-label="In this module"
 										aria-controls="tab-panel-module__tools"
 										aria-selected="true"
-										role="tab">
+										role="tab"
+									>
 										<span class="icon icon-list" aria-hidden="true"></span>
 										<span class="button__text">Contents</span>
-
 									</button>
 
 									<button
 										class="button button--icon-label"
 										aria-controls="tab-panel-toggle-terms"
 										aria-selected="false"
-										role="tab">
+										role="tab"
+									>
 										<span class="icon icon-glossary-highlight"></span>
 										<span class="button__text">Glossary Terms</span>
 									</button>
@@ -192,7 +193,8 @@ layout: global
 										class="button button--icon-label"
 										aria-controls="tab-panel-toggle-ngss"
 										aria-selected="false"
-										role="tab">
+										role="tab"
+									>
 										<span class="icon icon-ngss"></span>
 										<span class="button__text">NGSS</span>
 									</button>
@@ -278,7 +280,7 @@ layout: global
 										<div class="reading-toggle__description">								
 											<p>
 												<em>
-													Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
+													Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions.
 												</em>
 											</p>
 										</div>
@@ -296,8 +298,6 @@ layout: global
 										</div>
 
 									</div>
-									
-									<div class="term-def-container font-size-md"></div>
 
 								</div>
 
@@ -316,7 +316,7 @@ layout: global
 										<div class="reading-toggle__description">								
 											<p>
 												<em>
-													Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
+													Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards.
 												</em>
 											</p>
 										</div>
@@ -335,8 +335,6 @@ layout: global
 
 									</div>
 									
-									<div class="ngss-desc-container font-size-md"></div>
-
 								</div>
 
 							</div>
