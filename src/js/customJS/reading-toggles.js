@@ -2,105 +2,119 @@ import { handleOverlayOpen, handleOverlayClose } from '../utilities/overlay';
 
 export default class ReadingToggles {
 
-	#ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
-	#ngssTextList = document.querySelectorAll('.ngss');
-	#ngssDescContainer = document.querySelector('.ngss-desc-container');
+  // Private properties
 
-	#termsToggleSwitch = document.getElementById('terms-toggle-switch');
-	#termsList = document.querySelectorAll('.term');
-	#termDefContainer = document.querySelector('.term-def-container');
+  #ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
+  #ngssTextList = document.querySelectorAll('.ngss');
+  #ngssDescContainer = document.querySelector('.ngss-desc-container');
+  #termsToggleSwitch = document.getElementById('terms-toggle-switch');
+  #termsList = document.querySelectorAll('.term');
 
-	#closeButton = `
-		<button class="button button--icon-only" aria-label="Remove">
-			<span class="icon icon-close" aria-hidden="true"></span>
-		</button>
-	`;
+  #closeButton = `
+    <button class="button button--icon-only" aria-label="Remove">
+      <span class="icon icon-close" aria-hidden="true"></span>
+    </button>
+  `;
 
+  #ngssDescHTML = `
+    <div class="reading-toggle-overlay">
+      <article class="reading-toggle__detail" aria-polite="live" data-ngss-cat="{{ngssCat}}">
+        <div class="reading-toggle__detail__head">
+          {{ngssCat}}
+          ${this.#closeButton}
+        </div>
+        <div class="reading-toggle__detail__body">
+          <p>
+            {{ngssCom ? ngssCom : ngssDesc}}
+          </p>
+        </div>
+      </article>
+    </div>
+  `;
 
-	removeOldDetails = () => {
-		let oldDetailList = document.querySelectorAll('.reading-toggle__detail');
-		if (oldDetailList.length > 0) {
-			oldDetailList.forEach((item) => item.remove());
-		}
-	};
+  #termDefHTML = `
+  <div class="reading-toggle-overlay">
+    <article class="reading-toggle__detail glossary-term" aria-polite="live" data-term-definition>
+      <div class="reading-toggle__detail__head">
+        <h2 class="h6">
+          ${'{{termTitle}}'}
+        </h2>
+        ${this.#closeButton}
+      </div>
+      <div class="reading-toggle__detail__body">
+        <p>
+          ${'{{termDef ? termDef : "That is not good."}}'}
+        </p>
+        <p>
+          <a href="${'{{termUrl ? termUrl : "#1"}}'}">
+            View in Glossary
+          </a>
+        </p>
+      </div>
+    </article>
+  </div>
+  `;
 
-	handleNGSSClick = (ngss) => {
-		const ngssCat = ngss.getAttribute('data-ngss-cat');
-		const ngssCom = ngss.getAttribute('data-ngss-comment');
-		const ngssDesc = ngss.getAttribute('data-ngss-desc');
+  removeOldDetails = () => {
+    let oldDetailList = document.querySelectorAll('.reading-toggle__detail');
+    if (oldDetailList.length > 0) {
+      oldDetailList.forEach((item) => {
+        item.remove();
+      });
+    }
+  };
 
-		this.removeOldDetails();
+  handleClose = () => {
+    let overlay = document.querySelector('.reading-toggle-overlay');
+    this.removeOldDetails();
+    overlay.remove();
+  };
 
-		const ngssDescHTML = `
-			<article class="reading-toggle__detail" aria-polite="live" data-ngss-cat="${ngssCat}">
-			<div class="reading-toggle__detail__head">
-				${ngssCat}
-				${this.#closeButton}
-			</div>
-			<div class="reading-toggle__detail__body">
-				<p>
-				${ngssCom ? ngssCom : ngssDesc}
-				</p>
-			</div>
-			</article>
-		`;
+  handleNGSSClick = (ngss) => {
+    const ngssCat = ngss.getAttribute('data-ngss-cat');
+    const ngssCom = ngss.getAttribute('data-ngss-comment');
+    const ngssDesc = ngss.getAttribute('data-ngss-desc');
 
-		this.#ngssDescContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
+    this.removeOldDetails();
 
-		let closeButton = this.#ngssDescContainer.querySelector('.button--icon-only');
-		closeButton.addEventListener('click', this.removeOldDetails);
+    const ngssDescHTML = this.#ngssDescHTML
+      .replace(/{{ngssCat}}/g, ngssCat)
+      .replace('{{ngssCom ? ngssCom : ngssDesc}}', ngssCom ? ngssCom : ngssDesc);
 
-		let ngssDescContainerText = this.#ngssDescContainer.querySelector('.reading-toggle__detail');
+    this.#ngssDescContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
 
-		setTimeout(() => {
-			ngssDescContainerText.classList.add('shown');
-		}, 20);
-	};
+    let closeButton = this.#ngssDescContainer.querySelector('.button--icon-only');
+    closeButton.addEventListener('click', this.handleClose);
 
-	handleTermClick = (term) => {
+  };
 
-		const termTitle = term.innerHTML.toString();
-		const termDef = term.getAttribute('data-term-def');
-		const termUrl = term.getAttribute('data-term-url');
+  handleTermClick = (term) => {
+  
+    const termTitle = term.innerHTML.toString();
+    const termDef = term.getAttribute('data-term-def');
+    const termUrl = term.getAttribute('data-term-url');
 
-		this.removeOldDetails();
+    this.removeOldDetails();
 
-		const termDefHTML = `
-			<article class="reading-toggle__detail glossary-term" aria-polite="live" data-term-definition>
-			<div class="reading-toggle__detail__head">
-				<h2 class="h6">
-				${termTitle}
-				</h2>
-				${this.#closeButton}
-			</div>
-			<div class="reading-toggle__detail__body">
-				<p>
-				${termDef ? termDef : 'That is not good.'}
-				</p>
-				<p>
-				<a href="${termUrl ? termUrl : '#1'}">
-					View in Glossary
-				</a>
-				</p>
-			</div>
-			</article>
-		`;
+    const termDefHTML = this.#termDefHTML
+      .replace(/{{termTitle}}/g, termTitle)
+      .replace('{{termDef ? termDef : "That is not good."}}', termDef ? termDef : 'That is not good.')
+      .replace('{{termUrl ? termUrl : "#1"}}', termUrl ? termUrl : '#1');
 
-		this.#termDefContainer.insertAdjacentHTML('beforeend', termDefHTML);
+    document.body.insertAdjacentHTML('beforeend', termDefHTML);
 
-		let closeButton = this.#termDefContainer.querySelector('.button--icon-only');
-		closeButton.addEventListener('click', this.removeOldDetails);
+    const termDefContainer = document.querySelector('[data-term-definition]');
 
-		let termDefContainerText = this.#termDefContainer.querySelector('.reading-toggle__detail');
-		setTimeout(() => {
-			termDefContainerText.classList.add('shown');
-		}, 20);
-	};
+    let closeButton = termDefContainer.querySelector('.button--icon-only');
+    closeButton.addEventListener('click', this.handleClose);
+
+  };
 
   turnOnNGSS = () => {
     this.#ngssTextList.forEach((ngss, index) => {
       ngss.classList.add('highlighted');
       ngss.setAttribute('tabindex', index + 1);
+
       ngss.addEventListener('click', () => this.handleNGSSClick(ngss), true);
     });
   };
