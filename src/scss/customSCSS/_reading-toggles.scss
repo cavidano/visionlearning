@@ -18,17 +18,17 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --practices-hue: 240;
-    --practices-saturation: 75%;
-    --practices-lightness: 30%;
+    --ngss-sep-hue: 240;
+    --ngss-sep-saturation: 75%;
+    --ngss-sep-lightness: 30%;
 
-    --crosscutting-hue: 120;
-    --crosscutting-saturation: 60%;
-    --crosscutting-lightness: 40%;
+    --ngss-cc-hue: 120;
+    --ngss-cc-saturation: 60%;
+    --ngss-cc-lightness: 40%;
 
-    --core-ideas-hue: 25;
-    --core-ideas-saturation: 75%;
-    --core-ideas-lightness: 50%;
+    --ngss-dci-hue: 25;
+    --ngss-dci-saturation: 75%;
+    --ngss-dci-lightness: 50%;
 
     --term-highlight-hue: 123;
     --term-highlight-saturation:43%;
@@ -55,30 +55,30 @@ In this file:
         );
 
         // Practices
-        --practices-alpha: 0.2;
+        --ngss-sep-alpha: 0.2;
         --ngss-practices: hsla(
-            var(--practices-hue),
-            var(--practices-saturation),
-            var(--practices-lightness),
-            var(--practices-alpha)
+            var(--ngss-sep-hue),
+            var(--ngss-sep-saturation),
+            var(--ngss-sep-lightness),
+            var(--ngss-sep-alpha)
         );
 
         // Crosscutting
-        --crosscutting-alpha: 0.2;
+        --ngss-cc-alpha: 0.2;
         --ngss-crosscutting: hsla(
-            var(--crosscutting-hue),
-            var(--crosscutting-saturation),
-            var(--crosscutting-lightness),
-            var(--crosscutting-alpha)
+            var(--ngss-cc-hue),
+            var(--ngss-cc-saturation),
+            var(--ngss-cc-lightness),
+            var(--ngss-cc-alpha)
         );
 
         // Core Ideas
-        --core-ideas-alpha: 0.2;
+        --ngss-dci-alpha: 0.2;
         --ngss-core-ideas: hsla(
-            var(--core-ideas-hue),
-            var(--core-ideas-saturation),
-            var(--core-ideas-lightness),
-            var(--core-ideas-alpha)
+            var(--ngss-dci-hue),
+            var(--ngss-dci-saturation),
+            var(--ngss-dci-lightness),
+            var(--ngss-dci-alpha)
         );
 
         padding-block: 0.075em;
@@ -121,37 +121,37 @@ In this file:
     mark.ngss.highlighted {
         position: relative;
         
-        &[data-ngss-cat*="Practices"] {
+        &[data-ngss-cat-abbr*="SEP"] {
             outline-color:
                 hsla(
-                    var(--practices-hue),
-                    var(--practices-saturation),
-                    var(--practices-lightness),
-                    calc(var(--practices-alpha)*2)
+                    var(--ngss-sep-hue),
+                    var(--ngss-sep-saturation),
+                    var(--ngss-sep-lightness),
+                    calc(var(--ngss-sep-alpha)*2)
                 );
             
             background-color: var(--ngss-practices);
         }
 
-        &[data-ngss-cat*="Crosscutting"] {
+        &[data-ngss-cat-abbr*="CC"] {
             outline-color:
                 hsla(
-                    var(--crosscutting-hue),
-                    var(--crosscutting-saturation),
-                    var(--crosscutting-lightness),
-                    calc(var(--crosscutting-alpha)*2)
+                    var(--ngss-cc-hue),
+                    var(--ngss-cc-saturation),
+                    var(--ngss-cc-lightness),
+                    calc(var(--ngss-cc-alpha)*2)
                 );
             
             background-color: var(--ngss-crosscutting);
         }
 
-        &[data-ngss-cat*="Core Ideas"] {
+        &[data-ngss-cat-abbr*="DCI"] {
             outline-color:
                 hsla(
-                    var(--core-ideas-hue),
-                    var(--core-ideas-saturation),
-                    var(--core-ideas-lightness),
-                    calc(var(--core-ideas-alpha)*2)
+                    var(--ngss-dci-hue),
+                    var(--ngss-dci-saturation),
+                    var(--ngss-dci-lightness),
+                    calc(var(--ngss-dci-alpha)*2)
                 );
             
             background-color: var(--ngss-core-ideas);
@@ -179,40 +179,40 @@ In this file:
 
             transition: opacity 0.125s ease-in;
 
-            content: attr(data-ngss-cat);
+            content: attr(data-ngss-cat-abbr);
 
             white-space: nowrap;
         }
         
-        &[data-ngss-cat*="Practices"]::before {
+        &[data-ngss-cat-abbr*="SEP"]::before {
             background-color: hsl(
-                var(--practices-hue) 
-                var(--practices-saturation)
-                var(--practices-lightness)
+                var(--ngss-sep-hue) 
+                var(--ngss-sep-saturation)
+                var(--ngss-sep-lightness)
             );
         }
 
-        &[data-ngss-cat*="Crosscutting"]::before {
+        &[data-ngss-cat-abbr*="CC"]::before {
             background-color: hsl(
-                var(--crosscutting-hue) 
-                var(--crosscutting-saturation)
-                var(--crosscutting-lightness)
+                var(--ngss-cc-hue) 
+                var(--ngss-cc-saturation)
+                var(--ngss-cc-lightness)
             );
         }
 
-        &[data-ngss-cat*="Core Ideas"]::before {
+        &[data-ngss-cat-abbr*="DCI"]::before {
             background-color: hsl(
-                var(--core-ideas-hue) 
-                var(--core-ideas-saturation)
-                var(--core-ideas-lightness)
+                var(--ngss-dci-hue) 
+                var(--ngss-dci-saturation)
+                var(--ngss-dci-lightness)
             );
         }
 
         &:hover, 
         &:focus {
-            --practices-alpha: 0.375;
-            --crosscutting-alpha: 0.375;
-            --core-ideas-alpha: 0.375;
+            --ngss-sep-alpha: 0.375;
+            --ngss-cc-alpha: 0.375;
+            --ngss-dci-alpha: 0.375;
 
             &::before {
                 opacity: 1;
@@ -301,27 +301,27 @@ In this file:
 
         }
 
-        &[data-ngss-cat*="Practices"]{
+        &[data-ngss-cat-abbr*="SEP"]{
             background-color: hsl(
-                var(--practices-hue) 
-                var(--practices-saturation)
-                var(--practices-lightness)
+                var(--ngss-sep-hue) 
+                var(--ngss-sep-saturation)
+                var(--ngss-sep-lightness)
             );
         }
 
-        &[data-ngss-cat*="Crosscutting"]{
+        &[data-ngss-cat-abbr*="CC"]{
             background-color: hsl(
-                var(--crosscutting-hue) 
-                var(--crosscutting-saturation)
-                var(--crosscutting-lightness)
+                var(--ngss-cc-hue) 
+                var(--ngss-cc-saturation)
+                var(--ngss-cc-lightness)
             );
         }
 
-        &[data-ngss-cat*="Core Ideas"]{
+        &[data-ngss-cat-abbr*="DCI"]{
             background-color: hsl(
-                var(--core-ideas-hue) 
-                var(--core-ideas-saturation)
-                var(--core-ideas-lightness)
+                var(--ngss-dci-hue) 
+                var(--ngss-dci-saturation)
+                var(--ngss-dci-lightness)
             );
         }
 

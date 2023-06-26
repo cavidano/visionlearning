@@ -11,96 +11,96 @@ export default class ReadingToggles {
 	#termsList = document.querySelectorAll('.term');
 
 	#closeButton = `
-    <button class="button button--icon-only" data-close-btn>
-      <span class="icon icon-close" aria-hidden="true"></span>
-    </button>
-  `;
+		<button class="button button--icon-only" data-close-btn>
+		<span class="icon icon-close" aria-hidden="true"></span>
+		</button>
+	`;
 
-  removeOldDetails = () => {
-    let oldOverlay = document.querySelector('.reading-toggle-overlay');
-    if (oldOverlay) {
-      oldOverlay.remove();
-    }
-  };
+	removeOldDetails = () => {
+		let oldOverlay = document.querySelector('.reading-toggle-overlay');
+		if (oldOverlay) {
+			oldOverlay.remove();
+		}
+	};
 
-  handleClose = () => {
-    let closeButton = document.querySelector('[data-close-btn]');
-    handleOverlayClose();
-    if (closeButton) {
-      closeButton.removeEventListener('click', this.handleClose);
-    }
-    this.removeOldDetails();
-  };
+	handleClose = () => {
+		let closeButton = document.querySelector('[data-close-btn]');
+		handleOverlayClose();
+		if (closeButton) {
+			closeButton.removeEventListener('click', this.handleClose);
+		}
+		this.removeOldDetails();
+	};
 
 	handleOverlayClick = (htmlTemplate) => {
 		this.removeOldDetails();
 		document.body.insertAdjacentHTML('beforeend', htmlTemplate);
 
-    handleOverlayOpen(document.querySelector('.reading-toggle-overlay'));
-  
-    let closeButton = document.querySelector('[data-close-btn]');
-			if (closeButton) {
-				closeButton.addEventListener('click', this.handleClose);
-			}
+		handleOverlayOpen(document.querySelector('.reading-toggle-overlay'));
+
+		let closeButton = document.querySelector('[data-close-btn]');
+		if (closeButton) {
+			closeButton.addEventListener('click', this.handleClose);
+		}
 	};
 
 	handleNGSSClick = (ngss) => {
-		const ngssCat = ngss.getAttribute('data-ngss-cat');
-		const ngssDesc = ngss.getAttribute('data-ngss-desc');
+		const ngssCatAbbr = ngss.getAttribute('data-ngss-cat-abbr') || 'NGSS';
+		const ngssCat = ngss.getAttribute('data-ngss-cat-full') || 'Title not found';
+		const ngssDesc = ngss.getAttribute('data-ngss-desc') || 'Description not found';
 
 		const ngssDescHTML = `
-      <div class="reading-toggle-overlay">
-        <article class="reading-toggle__detail" aria-polite="live" data-ngss-cat="${ngssCat}">
-          <div class="reading-toggle__detail__head">
-            ${ngssCat}
-            ${this.#closeButton}
-          </div>
-          <div class="reading-toggle__detail__body">
-            <p>
-              ${ngssDesc}
-            </p>
-          </div>
-        </article>
-      </div>
-    `;
+			<div class="reading-toggle-overlay">
+				<article class="reading-toggle__detail" aria-polite="live" data-ngss-cat-abbr="${ngssCatAbbr}">
+				<div class="reading-toggle__detail__head">
+					${ngssCat}
+					${this.#closeButton}
+				</div>
+				<div class="reading-toggle__detail__body">
+					<p>
+					${ngssDesc}
+					</p>
+				</div>
+				</article>
+			</div>
+		`;
 
 		this.handleOverlayClick(ngssDescHTML);
 	};
 
 	handleTermClick = (term) => {
-
 		const termTitle = term.innerHTML.toString();
-	
-  	const termDef = term.getAttribute('data-term-def')
+
+		const termDef = term.getAttribute('data-term-def')
 			? term.getAttribute('data-term-def')
 			: 'Title not found';
-	
-  	const termUrl = term.getAttribute('data-term-url')
+
+		const termUrl = term.getAttribute('data-term-url')
 			? term.getAttribute('data-term-url')
 			: '#1';
 
 		const termDefHTML = `
-      <div class="reading-toggle-overlay">
-        <article class="reading-toggle__detail glossary-term" aria-polite="live" data-term-definition>
-          <div class="reading-toggle__detail__head">
-            <h2 class="h6">
-              ${termTitle}
-            </h2>
-            ${this.#closeButton}
-          </div>
-          <div class="reading-toggle__detail__body">
-            <p>
-              ${termDef}
-            </p>
-            <p>
-              <a href="${termUrl}">
-                View in Glossary
-              </a>
-            </p>
-          </div>
-        </article>
-      </div>
-    `;
+			<div class="reading-toggle-overlay">
+				<article class="reading-toggle__detail glossary-term" aria-polite="live" data-term-definition>
+				<div class="reading-toggle__detail__head">
+					<h2 class="h6">
+					${termTitle}
+					</h2>
+					${this.#closeButton}
+				</div>
+				<div class="reading-toggle__detail__body">
+					<p>
+					${termDef}
+					</p>
+					<p>
+					<a href="${termUrl}">
+						View in Glossary
+					</a>
+					</p>
+				</div>
+				</article>
+			</div>
+		`;
 
 		this.handleOverlayClick(termDefHTML);
 	};
@@ -145,7 +145,6 @@ export default class ReadingToggles {
 	};
 
 	init = () => {
-
 		if (this.#termsToggleSwitch) {
 			this.#termsToggleSwitch.addEventListener('change', (e) => {
 				const highlightTerms = e.target.checked;
@@ -174,5 +173,4 @@ export default class ReadingToggles {
 			});
 		}
 	};
-
 }
