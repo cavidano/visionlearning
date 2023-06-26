@@ -1,23 +1,22 @@
 import { handleOverlayOpen, handleOverlayClose } from '../utilities/overlay';
 
 export default class ReadingToggles {
+	// Private properties
 
-  // Private properties
+	#ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
+	#ngssTextList = document.querySelectorAll('.ngss');
+	#ngssDescContainer = document.querySelector('.ngss-desc-container');
 
-  #ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
-  #ngssTextList = document.querySelectorAll('.ngss');
-  #ngssDescContainer = document.querySelector('.ngss-desc-container');
+	#termsToggleSwitch = document.getElementById('terms-toggle-switch');
+	#termsList = document.querySelectorAll('.term');
 
-  #termsToggleSwitch = document.getElementById('terms-toggle-switch');
-  #termsList = document.querySelectorAll('.term');
-
-  #closeButton = `
-    <button class="button button--icon-only" aria-label="Remove">
+	#closeButton = `
+    <button class="button button--icon-only" data-close-btn>
       <span class="icon icon-close" aria-hidden="true"></span>
     </button>
   `;
 
-  #ngssDescHTML = `
+	#ngssDescHTML = `
     <div class="reading-toggle-overlay">
       <article class="reading-toggle__detail" aria-polite="live" data-ngss-cat="{{ngssCat}}">
         <div class="reading-toggle__detail__head">
@@ -33,7 +32,7 @@ export default class ReadingToggles {
     </div>
   `;
 
-  #termDefHTML = `
+	#termDefHTML = `
   <div class="reading-toggle-overlay">
     <article class="reading-toggle__detail glossary-term" aria-polite="live" data-term-definition>
       <div class="reading-toggle__detail__head">
@@ -56,126 +55,128 @@ export default class ReadingToggles {
   </div>
   `;
 
-  removeOldDetails = () => {
-    let oldDetailList = document.querySelectorAll('.reading-toggle__detail');
-    if (oldDetailList.length > 0) {
-      oldDetailList.forEach((item) => {
-        item.remove();
-      });
+	removeOldDetails = () => {
+		let oldDetailList = document.querySelectorAll('.reading-toggle__detail');
+		if (oldDetailList.length > 0) {
+			oldDetailList.forEach((item) => {
+				item.remove();
+			});
+		}
+	};
+
+	handleClose = () => {
+		this.removeOldDetails();
+		let overlay = document.querySelector('.reading-toggle-overlay');
+		overlay.remove();
+	};
+
+	handleOverlayClick = (htmlTemplate, replacements) => {
+  this.removeOldDetails();
+  let replacedHTML = htmlTemplate;
+  for (const [key, value] of Object.entries(replacements)) {
+    replacedHTML = replacedHTML.replace(key, value);
+  }
+  document.body.insertAdjacentHTML('beforeend', replacedHTML);
+
+  setTimeout(() => {
+    let closeButton = document.querySelector('[data-close-btn]');
+    if (closeButton) {
+      closeButton.addEventListener('click', this.handleClose);
     }
-  };
+  }, 0);
+};
 
-  handleClose = () => {
-    let overlay = document.querySelector('.reading-toggle-overlay');
-    this.removeOldDetails();
-    overlay.remove();
-  };
+	handleNGSSClick = (ngss) => {
+		const ngssCat = ngss.getAttribute('data-ngss-cat');
+		const ngssCom = ngss.getAttribute('data-ngss-comment');
+		const ngssDesc = ngss.getAttribute('data-ngss-desc');
 
-  handleNGSSClick = (ngss) => {
-    const ngssCat = ngss.getAttribute('data-ngss-cat');
-    const ngssCom = ngss.getAttribute('data-ngss-comment');
-    const ngssDesc = ngss.getAttribute('data-ngss-desc');
+		this.handleOverlayClick(
+			this.#ngssDescHTML,
+			{
+				'{{ngssCat}}': ngssCat,
+				'{{ngssCom ? ngssCom : ngssDesc}}': ngssCom ? ngssCom : ngssDesc,
+			}
+		);
+	};
 
-    this.removeOldDetails();
-
-    const ngssDescHTML = this.#ngssDescHTML
-      .replace(/{{ngssCat}}/g, ngssCat)
-      .replace('{{ngssCom ? ngssCom : ngssDesc}}', ngssCom ? ngssCom : ngssDesc);
-
-    document.body.insertAdjacentHTML('beforeend', ngssDescHTML);
-
-    let closeButton = this.#ngssDescContainer.querySelector('.button--icon-only');
-    closeButton.addEventListener('click', this.handleClose);
-
-  };
-
-  handleTermClick = (term) => {
-  
+	handleTermClick = (term) => {
     const termTitle = term.innerHTML.toString();
     const termDef = term.getAttribute('data-term-def');
     const termUrl = term.getAttribute('data-term-url');
 
-    this.removeOldDetails();
-
-    const termDefHTML = this.#termDefHTML
-      .replace(/{{termTitle}}/g, termTitle)
-      .replace('{{termDef ? termDef : "That is not good."}}', termDef ? termDef : 'That is not good.')
-      .replace('{{termUrl ? termUrl : "#1"}}', termUrl ? termUrl : '#1');
-
-    document.body.insertAdjacentHTML('beforeend', termDefHTML);
-
-    const termDefContainer = document.querySelector('[data-term-definition]');
-
-    let closeButton = termDefContainer.querySelector('.button--icon-only');
-    closeButton.addEventListener('click', this.handleClose);
-
-  };
-
-  turnOnNGSS = () => {
-    this.#ngssTextList.forEach((ngss, index) => {
-      ngss.classList.add('highlighted');
-      ngss.setAttribute('tabindex', index + 1);
-
-      ngss.addEventListener('click', () => this.handleNGSSClick(ngss), true);
+    this.handleOverlayClick(this.#termDefHTML, {
+      '{{termTitle}}': termTitle,
+      '{{termDef ? termDef : "That is not good."}}': termDef ? termDef : 'That is not good.',
+      '{{termUrl ? termUrl : "#1"}}': termUrl ? termUrl : '#1'
     });
-  };
+};
 
-  turnOffNGSS = () => {
-    this.#ngssToggleSwitch.checked = false;
-    this.#ngssTextList.forEach((ngss) => {
-      ngss.classList.remove('highlighted');
-      ngss.setAttribute('tabindex', -1);
-      ngss.removeEventListener('click', () => this.handleNGSSClick(ngss), true);
-    });
+	turnOnNGSS = () => {
+		this.#ngssTextList.forEach((ngss, index) => {
+			ngss.classList.add('highlighted');
+			ngss.setAttribute('tabindex', index + 1);
 
-    this.removeOldDetails();
-  };
+			ngss.addEventListener('click', () => this.handleNGSSClick(ngss), true);
+		});
+	};
 
-  turnOnTerms = () => {
-    this.#termsList.forEach((term, index) => {
-      term.classList.add('highlighted');
-      term.setAttribute('tabindex', index + 1);
-      term.addEventListener('click', () => this.handleTermClick(term));
-    });
-  };
+	turnOffNGSS = () => {
+		this.#ngssToggleSwitch.checked = false;
+		this.#ngssTextList.forEach((ngss) => {
+			ngss.classList.remove('highlighted');
+			ngss.setAttribute('tabindex', -1);
+			ngss.removeEventListener('click', () => this.handleNGSSClick(ngss), true);
+		});
 
-  turnOffTerms = () => {
-    this.#termsToggleSwitch.checked = false;
-    this.#termsList.forEach((term) => {
-      term.classList.remove('highlighted');
-      term.setAttribute('tabindex', -1);
-      term.removeEventListener('click', () => this.handleTermClick(term));
-    });
-    this.removeOldDetails();
-  };
+		this.removeOldDetails();
+	};
 
-  init = () => {
-    if (this.#termsToggleSwitch) {
-      this.#termsToggleSwitch.addEventListener('change', (e) => {
-        const highlightTerms = e.target.checked;
-        if (highlightTerms === true) {
-          if (this.#ngssToggleSwitch.checked === true) {
-            this.turnOffNGSS();
-          }
-          this.turnOnTerms();
-        } else {
-          this.turnOffTerms();
-        }
-      });
-    }
+	turnOnTerms = () => {
+		this.#termsList.forEach((term, index) => {
+			term.classList.add('highlighted');
+			term.setAttribute('tabindex', index + 1);
+			term.addEventListener('click', () => this.handleTermClick(term));
+		});
+	};
 
-    if (this.#ngssToggleSwitch) {
-      this.#ngssToggleSwitch.addEventListener('change', (e) => {
-        const highlightNGSS = e.target.checked;
-        if (highlightNGSS === true) {
-          if (this.#termsToggleSwitch.checked === true) {
-            this.turnOffTerms();
-          }
-          this.turnOnNGSS();
-        } else {
-          this.turnOffNGSS();
-        }
-      });
-    }
-  };
+	turnOffTerms = () => {
+		this.#termsToggleSwitch.checked = false;
+		this.#termsList.forEach((term) => {
+			term.classList.remove('highlighted');
+			term.setAttribute('tabindex', -1);
+			term.removeEventListener('click', () => this.handleTermClick(term));
+		});
+		this.removeOldDetails();
+	};
+
+	init = () => {
+		if (this.#termsToggleSwitch) {
+			this.#termsToggleSwitch.addEventListener('change', (e) => {
+				const highlightTerms = e.target.checked;
+				if (highlightTerms === true) {
+					if (this.#ngssToggleSwitch.checked === true) {
+						this.turnOffNGSS();
+					}
+					this.turnOnTerms();
+				} else {
+					this.turnOffTerms();
+				}
+			});
+		}
+
+		if (this.#ngssToggleSwitch) {
+			this.#ngssToggleSwitch.addEventListener('change', (e) => {
+				const highlightNGSS = e.target.checked;
+				if (highlightNGSS === true) {
+					if (this.#termsToggleSwitch.checked === true) {
+						this.turnOffTerms();
+					}
+					this.turnOnNGSS();
+				} else {
+					this.turnOffNGSS();
+				}
+			});
+		}
+	};
 }
