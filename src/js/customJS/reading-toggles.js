@@ -4,6 +4,8 @@ export default class ReadingToggles {
 
 	// Private properties
 
+	#readingToggleOverlay;
+
 	#ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
 	#ngssTextList = document.querySelectorAll('.ngss');
 
@@ -17,7 +19,7 @@ export default class ReadingToggles {
 	`;
 
 	removeOldDetails = () => {
-		let oldOverlay = document.querySelector('.reading-toggle-overlay');
+		let oldOverlay = this.#readingToggleOverlay;
 		if (oldOverlay) {
 			oldOverlay.remove();
 		}
@@ -36,7 +38,9 @@ export default class ReadingToggles {
 		this.removeOldDetails();
 		document.body.insertAdjacentHTML('beforeend', htmlTemplate);
 
-		handleOverlayOpen(document.querySelector('.reading-toggle-overlay'));
+		this.#readingToggleOverlay = document.querySelector('.reading-toggle-overlay');
+
+		handleOverlayOpen(this.#readingToggleOverlay);
 
 		let closeButton = document.querySelector('[data-close-btn]');
 		if (closeButton) {
