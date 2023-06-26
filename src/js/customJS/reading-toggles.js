@@ -7,6 +7,7 @@ export default class ReadingToggles {
   #ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
   #ngssTextList = document.querySelectorAll('.ngss');
   #ngssDescContainer = document.querySelector('.ngss-desc-container');
+
   #termsToggleSwitch = document.getElementById('terms-toggle-switch');
   #termsList = document.querySelectorAll('.term');
 
@@ -81,7 +82,7 @@ export default class ReadingToggles {
       .replace(/{{ngssCat}}/g, ngssCat)
       .replace('{{ngssCom ? ngssCom : ngssDesc}}', ngssCom ? ngssCom : ngssDesc);
 
-    this.#ngssDescContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
+    document.body.insertAdjacentHTML('beforeend', ngssDescHTML);
 
     let closeButton = this.#ngssDescContainer.querySelector('.button--icon-only');
     closeButton.addEventListener('click', this.handleClose);
