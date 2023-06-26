@@ -25,6 +25,7 @@ export default class ReadingToggles {
 
   handleClose = () => {
     let closeButton = document.querySelector('[data-close-btn]');
+    handleOverlayClose();
     if (closeButton) {
       closeButton.removeEventListener('click', this.handleClose);
     }
@@ -34,6 +35,8 @@ export default class ReadingToggles {
 	handleOverlayClick = (htmlTemplate) => {
 		this.removeOldDetails();
 		document.body.insertAdjacentHTML('beforeend', htmlTemplate);
+
+    handleOverlayOpen(document.querySelector('.reading-toggle-overlay'));
   
     let closeButton = document.querySelector('[data-close-btn]');
 			if (closeButton) {
@@ -142,7 +145,7 @@ export default class ReadingToggles {
 	};
 
 	init = () => {
-  
+
 		if (this.#termsToggleSwitch) {
 			this.#termsToggleSwitch.addEventListener('change', (e) => {
 				const highlightTerms = e.target.checked;
