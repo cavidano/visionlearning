@@ -699,152 +699,27 @@
 
 						<div class="narrow margin-x-auto position-sticky-top">
 
-							<div class="tabs" role="tablist">
+							<div class="form-entry__option__switch">
 
-								<nav class="button-group gap-1 font-size-md">
+								<label>
+									<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
+									<span class="switch__slider"></span>
+									<span class="option__label text-decoration-none font-size-md">
+										Show NGSS Annotations
+									</span>
+								</label>
 
-									<button
-										class="button button--icon-only flex-grow-1"
-										aria-label="Table of Contents"
-										aria-controls="tab-panel-module__tools"
-										aria-selected="false"
-										role="tab">
-											<span class="icon icon-list" aria-hidden="true"></span>
-									</button>
+							</div>
 
-									<button
-										class="button button--has-icon flex-grow-1"
-										aria-controls="tab-panel-toggle-terms"
-										aria-selected="false"
-										role="tab">
-											<span class="icon icon-glossary-highlight"></span>
-											<span class="button__text">Glossary</span>
-									</button>
+							<div class="form-entry__option__switch">
 
-									<button
-										class="button button--has-icon flex-grow-1"
-										aria-controls="tab-panel-toggle-ngss"
-										aria-selected="false"
-										role="tab">
-											<span class="icon icon-ngss"></span>
-											<span class="button__text">NGSS</span>
-									</button>
-
-								</nav>
-
-								<div class="tabs__panel" id="tab-panel-module__tools" aria-labelledby="tab-button-module__tools" role="tabpanel" hidden="">
-
-									<p class="margin-y-2">
-										<strong>
-											<em>
-												Table of Contents
-											</em>
-										</strong>		
-									</p>
-
-									<div class="table-of-contents">
-										<ul>
-											<li>
-												<a href="http://localhost:4001/library/module/reading.html#toc_1">
-													Introduction
-												</a>
-											</li>
-											<li>
-												<a href="http://localhost:4001/library/module/reading.html#toc_1">
-													Evidence about Earth's interior
-												</a>
-											</li>
-											<li>
-												<a href="http://localhost:4001/library/module/reading.html#toc_2">
-													Seismic waves
-												</a>
-											</li>
-											<li>
-												<a href="http://localhost:4001/library/module/reading.html#toc_3">
-													The Moho
-												</a>
-											</li>
-											<li>
-												<a href="http://localhost:4001/library/module/reading.html#toc_4">
-													Shadow zones
-												</a>
-											</li>
-											<li>
-												<a href="http://localhost:4001/library/module/reading.html#toc_5">
-													The layers of Earth
-												</a>
-											</li>
-											<li>
-												<ul>
-													<li><a href="http://localhost:4001/library/module/reading.html#toc2_1">Compositional layers</a></li>
-													<li><a href="http://localhost:4001/library/module/reading.html#toc2_2">Mechanical layers</a></li>
-												</ul>
-											</li>
-										</ul>
-
-									</div>
-
-								</div>
-
-								<div class="tabs__panel" id="tab-panel-toggle-terms" aria-labelledby="tab-button-toggle-terms" role="tabpanel">
-
-									<div class="reading-toggle">
-
-										<div class="reading-toggle__description">								
-											<p>
-												<em>
-													Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions directly in the text.
-												</em>
-											</p>
-										</div>
-
-										<div class="form-entry__option__switch">
-
-											<label>
-												<input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch">
-												<span class="switch__slider"></span>
-												<span class="option__label text-decoration-none font-size-md">
-													Highlight Glossary Terms
-												</span>
-											</label>
-
-										</div>
-
-									</div>
-									
-									<div class="term-def-container font-size-md"></div>
-
-								</div>
-
-								<div class="tabs__panel" id="tab-panel-toggle-ngss" aria-labelledby="tab-button-toggle-ngss" role="tabpanel" hidden="">
-					
-									<div class="reading-toggle">
-
-										<div class="reading-toggle__description">								
-											<p>
-												<em>
-													Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards directly in the text.
-												</em>
-											</p>
-										</div>
-
-										<div class="form-entry__option__switch">
-
-											<label>
-												<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch">
-												<span class="switch__slider"></span>
-												<span class="option__label text-decoration-none font-size-md">
-													Show NGSS Annotations
-												</span>
-											</label>
-
-										</div>
-
-									</div>
-									
-									<div class="ngss-desc-container font-size-md"></div>
-
-								</div>
+								<label>
+									<input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch">
+									<span class="switch__slider"></span>
+									<span class="option__label text-decoration-none font-size-md">
+										Highlight Glossary Terms
+									</span>
+								</label>
 
 							</div>
 
