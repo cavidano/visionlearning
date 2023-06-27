@@ -150,23 +150,38 @@ discipline_links:
                                 
                                 </ul>
 
-                                <!-- Russ D., Let's use the following HTML for these buttons -->
+                                <!-- Russ D., 
+                                
+                                    Let's use the following HTML for these buttons
+
+                                    Notice the "nav-library-buttons" class on the grid container
+
+                                    This will color the active states which are indicated with the "aria-current" attribute
+                                    
+                                -->
 
                                 <hr class="divider" />
 
-                                <div class="grid gap-1 font-size-sm">
+                                <div class="grid gap-1 font-size-sm nav-library-buttons">
 
                                     <a
-                                        class="button 👉 button--has-icon text-color-link width-100"
+                                        class="button button--has-icon"
                                         href="{{ site.url }}/library/interactive-animations.html"
+                                        {%- if page.title contains 'Interactive Animations' -%}
+                                        aria-current="page"
+                                        {%- endif -%}
                                     >
                                         <span class="icon icon-interactive-animations"></span>
                                         <span class="button__text">Interactive Animations</span>
                                     </a>
                                 
                                     <a
-                                        class="button 👉 button--has-icon text-color-link width-100"
-                                        href="{{ site.url }}/library/research-videos.html">
+                                        class="button button--has-icon"
+                                        href="{{ site.url }}/library/research-videos.html"
+                                        {%- if page.title contains 'Research Videos' -%}
+                                        aria-current="page"
+                                        {%- endif -%}
+                                    >
                                         <span class="icon icon-science-research"></span>
                                         <span class="button__text">Research Videos</span>
                                     </a>
