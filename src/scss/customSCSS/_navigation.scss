@@ -239,22 +239,32 @@ In this file:
                 width: 320px;
                 
                 background-color: var(--module-breadcrumb-background-color);
+
                 backdrop-filter: blur(4px);
             }
         }
 
         > ul {
             display: flex;
-            align-items: center;
+            align-items: stretch;
             font-size: var(--font-size-md);
+        }
+
+        > ul > li:first-child {
+            padding-inline: 0.5em;
+
+            a {
+                --subtle-fill-opacity: 0;
+            }
         }
 
         > ul > li:not(:last-child) {
             border-inline-end: var(--border-width) var(--border-style);
         }
 
-        > ul > li:first-child > a {
-            --subtle-fill-opacity: 0;
+        > ul > li {
+            display: flex;
+            align-items: center;
         }
 
         > ul > li > .button {
@@ -295,8 +305,10 @@ In this file:
         .accordion__panel > .accordion {
             --accordion-icon-closed: "\f134";
             --accordion-icon-open: "\f12a";
+
             --accordion-button-padding-x: 0;
             --accordion-button-padding-y: 0.2em;
+            
             --accordion-panel-padding-x: 1.675em;
         }
 
