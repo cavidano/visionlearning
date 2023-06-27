@@ -185,6 +185,16 @@
 
 	{% if page.title != 'Site Search' %}
 
+	<!-- Russ Demarest., 
+
+		I made a small adjustment to the search bar.
+
+		Please check the HTML. For example, we don't need the `primary-nav__search` class on the `form-entry` element.
+		
+		We also don't need `form-entry__field__input__clear` button at the stage.
+	
+	-->
+
 	<div class="collapse padding-y-3 border-bottom" id="global-search" data-focus-first>
 
 		<div class="container narrow">
@@ -295,6 +305,12 @@
 <nav class="module-breadcrumb border-bottom display-none display-block--md">
 
 	<ul class="wide margin-x-auto">
+
+		<!-- Russ Demarest., 
+
+			I made a small adjustment to the Home button, Which now includes the `button--icon-only` class.
+		
+		-->
 
 		<li>
 			<a class="button button--icon-only" href="#1">

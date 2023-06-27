@@ -88,6 +88,14 @@ tab: reading
 
     </div>
 
+    <!-- Russ Demarest., 
+    
+        Let's include a visual divider between the accordion and the main content.  
+        
+        This is a horizontal rule with the class "border-color-dark" which is used to style the divider.  
+                
+    -->
+
     <hr class="border-color-dark" />
 
     <section id="toc_1">
@@ -354,20 +362,37 @@ tab: reading
         </p>
 
     </section>
+
+    <!-- Russ Demarest., 
+    
+        The footer has the "module__footer" class which is used to style the footer
+
+        I've included a generic NAV for now to link to the reading, quiz, and teach with this pages.  
+                
+    -->
+
+    <hr class="border-color-dark" />
                         
     <footer class="module__footer">
 
-        <ul class="nav nav--horizontal margin-bottom-4">
+        <ul class="nav nav--horizontal margin-bottom-4 font-size-md">
             <li>
-                <a href="">
+                <a
+                    href="{{ site.url }}/library/module/reading.html"
+                    aria-current="page"
+                >
                     Reading
                 </a>
             </li>
             <li>
-                Reading
+                <a href="{{ site.url }}/library/module/quiz.html">
+                    Quiz
+                </a>
             </li>
             <li>
-                Reading
+                <a href="{{ site.url }}/library/module/quiz.html">
+                    Teach with this
+                </a>
             </li>
         </ul>
 
