@@ -32,7 +32,7 @@ In this file:
     --medium-width: calc( var(--narrow-width) * 1.5);
     --wide-width: calc( var(--narrow-width) * 2.5);
 
-    // Bordr Radius
+    // Border Radius
 
     --border-radius: 0.25em;
 
@@ -53,6 +53,10 @@ In this file:
     --spacer-3: calc(var(--spacer-base) * 1.25);
     --spacer-4: calc(var(--spacer-base) * 2);
     --spacer-5: calc(var(--spacer-base) * 4);
+
+    // Grid
+
+    --grid-sidebar-width: 18rem;
 
     // Form
 
