@@ -28,6 +28,10 @@ In this file:
 
     min-height: 100vh;
 
+    > * {
+      width: 100%;
+    }
+
     > footer {
       margin-block-start: auto; 
     }
