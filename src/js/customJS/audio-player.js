@@ -1,5 +1,7 @@
 export default class AudioPlayer {
+
 	// Private fields
+	
 	#audio = document.querySelector('#audio');
 	#playPauseButton = document.querySelector('#play-pause-button');
 	#progressBar = document.querySelector('.audio-player__progress');
@@ -10,12 +12,13 @@ export default class AudioPlayer {
 	#volumeContainer = document.querySelector('.audio-player__volume-container');
 	#volumeLevel = document.querySelector('.audio-player__volume__fill');
 	#volumeThumb = this.#volumeLevel?.querySelector('.audio-player__thumb');
-	#timestamp = document.querySelector('#timestamp');
+	#timestamp = document.querySelector('.audio-player__timestamp');
 	#isPlaying = false;
 	#dragType = null;
 	#volumeBeforeMute = null;
 
 	// Private methods
+
 	#toggleClasses(element, class1 = null, class2 = null) {
 		if (element.classList.contains(class1)) {
 			element.classList.remove(class1);
@@ -57,10 +60,11 @@ export default class AudioPlayer {
 		const currentMinutes = Math.floor(this.#audio.currentTime / 60);
 		const currentSeconds = Math.floor(this.#audio.currentTime - currentMinutes * 60);
 
-		const totalMinutes = Math.floor(this.#audio.duration / 60);
-		const totalSeconds = Math.floor(this.#audio.duration - totalMinutes * 60);
+		const remainingTime = this.#audio.duration - this.#audio.currentTime;
+		const remainingMinutes = Math.floor(remainingTime / 60);
+		const remainingSeconds = Math.floor(remainingTime - remainingMinutes * 60);
 
-		this.#timestamp.innerText = `${currentMinutes.toString().padStart(2, '0')}:${currentSeconds.toString().padStart(2, '0')} / ${totalMinutes.toString().padStart(2, '0')}:${totalSeconds.toString().padStart(2, '0')}`;
+		this.#timestamp.innerText = `${remainingMinutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
 
 		const progressThumb = this.#progress.querySelector('.audio-player__thumb');
 		progressThumb.style.left = `${progressPercentage}%`;
@@ -71,13 +75,6 @@ export default class AudioPlayer {
 		const progressPercentage = (clickPositionInBar / this.#progressBar.offsetWidth) * 100;
 		this.#audio.currentTime = (progressPercentage / 100) * this.#audio.duration;
 	};
-
-	#setTotalTime = () => {
-		const totalMinutes = Math.floor(this.#audio.duration / 60);
-		const totalSeconds = Math.floor(this.#audio.duration - totalMinutes * 60);
-		
-		this.#timestamp.innerText = `00:00 / ${totalMinutes.toString().padStart(2, '0')}:${totalSeconds.toString().padStart(2, '0')}`;
-	}
 
 	#setVolume = (e) => {
 		const clickPositionInBar = e.clientX - this.#volumeSlider.getBoundingClientRect().left;
@@ -169,6 +166,7 @@ export default class AudioPlayer {
 	};
 
 	// Public methods
+	
 	init() {
 
 		if (!this.#audio) {
@@ -198,9 +196,7 @@ export default class AudioPlayer {
 		// Add an event listener for the loadedmetadata event
 		this.#audio.addEventListener('loadedmetadata', () => {
 			this.#updateProgress();
-			this.#setTotalTime();
 		});
-
 
 	}
 }

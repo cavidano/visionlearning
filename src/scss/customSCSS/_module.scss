@@ -84,9 +84,12 @@ In this file:
         padding-top: var(--spacer-4);
     }
 
-    .module__main section,
-    .module__footer {
+    .module__main section {
         margin-block: var(--spacer-4);
+    }
+
+    .module__footer {
+        margin-block-start: var(--spacer-4);
     }
 
     .module__header__tabs {
