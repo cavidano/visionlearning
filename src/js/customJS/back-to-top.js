@@ -1,7 +1,9 @@
 export default class BackToTop {
+
 	// Private properties
 
-	#backToTopButton = document.querySelector('.back-to-top');
+	#backToTop = document.querySelector('.back-to-top');
+	#backToTopButton = this.#backToTop.querySelector('.button');
 	#footer = document.getElementById('global-footer');
 	#footerObserver;
 
@@ -17,14 +19,16 @@ export default class BackToTop {
 	#handleIntersection(entries) {
 		const [firstEntry] = entries;
 		if (firstEntry.isIntersecting) {
-			this.#backToTopButton.classList.remove('fixed');
+			this.#backToTop.classList.remove('fixed');
 		} else {
-			this.#backToTopButton.classList.add('fixed');
+			this.#backToTop.classList.add('fixed');
 		}
 	}
 
+	// Public methods
+
 	init() {
-		if (this.#backToTopButton && this.#footer) {
+		if (this.#backToTop && this.#footer) {
 			this.#backToTopButton.addEventListener(
 				'click',
 				this.#handleBackToTopClick
