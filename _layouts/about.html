@@ -4,7 +4,7 @@ layout: global
 
 <main id="skip-header-content">
 
-    <article class="container wide">
+    <article class="container wide margin-bottom-5">
 
         {% include about-menu.html %}
 
@@ -20,16 +20,16 @@ layout: global
 
         <main class="grid grid--sidebars grid--divider">
 
-            <nav class="display-none display-block--xl">
+            <div class="display-none display-block--xl">
                 
-                <div class="font-size-md position-sticky-top">
+                <nav class="anchor-nav font-size-md position-sticky-top">
 
                     {% if page.links %}
 
                     <ul class="tabs-nav border border-radius">
                         {% for link in page.links %}
                         <li>
-                            <a class="nav-link" href="{{ site.url }}{{ link.url }}" aria-selected={{ forloop.first | yes: 'true', 'false' }}>
+                            <a href="{{ site.url }}{{ link.url }}" aria-selected={{ forloop.first | yes: 'true', 'false' }}>
                                 {{ link.title }}
                             </a>
                         </li>
@@ -38,9 +38,9 @@ layout: global
                     
                     {% endif %}
                     
-                </div>
+                </nav>
 
-            </nav>
+            </div>
 
             <article class="module__main">
 

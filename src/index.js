@@ -24,7 +24,7 @@ import Tab from './js/tab';
 import AudioPlayer from './js/customJS/audio-player';
 
 import Accordion from './js/customJS/accordion';
-import { AnchorNav } from './js/customJS/table-of-contents';
+import AnchorNav from './js/customJS/anchor-nav';
 import { CompCheck } from './js/customJS/quiz'; 
 import Layout from './js/customJS/layout'; 
 import Modal from './js/customJS/modal';
@@ -74,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const audioPlayer = new AudioPlayer();
     audioPlayer.init();
 
-    // const anchorNav = new AnchorNav();
-    // anchorNav.init();
+    const anchorNav = new AnchorNav();
+    anchorNav.init();
 
     const compCheck = new CompCheck();
     compCheck.init();
