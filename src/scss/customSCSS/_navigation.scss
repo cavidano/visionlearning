@@ -408,4 +408,46 @@ In this file:
         }
     }
 
+    // Footer
+
+    .back-to-top {
+
+        > .container {
+            display: flex;
+            justify-content: end;
+        }
+
+        .button {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        &:not([class*="fixed"]) {
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            
+            transform: translateY(-100%);
+        }
+
+        &.fixed {
+            position: fixed;
+            inset-block-start: unset;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            inset-block-end: 0;
+
+            z-index: 25000;
+
+            filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+            
+            a.button {
+                background-color: var(--default-link-color);
+                color: white;
+            }
+        }
+
+    }
+
 } // end @layer

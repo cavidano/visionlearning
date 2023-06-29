@@ -29,6 +29,7 @@ import { CompCheck } from './js/customJS/quiz';
 import Layout from './js/customJS/layout'; 
 import Modal from './js/customJS/modal';
 import ReadingToggles from './js/customJS/reading-toggles';
+import BackToTop from './js/customJS/back-to-top';
 
 //////////////////////////////////////////////
 // C. Class Instantiation
@@ -88,5 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const readingToggles = new ReadingToggles();
     readingToggles.init();
+
+    const backToTop = new BackToTop();
+    backToTop.init();
 
 });
