@@ -16,7 +16,7 @@ let scrollPosition = 0;
 let rootElement = document.querySelector('html');
 let lastFocusedElement;
 
-export const handleOverlayOpen = (element) => {
+export const handleOverlayOpen = (element = null) => {
 
     lastFocusedElement = document.activeElement;
 
@@ -33,7 +33,7 @@ export const handleOverlayOpen = (element) => {
     focusTrap(element);
 }
 
-export const handleOverlayClose = (element) => {
+export const handleOverlayClose = (element = null) => {
 
     rootElement.removeAttribute('style');
 
@@ -46,6 +46,8 @@ export const handleOverlayClose = (element) => {
     if(element && element.getAttribute('aria-hidden') === 'false') {
         element.setAttribute('aria-hidden', true);
     }
+
+    console.log('handleOverlayClose', scrollPosition);
 
     window.scrollTo({ top: scrollPosition, behavior: 'instant' });
     

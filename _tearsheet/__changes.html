@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+
+
+</head>
+
+<body>
+
+<div class="collapse padding-y-3 border-bottom shown" id="global-search" data-focus-first="">
+	<div class="container narrow">
+		<form class="primary-nav__search" action="/en/search" aria-label="Search" method="post">
+			<div class="form-entry">
+				<div class="form-entry__field ">
+					<span class="form-entry__field__input">
+						<input type="text" name="query" id="search-input" autocomplete="off">
+						<button class="form-entry__field__input__clear" id="search-clear" aria-hidden="true">
+							<span class="icon icon-close" aria-hidden="true"></span>
+						</button>
+						<button class="button theme-dark" data-clear-input="">
+							Search</button>
+					</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="collapse padding-y-3 border-bottom" id="global-search" data-focus-first="">
+
+	<div class="container narrow">
+
+		<form action="..." aria-label="Search">
+
+			<div class="form-entry">
+				<div class="form-entry__field">
+					<span class="form-entry__field__input">
+
+						<input type="text" name="searchInput" id="search-input" autocomplete="off">
+
+						<button class="button theme-dark">
+							Search
+						</button>
+					</span>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+
+</div>
+
+<a class="button margin-y-2 text-color-link width-100" href="/en/library/animation">
+    <span class="icon icon-interactive-animations"></span>
+    <span class="button__text">Interactive Animations</span>
+</a>
+<a class="button margin-y-2 text-color-link width-100" href="/research">
+    <span class="icon icon-science-research"></span>
+    <span class="button__text">Research Videos</span>
+</a>
+
+<hr class="divider" />
+
+<div class="grid gap-1 nav-library-buttons">
+
+    <a
+        class="button button--has-icon"
+        href="{{ site.url }}/library/interactive-animations.html"
+        {%- if page.title contains 'Interactive Animations' -%}
+        aria-current="page"
+        {%- endif -%}
+    >
+        <span class="icon icon-interactive-animations"></span>
+        <span class="button__text">Interactive Animations</span>
+    </a>
+
+    <a
+        class="button button--has-icon"
+        href="{{ site.url }}/library/research-videos.html"
+        {%- if page.title contains 'Research Videos' -%}
+        aria-current="page"
+        {%- endif -%}
+    >
+        <span class="icon icon-science-research"></span>
+        <span class="button__text">Research Videos</span>
+    </a>
+
+</div>
+
+
+</body>
+
+</html>
