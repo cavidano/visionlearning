@@ -1,16 +1,13 @@
 export default class BackToTop {
-
 	// Private properties
-	
+
 	#backToTopButton = document.querySelector('.back-to-top');
 	#footer = document.getElementById('global-footer');
 	#footerObserver;
 
 	// Private methods
 
-	#handleBackToTopClick(e) {
-		e.preventDefault();
-
+	#handleBackToTopClick() {
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',
@@ -28,7 +25,6 @@ export default class BackToTop {
 
 	init() {
 		if (this.#backToTopButton && this.#footer) {
-
 			this.#backToTopButton.addEventListener(
 				'click',
 				this.#handleBackToTopClick
