@@ -121,7 +121,8 @@ In this file:
     mark.ngss.highlighted {
         position: relative;
         
-        &[data-ngss-cat-abbr*="SEP"] {
+        &[data-ngss-cat-abbr*="SEP"],
+        &[data-ngss-cat-abbr*="Practice"] {
             outline-color:
                 hsla(
                     var(--ngss-sep-hue),
@@ -133,7 +134,8 @@ In this file:
             background-color: var(--ngss-practices);
         }
 
-        &[data-ngss-cat-abbr*="CC"] {
+        &[data-ngss-cat-abbr*="CC"],
+        &[data-ngss-cat-abbr*="Crosscutting"] {
             outline-color:
                 hsla(
                     var(--ngss-cc-hue),
@@ -145,7 +147,8 @@ In this file:
             background-color: var(--ngss-crosscutting);
         }
 
-        &[data-ngss-cat-abbr*="DCI"] {
+        &[data-ngss-cat-abbr*="DCI"],
+        &[data-ngss-cat-abbr*="Core Idea"] {
             outline-color:
                 hsla(
                     var(--ngss-dci-hue),
@@ -184,7 +187,8 @@ In this file:
             white-space: nowrap;
         }
         
-        &[data-ngss-cat-abbr*="SEP"]::before {
+        &[data-ngss-cat-abbr*="SEP"]::before,
+        &[data-ngss-cat-abbr*="Practice"]::before {
             background-color: hsl(
                 var(--ngss-sep-hue) 
                 var(--ngss-sep-saturation)
@@ -192,7 +196,8 @@ In this file:
             );
         }
 
-        &[data-ngss-cat-abbr*="CC"]::before {
+        &[data-ngss-cat-abbr*="CC"]::before,
+        &[data-ngss-cat-abbr*="Crosscutting"]::before {
             background-color: hsl(
                 var(--ngss-cc-hue) 
                 var(--ngss-cc-saturation)
@@ -200,7 +205,8 @@ In this file:
             );
         }
 
-        &[data-ngss-cat-abbr*="DCI"]::before {
+        &[data-ngss-cat-abbr*="DCI"]::before,
+        &[data-ngss-cat-abbr*="Core Idea"]::before {
             background-color: hsl(
                 var(--ngss-dci-hue) 
                 var(--ngss-dci-saturation)
@@ -301,7 +307,8 @@ In this file:
 
         }
 
-        &[data-ngss-cat-abbr*="SEP"]{
+        &[data-ngss-cat-abbr*="SEP"],
+        &[data-ngss-cat-abbr*="Practice"] {
             background-color: hsl(
                 var(--ngss-sep-hue) 
                 var(--ngss-sep-saturation)
@@ -309,7 +316,8 @@ In this file:
             );
         }
 
-        &[data-ngss-cat-abbr*="CC"]{
+        &[data-ngss-cat-abbr*="CC"], 
+        &[data-ngss-cat-abbr*="Crosscutting"] {
             background-color: hsl(
                 var(--ngss-cc-hue) 
                 var(--ngss-cc-saturation)
@@ -317,7 +325,8 @@ In this file:
             );
         }
 
-        &[data-ngss-cat-abbr*="DCI"]{
+        &[data-ngss-cat-abbr*="DCI"],
+        &[data-ngss-cat-abbr*="Core Idea"] {
             background-color: hsl(
                 var(--ngss-dci-hue) 
                 var(--ngss-dci-saturation)
