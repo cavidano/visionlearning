@@ -111,3 +111,10 @@ hr.divider {
 
     color: var(--link-color);
 }
+
+form {
+    button:not([class*="button--icon-only"])[type="submit"] {
+        background-color: var(--canvas-link);
+        color: white !important;
+    }
+}   

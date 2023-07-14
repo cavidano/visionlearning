@@ -36,11 +36,6 @@ In this file:
 
     .quiz {
         overflow: hidden;
-
-        button[type="submit"]{
-            background-color: var(--canvas-link);
-            color: white !important;
-        }
     }
 
     ol.quiz__questions {
