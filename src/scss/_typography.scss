@@ -99,7 +99,8 @@ In this file:
 
     p, 
     p ~ ul:not([class]),
-    p ~ ol:not([class]) {
+    p ~ ol:not([class]),
+    ul.bulleted {
         &:not(:last-child){
             margin-block-end: var(--paragraph-margin-bottom);
         }
@@ -107,7 +108,8 @@ In this file:
 
     :is(
         p ~ ul:not([class]),
-        p ~ ol:not([class]) 
+        p ~ ol:not([class]),
+        ul.bulleted 
     ) li {
         margin-block-end: var(--spacer-1);
     }
