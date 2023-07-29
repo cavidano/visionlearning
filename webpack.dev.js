@@ -28,7 +28,7 @@ const devPages = {
     'Quiz': 'quiz'
 }
 
-const devDir = './_tearsheet';
+const devDir = './html';
 
 const devPage = `${devPages.Lightbox}.html`;
 

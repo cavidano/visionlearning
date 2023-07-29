@@ -1,3 +1,4 @@
+const { IgnorePlugin } = require('webpack');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
@@ -68,5 +69,8 @@ module.exports = merge(common, {
 			filename: 'css/[name].css',
 		}),
 		new CssMinimizerPlugin(),
+        new IgnorePlugin({
+            resourceRegExp: /\.(jpg|png|svg)$/
+        }),
 	],
 });
