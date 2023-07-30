@@ -3,7 +3,7 @@ export default class BackToTop {
 	// Private properties
 
 	#backToTop = document.querySelector('.back-to-top');
-	#backToTopButton = this.#backToTop.querySelector('.button');
+	#backToTopButton = document.querySelector('.back-to-top .button');
 	#footer = document.getElementById('global-footer');
 	#footerObserver;
 
@@ -29,6 +29,7 @@ export default class BackToTop {
 
 	init() {
 		if (this.#backToTop && this.#footer) {
+
 			this.#backToTopButton.addEventListener(
 				'click',
 				this.#handleBackToTopClick

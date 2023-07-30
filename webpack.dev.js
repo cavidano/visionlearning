@@ -30,7 +30,7 @@ const devPages = {
 
 const devDir = './html';
 
-const devPage = `${devPages.Lightbox}.html`;
+const devPage = `${devPages.Accordion}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
