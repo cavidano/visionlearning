@@ -24,13 +24,14 @@ const devPages = {
     'ReadingToggles': 'reading-toggles',
     'Typography': 'typography',
     'Tab': 'tab',
+    'Tooltip': 'tooltip',
     'Search': 'search',
     'Quiz': 'quiz'
 }
 
 const devDir = './html';
 
-const devPage = `${devPages.Accordion}.html`;
+const devPage = `${devPages.Tooltip}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

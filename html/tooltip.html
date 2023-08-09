@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Tooltip</title>
+
+		<!-- Natura11y Icons -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning@main/dist/icons/visionlearning-icons.css">
+
+		<style>
+			.tooltip-target {
+				position: relative;
+			}
+
+			.tooltip-content {
+				display: none;
+				position: absolute;
+				inset-block-start: 100%;
+				inset-inline-start: 0;
+				background-color: #333;
+				color: white;
+				padding: 0.5em 1em;
+				border-radius: var(--border-radius);
+				z-index: 1;
+			}
+
+			.tooltip-target:hover .tooltip-content,
+			.tooltip-target:focus .tooltip-content {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<main>
+
+			<div class="container margin-y-6">
+
+                <button 
+                    class="tooltip-target"
+                    data-tooltip-title="Tooltip Title" 
+                    data-tooltip-body="This is the detailed body of the tooltip.">
+                    Hover or focus me!
+                </button>
+
+			</div>
+
+		</main>
+
+	</body>
+
+	<script>
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipButton = document.querySelector('.tooltip-target');
+            
+            let tooltipTimeout;  // Store the timeout reference
+
+            tooltipButton.addEventListener('mouseover', () => {
+                // Delay for 500 milliseconds (0.5 seconds)
+                tooltipTimeout = setTimeout(showTooltip, 500);
+            });
+            tooltipButton.addEventListener('mouseout', () => {
+                clearTimeout(tooltipTimeout);  // Clear the timeout if mouse leaves before delay ends
+                hideTooltip();
+            });
+            tooltipButton.addEventListener('focus', showTooltip);
+            tooltipButton.addEventListener('blur', hideTooltip);
+        });
+
+        const showTooltip = () => {
+            const tooltipButton = document.querySelector('.tooltip-target');
+            const title = tooltipButton.getAttribute('data-tooltip-title');
+            const body = tooltipButton.getAttribute('data-tooltip-body');
+            
+            // Create tooltip using template literal
+            const tooltipHTML = `
+                <span class="tooltip-content" aria-hidden="false" role="tooltip">
+                    <strong>${title}</strong>
+                    <p>${body}</p>
+                </span>
+            `;
+
+            tooltipButton.insertAdjacentHTML('beforeend', tooltipHTML);
+        };
+
+        const hideTooltip = () => {
+            const tooltip = document.querySelector('.tooltip-content');
+            if (tooltip) {
+                tooltip.remove();
+            }
+        };
+
+	</script>
+
+</html>
+
