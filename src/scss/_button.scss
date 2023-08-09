@@ -20,7 +20,10 @@ In this file:
 
 :root {
     --button-padding-x: 1em;
+
     --button-padding-y: 0.75em;
+
+    --button-font-family: var(--body-font-family);
 
     --button-font-weight: var(--body-font-weight-bold);
     
@@ -34,10 +37,13 @@ In this file:
 
     --button-icon-only-size: 2.5em;
 
-    --button--icon-label-width: 5.5rem; 
-    --button--icon-label-border-radius: var(--button-border-radius); 
+    --button-icon-over-text-width: 4em; 
     
-    --button-group-gap: 0.25em;
+    --button-icon-over-text-border-radius: var(--button-border-radius);
+    
+    --button-icon-over-text-font-size: 0.675em;
+    
+    --button-group-gap: 0.5em;
 }
 
 //////////////////////////////////////////////

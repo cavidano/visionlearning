@@ -21,6 +21,7 @@
   "homepage": "https://github.com/cavidano/visionlearning",
   "devDependencies": {
     "@babel/core": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/plugin-transform-shorthand-properties": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "autoprefixer": "^10.4.5",

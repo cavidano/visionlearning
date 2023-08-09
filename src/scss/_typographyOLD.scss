@@ -34,21 +34,18 @@ In this file:
 
 :root {
 
-    // Font Families and Weights
+    // Body Font Stack
 
     --body-font-family: "Source Sans Pro", sans-serif;
-
-    --header-font-family: var(--body-font-family);
     
     --body-font-weight-normal: 400;
     --body-font-weight-medium: 600;
     --body-font-weight-bold: 700;
 
-    // Base Font Size and Type Scale
-
-    --base-font-size: 0.9rem; // Smallest Font Size
+    --base-font-size: 1rem; // 16px
 
     --type-scale: 1.2; // Minor Third
+
 
     // Body Font Sizes
 
@@ -76,13 +73,12 @@ In this file:
 
     --body-line-height: 1.5;
 
-    --header-line-height: 1.125;
+    --header-line-height: 1.2;
 
     // Margin
 
     --paragraph-margin-bottom: 1.25em;
-    
-    --header-margin-bottom: 0.25em;
+    --header-margin-bottom: 0.5em;
 }
 
 //////////////////////////////////////////////
@@ -103,7 +99,8 @@ In this file:
 
     p, 
     p ~ ul:not([class]),
-    p ~ ol:not([class]) {
+    p ~ ol:not([class]),
+    ul.bulleted {
         &:not(:last-child){
             margin-block-end: var(--paragraph-margin-bottom);
         }
@@ -111,7 +108,8 @@ In this file:
 
     :is(
         p ~ ul:not([class]),
-        p ~ ol:not([class]) 
+        p ~ ol:not([class]),
+        ul.bulleted 
     ) li {
         margin-block-end: var(--spacer-1);
     }
@@ -168,7 +166,6 @@ In this file:
         h5, .h5, 
         h6, .h6 
     ) {
-        font-family: var(--header-font-family);
         font-weight: var(--body-font-weight-bold);
         line-height: var(--header-line-height);
 
@@ -371,6 +368,8 @@ $headers: (
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
+
+            // Blockquote
 
         }
     }
