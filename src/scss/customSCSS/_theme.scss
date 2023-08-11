@@ -118,3 +118,10 @@ form {
         color: white !important;
     }
 }   
+
+blockquote {
+    font-style: italic;
+    padding-inline-start: 1em;
+    font-size: 1.125em;
+    border-inline-start: var(--border-width) var(--border-style) currentColor;
+}
