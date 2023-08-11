@@ -1,65 +1,101 @@
+import { handleOverlayOpen, handleOverlayClose } from '../utilities/overlay';
+
 export default class ReadingToggles {
 
   // Private properties
-  #ngssTextList = document.querySelectorAll('.ngss');
-  #termsList = document.querySelectorAll('.term');
-  #ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
-  #termsToggleSwitch = document.getElementById('terms-toggle-switch');
-
-  // New private properties for tooltip
-  #tooltipTimeout;
-
-  // Tooltip Methods
   
-  showTooltip = (target, title, body) => {
-    const tooltipHTML = `
-        <span class="tooltip-content" aria-hidden="false" role="tooltip">
-            <strong>${title}</strong>
-            <p>${body}</p>
-        </span>
-    `;
+  #readingToggleOverlay;
+  #ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
+  #ngssTextList = document.querySelectorAll('.ngss');
+  #termsToggleSwitch = document.getElementById('terms-toggle-switch');
+  #termsList = document.querySelectorAll('.term');
+  #closeButton = `
+    <button class="button button--icon-only" data-close-btn>
+      <span class="icon icon-close" aria-hidden="true"></span>
+    </button>
+  `;
 
-    target.insertAdjacentHTML('beforeend', tooltipHTML);
-  };
-
-  hideTooltip = (target) => {
-    const tooltip = target.querySelector('.tooltip-content');
-    if (tooltip) {
-      tooltip.remove();
+  // Private methods
+  
+  removeOverlay = () => {
+    let oldOverlay = this.#readingToggleOverlay;
+    if (oldOverlay) {
+      oldOverlay.remove();
     }
   };
 
-  handleNGSSMouseOver = (event) => {
-    const ngss = event.currentTarget;
+  handleClose = () => {
+    let closeButton = document.querySelector('[data-close-btn]');
+    handleOverlayClose(this.#readingToggleOverlay);
+    if (closeButton) {
+      closeButton.removeEventListener('click', this.handleClose);
+    }
+    this.removeOverlay();
+  };
+
+  handleOverlayClick = (htmlTemplate) => {
+    this.removeOverlay();
+    document.body.insertAdjacentHTML('beforeend', htmlTemplate);
+    this.#readingToggleOverlay = document.querySelector('.reading-toggle-overlay');
+    handleOverlayOpen(this.#readingToggleOverlay);
+    let closeButton = document.querySelector('[data-close-btn]');
+    if (closeButton) {
+      closeButton.addEventListener('click', this.handleClose);
+    }
+  };
+
+  handleNGSSClick = (event) => {
+    const ngss = event.target;
+    const ngssCatAbbr = ngss.getAttribute('data-ngss-cat-abbr') || 'NGSS';
     const ngssCat = ngss.getAttribute('data-ngss-cat-full') || 'Title not found';
     const ngssDesc = ngss.getAttribute('data-ngss-desc') || 'Description not found';
 
-    this.#tooltipTimeout = setTimeout(() => this.showTooltip(ngss, ngssCat, ngssDesc), 500);
+    const ngssDescHTML = `
+      <div class="reading-toggle-overlay">
+        <article class="reading-toggle__detail" aria-polite="live" data-ngss-cat-abbr="${ngssCatAbbr}">
+          <div class="reading-toggle__detail__head">
+            ${ngssCat}
+            ${this.#closeButton}
+          </div>
+          <div class="reading-toggle__detail__body">
+            <p>${ngssDesc}</p>
+          </div>
+        </article>
+      </div>
+    `;
+
+    this.handleOverlayClick(ngssDescHTML);
   };
 
-  handleNGSSMouseOut = (event) => {
-    clearTimeout(this.#tooltipTimeout);
-    this.hideTooltip(event.currentTarget);
-  };
-
-  handleTermMouseOver = (event) => {
-    const term = event.currentTarget;
+  handleTermClick = (event) => {
+    const term = event.target;
     const termTitle = term.innerHTML;
-    const termDef = term.getAttribute('data-term-def') || 'Description not found';
+    const termDef = term.getAttribute('data-term-def') || 'Title not found';
+    const termUrl = term.getAttribute('data-term-url') || '#1';
 
-    this.#tooltipTimeout = setTimeout(() => this.showTooltip(term, termTitle, termDef), 500);
-  };
+    const termDefHTML = `
+      <div class="reading-toggle-overlay">
+        <article class="reading-toggle__detail glossary-term" aria-polite="live" data-term-definition>
+          <div class="reading-toggle__detail__head">
+            <h2 class="h6">${termTitle}</h2>
+            ${this.#closeButton}
+          </div>
+          <div class="reading-toggle__detail__body">
+            <p>${termDef}</p>
+            <p><a href="${termUrl}">View in Glossary</a></p>
+          </div>
+        </article>
+      </div>
+    `;
 
-  handleTermMouseOut = (event) => {
-    clearTimeout(this.#tooltipTimeout);
-    this.hideTooltip(event.currentTarget);
+    this.handleOverlayClick(termDefHTML);
   };
 
   turnOnNGSS = () => {
     this.#ngssTextList.forEach((ngss) => {
       ngss.classList.add('highlighted');
-      ngss.addEventListener('mouseover', this.handleNGSSMouseOver);
-      ngss.addEventListener('mouseout', this.handleNGSSMouseOut);
+      ngss.setAttribute('tabindex', '0');
+      ngss.addEventListener('click', this.handleNGSSClick);
     });
   };
 
@@ -67,16 +103,17 @@ export default class ReadingToggles {
     this.#ngssToggleSwitch.checked = false;
     this.#ngssTextList.forEach((ngss) => {
       ngss.classList.remove('highlighted');
-      ngss.removeEventListener('mouseover', this.handleNGSSMouseOver);
-      ngss.removeEventListener('mouseout', this.handleNGSSMouseOut);
+      ngss.setAttribute('tabindex', '-1');
+      ngss.removeEventListener('click', this.handleNGSSClick);
     });
+    this.removeOverlay();
   };
 
   turnOnTerms = () => {
     this.#termsList.forEach((term) => {
       term.classList.add('highlighted');
-      term.addEventListener('mouseover', this.handleTermMouseOver);
-      term.addEventListener('mouseout', this.handleTermMouseOut);
+      term.setAttribute('tabindex', '0');
+      term.addEventListener('click', this.handleTermClick);
     });
   };
 
@@ -84,9 +121,10 @@ export default class ReadingToggles {
     this.#termsToggleSwitch.checked = false;
     this.#termsList.forEach((term) => {
       term.classList.remove('highlighted');
-      term.removeEventListener('mouseover', this.handleTermMouseOver);
-      term.removeEventListener('mouseout', this.handleTermMouseOut);
+      term.setAttribute('tabindex', '-1');
+      term.removeEventListener('click', this.handleTermClick);
     });
+    this.removeOverlay();
   };
 
   init = () => {
