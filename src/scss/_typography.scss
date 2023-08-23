@@ -177,9 +177,12 @@ In this file:
         }
     }
 
-    sub, sup {
+    sub, 
+    sup {
         font-size: 75%;
+
         line-height: inherit;
+        
         margin-inline-start: 0.125em;
     }
 
