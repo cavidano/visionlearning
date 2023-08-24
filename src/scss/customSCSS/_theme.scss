@@ -118,26 +118,3 @@ form {
         color: white !important;
     }
 }
-
-blockquote {
-    padding-inline-start: 1.25em;
-
-    border-inline-start: 
-        var(--border-width)
-        var(--border-style)
-        currentColor;
-
-    p {
-        margin-block-end: 0.5em;
-    }
-
-    footer {
-        font-size: 0.875em;
-        font-style: normal;
-        margin-block-start: 0.5em;
-    }
-
-    cite {
-        font-style: italic;
-    }
-}

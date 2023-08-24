@@ -4,16 +4,11 @@ In this file:
 
 // A. Modules
 // B. Variables
-// C. Font Weight Utilities
-// D. Font Size Utilities
-// E. Headings
-// F. Banner Headline Utility
-// G. Body Selectors
-// H. Text Align Utilities
-// I. Text Transform Utilities
-// J. Text Decoration Utilities
-// K. Word Wrap Utilities
-// L. Truncate Text Utility
+// C. Base Selectors
+// D. Font Size and Font Weight Utilities
+// E. Heading Sizes and Utilities
+// F. Text Utilities
+// G. Blockquote Utility
 
 */
 
@@ -83,6 +78,12 @@ In this file:
     --paragraph-margin-bottom: 1.25em;
     
     --header-margin-bottom: 0.25em;
+
+    // Blockquote
+
+    --blockquote-border-width: var(--border-width);
+    --blockquote-border-color: currentColor;
+    --blockquot-font-size: 1em; 
 }
 
 //////////////////////////////////////////////
@@ -157,7 +158,24 @@ In this file:
     }
 
     blockquote {
-        margin-block-end: var(--paragraph-margin-bottom);
+
+        footer {
+            font-size: 0.875em;
+            font-style: normal;
+            margin-block-start: 0.5em;
+        }
+
+        cite {
+            font-style: italic;
+        }
+
+        p:not(:last-child) {
+            margin-block-end: 0.5em;
+        }
+
+        &:not(:last-child){
+            margin-block-end: var(--paragraph-margin-bottom);
+        }
     }
 
     :is(
@@ -253,6 +271,7 @@ In this file:
             font-weight: #{$value};
         }
     }
+
 } // end @layer
 
 //////////////////////////////////////////////
@@ -390,6 +409,70 @@ $headers: (
                 text-overflow: ellipsis;
             }
 
+        }
+    }
+
+} // end @layer
+
+//////////////////////////////////////////////
+// G. Blockquote Utility
+//////////////////////////////////////////////
+
+@layer utility {
+
+    [class*="blockquote"] {
+        font-style: italic;
+    }
+
+    .blockquote {
+        --border-width: var(--blockquote-border-width);
+        --border-color: var(--blockquote-border-color);
+    
+        font-size: var(--blockquot-font-size);
+
+        padding-inline-start: 1.25em;
+
+        border-inline-start: 
+            var(--border-width)
+            var(--border-style)
+            var(--border-color);
+    }
+
+    .blockquote-hanging {
+        position: relative;
+
+        padding-inline-start: 1.3em;
+
+        p, 
+        cite {
+            &::before {
+                position: absolute;
+                inset-inline-start: 0;
+            }
+        }
+
+        p {
+            font-size: 1.125em;
+
+            &::before {
+                content: open-quote;
+                font-size: 1.75em;
+                line-height: 1.2;
+            }
+
+            &::after {
+                content: close-quote;
+            }
+        }
+
+        cite {
+            &::before {
+                content: "—";
+            }
+        }
+
+        cite > strong {
+            display: block;
         }
     }
 
