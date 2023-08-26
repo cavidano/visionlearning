@@ -86,6 +86,8 @@ In this file:
 
     .module__main section {
         margin-block: var(--spacer-4);
+        
+        scroll-margin-top: var(--spacer-3);
     }
 
     .module__footer {
