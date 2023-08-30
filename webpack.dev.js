@@ -17,6 +17,7 @@ const devPages = {
     'Figure': 'figure',
     'Grid': 'grid',
     'Modal': 'modal',
+    'Math': 'math',
     'HeaderFooter': 'header-footer',
     'Lightbox': 'lightbox',
     'List': 'list',
@@ -30,7 +31,7 @@ const devPages = {
 
 const devDir = './html';
 
-const devPage = `${devPages.Color}.html`;
+const devPage = `${devPages.Math}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

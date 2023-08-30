@@ -30,24 +30,30 @@ In this file:
 
 @layer component {
 
-    .figure {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+    // Figure utility classes
 
-        gap: var(--spacer-3);
-        
+    .figure {
         margin-block: var(--figure-margin-y);
 
-        figure {
-            display: table;
-            caption-side: bottom;
+        &:not([class*="--math"]) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+    
+            gap: var(--spacer-3);
+            
+            figure {
+                display: table;
 
-            overflow-x: auto;
-        }
+                caption-side: bottom;
 
-        figure > figcaption {
-            display: table-caption;
+                overflow-x: auto;
+            }
+
+            figure > figcaption {
+                display: table-caption;
+            }
+
         }
 
         figure span.credit {
@@ -57,7 +63,6 @@ In this file:
     }
 
     .figure--right {
-
         max-width: 260px;
 
         float: right;
@@ -65,6 +70,42 @@ In this file:
         margin-inline-start: var(--spacer-4);
         margin-block-end: var(--spacer-2);
     }
+
+    // Math figures
+
+    .figure--math {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        figure {
+            background-color: var(--light);
+
+            max-width: 100%;
+            
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        mjx-container {
+            display: flex;
+
+            min-width: fit-content;
+        }
+
+        math {
+            // background-color: red;
+            white-space: nowrap;
+            line-height: 1;
+            font-size: 1.25em;
+        }
+    }
+
+    mjx-container {
+        background-color: bisque;
+    }
+
+    // Interactive animations CTA
 
     .interactive-animation-cta {
 
@@ -76,8 +117,9 @@ In this file:
         margin-block: 1.5em;
 
         img {
-        margin-inline-end: 1em;
+            margin-inline-end: 1em;
         }
     }
+
 
 } // end @layer
