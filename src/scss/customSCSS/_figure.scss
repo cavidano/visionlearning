@@ -94,7 +94,6 @@ In this file:
         }
 
         math {
-            // background-color: red;
             white-space: nowrap;
             line-height: 1;
             font-size: 1.25em;
@@ -102,14 +101,14 @@ In this file:
     }
 
     mjx-container {
-        background-color: bisque;
+        // background-color: bisque;
     }
 
     // Interactive animations CTA
 
     .interactive-animation-cta {
 
-        background-color: var(--light);
+        // background-color: var(--light);
         
         display: flex;
         align-items: center;
