@@ -73,36 +73,37 @@ In this file:
 
     // Math figures
 
-    .figure--math {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    // .figure--math {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
 
-        figure {
-            background-color: var(--light);
+    //     figure {
+    //         background-color: var(--light);
 
-            max-width: 100%;
+    //         max-width: 100%;
             
-            overflow-x: auto;
-            overflow-y: hidden;
-        }
+    //         overflow-x: auto;
+    //         overflow-y: hidden;
+    //     }
 
-        mjx-container {
-            display: flex;
+    //     mjx-container {
+    //         display: flex;
 
-            min-width: fit-content;
-        }
+    //         min-width: fit-content;
+    //     }
 
-        math {
-            white-space: nowrap;
-            line-height: 1;
-            font-size: 1.25em;
-        }
-    }
+    //     math {
+    //         white-space: nowrap;
+    //         line-height: 1;
+    //         font-size: 1.25em;
+    //     }
+    // }
 
-    mjx-container {
-        // background-color: bisque;
-    }
+    // mjx-container {
+    //     background-color: bisque;
+    //     font-size: 1.25em;
+    // }
 
     // Interactive animations CTA
 
@@ -119,6 +120,5 @@ In this file:
             margin-inline-end: 1em;
         }
     }
-
 
 } // end @layer
