@@ -33,7 +33,6 @@ To style a quote with a left border for use within modules where the quote shoul
     </figure>
 </div>
 
-
 {% endcapture %}
 
 {% include example-with-code.html content=fig_1 %}
