@@ -11,12 +11,11 @@
 			<div class="primary-nav__logo">
 
 				<a href="{{ site.url }}/styleguide" title="Home" data-logo="brand">
-					<!-- Placeholder logo, replace the following <svg> tag with your own -->
 					<svg xmlns="http://www.w3.org/2000/svg" width="270" height="60" viewBox="0 0 270 60">
 						<g>
-							<circle cx="26.0869" cy="18.4451" r="9"/>
-							<polygon points="0 20.895 0 45.177 26.138 60 52.173 45.177 52.173 20.895 26.138 35.718 0 20.895"/>
-							<path d="M3.7129,18.128a24.3466,24.3466,0,0,1,44.7541-.1145l2.2291-1.2711.6723-.3855a27.8159,27.8159,0,0,0-5.6743-8.2194,27.6219,27.6219,0,0,0-39.157,0A27.7845,27.7845,0,0,0,.805,16.48l.46.2605Z"/>
+							<path fill="var(--library)" d="M3.7129,18.128a24.3466,24.3466,0,0,1,44.7541-.1145l2.2291-1.2711.6723-.3855a27.8159,27.8159,0,0,0-5.6743-8.2194,27.6219,27.6219,0,0,0-39.157,0A27.7845,27.7845,0,0,0,.805,16.48l.46.2605Z" />
+							<circle fill="var(--glossary)" cx="26.0869" cy="18.4451" r="9" />
+							<polygon fill="var(--classroom)" points="0 20.895 0 45.177 26.138 60 52.173 45.177 52.173 20.895 26.138 35.718 0 20.895" />
 						</g>
 						<g>
 							<polygon points="74.18 31.639 83.362 8.186 78.7 8.186 71.621 27.138 64.542 8.186 59.881 8.186 69.064 31.639 74.18 31.639"/>
@@ -108,7 +107,7 @@
 
 		</div>
 
-		<main id="skip-header-target" class="height-100vh">
+		<main id="skip-header-target" class="min-height-100vh">
 
 			<div class="grid grid--sidebar-left grid--divider height-100">
 
@@ -140,14 +139,20 @@
 								</li>
 
 								<li>
-									<a href="{{ site.url }}/classroom/course/reminders" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
+									<a href="{{ site.url }}/styleguide/components/math" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
 										Math
+									</a>
+								</li>
+
+								<li>
+									<a href="{{ site.url }}/styleguide/components/figure" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
+										Figure
 									</a>
 								</li>
 									
 								<li>
 									<a href="#1">
-										Quizzes
+										Quiz
 									</a>
 								</li>
 									
@@ -159,11 +164,11 @@
 
 				</div>
 
-				<div class="overflow-hidden margin-y-4">
+				<div class="overflow-hidden margin-y-5">
 				
 					<header>
-						<div class="container narrow margin-bottom-3">
-							<h1>
+						<div class="container narrow margin-bottom-4">
+							<h1 class="banner-headline text-color-primary">
 								{{ page.title }}
 							</h1>
 						</div>
@@ -188,6 +193,56 @@
 		<script src="{{ site.url }}/dist/js/prism.js"></script>
 		<script src="{{ site.url }}/dist/js/visionlearning.js"></script>
 
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script>
+            MathJax = {
+                //
+                //  Load only TeX input and the contextual menu
+                //
+                loader: {load: ['input/tex', 'ui/menu']},
+                //
+                //  When page is ready, render the math in the document
+                //
+                //
+                //  When page is ready:
+                //    disable the assistive-mathml menu item
+                //    render the document, handling require and autoload calls
+                //
+                startup: {
+                    pageReady() {
+                    MathJax.startup.document.menu.menu.findID('Accessibility', 'AssistiveMml').disable();
+                    MathJax._.mathjax.mathjax.handleRetriesFor(() => MathJax.startup.document.render());
+                    }
+                },
+                //
+                //  Override the usual typeset render action with one that generates MathML output
+                //
+                options: {
+                    renderActions: {
+                    assistiveMml: [],  // disable assistive mathml
+                    typeset: [150,
+                        (doc) => {for (math of doc.math) {MathJax.config.renderMathML(math, doc)}},
+                        (math, doc) => MathJax.config.renderMathML(math, doc)
+                    ]
+                    },
+                    menuOptions: {
+                        settings: {
+                            assistiveMml: false
+                        }
+                    }
+                },
+                //
+                // The action to use for rendering MathML
+                //
+                renderMathML(math, doc) {
+                    math.typesetRoot = document.createElement('mjx-container');
+                    math.typesetRoot.innerHTML = MathJax.startup.toMML(math.root);
+                    math.display && math.typesetRoot.setAttribute('display', 'block');
+                }
+            };
+        </script>
+       
 	</body>
 
 </html>

@@ -5,39 +5,87 @@ title: Blockquote
 				
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima, itaque dolor facilis?
 
-<figure class="example-code">
-	<pre>
-		<code class="language-html">
-			&lt;div class="accordion"&gt;
+<hr class="margin-y-4" />
 
-				&lt;button
-					class="accordion__button h5"
-					id="acc-button-example-01"
-					data-toggle="accordion"
-					aria-controls="acc-panel-example-01"
-					aria-expanded="false"&gt;
-						Danaus Plexippus
-				&lt;/button&gt;
+## Left Border (default)
 
-				&lt;div
-					class="accordion__panel"
-					id="acc-panel-example-01"
-					data-accordion="panel"
-					aria-labelledby="acc-button-example-01"
-					role="region"&gt;
+To style a quote with a left border for use within modules where the quote should visibly stand out, add the `.blockquote` class to the `<blockquote>` element.
 
-					&lt;div class="accordion__panel__content"&gt;
-						&lt;p&gt;
-							The monarch butterfly or simply monarch is a milkweed butterfly in the family Nymphalidae. Other common names, depending on region, include milkweed, common tiger, wanderer, and black veined brown. It may be the most familiar &lt;a href="#1"&gt;North American&lt;/a&gt; butterfly, and is considered an iconic pollinator species.
-						&lt;/p&gt;
-					&lt;/div&gt;
+{% capture fig_1 %}
 
-				&lt;/div&gt;
+<blockquote class="blockquote">
 
-				&lt;!-- Repeat pair above as needed --&gt;
+	<p>
+		“Correcting for this bias may seem simple, just adding ~0.5° C to early canvas bucket measurements, but it becomes more complicated than that because, the authors continue, the majority of SST data do not include a description of what kind of bucket or system was used.”
+	</p>
 
-			&lt;/div&gt;
-		</code>
-	</pre>
-</figure>
-				
+	<cite>
+		—<strong>Victoria Tauli-Corpuz</strong>, the UN’s Special Rapporteur for Indigenous Peoples, 2019
+	</cite>
+
+</blockquote>
+
+{% endcapture %}
+
+{% include example-with-code.html content=fig_1 %}
+
+## Hanging punctuation
+To style a quote specifically for use within the module introduction, add the blockquote class to the `<blockquote>` element.
+
+{% capture fig_2 %}
+
+<blockquote class="blockquote-hanging">
+
+	<p>
+		Correcting for this bias may seem simple, just adding ~0.5° C to early canvas bucket measurements, but it becomes more complicated than that because, the authors continue, the majority of SST data do not include a description of what kind of bucket or system was used.”
+	</p>
+
+	<cite>
+		<strong>Victoria Tauli-Corpuz,</strong> the UN’s Special Rapporteur for Indigenous Peoples, 2019
+	</cite>
+
+</blockquote>
+
+{% endcapture %}
+
+{% include example-with-code.html content=fig_2 %}
+
+<hr class="margin-y-4" />
+
+### Blockquote requirements 
+
+#### The `<blockquote>` Element:
+
+- The block quote should always be wrapped in a `<blockquote>` element.
+  
+- The `<blockquote>` can optionally include a `cite` attribute that provides a URL reference to the original source.
+
+#### The `<p>` Element:
+
+- Every block quote should contain at least one `<p>` element.
+  
+- The `<p>` element should encapsulate the actual quotation text.
+  
+- There should not be any other elements (like headings or lists) directly inside the `<blockquote>` other than the `<p>` and `<footer>`.
+
+#### The `<footer>` Element:
+
+- The `<footer>` is optional but recommended if citation details are available.
+  
+- It typically appears after the `<p>` element containing the quotation.
+  
+- The footer provides additional information about the quotation, typically the author's name and the title of the work.
+
+#### The `<cite>` Element:
+
+- The `<cite>` element is nested within the `<footer>` and is optional.
+  
+- It provides a human-readable reference to the source of the quote.
+  
+- This element can be styled or structured in various ways, but it should provide clarity about the original source or author.
+
+#### The `<strong>` Element:
+
+- Used within the `<cite>` element to emphasize the author's name.
+  
+- This is optional but serves to highlight the author's name for better visibility.

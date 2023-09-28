@@ -1,0 +1,25 @@
+{% if include.content %}
+    {% assign content = include.content %}
+{% else %}
+    {% assign content = '<p>Hello World</p>' %}
+{% endif %}
+
+<figure class="margin-y-5 margin-x-n5 box-shadow-1">
+
+    <div>
+
+        <div class="padding-x-5 padding-y-5">
+            {{ include.content}}
+        </div>
+
+        <div class="example-code">
+            <pre>
+                <code class="language-html">
+                    {{ include.content | replace: '<', '&lt;' | replace: '>', '&gt;'  }}
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</figure>
