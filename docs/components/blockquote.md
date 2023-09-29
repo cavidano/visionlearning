@@ -1,9 +1,9 @@
 ---
-layout: styleguide
+layout: docs
 title: Blockquote
 ---
 				
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima, itaque dolor facilis?
+Blockquotes serve an essential purpose in web content by highlighting significant statements, testimonials, or excerpts from other works. They distinguish the quoted content from the rest of the text, drawing attention and adding credibility. Whether you're referencing expert opinions, emphasizing poignant remarks, or drawing attention to specific content, proper styling and formatting of blockquotes ensure readability and aesthetics.
 
 <hr class="margin-y-4" />
 
@@ -53,6 +53,8 @@ To style a quote specifically for use within the module introduction, add the bl
 <hr class="margin-y-4" />
 
 ### Blockquote requirements 
+
+For the more traditional block quote, the citations will need to follow APA format. There are two ways to add a citation for block quotes according to APA. You can find an explanation of both [here](https://research.wou.edu/apa/apa-block-quote).
 
 #### The `<blockquote>` Element:
 

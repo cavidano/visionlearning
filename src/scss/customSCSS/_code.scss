@@ -30,6 +30,8 @@ In this file:
 
 	--code-default-text-color: currentColor;
 
+	--light-o: 0.025;
+
 	--code-background-color: var(--light);
 
 	--code-line-highlight-tint: hsla(250, 15%, 70%, 0.15);
@@ -385,7 +387,7 @@ div.code-toolbar > .toolbar a,
 div.code-toolbar > .toolbar button {
 	font-weight: bold;
 
-	color: var(--primary);
+	color: var(--link-color);
 }
 
 .toolbar-item {

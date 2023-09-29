@@ -10,7 +10,7 @@
 
 			<div class="primary-nav__logo">
 
-				<a href="{{ site.url }}/styleguide" title="Home" data-logo="brand">
+				<a href="{{ site.url }}/docs" title="Home" data-logo="brand">
 					<svg xmlns="http://www.w3.org/2000/svg" width="270" height="60" viewBox="0 0 270 60">
 						<g>
 							<path fill="var(--library)" d="M3.7129,18.128a24.3466,24.3466,0,0,1,44.7541-.1145l2.2291-1.2711.6723-.3855a27.8159,27.8159,0,0,0-5.6743-8.2194,27.6219,27.6219,0,0,0-39.157,0A27.7845,27.7845,0,0,0,.805,16.48l.46.2605Z" />
@@ -70,13 +70,10 @@
 
 				<ul>
 					<li>
-						<a href="#1">Link</a>
+						<a href="#1" aria-current="page">Docs</a>
 					</li>
 					<li>
-						<a href="#1">Link</a>
-					</li>
-					<li>
-						<a href="#1">Link</a>
+						<a href="#1">Resources</a>
 					</li>
 				</ul>
 
@@ -99,7 +96,7 @@
 
 				<a href="{{ site.url }}"
 					class="button button--icon-only"
-					aria-label="Language">
+					aria-label="Homepage">
 						<span class="icon icon-home"></span>
 				</a>
 
@@ -126,45 +123,63 @@
 					</div>
 					
 					<div class="collapse display-block--lg padding-y-1 padding-y-0--lg" id="main-nav">
-						
-						<nav class="font-size-md padding-2">
 
-							<ul
-								class="nav text-color-link" role="menu">
+						<div class="font-size-md padding-2 position-sticky-top">
 
-								<li>
-									<a href="{{ site.url }}/styleguide/components/blockquote" {% if page.title contains 'Overview' %} aria-current="page" {% endif %}>
-										Blockquote
-									</a>
-								</li>
-
-								<li>
-									<a href="{{ site.url }}/styleguide/components/math" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
-										Math
-									</a>
-								</li>
-
-								<li>
-									<a href="{{ site.url }}/styleguide/components/figure" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
-										Figure
-									</a>
-								</li>
+							<nav class="title-list">
 									
-								<li>
-									<a href="#1">
-										Quiz
-									</a>
-								</li>
-									
-							</ul>
+								<p class="h6 title-list__title">
+									Modules
+								</p>
+										
+								<ul class="title-list__list">
+								
+									<li>
+										<a href="{{ site.url }}/docs/components/audio" {% if page.title contains 'Overview' %} aria-current="page" {% endif %}>
+											Audio
+										</a>
+									</li>
+								
+									<li>
+										<a href="{{ site.url }}/docs/components/blockquote" {% if page.title contains 'Overview' %} aria-current="page" {% endif %}>
+											Blockquote
+										</a>
+									</li>
 
-						</nav>
+									<li>
+										<a href="{{ site.url }}/docs/components/comprehension-checkpoint" {% if page.title contains 'Overview' %} aria-current="page" {% endif %}>
+											Comprension Checkpoint
+										</a>
+									</li>
+
+									<li>
+										<a href="{{ site.url }}/docs/components/figure" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
+											Figure
+										</a>
+									</li>
+
+									<li>
+										<a href="{{ site.url }}/docs/components/math" {% if page.title contains 'Reminders' %} aria-current="page" {% endif %}>
+											Math
+										</a>
+									</li>
+										
+									<li>
+										<a href="#1">
+											Quiz
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+												
+						</div>
 								
 					</div>
 
 				</div>
 
-				<div class="overflow-hidden margin-y-5">
+				<div class="overflow-hidden margin-y-5" style="container-type: inline-size; container-name: module-main;">
 				
 					<header>
 						<div class="container narrow margin-bottom-4">

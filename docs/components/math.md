@@ -1,5 +1,5 @@
 ---
-layout: styleguide
+layout: docs
 title: Math
 ---
 				

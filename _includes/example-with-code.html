@@ -4,15 +4,15 @@
     {% assign content = '<p>Hello World</p>' %}
 {% endif %}
 
-<div class="margin-y-5 margin-x-n5 box-shadow-1">
+<div class="margin-y-5">
 
     <div>
 
-        <div class="padding-x-5 padding-y-5">
-            {{ include.content}}
+        <div class="margin-bottom-5">
+            {{ include.content }}
         </div>
 
-        <div class="example-code">
+        <div class="example-code margin-x-n5 border-radius box-shadow-1">
             <pre>
                 <code class="language-html">
                     {{ include.content | replace: '<', '&lt;' | replace: '>', '&gt;'  }}
