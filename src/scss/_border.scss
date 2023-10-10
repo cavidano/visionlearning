@@ -14,13 +14,11 @@ In this file:
 
 @use 'sass:map';
 @use './breakpoint';
-@use './color';
+@use './customSCSS/color';
 
 //////////////////////////////////////////////
 // B. Variables
 //////////////////////////////////////////////
-
-// Scoped to Root
 
 :root {
     --border-width: 1px;

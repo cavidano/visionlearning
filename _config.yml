@@ -15,6 +15,17 @@ exclude:
   - webpack.dev.js
   - webpack.prod.js
 
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /docs/:path/
+
+  updates:
+    output: true
+    permalink: /updates/:year/:month/:day/:title/
+
+#Headers
 webrick:
   headers:
     Access-Control-Allow-Origin: "*"

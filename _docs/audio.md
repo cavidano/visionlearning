@@ -89,7 +89,29 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem
 ## Pronunciation
 To style a quote specifically for use within the module introduction, add the blockquote class to the `<blockquote>` element.
 
+### Button Only
+
+I got to return the pronunciation button only is used on the glossary landing page term list view.
+
 {% capture fig_2 %}
+
+<!-- Button Icon Only -->
+
+<button class="button button--icon-only">
+    <span class="icon icon-volume"></span>
+</button>
+
+{% endcapture %}
+
+{% include example-with-code.html content=fig_2 %}
+
+### Button With Text
+
+I got to return the pronunciation button only is used on the glossary landing page term list view.
+
+{% capture fig_3 %}
+
+<!-- Button with Text -->
 
 <button class="button button--has-icon">
     <span class="icon icon-volume"></span>
@@ -98,4 +120,4 @@ To style a quote specifically for use within the module introduction, add the bl
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_2 %}
+{% include example-with-code.html content=fig_3 %}
