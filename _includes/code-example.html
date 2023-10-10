@@ -8,9 +8,13 @@
 
     <div>
 
+        {% unless include.visualExample == 'false' %}
+           
         <div class="margin-bottom-5">
             {{ include.content }}
         </div>
+
+        {% endunless %}
 
         <div class="example-code margin-x-n5--xl border-radius box-shadow-1">
             <pre>

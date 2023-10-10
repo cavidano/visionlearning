@@ -27,7 +27,7 @@ To style a quote with a left border for use within modules where the quote shoul
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_1 %}
+{% include code-example.html content=fig_1 %}
 
 ## Hanging punctuation
 To style a quote specifically for use within the module introduction, add the blockquote class to the `<blockquote>` element.
@@ -48,7 +48,7 @@ To style a quote specifically for use within the module introduction, add the bl
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_2 %}
+{% include code-example.html content=fig_2 %}
 
 <hr class="margin-y-4" />
 

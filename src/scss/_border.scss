@@ -38,6 +38,12 @@ In this file:
         border-color: var(--border-color, inherit);
     }
 
+    // Width
+
+    .border-width-thick {
+        --border-width: 2px;
+    }
+
     // Directional
 
     @each $breakpoint in map.keys(breakpoint.$breakpoints) {

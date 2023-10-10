@@ -3,14 +3,13 @@ layout: docs
 title: Audio
 ---
 				
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima.
-
+The audio feature is an essential part of our platform, providing users with an auditory experience of our module readings and glossary term pronunciations.
 
 <hr class="margin-y-4" />
 
 ## Module Audio
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima.
+Whether you're on the go, visually impaired, or simply prefer an auditory experience, the audio player within our modules allows users to listen to the module readings.
 
 {% capture fig_1 %}
 
@@ -84,14 +83,15 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_1 %}
+{% include code-example.html content=fig_1 %}
 
 ## Pronunciation
-To style a quote specifically for use within the module introduction, add the blockquote class to the `<blockquote>` element.
+
+Visionlearning users can hear and familiarize themselves with the correct pronunciation of specific terms, adding depth to their learning experience.
 
 ### Button Only
 
-I got to return the pronunciation button only is used on the glossary landing page term list view.
+The glossary term listing page includes an icon-only pronunciation button. Users can listen to the audio pronunciation of a term without navigating to its dedicated term page.
 
 {% capture fig_2 %}
 
@@ -103,11 +103,11 @@ I got to return the pronunciation button only is used on the glossary landing pa
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_2 %}
+{% include code-example.html content=fig_2 %}
 
 ### Button With Text
 
-I got to return the pronunciation button only is used on the glossary landing page term list view.
+On specific glossary term pages, the pronunciation button not only provides an icon but also includes a clear label, making it intuitive for users to access the audio guide for the term's pronunciation.
 
 {% capture fig_3 %}
 
@@ -120,4 +120,4 @@ I got to return the pronunciation button only is used on the glossary landing pa
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_3 %}
+{% include code-example.html content=fig_3 %}

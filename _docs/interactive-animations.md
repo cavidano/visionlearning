@@ -29,4 +29,4 @@ To represent mathematical equations or formulas in a visually appealing manner o
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_1 %}
+{% include code-example.html content=fig_1 %}

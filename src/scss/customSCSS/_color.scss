@@ -206,6 +206,7 @@ $theme-colors: (
 
 @layer utility {
 
+    html:not([class*="theme-"]),
     [class*="theme-"],
     .backdrop__image__credit {
 

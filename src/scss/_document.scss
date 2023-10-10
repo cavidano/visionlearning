@@ -131,7 +131,7 @@ In this file:
     // Horizontal Rule
 
     hr {
-        border-block-start: var(--border-width) var(--border-style);
+        border-block-start: var(--border-width) var(--border-style) var(--border-color);
     }
 
 } // end @layer

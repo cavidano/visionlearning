@@ -35,4 +35,4 @@ To style a quote with a left border for use within modules where the quote shoul
 
 {% endcapture %}
 
-{% include example-with-code.html content=fig_1 %}
+{% include code-example.html content=fig_1 %}
