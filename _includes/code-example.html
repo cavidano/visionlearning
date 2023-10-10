@@ -1,0 +1,29 @@
+{% if include.content %}
+    {% assign content = include.content %}
+{% else %}
+    {% assign content = '<p>Hello World</p>' %}
+{% endif %}
+
+<div class="margin-y-5">
+
+    <div>
+
+        {% unless include.visualExample == 'false' %}
+           
+        <div class="margin-bottom-5">
+            {{ include.content }}
+        </div>
+
+        {% endunless %}
+
+        <div class="example-code margin-x-n5--xl border-radius box-shadow-1">
+            <pre>
+                <code class="language-html">
+                    {{ include.content | replace: '<', '&lt;' | replace: '>', '&gt;'  }}
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>

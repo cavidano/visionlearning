@@ -199,8 +199,9 @@ $theme-colors: (
     ) 
 );
 
+
 //////////////////////////////////////////////
-// C. Color Utilities 
+// C. Utilities 
 //////////////////////////////////////////////
 
 @layer utility {
@@ -224,7 +225,8 @@ $theme-colors: (
         :is(
             td > a, 
             .td-content > a,
-            p > a:not([class*="text-"]),
+            p > a:not([class*="text-color"]),
+            .skip-link > a,
             .text-color-link 
         ) {
             color: var(--link-color);
@@ -309,35 +311,19 @@ $theme-colors: (
         }
     }
 
+    @media (prefers-color-scheme: dark) {
+
+        .theme-canvas--prefers {
+            --background-color: var(--dark);
+            --text-color: var(--dark-text);
+            --border-color: var(--dark-border);
+            --link-color: var(--dark-link);
+            --confirm-color: var(--dark-confirm);
+            --warn-color: var(--dark-warn);
+        }
+    }
+
 } // end @layer
-
-//////////////////////////////////////////////
-// D. Prefers Dark
-//////////////////////////////////////////////
-
-@media (prefers-color-scheme: dark) {
-
-    // :root {
-    //     --light-l: 70%;
-    //     --light-o: 0.0625;
-    //     --link-color: var(--dark-link);
-
-    // --primary: #8c28bd;
-    // }
-
-    // .module-breadcrumb {
-    //     --module-breadcrumb-background-color: hsla(0, 0%, 0%, 0.75) !important;
-    // }
-
-    // .theme-canvas--prefers {
-    //     --background-color: var(--dark);
-    //     --text-color: var(--dark-text);
-    //     --border-color: var(--dark-border);
-    //     --link-color: var(--dark-link);
-    //     --confirm-color: var(--dark-confirm);
-    //     --warn-color: var(--dark-warn);
-    // }
-}
 
 //////////////////////////////////////////////
 // E. Discipline Utilities
