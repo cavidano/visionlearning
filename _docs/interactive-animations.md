@@ -3,13 +3,13 @@ layout: docs
 title: Interactive Animations
 ---
 				
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima, itaque dolor facilis?
+Interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
 
 <hr class="margin-y-4" />
 
 ## In-module CTA
 
-Within modules, interactive animation call to action buttons are wrapped an an `<a>` tag. They include a thumbnail and title with a *new window* icon.
+Interactive animation call-to-action (CTA) buttons within modules are enclosed within an `<a>` tag. These buttons feature a thumbnail and title, accompanied by an icon indicating that the content will open in a new window.
 
 {% capture fig_1 %}
 
