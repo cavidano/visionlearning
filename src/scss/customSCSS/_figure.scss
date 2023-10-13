@@ -90,24 +90,10 @@ In this file:
             margin-block-end: 0.5em;
         }
 
-        [class*="__title"] {
-
-            em {
-                display: block;
-            }
-
-            strong {
-                color: var(--link-color);
-            }
-
-            strong::after {
-                content: "\f150";
-
-                @extend .icon_font;
-                
-                --icon-size: 0.8em;
-
-                margin-inline-start: 0.5em;
+        &:hover,
+        &:focus {
+            [class*="__text"] {
+                text-decoration: underline;
             }
         }
     

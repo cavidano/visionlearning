@@ -54,7 +54,7 @@ Keep in mind that you do not need to add punctuation (quotes or emdash), as they
 
 <hr class="margin-y-4" />
 
-### Blockquote requirements 
+### Blockquote Requirements 
 
 For the more traditional block quote, the citations will need to follow APA format. There are two ways to add a citation for block quotes according to APA. You can find an explanation of both [here](https://research.wou.edu/apa/apa-block-quote).
 

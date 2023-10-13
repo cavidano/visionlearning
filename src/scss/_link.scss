@@ -7,6 +7,9 @@ In this file:
 
 */
 
+
+@use './icon';
+
 //////////////////////////////////////////////
 // A. Generic Links
 //////////////////////////////////////////////
@@ -17,7 +20,7 @@ In this file:
         color: currentColor;
     }
 
-    p > a {
+    p > a:not([class*="new-window"]) {
         text-decoration: underline;
 
         &:hover,
@@ -47,6 +50,8 @@ In this file:
 
 @layer utility {
 
+    // Expanded Link 
+
     .expanded-link {
         &::before {
             position: absolute;
@@ -59,6 +64,30 @@ In this file:
             z-index: 1;
             pointer-events: auto;
         }
+    }
+
+    .link-new-window {
+        color: var(--link-color);
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: "\f150";
+
+            @extend .icon_font;
+            
+            --icon-size: 0.8em;
+
+            margin-inline-start: 0.5em;
+        }
+
+        &:hover,
+        &:focus {
+            [class*="__text"] {
+                text-decoration: underline;
+            }
+        }
+
     }
 
 } // end @layer

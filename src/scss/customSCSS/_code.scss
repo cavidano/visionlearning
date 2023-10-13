@@ -105,6 +105,7 @@ pre[class*='language-'] {
 // D. Inline Code Elements
 //////////////////////////////////////////////
 
+li > code,
 p > code {
 	--code-padding-x: 0.35em;
 	--code-padding-y: 0.125em;
