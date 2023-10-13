@@ -7,24 +7,25 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem
 
 <hr class="margin-y-4" />
 
-## Module CTA
+## In-module CTA
 
-To represent mathematical equations or formulas in a visually appealing manner on your website, the MathML (Mathematical Markup Language) is used. This allows for the display of complex math structures directly within the browser.
+Within modules, interactive animation call to action buttons are wrapped an an `<a>` tag. They include a thumbnail and title with a *new window* icon.
 
 {% capture fig_1 %}
 
-<a
-	class="interactive-animation-cta subtle-fill"
-	href="path/to/animation"
-	target="_blank">
-
-	<img src="/images/interactive-animation-thumbnails/i-a-moho.jpg" width="260" alt="The Structure of Animal Cells">
-
-	<p>
+<a class="interactive-animation" href="https://www.visionlearning.com/library/animations/Cell_Biology/Cell_Animal.html" target="_blank">
+                            
+	<img
+		class="interactive-animation__image"
+		src="https://visionlearning.com/images/anim-snaps/ia-animal-cell.png"
+		alt="The Structure of Animal Cells"
+	/>
+					
+	<p class="interactive-animation__title">
 		<em>Interactive Animation:</em>
-		<br/>
 		<strong>The Structure of Animal Cells</strong>
 	</p>
+
 </a>
 
 {% endcapture %}

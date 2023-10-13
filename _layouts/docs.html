@@ -80,9 +80,9 @@
 								</a>
 							</li>
 							<li>
-								<a href="{{ site.url }}/updates"
-								{% if page.url contains '/updates' %} aria-current="page" {% endif %}>
-									Updates
+								<a href="{{ site.url }}/resources"
+								{% if page.url contains '/resources' %} aria-current="page" {% endif %}>
+									Resources
 								</a>
 							</li>
 						</ul>
@@ -122,13 +122,13 @@
 
 		<main id="skip-header-target">
 
-			<div class="wide margin-x-auto margin-y-4">
+			<div class="wide margin-x-auto">
 
 				<div class="grid grid--sidebar-left">
 
 					<div class="font-size-md">
 
-						<div class="container narrow">
+						<div class="container narrow position-sticky-top">
 						
 							<div class="display-none--lg">
 
@@ -144,20 +144,23 @@
 							
 							<div class="collapse display-block--lg padding-y-2 padding-y-0--lg" id="main-nav">
 
-								<div class="font-size-md position-sticky-top">
+								<div class="font-size-sm position-sticky-top margin-y-2">
 
-									<nav class="title-list">
-											
-										<p class="h6 title-list__title">
-											Components
-										</p>
+									<nav class="border border-radius">
 												
-										<ul class="title-list__list">
+										<ul class="tabs-nav">
 										
 											{% for doc in site.docs %}
 											
 											<li>
-												<a href="{{ site.url }}/docs/{{doc.slug}}" {% if page.url contains doc.slug %} aria-current="page" {% endif %}>
+												<a
+													href="{{ site.url }}/docs/{{doc.slug}}"
+													{% if page.url contains doc.slug %}
+													aria-current="page"
+													{% else %}
+													class="text-color-link"
+													{% endif %}
+												>
 													{{ doc.title }}
 												</a>
 											</li>
@@ -176,7 +179,7 @@
 					</div>
 
 					<div
-						class="overflow-hidden margin-y-5" 
+						class="margin-y-5" 
 						style="container-type: inline-size; container-name: module-main;"
 					>
 					

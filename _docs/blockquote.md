@@ -37,7 +37,7 @@ To style a quote specifically for use within the module introduction, add the bl
 <blockquote class="blockquote-hanging">
 
 	<p>
-		Correcting for this bias may seem simple, just adding ~0.5° C to early canvas bucket measurements, but it becomes more complicated than that because, the authors continue, the majority of SST data do not include a description of what kind of bucket or system was used.”
+		Correcting for this bias may seem simple, just adding ~0.5° C to early canvas bucket measurements, but it becomes more complicated than that because, the authors continue, the majority of SST data do not include a description of what kind of bucket or system was used.
 	</p>
 
 	<cite>
@@ -49,6 +49,8 @@ To style a quote specifically for use within the module introduction, add the bl
 {% endcapture %}
 
 {% include code-example.html content=fig_2 %}
+
+Keep in mind that you do not need to add punctuation (quotes or emdash), as they are added automatically by the CSS.
 
 <hr class="margin-y-4" />
 

@@ -15,6 +15,7 @@ In this file:
 @use "sass:map";
 @use "../breakpoint";
 @use "../customSCSS/color";
+@use '../icon';
 
 //////////////////////////////////////////////
 // B. Variables
@@ -75,18 +76,59 @@ In this file:
         margin-block-end: var(--spacer-2);
     }
 
-    // Interactive animations CTA
+    // Interactive Animations
 
-    .interactive-animation-cta {
-        
-        display: flex;
-        align-items: center;
+    .interactive-animation {
+        display: block;
+
+        background-color: var(--light);
+
         padding: 0.5em;
-        margin-block: 1.5em;
-
-        img {
-            margin-inline-end: 1em;
+        
+        [class*="__image"] {
+            width: 100%;
+            margin-block-end: 0.5em;
         }
+
+        [class*="__title"] {
+
+            em {
+                display: block;
+            }
+
+            strong {
+                color: var(--link-color);
+            }
+
+            strong::after {
+                content: "\f150";
+
+                @extend .icon_font;
+                
+                --icon-size: 0.8em;
+
+                margin-inline-start: 0.5em;
+            }
+        }
+    
+    }
+
+    @container module-main (inline-size >= 768px) {
+
+        .interactive-animation {
+            display: flex;
+            align-items: center;
+            
+            margin-block: 1.5em;
+
+            [class*="__image"] {
+                margin-inline-end: 1em;
+                width: 240px;
+                margin-block-end: unset;
+            }
+
+        }
+
     }
 
 } // end @layer

@@ -14,15 +14,18 @@ We've implemented several enhancements to the glossary user experience.
 
 ## Glossary Term Page
 
-On the glossary term page, we've made the following changes:
+On the <a href="{{site.url}}/glossary/term.html" target="_blank">glossary term page</a>, we've made the following changes:
 
 - Removed the large green bar that contained the back button, which now places greater visual emphasis on the glossary term itself.
 - Introduced a thick green border across the top of glossary term's container.
 - Relocated the pronunciation button to below the header (h1) tag. This button now comes with an associated icon and label.
 
+ The glossary terms includes two sections as shown below:
+
 {% capture fig_1 %}
 
 <section class="container padding-y-4 border-top border-top-color-glossary border-width-thick">
+
     <header class="margin-bottom-4">
         <h1>
             Absolute Zero 
@@ -44,6 +47,7 @@ On the glossary term page, we've made the following changes:
             The theoretical lowest temperature at which all molecular motion ceases, absolute zero (0 K or -273.15°C) has never been attained.
         </p>
     </div>
+
 </section>
 
 <hr />
