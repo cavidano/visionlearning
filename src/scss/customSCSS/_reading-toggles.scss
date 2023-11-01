@@ -234,11 +234,15 @@ In this file:
         font-size: var(--font-size-md);
 
         [class*="__switch"] {
-            border-top: var(--border-width) var(--border-style) var(--border-color);
-            margin-block-start: var(--spacer-2);
-            label {
+            border: var(--border-width) var(--border-style) var(--border-color);
+            margin-block: var(--spacer-2);
             font-size: var(--font-size-lg);
-                padding-block: var(--spacer-2);
+            padding: var(--spacer-2);
+
+            border-radius: var(--border-radius);
+
+            label {
+                font-weight: var(--body-font-weight-bold);
             }        
         }
 

@@ -31,7 +31,7 @@ const devPages = {
 
 const devDir = './html';
 
-const devPage = `${devPages.Figure}.html`;
+const devPage = `${devPages.ReadingToggles}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

@@ -28,7 +28,7 @@ import AnchorNav from './js/customJS/anchor-nav';
 import { CompCheck } from './js/customJS/quiz'; 
 import Layout from './js/customJS/layout'; 
 import Modal from './js/customJS/modal';
-import ReadingToggles from './js/customJS/reading-toggles';
+import ReadingToggles from './js/customJS/reading-toggles-newer';
 import BackToTop from './js/customJS/back-to-top';
 
 //////////////////////////////////////////////
