@@ -1,7 +1,6 @@
 
 export default class ReadingToggles {
-	
-  // Private properties
+	// Private properties
 
 	#readingToggleOverlay;
 	#ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
@@ -19,6 +18,8 @@ export default class ReadingToggles {
 	#termDefContainer = document.querySelector('.term-def-container');
 	#helpTextContainer = document.querySelector('.help-text-container');
 
+	#annotationContainer = document.querySelector('.annotation-container');
+
 	// Private methods
 
 	removeOldDetails = () => {
@@ -31,6 +32,34 @@ export default class ReadingToggles {
 		}
 	};
 
+	handleClose = () => {
+
+		console.log('Carl?');
+
+		let closeButton = document.querySelector('[data-close-btn]');
+		if (closeButton) {
+			closeButton.removeEventListener('click', this.handleClose);
+		}
+
+		this.removeOldDetails();
+    this.#helpTextContainer.classList.remove('display-none');
+	};
+
+	handleHighlightedClick = (htmlTemplate) => {
+
+		this.removeOldDetails();
+
+		this.#annotationContainer.insertAdjacentHTML('beforeend', htmlTemplate);
+
+		this.#helpTextContainer.classList.add('display-none');
+
+		let closeButtonEl = document.querySelector('[data-close-btn]');
+		if (closeButtonEl) {
+			console.log('hello', closeButtonEl);
+			closeButtonEl.addEventListener('click', this.handleClose);
+		}
+	};
+
 	handleNGSSClick = (event) => {
 		const ngss = event.target;
 		const ngssCatAbbr = ngss.getAttribute('data-ngss-cat-abbr') || 'NGSS';
@@ -38,8 +67,6 @@ export default class ReadingToggles {
 			ngss.getAttribute('data-ngss-cat-full') || 'Title not found';
 		const ngssDesc =
 			ngss.getAttribute('data-ngss-desc') || 'Description not found';
-
-		this.removeOldDetails();
 
 		const ngssDescHTML = `
       <div class="reading-toggle-detail">
@@ -55,11 +82,8 @@ export default class ReadingToggles {
       </div>
     `;
 
-    this.removeOldDetails();
+		this.handleHighlightedClick(ngssDescHTML);
 
-		this.#ngssDescContainer.insertAdjacentHTML('beforeend', ngssDescHTML);
-
-		this.#helpTextContainer.classList.add('display-none');
 	};
 
 	handleTermClick = (event) => {
@@ -82,12 +106,8 @@ export default class ReadingToggles {
         </article>
       </div>
     `;
-
-    this.removeOldDetails();
-
-    this.#termDefContainer.insertAdjacentHTML('beforeend', termDefHTML);
-
-		this.#helpTextContainer.classList.add('display-none');
+    
+    this.handleHighlightedClick(termDefHTML);
 	};
 
 	turnOnNGSS = () => {
