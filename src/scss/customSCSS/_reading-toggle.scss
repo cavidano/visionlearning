@@ -12,6 +12,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use '../breakpoint';
+@use '../form';
 
 //////////////////////////////////////////////
 // A. Variables
@@ -231,60 +232,14 @@ In this file:
 
     .reading-toggle {
 
+        outline: 2px solid red;
+
         font-size: var(--font-size-md);
 
-        [class*="__switch"] {
-            border: var(--border-width) var(--border-style) var(--border-color);
-            margin-block: var(--spacer-2);
-            font-size: var(--font-size-lg);
-            padding: var(--spacer-2);
-
-            border-radius: var(--border-radius);
-
-            label {
-                font-weight: var(--body-font-weight-bold);
-            }        
-        }
-
     }
 
-    .reading-toggle-overlay,
-    .reading-toggle-overlay::before {
-        position: fixed;
-        inset-block-start: 0;
-        inset-inline-start: 0;
-
-        width: 100%;
-        height: 100%;
-    }
-
-    .reading-toggle-overlay {
-        --lightbox-overlay-color: hsla(0, 0%, 100%, 0.875);
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        
-        padding: var(--lightbox-padding-y) var(--lightbox-padding-x);
-
-        width: 100%;
-        height: 100%;
-
-        z-index: 10000;
-
-        &::before {
-            content: "";
-
-            background-color: var(--lightbox-overlay-color);
-            
-            opacity: var(--lightbox-overlay-opacity);
-
-            z-index: -1;
-            
-            pointer-events: none;
-        }
-
+   .reading-toggle__switch {
+        @extend .form-entry__option !optional;
     }
 
     .reading-toggle__detail {

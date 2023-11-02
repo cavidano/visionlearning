@@ -15,11 +15,8 @@ export default class ReadingToggles {
     </button>
   `;
 
-	#ngssDescContainer = document.querySelector('.ngss-desc-container');
-	#termDefContainer = document.querySelector('.term-def-container');
-	#helpTextContainer = document.querySelector('.help-text-container');
-
-	#annotationContainer = document.querySelector('.annotation-container');
+	#annotationContainer = document.querySelector('.reading-toggle-annotation');
+	#helpTextContainer = document.querySelector('.reading-toggle__help');
 
 	// Private methods
 
@@ -34,16 +31,12 @@ export default class ReadingToggles {
 	};
 
 	handleClose = () => {
-
-		console.log('Carl?');
-
 		let closeButton = document.querySelector('[data-close-btn]');
 		if (closeButton) {
 			closeButton.removeEventListener('click', this.handleClose);
 		}
-
 		this.removeOldDetails();
-    this.#helpTextContainer.classList.remove('display-none');
+    	this.#helpTextContainer.classList.remove('display-none');
 	};
 
 	handleHighlightedClick = (htmlTemplate) => {
