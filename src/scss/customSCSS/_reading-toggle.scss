@@ -231,15 +231,18 @@ In this file:
     // Reading Toggle
 
     .reading-toggle {
-
-        outline: 2px solid red;
-
         font-size: var(--font-size-md);
-
     }
 
    .reading-toggle__switch {
+        --form-field-border-radius: 0.5em;
         @extend .form-entry__option !optional;
+        --subtle-fill-opacity: 0;
+        margin-block-end: var(--spacer-1);
+        overflow: hidden;
+        label::before {
+                
+        }
     }
 
     .reading-toggle__detail {

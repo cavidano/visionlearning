@@ -1,6 +1,5 @@
 
 export default class ReadingToggles {
-
 	// Private properties
 
 	#readingToggleOverlay;
@@ -17,11 +16,24 @@ export default class ReadingToggles {
 
 	#ngssDescContainer = document.querySelector('.ngss-desc-container');
 	#termDefContainer = document.querySelector('.term-def-container');
-	#helpTextContainer = document.querySelector('.help-text-container');
+	#helpTextContainers = document.querySelectorAll('.reading-toggle__help');
 
 	#annotationContainer = document.querySelector('.annotation-container');
 
 	// Private methods
+
+	hideHelpTexts = () => {
+		this.#helpTextContainers.forEach((helpText) => {
+			helpText.classList.add('display-none');
+		});
+	};
+
+	// Method to show all help texts
+	showHelpTexts = () => {
+		this.#helpTextContainers.forEach((helpText) => {
+			helpText.classList.remove('display-none');
+		});
+	};
 
 	removeOldDetails = () => {
 		let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
@@ -34,7 +46,6 @@ export default class ReadingToggles {
 	};
 
 	handleClose = () => {
-
 		console.log('Carl?');
 
 		let closeButton = document.querySelector('[data-close-btn]');
@@ -43,16 +54,15 @@ export default class ReadingToggles {
 		}
 
 		this.removeOldDetails();
-    this.#helpTextContainer.classList.remove('display-none');
+		this.showHelpTexts();
 	};
 
 	handleHighlightedClick = (htmlTemplate) => {
-
 		this.removeOldDetails();
 
 		this.#annotationContainer.insertAdjacentHTML('beforeend', htmlTemplate);
 
-		this.#helpTextContainer.classList.add('display-none');
+		 this.hideHelpTexts();
 
 		let closeButtonEl = document.querySelector('[data-close-btn]');
 		if (closeButtonEl) {
@@ -84,7 +94,6 @@ export default class ReadingToggles {
     `;
 
 		this.handleHighlightedClick(ngssDescHTML);
-
 	};
 
 	handleTermClick = (event) => {
@@ -107,8 +116,8 @@ export default class ReadingToggles {
         </article>
       </div>
     `;
-    
-    this.handleHighlightedClick(termDefHTML);
+
+		this.handleHighlightedClick(termDefHTML);
 	};
 
 	turnOnNGSS = () => {

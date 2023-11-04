@@ -3,11 +3,13 @@ export default class ReadingToggles {
 
 	// Private properties
 
-	#readingToggleOverlay;
 	#ngssToggleSwitch = document.getElementById('ngss-toggle-switch');
 	#ngssTextList = document.querySelectorAll('.ngss');
 	#termsToggleSwitch = document.getElementById('terms-toggle-switch');
 	#termsList = document.querySelectorAll('.term');
+
+	#annotationContainer = document.querySelector('.reading-toggle-annotation');
+	#helpTextContainers = document.querySelectorAll('.reading-toggle__help');
 
 	#closeButton = `
     <button class="button button--icon-only" data-close-btn>
@@ -15,10 +17,20 @@ export default class ReadingToggles {
     </button>
   `;
 
-	#annotationContainer = document.querySelector('.reading-toggle-annotation');
-	#helpTextContainer = document.querySelector('.reading-toggle__help');
-
 	// Private methods
+
+	hideHelpTexts = () => {
+		this.#helpTextContainers.forEach((helpText) => {
+			helpText.classList.add('display-none');
+		});
+	};
+
+	// Method to show all help texts
+	showHelpTexts = () => {
+		this.#helpTextContainers.forEach((helpText) => {
+			helpText.classList.remove('display-none');
+		});
+	};
 
 	removeOldDetails = () => {
 		let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
@@ -36,7 +48,7 @@ export default class ReadingToggles {
 			closeButton.removeEventListener('click', this.handleClose);
 		}
 		this.removeOldDetails();
-    	this.#helpTextContainer.classList.remove('display-none');
+		this.showHelpTexts();
 	};
 
 	handleHighlightedClick = (htmlTemplate) => {
@@ -45,7 +57,7 @@ export default class ReadingToggles {
 
 		this.#annotationContainer.insertAdjacentHTML('beforeend', htmlTemplate);
 
-		this.#helpTextContainer.classList.add('display-none');
+		this.hideHelpTexts();
 
 		let closeButtonEl = document.querySelector('[data-close-btn]');
 		if (closeButtonEl) {
