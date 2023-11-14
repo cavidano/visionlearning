@@ -8,7 +8,7 @@ export default class ReadingToggles {
 	#termsToggleSwitch = document.getElementById('terms-toggle-switch');
 	#termsList = document.querySelectorAll('.term');
 
-	#annotationContainer = document.querySelector('.reading-toggle-annotation');
+	#annotationContainer = document.querySelector('.reading-annotation-container');
 	#helpTextContainers = document.querySelectorAll('.reading-toggle__help');
 
 	#closeButton = `
@@ -21,19 +21,19 @@ export default class ReadingToggles {
 
 	hideHelpTexts = () => {
 		this.#helpTextContainers.forEach((helpText) => {
-			helpText.classList.add('display-none');
+			helpText.classList.add('display-none--lg');
 		});
 	};
 
 	// Method to show all help texts
 	showHelpTexts = () => {
 		this.#helpTextContainers.forEach((helpText) => {
-			helpText.classList.remove('display-none');
+			helpText.classList.remove('display-none--lg');
 		});
 	};
 
 	removeOldDetails = () => {
-		let oldDetailList = document.querySelectorAll('.reading-toggle-detail');
+		let oldDetailList = document.querySelectorAll('.reading-annotation');
 
 		if (oldDetailList.length) {
 			oldDetailList.forEach((item) => {
@@ -75,18 +75,18 @@ export default class ReadingToggles {
 			ngss.getAttribute('data-ngss-desc') || 'Description not found';
 
 		const ngssDescHTML = `
-      <div class="reading-toggle-detail">
-        <article class="reading-toggle__detail" aria-polite="live" data-ngss-cat-abbr="${ngssCatAbbr}">
-          <div class="reading-toggle__detail__head">
-            ${ngssCat}
-            ${this.#closeButton}
-          </div>
-          <div class="reading-toggle__detail__body">
-            <p>${ngssDesc}</p>
-          </div>
-        </article>
-      </div>
-    `;
+			<div class="reading-annotation">
+				<article class="reading-annotation__detail" aria-polite="live" data-ngss-cat-abbr="${ngssCatAbbr}">
+				<div class="reading-annotation__detail__head">
+					${ngssCat}
+					${this.#closeButton}
+				</div>
+				<div class="reading-annotation__detail__body">
+					<p>${ngssDesc}</p>
+				</div>
+				</article>
+			</div>
+		`;
 
 		this.handleHighlightedClick(ngssDescHTML);
 
@@ -99,21 +99,20 @@ export default class ReadingToggles {
 		const termUrl = term.getAttribute('data-term-url') || '#1';
 
 		const termDefHTML = `
-      <div class="reading-toggle-detail">
-        <article class="reading-toggle__detail glossary-term" aria-polite="live" data-term-definition>
-          <div class="reading-toggle__detail__head">
-            <h2 class="h6">${termTitle}</h2>
-            ${this.#closeButton}
-          </div>
-          <div class="reading-toggle__detail__body">
-            <p>${termDef}</p>
-            <p><a href="${termUrl}">View in Glossary</a></p>
-          </div>
-        </article>
-      </div>
-    `;
-    
-    this.handleHighlightedClick(termDefHTML);
+			<div class="reading-annotation">
+				<article class="reading-annotation__detail glossary-term" data-term-definition aria-polite="live">
+					<div class="reading-annotation__detail__head">
+						<h2 class="h6">${termTitle}</h2>
+						${this.#closeButton}
+					</div>
+					<div class="reading-annotation__detail__body">
+						<p>${termDef}</p>
+						<p><a href="${termUrl}">View in Glossary</a></p>
+					</div>
+				</article>
+			</div>
+		`;
+		this.handleHighlightedClick(termDefHTML);
 	};
 
 	turnOnNGSS = () => {

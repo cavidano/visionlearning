@@ -42,9 +42,26 @@ In this file:
 
 @layer component {
 
-    mark.term,
-    mark.ngss {
-        color: currentColor;
+    // Reading Toggle
+
+    .reading-toggle {
+        font-size: var(--font-size-md);
+    }
+
+    .reading-toggle__switch {
+        --form-field-border-radius: 0.5em;
+
+        @extend .form-entry__option !optional;
+        --subtle-fill-opacity: 0;
+        
+        margin-block-end: var(--spacer-1);
+        
+        overflow: hidden;
+    }
+
+    // Reading Annotation Mark
+
+    mark:is(.term, .ngss) {
 
         // Term Highlight
         --term-highlight-alpha: 0.375;
@@ -82,6 +99,8 @@ In this file:
             var(--ngss-dci-alpha)
         );
 
+        color: currentColor;
+
         padding-block: 0.075em;
         
         background-color: transparent;
@@ -91,8 +110,7 @@ In this file:
         pointer-events: none;
     }
 
-    mark.term.highlighted,
-    mark.ngss.highlighted {
+    mark.highlighted {
         cursor: pointer;
 
         pointer-events: auto;
@@ -101,7 +119,7 @@ In this file:
 
     }
 
-    mark.term.highlighted {
+    mark.highlighted.term {
 
         outline-color:
             hsla(
@@ -119,7 +137,7 @@ In this file:
         }
     }
 
-    mark.ngss.highlighted {
+    mark.highlighted.ngss {
         position: relative;
         
         &[data-ngss-cat-abbr*="SEP"],
@@ -191,8 +209,8 @@ In this file:
         &[data-ngss-cat-abbr*="SEP"]::before,
         &[data-ngss-cat-abbr*="Practice"]::before {
             background-color: hsl(
-                var(--ngss-sep-hue) 
-                var(--ngss-sep-saturation)
+                var(--ngss-sep-hue),
+                var(--ngss-sep-saturation),
                 var(--ngss-sep-lightness)
             );
         }
@@ -200,8 +218,8 @@ In this file:
         &[data-ngss-cat-abbr*="CC"]::before,
         &[data-ngss-cat-abbr*="Crosscutting"]::before {
             background-color: hsl(
-                var(--ngss-cc-hue) 
-                var(--ngss-cc-saturation)
+                var(--ngss-cc-hue),
+                var(--ngss-cc-saturation),
                 var(--ngss-cc-lightness)
             );
         }
@@ -209,17 +227,19 @@ In this file:
         &[data-ngss-cat-abbr*="DCI"]::before,
         &[data-ngss-cat-abbr*="Core Idea"]::before {
             background-color: hsl(
-                var(--ngss-dci-hue) 
-                var(--ngss-dci-saturation)
+                var(--ngss-dci-hue),
+                var(--ngss-dci-saturation),
                 var(--ngss-dci-lightness)
             );
         }
 
         &:hover, 
         &:focus {
-            --ngss-sep-alpha: 0.375;
-            --ngss-cc-alpha: 0.375;
-            --ngss-dci-alpha: 0.375;
+            --active-alpha: 0.375;
+
+            --ngss-sep-alpha: var(--active-alpha);
+            --ngss-cc-alpha: var(--active-alpha);
+            --ngss-dci-alpha: var(--active-alpha);
 
             &::before {
                 opacity: 1;
@@ -228,21 +248,10 @@ In this file:
 
     }
 
-    // Reading Toggle
 
-    .reading-toggle {
-        font-size: var(--font-size-md);
-    }
+    // Reading Annotation
 
-   .reading-toggle__switch {
-        --form-field-border-radius: 0.5em;
-        @extend .form-entry__option !optional;
-        --subtle-fill-opacity: 0;
-        margin-block-end: var(--spacer-1);
-        overflow: hidden;
-    }
-
-    .reading-toggle__detail {
+    .reading-annotation__detail {
         --padding-x: 1em;
         --padding-y: 0.75em;
 
@@ -254,45 +263,70 @@ In this file:
 
         border-radius: 0.5em;
 
+        background-color: var(--canvas);
+
         &.shown {
             opacity: 1;
             transform: translateY(0);
         }
 
         &[data-term-definition]{
-            background-color: hsl(
-                var(--term-highlight-hue) 
-                var(--term-highlight-saturation)
-                var(--term-highlight-lightness)
-            );
 
+            > [class*="__head"],
+            > [class*="__body"] {
+                background-color: hsla(
+                    var(--term-highlight-hue),
+                    var(--term-highlight-saturation),
+                    var(--term-highlight-lightness),
+                    var(--bg-alpha, 1)
+                );
+            }
         }
 
         &[data-ngss-cat-abbr*="SEP"],
         &[data-ngss-cat-abbr*="Practice"] {
-            background-color: hsl(
-                var(--ngss-sep-hue) 
-                var(--ngss-sep-saturation)
-                var(--ngss-sep-lightness)
-            );
+
+            > [class*="__head"],
+            > [class*="__body"] {
+                background-color: hsla(
+                    var(--ngss-sep-hue),
+                    var(--ngss-sep-saturation),
+                    var(--ngss-sep-lightness),
+                    var(--bg-alpha, 1)
+                );
+            }
         }
 
         &[data-ngss-cat-abbr*="CC"], 
         &[data-ngss-cat-abbr*="Crosscutting"] {
-            background-color: hsl(
-                var(--ngss-cc-hue) 
-                var(--ngss-cc-saturation)
-                var(--ngss-cc-lightness)
-            );
+
+            > [class*="__head"],
+            > [class*="__body"] {
+                background-color: hsla(
+                    var(--ngss-cc-hue),
+                    var(--ngss-cc-saturation),
+                    var(--ngss-cc-lightness),
+                    var(--bg-alpha, 1)
+                );
+            }
         }
 
         &[data-ngss-cat-abbr*="DCI"],
         &[data-ngss-cat-abbr*="Core Idea"] {
-            background-color: hsl(
-                var(--ngss-dci-hue) 
-                var(--ngss-dci-saturation)
-                var(--ngss-dci-lightness)
-            );
+
+            > [class*="__head"],
+            > [class*="__body"] {
+                background-color: hsla(
+                    var(--ngss-dci-hue),
+                    var(--ngss-dci-saturation),
+                    var(--ngss-dci-lightness),
+                    var(--bg-alpha, 1)
+                );
+            }
+        }
+
+        > [class*="__body"] {
+            --bg-alpha: 0.125;
         }
 
         &:not(.glossary-term) > [class*="__head"] {
@@ -302,7 +336,7 @@ In this file:
 
     }
 
-    .reading-toggle__detail__head {
+    .reading-annotation__detail__head {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -316,17 +350,15 @@ In this file:
         .h6 {
             margin-block-end: unset;        
         }
-
-        background-color: aqua;
     }
 
-    .reading-toggle__detail__body {
+    .reading-annotation__detail__body {
         padding: var(--padding-y) var(--padding-x);
         background-color: hsla(100, 100%, 100%, 0.875);
     }
 
     @media screen and (max-width: 1024px) {
-        .reading-toggle__detail {
+        .reading-annotation__detail {
             position: fixed;
 
             inset-inline-start: 0;
@@ -335,21 +367,18 @@ In this file:
 
             z-index: 30000;
 
-            margin-block-start: var(--spacer-2);
+            margin: var(--spacer-2);
 
-            &::after {
-                content: "";
-                inset: 0;
-            }
+            box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.25);
 
-            &::after {
-                position: fixed;
-                z-index: -2;
+            // &::after {
+            //     content: "";
+            //     inset: 0;
+            //     position: fixed;
+            //     z-index: -2;
 
-                background-color: rgba(255, 255, 255, 0.5);
-                
-                // pointer-events: none;
-            }
+            //     background-color: rgba(255, 255, 255, 0.5);
+            // }
         }
     }
 
