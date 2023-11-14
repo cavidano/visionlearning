@@ -240,14 +240,13 @@ In this file:
         --subtle-fill-opacity: 0;
         margin-block-end: var(--spacer-1);
         overflow: hidden;
-        label::before {
-                
-        }
     }
 
     .reading-toggle__detail {
         --padding-x: 1em;
         --padding-y: 0.75em;
+
+        overflow: hidden;
 
         max-width: var(--narrow-width);
 
@@ -307,6 +306,8 @@ In this file:
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        z-index: 5;
 
         padding-block: calc(var(--padding-y) * 0.5);
         padding-inline-start:  var(--padding-x);
@@ -315,11 +316,41 @@ In this file:
         .h6 {
             margin-block-end: unset;        
         }
+
+        background-color: aqua;
     }
 
     .reading-toggle__detail__body {
         padding: var(--padding-y) var(--padding-x);
         background-color: hsla(100, 100%, 100%, 0.875);
+    }
+
+    @media screen and (max-width: 1024px) {
+        .reading-toggle__detail {
+            position: fixed;
+
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            inset-block-start: 0;
+
+            z-index: 30000;
+
+            margin-block-start: var(--spacer-2);
+
+            &::after {
+                content: "";
+                inset: 0;
+            }
+
+            &::after {
+                position: fixed;
+                z-index: -2;
+
+                background-color: rgba(255, 255, 255, 0.5);
+                
+                // pointer-events: none;
+            }
+        }
     }
 
 } // end @layer
