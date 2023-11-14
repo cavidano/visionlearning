@@ -248,10 +248,9 @@ In this file:
 
     }
 
-
     // Reading Annotation
 
-    .reading-annotation__detail {
+    .reading-annotation {
         --padding-x: 1em;
         --padding-y: 0.75em;
 
@@ -264,6 +263,8 @@ In this file:
         border-radius: 0.5em;
 
         background-color: var(--canvas);
+
+        overflow: hidden;
 
         &.shown {
             opacity: 1;
@@ -336,7 +337,7 @@ In this file:
 
     }
 
-    .reading-annotation__detail__head {
+    .reading-annotation__head {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -352,13 +353,13 @@ In this file:
         }
     }
 
-    .reading-annotation__detail__body {
+    .reading-annotation__body {
         padding: var(--padding-y) var(--padding-x);
         background-color: hsla(100, 100%, 100%, 0.875);
     }
 
     @media screen and (max-width: 1024px) {
-        .reading-annotation__detail {
+        .reading-annotation-container {
             position: fixed;
 
             inset-inline-start: 0;
@@ -368,17 +369,10 @@ In this file:
             z-index: 30000;
 
             margin: var(--spacer-2);
+        }
 
+        .reading-annotation {
             box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.25);
-
-            // &::after {
-            //     content: "";
-            //     inset: 0;
-            //     position: fixed;
-            //     z-index: -2;
-
-            //     background-color: rgba(255, 255, 255, 0.5);
-            // }
         }
     }
 

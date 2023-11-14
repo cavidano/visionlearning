@@ -75,17 +75,15 @@ export default class ReadingToggles {
 			ngss.getAttribute('data-ngss-desc') || 'Description not found';
 
 		const ngssDescHTML = `
-			<div class="reading-annotation">
-				<article class="reading-annotation__detail" aria-polite="live" data-ngss-cat-abbr="${ngssCatAbbr}">
-				<div class="reading-annotation__detail__head">
+			<article class="reading-annotation" aria-polite="live" data-ngss-cat-abbr="${ngssCatAbbr}">
+				<div class="reading-annotation__head">
 					${ngssCat}
 					${this.#closeButton}
 				</div>
-				<div class="reading-annotation__detail__body">
+				<div class="reading-annotation__body">
 					<p>${ngssDesc}</p>
 				</div>
-				</article>
-			</div>
+			</article>
 		`;
 
 		this.handleHighlightedClick(ngssDescHTML);
@@ -99,18 +97,16 @@ export default class ReadingToggles {
 		const termUrl = term.getAttribute('data-term-url') || '#1';
 
 		const termDefHTML = `
-			<div class="reading-annotation">
-				<article class="reading-annotation__detail glossary-term" data-term-definition aria-polite="live">
-					<div class="reading-annotation__detail__head">
-						<h2 class="h6">${termTitle}</h2>
-						${this.#closeButton}
-					</div>
-					<div class="reading-annotation__detail__body">
-						<p>${termDef}</p>
-						<p><a href="${termUrl}">View in Glossary</a></p>
-					</div>
-				</article>
-			</div>
+			<article class="reading-annotation glossary-term" data-term-definition aria-polite="live">
+				<div class="reading-annotation__head">
+					<h2 class="h6">${termTitle}</h2>
+					${this.#closeButton}
+				</div>
+				<div class="reading-annotation__body">
+					<p>${termDef}</p>
+					<p><a href="${termUrl}">View in Glossary</a></p>
+				</div>
+			</article>
 		`;
 		this.handleHighlightedClick(termDefHTML);
 	};
