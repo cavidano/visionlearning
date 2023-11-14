@@ -101,7 +101,8 @@ In this file:
 
         color: currentColor;
 
-        padding-block: 0.075em;
+        padding-block: 0.0875em;
+
         
         background-color: transparent;
         
@@ -111,11 +112,17 @@ In this file:
     }
 
     mark.highlighted {
+        --outline-width: calc(var(--border-width) * 1);
         cursor: pointer;
 
         pointer-events: auto;
 
-        outline: solid var(--border-width) transparent;
+        outline: solid var(--outline-width) transparent;
+
+        &:hover,
+        &:focus {
+            --outline-width: calc(var(--border-width) * 2);
+        }
 
     }
 
@@ -186,7 +193,7 @@ In this file:
             
             transform: translateY(-100%);
             
-            margin-inline-start: calc(var(--border-width) * -1);
+            margin-inline-start: calc(var(--border-width) * -2);
 
             padding: 0.5em 0.75em;
             

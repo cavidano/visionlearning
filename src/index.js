@@ -28,7 +28,7 @@ import AnchorNav from './js/customJS/anchor-nav';
 import { CompCheck } from './js/customJS/quiz'; 
 import Layout from './js/customJS/layout'; 
 import Modal from './js/customJS/modal';
-import ReadingToggles from './js/customJS/reading-toggles-newest';
+import ReadingToggles from './js/customJS/reading-toggles';
 import BackToTop from './js/customJS/back-to-top';
 
 //////////////////////////////////////////////
@@ -92,5 +92,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const backToTop = new BackToTop();
     backToTop.init();
-
 });
