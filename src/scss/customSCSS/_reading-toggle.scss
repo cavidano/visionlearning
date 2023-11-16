@@ -50,6 +50,7 @@ In this file:
 
     .reading-toggle__switch {
         --form-field-border-radius: 0.5em;
+        --focus-outline-distance: calc(var(--border-width) * -1);
 
         @extend .form-entry__option !optional;
         --subtle-fill-opacity: 0;
@@ -57,6 +58,11 @@ In this file:
         margin-block-end: var(--spacer-1);
         
         overflow: hidden;
+        
+        &:focus-within:focus-visible [class*="__switch"] {
+            outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+            outline-offset: var(--focus-outline-distance);
+        }
     }
 
     // Reading Annotation Mark
@@ -112,6 +118,7 @@ In this file:
 
     mark.highlighted {
         --outline-width: calc(var(--border-width) * 1);
+
         cursor: pointer;
 
         pointer-events: auto;
@@ -192,7 +199,8 @@ In this file:
             
             transform: translateY(-100%);
             
-            margin-inline-start: calc(var(--border-width) * -2);
+            margin-inline-start: calc(var(--outline-width) * -1);
+            margin-block-start: calc(var(--outline-width) * -1);
 
             padding: 0.5em 0.75em;
             
