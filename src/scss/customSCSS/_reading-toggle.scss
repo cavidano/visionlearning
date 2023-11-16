@@ -341,6 +341,10 @@ In this file:
             color: white;
         }
 
+        [class*="has-overlay"] &  {
+           display: none;
+        }
+
     }
 
     .reading-annotation__head {
