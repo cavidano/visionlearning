@@ -69,19 +69,20 @@ export default class ReadingToggles {
 	handleNGSSClick = (event) => {
 		const ngss = event.target;
 		const ngssCatAbbr = ngss.getAttribute('data-ngss-cat-abbr') || 'NGSS';
-		const ngssCat =
-			ngss.getAttribute('data-ngss-cat-full') || 'Title not found';
-		const ngssDesc =
-			ngss.getAttribute('data-ngss-desc') || 'Description not found';
+		const ngssCat = ngss.getAttribute('data-ngss-cat-full') || 'Title not found';
+		const ngssDesc = ngss.getAttribute('data-ngss-desc') || 'Description not found';
+		const ngssStandard = ngss.getAttribute('data-ngss-standard') || 'Standard not found';
 
 		const ngssDescHTML = `
-			<article class="reading-annotation" aria-polite="live" data-ngss-cat-abbr="${ngssCatAbbr}">
+			<article class="reading-annotation" aria-live="polite" data-ngss-cat-abbr="${ngssCatAbbr}">
 				<div class="reading-annotation__head">
 					${ngssCat}
 					${this.#closeButton}
 				</div>
 				<div class="reading-annotation__body">
-					<p>${ngssDesc}</p>
+					<p>
+						${ngssDesc}
+						${ngssStandard !== 'Standard not found' ? `<span class="standard">${ngssStandard}</span>` : ''}</p>
 				</div>
 			</article>
 		`;

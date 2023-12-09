@@ -67,32 +67,50 @@ The following example shows a reading annotation for a glossary term.
 
 <figure class="margin-y-4">
 
-    <article
-        class="reading-annotation glossary-term"
-        aria-polite="live"
-        data-term-definition>
-        <div class="reading-annotation__head">
-            <h2 class="h6">heat</h2>
-            <button class="button button--icon-only">
-                <span class="icon icon-close" aria-hidden="true"></span>
-            </button>
-        </div>
-        <div class="reading-annotation__body">
-            <p>
-                [noun] A measure of the total internal energy of a substance that can be increased or decreased when objects with different temperatures are placed into contact. Heat is a process, not a property of a material.
-            </p>
-            <p>
-                <a href="${termUrl}">View in Glossary</a>
-            </p>
-        </div>
-    </article>
+<article
+    class="reading-annotation glossary-term"
+    aria-polite="live"
+    data-term-definition>
+    <div class="reading-annotation__head">
+        <h2 class="h6">heat</h2>
+        <button class="button button--icon-only">
+            <span class="icon icon-close" aria-hidden="true"></span>
+        </button>
+    </div>
+    <div class="reading-annotation__body">
+        <p>
+            [noun] A measure of the total internal energy of a substance that can be increased or decreased when objects with different temperatures are placed into contact. Heat is a process, not a property of a material.
+        </p>
+        <p>
+            <a href="${termUrl}">View in Glossary</a>
+        </p>
+    </div>
+</article>
 
 </figure>
 
+Glossary term annotations are triggered by clicking on a glossary term within the reading. The following example shows a glossary term annotation for the term "heat". 
+
+
+{% capture fig_2 %}
+
+<mark
+    class="term"
+    data-term-def="[definition]"
+>
+    heat
+</mark>
+{% endcapture %}
+
+{% include code-example.html content=fig_2 visualExample="false" %}
+
+The `term` class is used for styling the glossary term within the reading. Styling occurs only when the reading toggle switch is activated.
+
+The `data-term-def` attribute is used to identify the term definition that will be displayed in the annotation. The title of the annotation is the term itself, contained within the `<mark>` tag.
+
 ### NGSS Term Annotation
 
-The following example shows a reading annotation for an NGSS term.
-
+This example shows a reading annotation for an NGSS term.
 
 <figure class="margin-y-4">
 
@@ -109,32 +127,37 @@ The following example shows a reading annotation for an NGSS term.
     </div>
     <div class="reading-annotation__body">
         <p>Analyzing and interpreting data; constructing explanations: Newton's mathematical prediction did not match reality, which required him to develop a new explanation based on the data.</p>
-        <span class="standard font-size-sm"><em>LS.2.C: Ecosystem Dynamics, Functioning, and Resilience</em></span>
+        <span class="standard">LS.2.C: Ecosystem Dynamics, Functioning, and Resilience</span>
     </div>
 </article>
 
 </figure>
 
+NGSS term annotations are triggered by clicking on an NGSS term within the reading. The following example shows an NGSS term annotation for the term "Science and Engineering Practices". 
+
 {% capture fig_3 %}
 
-<article
-    class="reading-annotation"
-    aria-polite="live"
+<mark
+    class="ngss"
     data-ngss-cat-abbr="Practice"
+    data-ngss-cat-full="Science and Engineering Practices"
+    data-ngss-desc="[description...]"
+    data-ngss-standard="[standard...]"
 >
-    <div class="reading-annotation__head">
-        Science and Engineering Practices
-        <button class="button button--icon-only">
-            <span class="icon icon-close" aria-hidden="true"></span>
-        </button>
-    </div>
-    <div class="reading-annotation__body">
-        <p>Analyzing and interpreting data; constructing explanations: Newton's mathematical prediction did not match reality, which required him to develop a new explanation based on the data.</p>
-        <span class="standard">XXXXXX</span>
-    </div>
-</article>
+        Based on his studies of the force of gravity, Newton calculated the average density of Earth and found it to be more than twice the density of the rocks near the surface.
+</mark>
 
 {% endcapture %}
 
 {% include code-example.html content=fig_3 visualExample="false" %}
+
+The `ngss` class is used for styling the NGSS term within the reading.
+
+The `data-ngss-cat-abbr` attribute is used to identify the NGSS category abbreviation that will be displayed in the annotation.
+
+The `data-ngss-cat-full` attribute is used to identify the NGSS category full name that will be displayed in the annotation. 
+
+The `data-ngss-desc` attribute is used to identify the NGSS description that will be displayed in the annotation. 
+
+The `data-ngss-standard` attribute identifies the NGSS standard that will be displayed in the annotation (e.g. LS.2.C: Ecosystem Dynamics, Functioning, and Resilience).
 

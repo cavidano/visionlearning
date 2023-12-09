@@ -346,7 +346,7 @@ In this file:
         }
 
         > [class*="__body"] p {
-            margin-block-end: 0.25em;
+            margin-block-end: 0.5em;
         }
 
         &:not(.glossary-term) > [class*="__head"] {
@@ -379,6 +379,15 @@ In this file:
     .reading-annotation__body {
         padding: var(--padding-y) var(--padding-x);
         background-color: hsla(100, 100%, 100%, 0.875);
+
+        [class*="standard"] {
+            display: block;
+
+            font-size: var(--font-size-sm);
+            font-style: italic;
+            
+            opacity: 0.8;
+        }
     }
 
     @media screen and (max-width: 1024px) {
