@@ -144,7 +144,7 @@ NGSS term annotations are triggered by clicking on an NGSS term within the readi
     data-ngss-desc="[description...]"
     data-ngss-standard="[standard...]"
 >
-        Based on his studies of the force of gravity, Newton calculated the average density of Earth and found it to be more than twice the density of the rocks near the surface.
+        Based on his studies of the force of gravity...
 </mark>
 
 {% endcapture %}
