@@ -125,6 +125,7 @@ In this file:
     --biology-color: #00492f;
     --chemistry-color: #29417c;
     --earth-science-color: #552c39;
+    --environmental-science-color: #00394D;
     --general-science-color: #c13926;
     --profiles-in-science-color: #4c3463;
     --math-in-science-color: #016a7c;
@@ -337,6 +338,10 @@ $theme-colors: (
 
 .earth-science {
     --primary: var(--earth-science-color);
+}
+
+.environmental-science {
+    --primary: var(--environmental-science-color);
 }
 
 .general-science {
