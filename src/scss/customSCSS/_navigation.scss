@@ -351,6 +351,8 @@ In this file:
         display: flex;
         justify-content: space-between;
 
+        align-items: center;
+
         h2 {
             margin-bottom: unset;
             line-height: unset;
@@ -359,11 +361,16 @@ In this file:
     }
 
     .discipline-divider__title {
-        padding: var(--spacer-4) var(--spacer-2);
+        margin-inline: var(--spacer-2);
     }
 
     .discipline-divider__image {
-        max-width: 180px;
+
+        max-width: 124px;
+
+        @include breakpoint.breakpoint-up(xl) {
+            max-width: 164px;
+        }
     }
 
     .discipline-divider {
