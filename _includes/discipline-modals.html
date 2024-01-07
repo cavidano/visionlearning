@@ -15,7 +15,8 @@
 
     <div
         class="modal__content medium theme-primary {{ slug }} border-radius box-shadow-3"
-        aria-labelledby="modal-example-01-title">
+        aria-labelledby="modal-example-01-title"
+	>
 
         <header class="position-relative">
 
@@ -62,7 +63,7 @@
 
         <main class="modal__content__body border-top" id="modal-example-01-content">
 
-            <div class="container overflow-hidden">
+            <div class="overflow-hidden">
                       
 				{% for category in subcategories %}
 
@@ -73,7 +74,7 @@
 											
 						<h2 class="h6">{{ title }}</h2>
 
-						<ul class="list-divider text-color-link font-size-md">
+						<ul class="list-divider">
 									
 							{% for module in modules %}              
 								{% assign name = module.Name %}  
