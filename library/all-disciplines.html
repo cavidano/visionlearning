@@ -10,14 +10,14 @@ title: Library • All Disciplines
         {% assign slug = item.Slug %}                         
         {% assign subcategories = item.Subcategories %}                          
 
-        <section>
+        <section class="">
 
             <header class="theme-primary {{ slug }} discipline-divider">
                 <h2 class="h3 discipline-divider__title">{{ header }}</h2>
                 <img class="discipline-divider__image" src="{{ site.url }}/images/discipline-{{ slug }}-4x3.jpg" />
             </header>
                         
-            <div class="padding-x-2 overflow-hidden">
+            <div class="padding-x-2">
 
             {% for category in subcategories %}                
                 {% assign title = category.Title %}          
@@ -27,19 +27,26 @@ title: Library • All Disciplines
                                             
                     <h2 class="h6">{{ title }}</h2>
 
-                    <ul class="list-divider font-size-md">
+                    <ul class="list-divider text-color-link font-size-md">
                                     
-                        {% for module in modules %}              
+                        {% for module in modules %}
+
                             {% assign name = module.Name %}  
 
-                            <li class="text-color-link">
-                                <span class="list-divider__cell">
-                                    <a href="{{ site.url }}/library/module/reading.html">
-                                        {{ name }}
-                                    </a>
-                                </span>
+                            <li>
+                                <a class="truncate-text" href="{{ site.url }}/library/module/reading.html">
+                                    <strong>
+                                        {{ name }}:
+                                    </strong>
+                                    <em>
+                                        This is a subtitle for the module
+                                    </em>
+                                </a>
+
                             </li>
+
                         {% endfor %}
+
                     </ul>
 
                 </div>

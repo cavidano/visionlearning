@@ -64,44 +64,43 @@
 
             <div class="container overflow-hidden">
                       
-					{% for category in subcategories %}
+				{% for category in subcategories %}
 
-						{% assign title = category.Title %}          
-						{% assign modules = category.Modules %}          
+					{% assign title = category.Title %}          
+					{% assign modules = category.Modules %}          
 
-						<div class="category margin-y-4">
-												
-							<h2 class="h6">{{ title }}</h2>
+					<div class="category margin-y-4">
+											
+						<h2 class="h6">{{ title }}</h2>
 
-							<ul class="list-divider font-size-md">
-										
-								{% for module in modules %}              
-									{% assign name = module.Name %}  
+						<ul class="list-divider text-color-link font-size-md">
+									
+							{% for module in modules %}              
+								{% assign name = module.Name %}  
 
-									<li class="text-color-link">
-										<span class="list-divider__cell">
-											<a href="{{ site.url }}/library/module/reading.html">
-												{{ name }}
-											</a>
-										</span>
-										<span class="list-divider__cell display-none">
-											<div class="button-group">    
-												<button class="button button--icon-only">
-													<span class="icon icon-plus" aria-hidden="true"></span>
-												</button>
-											</div>
-										</span>
-									</li>
+								<li>
+									<a
+										class="truncate-text"
+										href="{{ site.url }}/library/module/reading.html"
+									>
+										<strong>
+											{{ name }}:
+										</strong>
+										<em>
+											This is a subtitle for the module
+										</em>
+									</a>
+								</li>
 
-								{% endfor %}
+							{% endfor %}
 
-							</ul>
+						</ul>
 
-						</div>
+					</div>
 
-					{% endfor %}
+				{% endfor %}
 
-				</div>
+			</div>
 
         </main>
 		

@@ -60,6 +60,8 @@ In this file:
 
             gap: var(--spacer-4);
 
+            overflow: hidden;
+
         }
 
         > li > [class*="__cell"]:nth-child(1) {

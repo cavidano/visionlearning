@@ -31,7 +31,7 @@ const devPages = {
 
 const devDir = './html';
 
-const devPage = `${devPages.DisciplineGrid}.html`;
+const devPage = `${devPages.List}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

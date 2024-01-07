@@ -226,6 +226,10 @@ $rows: math.div($columns, 2);
         &[class*="grid--divider"] > *::after {
             display: none;
         }
+        
+        > * {
+            min-width: 0;
+        }
     }
 
     @include breakpoint.breakpoint-up(lg) {
@@ -263,6 +267,7 @@ $rows: math.div($columns, 2);
             overflow: visible;
             
             &[class*="grid--divider"] {
+
 
                 > *::before {
                     display: none;

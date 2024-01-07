@@ -18,6 +18,8 @@
       Modules:
       - Id: '61'
         Name: Carbohydrates
+        Subtitle: >
+          Simple sugars and complex carbohydrates
         Summary: >
           Our bodies are efficient chemical processing plants, breaking down
           nutrients to use and store for energy. This module introduces
