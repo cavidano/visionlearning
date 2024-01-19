@@ -422,6 +422,10 @@ $headers: (
 
     [class*="blockquote"] {
         font-style: italic;
+
+        p:empty {
+            display: none;
+        }
     }
 
     .blockquote {
