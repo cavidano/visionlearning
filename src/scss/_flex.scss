@@ -95,6 +95,10 @@ In this file:
                 flex-shrink: 0;
             }
 
+            .flex-grow-shrink#{$mod}{
+                flex: 1;
+            }
+
             // Justify Content
             
             .justify-content-start#{$mod} {

@@ -1,0 +1,35 @@
+{% if include.image_src %}
+    {% assign src = include.image_src %}
+{% else %}
+    {% assign src = 'https://via.placeholder.com/1200x400' %}
+{% endif %}
+
+{% if include.content %}
+    {% assign content = include.content %}
+{% else %}
+    {% assign content = 'Lorem Ipsum Dolor Sit Amet' %}
+{% endif %}
+
+{% if include.link_url %}
+    {% assign url = include.link_url %}
+{% else %}
+    {% assign url = '/library/module/reading.html' %}
+{% endif %}
+
+<a class="no-hover-focus height-100" href="{{ site.url }}{{ url }}">
+
+    <article class="flex-row align-items-center flex-column--md align-items-start--md height-100 theme-light padding-2 gap-2">
+
+        <div class="width-30 width-auto--md">
+            <img class="border-radius box-shadow-1" src="{{ site.url }}{{ src }}" alt="Placeholder">
+        </div>
+
+        <div class="flex-grow-shrink">
+            <h2 class="h6 font-weight-normal">
+                {{ content }}
+            </h2>
+        </div>
+
+    </article>
+    
+</a>

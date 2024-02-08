@@ -148,4 +148,10 @@ In this file:
         }
     }
 
+    .hover-opacity {
+        &:hover {
+            opacity: 0.9;
+        }
+    }   
+
 } // end @layer

@@ -381,29 +381,14 @@ tab: reading
 
     <hr class="border-color-dark" />
                         
-    <footer class="module__footer">
+    <footer class="module__footer" aria-label="Module Footer">
 
-        <ul class="nav nav--horizontal margin-bottom-4 font-size-md">
-            <li>
-                <a
-                    href="{{ site.url }}/library/module/reading.html"
-                    aria-current="page"
-                >
-                    Reading
-                </a>
-            </li>
-            <li>
-                <a href="{{ site.url }}/library/module/quiz.html">
-                    Quiz
-                </a>
-            </li>
-            <li>
-                <a href="{{ site.url }}/library/module/quiz.html">
-                    Teach with this
-                </a>
-            </li>
-        </ul>
-
+        <p class="citation">
+            <em>
+                Anne E. Egger, Ph.D. “Earth Structure” Visionlearning Vol. EAS (1), 2003.
+            </em>
+        </p>
+        
         <div class="title-list">
                 
             <p class="h6 title-list__title">
@@ -427,31 +412,6 @@ tab: reading
 
         </div>
 
-        <div class="title-list">
-                
-            <p class="h6 title-list__title">
-                Further Reading
-            </p>
-                        
-            <ul class="title-list__list">
-                <li>
-                    <a href="#1">
-                        The Origins of Plate Tectonic Theory
-                    </a>
-                </li>
-                <li>
-                    <a href="#1">
-                        Density
-                    </a>
-                </li>
-                <li>
-                    <a href="#1">
-                        The Origins of Plate Tectonic Theory
-                    </a>
-                </li>
-            </ul>
-
-        </div>
 
         <div class="title-list">
                 
@@ -477,11 +437,57 @@ tab: reading
 
         </div>
 
-        <p class="citation">
-            <em>
-                Anne E. Egger, Ph.D. “Earth Structure” Visionlearning Vol. EAS (1), 2003.
-            </em>
-        </p>
+        <div class="title-list">
+                
+            <p class="h6 title-list__title">
+                Further Reading
+            </h6>
+                            
+            <ul class="grid grid--column-2--md grid--column-3--md gap-1">
+
+                <li>
+                    {% capture cool__cool %}
+					Atomic Theory I: <em>Detecting electrons and the nucleus</em>
+                    {% endcapture %}
+
+					{%
+						include module-feature-further-reading.html
+						image_src='/images/feature/module-4x3-atomic-theory-I.jpg'
+						content=cool__cool
+					%}
+                
+                </li>
+
+                <li>
+                    {% capture cool__cool %}
+					Atomic Theory II: <em>Ions, neutrons, isotopes and quantum theory</em>
+                    {% endcapture %}
+
+					{%
+						include module-feature-further-reading.html
+						image_src='/images/feature/module-4x3-atomic-theory-II.jpg'
+						content=cool__cool
+					%}
+                
+                </li>
+
+                <li>
+                    {% capture cool__cool %}
+					Atomic Theory III: <em>Wave-Particle Duality and the Electron</em>
+                    {% endcapture %}
+
+					{%
+						include module-feature-further-reading.html
+						image_src='/images/feature/module-4x3-atomic-theory-III.jpg'
+						content=cool__cool
+					%}
+                
+                </li>
+
+            </ul>
+
+        </div>
+
 
     </footer>
 
