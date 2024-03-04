@@ -5,6 +5,8 @@ title: Figure
 				
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima, itaque dolor facilis?
 
+- [Module Figures]({{site.url}}/docs/module-figures/periodic-table)
+
 <hr class="margin-y-4" />
 
 ## Enlarge Image

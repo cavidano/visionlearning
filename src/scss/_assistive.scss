@@ -65,8 +65,7 @@ In this file:
         }
     }
     
-    &.button--outline,
-    &.lightbox-button--icon {
+    &.button--outline {
         --focus-outline-distance: calc(var(--focus-outline-size) * -3);
     }
 }
