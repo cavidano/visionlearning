@@ -26,12 +26,14 @@ const devPages = {
     'Typography': 'typography',
     'Tab': 'tab',
     'Search': 'search',
-    'Quiz': 'quiz'
+    'Quiz': 'quiz',
+    // 
+    'PT': 'periodic-table'
 }
 
 const devDir = './html';
 
-const devPage = `${devPages.Figure}.html`;
+const devPage = `${devPages.PT}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

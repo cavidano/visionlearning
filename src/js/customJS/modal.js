@@ -15,7 +15,7 @@ export default class Modal {
         return;
       }
 
-      this.#scrollPosition = window.pageYOffset;
+      this.#scrollPosition = window.scrollY;
         
       document.querySelector('html').style.setProperty('--scroll-position', `-${this.#scrollPosition}px`);
 
@@ -61,10 +61,10 @@ export default class Modal {
           elDistance = elOffset - modalScrollY;
           
           if (elDistance <= 0) {
-              modalHeader.classList.add('sticky', 'theme-primary', 'box-shadow-1');
+              modalHeader.classList.add('sticky', 'theme-', 'box-shadow-1');
               modalHeader.nextElementSibling.style.paddingTop = `${modalHeaderHeight}px`;
           } else {
-              modalHeader.classList.remove('sticky', 'theme-primary', 'box-shadow-1');
+              modalHeader.classList.remove('sticky', 'theme-', 'box-shadow-1');
               modalHeader.nextElementSibling.style.paddingTop = 'initial';
           }        
       }

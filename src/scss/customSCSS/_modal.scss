@@ -83,7 +83,7 @@ In this file:
     display: flex;
     flex-direction: column;
     
-    min-height: 100%;
+    // min-height: 100%;
 
     max-height: calc(100vh - (var(--modal-padding) * 2));
     
@@ -150,6 +150,7 @@ In this file:
 
       &.sticky {
         position: fixed;
+        z-index: 1000;
       }
 
       inset-block-start: 0;

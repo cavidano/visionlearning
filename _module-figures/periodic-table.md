@@ -3,7 +3,7 @@ layout: docs
 title: Periodic Table
 ---
 
-In 1869, the Russian chemist Dmitri Mendeleev first proposed that the chemical elements exhibited a "periodicity of properties."  Mendeleev had tried to organize the chemical elements according to their atomic weights, assuming that the properties of the elements would gradually change as atomic weight increased. What he found, however, was that the chemical and physical properties of the elements increased gradually and then suddenly changed at distinct steps, or periods.  To account for these repeating trends, Mendeleev grouped the elements in a table that had both rows and columns.
+## Periodic Table I
 
 <div class="figure text-align-center">
     <figure>
@@ -24,8 +24,6 @@ In 1869, the Russian chemist Dmitri Mendeleev first proposed that the chemical e
     </figure>
 </div>
 
-An element's chemical properties are determined by the way in which its atoms interact with other atoms. If we picture the outer (valence) electron shell of an atom as a sphere encompassing everything inside, then it is only the valence shell that can interact with other atoms – much the same way as it is only the paint on the exterior of your house that "interacts" with, and gets wet by, rain water.
-
 <div class="figure text-align-center">
     <figure>
             <img
@@ -39,9 +37,6 @@ An element's chemical properties are determined by the way in which its atoms in
         </figcaption>
     </figure>
 </div>
-
-As you can see in the illustration, while sodium has three electron shells and lithium two, the characteristic they share in common is that they both have only one electron in their outermost electron shell. These outer-shell electrons (called valence electrons) are important in determining the chemical properties of the elements.
-
 
 <div class="figure text-align-center">
     <figure>
@@ -57,15 +52,14 @@ As you can see in the illustration, while sodium has three electron shells and l
     </figure>
 </div>
 
-
 <div class="figure text-align-center">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/XX-e-LG.png">
+            data-lightbox-src="{{ site.url}}/images/module-figures/56-e-LG.png">
             <img
-                src="{{ site.url}}/images/module-figures/XX-e.svg"
+                src="{{ site.url}}/images/module-figures/56-e.svg"
                 alt=""
             />
         </button>
@@ -82,16 +76,52 @@ As you can see in the illustration, while sodium has three electron shells and l
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/XX-f-LG.jpg">
+            data-lightbox-src="{{ site.url }}/images/module-figures/56-f-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/XX-f.png"
+                src="{{ site.url }}/images/module-figures/56-f.jpg"
                 alt=""
             />
         </button>
         <figcaption>
             <p>
-                The Periodic Table of Elements
+                The Periodic Table of Elements?
             </p>
         </figcaption>
     </figure>
 </div>
+
+<table class="table" aria-describedby="configDescription">
+  <caption id="configDescription">Element Configuration Shorthand</caption>
+  <thead>
+    <tr>
+      <th scope="col">Element</th>
+      <th scope="col">Symbol</th>
+      <th scope="col">Configuration Shorthand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Hydrogen</th>
+      <td>H</td>
+      <td>1e-</td>
+    </tr>
+    <tr>
+      <th scope="row">Lithium</th>
+      <td>Li</td>
+      <td>2e-</td>
+    </tr>
+    <tr>
+      <th scope="row">Fluorine</th>
+      <td>F</td>
+      <td>2e- 7e-</td>
+    </tr>
+    <tr>
+      <th scope="row">Sodium</th>
+      <td>Na</td>
+      <td>2e- 8e- 1e-</td>
+    </tr>
+  </tbody>
+</table>
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
