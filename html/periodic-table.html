@@ -29,6 +29,7 @@
                     style="grid-area: H;"
                     data-group="reactive-nonmetals"
                     data-modal-open="modal-element-h"
+                    title="Hydrogen"
                 >
                     <span class="atomic-number">1</span>
                     <span class="symbol">H</span>
@@ -40,6 +41,7 @@
                     class="periodic-table__element"
                     style="grid-area: He;"
                     data-group="noble-gases"
+                    title="Helium"
                 >
                     <span class="atomic-number">2</span>
                     <span class="symbol">He</span>
@@ -53,6 +55,7 @@
                     class="periodic-table__element"
                     style="grid-area: Li;"
                     data-group="alkali-metals"
+                    title="Lithium"
                 >
                     <span class="atomic-number">3</span>
                     <span class="symbol">Li</span>
@@ -64,6 +67,7 @@
                     class="periodic-table__element"
                     style="grid-area: Be;"
                     data-group="alkaline-earth-metals"
+                    title="Beryllium"
                 >
                     <span class="atomic-number">4</span>
                     <span class="symbol">Be</span>
@@ -75,6 +79,7 @@
                     class="periodic-table__element"
                     style="grid-area: B;"
                     data-group="metalloids"
+                    title="Boron"
                 >
                     <span class="atomic-number">5</span>
                     <span class="symbol">B</span>
@@ -86,6 +91,7 @@
                     class="periodic-table__element"
                     style="grid-area: C;"
                     data-group="reactive-nonmetals"
+                    title="Carbon"
                 >
                     <span class="atomic-number">6</span>
                     <span class="symbol">C</span>
@@ -1001,10 +1007,12 @@
                     <span class="chemical-group">Noble Gas</span>
                 </button>
 
-                <div id="ptable-extra">
+                <div id="ptable-extra" aria-hidden="true">
                     <div class="lanthanides-connector" ></div>
                     <div class="actinides-connector" ></div>
                 </div>
+
+                <div class="separator" aria-hidden="true"></div>
 
                 <button 
                     class="periodic-table__element"

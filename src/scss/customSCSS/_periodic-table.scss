@@ -12,35 +12,44 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --reactive-nonmetals: #00989C;
-    --reactive-nonmetals-tint: #00989C26; /* 12% opacity */
-    --alkali-metals: #1A679C;
-    --alkali-metals-tint: #1A679C26; /* 12% opacity */
-    --alkaline-earth-metals: #942E27;
-    --alkaline-earth-metals-tint: #942E2726; /* 12% opacity */
-    --transition-metals: #641B98;
-    --transition-metals-tint: #641B9826; /* 12% opacity */
-    --lanthanides: #175E82;
-    --lanthanides-tint: #175E8226; /* 12% opacity */
     --actinides: #81314C;
-    --actinides-tint: #81314C26; /* 12% opacity */
-    --halogens: #0E6655;
-    --halogens-tint: #0E665526; /* 12% opacity */
+    --actinides-tint: #81314C26;
+    
+    --alkali-metals: #1A679C;
+    --alkali-metals-tint: #1A679C26;
+    
+    --alkaline-earth-metals: #942E27;
+    --alkaline-earth-metals-tint: #942E2726;
+
+    --halogens: #131B6C;
+    --halogens-tint: #131B6C26;
+    
+    --lanthanides: #175E82;
+    --lanthanides-tint: #175E8226;
+    
     --metalloids: #A04012;
-    --metalloids-tint: #A0401226; /* 12% opacity */
-    --post-transition-metals: #17804B;
-    --post-transition-metals-tint: #17804B26; /* 12% opacity */
-    --unknown-properties: #505050;
-    --unknown-properties-tint: #50505026; /* 12% opacity */
+    --metalloids-tint: #A0401226;
+    
     --noble-gases: #8E0B37;
-    --noble-gases-tint: #8E0B3726; /* 12% opacity */
-    --default-color: #FFFFFF; /* Assuming you want a default color */
+    --noble-gases-tint: #8E0B3726;
+
+    --post-transition-metals: #17804B;
+    --post-transition-metals-tint: #17804B26;
+    
+    --reactive-nonmetals: #00989C;
+    --reactive-nonmetals-tint: #00989C26;
+
+    --transition-metals: #641B98;
+    --transition-metals-tint: #641B9826;
+
+    --unknown-properties: #505050;
+    --unknown-properties-tint: #50505026;
 }
 
-/* Reactive nonmetals */
-[data-group="reactive-nonmetals"] {
-    color: var(--reactive-nonmetals);
-    background-color: var(--reactive-nonmetals-tint);
+/* Actinides */
+[data-group="actinides"] {
+    color: var(--actinides);
+    background-color: var(--actinides-tint);
 }
 
 /* Alkaline metals */
@@ -55,10 +64,10 @@ In this file:
     background-color: var(--alkaline-earth-metals-tint);
 }
 
-/* Transition metals */
-[data-group="transition-metals"] {
-    color: var(--transition-metals);
-    background-color: var(--transition-metals-tint);
+/* Halogens */
+[data-group="halogens"] {
+    color: var(--halogens);
+    background-color: var(--halogens-tint);
 }
 
 /* Lanthanides */
@@ -67,22 +76,10 @@ In this file:
     background-color: var(--lanthanides-tint);
 }
 
-/* Actinides */
-[data-group="actinides"] {
-    color: var(--actinides);
-    background-color: var(--actinides-tint);
-}
-
 /* Metalloids */
 [data-group="metalloids"] {
     color: var(--metalloids);
     background-color: var(--metalloids-tint);
-}
-
-/* Halogens */
-[data-group="halogens"] {
-    color: var(--halogens);
-    background-color: var(--halogens-tint);
 }
 
 /* Noble gases */
@@ -95,6 +92,18 @@ In this file:
 [data-group="post-transition-metals"] {
     color: var(--post-transition-metals);
     background-color: var(--post-transition-metals-tint);
+}
+
+/* Reactive nonmetals */
+[data-group="reactive-nonmetals"] {
+    color: var(--reactive-nonmetals);
+    background-color: var(--reactive-nonmetals-tint);
+}
+
+/* Transition metals */
+[data-group="transition-metals"] {
+    color: var(--transition-metals);
+    background-color: var(--transition-metals-tint);
 }
 
 /* Unknown properties */
@@ -127,11 +136,10 @@ In this file:
         "Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe"
         "Cs Ba connector Hf Ta W Re Os Ir Pt Au Hg Tl Pb Bi Po At Rn"
         "Fr Ra connector Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og"
+        ". . connector space space space space space space space space space space space space space space space"
         ". . connector La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu"
         ". . connector Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr";
 }
-
-// Periodic Table Element
 
 .periodic-table__element {
     display: flex;
@@ -197,13 +205,12 @@ button.periodic-table__element {
 
 // Connectors
 
-
 #ptable-extra {
     grid-area: connector;
     position: relative; width: 100%; height: 100%;
 }
 
-#ptable-extra .lanthanides-connector {
+.lanthanides-connector {
     clip-path: polygon(
         0% 0%,
         100% calc(50% + calc(var(--padding) * 0.5)),
@@ -216,7 +223,7 @@ button.periodic-table__element {
     position: absolute;
 }
 
-#ptable-extra .actinides-connector {
+.actinides-connector {
     clip-path: polygon(
         0% calc(25% + calc(var(--padding) * 2)),
         100% calc(75% + calc(var(--padding) * 2)),
@@ -227,6 +234,12 @@ button.periodic-table__element {
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+.separator {
+    grid-area: space;
+    display: block;
+    height: 3rem;
 }
 
 // Model Viewer
@@ -241,4 +254,3 @@ button.periodic-table__element {
 
     z-index: 5;
 }
-
