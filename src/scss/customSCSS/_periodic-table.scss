@@ -128,8 +128,8 @@ In this file:
 
 .periodic-table {
     grid-template-areas:
-        "H . . . . . . . . . . . . . . . . He"
-        "Li Be . . . . . . . . . . B C N O F Ne"
+        "H . . . key key . . . . . . . . . . . He"
+        "Li Be . . key key . . . . . . B C N O F Ne"
         "Na Mg . . . . . . . . . . Al Si P S Cl Ar"
         "Na Mg . . . . . . . . . . Al Si P S Cl Ar"
         "K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr"
@@ -141,14 +141,64 @@ In this file:
         ". . connector Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr";
 }
 
+#key {
+    grid-area: key;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+
+
+     p {
+        position: relative;
+        width: 100%;
+
+        // border: 1px solid var(--text-color);
+
+        .key__item {
+            position: absolute;
+            inset-inline-start: 100%;
+            inset-block-start: 50%;
+
+            transform: translateY(-50%);
+
+            margin-inline-start: 80px;
+            
+            white-space: nowrap;
+
+            font-size: var(--font-size-sm);
+
+            color: var(--text-color);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+
+                transform: translateX(-80px);
+                display: inline-block;
+
+                width: 5em;
+                border-bottom: 1px solid var(--border-color);
+            }
+        }
+    }
+}
+
 .periodic-table__element {
     display: flex;
     flex-direction: column;
     align-items: center;
+    // aspect-ratio: 1 / 1;
+    // border: 1px solid var(--border-color);
+
     justify-content: center;
+
+    text-align: center;
 
     > p {
         margin-bottom: unset;
+        width: 100%;
     }
 
     [class^="symbol"] {
@@ -164,10 +214,11 @@ In this file:
     gap: var(--spacer-4);
 
     padding-block: var(--spacer-3);
-
+    
     .periodic-table__element {
-        background-color: var(--default-color);
-        color: var(--reactive-nonmetals);
+        background-color: var(--reactive-nonmetals);
+        color: whitesmoke;
+        gap: var(--spacer-1);
     }
 }
 
@@ -176,6 +227,7 @@ In this file:
 button.periodic-table__element {
     font-size: var(--font-size-sm);
     padding: var(--padding);
+
 
     [class^="symbol"] { 
         font-size: 1.5rem;
@@ -193,7 +245,7 @@ button.periodic-table__element {
 
     gap: var(--padding-2);
 
-    padding: var(--spacer-2);
+    padding: var(--spacer-3);
 
     font-size: var(--font-size-md);
 
