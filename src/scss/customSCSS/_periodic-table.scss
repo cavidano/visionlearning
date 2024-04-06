@@ -119,14 +119,15 @@ In this file:
 // The Periodic Table
 
 .periodic-table {
-    --padding:  calc(var(--spacer-1) * .5);
+    --gap: 0.25cqi;
 
     display: grid;
     grid-template-columns: repeat(18, 1fr);
-    gap: var(--padding);
-}
 
-.periodic-table {
+    gap: var(--gap);
+    
+    padding: var(--spacer-3);
+
     grid-template-areas:
         "H . . . key key . . . . . . . . . . . He"
         "Li Be . . key key . . . . . . B C N O F Ne"
@@ -139,48 +140,61 @@ In this file:
         ". . connector space space space space space space space space space space space space space space space"
         ". . connector La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu"
         ". . connector Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr";
+        
+    container: periodic-table / inline-size;
 }
 
-#key {
+// The Periodic Table Key
+
+.periodic-table__key {
+    --pointer-width: 4cqi;
+    
     grid-area: key;
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-    justify-content: center;
 
+    [class*="key__item"] {
+        position: absolute;
+        inset-inline-start: 100%;
+        inset-block-start: 50%;
 
-     p {
-        position: relative;
-        width: 100%;
+        transform: translateY(-50%);
 
-        // border: 1px solid var(--text-color);
+        margin-inline-start: var(--pointer-width);
+        
+        white-space: nowrap;
 
-        .key__item {
+        font-size: 1cqi;
+        font-weight: var(--body-font-weight-normal);
+
+        color: var(--text-color);
+
+        &::before,
+        &::after {
+            content: "";
             position: absolute;
-            inset-inline-start: 100%;
-            inset-block-start: 50%;
-
-            transform: translateY(-50%);
-
-            margin-inline-start: 80px;
-            
-            white-space: nowrap;
-
-            font-size: var(--font-size-sm);
-
             color: var(--text-color);
+            inset-block-start: 50%;
+            inset-inline-start: 0;
+        }
 
-            &::before {
-                content: "";
-                position: absolute;
-                top: 50%;
+        &::before {
+            display: inline-block;
 
-                transform: translateX(-80px);
-                display: inline-block;
+            position: absolute;
 
-                width: 5em;
-                border-bottom: 1px solid var(--border-color);
-            }
+
+            width: calc(var(--pointer-width) - 0.5em);
+            border-bottom: 1px solid var(--text-color);
+            transform: translateX(calc(-1 * var(--pointer-width)));
+        }
+
+        &::after {
+            width: 0;
+            height: 0;
+            border-top: 0.5cqi solid transparent;
+            border-bottom: 0.5cqi solid transparent;
+            border-right: 0.5cqi solid var(--text-color);
+
+            transform: translateY(-50%) translateX(calc(-1 * var(--pointer-width)));
         }
     }
 }
@@ -189,14 +203,17 @@ In this file:
     display: flex;
     flex-direction: column;
     align-items: center;
-    // aspect-ratio: 1 / 1;
-    // border: 1px solid var(--border-color);
+
+    gap: 0.25em;
+
+    aspect-ratio: 1 / 1;
 
     justify-content: center;
 
     text-align: center;
 
     > p {
+        position: relative;
         margin-bottom: unset;
         width: 100%;
     }
@@ -205,6 +222,102 @@ In this file:
         font-weight: var(--body-font-weight-bold);
     }
 }
+
+// Periodic Table Element Button
+
+.periodic-table__element {
+    --min-size: clamp(2.5cqi, 88px, 5cqi);
+
+    position: relative;
+
+    min-height: var(--min-size);
+    min-width: var(--min-size);
+
+    padding: 1cqi;
+    font-size: 0.875cqi;
+
+    gap: var(--gap);
+
+    [class^="symbol"] { 
+        font-size: 1.5cqi;
+        line-height: 1;
+    }
+
+    [class^="chemical-group"] {
+        display: none;
+    }
+    
+    &::before,
+    &::after {
+        position: absolute;
+        padding: 0.5cqi;
+        color: var(--text-color);
+    }
+
+    &::before {
+        content: attr(data-period-number);
+        inset-inline-start: 0;
+        transform: translateX(-100%);
+    }
+
+    &::after {
+        content: attr(data-group-number);
+        inset-block-start: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.periodic-table__element:not(button) {
+    padding: 2cqi;
+
+    // font-size: var(--font-size-md);
+
+    [class^="symbol"] {
+        font-size: 5cqi;
+        line-height: 1;
+    }
+}
+
+// Connectors
+
+.periodic-table__connectors {
+    grid-area: connector;
+    position: relative;
+}
+
+.lanthanides-connector {
+    clip-path: polygon(
+        0% 0%,
+        100% 60%,
+        100% calc(80% - calc(var(--gap) * 1.5)),
+        0% calc(20% - calc(var(--gap) * 1.5))
+    );
+    background: var(--lanthanides-tint);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.actinides-connector {
+    clip-path: polygon(
+        0% calc(20% + calc(var(--gap) * 1.5)),
+        100% calc(80% + calc(var(--gap) * 1.5)),
+        100% 100%,
+        0% 40%
+    );
+    background: var(--actinides-tint);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.separator {
+    grid-area: space;
+    display: block;
+    height: 6cqi;
+}
+
+// Model Viewer
 
 .periodic-table-header {
     display: flex;
@@ -221,81 +334,6 @@ In this file:
         gap: var(--spacer-1);
     }
 }
-
-// Periodic Table Element Button
-
-button.periodic-table__element {
-    font-size: var(--font-size-sm);
-    padding: var(--padding);
-
-
-    [class^="symbol"] { 
-        font-size: 1.5rem;
-    }
-
-    [class^="chemical-group"] { 
-        font-size: 0.5rem;
-        display: none;
-    }
-}
-
-.periodic-table__element:not(button) {
-    min-width: 180px;
-    aspect-ratio: 1 / 1;
-
-    gap: var(--padding-2);
-
-    padding: var(--spacer-3);
-
-    font-size: var(--font-size-md);
-
-    [class^="symbol"] {
-        font-size: 4rem;
-        line-height: 1;
-    }
-}
-
-// Connectors
-
-#ptable-extra {
-    grid-area: connector;
-    position: relative; width: 100%; height: 100%;
-}
-
-.lanthanides-connector {
-    clip-path: polygon(
-        0% 0%,
-        100% calc(50% + calc(var(--padding) * 0.5)),
-        100% calc(75% - calc(var(--padding) * 0.5)),
-        0% calc(25% - calc(var(--padding) * 0.5))
-    );
-    background: var(--lanthanides-tint);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.actinides-connector {
-    clip-path: polygon(
-        0% calc(25% + calc(var(--padding) * 2)),
-        100% calc(75% + calc(var(--padding) * 2)),
-        100% 100%,
-        0% calc(50% + calc(var(--padding) * 2))
-    );
-    background: var(--actinides-tint);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.separator {
-    grid-area: space;
-    display: block;
-    height: 3rem;
-}
-
-// Model Viewer
-
 .model-viewer {
     position: relative;
 
