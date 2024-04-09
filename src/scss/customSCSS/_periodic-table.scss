@@ -7,8 +7,10 @@ In this file:
 
 */
 
+@use "../../scss/icon" as icon;
+
 //////////////////////////////////////////////
-// A. Modules
+// A. Variables
 //////////////////////////////////////////////
 
 :root {
@@ -44,76 +46,86 @@ In this file:
 
     --unknown-properties: #505050;
     --unknown-properties-tint: #50505026;
+
+    --separator-size: 3cqi;
 }
 
-/* Actinides */
+:where([data-group]) {
+    --_background-color: var(--unknown-properties, #e5e5e5);
+    --_color: var(--text-color, #333);
+
+    background-color: var(--_background-color);
+    color: var(--_color);
+}
+
+// Actinides
 [data-group="actinides"] {
-    color: var(--actinides);
-    background-color: var(--actinides-tint);
+    --_background-color: var(--actinides-tint);
+    --_color: var(--actinides);
 }
 
-/* Alkaline metals */
+// Alkaline metals
 [data-group="alkali-metals"] {
-    color: var(--alkali-metals);
-    background-color: var(--alkali-metals-tint);
+    --_background-color: var(--alkali-metals-tint);
+    --_color: var(--alkali-metals);
 }
 
-/* Alkaline earth metals */
+// Alkaline earth metals
 [data-group="alkaline-earth-metals"] {
-    color: var(--alkaline-earth-metals);
-    background-color: var(--alkaline-earth-metals-tint);
+    --_background-color: var(--alkaline-earth-metals-tint);
+    --_color: var(--alkaline-earth-metals);
 }
 
-/* Halogens */
+// Halogens
 [data-group="halogens"] {
-    color: var(--halogens);
-    background-color: var(--halogens-tint);
+    --_background-color: var(--halogens-tint);
+    --_color: var(--halogens);
 }
 
-/* Lanthanides */
+// Lanthanides
 [data-group="lanthanides"] {
-    color: var(--lanthanides);
-    background-color: var(--lanthanides-tint);
+    --_background-color: var(--lanthanides-tint);
+    --_color: var(--lanthanides);
 }
 
-/* Metalloids */
+// Metalloids
 [data-group="metalloids"] {
-    color: var(--metalloids);
-    background-color: var(--metalloids-tint);
+    --_background-color: var(--metalloids-tint);
+    --_color: var(--metalloids);
 }
 
-/* Noble gases */
+// Noble gases
 [data-group="noble-gases"] {
-    color: var(--noble-gases);
-    background-color: var(--noble-gases-tint);
+    --_background-color: var(--noble-gases-tint);
+    --_color: var(--noble-gases);
 }
 
-/* Post-transition metals */
+// Post-transition metals
 [data-group="post-transition-metals"] {
-    color: var(--post-transition-metals);
-    background-color: var(--post-transition-metals-tint);
+    --_background-color: var(--post-transition-metals-tint);
+    --_color: var(--post-transition-metals);
 }
 
-/* Reactive nonmetals */
+// Reactive nonmetals
 [data-group="reactive-nonmetals"] {
-    color: var(--reactive-nonmetals);
-    background-color: var(--reactive-nonmetals-tint);
+    --_background-color: var(--reactive-nonmetals-tint);
+    --_color: var(--reactive-nonmetals);
 }
 
-/* Transition metals */
+// Transition metals
 [data-group="transition-metals"] {
-    color: var(--transition-metals);
-    background-color: var(--transition-metals-tint);
+    --_background-color: var(--transition-metals-tint);
+    --_color: var(--transition-metals);
 }
 
-/* Unknown properties */
+// Unknown properties
 [data-group="unknown-properties"] {
-    color: var(--unknown-properties);
-    background-color: var(--unknown-properties-tint);
+    --_background-color: var(--unknown-properties-tint);
+    --_color: var(--unknown-properties);
 }
 
 //////////////////////////////////////////////
-// A. Components
+// B. Components
 //////////////////////////////////////////////
 
 // The Periodic Table
@@ -123,6 +135,11 @@ In this file:
 
     display: grid;
     grid-template-columns: repeat(18, 1fr);
+
+    min-width: 900px;
+    max-width: 1400px;
+
+    margin-inline: auto;
 
     gap: var(--gap);
     
@@ -139,15 +156,122 @@ In this file:
         "Fr Ra connector Rf Db Sg Bh Hs Mt Ds Rg Cn Nh Fl Mc Lv Ts Og"
         ". . connector space space space space space space space space space space space space space space space"
         ". . connector La Ce Pr Nd Pm Sm Eu Gd Tb Dy Ho Er Tm Yb Lu"
-        ". . connector Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr";
+        ". . connector Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr"
+        "key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color";
         
     container: periodic-table / inline-size;
 }
 
 // The Periodic Table Key
 
-.periodic-table__key {
-    --pointer-width: 4cqi;
+.periodic-table__key-color {
+    --_fill: var(--text-color, currentColor);
+    --_stroke: currentColor;
+
+    list-style: none;
+
+    margin-block-start: var(--separator-size);
+
+    font-size: 1.125cqi;
+
+    grid-area: key-color;
+
+    column-count: 5;
+    column-gap: var(--spacer-3);
+
+    li {
+        
+        &::before {
+            content: "";
+            display: inline-block;
+            
+            width: 1cqi;
+            height: 1cqi;
+
+            border-radius: 100%;
+            
+            margin-inline-end: 0.5cqi;
+        }
+
+        &:not(:last-child) {
+            margin-block-end: 0.5cqi;
+        }
+        
+    }
+
+    :where([data-color])::before {
+        background-color: var(--_fill);
+        outline: 0.25cqi solid var(--_stroke);
+    }
+
+    [data-color="actinides"]::before {
+        --_fill: var(--actinides-tint);
+        --_stroke: var(--actinides);
+    }
+
+    [data-color="alkali-metals"]::before {
+        --_fill: var(--alkali-metals-tint);
+        --_stroke: var(--alkali-metals);
+    }
+
+    [data-color="alkaline-earth-metals"]::before {
+        --_fill: var(--alkaline-earth-metals-tint);
+        --_stroke: var(--alkaline-earth-metals);
+    }
+
+    [data-color="halogens"]::before {
+        --_fill: var(--halogens-tint);
+        --_stroke: var(--halogens);
+    }
+    
+    [data-color="lanthanides"]::before {
+        --_fill: var(--lanthanides-tint);
+        --_stroke: var(--lanthanides);
+    }
+
+    [data-color="metalloids"]::before {
+        --_fill: var(--metalloids-tint);
+        --_stroke: var(--metalloids);
+    }
+
+    [data-color="noble-gases"]::before {
+        --_fill: var(--noble-gases-tint);
+        --_stroke: var(--noble-gases);
+    }
+
+    [data-color="post-transition-metals"]::before {
+        --_fill: var(--post-transition-metals-tint);
+        --_stroke: var(--post-transition-metals);
+    }
+
+    [data-color="reactive-nonmetals"]::before {
+        --_fill: var(--reactive-nonmetals-tint);
+        --_stroke: var(--reactive-nonmetals);
+    }
+
+    [data-color="transition-metals"]::before {
+        --_fill: var(--transition-metals-tint);
+        --_stroke: var(--transition-metals);
+    }
+
+    [data-color="unknown-properties"]::before {
+        --_fill: var(--unknown-properties-tint);
+        --_stroke: var(--unknown-properties);
+    }
+
+    [data-color="metals"]::before {
+        --_fill: var(--metals-tint);
+        --_stroke: var(--metals);
+    }
+
+    [data-color="nonmetals"]::before {
+        --_fill: var(--nonmetals-tint);
+        --_stroke: var(--nonmetals);
+    }
+}
+
+.periodic-table__key-element {
+    --_arrow-width: 4cqi;
     
     grid-area: key;
 
@@ -158,7 +282,7 @@ In this file:
 
         transform: translateY(-50%);
 
-        margin-inline-start: var(--pointer-width);
+        margin-inline-start: var(--_arrow-width);
         
         white-space: nowrap;
 
@@ -181,20 +305,17 @@ In this file:
 
             position: absolute;
 
-
-            width: calc(var(--pointer-width) - 0.5em);
+            width: calc(var(--_arrow-width) - 0.5em);
             border-bottom: 1px solid var(--text-color);
-            transform: translateX(calc(-1 * var(--pointer-width)));
+            transform: translateX(calc(-1 * var(--_arrow-width)));
         }
 
         &::after {
-            width: 0;
-            height: 0;
             border-top: 0.5cqi solid transparent;
             border-bottom: 0.5cqi solid transparent;
             border-right: 0.5cqi solid var(--text-color);
 
-            transform: translateY(-50%) translateX(calc(-1 * var(--pointer-width)));
+            transform: translateY(-50%) translateX(calc(-1 * var(--_arrow-width)));
         }
     }
 }
@@ -220,6 +341,19 @@ In this file:
 
     [class^="symbol"] {
         font-weight: var(--body-font-weight-bold);
+    }
+}
+
+.custom-marker li {
+    padding-left: 1rem;
+
+    &::marker {
+        @extend .icon_font;
+        font-size: 0.875rem;
+        content: "\f15f";
+
+        line-height: 1;
+        
     }
 }
 
@@ -270,8 +404,6 @@ In this file:
 .periodic-table__element:not(button) {
     padding: 2cqi;
 
-    // font-size: var(--font-size-md);
-
     [class^="symbol"] {
         font-size: 5cqi;
         line-height: 1;
@@ -286,35 +418,41 @@ In this file:
 }
 
 .lanthanides-connector {
-    clip-path: polygon(
-        0% 0%,
-        100% 60%,
-        100% calc(80% - calc(var(--gap) * 1.5)),
-        0% calc(20% - calc(var(--gap) * 1.5))
-    );
-    background: var(--lanthanides-tint);
+    position: absolute;
+
     width: 100%;
     height: 100%;
-    position: absolute;
+    
+    clip-path: polygon(
+        0% 0%,
+        100% calc(56% + var(--gap)),
+        100% calc(78% - calc(var(--gap) * 1.5)),
+        0% calc(22% - calc(var(--gap) * 1.5))
+    );
+    
+    background: var(--lanthanides-tint);
 }
 
 .actinides-connector {
-    clip-path: polygon(
-        0% calc(20% + calc(var(--gap) * 1.5)),
-        100% calc(80% + calc(var(--gap) * 1.5)),
-        100% 100%,
-        0% 40%
-    );
-    background: var(--actinides-tint);
+    position: absolute;
+
     width: 100%;
     height: 100%;
-    position: absolute;
+
+    clip-path: polygon(
+        0% calc(22% + calc(var(--gap) * 1.5)),
+        100% calc(78% + calc(var(--gap) * 1.5)),
+        100% 100%,
+        0% calc(44% - var(--gap))
+    );
+
+    background: var(--actinides-tint);
 }
 
 .separator {
     grid-area: space;
-    display: block;
-    height: 6cqi;
+
+    height: var(--separator-size);
 }
 
 // Model Viewer
@@ -334,6 +472,7 @@ In this file:
         gap: var(--spacer-1);
     }
 }
+
 .model-viewer {
     position: relative;
 
