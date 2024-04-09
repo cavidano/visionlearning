@@ -392,30 +392,34 @@ In this file:
 
 .periodic-table__connectors {
     grid-area: connector;
+
     position: relative;
+
 }
 
-.lanthanides-connector {
+[class*="-connector"] {
+    --_fill: var(--background-color, #e5e5e5);
     position: absolute;
 
     width: 100%;
     height: 100%;
-    
+
+    background-color: var(--_fill);
+}
+
+.lanthanides-connector {
+    --_fill: var(--lanthanides-tint);
+
     clip-path: polygon(
         0% 0%,
         100% calc(56% + var(--gap)),
         100% calc(78% - calc(var(--gap) * 1.5)),
         0% calc(22% - calc(var(--gap) * 1.5))
     );
-    
-    background: var(--lanthanides-tint);
 }
 
 .actinides-connector {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
+    --_fill: var(--actinides-tint);
 
     clip-path: polygon(
         0% calc(22% + calc(var(--gap) * 1.5)),
@@ -423,8 +427,6 @@ In this file:
         100% 100%,
         0% calc(44% - var(--gap))
     );
-
-    background: var(--actinides-tint);
 }
 
 // Model Viewer
@@ -443,15 +445,4 @@ In this file:
         color: whitesmoke;
         gap: var(--spacer-1);
     }
-}
-
-.model-viewer {
-    position: relative;
-
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    
-    overflow: hidden;
-
-    z-index: 5;
 }
