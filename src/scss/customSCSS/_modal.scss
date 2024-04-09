@@ -35,10 +35,7 @@ In this file:
   .modal,
   .modal::before {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
   }
 
   .modal {
@@ -47,7 +44,7 @@ In this file:
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-content: start;
 
     z-index: var(--modal-z-index);
     
@@ -83,7 +80,7 @@ In this file:
     display: flex;
     flex-direction: column;
     
-    // min-height: 100%;
+    min-height: 100%;
 
     max-height: calc(100vh - (var(--modal-padding) * 2));
     

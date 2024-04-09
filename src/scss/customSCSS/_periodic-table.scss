@@ -38,20 +38,17 @@ In this file:
     --post-transition-metals: #17804B;
     --post-transition-metals-tint: #17804B26;
     
-    --reactive-nonmetals: #00989C;
-    --reactive-nonmetals-tint: #00989C26;
+    --reactive-nonmetals: #006666;
+    --reactive-nonmetals-tint: #00666626;
 
     --transition-metals: #641B98;
     --transition-metals-tint: #641B9826;
-
-    --unknown-properties: #505050;
-    --unknown-properties-tint: #50505026;
 
     --separator-size: 3cqi;
 }
 
 :where([data-group]) {
-    --_background-color: var(--unknown-properties, #e5e5e5);
+    --_background-color: var(--_background-color, #e5e5e5);
     --_color: var(--text-color, #333);
 
     background-color: var(--_background-color);
@@ -131,13 +128,13 @@ In this file:
 // The Periodic Table
 
 .periodic-table {
-    --gap: 0.25cqi;
+    --gap: calc(var(--border-width) * 2);
 
     display: grid;
     grid-template-columns: repeat(18, 1fr);
 
     min-width: 900px;
-    max-width: 1400px;
+    max-width: 1440px;
 
     margin-inline: auto;
 
@@ -159,10 +156,60 @@ In this file:
         ". . connector Ac Th Pa U Np Pu Am Cm Bk Cf Es Fm Md No Lr"
         "key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color key-color";
         
-    container: periodic-table / inline-size;
+    container-type: inline-size;
 }
 
-// The Periodic Table Key
+// The Periodic Table Keys
+
+.periodic-table__key-element {
+    --_arrow-width: 33cqi;
+    
+    grid-area: key;
+
+    [class*="key__item"] {
+        position: absolute;
+        inset-inline-start: 100%;
+        inset-block-start: 50%;
+
+        transform: translateY(-50%);
+
+        margin-inline-start: var(--_arrow-width);
+        
+        white-space: nowrap;
+
+        font-size: 9cqi;
+        font-weight: var(--body-font-weight-normal);
+
+        color: var(--text-color);
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            color: var(--text-color);
+            inset-block-start: 50%;
+            inset-inline-start: 0;
+        }
+
+        &::before {
+            display: inline-block;
+
+            position: absolute;
+
+            width: calc(var(--_arrow-width) - 0.5em);
+            border-bottom: 1px solid var(--text-color);
+            transform: translateX(calc(-1 * var(--_arrow-width)));
+        }
+
+        &::after {
+            border-top: 4cqi solid transparent;
+            border-bottom: 4cqi solid transparent;
+            border-right: 4cqi solid var(--text-color);
+
+            transform: translateY(-50%) translateX(calc(-1 * var(--_arrow-width)));
+        }
+    }
+}
 
 .periodic-table__key-color {
     --_fill: var(--text-color, currentColor);
@@ -270,62 +317,18 @@ In this file:
     }
 }
 
-.periodic-table__key-element {
-    --_arrow-width: 4cqi;
-    
-    grid-area: key;
-
-    [class*="key__item"] {
-        position: absolute;
-        inset-inline-start: 100%;
-        inset-block-start: 50%;
-
-        transform: translateY(-50%);
-
-        margin-inline-start: var(--_arrow-width);
-        
-        white-space: nowrap;
-
-        font-size: 1cqi;
-        font-weight: var(--body-font-weight-normal);
-
-        color: var(--text-color);
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            color: var(--text-color);
-            inset-block-start: 50%;
-            inset-inline-start: 0;
-        }
-
-        &::before {
-            display: inline-block;
-
-            position: absolute;
-
-            width: calc(var(--_arrow-width) - 0.5em);
-            border-bottom: 1px solid var(--text-color);
-            transform: translateX(calc(-1 * var(--_arrow-width)));
-        }
-
-        &::after {
-            border-top: 0.5cqi solid transparent;
-            border-bottom: 0.5cqi solid transparent;
-            border-right: 0.5cqi solid var(--text-color);
-
-            transform: translateY(-50%) translateX(calc(-1 * var(--_arrow-width)));
-        }
-    }
-}
+// Periodic Table Element
 
 .periodic-table__element {
+    position: relative;
+
+    container-type: inline-size;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    gap: 0.25em;
+    gap: 0.125cqi;
 
     aspect-ratio: 1 / 1;
 
@@ -339,78 +342,53 @@ In this file:
         width: 100%;
     }
 
-    [class^="symbol"] {
-        font-weight: var(--body-font-weight-bold);
+    :is(p, span) {
+        font-size: 16cqi;
     }
-}
-
-.custom-marker li {
-    padding-left: 1rem;
-
-    &::marker {
-        @extend .icon_font;
-        font-size: 0.875rem;
-        content: "\f15f";
-
-        line-height: 1;
-        
-    }
-}
-
-// Periodic Table Element Button
-
-.periodic-table__element {
-    --min-size: clamp(2.5cqi, 88px, 5cqi);
-
-    position: relative;
-
-    min-height: var(--min-size);
-    min-width: var(--min-size);
-
-    padding: 1cqi;
-    font-size: 0.875cqi;
-
-    gap: var(--gap);
 
     [class^="symbol"] { 
-        font-size: 1.5cqi;
+        font-size: 32cqi;
+        font-weight: var(--body-font-weight-bold);
         line-height: 1;
     }
 
     [class^="chemical-group"] {
         display: none;
     }
-    
-    &::before,
-    &::after {
-        position: absolute;
-        padding: 0.5cqi;
-        color: var(--text-color);
-    }
 
-    &::before {
-        content: attr(data-period-number);
-        inset-inline-start: 0;
-        transform: translateX(-100%);
-    }
+    // Periodic Table Element Button
 
-    &::after {
-        content: attr(data-group-number);
-        inset-block-start: 0;
-        transform: translateY(-100%);
-    }
-}
+    &:is(button){
+        
+        &::before,
+        &::after {
+            position: absolute;
+            padding: 8cqi;
+            color: var(--text-color);
+            font-size: 18cqi;
+        }
 
-.periodic-table__element:not(button) {
-    padding: 2cqi;
+        &::before {
+            content: attr(data-period-number);
+            inset-inline-start: 0;
+            transform: translateX(-100%);
+        }
 
-    [class^="symbol"] {
-        font-size: 5cqi;
-        line-height: 1;
+        &::after {
+            content: attr(data-group-number);
+            inset-block-start: 0;
+            transform: translateY(-100%);
+        }
     }
 }
 
 // Connectors
+
+.separator {
+    grid-area: space;
+
+    height: var(--separator-size);
+}
 
 .periodic-table__connectors {
     grid-area: connector;
@@ -447,12 +425,6 @@ In this file:
     );
 
     background: var(--actinides-tint);
-}
-
-.separator {
-    grid-area: space;
-
-    height: var(--separator-size);
 }
 
 // Model Viewer
