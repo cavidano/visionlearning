@@ -75,1539 +75,1543 @@
 
     <body>
 
-        <main class="container ">
+        <main class="container table-scroll">
 
-            <h1 class="screen-reader-only">
-                The Periodic Table of Elements
-            </h1>
+            <small class="table-scroll__help">
+                Scroll to see whole table
+            </small>
+            
+            <div class="table-scroll__container">
 
-            <div class="periodic-table">
+                <div class="periodic-table table">
 
-                <div class="periodic-table__key-element">
+                    <div class="periodic-table__key-element">
 
-                    <div
-                        class="periodic-table__element"
-                        data-group="reactive-nonmetals"
-                    >
-                        <p class="atomic-number">
-                            1
-                            <span class="periodic-table__key__item">
-                                Atomic Number
-                            </span>
-                        </p>
-                        <p class="symbol">
-                            H
-                            <span class="periodic-table__key__item">
-                                Symbol
-                            </span>
+                        <div
+                            class="periodic-table__element"
+                            data-group="reactive-nonmetals"
+                        >
+                            <p class="atomic-number">
+                                1
+                                <span class="periodic-table__key__item">
+                                    Atomic Number
+                                </span>
                             </p>
-                        <p class="atomic-mass">
-                            1.0080
-                            <span class="periodic-table__key__item">
-                                Atomic Mass
-                            </span>
-                        </p>
+                            <p class="symbol">
+                                H
+                                <span class="periodic-table__key__item">
+                                    Symbol
+                                </span>
+                                </p>
+                            <p class="atomic-mass">
+                                1.0080
+                                <span class="periodic-table__key__item">
+                                    Atomic Mass
+                                </span>
+                            </p>
+
+                        </div>
 
                     </div>
 
+                    <ul class="periodic-table__key-color">
+
+                        <li data-color="alkali-metals">
+                            Alkali Metals
+                        </li>
+                        <li data-color="alkaline-earth-metals">
+                            Alkaline Earth Metals
+                        </li>
+                        <li data-color="transition-metals">
+                            Transition Metals
+                        </li> 
+                        <li data-color="post-transition-metals">
+                            Post-Transition Metals
+                        </li>
+                        <li data-color="metalloids">
+                            Metalloids
+                        </li>
+                        <li data-color="reactive-nonmetals">
+                            Reactive Nonmetals
+                        </li>
+                        <li data-color="halogens">
+                            Halogens
+                        </li>
+                        <li data-color="noble-gases">
+                            Noble Gases
+                        </li>
+                        <li data-color="lanthanides">
+                            Lanthanides
+                        </li>
+                        <li data-color="actinides">
+                            Actinides 
+                        </li>
+                    </ul>
+                    
+                    <!-- Period 1 -->
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: H;"
+                        title="Hydrogen"
+                        data-group="reactive-nonmetals"
+                        data-group-number="1"
+                        data-period-number="1"
+                        data-modal-open="modal-element-detail"
+                    >
+                        <p class="atomic-number">1</p>
+                        <p class="symbol">H</p>
+                        <p class="atomic-mass">1.0080</p>
+                        <p class="chemical-group">Nonmetal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: He;"
+                        title="Helium"
+                        data-group="noble-gases"
+                        data-group-number="18"
+                        data-modal-open="modal-element-detail"
+                    >
+                        <p class="atomic-number">2</p>
+                        <p class="symbol">He</p>
+                        <p class="atomic-mass">4.0026</p>
+                        <p class="chemical-group">Noble Gas</p>
+                    </button>
+
+                    <!-- Period 2 -->
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Li;"
+                        title="Lithium"
+                        data-group="alkali-metals"
+                        data-period-number="2"
+                    >
+                        <p class="atomic-number">3</p>
+                        <p class="symbol">Li</p>
+                        <p class="atomic-mass">7.0</p>
+                        <p class="chemical-group">Alkali Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Be;"
+                        title="Beryllium"
+                        data-group="alkaline-earth-metals"
+                        data-group-number="2"
+                    >
+                        <p class="atomic-number">4</p>
+                        <p class="symbol">Be</p>
+                        <p class="atomic-mass">9.0122</p>
+                        <p class="chemical-group">Alkaline Earth Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: B;"
+                        title="Boron"
+                        data-group="metalloids"
+                        data-group-number="13"
+                    >
+                        <p class="atomic-number">5</p>
+                        <p class="symbol">B</p>
+                        <p class="atomic-mass">10.81</p>
+                        <p class="chemical-group">Metalloid</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: C;"
+                        title="Carbon"
+                        data-group="reactive-nonmetals"
+                        data-group-number="14"
+                    >
+                        <p class="atomic-number">6</p>
+                        <p class="symbol">C</p>
+                        <p class="atomic-mass">12.011</p>
+                        <p class="chemical-group">Nonmetal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: N;"
+                        title="Nitrogen"
+                        data-group="reactive-nonmetals"
+                        data-group-number="15"
+                    >
+                        <p class="atomic-number">7</p>
+                        <p class="symbol">N</p>
+                        <p class="atomic-mass">14.007</p>
+                        <p class="chemical-group">Nonmetal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: O;"
+                        title="Oxygen"
+                        data-group="reactive-nonmetals"
+                        data-group-number="16"
+                    >
+                        <p class="atomic-number">8</p>
+                        <p class="symbol">O</p>
+                        <p class="atomic-mass">15.999</p>
+                        <p class="chemical-group">Nonmetal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: F;"
+                        title="Fluorine"
+                        data-group="halogens"
+                        data-group-number="17"
+                    >
+                        <p class="atomic-number">9</p>
+                        <p class="symbol">F</p>
+                        <p class="atomic-mass">18.9984</p>
+                        <p class="chemical-group">Halogen</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ne;"
+                        title="Neon"
+                        data-group="noble-gases"
+                    >
+                        <p class="atomic-number">10</p>
+                        <p class="symbol">Ne</p>
+                        <p class="atomic-mass">20.180</p>
+                        <p class="chemical-group">Noble Gas</p>
+                    </button>
+
+                    <!-- Period 3 -->
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Na;"
+                        title="Sodium"
+                        data-group="alkali-metals"
+                        data-period-number="3"
+                    >
+                        <p class="atomic-number">11</p>
+                        <p class="symbol">Na</p>
+                        <p class="atomic-mass">22.9898</p>
+                        <p class="chemical-group">Alkali Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Mg;"
+                        title="Magnesium"
+                        data-group="alkaline-earth-metals"
+                    >
+                        <p class="atomic-number">12</p>
+                        <p class="symbol">Mg</p>
+                        <p class="atomic-mass">24.305</p>
+                        <p class="chemical-group">Alkaline Earth Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Al;"
+                        title="Aluminum"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">13</p>
+                        <p class="symbol">Al</p>
+                        <p class="atomic-mass">26.9815</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Si;"
+                        title="Silicon"
+                        data-group="metalloids"
+                    >
+                        <p class="atomic-number">14</p>
+                        <p class="symbol">Si</p>
+                        <p class="atomic-mass">28.085</p>
+                        <p class="chemical-group">Metalloid</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: P;"
+                        title="Phosphorus"
+                        data-group="reactive-nonmetals"
+                    >
+                        <p class="atomic-number">15</p>
+                        <p class="symbol">P</p>
+                        <p class="atomic-mass">30.9738</p>
+                        <p class="chemical-group">Nonmetal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: S;"
+                        title="Sulfur"
+                        data-group="reactive-nonmetals"
+                    >
+                        <p class="atomic-number">16</p>
+                        <p class="symbol">S</p>
+                        <p class="atomic-mass">32.07</p>
+                        <p class="chemical-group">Nonmetal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Cl;"
+                        title="Chlorine"
+                        data-group="halogens"
+                    >
+                        <p class="atomic-number">17</p>
+                        <p class="symbol">Cl</p>
+                        <p class="atomic-mass">35.45</p>
+                        <p class="chemical-group">Halogen</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ar;"
+                        title="Argon"
+                        data-group="noble-gases"
+                    >
+                        <p class="atomic-number">18</p>
+                        <p class="symbol">Ar</p>
+                        <p class="atomic-mass">39.99</p>
+                        <p class="chemical-group">Noble Gas</p>
+                    </button>
+
+                    <!-- Period 4 -->
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: K;"
+                        title="Potassium"
+                        data-group="alkali-metals"
+                        data-period-number="4"
+                    >
+                        <p class="atomic-number">19</p>
+                        <p class="symbol">K</p>
+                        <p class="atomic-mass">39.0983</p>
+                        <p class="chemical-group">Alkali Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ca;"
+                        title="Calcium"
+                        data-group="alkaline-earth-metals"
+                    >
+                        <p class="atomic-number">20</p>
+                        <p class="symbol">Ca</p>
+                        <p class="atomic-mass">40.08</p>
+                        <p class="chemical-group">Alkaline Earth Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Sc;"
+                        title="Scandium"
+                        data-group="transition-metals"
+                        data-group-number="3"
+                    >
+                        <p class="atomic-number">21</p>
+                        <p class="symbol">Sc</p>
+                        <p class="atomic-mass">44.9559</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ti;"
+                        title="Titanium"
+                        data-group="transition-metals"
+                        data-group-number="4"
+                    >
+                        <p class="atomic-number">22</p>
+                        <p class="symbol">Ti</p>
+                        <p class="atomic-mass">47.867</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: V;"
+                        title="Vanadium"
+                        data-group="transition-metals"
+                        data-group-number="5"
+                    >
+                        <p class="atomic-number">23</p>
+                        <p class="symbol">V</p>
+                        <p class="atomic-mass">50.9415</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Cr;"
+                        title="Chromium"
+                        data-group="transition-metals"
+                        data-group-number="6"
+                    >
+                        <p class="atomic-number">24</p>
+                        <p class="symbol">Cr</p>
+                        <p class="atomic-mass">51.996</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Mn;"
+                        title="Manganese"
+                        data-group="transition-metals"
+                        data-group-number="7"
+                    >
+                        <p class="atomic-number">25</p>
+                        <p class="symbol">Mn</p>
+                        <p class="atomic-mass">54.9380</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Fe;"
+                        title="Iron"
+                        data-group="transition-metals"
+                        data-group-number="8"
+                    >
+                        <p class="atomic-number">26</p>
+                        <p class="symbol">Fe</p>
+                        <p class="atomic-mass">55.84</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Co;"
+                        title="Cobalt"
+                        data-group="transition-metals"
+                        data-group-number="9"
+                    >
+                        <p class="atomic-number">27</p>
+                        <p class="symbol">Co</p>
+                        <p class="atomic-mass">58.9332</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ni;"
+                        title="Nickel"
+                        data-group="transition-metals"
+                        data-group-number="10"
+                    >
+                        <p class="atomic-number">28</p>
+                        <p class="symbol">Ni</p>
+                        <p class="atomic-mass">58.693</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Cu;"
+                        title="Copper"
+                        data-group="transition-metals"
+                        data-group-number="11"
+                    >
+                        <p class="atomic-number">29</p>
+                        <p class="symbol">Cu</p>
+                        <p class="atomic-mass">63.55</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Zn;"
+                        title="Zinc"
+                        data-group="transition-metals"
+                        data-group-number="12"
+                    >
+                        <p class="atomic-number">30</p>
+                        <p class="symbol">Zn</p>
+                        <p class="atomic-mass">65.4</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ga;"
+                        title="Gallium"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">31</p>
+                        <p class="symbol">Ga</p>
+                        <p class="atomic-mass">69.723</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ge;"
+                        title="Germanium"
+                        data-group="metalloids"
+                    >
+                        <p class="atomic-number">32</p>
+                        <p class="symbol">Ge</p>
+                        <p class="atomic-mass">72.63</p>
+                        <p class="chemical-group">Metalloid</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: As;"
+                        title="Arsenic"
+                        data-group="metalloids"
+                    >
+                        <p class="atomic-number">33</p>
+                        <p class="symbol">As</p>
+                        <p class="atomic-mass">74.9216</p>
+                        <p class="chemical-group">Metalloid</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Se;"
+                        title="Selenium"
+                        data-group="reactive-nonmetals"
+                    >
+                        <p class="atomic-number">34</p>
+                        <p class="symbol">Se</p>
+                        <p class="atomic-mass">78.97</p>
+                        <p class="chemical-group">Nonmetal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Br;"
+                        title="Bromine"
+                        data-group="halogens"
+                    >
+                        <p class="atomic-number">35</p>
+                        <p class="symbol">Br</p>
+                        <p class="atomic-mass">79.90</p>
+                        <p class="chemical-group">Halogen</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Kr;"
+                        title="Krypton"
+                        data-group="noble-gases"
+                    >
+                        <p class="atomic-number">36</p>
+                        <p class="symbol">Kr</p>
+                        <p class="atomic-mass">83.80</p>
+                        <p class="chemical-group">Noble Gas</p>
+                    </button>
+
+                    <!-- Period 5 -->
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Rb;"
+                        title="Rubidium"
+                        data-group="alkali-metals"
+                        data-period-number="5"
+                    >
+                        <p class="atomic-number">37</p>
+                        <p class="symbol">Rb</p>
+                        <p class="atomic-mass">85.468</p>
+                        <p class="chemical-group">Alkali Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Sr;"
+                        title="Strontium"
+                        data-group="alkaline-earth-metals"
+                    >
+                        <p class="atomic-number">38</p>
+                        <p class="symbol">Sr</p>
+                        <p class="atomic-mass">87.62</p>
+                        <p class="chemical-group">Alkaline Earth Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Y;"
+                        title="Yttrium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">39</p>
+                        <p class="symbol">Y</p>
+                        <p class="atomic-mass">88.9058</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Zr;"
+                        title="Zirconium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">40</p>
+                        <p class="symbol">Zr</p>
+                        <p class="atomic-mass">91.22</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Nb;"
+                        title="Niobium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">41</p>
+                        <p class="symbol">Nb</p>
+                        <p class="atomic-mass">92.9064</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Mo;"
+                        title="Molybdenum"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">42</p>
+                        <p class="symbol">Mo</p>
+                        <p class="atomic-mass">95.95</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Tc;"
+                        title="Technetium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">43</p>
+                        <p class="symbol">Tc</p>
+                        <p class="atomic-mass">96.9064</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ru;"
+                        title="Ruthenium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">44</p>
+                        <p class="symbol">Ru</p>
+                        <p class="atomic-mass">101.1</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Rh;"
+                        title="Rhodium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">45</p>
+                        <p class="symbol">Rh</p>
+                        <p class="atomic-mass">102.9055</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Pd;"
+                        title="Palladium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">46</p>
+                        <p class="symbol">Pd</p>
+                        <p class="atomic-mass">106.42</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ag;"
+                        title="Silver"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">47</p>
+                        <p class="symbol">Ag</p>
+                        <p class="atomic-mass">107.868</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Cd;"
+                        title="Cadmium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">48</p>
+                        <p class="symbol">Cd</p>
+                        <p class="atomic-mass">112.41</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: In;"
+                        title="Indium"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">49</p>
+                        <p class="symbol">In</p>
+                        <p class="atomic-mass">114.818</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Sn;"
+                        title="Tin"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">50</p>
+                        <p class="symbol">Sn</p>
+                        <p class="atomic-mass">118.71</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Sb;"
+                        title="Antimony" 
+                        data-group="metalloids"
+                    >
+                        <p class="atomic-number">51</p>
+                        <p class="symbol">Sb</p>
+                        <p class="atomic-mass">121.760</p>
+                        <p class="chemical-group">Metalloid</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Te;"
+                        title="Tellurium"
+                        data-group="metalloids"
+                    >
+                        <p class="atomic-number">52</p>
+                        <p class="symbol">Te</p>
+                        <p class="atomic-mass">127.6</p>
+                        <p class="chemical-group">Metalloid</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: I;"
+                        title="Iodine"
+                        data-group="halogens"
+                    >
+                        <p class="atomic-number">53</p>
+                        <p class="symbol">I</p>
+                        <p class="atomic-mass">126.9045</p>
+                        <p class="chemical-group">Halogen</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Xe;"
+                        title="Xenon"
+                        data-group="noble-gases"
+                    >
+                        <p class="atomic-number">54</p>
+                        <p class="symbol">Xe</p>
+                        <p class="atomic-mass">131.29</p>
+                        <p class="chemical-group">Noble Gas</p>
+                    </button>
+
+                    <!-- Period 6 -->
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Cs;"
+                        title="Cesium"
+                        data-group="alkali-metals"
+                        data-period-number="6"
+                    >
+                        <p class="atomic-number">55</p>
+                        <p class="symbol">Cs</p>
+                        <p class="atomic-mass">132.9055</p>
+                        <p class="chemical-group">Alkali Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ba;"
+                        title="Barium"
+                        data-group="alkaline-earth-metals"
+                    >
+                        <p class="atomic-number">56</p>
+                        <p class="symbol">Ba</p>
+                        <p class="atomic-mass">137.33</p>
+                        <p class="chemical-group">Alkaline Earth Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Hf;"
+                        title="Hafnium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">72</p>
+                        <p class="symbol">Hf</p>
+                        <p class="atomic-mass">178.49</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ta;"
+                        title="Tantalum"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">73</p>
+                        <p class="symbol">Ta</p>
+                        <p class="atomic-mass">180.9479</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: W;"
+                        title="Tungsten"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">74</p>
+                        <p class="symbol">W</p>
+                        <p class="atomic-mass">183.84</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Re;"
+                        title="Rhenium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">75</p>
+                        <p class="symbol">Re</p>
+                        <p class="atomic-mass">186.207</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Os;"
+                        title="Osmium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">76</p>
+                        <p class="symbol">Os</p>
+                        <p class="atomic-mass">190.2</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Ir;"
+                        title="Iridium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">77</p>
+                        <p class="symbol">Ir</p>
+                        <p class="atomic-mass">192.22</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Pt;"
+                        title="Platinum" 
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">78</p>
+                        <p class="symbol">Pt</p>
+                        <p class="atomic-mass">195.08</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Au;"
+                        title="Gold"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">79</p>
+                        <p class="symbol">Au</p>
+                        <p class="atomic-mass">196.9666</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Hg;"
+                        title="Mercury"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">80</p>
+                        <p class="symbol">Hg</p>
+                        <p class="atomic-mass">200.59</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Tl;"
+                        title="Thallium"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">81</p>
+                        <p class="symbol">Tl</p>
+                        <p class="atomic-mass">204.383</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Pb;"
+                        title="Lead"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">82</p>
+                        <p class="symbol">Pb</p>
+                        <p class="atomic-mass">207</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Bi;"
+                        title="Bismuth"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">83</p>
+                        <p class="symbol">Bi</p>
+                        <p class="atomic-mass">208.9804</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+                    
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Po;"
+                        title="Polonium"
+                        data-group="metalloids"
+                    >
+                        <p class="atomic-number">84</p>
+                        <p class="symbol">Po</p>
+                        <p class="atomic-mass">208.9824</p>
+                        <p class="chemical-group">Metalloid</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: At;"
+                        title="Astatine"
+                        data-group="halogens"
+                    >
+                        <p class="atomic-number">85</p>
+                        <p class="symbol">At</p>
+                        <p class="atomic-mass">209.9872</p>
+                        <p class="chemical-group">Halogen</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Rn;"
+                        title="Radon"
+                        data-group="noble-gases"
+                    >
+                        <p class="atomic-number">86</p>
+                        <p class="symbol">Rn</p>
+                        <p class="atomic-mass">222.0176</p>
+                        <p class="chemical-group">Noble Gas</p>
+                    </button>
+
+                    <!-- Period 7 -->
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Fr;"
+                        title="Francium"
+                        data-group="alkali-metals"
+                        data-period-number="7"
+                    >
+                        <p class="atomic-number">87</p>
+                        <p class="symbol">Fr</p>
+                        <p class="atomic-mass">223.0197</p>
+                        <p class="chemical-group">Alkali Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Ra;"
+                        title="Radium"
+                        data-group="alkaline-earth-metals"
+                    >
+                        <p class="atomic-number">88</p>
+                        <p class="symbol">Ra</p>
+                        <p class="atomic-mass">226.0254</p>
+                        <p class="chemical-group">Alkaline Earth Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Rf;"
+                        title="Rutherfordium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">104</p>
+                        <p class="symbol">Rf</p>
+                        <p class="atomic-mass">267.122</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Db;"
+                        title="Dubnium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">105</p>
+                        <p class="symbol">Db</p>
+                        <p class="atomic-mass">268.126</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Sg;"
+                        title="Seaborgium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">106</p>
+                        <p class="symbol">Sg</p>
+                        <p class="atomic-mass">269.128</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Bh;"
+                        title="Bohrium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">107</p>
+                        <p class="symbol">Bh</p>
+                        <p class="atomic-mass">270.133</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Hs;"
+                        title="Hassium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">108</p>
+                        <p class="symbol">Hs</p>
+                        <p class="atomic-mass">269.1336</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Mt;"
+                        title="Meitnerium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">109</p>
+                        <p class="symbol">Mt</p>
+                        <p class="atomic-mass">277.154</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Ds;"
+                        title="Darmstadtium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">110</p>
+                        <p class="symbol">Ds</p>
+                        <p class="atomic-mass">282.166</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Rg;"
+                        title="Roentgenium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">111</p>
+                        <p class="symbol">Rg</p>
+                        <p class="atomic-mass">282.169</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Cn;"
+                        title="Copernicium"
+                        data-group="transition-metals"
+                    >
+                        <p class="atomic-number">112</p>
+                        <p class="symbol">Cn</p>
+                        <p class="atomic-mass">286.179</p>
+                        <p class="chemical-group">Transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Nh;"
+                        title="Nihonium"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">113</p>
+                        <p class="symbol">Nh</p>
+                        <p class="atomic-mass">286.182</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Fl;"
+                        title="Flerovium"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">114</p>
+                        <p class="symbol">Fl</p>
+                        <p class="atomic-mass">290.192</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Mc;"
+                        title="Moscovium"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">115</p>
+                        <p class="symbol">Mc</p>
+                        <p class="atomic-mass">290.196</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Lv;"
+                        title="Livermorium"
+                        data-group="post-transition-metals"
+                    >
+                        <p class="atomic-number">116</p>
+                        <p class="symbol">Lv</p>
+                        <p class="atomic-mass">293.205</p>
+                        <p class="chemical-group">Post-transition Metal</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Ts;"
+                        title="Tennessine"
+                        data-group="halogens"
+                    >
+                        <p class="atomic-number">117</p>
+                        <p class="symbol">Ts</p>
+                        <p class="atomic-mass">294.211</p>
+                        <p class="chemical-group">Halogen</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Og;"
+                        title="Oganesson"
+                        data-group="noble-gases"
+                    >
+                        <p class="atomic-number">118</p>
+                        <p class="symbol">Og</p>
+                        <p class="atomic-mass">295.216</p>
+                        <p class="chemical-group">Noble Gas</p>
+                    </button>
+
+                    <div class="periodic-table__connectors" aria-hidden="true">
+                        <div class="lanthanides-connector" ></div>
+                        <div class="actinides-connector" ></div>
+                    </div>
+
+                    <div class="separator" aria-hidden="true"></div>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: La;"
+                        title="Lanthanum"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">57</p>
+                        <p class="symbol">La</p>
+                        <p class="atomic-mass">138.9055</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Ce;"
+                        title="Cerium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">58</p>
+                        <p class="symbol">Ce</p>
+                        <p class="atomic-mass">140.116</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Pr;"
+                        title="Praseodymium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">59</p>
+                        <p class="symbol">Pr</p>
+                        <p class="atomic-mass">140.9077</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Nd;"
+                        title="Neodymium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">60</p>
+                        <p class="symbol">Nd</p>
+                        <p class="atomic-mass">144.24</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Pm;"
+                        title="Promethium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">61</p>
+                        <p class="symbol">Pm</p>
+                        <p class="atomic-mass">144.9128</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Sm;"
+                        title="Samarium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">62</p>
+                        <p class="symbol">Sm</p>
+                        <p class="atomic-mass">150.4</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Eu;"
+                        title="Europium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">63</p>
+                        <p class="symbol">Eu</p>
+                        <p class="atomic-mass">151.964</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Gd;"
+                        title="Gadolinium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">64</p>
+                        <p class="symbol">Gd</p>
+                        <p class="atomic-mass">157.2</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Tb;"
+                        title="Terbium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">65</p>
+                        <p class="symbol">Tb</p>
+                        <p class="atomic-mass">158.9254</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Dy;"
+                        title="Dysprosium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">66</p>
+                        <p class="symbol">Dy</p>
+                        <p class="atomic-mass">162.500</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Ho;"
+                        title="Holmium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">67</p>
+                        <p class="symbol">Ho</p>
+                        <p class="atomic-mass">164.9303</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Er;"
+                        title="Erbium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">68</p>
+                        <p class="symbol">Er</p>
+                        <p class="atomic-mass">167.26</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Tm;"
+                        title="Thulium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">69</p>
+                        <p class="symbol">Tm</p>
+                        <p class="atomic-mass">168.9342</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Yb;"
+                        title="Ytterbium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">70</p>
+                        <p class="symbol">Yb</p>
+                        <p class="atomic-mass">173.05</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Lu;"
+                        title="Lutetium"
+                        data-group="lanthanides"
+                    >
+                        <p class="atomic-number">71</p>
+                        <p class="symbol">Lu</p>
+                        <p class="atomic-mass">174.9668</p>
+                        <p class="chemical-group">Lanthanide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Ac;"
+                        title="Actinium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">89</p>
+                        <p class="symbol">Ac</p>
+                        <p class="atomic-mass">227.0278</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Th;"
+                        title="Thorium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">90</p>
+                        <p class="symbol">Th</p>
+                        <p class="atomic-mass">232.038</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Pa;"
+                        title="Protactinium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">91</p>
+                        <p class="symbol">Pa</p>
+                        <p class="atomic-mass">231.0359</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: U;"
+                        title="Uranium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">92</p>
+                        <p class="symbol">U</p>
+                        <p class="atomic-mass">238.0289</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Np;"
+                        title="Neptunium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">93</p>
+                        <p class="symbol">Np</p>
+                        <p class="atomic-mass">237.0482</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Pu;"
+                        title="Plutonium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">94</p>
+                        <p class="symbol">Pu</p>
+                        <p class="atomic-mass">244.0642</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Am;"
+                        title="Americium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">95</p>
+                        <p class="symbol">Am</p>
+                        <p class="atomic-mass">243.0614</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Cm;"
+                        title="Curium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">96</p>
+                        <p class="symbol">Cm</p>
+                        <p class="atomic-mass">247.0704</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Bk;"
+                        title="Berkelium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">97</p>
+                        <p class="symbol">Bk</p>
+                        <p class="atomic-mass">247.0703</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Cf;"
+                        title="Californium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">98</p>
+                        <p class="symbol">Cf</p>
+                        <p class="atomic-mass">251.0796</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Es;"
+                        title="Einsteinium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">99</p>
+                        <p class="symbol">Es</p>
+                        <p class="atomic-mass">252.0830</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Fm;"
+                        title="Fermium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">100</p>
+                        <p class="symbol">Fm</p>
+                        <p class="atomic-mass">257.0951</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Md;"
+                        title="Mendelevium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">101</p>
+                        <p class="symbol">Md</p>
+                        <p class="atomic-mass">258.0984</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: No;"
+                        title="Nobelium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">102</p>
+                        <p class="symbol">No</p>
+                        <p class="atomic-mass">259.1010</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
+                    <button
+                        class="periodic-table__element"
+                        style="grid-area: Lr;"
+                        title="Lawrencium"
+                        data-group="actinides"
+                    >
+                        <p class="atomic-number">103</p>
+                        <p class="symbol">Lr</p>
+                        <p class="atomic-mass">266.120</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+
                 </div>
-
-                <ul class="periodic-table__key-color">
-
-                    <li data-color="alkali-metals">
-                        Alkali Metals
-                    </li>
-                    <li data-color="alkaline-earth-metals">
-                        Alkaline Earth Metals
-                    </li>
-                    <li data-color="transition-metals">
-                        Transition Metals
-                    </li> 
-                    <li data-color="post-transition-metals">
-                        Post-Transition Metals
-                    </li>
-                    <li data-color="metalloids">
-                        Metalloids
-                    </li>
-                    <li data-color="reactive-nonmetals">
-                        Reactive Nonmetals
-                    </li>
-                    <li data-color="halogens">
-                        Halogens
-                    </li>
-                    <li data-color="noble-gases">
-                        Noble Gases
-                    </li>
-                    <li data-color="lanthanides">
-                        Lanthanides
-                    </li>
-                    <li data-color="actinides">
-                        Actinides 
-                    </li>
-                </ul>
-                
-                <!-- Period 1 -->
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: H;"
-                    title="Hydrogen"
-                    data-group="reactive-nonmetals"
-                    data-group-number="1"
-                    data-period-number="1"
-                    data-modal-open="modal-element-h"
-                >
-                    <span class="atomic-number">1</span>
-                    <span class="symbol">H</span>
-                    <span class="atomic-mass">1.0080</span>
-                    <span class="chemical-group">Nonmetal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: He;"
-                    title="Helium"
-                    data-group="noble-gases"
-                    data-group-number="18"
-                >
-                    <span class="atomic-number">2</span>
-                    <span class="symbol">He</span>
-                    <span class="atomic-mass">4.0026</span>
-                    <span class="chemical-group">Noble Gas</span>
-                </button>
-
-                <!-- Period 2 -->
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Li;"
-                    title="Lithium"
-                    data-group="alkali-metals"
-                    data-period-number="2"
-                >
-                    <span class="atomic-number">3</span>
-                    <span class="symbol">Li</span>
-                    <span class="atomic-mass">7.0</span>
-                    <span class="chemical-group">Alkali Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Be;"
-                    title="Beryllium"
-                    data-group="alkaline-earth-metals"
-                    data-group-number="2"
-                >
-                    <span class="atomic-number">4</span>
-                    <span class="symbol">Be</span>
-                    <span class="atomic-mass">9.0122</span>
-                    <span class="chemical-group">Alkaline Earth Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: B;"
-                    title="Boron"
-                    data-group="metalloids"
-                    data-group-number="13"
-                >
-                    <span class="atomic-number">5</span>
-                    <span class="symbol">B</span>
-                    <span class="atomic-mass">10.81</span>
-                    <span class="chemical-group">Metalloid</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: C;"
-                    title="Carbon"
-                    data-group="reactive-nonmetals"
-                    data-group-number="14"
-                >
-                    <span class="atomic-number">6</span>
-                    <span class="symbol">C</span>
-                    <span class="atomic-mass">12.011</span>
-                    <span class="chemical-group">Nonmetal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: N;"
-                    title="Nitrogen"
-                    data-group="reactive-nonmetals"
-                    data-group-number="15"
-                >
-                    <span class="atomic-number">7</span>
-                    <span class="symbol">N</span>
-                    <span class="atomic-mass">14.007</span>
-                    <span class="chemical-group">Nonmetal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: O;"
-                    title="Oxygen"
-                    data-group="reactive-nonmetals"
-                    data-group-number="16"
-                >
-                    <span class="atomic-number">8</span>
-                    <span class="symbol">O</span>
-                    <span class="atomic-mass">15.999</span>
-                    <span class="chemical-group">Nonmetal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: F;"
-                    title="Fluorine"
-                    data-group="halogens"
-                    data-group-number="17"
-                >
-                    <span class="atomic-number">9</span>
-                    <span class="symbol">F</span>
-                    <span class="atomic-mass">18.9984</span>
-                    <span class="chemical-group">Halogen</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ne;"
-                    title="Neon"
-                    data-group="noble-gases"
-                >
-                    <span class="atomic-number">10</span>
-                    <span class="symbol">Ne</span>
-                    <span class="atomic-mass">20.180</span>
-                    <span class="chemical-group">Noble Gas</span>
-                </button>
-
-                <!-- Period 3 -->
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Na;"
-                    title="Sodium"
-                    data-group="alkali-metals"
-                    data-period-number="3"
-                >
-                    <span class="atomic-number">11</span>
-                    <span class="symbol">Na</span>
-                    <span class="atomic-mass">22.9898</span>
-                    <span class="chemical-group">Alkali Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Mg;"
-                    title="Magnesium"
-                    data-group="alkaline-earth-metals"
-                >
-                    <span class="atomic-number">12</span>
-                    <span class="symbol">Mg</span>
-                    <span class="atomic-mass">24.305</span>
-                    <span class="chemical-group">Alkaline Earth Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Al;"
-                    title="Aluminum"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">13</span>
-                    <span class="symbol">Al</span>
-                    <span class="atomic-mass">26.9815</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Si;"
-                    title="Silicon"
-                    data-group="metalloids"
-                >
-                    <span class="atomic-number">14</span>
-                    <span class="symbol">Si</span>
-                    <span class="atomic-mass">28.085</span>
-                    <span class="chemical-group">Metalloid</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: P;"
-                    title="Phosphorus"
-                    data-group="reactive-nonmetals"
-                >
-                    <span class="atomic-number">15</span>
-                    <span class="symbol">P</span>
-                    <span class="atomic-mass">30.9738</span>
-                    <span class="chemical-group">Nonmetal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: S;"
-                    title="Sulfur"
-                    data-group="reactive-nonmetals"
-                >
-                    <span class="atomic-number">16</span>
-                    <span class="symbol">S</span>
-                    <span class="atomic-mass">32.07</span>
-                    <span class="chemical-group">Nonmetal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Cl;"
-                    title="Chlorine"
-                    data-group="halogens"
-                >
-                    <span class="atomic-number">17</span>
-                    <span class="symbol">Cl</span>
-                    <span class="atomic-mass">35.45</span>
-                    <span class="chemical-group">Halogen</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ar;"
-                    title="Argon"
-                    data-group="noble-gases"
-                >
-                    <span class="atomic-number">18</span>
-                    <span class="symbol">Ar</span>
-                    <span class="atomic-mass">39.99</span>
-                    <span class="chemical-group">Noble Gas</span>
-                </button>
-
-                <!-- Period 4 -->
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: K;"
-                    title="Potassium"
-                    data-group="alkali-metals"
-                    data-period-number="4"
-                >
-                    <span class="atomic-number">19</span>
-                    <span class="symbol">K</span>
-                    <span class="atomic-mass">39.0983</span>
-                    <span class="chemical-group">Alkali Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ca;"
-                    title="Calcium"
-                    data-group="alkaline-earth-metals"
-                >
-                    <span class="atomic-number">20</span>
-                    <span class="symbol">Ca</span>
-                    <span class="atomic-mass">40.08</span>
-                    <span class="chemical-group">Alkaline Earth Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Sc;"
-                    title="Scandium"
-                    data-group="transition-metals"
-                    data-group-number="3"
-                >
-                    <span class="atomic-number">21</span>
-                    <span class="symbol">Sc</span>
-                    <span class="atomic-mass">44.9559</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ti;"
-                    title="Titanium"
-                    data-group="transition-metals"
-                    data-group-number="4"
-                >
-                    <span class="atomic-number">22</span>
-                    <span class="symbol">Ti</span>
-                    <span class="atomic-mass">47.867</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: V;"
-                    title="Vanadium"
-                    data-group="transition-metals"
-                    data-group-number="5"
-                >
-                    <span class="atomic-number">23</span>
-                    <span class="symbol">V</span>
-                    <span class="atomic-mass">50.9415</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Cr;"
-                    title="Chromium"
-                    data-group="transition-metals"
-                    data-group-number="6"
-                >
-                    <span class="atomic-number">24</span>
-                    <span class="symbol">Cr</span>
-                    <span class="atomic-mass">51.996</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Mn;"
-                    title="Manganese"
-                    data-group="transition-metals"
-                    data-group-number="7"
-                >
-                    <span class="atomic-number">25</span>
-                    <span class="symbol">Mn</span>
-                    <span class="atomic-mass">54.9380</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Fe;"
-                    title="Iron"
-                    data-group="transition-metals"
-                    data-group-number="8"
-                >
-                    <span class="atomic-number">26</span>
-                    <span class="symbol">Fe</span>
-                    <span class="atomic-mass">55.84</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Co;"
-                    title="Cobalt"
-                    data-group="transition-metals"
-                    data-group-number="9"
-                >
-                    <span class="atomic-number">27</span>
-                    <span class="symbol">Co</span>
-                    <span class="atomic-mass">58.9332</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ni;"
-                    title="Nickel"
-                    data-group="transition-metals"
-                    data-group-number="10"
-                >
-                    <span class="atomic-number">28</span>
-                    <span class="symbol">Ni</span>
-                    <span class="atomic-mass">58.693</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Cu;"
-                    title="Copper"
-                    data-group="transition-metals"
-                    data-group-number="11"
-                >
-                    <span class="atomic-number">29</span>
-                    <span class="symbol">Cu</span>
-                    <span class="atomic-mass">63.55</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Zn;"
-                    title="Zinc"
-                    data-group="transition-metals"
-                    data-group-number="12"
-                >
-                    <span class="atomic-number">30</span>
-                    <span class="symbol">Zn</span>
-                    <span class="atomic-mass">65.4</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ga;"
-                    title="Gallium"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">31</span>
-                    <span class="symbol">Ga</span>
-                    <span class="atomic-mass">69.723</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ge;"
-                    title="Germanium"
-                    data-group="metalloids"
-                >
-                    <span class="atomic-number">32</span>
-                    <span class="symbol">Ge</span>
-                    <span class="atomic-mass">72.63</span>
-                    <span class="chemical-group">Metalloid</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: As;"
-                    title="Arsenic"
-                    data-group="metalloids"
-                >
-                    <span class="atomic-number">33</span>
-                    <span class="symbol">As</span>
-                    <span class="atomic-mass">74.9216</span>
-                    <span class="chemical-group">Metalloid</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Se;"
-                    title="Selenium"
-                    data-group="reactive-nonmetals"
-                >
-                    <span class="atomic-number">34</span>
-                    <span class="symbol">Se</span>
-                    <span class="atomic-mass">78.97</span>
-                    <span class="chemical-group">Nonmetal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Br;"
-                    title="Bromine"
-                    data-group="halogens"
-                >
-                    <span class="atomic-number">35</span>
-                    <span class="symbol">Br</span>
-                    <span class="atomic-mass">79.90</span>
-                    <span class="chemical-group">Halogen</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Kr;"
-                    title="Krypton"
-                    data-group="noble-gases"
-                >
-                    <span class="atomic-number">36</span>
-                    <span class="symbol">Kr</span>
-                    <span class="atomic-mass">83.80</span>
-                    <span class="chemical-group">Noble Gas</span>
-                </button>
-
-                <!-- Period 5 -->
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Rb;"
-                    title="Rubidium"
-                    data-group="alkali-metals"
-                    data-period-number="5"
-                >
-                    <span class="atomic-number">37</span>
-                    <span class="symbol">Rb</span>
-                    <span class="atomic-mass">85.468</span>
-                    <span class="chemical-group">Alkali Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Sr;"
-                    title="Strontium"
-                    data-group="alkaline-earth-metals"
-                >
-                    <span class="atomic-number">38</span>
-                    <span class="symbol">Sr</span>
-                    <span class="atomic-mass">87.62</span>
-                    <span class="chemical-group">Alkaline Earth Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Y;"
-                    title="Yttrium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">39</span>
-                    <span class="symbol">Y</span>
-                    <span class="atomic-mass">88.9058</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Zr;"
-                    title="Zirconium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">40</span>
-                    <span class="symbol">Zr</span>
-                    <span class="atomic-mass">91.22</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Nb;"
-                    title="Niobium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">41</span>
-                    <span class="symbol">Nb</span>
-                    <span class="atomic-mass">92.9064</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Mo;"
-                    title="Molybdenum"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">42</span>
-                    <span class="symbol">Mo</span>
-                    <span class="atomic-mass">95.95</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Tc;"
-                    title="Technetium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">43</span>
-                    <span class="symbol">Tc</span>
-                    <span class="atomic-mass">96.9064</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ru;"
-                    title="Ruthenium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">44</span>
-                    <span class="symbol">Ru</span>
-                    <span class="atomic-mass">101.1</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Rh;"
-                    title="Rhodium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">45</span>
-                    <span class="symbol">Rh</span>
-                    <span class="atomic-mass">102.9055</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Pd;"
-                    title="Palladium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">46</span>
-                    <span class="symbol">Pd</span>
-                    <span class="atomic-mass">106.42</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ag;"
-                    title="Silver"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">47</span>
-                    <span class="symbol">Ag</span>
-                    <span class="atomic-mass">107.868</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Cd;"
-                    title="Cadmium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">48</span>
-                    <span class="symbol">Cd</span>
-                    <span class="atomic-mass">112.41</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: In;"
-                    title="Indium"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">49</span>
-                    <span class="symbol">In</span>
-                    <span class="atomic-mass">114.818</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Sn;"
-                    title="Tin"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">50</span>
-                    <span class="symbol">Sn</span>
-                    <span class="atomic-mass">118.71</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Sb;"
-                    title="Antimony" 
-                    data-group="metalloids"
-                >
-                    <span class="atomic-number">51</span>
-                    <span class="symbol">Sb</span>
-                    <span class="atomic-mass">121.760</span>
-                    <span class="chemical-group">Metalloid</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Te;"
-                    title="Tellurium"
-                    data-group="metalloids"
-                >
-                    <span class="atomic-number">52</span>
-                    <span class="symbol">Te</span>
-                    <span class="atomic-mass">127.6</span>
-                    <span class="chemical-group">Metalloid</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: I;"
-                    title="Iodine"
-                    data-group="halogens"
-                >
-                    <span class="atomic-number">53</span>
-                    <span class="symbol">I</span>
-                    <span class="atomic-mass">126.9045</span>
-                    <span class="chemical-group">Halogen</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Xe;"
-                    title="Xenon"
-                    data-group="noble-gases"
-                >
-                    <span class="atomic-number">54</span>
-                    <span class="symbol">Xe</span>
-                    <span class="atomic-mass">131.29</span>
-                    <span class="chemical-group">Noble Gas</span>
-                </button>
-
-                <!-- Period 6 -->
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Cs;"
-                    title="Cesium"
-                    data-group="alkali-metals"
-                    data-period-number="6"
-                >
-                    <span class="atomic-number">55</span>
-                    <span class="symbol">Cs</span>
-                    <span class="atomic-mass">132.9055</span>
-                    <span class="chemical-group">Alkali Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ba;"
-                    title="Barium"
-                    data-group="alkaline-earth-metals"
-                >
-                    <span class="atomic-number">56</span>
-                    <span class="symbol">Ba</span>
-                    <span class="atomic-mass">137.33</span>
-                    <span class="chemical-group">Alkaline Earth Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Hf;"
-                    title="Hafnium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">72</span>
-                    <span class="symbol">Hf</span>
-                    <span class="atomic-mass">178.49</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ta;"
-                    title="Tantalum"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">73</span>
-                    <span class="symbol">Ta</span>
-                    <span class="atomic-mass">180.9479</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: W;"
-                    title="Tungsten"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">74</span>
-                    <span class="symbol">W</span>
-                    <span class="atomic-mass">183.84</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Re;"
-                    title="Rhenium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">75</span>
-                    <span class="symbol">Re</span>
-                    <span class="atomic-mass">186.207</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Os;"
-                    title="Osmium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">76</span>
-                    <span class="symbol">Os</span>
-                    <span class="atomic-mass">190.2</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Ir;"
-                    title="Iridium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">77</span>
-                    <span class="symbol">Ir</span>
-                    <span class="atomic-mass">192.22</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Pt;"
-                    title="Platinum" 
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">78</span>
-                    <span class="symbol">Pt</span>
-                    <span class="atomic-mass">195.08</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Au;"
-                    title="Gold"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">79</span>
-                    <span class="symbol">Au</span>
-                    <span class="atomic-mass">196.9666</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Hg;"
-                    title="Mercury"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">80</span>
-                    <span class="symbol">Hg</span>
-                    <span class="atomic-mass">200.59</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Tl;"
-                    title="Thallium"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">81</span>
-                    <span class="symbol">Tl</span>
-                    <span class="atomic-mass">204.383</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Pb;"
-                    title="Lead"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">82</span>
-                    <span class="symbol">Pb</span>
-                    <span class="atomic-mass">207</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Bi;"
-                    title="Bismuth"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">83</span>
-                    <span class="symbol">Bi</span>
-                    <span class="atomic-mass">208.9804</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-                
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Po;"
-                    title="Polonium"
-                    data-group="metalloids"
-                >
-                    <span class="atomic-number">84</span>
-                    <span class="symbol">Po</span>
-                    <span class="atomic-mass">208.9824</span>
-                    <span class="chemical-group">Metalloid</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: At;"
-                    title="Astatine"
-                    data-group="halogens"
-                >
-                    <span class="atomic-number">85</span>
-                    <span class="symbol">At</span>
-                    <span class="atomic-mass">209.9872</span>
-                    <span class="chemical-group">Halogen</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Rn;"
-                    title="Radon"
-                    data-group="noble-gases"
-                >
-                    <span class="atomic-number">86</span>
-                    <span class="symbol">Rn</span>
-                    <span class="atomic-mass">222.0176</span>
-                    <span class="chemical-group">Noble Gas</span>
-                </button>
-
-                <!-- Period 7 -->
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Fr;"
-                    title="Francium"
-                    data-group="alkali-metals"
-                    data-period-number="7"
-                >
-                    <span class="atomic-number">87</span>
-                    <span class="symbol">Fr</span>
-                    <span class="atomic-mass">223.0197</span>
-                    <span class="chemical-group">Alkali Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Ra;"
-                    title="Radium"
-                    data-group="alkaline-earth-metals"
-                >
-                    <span class="atomic-number">88</span>
-                    <span class="symbol">Ra</span>
-                    <span class="atomic-mass">226.0254</span>
-                    <span class="chemical-group">Alkaline Earth Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Rf;"
-                    title="Rutherfordium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">104</span>
-                    <span class="symbol">Rf</span>
-                    <span class="atomic-mass">267.122</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Db;"
-                    title="Dubnium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">105</span>
-                    <span class="symbol">Db</span>
-                    <span class="atomic-mass">268.126</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Sg;"
-                    title="Seaborgium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">106</span>
-                    <span class="symbol">Sg</span>
-                    <span class="atomic-mass">269.128</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Bh;"
-                    title="Bohrium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">107</span>
-                    <span class="symbol">Bh</span>
-                    <span class="atomic-mass">270.133</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Hs;"
-                    title="Hassium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">108</span>
-                    <span class="symbol">Hs</span>
-                    <span class="atomic-mass">269.1336</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Mt;"
-                    title="Meitnerium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">109</span>
-                    <span class="symbol">Mt</span>
-                    <span class="atomic-mass">277.154</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Ds;"
-                    title="Darmstadtium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">110</span>
-                    <span class="symbol">Ds</span>
-                    <span class="atomic-mass">282.166</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Rg;"
-                    title="Roentgenium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">111</span>
-                    <span class="symbol">Rg</span>
-                    <span class="atomic-mass">282.169</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Cn;"
-                    title="Copernicium"
-                    data-group="transition-metals"
-                >
-                    <span class="atomic-number">112</span>
-                    <span class="symbol">Cn</span>
-                    <span class="atomic-mass">286.179</span>
-                    <span class="chemical-group">Transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Nh;"
-                    title="Nihonium"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">113</span>
-                    <span class="symbol">Nh</span>
-                    <span class="atomic-mass">286.182</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Fl;"
-                    title="Flerovium"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">114</span>
-                    <span class="symbol">Fl</span>
-                    <span class="atomic-mass">290.192</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Mc;"
-                    title="Moscovium"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">115</span>
-                    <span class="symbol">Mc</span>
-                    <span class="atomic-mass">290.196</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Lv;"
-                    title="Livermorium"
-                    data-group="post-transition-metals"
-                >
-                    <span class="atomic-number">116</span>
-                    <span class="symbol">Lv</span>
-                    <span class="atomic-mass">293.205</span>
-                    <span class="chemical-group">Post-transition Metal</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Ts;"
-                    title="Tennessine"
-                    data-group="halogens"
-                >
-                    <span class="atomic-number">117</span>
-                    <span class="symbol">Ts</span>
-                    <span class="atomic-mass">294.211</span>
-                    <span class="chemical-group">Halogen</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Og;"
-                    title="Oganesson"
-                    data-group="noble-gases"
-                >
-                    <span class="atomic-number">118</span>
-                    <span class="symbol">Og</span>
-                    <span class="atomic-mass">295.216</span>
-                    <span class="chemical-group">Noble Gas</span>
-                </button>
-
-                <div class="periodic-table__connectors" aria-hidden="true">
-                    <div class="lanthanides-connector" ></div>
-                    <div class="actinides-connector" ></div>
-                </div>
-
-                <div class="separator" aria-hidden="true"></div>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: La;"
-                    title="Lanthanum"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">57</span>
-                    <span class="symbol">La</span>
-                    <span class="atomic-mass">138.9055</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Ce;"
-                    title="Cerium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">58</span>
-                    <span class="symbol">Ce</span>
-                    <span class="atomic-mass">140.116</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Pr;"
-                    title="Praseodymium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">59</span>
-                    <span class="symbol">Pr</span>
-                    <span class="atomic-mass">140.9077</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Nd;"
-                    title="Neodymium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">60</span>
-                    <span class="symbol">Nd</span>
-                    <span class="atomic-mass">144.24</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Pm;"
-                    title="Promethium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">61</span>
-                    <span class="symbol">Pm</span>
-                    <span class="atomic-mass">144.9128</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Sm;"
-                    title="Samarium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">62</span>
-                    <span class="symbol">Sm</span>
-                    <span class="atomic-mass">150.4</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Eu;"
-                    title="Europium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">63</span>
-                    <span class="symbol">Eu</span>
-                    <span class="atomic-mass">151.964</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Gd;"
-                    title="Gadolinium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">64</span>
-                    <span class="symbol">Gd</span>
-                    <span class="atomic-mass">157.2</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Tb;"
-                    title="Terbium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">65</span>
-                    <span class="symbol">Tb</span>
-                    <span class="atomic-mass">158.9254</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Dy;"
-                    title="Dysprosium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">66</span>
-                    <span class="symbol">Dy</span>
-                    <span class="atomic-mass">162.500</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Ho;"
-                    title="Holmium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">67</span>
-                    <span class="symbol">Ho</span>
-                    <span class="atomic-mass">164.9303</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Er;"
-                    title="Erbium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">68</span>
-                    <span class="symbol">Er</span>
-                    <span class="atomic-mass">167.26</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Tm;"
-                    title="Thulium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">69</span>
-                    <span class="symbol">Tm</span>
-                    <span class="atomic-mass">168.9342</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Yb;"
-                    title="Ytterbium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">70</span>
-                    <span class="symbol">Yb</span>
-                    <span class="atomic-mass">173.05</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Lu;"
-                    title="Lutetium"
-                    data-group="lanthanides"
-                >
-                    <span class="atomic-number">71</span>
-                    <span class="symbol">Lu</span>
-                    <span class="atomic-mass">174.9668</span>
-                    <span class="chemical-group">Lanthanide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Ac;"
-                    title="Actinium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">89</span>
-                    <span class="symbol">Ac</span>
-                    <span class="atomic-mass">227.0278</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Th;"
-                    title="Thorium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">90</span>
-                    <span class="symbol">Th</span>
-                    <span class="atomic-mass">232.038</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Pa;"
-                    title="Protactinium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">91</span>
-                    <span class="symbol">Pa</span>
-                    <span class="atomic-mass">231.0359</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: U;"
-                    title="Uranium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">92</span>
-                    <span class="symbol">U</span>
-                    <span class="atomic-mass">238.0289</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Np;"
-                    title="Neptunium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">93</span>
-                    <span class="symbol">Np</span>
-                    <span class="atomic-mass">237.0482</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Pu;"
-                    title="Plutonium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">94</span>
-                    <span class="symbol">Pu</span>
-                    <span class="atomic-mass">244.0642</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Am;"
-                    title="Americium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">95</span>
-                    <span class="symbol">Am</span>
-                    <span class="atomic-mass">243.0614</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Cm;"
-                    title="Curium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">96</span>
-                    <span class="symbol">Cm</span>
-                    <span class="atomic-mass">247.0704</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Bk;"
-                    title="Berkelium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">97</span>
-                    <span class="symbol">Bk</span>
-                    <span class="atomic-mass">247.0703</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Cf;"
-                    title="Californium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">98</span>
-                    <span class="symbol">Cf</span>
-                    <span class="atomic-mass">251.0796</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Es;"
-                    title="Einsteinium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">99</span>
-                    <span class="symbol">Es</span>
-                    <span class="atomic-mass">252.0830</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button 
-                    class="periodic-table__element"
-                    style="grid-area: Fm;"
-                    title="Fermium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">100</span>
-                    <span class="symbol">Fm</span>
-                    <span class="atomic-mass">257.0951</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Md;"
-                    title="Mendelevium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">101</span>
-                    <span class="symbol">Md</span>
-                    <span class="atomic-mass">258.0984</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: No;"
-                    title="Nobelium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">102</span>
-                    <span class="symbol">No</span>
-                    <span class="atomic-mass">259.1010</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
-                <button
-                    class="periodic-table__element"
-                    style="grid-area: Lr;"
-                    title="Lawrencium"
-                    data-group="actinides"
-                >
-                    <span class="atomic-number">103</span>
-                    <span class="symbol">Lr</span>
-                    <span class="atomic-mass">266.120</span>
-                    <span class="chemical-group">Actinide</span>
-                </button>
-
 
             </div>
 
@@ -1617,200 +1621,120 @@
 
         <div
             class="modal modal--scroll-all padding-y-4"
-            id="modal-element-h"
+            id="modal-element-detail"
             role="dialog"
         >
-
             <div
                 class="modal__content narrow box-shadow-3"
                 aria-labelledby="modal-element-h-title"
             >
+            <header class="modal__content__head border-bottom">
+                <h2 class="h6" id="modal-element-title">
+                    Element Properties
+                </h2>
+                <button class="button button--icon-only" data-modal-close>
+                    <p class="icon icon-close" aria-hidden="true"></p>
+                </button>
+            </header>
 
-                <header class="modal__content__head">
-                    <h2 class="h6" id="modal-element-h-title">
-                        Element Properties
-                    </h2>
-                    <button class="button button--icon-only" data-modal-close>
-                        <span class="icon icon-close" aria-hidden="true"></span>
-                    </button>
-                </header>
-
-                <main class="modal__content__body" id="modal-element-h-content">
-
-                    <div
-                        class="container margin-x-n3 periodic-table-header"
-                        data-group="reactive-nonmetals"
-                    >
-
-                        <div class="periodic-table__element box-shadow-2">
-                            <p class="atomic-number">1</p>
-                            <p class="symbol">H</p>
-                            <p class="atomic-mass">1.008</p>
-                        </div>
-
-                        <div class="periodic-table__title">
-                            <p class="h4">Hydrogen</p>
-                            <p>Nonmetal</p>
-                        </div>
-                    
-                    </div>
-
-                    <div class="container model-viewer display-none">
-
-                        <model-viewer
-                            alt=""
-                            class="width-100 height-100"
-                            src="./_3D/test2.glb"
-                            camera-controls
-                            touch-action="pan-y"
-                            loading="eager"
-                        />
-
-                    </div>
-
-                    <div>
-
-                        <table class="table">
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Atomic Mass
-                                    </strong>
-                                </td>
-                                <td>
-                                    1.0080 u
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Standard State
-                                    </strong>
-                                </td>
-                                <td>
-                                    Gas
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Electron Configuration
-                                    </strong>
-                                </td>
-                                <td>
-                                    1s1
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Oxidation States
-                                    </strong>
-                                </td>
-                                <td>
-                                    +1, -1
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Oxidation States
-                                    </strong>
-                                </td>
-                                <td>
-                                    2.2
-                                </td>
-                            </tr>
-                                <td>
-                                    <strong>
-                                        Atomic Radius (van der Waals)
-                                    </strong>
-                                </td>
-                                <td>
-                                    120 pm
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Ionization Energy
-                                    </strong>
-                                </td>
-                                <td>
-                                    13.598 eV
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Electron Affinity
-                                    </strong>
-                                </td>
-                                <td>
-                                    0.754 eV
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Melting Point
-                                    </strong>
-                                </td>
-                                <td>
-                                    13.81 K
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Boiling Point
-                                    </strong>
-                                </td>
-                                <td>
-                                    20.28 K
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Density
-                                    </strong>
-                                </td>
-                                <td>
-                                    0.00008988 g/cm³
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>
-                                        Year Discovered
-                                    </strong>
-                                </td>
-                                <td>
-                                    1766
-                                </td>
-                            </tr>
-
-                        </table>
-
-                    </div>
-                
-                </main>
-
-                <footer class="modal__content__foot border-top text-color-link font-size-md">
-
-                    <a class="button button--has-icon" href="#1">
-                        <span class="button__text">More on Wikipedia</span>
-                        <span class="icon icon-open-new"></span>
-                    </a>
-
-                </footer>
-
+            <div class="modal__content__body" id="modal-element-content">
+                <!-- Content will be inserted here -->
+                </div>
+            
             </div>
-
         </div>
 
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+        <script>
+
+            // Fetch and store the elements JSON data
+            let elementsData = [];
+
+            fetch('./_json/periodic-table.json')
+                .then(response => response.json())
+                .then(data => {
+                    elementsData = data.elements;
+                    console.log(elementsData);
+                })
+                .catch(error => {
+                    console.error('Error fetching the elements data:', error);
+                });
+
+            // Function to create the modal content using a template literal
+            const createElementModalContent = (element) => {
+
+                // Use object entries to map through the element properties and create table rows
+                const tableRows = Object.entries({
+                    'Atomic Mass': `${element.atomicMass} u`,
+                    'Standard State': element.standardState,
+                    'Electron Configuration': element.electronConfiguration,
+                    'Oxidation States': element.oxidationStates,
+                    'Atomic Radius (van der Waals)': `${element.atomicRadius}`,
+                    'Ionization Energy': `${element.ionizationEnergy} eV`,
+                    'Electron Affinity': `${element.electronAffinity} eV`,
+                    'Melting Point': `${element.meltingPoint} K`,
+                    'Boiling Point': `${element.boilingPoint} K`,
+                    'Density': `${element.density} g/cm³`,
+                    'Year Discovered': element.yearDiscovered
+                }).map(([property, value]) => `
+                    <tr>
+                        <td><strong>${property}</strong></td>
+                        <td>${value}</td>
+                    </tr>
+                `).join('');
+                
+                return (`
+                    <main id="modal-element-content">
+                        <div class="container periodic-table-header" data-group="${element.groupBlock.toLowerCase()}">
+                            <div class="periodic-table__element" data-group="${element.groupBlock.toLowerCase()}">
+                                <p class="atomic-number">${element.atomicNumber}</p>
+                                <p class="symbol">${element.symbol}</p>
+                                <p class="atomic-mass">${element.atomicMass}</p>
+                            </div>
+                            <div class="periodic-table__title">
+                                <p class="h4">${element.name}</p>
+                                <p>${element.appearance}</p>
+                            </div>
+                        </div>
+                        <table class="table">
+                            ${tableRows}
+                        </table>
+                    </main>
+                    <footer class="modal__content__foot border-top text-color-link font-size-md">
+                        <a class="button button--has-icon" href="https://en.wikipedia.org/wiki/${element.name}" target="_blank" rel="noopener">
+                            <span class="button__text">More on Wikipedia</span>
+                            <span class="icon icon-open-new"></span>
+                        </a>
+                    </footer>
+                `);
+            };
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('[data-modal-open]').forEach(button => {
+
+                    button.addEventListener('click', (e) => {
+
+                        e.preventDefault();
+
+                        const elementName = button.getAttribute('title');
+                        const elementSymbol = button.querySelector('.symbol').textContent;
+                        const elementData = elementsData.find(e => e.name === elementName);
+
+                        if (elementData) {
+                            const modalContentHTML = createElementModalContent(elementData);
+
+                            const modalId = button.getAttribute('data-modal-open');
+                            const modalContentContainer = document.querySelector(`#${modalId} .modal__content__body`);
+
+                            if (modalContentContainer) {
+                                modalContentContainer.innerHTML = modalContentHTML;
+                            }
+                        }
+                    });
+
+                });
+            });
+            
+        </script>
 
     </body>
 

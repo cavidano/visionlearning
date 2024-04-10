@@ -41,7 +41,9 @@ export default class Table {
 		this.#tableScrollList.forEach((scrollElement) => {
 			let scrollTarget = scrollElement.querySelector('.table-scroll__container');
 			let maxWidth = scrollElement.offsetWidth;
-			let scrollWidth = scrollTarget.scrollWidth;
+			let scrollWidth = scrollTarget.scrollWidth || scrollTarget.offsetWidth;
+
+			console.log(`????????????? `);
 
 			const removeGradient = () => {
 				let scrollPosition = scrollTarget.scrollLeft;

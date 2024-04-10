@@ -133,7 +133,7 @@ In this file:
     display: grid;
     grid-template-columns: repeat(18, 1fr);
 
-    min-width: 900px;
+    min-width: 1000px;
     max-width: 1440px;
 
     margin-inline: auto;
@@ -173,7 +173,7 @@ In this file:
 
         transform: translateY(-50%);
 
-        margin-inline-start: var(--_arrow-width);
+        margin-inline-start: calc(var(--_arrow-width) + 8cqi); ;
         
         white-space: nowrap;
 
@@ -196,7 +196,7 @@ In this file:
 
             position: absolute;
 
-            width: calc(var(--_arrow-width) - 0.5em);
+            width: calc(var(--_arrow-width) - 8cqi);
             border-bottom: 1px solid var(--text-color);
             transform: translateX(calc(-1 * var(--_arrow-width)));
         }
@@ -340,10 +340,7 @@ In this file:
         position: relative;
         margin-bottom: unset;
         width: 100%;
-    }
-
-    :is(p, span) {
-        font-size: 16cqi;
+        font-size: 14cqi;
     }
 
     [class^="symbol"] { 
@@ -359,6 +356,10 @@ In this file:
     // Periodic Table Element Button
 
     &:is(button){
+
+        &:is(:hover, :focus) {
+            opacity: 0.875;
+        }
         
         &::before,
         &::after {
@@ -441,8 +442,6 @@ In this file:
     padding-block: var(--spacer-3);
     
     .periodic-table__element {
-        background-color: var(--reactive-nonmetals);
-        color: whitesmoke;
-        gap: var(--spacer-1);
+    width: 144px;
     }
 }

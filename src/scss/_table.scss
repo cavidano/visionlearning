@@ -226,7 +226,7 @@ In this file:
         
         max-width: 100%;
 
-        table {
+        :is(table, .table) {
             overflow: hidden;
             min-width: var(--table-scroll-min-width);
         }
