@@ -1632,10 +1632,10 @@ title: Periodic Table
 </div>
 
 <script>
-
+    let baseUrl = "{{ site.baseurl }}"; // Jekyll variable
     let elementsData = [];
 
-    fetch('./json/periodic-table.json')
+    fetch(`${baseUrl}/json/periodic-table.json`)
         .then(response => response.json())
         .then(data => {
             elementsData = data.elements;
