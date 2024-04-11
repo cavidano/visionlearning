@@ -14,35 +14,35 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --actinides: #81314C;
-    --actinides-tint: #81314C26;
+    --actinide: #81314C;
+    --actinide-tint: #81314C26;
     
-    --alkali-metals: #1A679C;
-    --alkali-metals-tint: #1A679C26;
+    --alkali-metal: #1A679C;
+    --alkali-metal-tint: #1A679C26;
     
-    --alkaline-earth-metals: #942E27;
-    --alkaline-earth-metals-tint: #942E2726;
+    --alkaline-earth-metal: #942E27;
+    --alkaline-earth-metal-tint: #942E2726;
 
-    --halogens: #131B6C;
-    --halogens-tint: #131B6C26;
+    --halogen: #131B6C;
+    --halogen-tint: #131B6C26;
     
-    --lanthanides: #175E82;
-    --lanthanides-tint: #175E8226;
+    --lanthanide: #175E82;
+    --lanthanide-tint: #175E8226;
     
-    --metalloids: #A04012;
-    --metalloids-tint: #A0401226;
+    --metalloid: #A04012;
+    --metalloid-tint: #A0401226;
     
-    --noble-gases: #8E0B37;
-    --noble-gases-tint: #8E0B3726;
+    --noble-gas: #8E0B37;
+    --noble-gas-tint: #8E0B3726;
 
-    --post-transition-metals: #17804B;
-    --post-transition-metals-tint: #17804B26;
+    --post-transition-metal: #17804B;
+    --post-transition-metal-tint: #17804B26;
     
-    --reactive-nonmetals: #006666;
-    --reactive-nonmetals-tint: #00666626;
+    --nonmetal: #006666;
+    --nonmetal-tint: #00666626;
 
-    --transition-metals: #641B98;
-    --transition-metals-tint: #641B9826;
+    --transition-metal: #641B98;
+    --transition-metal-tint: #641B9826;
 
     --separator-size: 3cqi;
 }
@@ -56,69 +56,63 @@ In this file:
 }
 
 // Actinides
-[data-group="actinides"] {
-    --_background-color: var(--actinides-tint);
-    --_color: var(--actinides);
+[data-group="actinide"] {
+    --_background-color: var(--actinide-tint);
+    --_color: var(--actinide);
 }
 
 // Alkaline metals
-[data-group="alkali-metals"] {
-    --_background-color: var(--alkali-metals-tint);
-    --_color: var(--alkali-metals);
+[data-group="alkali-metal"] {
+    --_background-color: var(--alkali-metal-tint);
+    --_color: var(--alkali-metal);
 }
 
 // Alkaline earth metals
-[data-group="alkaline-earth-metals"] {
-    --_background-color: var(--alkaline-earth-metals-tint);
-    --_color: var(--alkaline-earth-metals);
+[data-group="alkaline-earth-metal"] {
+    --_background-color: var(--alkaline-earth-metal-tint);
+    --_color: var(--alkaline-earth-metal);
 }
 
 // Halogens
-[data-group="halogens"] {
-    --_background-color: var(--halogens-tint);
-    --_color: var(--halogens);
+[data-group="halogen"] {
+    --_background-color: var(--halogen-tint);
+    --_color: var(--halogen);
 }
 
 // Lanthanides
-[data-group="lanthanides"] {
-    --_background-color: var(--lanthanides-tint);
-    --_color: var(--lanthanides);
+[data-group="lanthanide"] {
+    --_background-color: var(--lanthanide-tint);
+    --_color: var(--lanthanide);
 }
 
 // Metalloids
-[data-group="metalloids"] {
-    --_background-color: var(--metalloids-tint);
-    --_color: var(--metalloids);
+[data-group="metalloid"] {
+    --_background-color: var(--metalloid-tint);
+    --_color: var(--metalloid);
 }
 
 // Noble gases
-[data-group="noble-gases"] {
-    --_background-color: var(--noble-gases-tint);
-    --_color: var(--noble-gases);
+[data-group="noble-gas"] {
+    --_background-color: var(--noble-gas-tint);
+    --_color: var(--noble-gas);
 }
 
 // Post-transition metals
-[data-group="post-transition-metals"] {
-    --_background-color: var(--post-transition-metals-tint);
-    --_color: var(--post-transition-metals);
+[data-group="post-transition-metal"] {
+    --_background-color: var(--post-transition-metal-tint);
+    --_color: var(--post-transition-metal);
 }
 
 // Reactive nonmetals
-[data-group="reactive-nonmetals"] {
-    --_background-color: var(--reactive-nonmetals-tint);
-    --_color: var(--reactive-nonmetals);
+[data-group="nonmetal"] {
+    --_background-color: var(--nonmetal-tint);
+    --_color: var(--nonmetal);
 }
 
 // Transition metals
-[data-group="transition-metals"] {
-    --_background-color: var(--transition-metals-tint);
-    --_color: var(--transition-metals);
-}
-
-// Unknown properties
-[data-group="unknown-properties"] {
-    --_background-color: var(--unknown-properties-tint);
-    --_color: var(--unknown-properties);
+[data-group="transition-metal"] {
+    --_background-color: var(--transition-metal-tint);
+    --_color: var(--transition-metal);
 }
 
 //////////////////////////////////////////////
@@ -252,53 +246,53 @@ In this file:
     }
 
     [data-color="actinides"]::before {
-        --_fill: var(--actinides-tint);
-        --_stroke: var(--actinides);
+        --_fill: var(--actinide-tint);
+        --_stroke: var(--actinide);
     }
 
     [data-color="alkali-metals"]::before {
-        --_fill: var(--alkali-metals-tint);
-        --_stroke: var(--alkali-metals);
+        --_fill: var(--alkali-metal-tint);
+        --_stroke: var(--alkali-metal);
     }
 
     [data-color="alkaline-earth-metals"]::before {
-        --_fill: var(--alkaline-earth-metals-tint);
-        --_stroke: var(--alkaline-earth-metals);
+        --_fill: var(--alkaline-earth-metal-tint);
+        --_stroke: var(--alkaline-earth-metal);
     }
 
     [data-color="halogens"]::before {
-        --_fill: var(--halogens-tint);
-        --_stroke: var(--halogens);
+        --_fill: var(--halogen-tint);
+        --_stroke: var(--halogen);
     }
     
     [data-color="lanthanides"]::before {
-        --_fill: var(--lanthanides-tint);
-        --_stroke: var(--lanthanides);
+        --_fill: var(--lanthanide-tint);
+        --_stroke: var(--lanthanide);
     }
 
     [data-color="metalloids"]::before {
-        --_fill: var(--metalloids-tint);
-        --_stroke: var(--metalloids);
+        --_fill: var(--metalloid-tint);
+        --_stroke: var(--metalloid);
     }
 
     [data-color="noble-gases"]::before {
-        --_fill: var(--noble-gases-tint);
-        --_stroke: var(--noble-gases);
+        --_fill: var(--noble-gas-tint);
+        --_stroke: var(--noble-gas);
     }
 
     [data-color="post-transition-metals"]::before {
-        --_fill: var(--post-transition-metals-tint);
-        --_stroke: var(--post-transition-metals);
+        --_fill: var(--post-transition-metal-tint);
+        --_stroke: var(--post-transition-metal);
     }
 
-    [data-color="reactive-nonmetals"]::before {
-        --_fill: var(--reactive-nonmetals-tint);
-        --_stroke: var(--reactive-nonmetals);
+    [data-color="nonmetals"]::before {
+        --_fill: var(--nonmetal-tint);
+        --_stroke: var(--nonmetal);
     }
 
     [data-color="transition-metals"]::before {
-        --_fill: var(--transition-metals-tint);
-        --_stroke: var(--transition-metals);
+        --_fill: var(--transition-metal-tint);
+        --_stroke: var(--transition-metal);
     }
 
     [data-color="unknown-properties"]::before {
@@ -312,8 +306,8 @@ In this file:
     }
 
     [data-color="nonmetals"]::before {
-        --_fill: var(--nonmetals-tint);
-        --_stroke: var(--nonmetals);
+        --_fill: var(--nonmetal-tint);
+        --_stroke: var(--nonmetal);
     }
 }
 
@@ -409,7 +403,7 @@ In this file:
 }
 
 .lanthanides-connector {
-    --_fill: var(--lanthanides-tint);
+    --_fill: var(--lanthanide-tint);
 
     clip-path: polygon(
         0% 0%,
@@ -420,7 +414,7 @@ In this file:
 }
 
 .actinides-connector {
-    --_fill: var(--actinides-tint);
+    --_fill: var(--actinide-tint);
 
     clip-path: polygon(
         0% calc(22% + calc(var(--gap) * 1.5)),
