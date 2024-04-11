@@ -1629,15 +1629,16 @@
         <!-- Modal dialog -->
 
         <div
-            class="modal modal--scroll-all padding-y-4"
+            class="modal modal--scroll-all padding-x-2 padding-y-4"
             id="modal-element-detail"
             role="dialog"
+            data-modal-close-outside="true"
         >
             <div
                 class="modal__content narrow box-shadow-3"
-                aria-labelledby="modal-element-h-title"
+                aria-labelledby="modal-element-title"
             >
-            <header class="modal__content__head border-bottom">
+            <header class="modal__content__head">
                 <h2 class="h6" id="modal-element-title">
                     Element Properties
                 </h2>
@@ -1646,16 +1647,15 @@
                 </button>
             </header>
 
-            <div class="modal__content__body" id="modal-element-content">
+            <div class="modal__content__container">
                 <!-- Content will be inserted here -->
-                </div>
+            </div>
             
             </div>
         </div>
 
         <script>
 
-            // Fetch and store the elements JSON data
             let elementsData = [];
 
             fetch('./_json/periodic-table.json')
@@ -1668,22 +1668,39 @@
                     console.error('Error fetching the elements data:', error);
                 });
 
-            // Function to create the modal content using a template literal
             const createElementModalContent = (element) => {
 
-                // Use object entries to map through the element properties and create table rows
+                const {
+                    name,
+                    atomicNumber,
+                    symbol,
+                    chemicalGroup,
+                    atomicMass,
+                    standardState,
+                    electronConfiguration,
+                    oxidationStates,
+                    atomicRadius,
+                    ionizationEnergy,
+                    electronAffinity,
+                    meltingPoint,
+                    boilingPoint,
+                    density,
+                    yearDiscovered,
+                    wikipediaURL
+                } = element;
+
                 const tableRows = Object.entries({
-                    'Atomic Mass': `${element.atomicMass}`,
-                    'Standard State': element.standardState,
-                    'Electron Configuration': element.electronConfiguration,
-                    'Oxidation States': element.oxidationStates,
-                    'Atomic Radius (van der Waals)': `${element.atomicRadius}`,
-                    'Ionization Energy': `${element.ionizationEnergy}`,
-                    'Electron Affinity': `${element.electronAffinity}`,
-                    'Melting Point': `${element.meltingPoint}`,
-                    'Boiling Point': `${element.boilingPoint}`,
-                    'Density': `${element.density}`,
-                    'Year Discovered': element.yearDiscovered
+                    'Atomic Mass': `${atomicMass}`,
+                    'Standard State': `${standardState}`,
+                    'Electron Configuration': `${electronConfiguration}` ,
+                    'Oxidation States': `${oxidationStates}` ,
+                    'Atomic Radius (van der Waals)': `${atomicRadius}`,
+                    'Ionization Energy': `${ionizationEnergy}`,
+                    'Electron Affinity': `${electronAffinity}`,
+                    'Melting Point': `${meltingPoint}`,
+                    'Boiling Point': `${boilingPoint}`,
+                    'Density': `${density}`,
+                    'Year Discovered': `${yearDiscovered}`,
                 }).map(([property, value]) => `
                     <tr>
                         <td><strong>${property}</strong></td>
@@ -1692,24 +1709,24 @@
                 `).join('');
                 
                 return (`
-                    <main id="modal-element-content">
-                        <div class="periodic-table-header">
-                            <div class="periodic-table__element" data-group="${element.groupBlock.toLowerCase().replace(' ', '-')}">
-                                <p class="atomic-number">${element.atomicNumber}</p>
-                                <p class="symbol">${element.symbol}</p>
-                                <p class="atomic-mass">${element.atomicMass}</p>
-                            </div>
-                            <div class="periodic-table__title">
-                                <p class="h4">${element.name}</p>
-                                <p>${element.groupBlock}</p>
+                    <main>
+                        <div class="modal__content__body" data-group="${chemicalGroup.toLowerCase().replace(' ', '-')}">
+                            <div class="flex-column text-align-center padding-y-3">
+                                <span class="font-size-md">${atomicNumber}</span>
+                                <span class="h1 margin-bottom-0">${symbol}</span>
+                                <span class="h4 name">${name}</span>
+                                <span class="font-size-md">${chemicalGroup}</p>
                             </div>
                         </div>
-                        <table class="table table--edge">
-                            ${tableRows}
-                        </table>
+                        <div class="modal__content__body">
+                            <table class="table table--edge">
+                                ${tableRows}
+                            </table>
+                        </div>
                     </main>
+
                     <footer class="modal__content__foot border-top text-color-link font-size-md">
-                        <a class="button button--has-icon" href="https://en.wikipedia.org/wiki/${element.name}" target="_blank" rel="noopener">
+                        <a class="button button--has-icon" href="https://en.wikipedia.org/wiki/${name}" target="_blank" rel="noopener">
                             <span class="button__text">More on Wikipedia</span>
                             <span class="icon icon-open-new"></span>
                         </a>
@@ -1717,31 +1734,29 @@
                 `);
             };
 
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('[data-modal-open]').forEach(button => {
+            document.querySelectorAll('[data-modal-open]').forEach(button => {
 
-                    button.addEventListener('click', (e) => {
+                button.addEventListener('click', (e) => {
 
-                        e.preventDefault();
+                    e.preventDefault();
 
-                        const elementName = button.getAttribute('title');
-                        const elementData = elementsData.find(e => e.name === elementName);
+                    const elementName = button.getAttribute('title');
+                    const elementData = elementsData.find(e => e.name === elementName);
 
-                        if (elementData) {
-                            const modalContentHTML = createElementModalContent(elementData);
+                    if (elementData) {
+                        const modalContentHTML = createElementModalContent(elementData);
 
-                            const modalId = button.getAttribute('data-modal-open');
-                            const modalContentContainer = document.querySelector(`#${modalId} .modal__content__body`);
+                        const modalId = button.getAttribute('data-modal-open');
+                        const modalContentContainer = document.querySelector(`#${modalId} .modal__content__container`);
 
-                            if (modalContentContainer) {
-                                modalContentContainer.innerHTML = modalContentHTML;
-                            }
+                        if (modalContentContainer) {
+                            modalContentContainer.innerHTML = modalContentHTML;
                         }
-                    });
-
+                    }
                 });
+
             });
-            
+
         </script>
 
     </body>

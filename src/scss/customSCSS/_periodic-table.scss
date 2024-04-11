@@ -423,19 +423,3 @@ In this file:
         0% calc(44% - var(--gap))
     );
 }
-
-// Model Viewer
-
-.periodic-table-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    gap: var(--spacer-4);
-
-    padding-block: var(--spacer-3);
-    
-    .periodic-table__element {
-    width: 144px;
-    }
-}
