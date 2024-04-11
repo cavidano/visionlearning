@@ -1635,7 +1635,7 @@ title: Periodic Table
 
     let elementsData = [];
 
-    fetch('/json/periodic-table.json')
+    fetch('./json/periodic-table.json')
         .then(response => response.json())
         .then(data => {
             elementsData = data.elements;
