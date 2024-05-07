@@ -186,6 +186,8 @@ export default class ReadingToggles {
 			window.addEventListener('pageshow', () => {
 				this.#termsToggleSwitch.checked = false;
 				this.#ngssToggleSwitch.checked = false;
+				this.turnOffNGSS();
+				this.turnOffTerms();
 			});
 		}
 	}
