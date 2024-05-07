@@ -43,8 +43,6 @@ export default class Table {
 			let maxWidth = scrollElement.offsetWidth;
 			let scrollWidth = scrollTarget.scrollWidth || scrollTarget.offsetWidth;
 
-			console.log(`????????????? `);
-
 			const removeGradient = () => {
 				let scrollPosition = scrollTarget.scrollLeft;
 				scrollPosition > 1

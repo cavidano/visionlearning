@@ -56,6 +56,9 @@ title: Periodic Table
   <caption id="configDescription">Element Configuration Shorthand</caption>
   <thead>
     <tr>
+      <th colspan="3">Element Configuration Shorthand</th>
+    </tr>
+    <tr>
       <th scope="col">Element</th>
       <th scope="col">Symbol</th>
       <th scope="col">Configuration Shorthand</th>
@@ -63,35 +66,28 @@ title: Periodic Table
   </thead>
   <tbody>
     <tr>
-      <td scope="row">
-        Hydrogen
-        </td>
+      <td scope="row">Hydrogen</td>
       <td>H</td>
       <td>1e-</td>
     </tr>
     <tr>
-      <td scope="row">
-        Lithium
-        </td>
+      <td scope="row">Lithium</td>
       <td>Li</td>
       <td>2e-</td>
     </tr>
     <tr>
-      <td scope="row">
-        Fluorine
-    </td>
+      <td scope="row">Fluorine</td>
       <td>F</td>
       <td>2e- 7e-</td>
     </tr>
     <tr>
-      <td scope="row">
-        Sodium
-        </td>
+      <td scope="row">Sodium</td>
       <td>Na</td>
       <td>2e- 8e- 1e-</td>
     </tr>
   </tbody>
 </table>
+
 
 <hr class="margin-y-5" />
 

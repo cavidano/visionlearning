@@ -12,9 +12,9 @@ export default class ReadingToggles {
 	#helpTextContainers = document.querySelectorAll('.reading-toggle__help');
 
 	#closeButton = `
-    <button class="button button--icon-only" data-close-btn>
-      <span class="icon icon-close" aria-hidden="true"></span>
-    </button>
+		<button class="button button--icon-only" data-close-btn>
+		<span class="icon icon-close" aria-hidden="true"></span>
+		</button>
   `;
 
 	// Private methods
@@ -74,7 +74,7 @@ export default class ReadingToggles {
 		const ngssStandard = ngss.getAttribute('data-ngss-standard') || 'Standard not found';
 
 		const ngssDescHTML = `
-			<article class="reading-annotation" aria-live="polite" data-ngss-cat-abbr="${ngssCatAbbr}">
+			<article class="reading-annotation ngss-annotation" aria-live="polite" data-ngss-cat-abbr="${ngssCatAbbr}">
 				<div class="reading-annotation__head">
 					${ngssCat}
 					${this.#closeButton}
@@ -82,7 +82,8 @@ export default class ReadingToggles {
 				<div class="reading-annotation__body">
 					<p>
 						${ngssDesc}
-						${ngssStandard !== 'Standard not found' ? `<span class="standard">${ngssStandard}</span>` : ''}</p>
+						${ngssStandard !== 'Standard not found' ? `<span class="standard">${ngssStandard}</span>` : ''}
+					</p>
 				</div>
 			</article>
 		`;
@@ -127,6 +128,10 @@ export default class ReadingToggles {
 			ngss.setAttribute('tabindex', '-1');
 			ngss.removeEventListener('click', this.handleNGSSClick);
 		});
+		const ngssDescHTML = document.querySelector('.ngss-annotation');
+		if (ngssDescHTML) {
+			ngssDescHTML.parentNode.removeChild(ngssDescHTML);
+		}
 	};
 
 	turnOnTerms = () => {
@@ -144,14 +149,17 @@ export default class ReadingToggles {
 			term.setAttribute('tabindex', '-1');
 			term.removeEventListener('click', this.handleTermClick);
 		});
+		const termDefHTML = document.querySelector('.glossary-term');
+		if (termDefHTML) {
+			termDefHTML.parentNode.removeChild(termDefHTML);
+		}
 	};
 
 	init = () => {
 		if (this.#termsToggleSwitch) {
-			this.#termsToggleSwitch.addEventListener('change', (e) => {
-				const highlightTerms = e.target.checked;
-				if (highlightTerms === true) {
-					if (this.#ngssToggleSwitch.checked === true) {
+			this.#termsToggleSwitch.addEventListener('change', ({ target: { checked: highlightTerms } }) => {
+				if (highlightTerms) {
+					if (this.#ngssToggleSwitch.checked) {
 						this.turnOffNGSS();
 					}
 					this.turnOnTerms();
@@ -162,10 +170,9 @@ export default class ReadingToggles {
 		}
 
 		if (this.#ngssToggleSwitch) {
-			this.#ngssToggleSwitch.addEventListener('change', (e) => {
-				const highlightNGSS = e.target.checked;
-				if (highlightNGSS === true) {
-					if (this.#termsToggleSwitch.checked === true) {
+			this.#ngssToggleSwitch.addEventListener('change', ({ target: { checked: highlightNGSS } }) => {
+				if (highlightNGSS) {
+					if (this.#termsToggleSwitch.checked) {
 						this.turnOffTerms();
 					}
 					this.turnOnNGSS();
@@ -174,5 +181,12 @@ export default class ReadingToggles {
 				}
 			});
 		}
-	};
+
+		if (this.#termsToggleSwitch || this.#ngssToggleSwitch) {
+			window.addEventListener('pageshow', () => {
+				this.#termsToggleSwitch.checked = false;
+				this.#ngssToggleSwitch.checked = false;
+			});
+		}
+	}
 }
