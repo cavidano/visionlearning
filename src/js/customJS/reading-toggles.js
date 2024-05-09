@@ -13,7 +13,7 @@ export default class ReadingToggles {
 
 	#closeButton = `
 		<button class="button button--icon-only" data-close-btn>
-		<span class="icon icon-close" aria-hidden="true"></span>
+			<span class="icon icon-close" aria-hidden="true"></span>
 		</button>
     `;
 
@@ -156,7 +156,8 @@ export default class ReadingToggles {
 	};
 
 	init = () => {
-        // Restore state from localStorage
+
+        // Chat GPT please explain this: Restore state from localStorage
         const ngssState = localStorage.getItem('ngssToggleState') === 'true';
         const termsState = localStorage.getItem('termsToggleState') === 'true';
 
