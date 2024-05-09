@@ -157,7 +157,7 @@ export default class ReadingToggles {
 
 	init = () => {
 
-        // Chat GPT please explain this: Restore state from localStorage
+        // Chat GPT please explain this:Restore state from localStorage
         const ngssState = localStorage.getItem('ngssToggleState') === 'true';
         const termsState = localStorage.getItem('termsToggleState') === 'true';
 
