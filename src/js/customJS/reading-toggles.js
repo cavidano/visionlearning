@@ -96,7 +96,7 @@ export default class ReadingToggles {
 		const term = event.target;
 		const termTitle = term.innerHTML;
 		const termDef = term.getAttribute('data-term-def') || 'Title not found';
-		const termUrl = term.getAttribute('data-term-url') || '/glossary/term.html';
+		const termUrl = term.getAttribute('data-term-url') || '#1';
 
 		const termDefHTML = `
 			<article class="reading-annotation glossary-term" data-term-definition aria-polite="live">
@@ -192,6 +192,7 @@ export default class ReadingToggles {
 				this.#ngssToggleSwitch.checked = false;
 				this.turnOffNGSS();
 				this.turnOffTerms();
+				this.showHelpTexts();
 			});
 		}
 	}
