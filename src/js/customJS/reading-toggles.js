@@ -106,7 +106,7 @@ export default class ReadingToggles {
 				</div>
 				<div class="reading-annotation__body">
 					<p>${termDef}</p>
-					<p><a href="${termUrl}" target="_blank">View in Glossary</a></p>
+					<p><a class="link-new-window" href="${termUrl}">View in Glossary</a></p>
 				</div>
 			</article>
 		`;
