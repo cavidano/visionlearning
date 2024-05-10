@@ -1,7 +1,7 @@
 export default class Tab {
 
     // Private properties
-	
+
     #tabsList = document.querySelectorAll('.tabs');
 
     // Private methods
@@ -34,25 +34,35 @@ export default class Tab {
     // Public methods
 
     activateTab(tab, tabsButtonList, tabsPanelList) {
-    
         this.#deactivateTabs(tabsButtonList, tabsPanelList);
 
         tab.setAttribute('aria-selected', 'true');
-
         let controls = tab.getAttribute('aria-controls');
         let currentTabPanel = document.getElementById(controls);
 
         currentTabPanel.classList.add('shown');
         currentTabPanel.removeAttribute('hidden');
+
+        // Store the active tab index in local storage
+        const tabIndex = tabsButtonList.indexOf(tab);
+        localStorage.setItem('activeTabIndex', tabIndex);
     }
 
     // Public methods
-    
+
     init() {
+            window.addEventListener('pageshow', () => {
+			});
 
         this.#tabsList.forEach((tab) => {
-            const tabsButtonList = tab.querySelectorAll('[role="tab"]');
+            const tabsButtonList = Array.from(tab.querySelectorAll('[role="tab"]'));
             const tabsPanelList = tab.querySelectorAll('[role="tabpanel"]');
+
+            // Attempt to restore the active tab from local storage
+            const activeTabIndex = parseInt(localStorage.getItem('activeTabIndex'), 10);
+            if (!isNaN(activeTabIndex) && tabsButtonList[activeTabIndex]) {
+                this.activateTab(tabsButtonList[activeTabIndex], tabsButtonList, tabsPanelList);
+            }
 
             tabsButtonList.forEach((tabsButton, index) => {
                 tabsButton.addEventListener('click', (event) => {
@@ -82,6 +92,5 @@ export default class Tab {
                 });
             });
         });
-        
     }
 }

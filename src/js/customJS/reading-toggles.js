@@ -106,7 +106,7 @@ export default class ReadingToggles {
 				</div>
 				<div class="reading-annotation__body">
 					<p>${termDef}</p>
-					<p><a href="${termUrl}">View in Glossary</a></p>
+					<p><a href="${termUrl}" class="link-new-window">View in Glossary</a></p>
 				</div>
 			</article>
 		`;
@@ -157,7 +157,6 @@ export default class ReadingToggles {
 
 	init = () => {
 
-        // Chat GPT please explain this:Restore state from localStorage
         const ngssState = localStorage.getItem('ngssToggleState') === 'true';
         const termsState = localStorage.getItem('termsToggleState') === 'true';
 
