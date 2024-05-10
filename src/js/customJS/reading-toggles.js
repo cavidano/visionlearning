@@ -96,7 +96,7 @@ export default class ReadingToggles {
 		const term = event.target;
 		const termTitle = term.innerHTML;
 		const termDef = term.getAttribute('data-term-def') || 'Title not found';
-		const termUrl = term.getAttribute('data-term-url') || '#1';
+		const termUrl = term.getAttribute('data-term-url') || '/glossary/term.html';
 
 		const termDefHTML = `
 			<article class="reading-annotation glossary-term" data-term-definition aria-polite="live">
@@ -106,7 +106,11 @@ export default class ReadingToggles {
 				</div>
 				<div class="reading-annotation__body">
 					<p>${termDef}</p>
-					<p><a class="link-new-window" href="${termUrl}">View in Glossary</a></p>
+					<p>
+						<a class="link-new-window" href="${termUrl}" target="_blank">
+							View in Glossary
+						</a>
+					</p>
 				</div>
 			</article>
 		`;
