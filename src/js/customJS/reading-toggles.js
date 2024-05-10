@@ -13,9 +13,9 @@ export default class ReadingToggles {
 
 	#closeButton = `
 		<button class="button button--icon-only" data-close-btn>
-		<span class="icon icon-close" aria-hidden="true"></span>
+			<span class="icon icon-close" aria-hidden="true"></span>
 		</button>
-    `;
+  `;
 
 	// Private methods
 
@@ -106,7 +106,7 @@ export default class ReadingToggles {
 				</div>
 				<div class="reading-annotation__body">
 					<p>${termDef}</p>
-					<p><a href="${termUrl}">View in Glossary</a></p>
+					<p><a href="${termUrl}" target="_blank">View in Glossary</a></p>
 				</div>
 			</article>
 		`;
@@ -156,53 +156,39 @@ export default class ReadingToggles {
 	};
 
 	init = () => {
-        // Restore state from localStorage
-        const ngssState = localStorage.getItem('ngssToggleState') === 'true';
-        const termsState = localStorage.getItem('termsToggleState') === 'true';
+		if (this.#termsToggleSwitch) {
+			this.#termsToggleSwitch.addEventListener('change', ({ target: { checked: highlightTerms } }) => {
+				if (highlightTerms) {
+					if (this.#ngssToggleSwitch.checked) {
+						this.turnOffNGSS();
+					}
+					this.turnOnTerms();
+				} else {
+					this.turnOffTerms();
+				}
+			});
+		}
 
-        this.#ngssToggleSwitch.checked = ngssState;
-        if (ngssState) {
-            this.turnOnNGSS();
-        } else {
-            this.turnOffNGSS();
-        }
+		if (this.#ngssToggleSwitch) {
+			this.#ngssToggleSwitch.addEventListener('change', ({ target: { checked: highlightNGSS } }) => {
+				if (highlightNGSS) {
+					if (this.#termsToggleSwitch.checked) {
+						this.turnOffTerms();
+					}
+					this.turnOnNGSS();
+				} else {
+					this.turnOffNGSS();
+				}
+			});
+		}
 
-        this.#termsToggleSwitch.checked = termsState;
-        if (termsState) {
-            this.turnOnTerms();
-        } else {
-            this.turnOffTerms();
-        }
-
-        if (this.#termsToggleSwitch) {
-            this.#termsToggleSwitch.addEventListener('change', ({ target: { checked: highlightTerms } }) => {
-                localStorage.setItem('termsToggleState', highlightTerms); // Save state
-                if (highlightTerms) {
-                    if (this.#ngssToggleSwitch.checked) {
-                        this.turnOffNGSS();
-                        localStorage.setItem('ngssToggleState', false); // Ensure NGSS state is updated
-                    }
-                    this.turnOnTerms();
-                } else {
-                    this.turnOffTerms();
-                }
-            });
-        }
-
-        if (this.#ngssToggleSwitch) {
-            this.#ngssToggleSwitch.addEventListener('change', ({ target: { checked: highlightNGSS } }) => {
-                localStorage.setItem('ngssToggleState', highlightNGSS); // Save state
-                if (highlightNGSS) {
-                    if (this.#termsToggleSwitch.checked) {
-                        this.turnOffTerms();
-                        localStorage.setItem('termsToggleState', false); // Ensure terms state is updated
-                    }
-                    this.turnOnNGSS();
-                } else {
-                    this.turnOffNGSS();
-                }
-            });
-        }
-    }
-
+		if (this.#termsToggleSwitch || this.#ngssToggleSwitch) {
+			window.addEventListener('pageshow', () => {
+				this.#termsToggleSwitch.checked = false;
+				this.#ngssToggleSwitch.checked = false;
+				this.turnOffNGSS();
+				this.turnOffTerms();
+			});
+		}
+	}
 }
