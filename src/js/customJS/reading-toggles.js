@@ -135,6 +135,7 @@ export default class ReadingToggles {
 		const ngssDescHTML = document.querySelector('.ngss-annotation');
 		if (ngssDescHTML) {
 			ngssDescHTML.parentNode.removeChild(ngssDescHTML);
+			this.showHelpTexts();
 		}
 	};
 
@@ -156,6 +157,7 @@ export default class ReadingToggles {
 		const termDefHTML = document.querySelector('.glossary-term');
 		if (termDefHTML) {
 			termDefHTML.parentNode.removeChild(termDefHTML);
+			this.showHelpTexts();
 		}
 	};
 
