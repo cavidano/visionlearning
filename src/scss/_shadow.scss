@@ -37,7 +37,9 @@ In this file:
 
     // Box Shadow
 
-    [class*="box-shadow-"] {
+    .box-shadow-1,
+    .box-shadow-2, 
+    .box-shadow-3 {
 
         --shadow-opacity: 0;
 

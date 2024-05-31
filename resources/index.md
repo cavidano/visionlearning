@@ -9,7 +9,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem
 
 ## Module Figures
 
-<ul class="grid gap-4 margin-y-4">
+<ul class="grid gap-2 margin-y-4">
 
 {% for doc in site.module-figures %}
 

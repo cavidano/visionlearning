@@ -16,6 +16,8 @@ In this file:
 @use "../breakpoint";
 @use "../customSCSS/color";
 @use '../icon';
+@use '../table';
+@use '../shadow';
 
 //////////////////////////////////////////////
 // B. Variables
@@ -35,6 +37,13 @@ In this file:
 
     .figure {
         margin-block: var(--figure-margin-y);
+
+        container-type: inline-size;
+
+        figure span.credit {
+            filter: opacity(75%);
+            display: block;
+        }
 
         &:not([class*="--math"]) {
             display: flex;
@@ -62,10 +71,18 @@ In this file:
 
         }
 
-        figure span.credit {
-            filter: opacity(75%);
-            display: block;
+        table {
+            --table-cell-padding-x: 1cqi !important;
+            border-collapse: collapse;
+        
+            @extend .table--divider;
+
+            @extend .box-shadow-1;
+
+            font-size: 2.125cqi;
         }
+
+
     }
 
     .figure--right {

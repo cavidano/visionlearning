@@ -45,6 +45,11 @@ In this file:
     --transition-metal-tint: #641B9826;
 
     --separator-size: 3cqi;
+
+    // Carl to update
+
+    --light-green: hsla(88, 50%, 53%, 0.185);
+    --light-red: hsla(0, 60%, 50%, 0.185);
 }
 
 :where([data-group]) {
@@ -389,7 +394,6 @@ In this file:
     grid-area: connector;
 
     position: relative;
-
 }
 
 [class*="-connector"] {
@@ -422,4 +426,30 @@ In this file:
         100% 100%,
         0% calc(44% - var(--gap))
     );
+}
+
+// Arrow
+
+.increasing-energy-arrow {
+    position: relative;
+    width: 100%;
+    height: 16px;
+    background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4, #FFD194, #FF647C);
+    
+}
+
+.increasing-energy-arrow::after {
+    content: '';
+    position: absolute;
+    outline: 1px solid transparent;
+    transform: translate(50%, -50%);
+    inset-block-start: 50%;
+    inset-inline-start: auto;
+    inset-inline-end:0;
+    inset-block-end: 0;
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid #FF647C; /* arrowhead color */
 }

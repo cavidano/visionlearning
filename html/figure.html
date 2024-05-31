@@ -15,23 +15,150 @@
         <!-- Natura11y Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning@main/dist/icons/visionlearning-icons.css">
 
+        <style>
+        
+            .arrow {
+                position: relative;
+                width: 100%;
+                height: 16px;
+                background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4, #FFD194, #FF647C);
+                
+            }
+
+            .arrow::after {
+                content: '';
+                position: absolute;
+                outline: 1px solid transparent;
+                transform: translate(50%, -50%);
+                inset-block-start: 50%;
+                inset-inline-start: auto;
+                inset-inline-end:0;
+                inset-block-end: 0;
+                width: 0;
+                height: 0;
+                border-top: 25px solid transparent;
+                border-bottom: 25px solid transparent;
+                border-left: 25px solid #FF647C; /* arrowhead color */
+            }
+        </style>
+
     </head>
 
     <body> 
 
         <main>
 
-            <div class="periodic-table">
-            <button aria-label="Hydrogen, atomic number 1" style="grid-area: hydrogen;">
-                <span>H</span>
-                <p>1</p>
-                <p>1.008</p>
-            </button>
-            <!-- More elements -->
+            <div class="container narrow margin-y-5">
+            
+                <div class="figure">
+                    <table class="table">
+                        <caption>Presence of subshells and maximum electron capacity for electron shells</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Electron shell</th>
+                                <th scope="col">Presence of an s-subshell?</th>
+                                <th scope="col">Presence of a p-subshell?</th>
+                                <th scope="col">Presence of a d-subshell?</th>
+                                <th scope="col">Maximum electron capacity for shell</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1<sup>st</sup> electron shell</td>
+                                <td style="background-color: var(--light-green)">Yes (up to 2 electrons)</td>
+                                <td style="background-color: var(--light-red)">No (0 electrons)</td>
+                                <td style="background-color: var(--light-red)">No (0 electrons)</td>
+                                <td>2 electrons total (2+0)</td>
+                            </tr>
+                            <tr>
+                                <td>2<sup>nd</sup> electron shell</td>
+                                <td style="background-color: var(--light-green)">Yes (up to 2 electrons)</td>
+                                <td style="background-color: var(--light-green)">Yes (up to 6 electrons)</td>
+                                <td style="background-color: var(--light-red)">No (0 electrons)</td>
+                                <td>8 electrons total (2+6)</td>
+                            </tr>
+                            <tr>
+                                <td>3<sup>rd</sup> electron shell</td>
+                                <td style="background-color: var(--light-green)">Yes (up to 2 electrons)</td>
+                                <td style="background-color: var(--light-green)">Yes (up to 6 electrons)</td>
+                                <td style="background-color: var(--light-green)">Yes (up to 10 electrons)</td>
+                                <td>18 electrons total (2+6+10)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div class="container narrow margin-y-5">
+            
+                <div class="figure text-align-center">
+
+                    <table class="table">
+                        <caption id="table-caption">Table 3: s-type, p-type, and d-type subshells and their different electron capacities</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Subshell types</th>
+                                <th scope="col"># of electron orbitals</th>
+                                <th scope="col">Maximum electron capacity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>s-type</td>
+                                <td>1</td>
+                                <td>2</td>
+
+                            </tr>
+                            <tr>
+                                <td>p-type</td>
+                                <td>3</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>d-type</td>
+                                <td>5</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div class="container narrow margin-y-5">
+            
+                <div class="figure text-align-center">
+                    <table  class="table" aria-labelledby="table-caption">
+                        <thead>
+                            <tr>
+                                <th colspan="5">Increasing energy level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td colspan="5">
+                                <div class="arrow" aria-hidden="true"></div>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>1s</td>
+                                <td>2s</td>
+                                <td>2p</td>
+                                <td>3s</td>
+                                <td>3p</td>
+                            </tr>
+                        </tbody>
+                        <caption id="table-caption">Figure 10: The arrow indicates increasing energy levels of the subshells, which indicates the order in which these subshells will fill with electrons.</caption>
+                    </table>
+                </div>
+                
             </div>
 
         </main>
 
     </body>
+
+
 
 </html>
