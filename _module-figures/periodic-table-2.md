@@ -5,7 +5,7 @@ title: 'Module Figures: Periodic Table II'
 
 ## Periodic Table II
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -24,7 +24,7 @@ title: 'Module Figures: Periodic Table II'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -43,7 +43,7 @@ title: 'Module Figures: Periodic Table II'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -62,7 +62,7 @@ title: 'Module Figures: Periodic Table II'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -83,7 +83,7 @@ title: 'Module Figures: Periodic Table II'
 
 For a three-electron atom, which is lithium, we must refer again to figure 3. The next step up energy-wise, from 1s orbital is 2s. Therefore, we would write lithium’s electron configuration like this:
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <math xmlns='http://www.w3.org/1998/Math/MathML'>
             <mi>Li</mi> 
@@ -97,7 +97,7 @@ For a three-electron atom, which is lithium, we must refer again to figure 3. Th
 Let’s try one of the elements of life – carbon, hydrogen, nitrogen, oxygen and sulfur – from the HIV protease inhibitor in Figure 3.
 Carbon’s 6 electrons would partially fill through the 2p orbitals. 
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi>C</mi>
@@ -113,7 +113,7 @@ Carbon’s 6 electrons would partially fill through the 2p orbitals.
 Oxygen’s 8 electrons would also fill through the 2p orbitals also, but run two electrons short of a full shell.
 
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
         <mi>O</mi> 
@@ -127,7 +127,7 @@ Oxygen’s 8 electrons would also fill through the 2p orbitals also, but run two
 
 Sulfur has 16 electrons. So according to Figure 4, the last electrons spill into the 3p orbitals.
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
             <mi>S</mi>
@@ -143,7 +143,7 @@ Sulfur has 16 electrons. So according to Figure 4, the last electrons spill into
 
 One could continue to predict electron configurations by counting up through electrons. But wait, there’s an easier way. You can use your cheat sheet – the periodic table.
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -162,7 +162,7 @@ One could continue to predict electron configurations by counting up through ele
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -181,7 +181,7 @@ One could continue to predict electron configurations by counting up through ele
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"

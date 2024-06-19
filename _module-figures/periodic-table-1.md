@@ -3,7 +3,7 @@ layout: docs
 title: 'Module Figures: Periodic Table I'
 ---
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -22,7 +22,7 @@ title: 'Module Figures: Periodic Table I'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
             <img
                 src="{{ site.url}}/images/module-figures/52-b.svg"
@@ -36,7 +36,7 @@ title: 'Module Figures: Periodic Table I'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
             <img
                 src="{{ site.url}}/images/module-figures/52-c.svg"
@@ -50,7 +50,7 @@ title: 'Module Figures: Periodic Table I'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
   <table class="table" aria-describedby="configDescription">
     <caption id="configDescription">Element Configuration Shorthand</caption>
     <thead>

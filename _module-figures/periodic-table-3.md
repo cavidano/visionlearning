@@ -5,7 +5,7 @@ title: 'Module Figures: Periodic Table III'
 
 ## Periodic Table III
 
-<div class="figure text-align-center">
+<div class="figure">
     <figure>
         <button
             class="lightbox-button lightbox-button--icon"
@@ -24,8 +24,8 @@ title: 'Module Figures: Periodic Table III'
     </figure>
 </div>
 
-<div class="figure text-align-center">
-    <table class="table">
+<div class="figure">
+    <table class="table text-align-center">
         <caption>Table 1: Table shows the electron capacity of the three electron shells nearest the nucleus.</caption>
         <thead>
             <tr>
@@ -89,7 +89,7 @@ title: 'Module Figures: Periodic Table III'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <table class="table">
         <caption>Presence of subshells and maximum electron capacity for electron shells</caption>
         <thead>
@@ -127,7 +127,7 @@ title: 'Module Figures: Periodic Table III'
     </table>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <table class="table">
         <caption id="table-caption">Table 3: s-type, p-type, and d-type subshells and their different electron capacities</caption>
         <thead>
@@ -233,7 +233,7 @@ title: 'Module Figures: Periodic Table III'
     </figure>
 </div>
 
-<div class="figure text-align-center">
+<div class="figure">
     <table  class="table" aria-labelledby="table-caption">
         <thead>
             <tr>

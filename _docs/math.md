@@ -61,7 +61,7 @@ To represent mathematical equations or formulas in a visually appealing manner o
 {% include code-example.html content=fig_1 %}
 
 ## Inline Math
-To style a quote specifically for use within the module introduction, add the blockquote class to the `<blockquote>` element.
+The MathML can also be used to represent mathematical equations or formulas inline with the text. This is particularly useful when you want to include a mathematical expression within a sentence or paragraph.
 
 {% capture fig_2 %}
 

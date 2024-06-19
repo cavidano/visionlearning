@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathJax SVG Example</title>
+    <style>
+        .math-container {
+            max-width: 600px;
+            height: auto;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+    <script>
+        MathJax = {
+            //
+            //  Load TeX input and SVG output
+            //
+            loader: {load: ['input/tex', 'output/svg']},
+            //
+            //  When page is ready, render the math in the document
+            //
+            startup: {
+                ready() {
+                    MathJax.startup.defaultReady();
+                    MathJax.startup.document.render();
+                }
+            },
+            //
+            //  Options for SVG output
+            //
+            svg: {
+                scale: 1, // global scaling factor for all expressions
+                minScale: .5, // smallest scaling factor allowed
+                exFactor: .5, // default size of ex in em units
+                displayAlign: 'center', // alignment of displayed equations (left, center, right)
+                displayIndent: '0', // indentation for displayed equations
+                fontCache: 'global', // or 'none' or 'local'
+                localID: null, // ID to use for local font cache (for single equations)
+                internalSpeechTitles: true, // insert <title> tags with speech content
+                titleID: 0 // initial ID number to use for aria-labelledby titles
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+    <div>
+        <p>This is a paragraph with some inline math: \( E = mc^2 \)</p>
+        <figure>
+            <p>This is a figure with displayed math:</p>
+            \[
+            \int_0^\infty e^{-x^2} \, dx = \frac{\sqrt{\pi}}{2}
+            \]
+        </figure>
+    </div>
+</body>
+</html>

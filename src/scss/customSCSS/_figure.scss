@@ -38,6 +38,7 @@ In this file:
     .figure {
         margin-block: var(--figure-margin-y);
 
+        // background-color: red !important;
         container-type: inline-size;
 
         figure span.credit {
@@ -71,6 +72,9 @@ In this file:
 
         }
 
+        
+
+
         table {
             --table-cell-padding-x: 1cqi !important;
             border-collapse: collapse;
@@ -84,6 +88,10 @@ In this file:
 
 
     }
+    
+    // .figure:has(math) math {
+    //         font-size: 3cqi;
+    // }
 
     .figure--right {
         max-width: 260px;
