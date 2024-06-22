@@ -6,12 +6,11 @@
 
 	<body>
 
+
+		{% include global-header.html %}
+
 		{{ content }}
-        
-		<script src="{{ site.url }}/dist/js/visionlearning.js"></script>
-
-        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-
+		
+		<script src="{{ site.url }}/dist/js/visionlearning.js" defer></script>
 	</body>
-
 </html>

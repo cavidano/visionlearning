@@ -366,6 +366,7 @@ In this file:
             padding: 8cqi;
             color: var(--text-color);
             font-size: 18cqi;
+            display: none;
         }
 
         &::before {
@@ -378,6 +379,38 @@ In this file:
             content: attr(data-group-number);
             inset-block-start: 0;
             transform: translateY(-100%);
+        }
+
+        &:is(
+            [data-atomic-number="1"], 
+            [data-atomic-number="3"], 
+            [data-atomic-number="11"], 
+            [data-atomic-number="19"], 
+            [data-atomic-number="37"], 
+            [data-atomic-number="55"], 
+            [data-atomic-number="87"]
+        )::before,
+        &:is(
+            [data-atomic-number="1"],
+            [data-atomic-number="4"],
+            [data-atomic-number="21"],
+            [data-atomic-number="22"],
+            [data-atomic-number="23"],
+            [data-atomic-number="24"],
+            [data-atomic-number="25"],
+            [data-atomic-number="26"],
+            [data-atomic-number="27"],
+            [data-atomic-number="28"],
+            [data-atomic-number="29"],
+            [data-atomic-number="30"],
+            [data-atomic-number="5"],
+            [data-atomic-number="6"],
+            [data-atomic-number="7"],
+            [data-atomic-number="8"],
+            [data-atomic-number="9"],
+            [data-atomic-number="2"]
+        )::after {
+            display: inline-flex;
         }
     }
 }
