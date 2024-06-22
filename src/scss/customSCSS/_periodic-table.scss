@@ -135,7 +135,11 @@ In this file:
     min-width: 1000px;
     max-width: 1440px;
 
+    max-width: var(--wide-width);
+
     margin-inline: auto;
+
+    padding-top: 2.5cqi !important;
 
     gap: var(--gap);
     
