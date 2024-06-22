@@ -10,9 +10,9 @@ title: 'Module Figures: Periodic Table II'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-a-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-1-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-a.jpg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-1.jpg"
                 alt=""
             />
         </button>
@@ -29,9 +29,9 @@ title: 'Module Figures: Periodic Table II'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-b-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-2-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-b.jpg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-2.jpg"
                 alt=""
             />
         </button>
@@ -48,9 +48,9 @@ title: 'Module Figures: Periodic Table II'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-c-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-3-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-c.jpg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-3.jpg"
                 alt=""
             />
         </button>
@@ -67,9 +67,9 @@ title: 'Module Figures: Periodic Table II'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-d-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-4-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-d.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-4.svg"
                 alt=""
             />
         </button>
@@ -148,9 +148,9 @@ One could continue to predict electron configurations by counting up through ele
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-e-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-6-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-e.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-6.svg"
                 alt=""
             />
         </button>
@@ -167,9 +167,9 @@ One could continue to predict electron configurations by counting up through ele
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-f-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-7-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-f.jpg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-7.jpg"
                 alt=""
             />
         </button>
@@ -186,15 +186,15 @@ One could continue to predict electron configurations by counting up through ele
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-g-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-8-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-g.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-II-8.svg"
                 alt=""
             />
         </button>
         <figcaption>
             <p>
-                Figure 7: Periodic table by Mendeleev, 1871 which shows Mendeleev’s groupings of similar elements, most of which turned out to have similar valence shell electron configurations.
+                Figure 8: The image shows the different subshell blocks on the periodic table.
             </p>
         </figcaption>
     </figure>

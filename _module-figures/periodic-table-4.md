@@ -8,9 +8,9 @@ title: 'Module Figures: Periodic Table IV'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-1-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-1-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-1.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-1.svg"
                 alt=""
             />
         </button>
@@ -27,9 +27,9 @@ title: 'Module Figures: Periodic Table IV'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-3-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-3-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-3.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-3.svg"
                 alt=""
             />
         </button>
@@ -100,9 +100,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-4-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-4-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-4.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-4.svg"
                 alt=""
             />
         </button>
@@ -119,9 +119,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-5-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-5-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-5.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-5.svg"
                 alt=""
             />
         </button>
@@ -138,9 +138,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-7-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-7-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-7.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-7.svg"
                 alt=""
             />
         </button>
@@ -157,9 +157,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-9-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-9-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-9.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-9.svg"
                 alt=""
             />
         </button>
@@ -176,9 +176,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-10-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-10-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-10.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-10.svg"
                 alt=""
             />
         </button>
@@ -197,9 +197,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-12-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-12-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-12.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-12.svg"
                 alt=""
             />
         </button>
@@ -216,9 +216,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-14-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-14-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-14.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-14.svg"
                 alt=""
             />
         </button>
@@ -235,9 +235,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-l-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-l-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-l.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-l.svg"
                 alt=""
             />
         </button>
@@ -254,9 +254,9 @@ you’re most likely to find electrons. Besides s-orbitals, there’s also p, d,
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-p-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-p-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-IV-p.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-IV-p.svg"
                 alt=""
             />
         </button>

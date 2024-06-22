@@ -8,9 +8,9 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-1-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-1-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-1.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-1.svg"
                 alt=""
             />
         </button>
@@ -27,9 +27,9 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-2-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-2-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-2.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-2.svg"
                 alt=""
             />
         </button>
@@ -46,9 +46,9 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-2-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-3-LG.jpg">
             <img
-                src="https://placehold.co/896x504"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-3.svg"
                 alt=""
             />
         </button>
@@ -66,9 +66,9 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-4-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-4-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-4.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-4.svg"
                 alt=""
             />
         </button>
@@ -87,9 +87,9 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-5-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-5-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-5.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-5.svg"
                 alt=""
             />
         </button>
@@ -106,9 +106,9 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-8-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-8-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-8.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-8.svg"
                 alt=""
             />
         </button>
@@ -125,9 +125,9 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-9-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-9-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-9.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-9.svg"
                 alt=""
             />
         </button>
@@ -144,15 +144,15 @@ title: 'Module Figures: Periodic Table V'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-10-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-10-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/Periodic-Table-V-10.jpg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-Table-V-10.jpg"
                 alt=""
             />
         </button>
         <figcaption>
             <p>
-                Figure 9: Sodium (Na), potassium (K), and rubidium (Rb) are shown on the periodic table alongside their ionization energies of 496, 419, and 403 kJ/mole, respectively.
+                Figure 10: A representation of the periodic table in which higher columns indicate more negative electron affinity values.
             </p>
         </figcaption>
     </figure>

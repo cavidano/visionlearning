@@ -10,9 +10,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-b-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-2-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-b.jpg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-2.jpg"
                 alt=""
             />
         </button>
@@ -56,9 +56,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-c-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-3-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-c.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-3.svg"
                 alt=""
             />
         </button>
@@ -75,9 +75,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-d-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-4-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-d.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-4.svg"
                 alt=""
             />
         </button>
@@ -162,9 +162,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-f-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-6-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-f.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-6.svg"
                 alt=""
             />
         </button>
@@ -181,9 +181,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-g-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-7-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-g.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-7.svg"
                 alt=""
             />
         </button>
@@ -200,9 +200,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-h-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-8-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-h.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-8.svg"
                 alt=""
             />
         </button>
@@ -219,9 +219,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-i-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-9-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-i.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-9.svg"
                 alt=""
             />
         </button>
@@ -262,9 +262,9 @@ title: 'Module Figures: Periodic Table III'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-j-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-12-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-j.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-III-12.svg"
                 alt=""
             />
         </button>

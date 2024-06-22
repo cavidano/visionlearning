@@ -8,9 +8,9 @@ title: 'Module Figures: Periodic Table I'
         <button
             class="lightbox-button lightbox-button--icon"
             data-lightbox="image"
-            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/52-a-LG.jpg">
+            data-lightbox-src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-I-1-LG.jpg">
             <img
-                src="{{ site.url}}/images/module-figures/periodic-table/52-a.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-I-1.svg"
                 alt=""
             />
         </button>
@@ -25,7 +25,7 @@ title: 'Module Figures: Periodic Table I'
 <div class="figure">
     <figure>
             <img
-                src="{{ site.url}}/images/module-figures/52-b.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-I-2.svg"
                 alt=""
             />
         <figcaption>
@@ -39,7 +39,7 @@ title: 'Module Figures: Periodic Table I'
 <div class="figure">
     <figure>
             <img
-                src="{{ site.url}}/images/module-figures/52-c.svg"
+                src="{{ site.url}}/images/module-figures/periodic-table/periodic-table-I-3.svg"
                 alt=""
             />
         <figcaption>
