@@ -1,0 +1,145 @@
+---
+layout: periodic-table
+title: Periodic Table
+---
+
+<main class="margin-y-4">
+
+    <div class="container table-scroll">
+
+        <small class="table-scroll__help">
+            Scroll side to side to see whole table
+        </small>
+            
+        <div class="table-scroll__container">
+
+            <div class="periodic-table table" id="periodic-table-of-elements">
+
+                <div class="periodic-table__key-element">
+
+                    <div
+                        class="periodic-table__element"
+                        data-group="halogen"
+                    >
+                        <p class="atomic-number">
+                            17
+                            <span class="periodic-table__key__item">
+                                Atomic Number
+                            </span>
+                        </p>
+                        <p class="symbol">
+                            Cl
+                            <span class="periodic-table__key__item">
+                                Symbol
+                            </span>
+                            </p>
+                        <p class="atomic-mass">
+                            35.45
+                            <span class="periodic-table__key__item">
+                                Atomic Mass
+                            </span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <ul class="periodic-table__key-color">
+
+                    <li data-color="alkali-metals">
+                        Alkali Metals
+                    </li>
+                    <li data-color="alkaline-earth-metals">
+                        Alkaline Earth Metals
+                    </li>
+                    <li data-color="transition-metals">
+                        Transition Metals
+                    </li> 
+                    <li data-color="post-transition-metals">
+                        Post-Transition Metals
+                    </li>
+                    <li data-color="metalloids">
+                        Metalloids
+                    </li>
+                    <li data-color="nonmetals">
+                        Reactive Nonmetals
+                    </li>
+                    <li data-color="halogens">
+                        Halogens
+                    </li>
+                    <li data-color="noble-gases">
+                        Noble Gases
+                    </li>
+                    <li data-color="lanthanides">
+                        Lanthanides
+                    </li>
+                    <li data-color="actinides">
+                        Actinides 
+                    </li>
+                </ul>
+                
+                <div class="periodic-table__connectors" aria-hidden="true">
+                    <div class="lanthanides-connector" ></div>
+                    <div class="actinides-connector" ></div>
+                </div>
+
+                <div class="separator" aria-hidden="true"></div>
+
+                <!--
+                    Element Buttons will be inserted here:
+
+                    <button 
+                        class="periodic-table__element"
+                        style="grid-area: Es;"
+                        title="Einsteinium"
+                        data-group="actinide"
+                        data-modal-open="modal-element-detail"
+                    >
+                        <p class="atomic-number">99</p>
+                        <p class="symbol">Es</p>
+                        <p class="atomic-mass">252.08</p>
+                        <p class="chemical-group">Actinide</p>
+                    </button>
+                -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div class="container wide">
+    <h1>
+        Periodic Table of Elements
+    </h1>
+</div>
+
+<!-- Modal dialog -->
+
+<div
+    class="modal modal--scroll-all padding-x-2 padding-y-4"
+    id="modal-element-detail"
+    role="dialog"
+    data-modal-close-outside="true"
+>
+    <div
+        class="modal__content narrow box-shadow-3"
+        aria-labelledby="modal-element-title"
+    >
+    <header class="modal__content__head">
+        <h2 class="h6" id="modal-element-title">
+            Element Properties
+        </h2>
+        <button class="button button--icon-only" data-modal-close>
+            <p class="icon icon-close" aria-hidden="true"></p>
+        </button>
+    </header>
+
+    <div class="modal__content__container">
+        <!-- Modal Content will be inserted here -->
+    </div>
+    
+    </div>
+</div>
