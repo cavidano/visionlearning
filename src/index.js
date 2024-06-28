@@ -35,58 +35,61 @@ import BackToTop from './js/customJS/back-to-top';
 // C. Class Instantiation
 //////////////////////////////////////////////
 
-const alertDismissable = new AlertDismissable();
-alertDismissable.init();
+document.addEventListener('DOMContentLoaded', () => {
 
-const button = new Button();
-button.init();
+    const alertDismissable = new AlertDismissable();
+    alertDismissable.init();
 
-const collapse = new Collapse();
-collapse.init();
+    const button = new Button();
+    button.init();
 
-const formInput = new FormInput();
-formInput.init();
+    const collapse = new Collapse();
+    collapse.init();
 
-const formSubmission = new FormSubmission();
-formSubmission.init();
+    const formInput = new FormInput();
+    formInput.init();
 
-const formFileUpload = new FormFileUpload();
-formFileUpload.init();
+    const formSubmission = new FormSubmission();
+    formSubmission.init();
 
-const lightbox = new Lightbox();
-lightbox.init();
+    const formFileUpload = new FormFileUpload();
+    formFileUpload.init();
 
-const navigation = new Navigation();
-navigation.init();
+    const lightbox = new Lightbox();
+    lightbox.init();
 
-const table = new Table();
-table.init();
+    const navigation = new Navigation();
+    navigation.init();
 
-const tab = new Tab();
-tab.init();
+    const table = new Table();
+    table.init();
 
-const accordion = new Accordion();
-accordion.init();
+    const tab = new Tab();
+    tab.init();
 
-// Custom JS Modules
+    const accordion = new Accordion();
+    accordion.init();
 
-const audioPlayer = new AudioPlayer();
-audioPlayer.init();
+    // Custom JS Modules
 
-const anchorNav = new AnchorNav();
-anchorNav.init();
+    const audioPlayer = new AudioPlayer();
+    audioPlayer.init();
 
-const compCheck = new CompCheck();
-compCheck.init();
+    const anchorNav = new AnchorNav();
+    anchorNav.init();
 
-const layout = new Layout();
-layout.init();
+    const compCheck = new CompCheck();
+    compCheck.init();
 
-const modal = new Modal();
-modal.init();
+    const layout = new Layout();
+    layout.init();
 
-const readingToggles = new ReadingToggles();
-readingToggles.init();
+    const modal = new Modal();
+    modal.init();
 
-const backToTop = new BackToTop();
-backToTop.init();
+    const readingToggles = new ReadingToggles();
+    readingToggles.init();
+
+    const backToTop = new BackToTop();
+    backToTop.init();
+});
