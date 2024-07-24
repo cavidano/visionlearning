@@ -13,45 +13,10 @@ To represent mathematical equations or formulas in a visually appealing manner o
 
 {% capture fig_1 %}
 
-<div class="figure figure--math">
+<div class="figure">
 
 	<figure>
-
-		<math xmlns="http://www.w3.org/1998/Math/MathML">
-			<msub>
-				<mi>C</mi>
-				<mn>6</mn>
-			</msub>
-			<msub>
-				<mi>H</mi>
-				<mn>12</mn>
-			</msub>
-			<msub>
-				<mi>O</mi>
-				<mn>6</mn>
-			</msub>
-			<mo>+</mo>
-			<mn>6</mn>
-			<msub>
-				<mi>O</mi>
-				<mn>2</mn>
-			</msub>
-			<mo>+</mo>
-			<mn>6</mn>
-			<msub>
-				<mi>H</mi>
-				<mn>2</mn>
-			</msub>
-			<mi>O</mi>
-			<mo>+</mo>
-			<mi>e</mi>
-			<mi>n</mi>
-			<mi>e</mi>
-			<mi>r</mi>
-			<mi>g</mi>
-			<mi>y</mi>
-		</math>
-
+		$$C_6H_{12}O_6 + 6O_2 + 6H_2O + \text{energy}$$
 	</figure>
 
 </div>
@@ -66,8 +31,10 @@ The MathML can also be used to represent mathematical equations or formulas inli
 {% capture fig_2 %}
 
 <p>
-	An exponential equation is an equation in which a variable occurs in the exponent. For example, <math><mi>y</mi><mo>=</mo><msup><mn>5</mn><mi>x</mi></msup></math> is an exponential equation since the exponent is the variable x (also said as "5 to the power of x"), while <math><mi>y</mi><mo>=</mo><msup><mn>5</mn><mi>x</mi></msup></math> is not an exponential equation since the exponent is 5 and not a variable. We often write exponential equations as <math><mi>y</mi><mo>=</mo><mi>a</mi><msup><mi>b</mi><mi>x</mi></msup></math>, where <em>a</em> and <em>a</em> are constants (numbers that don't change value) and <em>x</em> and <em>y</em> are variables.
+    An exponential equation is an equation in which a variable occurs in the exponent. For example, $$y=5^x$$ is an exponential equation since the exponent is the variable x (also said as "5 to the power of x"), while $$y=5^5$$ is not an exponential equation since the exponent is 5 and not a variable. We often write exponential equations as $$y=a b^x$$, where <em>a</em> and <em>b</em> are constants (numbers that don't change value) and <em>x</em> and <em>y</em> are variables.
 </p>
+
+
 
 {% endcapture %}
 

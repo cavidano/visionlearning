@@ -27,7 +27,6 @@ const devPages = {
     'Tab': 'tab',
     'Search': 'search',
     'Quiz': 'quiz',
-    // 
     'PeriodicTable': 'periodic-table'
 }
 
