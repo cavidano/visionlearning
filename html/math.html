@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
 
 <head>
@@ -20,10 +19,11 @@
             height: auto;
         }
 
-        /**/ svg {
+        svg {
             max-width: 100%;
             height: auto;
-        } 
+            background-color: aliceblue;
+        }
     </style>
 </head>
 
@@ -52,116 +52,28 @@
                     </p>
 
                     <div class="figure">
-
                         <figure>
-                            <img src="./images/module-figures/61-a.svg" height="72" alt="" />
+                            <img src="./images/module-figures/61-a.svg" height="72" alt="Illustration of a complex equation">
                         </figure>
-
                     </div>
 
                     <p>
-                        Example of a MathML figure using MathJax.
+                        Example of a LaTeX display figure using MathJax.
                     </p>
 
-                    <div class="figure figure--math">
-
+                    <div class="figure">
                         <figure>
-
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <msub>
-                                    <mi>C</mi>
-                                    <mn>6</mn>
-                                </msub>
-                                <msub>
-                                    <mi>H</mi>
-                                    <mn>12</mn>
-                                </msub>
-                                <msub>
-                                    <mi>O</mi>
-                                    <mn>6</mn>
-                                </msub>
-                                <mo>+</mo>
-                                <mn>6</mn>
-                                <msub>
-                                    <mi>O</mi>
-                                    <mn>2</mn>
-                                </msub>
-                                <mo>+</mo>
-                                <mn>6</mn>
-                                <msub>
-                                    <mi>H</mi>
-                                    <mn>2</mn>
-                                </msub>
-                                <mi>O</mi>
-                                <mo>+</mo>
-                                <mi>e</mi>
-                                <mi>n</mi>
-                                <mi>e</mi>
-                                <mi>r</mi>
-                                <mi>g</mi>
-                                <mi>y</mi>
-                            </math>
-
+                            $$C_6H_{12}O_6 + 6O_2 + 6H_2O + \text{energy}$$
                         </figure>
-
                     </div>
-
-                    <p>
-                        Example of a single SVG figure with no caption or lightbox functionality.
-                    </p>
-
-                    <div class="figure figure--math">
-
+                    <div class="figure">
                         <figure>
-
-                            <math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mn>6</mn>
-                                <mi>C</mi>
-                                <msub>
-                                    <mi>O</mi>
-                                    <mn>2</mn>
-                                </msub>
-                                <mo>+</mo>
-                                <mn>6</mn>
-                                <msub>
-                                    <mi>H</mi>
-                                    <mn>2</mn>
-                                </msub>
-                                <mi>O</mi>
-                                <mo>+</mo>
-                                <mi>e</mi>
-                                <mi>n</mi>
-                                <mi>e</mi>
-                                <mi>r</mi>
-                                <mi>g</mi>
-                                <mi>y</mi>
-                                <mo>&#x2192;</mo>
-                                <msub>
-                                    <mi>C</mi>
-                                    <mn>6</mn>
-                                </msub>
-                                <msub>
-                                    <mi>H</mi>
-                                    <mn>12</mn>
-                                </msub>
-                                <msub>
-                                    <mi>O</mi>
-                                    <mn>6</mn>
-                                </msub>
-                                <mo>+</mo>
-                                <mn>6</mn>
-                                <msub>
-                                    <mi>O</mi>
-                                    <mn>2</mn>
-                                </msub>
-                            </math>
-
+                            $$6CO_2 + 6H_2O + \text{energy} \rightarrow C_6H_{12}O_6 + 6O_2$$
                         </figure>
-
                     </div>
-
+                    
                     <p>
-                        An exponential equation is an equation in which a variable occurs in the exponent. For example, <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mn>5</mn><mi>x</mi></msup></math> is an exponential equation since the exponent is the variable x (also said as "5 to the power of x"), while <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><msup><mn>5</mn><mi>x</mi></msup></math> is not an exponential equation since the exponent is 5 and not a variable. We often write exponential equations as <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>=</mo><mi>a</mi><msup><mi>b</mi><mi>x</mi></msup></math>, where <em>a</em> and <em>a</em> are constants (numbers that don't change value) and <em>x</em> and <em>y</em> are variables.
+                        An exponential equation is an equation in which a variable occurs in the exponent. For example, \( y = 5^x \) is an exponential equation since the exponent is the variable \(x\) (also said as "5 to the power of \(x\)"), while \( y = 5^x \) is not an exponential equation since the exponent is 5 and not a variable. We often write exponential equations as \( y = ab^x \), where \(a\) and \(b\) are constants (numbers that don't change value) and \(x\) and \(y\) are variables.
                     </p>
 
                 </div>
@@ -173,24 +85,11 @@
                 <div class="container narrow">
 
                     <p>
-                        When the remains arrive in your lab, you photograph and measure the bones. From the shape of the pelvis, you can quickly tell that the remains most likely belong to an adult male. You note that the femur is 18.7 inches long. Bone length, especially the length of long bones like the femur, is related to an individual’s overall height. Simply put, a tall person will usually have long legs, and a short person generally has shorter legs. This relationship is so strong that you can predict an individual’s height if you know the length of one bone in the leg (Figure 1). You plug your measurement into an equation used to estimate the overall height of an adult male based on femur length:
+                        When the remains arrive in your lab, you photograph and measure the bones. From the shape of the pelvis, you can quickly tell that the remains most likely belong to an adult male. You note that the femur is 18.7 inches long. Bone length, especially the length of long bones like the femur, is related to an individual's overall height. Simply put, a tall person will usually have long legs, and a short person generally has shorter legs. This relationship is so strong that you can predict an individual's height if you know the length of one bone in the leg (Figure 1). You plug your measurement into an equation used to estimate the overall height of an adult male based on femur length:
                     </p>
 
                     <p>
-                        <math xmlns="http://www.w3.org/1998/Math/MathML">
-                            <mn>H</mn>
-                            <mo>=</mo>
-                            <mn>1</mn>
-                            <mo>.</mo>
-                            <mn>880</mn>
-                            <mo>(</mo>
-                            <mi>L</mi>
-                            <mo>)</mo>
-                            <mo>+</mo>
-                            <mn>32</mn>
-                            <mo>.</mo>
-                            <mn>010</mn>
-                        </math>
+                        $$ H = 1.880(L) + 32.010 $$
                     </p>
 
                     <p>
@@ -198,23 +97,7 @@
                     </p>
 
                     <p>
-                        <math xmlns="http://www.w3.org/1998/Math/MathML">
-                            <mn>H</mn>
-                            <mo>=</mo>
-                            <mo>(</mo>
-                            <mn>1</mn>
-                            <mo>.</mo>
-                            <mn>880</mn>
-                            <mo>&#xD7;</mo>
-                            <mn>18</mn>
-                            <mo>.</mo>
-                            <mn>7</mn>
-                            <mo>)</mo>
-                            <mo>+</mo>
-                            <mn>32</mn>
-                            <mo>.</mo>
-                            <mn>010</mn>
-                        </math>
+                        $$ H = (1.880 \times 18.7) + 32.010 $$
                     </p>
 
                 </div>
@@ -225,12 +108,19 @@
 
     </main>
 
+    <!-- MathJax Script -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js" async></script>
     <script>
-        MathJax = {
-            loader: {load: ['input/tex', 'input/mml', 'output/svg', 'ui/menu']},
+        window.MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']],
+                processEscapes: true
+            },
+            options: {
+                renderActions: {
+                    assistiveMML: ['assistive-mml', MathJax._.a11y.A11yUtil.assistiveMML]
+                }
             },
             svg: {
                 scale: 1,
@@ -245,13 +135,10 @@
             startup: {
                 ready() {
                     MathJax.startup.defaultReady();
-                    MathJax.startup.document.render();
                 }
             }
         };
     </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js"></script>
-
 </body>
 
 </html>
