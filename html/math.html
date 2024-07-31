@@ -13,18 +13,6 @@
     <!-- Natura11y Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning@main/dist/icons/visionlearning-icons.css">
 
-    <style>
-        .math-container {
-            max-width: 100%;
-            height: auto;
-        }
-
-        svg {
-            max-width: 100%;
-            height: auto;
-            background-color: aliceblue;
-        }
-    </style>
 </head>
 
 <body>
@@ -50,6 +38,14 @@
                     <p>
                         Example of an SVG math figure.
                     </p>
+
+                    <div class="figure">
+
+                        <figure>
+                            $$C_6H_{12}O_6 + \textcolor{blue}{6}O_2 \rightarrow \textcolor{blue}{6}CO_2 + \textcolor{blue}{6}H_2O + \textit{energy}$$
+                        </figure>
+
+                    </div>
 
                     <div class="figure">
                         <figure>
@@ -108,10 +104,8 @@
 
     </main>
 
-    <!-- MathJax Script -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js" async></script>
     <script>
-        window.MathJax = {
+        MathJax = {
             tex: {
                 inlineMath: [['\\(', '\\)']],
                 displayMath: [['$$', '$$']],
@@ -139,6 +133,7 @@
             }
         };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js" async></script>
 </body>
 
 </html>
