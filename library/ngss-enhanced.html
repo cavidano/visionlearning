@@ -1,0 +1,61 @@
+---
+layout: landing
+title: Library • NGSS Enhanced
+---
+
+<div class="position-relative">
+
+    {% for item in site.data.librarySample %}
+        {% assign header = item.Discipline %}                         
+        {% assign slug = item.Slug %}                         
+        {% assign subcategories = item.Subcategories %}                          
+
+        <section>
+
+            <header class="theme-primary {{ slug }} discipline-divider">
+                <h2 class="h3 discipline-divider__title">{{ header }}</h2>
+                <img class="discipline-divider__image" src="{{ site.url }}/images/discipline-{{ slug }}-4x3.jpg" />
+            </header>
+                        
+            <div class="padding-x-2">
+
+            {% for category in subcategories %}                
+                {% assign title = category.Title %}          
+                {% assign modules = category.Modules %}          
+
+                <div class="category margin-y-3">
+                                            
+                    <h2 class="h6">{{ title }}</h2>
+
+                    <ul class="list-divider">
+                                    
+                        {% for module in modules %}
+
+                            {% assign name = module.Name %}  
+
+                            <li>
+                                <a class="truncate-text" href="{{ site.url }}/library/module/reading.html">
+                                    <strong>
+                                        {{ name }}:
+                                    </strong>
+                                    <em>
+                                        This is a subtitle for the module
+                                    </em>
+                                </a>
+
+                            </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                </div>
+            {% endfor %}
+                            
+            </div>
+
+        </section>
+                    
+    {% endfor %}
+            
+</div>
