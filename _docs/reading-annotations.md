@@ -91,7 +91,6 @@ The following example shows a reading annotation for a glossary term.
 
 Glossary term annotations are triggered by clicking on a glossary term within the reading. The following example shows a glossary term annotation for the term "heat". 
 
-
 {% capture fig_2 %}
 
 <mark

@@ -3,7 +3,6 @@ MathJax = {
         inlineMath: [['\\(', '\\)']],
         displayMath: [['$$', '$$']],
         processEscapes: true,
-        // packages: {'[+]': ['color']},
     },
     options: {
         renderActions: {
