@@ -88,15 +88,6 @@ In this file:
 
 
     }
-    
-    .figure:has(math) {
-        svg {
-            max-width: 95vw;
-            height: auto;
-
-            background-color: aqua;
-        }
-    }
 
     mjx-container {
         max-width: 95vw;
