@@ -6,7 +6,7 @@ category: learning-modules
 
 <div class="position-relative">
 
-<header class="backdrop backdrop--fixed theme-dark chemistry" href="http://localhost:4001/library/module/reading.html">
+<header class="backdrop backdrop--fixed theme-dark margin-bottom-3">
 
     <div class="backdrop__image gradient-veneer-bottom">
         <img class="opacity-30" src="images/at-a-glance-04.jpg" alt="Placeholder">
@@ -32,11 +32,10 @@ category: learning-modules
                 These modules include annotated examples of assessment tasks for elementary, middle, and high school as well as a series of short resources that highlight the major takeaways.
             </p>
 
-
-					<a class="button button--has-icon font-size-sm theme-canvas" href="#1">
-						<span class="button__text">About NGSS</span>
-						<span class="icon icon-caret-right"></span>
-					</a>
+            <a class="button button--has-icon font-size-sm theme-canvas" href="#1">
+                <span class="button__text">About NGSS</span>
+                <span class="icon icon-caret-right"></span>
+            </a>
                                                                 
         </div>
 
@@ -49,14 +48,10 @@ category: learning-modules
     {% assign slug = item.Slug %}                         
     {% assign subcategories = item.Subcategories %}  
 
-
-<hr class="divider" />                        
-
         <section>
 
-            <header class="theme-primary {{ slug }} discipline-divider">
-                <h2 class="h3 discipline-divider__title">{{ header }}</h2>
-                <img class="discipline-divider__image" src="{{ site.url }}/images/discipline-{{ slug }}-4x3.jpg" />
+            <header class="{{ slug }} container text-color-primary subtle-fill padding-y-3 border-top border-top-color-primary border-width-thick">
+                <h2 class="h3">{{ header }}</h2>
             </header>
                         
             <div class="padding-x-2">
@@ -92,6 +87,7 @@ category: learning-modules
                     </ul>
 
                 </div>
+
             {% endfor %}
                             
             </div>
