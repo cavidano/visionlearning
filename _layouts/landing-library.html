@@ -1,0 +1,259 @@
+---
+layout: global
+discipline_links:
+  - title: Biology
+    slug: biology
+  - title: Chemistry
+    slug: chemistry
+  - title: Earth Science
+    slug: earth-science
+  - title: General Science
+    slug: general-science
+  - title: Math in Science
+    slug: math-in-science
+  - title: Physics
+    slug: physics
+  - title: Process of Science
+    slug: process-of-science
+---
+
+{% capture discipline_links %}
+
+{% for link in layout.discipline_links %}
+<li>
+    <a class="nav-link" href="#1">
+        {{ link.title }}
+    </a>
+</li>
+{% endfor %}
+
+{% endcapture %}
+
+<main id="skip-header-content">
+
+    <nav class="about-menu padding-y-4 font-size-md">
+                
+        <ul class="container medium text-align-center nav nav--horizontal--lg justify-content-around">
+            <li>
+                <a
+                    href="{{ site.url }}/library"
+                    {% if page.category == 'learning-modules' %}
+                    aria-current="page"
+                    {% endif %}>
+                        Learning Modules
+                </a>
+            </li>
+            <li>
+                <a
+                    href="{{ site.url }}/library/interactive-animations"
+                    {% if page.title contains 'Interactive Animations' %}
+                    aria-current="page"
+                    {% endif %}>
+                        Interactive Animations
+                </a>
+            </li>
+            <li>
+                <a
+                    href="{{ site.url }}/library/research-videos" 
+                    {% if page.title contains 'Research Videos' %}
+                    aria-current="page"
+                    {% endif %}>
+                        Research Videos
+                </a>
+            </li>
+        </ul>
+
+    </nav>
+
+    <div class="margin-bottom-5">
+
+        <div class="container wide">
+
+            <div class="grid grid--sidebars gap-4">
+
+                <div>
+
+                {% if page.category == 'learning-modules' %}
+
+                    <div class="grid grid--divider font-size-md">
+
+                        <div class="grid grid--column-2 gap-1 display-none--xl">
+
+                            <button
+                                class="button button--has-icon text-color-link"
+                                data-toggle="collapse"
+                                data-target-toggle="#material-nav"
+                                data-target-close="#material-search">
+                                    <span class="icon icon-menu"></span>
+                                    <span class="button__text">Browse</span>
+                            </button>
+
+                            <button
+                                class="button button--has-icon text-color-link"
+                                data-toggle="collapse"
+                                data-target-toggle="#material-search"
+                                data-target-close="#material-nav">
+                                    <span class="icon icon-search"></span>
+                                    <span class="button__text">Search</span>
+                            </button>
+                                
+                        </div>
+
+                        <form
+                            class="search-bar collapse display-block--xl"
+                            action="{{ site.url }}/library/search-results.html"
+                            id="material-search"
+                            data-focus-first>
+                            
+                            <div class="form-entry">
+
+                                <div class="form-entry__field">
+
+                                    <label class="form-entry__field__label screen-reader-only" for="search-example">
+                                        Search
+                                    </label>
+                                        
+                                    <span class="form-entry__field__input">
+                                        <input
+                                            type="search"
+                                            name="search-example"
+                                            id="search-example"
+                                            placeholder="Search Library"
+                                            autocomplete="off"
+                                        />
+                                        <div class="button-group">
+                                        <button
+                                            class="button button--icon-only theme-light border-radius-circle"
+                                            type="submit"  
+                                        >
+                                            <span class="icon icon-search" aria-hidden="true"></span>
+                                        </button>
+                                        </div>
+                                    </span>
+
+                                </div>
+
+                            </div>
+                        
+                        </form>
+
+                        <div class="collapse display-block--xl" id="material-nav">
+                            
+                            <nav>
+                            
+                                <ul
+                                    class="tabs-nav {{ class_name }} border border-radius"
+                                    id="material-nav"
+                                    role="menu">
+
+                                    <li>
+                                        <a
+                                            href="{{ site.url }}/library"
+                                            {% if page.title == 'Library • Highlights' %}
+                                            aria-current="page"
+                                            {% endif %}>
+                                                Highlights
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a
+                                            href="{{ site.url }}/library/all-disciplines.html"
+                                            {% if page.title == 'Library • All Disciplines' %}
+                                            aria-current="page"
+                                            {% endif %}>
+                                                All Disciplines
+                                        </a>
+                                    </li>
+                                    
+                                    <li>
+                                        <a
+                                            href="{{ site.url }}/library/ngss-enhanced.html"
+                                            {% if page.title == 'Library • NGSS Enhanced' %}
+                                            aria-current="page"
+                                            {% endif %}>
+                                                NGSS Enhanced
+                                        </a>
+                                    </li>
+                                    
+                                    {{ discipline_links }}
+                                
+                                </ul>
+
+                            </nav>
+                                    
+                        </div>
+
+                    </div>
+
+                {% endif %}
+
+                {% if page.category == 'interactive-animations' %}
+
+                    <p>
+                        Our interactive animations help convey core scientific concepts. Each animation is associated with a learning module that provides detailed background on the subject in question.
+                    </p>
+
+                {% endif %}
+
+                {% if page.category == 'research-videos' %}
+
+                    <p>
+                        Our videos aim to guide viewers through the multifaceted process of scientific research, utilizing a range of examples from different disciplines and eras. They also aspire to cultivate students' identification as scientists, by shedding light on the unique culture, community nature, and diverse makeup of the scientific world. We hope these videos inspire and equip students to actively engage in scientific research.
+                    </p>
+
+                {% endif %}
+                
+                </div>
+
+                <div>
+
+                    {{ content }}
+
+                </div>
+
+                <div class="font-size-md">
+
+                    <div class="padding-x-2 margin-bottom-2 text-align-center">
+                            
+                        <h6>
+                            Sign in or Join for Free
+                        </h6>
+
+                        <p>
+                            For an ad-free experience and access the Classroom:
+                        </p>
+
+                    </div>
+
+                    <ul class="grid gap-1">
+
+                        <li>
+                            <a class="button button--has-icon--disperse text-color-link" href="{{ site.url }}/classroom/my-courses">
+                                <span class="button__text">Sign In</span>
+                                <span class="icon icon-caret-right"></span>
+                            </a>
+                        </li>
+
+                        <li>                    
+                            <a class="button button--has-icon--disperse text-color-link" href="{{ site.url }}/account/register">
+                                <span class="button__text">Join for Free</span>
+                                <span class="icon icon-caret-right"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <hr class="divider" />
+
+                    {% include process-of-science-book.html %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>

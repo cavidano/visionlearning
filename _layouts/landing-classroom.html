@@ -1,48 +1,6 @@
 ---
 layout: global
-discipline_links:
-  - title: Biology
-    slug: biology
-  - title: Chemistry
-    slug: chemistry
-  - title: Earth Science
-    slug: earth-science
-  - title: General Science
-    slug: general-science
-  - title: Math in Science
-    slug: math-in-science
-  - title: Physics
-    slug: physics
-  - title: Process of Science
-    slug: process-of-science
-  - title: Profiles in Science
-    slug: profiles-in-science
 ---
-
-{% if page.title contains 'Library' %}
-    {% assign search_text = 'Library' %}
-    {% assign class_name = 'library' %}
-{% endif %}
-{% if page.title contains 'Glossary' %}
-    {% assign class_name = 'glossary' %}
-    {% assign search_text = 'Glossary' %}
-{% endif %}
-{% if page.title contains 'Classroom' %}
-    {% assign class_name = 'classroom' %}
-    {% assign search_text = 'Courses' %}
-{% endif %}
-
-{% capture discipline_links %}
-
-{% for link in layout.discipline_links %}
-<li>
-    <a class="nav-link" href="#1">
-        {{ link.title }}
-    </a>
-</li>
-{% endfor %}
-
-{% endcapture %}
 
 <main id="skip-header-content">
 
@@ -50,9 +8,10 @@ discipline_links:
 
         <div class="container wide">
 
-            <div class="grid grid--sidebars grid--divider">
+            <div class="grid grid--sidebars gap-3">
 
                 <div>
+
                     <div class="grid grid--divider font-size-md">
 
                         <div class="grid grid--column-2 gap-1 display-none--xl">
@@ -96,7 +55,7 @@ discipline_links:
                                             type="search"
                                             name="search-example"
                                             id="search-example"
-                                            placeholder="Search {{ search_text }}"
+                                            placeholder="Search Classrooms"
                                             autocomplete="off"
                                         />
                                         <div class="button-group">
@@ -118,67 +77,6 @@ discipline_links:
                         <div class="collapse display-block--xl" id="material-nav">
                             
                             <nav>
-                                
-                                {% if page.title contains 'Library' %}
-
-                                <ul
-                                    class="tabs-nav {{ class_name }} border border-radius"
-                                    id="material-nav"
-                                    role="menu">
-
-                                    <li>
-                                        <a
-                                            href="{{ site.url }}/library"
-                                            {% if page.title == 'Library • Highlights' %}
-                                            aria-current="page"
-                                            {% endif %}>
-                                                Highlights
-                                        </a>
-                                    </li>
-                                    
-                                    <li>
-                                        <a
-                                            href="{{ site.url }}/library/all-disciplines.html"
-                                            {% if page.title == 'Library • All Disciplines' %}
-                                            aria-current="page"
-                                            {% endif %}>
-                                                All Disciplines
-                                        </a>
-                                    </li>
-                                    
-                                    {{ discipline_links }}
-                                
-                                </ul>
-
-                                <hr class="divider" />
-
-                                <div class="nav-library-buttons grid gap-1">
-
-                                    <a
-                                        class="button button--has-icon"
-                                        href="{{ site.url }}/library/interactive-animations.html"
-                                        {%- if page.title contains 'Interactive Animations' -%}
-                                        aria-current="page"
-                                        {%- endif -%}
-                                    >
-                                        <span class="icon icon-interactive-animations"></span>
-                                        <span class="button__text">Interactive Animations</span>
-                                    </a>
-                                
-                                    <a
-                                        class="button button--has-icon"
-                                        href="{{ site.url }}/library/research-videos.html"
-                                        {%- if page.title contains 'Research Videos' -%}
-                                        aria-current="page"
-                                        {%- endif -%}
-                                    >
-                                        <span class="icon icon-science-research"></span>
-                                        <span class="button__text">Research Videos</span>
-                                    </a>
-
-                                </div>
-
-                                {% endif %}
 
                                 {% if page.title contains 'Glossary' %}
 
@@ -261,7 +159,7 @@ discipline_links:
 
                     </div>
 
-                    <ul class="grid grid--divider">
+                    <ul class="grid gap-1">
 
                         <li>
                             <a class="button button--has-icon--disperse text-color-link" href="{{ site.url }}/classroom/my-courses">
@@ -276,12 +174,12 @@ discipline_links:
                                 <span class="icon icon-caret-right"></span>
                             </a>
                         </li>
-                        
-                        <li>
-                            {% include process-of-science-book.html %}
-                        </li>
 
                     </ul>
+
+                    <hr class="divider" />
+
+                    {% include process-of-science-book.html %}
 
                 </div>
 

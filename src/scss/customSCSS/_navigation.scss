@@ -327,24 +327,6 @@ In this file:
         }
     }
 
-    // Nav library buttons
-
-    .nav-library-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        .button {
-            width: 100%;
-            color: var(--default-link-color);
-        }
-
-        .button[aria-current] {
-        color: var(--canvas);
-            background-color: var(--default-link-color);
-        }
-    }
-
     // Discipline Divider
 
     .discipline-divider {
