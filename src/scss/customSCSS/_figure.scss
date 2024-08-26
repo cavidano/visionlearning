@@ -38,7 +38,6 @@ In this file:
     .figure {
         margin-block: var(--figure-margin-y);
 
-        // background-color: red !important;
         container-type: inline-size;
 
         figure span.credit {
@@ -72,9 +71,6 @@ In this file:
 
         }
 
-        
-
-
         table {
             --table-cell-padding-x: 1cqi !important;
             border-collapse: collapse;
@@ -86,12 +82,15 @@ In this file:
             font-size: 2.125cqi;
         }
 
-
     }
 
     mjx-container {
         max-width: 95vw;
         height: auto;
+
+        svg {
+            max-width: 100%;
+        }
     }
 
     .figure--right {
