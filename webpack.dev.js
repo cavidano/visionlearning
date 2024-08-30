@@ -32,7 +32,7 @@ const devPages = {
 
 const devDir = './html';
 
-const devPage = `${devPages.Math}.html`;
+const devPage = `${devPages.Quiz}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

@@ -8,7 +8,7 @@ tab: quiz
 
 <div class="container narrow margin-y-4">
 
-    <form class="quiz">
+    <div class="quiz">
 
         <div
             class="alert quiz__score border-top pass margin-bottom-4"
@@ -58,9 +58,11 @@ tab: quiz
 
         </div>
                 
-        <ol class="quiz__questions">
+        <form class="quiz__questions">
 
-            <li class="form-entry">
+            <input type="hidden" name="quiz_id" value="206" />
+
+            <div class="form-entry">
 
                 <div class="form-entry__field">
 
@@ -151,10 +153,10 @@ tab: quiz
 
                 </div>
 
-            </li>
+            </div>
             <!-- .form-entry -->
 
-            <li class="form-entry">
+            <div class="form-entry">
 
                 <div class="form-entry__field">
 
@@ -219,10 +221,10 @@ tab: quiz
 
                 </div>
 
-            </li>
+            </div>
             <!-- .form-entry -->
 
-            <li class="form-entry">
+            <div class="form-entry">
 
                 <div class="form-entry__field">
 
@@ -304,18 +306,17 @@ tab: quiz
 
                 </div>
 
-            </li>
+            </div>
             <!-- .form-entry -->
                 
-        </ol>
-
         <button
             class="button width-100 margin-top-3"
             type="submit">
                 Score Quiz
         </button>
 
-    </form>
-    <!-- .quiz -->
+        </form>
+
+    </div>
 
 </div>

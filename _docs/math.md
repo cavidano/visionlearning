@@ -28,7 +28,7 @@ To render an equation within a figure, use the `$$ xxxx $$` LaTeX markup. See th
 <hr class="margin-y-4" />
 
 ## Inline Math
-The MathML can also be used to represent mathematical equations or formulas inline with the text. To do so, use `\( xxxx )\`. See Figure 2 below.
+The MathML can also be used to represent mathematical equations or formulas inline with the text. To do so, use `\( xxxx \)`. See Figure 2 below.
 
 {% capture fig_2 %}
 

@@ -37,12 +37,14 @@ In this file:
     // Quiz component
 
     .quiz {
-        overflow: hidden;
+        // overflow: hidden;
+        // background: yellow;
     }
 
     // Quiz form
 
     form.quiz__questions {
+
         counter-reset: section;
         padding: unset;             
 
@@ -143,10 +145,30 @@ In this file:
         }
     }
 
+    .quiz__pool {
+        border-radius: var(--form-field-border-radius);
+
+        border: var(--border-width) var(--border-style) var(--primary) !important;
+
+        padding: var(--spacer-3);
+
+        margin-block: var(--spacer-4);
+        margin-inline: calc( var(--spacer-3) * -1);
+
+        > *:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .quiz__pool__description {
+            font-size: var(--font-size-md);
+            font-style: italic;
+            margin-bottom: var(--spacer-4);
+        }
+    }
+
     // Comprehension check point
 
     .comprehension-checkpoint__header {
-
         overflow: hidden;
 
         border-radius: var(--form-field-border-radius);
@@ -156,6 +178,8 @@ In this file:
 
         display: flex;
         align-items: center;
+
+        margin-block-end: 1em;
 
         color: var(--primary);
 
