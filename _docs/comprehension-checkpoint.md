@@ -17,7 +17,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem
 
 {% include code-example.html content=fig_1 %}
 
----
+<hr class="margin-y-4" />
 
 #### The `<blockquote>` Element:
 

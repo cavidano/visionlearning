@@ -36,17 +36,14 @@ In this file:
 
     // Quiz component
 
-    .quiz {
-        // overflow: hidden;
-        // background: yellow;
-    }
+    .quiz { }
 
     // Quiz form
 
-    form.quiz__questions {
+    .quiz__questions {
+        padding: unset;             
 
         counter-reset: section;
-        padding: unset;             
 
         .form-entry {
             position: relative;
@@ -69,8 +66,14 @@ In this file:
             padding-inline-start: calc( var(--form-field-padding-x) + 2em);
         }
 
-        .form-entry__option {
-            margin-top: 0.75em;
+        .form-entry__option { 
+            margin-block-start: 0.5em;
+        }
+
+        // Figure
+        
+        .figure {
+            --figure-margin-y: var(--spacer-2);
         }
     }
 
@@ -111,21 +114,14 @@ In this file:
 
     }
 
-    .quiz__image {
-        overflow: hidden;
-        border-radius: var(--form-field-border-radius);
-        margin-bottom: var(--spacer-3);
-    }
-
     .quiz__response {
+        display: block;
+        
+        font-size: 90%;
+        font-style: italic;
         
         padding-inline-start: calc(var(--form-field-padding-x) + 1em);
         margin-top: var(--form-field-padding-y);
-
-        display: block;
-        
-        font-style: italic;
-        font-size: 90%;
 
         color: var(--canvas-warn);
 
@@ -152,8 +148,8 @@ In this file:
 
         padding: var(--spacer-3);
 
-        margin-block: var(--spacer-4);
         margin-inline: calc( var(--spacer-3) * -1);
+        margin-block: var(--spacer-4);
 
         > *:last-child {
             margin-bottom: 0 !important;
@@ -166,18 +162,29 @@ In this file:
         }
     }
 
-    // Comprehension check point
+    // Comprehension Checkpoint
+
+    .comprehension-checkpoint {
+
+        .form-entry__option__radio {
+            --subtle-fill-opacity: 0;
+        }
+
+        .quiz__response:not(.shown) {
+            display: none;
+        }
+    }
 
     .comprehension-checkpoint__header {
-        overflow: hidden;
-
-        border-radius: var(--form-field-border-radius);
-
         @extend %subtle-fill-psuedo;
         --subtle-fill-opacity: 0.075;
 
+        overflow: hidden;
+
         display: flex;
         align-items: center;
+
+        border-radius: var(--form-field-border-radius);
 
         margin-block-end: 1em;
 
@@ -199,17 +206,6 @@ In this file:
 
         > span > [class*="icon"] {
             font-size: 1.5em; 
-        }
-    }
-
-    .comprehension-checkpoint {
-
-        .form-entry__option__radio {
-            --subtle-fill-opacity: 0;
-        }
-
-        .quiz__response:not(.shown) {
-            display: none;
         }
     }
 

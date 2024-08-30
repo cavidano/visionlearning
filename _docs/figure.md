@@ -5,13 +5,11 @@ title: Figure
 				
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima, itaque dolor facilis?
 
-- [Module Figures]({{site.url}}/docs/module-figures/periodic-table)
-
 <hr class="margin-y-4" />
 
 ## Enlarge Image
 
-To style a quote with a left border for use within modules where the quote should visibly stand out, add the `.blockquote` class to the `<blockquote>` element.
+To enlarge an image, add the following code to your markdown file:
 
 {% capture fig_1 %}
 
