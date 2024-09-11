@@ -1,7 +1,8 @@
 export default class AnchorNav {
+
   // Private properties
   #anchorNavLinkList = document.querySelectorAll('.anchor-nav > ul > li > a');
-  #sections = document.querySelectorAll('section');
+  #sections = document.querySelectorAll('section[id]');
   #sectionObserver;
   #firstSectionOffset;
 
@@ -44,7 +45,7 @@ export default class AnchorNav {
       const sectionOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5,
+        threshold: 0.75,
       };
 
       this.#sectionObserver = new IntersectionObserver(
