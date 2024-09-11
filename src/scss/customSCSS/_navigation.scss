@@ -389,9 +389,9 @@ In this file:
         }
     }
 
-    // About Menu
+    // Nav Color Links Modifier
 
-    .about-menu {
+    .nav--color-links {
         a:not([aria-current]){
             color: var(--default-link-color);
         }

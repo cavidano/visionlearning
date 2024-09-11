@@ -3,7 +3,7 @@ layout: docs
 title: Figure
 ---
 				
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eveniet dolorem minima cum, modi error ab hic iste expedita. Quam quasi fugit facere ad atque quidem minima, itaque dolor facilis?
+This section covers different methods for including and presenting figures, including enabling image enlargement for a more interactive and detailed viewing experience.
 
 <hr class="margin-y-4" />
 

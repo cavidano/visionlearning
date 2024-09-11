@@ -2,9 +2,9 @@
 layout: global
 ---
 
-<main id="skip-header-content">
+<div class="theme-light">
 
-    <article class="container wide margin-bottom-5">
+<div class="container wide">
 
         {% include about-menu.html %}
 
@@ -15,10 +15,15 @@ layout: global
             </h1>
 
         </header>
+</div>
 
-        <hr class="divider" />
+</div>
+<main id="skip-header-content">
 
-        <main class="grid grid--sidebars grid--divider">
+    <article class="container wide margin-bottom-5">
+
+
+        <main class="grid grid--sidebars margin-y-4">
 
             <div class="display-none display-block--xl">
                 
@@ -50,9 +55,39 @@ layout: global
 
             <div class="font-size-md">
 
-                {% include process-of-science-book.html %}
+                    <div class="padding-x-2 margin-bottom-2 text-align-center">
+                            
+                        <h6>
+                            Sign in or Join for Free
+                        </h6>
 
-            </div>
+                        <p>
+                            For an ad-free experience and access the Classroom:
+                        </p>
+
+                    </div>
+
+                    <ul class="grid gap-1 margin-bottom-2">
+
+                        <li>
+                            <a class="button button--has-icon--disperse text-color-link" href="{{ site.url }}/classroom/my-courses">
+                                <span class="button__text">Sign In</span>
+                                <span class="icon icon-caret-right"></span>
+                            </a>
+                        </li>
+
+                        <li>                    
+                            <a class="button button--has-icon--disperse text-color-link" href="{{ site.url }}/account/register">
+                                <span class="button__text">Join for Free</span>
+                                <span class="icon icon-caret-right"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    {% include process-of-science-book.html %}
+
+                </div>
 
         </main>
 
