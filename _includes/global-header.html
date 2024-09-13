@@ -140,42 +140,38 @@
 
 			<div class="vl-hat__actions">
 
-				<div class="button-group gap-1">
-
-					{% if page.title != 'Site Search' %}
+				{% if page.title != 'Site Search' %}
 					
-					<button
-						class="button button--icon-only"
-						aria-label="Search"
-						data-toggle="collapse"
-						data-target-toggle="#global-search"
-						data-target-close="#vl-hat-nav">
-						<span class="icon icon-search" aria-hidden="true"></span>
-					</button>
+				<button
+					class="button button--icon-only"
+					aria-label="Search"
+					data-toggle="collapse"
+					data-target-toggle="#global-search"
+					data-target-close="#vl-hat-nav">
+					<span class="icon icon-search" aria-hidden="true"></span>
+				</button>
 
-					{% endif %}
+				{% endif %}
 
-					{% if page.account == 'Signed In' %}
+				{% if page.account == 'Signed In' %}
 					
-					<a class="button button--has-icon" href="{{ site.url }}/">
-						<span class="icon icon-sign-out"></span>
-						<span class="button__text">Sign Out</span>
-					</a>
+				<a class="button button--has-icon" href="{{ site.url }}/">
+					<span class="icon icon-sign-out"></span>
+					<span class="button__text">Sign Out</span>
+				</a>
 					
-					{% else %}
+				{% else %}
 
-					<a class="button button--has-icon" href="{{ site.url }}/account/sign-in.html">
-						<span class="icon icon-sign-in"></span>
-						<span class="button__text">Sign In</span>
-					</a>
+				<a class="button button--has-icon" href="{{ site.url }}/account/sign-in.html">
+					<span class="icon icon-sign-in"></span>
+					<span class="button__text">Sign In</span>
+				</a>
 
-					{% endif %}
+				{% endif %}
 
-					<a class="button" href="#1" id="es-translate">
-						<span>Español</span>
-					</a>
-					
-				</div>
+				<a class="button" href="#1" id="es-translate">
+					<span>Español</span>
+				</a>
 
 			</div>
 

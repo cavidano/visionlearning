@@ -177,7 +177,7 @@ In this file:
         white-space: nowrap;
 
         font-size: 9cqi;
-        font-weight: var(--body-font-weight-normal);
+        font-weight: var(--font-weight-normal);
 
         color: var(--text-color);
 
@@ -344,7 +344,7 @@ In this file:
 
     [class^="symbol"] { 
         font-size: 32cqi;
-        font-weight: var(--body-font-weight-bold);
+        font-weight: var(--font-weight-bold);
         line-height: 1;
     }
 

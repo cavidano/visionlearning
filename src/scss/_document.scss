@@ -14,7 +14,7 @@ In this file:
 //////////////////////////////////////////////
 
 @use './spacing';
-@use './customSCSS/color';
+@use './color';
 
 ////////////////////////////////////////
 // B. Variables
@@ -45,6 +45,8 @@ In this file:
         font-size: 100%;
 
         vertical-align: baseline;
+
+        box-sizing: border-box;
     }
 
     img {
@@ -131,7 +133,7 @@ In this file:
     // Horizontal Rule
 
     hr {
-        border-block-start: var(--border-width) var(--border-style) var(--border-color);
+        border-block-start: var(--border-width) var(--border-style);
     }
 
 } // end @layer

@@ -51,7 +51,7 @@ In this file:
   }
 
   svg.icon {
-    --icon-size: 50px;
+    --icon-size: 48px;
 
     display: block;
     
@@ -64,6 +64,7 @@ In this file:
   .natura11y-icons-sprite {
     width: 0;
     height: 0;
+    
     display: none;
   }
 
@@ -88,7 +89,7 @@ In this file:
 
   .icon-loading {
     &.icon--rotate {
-      animation: rotate360 1s linear infinite;
+      animation: rotate360 0.25s linear infinite;
     }
   }
 

@@ -176,8 +176,8 @@ In this file:
     }
 
     .comprehension-checkpoint__header {
-        @extend %subtle-fill-psuedo;
-        --subtle-fill-opacity: 0.075;
+        @extend %subtle-fill;
+        --subtle-fill-opacity: 7.5%;
 
         overflow: hidden;
 
@@ -191,7 +191,7 @@ In this file:
         color: var(--primary);
 
         > span {
-            @extend %subtle-fill-psuedo;
+            @extend %subtle-fill;
             --subtle-fill-opacity: 0.075;
 
             display: flex;

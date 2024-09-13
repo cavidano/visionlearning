@@ -24,7 +24,7 @@ In this file:
 
     // Subtle Fill
 
-    --subtle-fill-opacity: 0.075;
+    --subtle-fill-opacity: 5%;
 
     // Gradient Veneer
 
@@ -37,28 +37,33 @@ In this file:
 // C. Placeholders
 ////////////////////////////////////////
 
-%subtle-fill-psuedo {
-    position: relative;
+// %subtle-fill {
+//     position: relative;
 
-    &::after {
-        position: absolute;
-        content: "";
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;   
+//     &::after {
+//         position: absolute;
+//         content: "";
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;   
 
-        border-radius: inherit;
+//         border-radius: inherit;
 
-        pointer-events: none;
+//         pointer-events: none;
 
-        background-color: currentColor;
+//         background-color: currentColor;
         
-        opacity: var(--subtle-fill-opacity);  
+//         opacity: var(--subtle-fill-opacity);  
         
-        z-index: 0;  
-    }
+//         z-index: 0;  
+//     }
     
+// }
+
+
+%subtle-fill {
+    background-color: color-mix(in srgb, currentColor var(--subtle-fill-opacity), transparent);
 }
 
 %caret {
@@ -97,7 +102,7 @@ In this file:
     // Subtle Fill Utility
 
     .subtle-fill {
-        @extend %subtle-fill-psuedo;
+        @extend %subtle-fill;
         
         > * {
             position: relative;

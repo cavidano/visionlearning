@@ -11,7 +11,6 @@ import './scss/styles.scss';
 // Natura11y JS Modules
 
 import AlertDismissable from './js/alert';
-import Button from './js/button';
 import Collapse from './js/collapse';
 import FormInput, { FormSubmission, FormFileUpload } from './js/form';
 import Lightbox from './js/lightbox';
@@ -39,9 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const alertDismissable = new AlertDismissable();
     alertDismissable.init();
-
-    const button = new Button();
-    button.init();
 
     const collapse = new Collapse();
     collapse.init();

@@ -54,6 +54,11 @@ In this file:
 
     .vl-hat__actions {
         grid-area: actions;
+        
+        display: flex;
+        
+        gap: var(--spacer-1);
+        font-size: var(--font-size-sm);
     }
 
     @include breakpoint.breakpoint-down(xl) {
@@ -154,7 +159,7 @@ In this file:
         } 
 
         span.title {
-            font-weight: var(--body-font-weight-bold);
+            font-weight: var(--font-weight-bold);
         }
 
         span.tagline {
@@ -270,7 +275,7 @@ In this file:
         > ul > li > .button {
             --button-padding-y: 0.75em;
             --button-border-radius: 0;
-            --button-font-weight: var(--body-font-weight-normal);
+            --button-font-weight: var(--font-weight-normal);
 
             &[aria-expanded="true"] {
                  background-color: var(--module-breadcrumb-background-color);
@@ -281,7 +286,7 @@ In this file:
             font-size: var(--font-size-sm);
 
             > .accordion__button.current {
-                font-weight: var(--body-font-weight-bold);
+                font-weight: var(--font-weight-bold);
 
                 justify-content: start;
 
@@ -316,7 +321,7 @@ In this file:
             justify-content: start;
             flex-direction: row;
 
-            font-weight: var(--body-font-weight-normal);
+            font-weight: var(--font-weight-normal);
 
             border-block-start: unset;
 
@@ -431,7 +436,7 @@ In this file:
             
             button {
                 color: white;
-                background-color: var(--default-link-color);
+                background-color: var(--default-link-color) !important;
                 filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.375));
             }
         }

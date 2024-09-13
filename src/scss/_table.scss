@@ -93,8 +93,8 @@ In this file:
 
     .table--striped {
         tbody tr:nth-of-type(odd) td {
-            @extend %subtle-fill-psuedo;
-            --subtle-fill-opacity: 0.05;
+            @extend %subtle-fill;
+            --subtle-fill-opacity: 5%;
         }
     }
 

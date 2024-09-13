@@ -28,7 +28,25 @@ In this file:
 
 %hover-focus {
 
-    &:not([class*="button--icon-over-text"]):focus-visible {
+    &:hover,
+    &:focus {
+        &:not(
+            [class*="no-hover-focus"],
+            [class*="icon"],
+            [class*="backdrop"],
+            [class*="interactive-animation"],
+            [class*="accordion__button"],
+            [class*="form-entry__field__input__clear"],
+            [aria-disabled="true"],
+            [class*="__element"],
+            [class*="nav--has-icons"] > li > *,
+            p > a
+        ) {
+            text-decoration: underline;
+        }
+    }
+
+    &:not([class*="button--icon-label"]):focus-visible {
         outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
         outline-offset: var(--focus-outline-distance);
     }
@@ -40,6 +58,10 @@ In this file:
         > * {
             z-index: -1;
         }
+    }
+    
+    &.button--outline {
+        --focus-outline-distance: calc(var(--focus-outline-size) * -3);
     }
 }
 
@@ -54,9 +76,7 @@ In this file:
             --focus-outline-distance: calc(var(--focus-outline-size) * -2);
         }
         
-        &.button--outline,
-        &.lightbox-thumbnail,
-        &[class*="backdrop"] {
+        &.button--outline {
             --focus-outline-distance: calc(var(--focus-outline-size) * -3);
         }
     }
@@ -71,7 +91,6 @@ In this file:
 
     // Shared Utilities
 
-    .focusable-only, 
     .screen-reader-only {
         position: absolute;
     }
@@ -93,70 +112,40 @@ In this file:
 
     .focusable-only {
 
-        &:not(:focus) { 
+        &:not(:focus) {
             @extend .screen-reader-only;
         }
 
-        inset-block-start: var(--spacer-1);
-        inset-inline-start: var(--spacer-1);
-
-        padding: var(--button-padding-y) var(--button-padding-x);
+        display: inline-block;
 
         font-size: var(--font-size-sm);
         
-        color: var(--dark);
+        color: var(--link-color);
+
+        text-decoration: none !important;
+
+        padding: 0.5em 1em;
+
+        margin: 0.5em;
         
-        background-color: rgba( white, 0.95);
-        
-        box-shadow: 0 0 0.25rem currentColor;
-        
-        z-index: 25000;
     }
 
-    // Skip Links Utility
+    .no-hover-focus {
+        display: inherit;
 
-    .skip-links {
+        &:focus-visible {
 
-        a {
-            @extend.focusable-only;
-
-            position: fixed;
-
-            inset-block-start: 0;
-            inset-inline-start: 0;
-
-            color: var(--link-color);
-
-            font-weight: var(--font-weight-bold);
-            margin: var(--spacer-2);
-
-            border-radius: var(--button-border-radius);
-            overflow: hidden;
-
-            &::before,
-            &::after {
-                content: "";
-                inset: 0;
-            }
-            
-            &::before {
-                position: absolute;
+            > * {
+                position: relative;
                 z-index: -1;
-
-                background-color: var(--background-color);
             }
-
-            &::after {
-                position: fixed;
-
-                z-index: -2;
-
-                background-color: rgba(0, 0, 0, 0.5) !important;
-                
-                pointer-events: none;
-            }
-        
         }
     }
+
+    .hover-opacity {
+        &:hover {
+            opacity: 0.9;
+        }
+    }   
 
 } // end @layer

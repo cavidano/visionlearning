@@ -12,6 +12,7 @@ In this file:
 // A. Modules
 ////////////////////////////////////////
 
+@use "sass:math";
 @use './accent';
 
 //////////////////////////////////////////////
@@ -19,13 +20,15 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --button-padding-x: 1em;
+    --button-padding-x: 1.25em;
 
-    --button-padding-y: 0.75em;
+    --button-padding-y: 0.5em;
+
+    --button-target-size: 2.75em;
 
     --button-font-family: var(--body-font-family);
 
-    --button-font-weight: var(--body-font-weight-bold);
+    --button-font-weight: var(--font-weight-bold);
     
     --button-text-transform: initial;
     
@@ -35,15 +38,11 @@ In this file:
     
     --button-outline-border-width: calc( var(--border-width) * 2);
 
-    --button-icon-only-size: 2.5em;
-
     --button-icon-over-text-width: 4em; 
     
     --button-icon-over-text-border-radius: var(--button-border-radius);
     
     --button-icon-over-text-font-size: 0.675em;
-    
-    --button-group-gap: 0.5em;
 }
 
 //////////////////////////////////////////////
@@ -57,14 +56,13 @@ In this file:
         
         font-family: inherit;
 
-        &:not([class*="theme-"]){
+        &:not([class*="theme-"]) {
             background-color: transparent;
         }
 
-        &:not([class*="border-"]){
+        &:not([class*="border-"]) {
             border: none;
         }
-
     }
 
 } // end @layer
@@ -76,21 +74,19 @@ In this file:
 @layer component {
 
     .button {
-        --button-opacity-hover: 0.75;
-        
-        --subtle-fill-opacity: 0.05;
+        --_button-opacity-hover: 0.75;
 
         position: relative;
 
-        display: inline-block;
-        
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+
         vertical-align: middle;
-        
+
         line-height: normal;
-
-        text-transform: var(--button-text-transform);
-
-        letter-spacing: var(--button-letter-spacing);
         
         text-align: center;
         
@@ -100,33 +96,44 @@ In this file:
 
         transition: opacity 0.5s ease-out;
 
+        &:not([class*="button--icon-only"]) {
+            font-family: var(--button-font-family);
+
+            text-transform: var(--button-text-transform);
+
+            letter-spacing: var(--button-letter-spacing);
+        }
+
         &:not(
             [class*="button--outline"],
-            [class*="button--icon-label"],
+            [class*="button--icon-over-text"],
             [class*="theme-"],
             [class*="background-color"],
             [data-toggle="dropdown"]
         ) {
-            @extend %subtle-fill-psuedo;
+            @extend %subtle-fill;
         }
 
         &:hover, 
         &:focus, 
-        &:active
-        {
-            opacity: var(--button-opacity-hover);
+        &:active {
+            opacity: var(--_button-opacity-hover);
         }
 
-        &:not([class*="button--icon-only"]):not([class*="button--icon-label"]) {
+        &:not([class*="button--icon-only"]):not([class*="button--icon-over-text"]) {
             padding: var(--button-padding-y) var(--button-padding-x);
+
             font-weight: var(--button-font-weight);
         }
 
+        &:not([class*="button--icon-over-text"]) {        
+            min-height: var(--button-target-size);
+        }
+
         &[aria-disabled="true"] {
-            opacity: var(--button-opacity-hover);
+            opacity: var(--_button-opacity-hover);
             cursor: not-allowed;
         }
-        
     }
 
     // Outline Modifier
@@ -136,30 +143,28 @@ In this file:
         box-shadow: inset 0 0 0 var(--button-outline-border-width, 2px) currentColor;
     }
 
-    // Has Icon Modifiers
+    // :has() Selectors
 
-    [class*="button--has-icon"] {
-        display: inline-flex;
-        justify-content: center;
+    .button:has([class*="icon-"]) {
         align-items: center;
 
+        gap: 0.5em;
+    }
+
+    .button:has([class*="text"]) {
         &:hover,
         &:focus {
-            .button__text {
+            [class*="text"] {
                 text-decoration: underline;
-            }
-        }
-
-        &:not([class*="--disperse"]) {
-            .button__text {
-                margin-inline: 0.5em;
             }
         }
     }
 
-    .button--has-icon--disperse {
+    // Disperse Modifier
+   
+    .button--disperse {
         justify-content: space-between;
-        width: 100%;
+        width: 100%; 
     }
 
     // Button Icon Only Modifier
@@ -167,122 +172,64 @@ In this file:
     .button--icon-only {
         display: inline-flex;
         flex-shrink: 0;
-
         align-items: center;
         justify-content: center;
 
-        width: var(--button-icon-only-size);
-        height: var(--button-icon-only-size);
+        container-type: size;
 
         aspect-ratio: 1;
 
         [class*="icon-"] {
-            --icon-size: 1.25em;
-
+            --icon-size: 50cqi;
+            
             display: flex;
         }
     }
+    
+    // Button Icon Over Text Modifier
 
-    // Icon Only Tooltip (via JS)
-
-    .button__tooltip {
-        --button-tooltip-background: hsla(0, 0%, 0%, 0.9);
-
-        position: absolute;
-        top: -150000px;
-        left: 50%;
-
-        transform: translateX(-50%);
-
-        display: block;
-
-        margin-block-start: var(--spacer-2);
-
-        padding: 0.5em 1em;
-
-        border-radius: inherit;
-
-        background-color: var(--button-tooltip-background);
-
-        color: white;
-
-        font-size: var(--font-size-sm);
-
-        white-space: nowrap;
-
-        pointer-events: none;
-
-        &.left {
-            transform: unset;
-            right: unset;
-            inset-inline-start: 0;
-        }
-
-        &.right {
-            transform: unset;
-            left: unset;
-            inset-inline-end: 0;
-        }
-    }
-
-    .tooltip-show > .button__tooltip {
-        inset-block-start: 100%;
-
-        animation-name: fadeIn;
-        animation-duration: 0.5s;
-    }
-
-    @keyframes fadeIn {
-
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-
-    }
-
-    // Button Icon Label Modifier
-
-    .button--icon-label {
-        --font-size-sm: 0.675rem;
+    .button--icon-over-text {
+        --font-size-sm: 0.75rem;
         --focus-outline-offset: -4px;
-
-        color: var(--default-link-color);
 
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-
+        
         text-align: center;
         
-        gap: 0.25em;
+        gap: 0.375em;
 
-        width: var(--button--icon-label-width);
+        width: var(--button-icon-over-text-width);
 
-        span.icon {
+        [class*="__icon"] {
             display: flex;
+
             align-items: center;
-            justify-content: center;
             
-            padding: 0.25em;
+            justify-content: center;
 
             margin-inline: auto;
 
-            width: var(--button-icon-only-size);
-            height: var(--button-icon-only-size);
+            aspect-ratio: 1 / 1;
 
-            aspect-ratio: 1;
+            min-height: var(--button-target-size);
 
-            border-radius: var(--button--icon-label-border-radius);
+            border-radius: var(--button-icon-over-text-border-radius);
 
-            @extend %subtle-fill-psuedo;
+            &:not([class*="theme-"]) {
+                @extend %subtle-fill;
+            }
+        }
+
+        [class*="text"] {
+            min-width: 100%;
+
+            font-size: var(--button-icon-over-text-font-size);
+
+            font-weight: var(--font-weight-bold);
         }
 
         &:focus-visible {
-
             outline: unset;
 
             > [class*="icon"] {
@@ -291,40 +238,11 @@ In this file:
             }
         }
 
-        &[aria-selected="true"] [class*="icon"] {
-            background-color: var(--default-link-color);
-            color: var(--canvas);
-        }
-
-        [class*="__text"] {
-            min-width: 100%;
-
-            font-size: var(--font-size-sm);
-            font-weight: var(--body-font-weight-bold);
-        }
-    }
-
-    // Button Group
-
-    .button-group {
-        --gap-size: var(--button-group-gap);
-        
-        display: flex;
-
-        gap: var(--gap-size);
-
-        min-height: var(--button-icon-only-size);
-
-        > [class*="button"]:not(.button--icon-only):not(.button--icon-label) {
-            --button-padding-y: 0;
-
-            align-self: stretch;
-
-            display: flex;
-            align-items: center;
-            flex-shrink: 0;
-            
-            font-size: 80%;
+        &:hover,
+        &:focus {
+            [class*="__text"] {
+                text-decoration: underline;
+            }
         }
     }
 

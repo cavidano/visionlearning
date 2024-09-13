@@ -148,7 +148,7 @@ In this file:
 
         border-radius: var(--form-field-border-radius);
 
-        @extend %subtle-fill-psuedo;
+        @extend %subtle-fill;
         --subtle-fill-opacity: 0.075;
 
         display: flex;
@@ -157,7 +157,7 @@ In this file:
         color: var(--primary);
 
         > span {
-            @extend %subtle-fill-psuedo;
+            @extend %subtle-fill;
             --subtle-fill-opacity: 0.075;
 
             display: flex;

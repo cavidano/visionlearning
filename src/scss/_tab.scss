@@ -20,13 +20,22 @@ In this file:
 ////////////////////////////////////////
 
 :root {
+    // Tabs Nav
+
     --tab-button-padding-x: var(--spacer-3);
+
     --tab-button-padding-y: var(--button-padding-y);
 
+    --tab-button-target-size: var(--button-target-size);
+
     --tab-button-color: var(--link-color, currentColor);
+
+    // Active Tab
+    
     --tab-active-button-color: currentColor;
 
     --tab-active-bar-size: calc(var(--border-width) * 3);
+    
     --tab-active-bar-color: currentColor;
 }
 
@@ -70,11 +79,15 @@ In this file:
         > li > button {
             position: relative;
             
-            display: block;
+            display: flex;
+
+            align-items: center;
 
             width: 100%;
             
             padding: var(--tab-button-padding-y) var(--tab-button-padding-x);
+
+            min-height: var(--tab-button-target-size);
             
             text-align: left;
 
@@ -101,7 +114,7 @@ In this file:
             [aria-current="page"],
             [aria-selected="true"]
         ) {
-            font-weight: var(--body-font-weight-bold);
+            font-weight: var(--font-weight-bold);
 
             color: var(--tab-active-button-color);
 

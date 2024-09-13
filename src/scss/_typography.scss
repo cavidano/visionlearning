@@ -35,9 +35,9 @@ In this file:
 
     --header-font-family: var(--body-font-family);
     
-    --body-font-weight-normal: 400;
-    --body-font-weight-medium: 600;
-    --body-font-weight-bold: 700;
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
 
     // Base Font Size and Type Scale
 
@@ -65,7 +65,7 @@ In this file:
 
     --banner-headline-font-size: calc(var(--h1-font-size) * var(--type-scale));
 
-    --banner-headline-font-weight: var(--body-font-weight-normal);
+    --banner-headline-font-weight: var(--font-weight-normal);
 
     // Line Heights
 
@@ -97,7 +97,7 @@ In this file:
 
         font-size: var(--font-size-rg);
         
-        font-weight: var(--body-font-weight-normal);
+        font-weight: var(--font-weight-normal);
         
         line-height: var(--body-line-height);
     }
@@ -187,7 +187,7 @@ In this file:
         h6, .h6 
     ) {
         font-family: var(--header-font-family);
-        font-weight: var(--body-font-weight-bold);
+        font-weight: var(--font-weight-bold);
         line-height: var(--header-line-height);
 
         &:not(.accordion__button):not(.alert__title):not(:last-child){
@@ -261,9 +261,9 @@ In this file:
     // Font Weight
 
     $font-weights: (
-        normal: var(--body-font-weight-normal),
-        medium: var(--body-font-weight-medium),
-        bold: var(--body-font-weight-bold),
+        normal: var(--font-weight-normal),
+        medium: var(--font-weight-medium),
+        bold: var(--font-weight-bold),
     );
 
     @each $key, $value in $font-weights {
