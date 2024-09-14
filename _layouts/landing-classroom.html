@@ -12,7 +12,7 @@ layout: global
 
                 <div>
 
-                    <div class="grid grid--divider font-size-md">
+                    <div class="grid grid--divider">
 
                         <div class="grid grid--column-2 gap-1 display-none--xl">
 
@@ -76,7 +76,7 @@ layout: global
 
                         <div class="collapse display-block--xl" id="material-nav">
                             
-                            <nav>
+                            <nav class="font-size-md">
 
                                 {% if page.title contains 'Glossary' %}
 
@@ -159,7 +159,7 @@ layout: global
 
                     </div>
 
-                    <ul class="grid gap-1">
+                    <ul class="grid gap-1 margin-bottom-2">
 
                         <li>
                             <a class="button button--disperse text-color-link" href="{{ site.url }}/classroom/my-courses">
@@ -176,8 +176,6 @@ layout: global
                         </li>
 
                     </ul>
-
-                    <hr class="divider" />
 
                     {% include process-of-science-book.html %}
 

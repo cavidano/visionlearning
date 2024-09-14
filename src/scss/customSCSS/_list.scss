@@ -7,6 +7,12 @@ In this file:
 
 */
 
+:root {
+
+    --list-item-target-size: var(--button-target-size);
+
+}
+
 //////////////////////////////////////////////
 // A. Base
 //////////////////////////////////////////////
@@ -45,20 +51,26 @@ In this file:
 
     .list-divider {
         --padding-x: 1em;
-        --padding-y: 0.75em;
+        --padding-y: 0.5em;
 
         list-style: none;
 
         > li {
-            min-width: 0;
-
-            padding-block: var(--padding-y);
-
             overflow: hidden;
 
             font-size: var(--font-size-md);
 
             color: var(--link-color);
+
+            padding-block: var(--padding-y);
+
+            display: flex;
+
+            min-height: var(--list-item-target-size);
+
+            button {
+                --button-target-size: calc(var(--list-item-target-size) - 0.25em);
+            }
         }
 
         > li:not(:last-child) {
@@ -72,8 +84,8 @@ In this file:
 
         > li:has([class*="__cell"]) {
             display: grid;
+            
             grid-template-columns: 1fr auto;
-            align-items: flex-start;
 
             gap: var(--spacer-3);
 
@@ -86,11 +98,15 @@ In this file:
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
-
             min-height: var(--button-icon-only-size);
         }
 
+        a {
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
     }
 
     // Title list

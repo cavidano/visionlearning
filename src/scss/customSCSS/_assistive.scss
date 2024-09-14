@@ -28,23 +28,23 @@ In this file:
 
 %hover-focus {
 
-    &:hover,
-    &:focus {
-        &:not(
-            [class*="no-hover-focus"],
-            [class*="icon"],
-            [class*="backdrop"],
-            [class*="interactive-animation"],
-            [class*="accordion__button"],
-            [class*="form-entry__field__input__clear"],
-            [aria-disabled="true"],
-            [class*="__element"],
-            [class*="nav--has-icons"] > li > *,
-            p > a
-        ) {
-            text-decoration: underline;
-        }
-    }
+    // &:hover,
+    // &:focus {
+    //     &:not(
+    //         [class*="no-hover-focus"],
+    //         [class*="icon"],
+    //         [class*="backdrop"],
+    //         [class*="interactive-animation"],
+    //         [class*="accordion__button"],
+    //         [class*="form-entry__field__input__clear"],
+    //         [aria-disabled="true"],
+    //         [class*="__element"],
+    //         [class*="nav--has-icons"] > li > *,
+    //         p > a
+    //     ) {
+    //         text-decoration: underline;
+    //     }
+    // }
 
     &:not([class*="button--icon-label"]):focus-visible {
         outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
