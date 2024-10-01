@@ -256,10 +256,9 @@ In this file:
         }
 
         > ul > li:first-child {
-            padding-inline: 0.5em;
 
             a {
-                --subtle-fill-opacity: 0;
+                --subtle-fill-opacity: 0%;
             }
         }
 
@@ -273,12 +272,11 @@ In this file:
         }
 
         > ul > li > .button {
-            --button-padding-y: 0.75em;
             --button-border-radius: 0;
             --button-font-weight: var(--font-weight-normal);
 
             &[aria-expanded="true"] {
-                 background-color: var(--module-breadcrumb-background-color);
+                background-color: var(--module-breadcrumb-background-color);
             }
         }
 
@@ -377,7 +375,9 @@ In this file:
 
         > button {
             border-radius: var(--button-border-radius);
-            padding: var(--button-padding-y) var(--button-padding-x);
+            min-height: var(--button-target-size);
+            
+            aspect-ratio: 1 / 1;    
         }
 
         > button[aria-current] {

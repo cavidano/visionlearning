@@ -24,7 +24,7 @@ In this file:
 
 :root {
     --accordion-button-padding-x: 1em;
-    --accordion-button-padding-y: var(--button-padding-y);
+    --accordion-button-padding-y: 0.75em;
 
     --accordion-panel-padding-x: var(--accordion-button-padding-x);
     --accordion-panel-padding-y: 1em;
@@ -47,15 +47,13 @@ In this file:
 
         .accordion__button {
 
-            @extend %subtle-fill;
-            --subtle-fill-opacity: 5%; 
-
             overflow: hidden;
             border-radius: var(--button-border-radius);
 
             color: var(--link-color);
 
-            background-color: var(--subtle-fill-color);
+            --subtle-fill-opacity: 5%;
+            background-color: var(--subtle-fill-background-color);
 
             &:not(:first-child){
                 margin-block-start: var(--spacer-1);

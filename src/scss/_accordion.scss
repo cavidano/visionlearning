@@ -55,7 +55,7 @@ In this file:
         position: relative;
         overflow: hidden;
             
-        @extend %subtle-fill;
+        background-color: var(--subtle-fill-background-color);
         --subtle-fill-opacity: 5%; 
 
         border-radius: var(--button-border-radius);

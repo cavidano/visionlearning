@@ -741,7 +741,7 @@ In this file:
 
         font-size: var(--font-size-sm);
 
-        @extend %subtle-fill;
+       background-color: var(--subtle-fill-background-color);
 
         .active & {
             --subtle-fill-opacity: 10%;

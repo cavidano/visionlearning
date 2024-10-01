@@ -16,16 +16,12 @@
     {% assign url = '/library/module/reading.html' %}
 {% endif %}
 
-<a class="no-hover-focus height-100" href="{{ site.url }}{{ url }}">
+<a class="flex-column padding-2 theme-light" href="{{ site.url }}{{ url }}">
 
-    <article class="flex-column padding-2 theme-light">
-
-        <div class="margin-bottom-2">
-            <img class="border-radius box-shadow-1" src="{{ site.url }}{{ src }}" alt="Placeholder" />
-        </div>
+    <div class="margin-bottom-2">
+        <img class="border-radius box-shadow-1" src="{{ site.url }}{{ src }}" alt="Placeholder" />
+    </div>
         
-        {{ content }}
-
-    </article>
+    {{ content }}
     
 </a>

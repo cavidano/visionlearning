@@ -39,8 +39,8 @@ In this file:
             [class*="--inverse"],
             [class*="background-"]
         ) {
-            @extend %subtle-fill;
             --subtle-fill-opacity: 10%;
+            background-color: var(--subtle-fill-background-color);
         }    
 
         &[class*="border"] {

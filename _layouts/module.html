@@ -166,40 +166,48 @@ layout: global
 						
 							<div class="tabs" role="tablist">
 
-								<nav>
-
-									<button
-										class="button button--icon-label"
-										aria-label="In this module"
-										aria-controls="tab-panel-module__tools"
-										aria-selected="true"
-										role="tab"
-									>
-										<span class="icon icon-list" aria-hidden="true"></span>
-										<span class="button__text">Contents</span>
-									</button>
-
-									<button
-										class="button button--icon-label"
-										aria-controls="tab-panel-toggle-terms"
-										aria-selected="false"
-										role="tab"
-									>
-										<span class="icon icon-glossary-highlight"></span>
-										<span class="button__text">Glossary Terms</span>
-									</button>
-
-									<button
-										class="button button--icon-label"
-										aria-controls="tab-panel-toggle-ngss"
-										aria-selected="false"
-										role="tab"
-									>
-										<span class="icon icon-ngss"></span>
-										<span class="button__text">NGSS</span>
-									</button>
-
-								</nav>
+								<ul class="tab__buttons">
+									<li>
+										<button
+											class="button button--icon-over-text"
+											aria-label="In this module"
+											aria-controls="tab-panel-module__tools"
+											aria-selected="true"
+											role="tab"
+										>
+										<span class="button__icon">
+											<span class="icon icon-list" aria-hidden="true"></span>
+										</span>
+											<span class="button__text">Contents</span>
+										</button>
+									</li>
+									<li>
+										<button
+											class="button button--icon-over-text"
+											aria-controls="tab-panel-toggle-terms"
+											aria-selected="false"
+											role="tab"
+										>
+											<span class="button__icon">
+												<span class="icon icon-glossary-highlight" aria-hidden="true"></span>
+											</span>
+											<span class="button__text">Glossary Terms</span>
+										</button>
+									</li>
+									<li>
+										<button
+											class="button button--icon-over-text"
+											aria-controls="tab-panel-toggle-ngss"
+											aria-selected="false"
+											role="tab"
+										>
+											<span class="button__icon">
+												<span class="icon icon-ngss" aria-hidden="true"></span>
+											</span>
+											<span class="button__text">NGSS</span>
+										</button>
+									</li>
+								</ul>
 
 								<hr class="divider" />
 

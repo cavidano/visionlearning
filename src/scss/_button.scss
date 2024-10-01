@@ -111,7 +111,7 @@ In this file:
             [class*="background-color"],
             [data-toggle="dropdown"]
         ) {
-            @extend %subtle-fill;
+            background-color: var(--subtle-fill-background-color);
         }
 
         &:hover, 
@@ -217,7 +217,7 @@ In this file:
             border-radius: var(--button-icon-over-text-border-radius);
 
             &:not([class*="theme-"]) {
-                @extend %subtle-fill;
+                background-color: var(--subtle-fill-background-color);
             }
         }
 
