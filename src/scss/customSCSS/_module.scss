@@ -3,8 +3,7 @@
 In this file:
 
 // A. Modules
-// B. Variables
-// C. Components
+// B. Components
 
 */
 
@@ -16,31 +15,63 @@ In this file:
 @use "../breakpoint";
 
 //////////////////////////////////////////////
-// B. Variables
-//////////////////////////////////////////////
-
-.module {
-    --grid-sidebar-width: 22em;
-}
-
-//////////////////////////////////////////////
-// C. Components
+// B. Components
 //////////////////////////////////////////////
 
 @layer component {
 
-    // Module Header
+    .module {
+        --_sidebar-width: 22em;
+        --_module-gap: var(--spacer-2);
+
+        display: grid;
+        
+        gap: var(--module-gap);
+
+        @include breakpoint.breakpoint-up(lg) {
+
+            grid-template-columns: 1fr var(--_sidebar-width);
+
+            grid-template-rows: auto auto auto 1fr;
+
+            grid-template-areas:
+                "header audio"
+                "divider divider"
+                "tabs tools"
+                "main tools";
+
+            [class*="__header"] {
+                grid-area: header;
+            }
+
+            [class*="__tabs"] {
+                grid-area: tabs;
+
+                margin-block-start: calc(var(--grid-divider-gap) * -0.5);
+            }
+
+            [class*="__audio"] {
+                grid-area: audio;
+            }
+
+            [class*="__divider"] {
+                grid-area: divider;
+                outline: unset;
+            }
+
+            [class*="tools"] {
+                grid-area: tools;
+            }
+
+            [class*="main"] {
+                grid-area: main;
+            }
+        }
+    }
+    
+    // Module Children
 
     .module__header {
-        gap: var(--grid-divider-gap);
-        align-items: end;
-    }
-
-    .module__header__title {
-        position: relative;
-        
-        padding-block: var(--spacer-2);
-
         text-align: center;
 
         h1 {
@@ -53,34 +84,22 @@ In this file:
         }
     }
 
-    .module_header_audio {
+    .module__tabs {
+        > .tabs-nav {
+            max-width: var(--medium-width);
+            margin-inline: auto;
+        }
+    }
+
+    .module__audio {
         display: flex;
+        align-items: end;
     }
-
-    @include breakpoint.breakpoint-down(lg) {
-        .module__header__tabs {
-            margin-inline: calc(var(--container-padding-x-sm) * -1);
-        }
-    }
-
-    @include breakpoint.breakpoint-up(lg) {
-        .module__header__tabs {
-            position: absolute;
-            inset-block-start: 100%;
-            inset-inline-start: 0;
-            inset-inline-end: 0;
-            
-            z-index: 10000;
-
-            width: 100%;
-        }
-    }
-
-    // Module Body
 
     .module__main {
         container-type: inline-size;
         container-name: module-main;
+
         padding-top: var(--spacer-4);
     }
 
@@ -94,26 +113,20 @@ In this file:
         margin-block-start: var(--spacer-4);
     }
 
-    .module__header__tabs {
-        --shift: calc(var(--grid-divider-gap) * 0.5);
-
-        font-size: var(--font-size-md);
-        
-        margin-block-start: var(--shift);
-
-        ul {
-            max-width: var(--narrow-width);
-            margin-inline: auto;
-        }
-    }
-
     // Module Tools
 
     .module__tools {
+    
 
+        [class*="__tools__container"] {
+        background-color: antiquewhite;
+        }
+        
         .tab__buttons {
-            list-style: none;
+            --focus-outline-color: currentColor;
             
+            list-style: none;
+
             display:flex; 
             align-items: baseline;
             justify-content: center;

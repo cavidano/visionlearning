@@ -18,6 +18,7 @@ const devPages = {
     'Grid': 'grid',
     'Modal': 'modal',
     'Math': 'math',
+    'Module': 'module',
     'HeaderFooter': 'header-footer',
     'Lightbox': 'lightbox',
     'List': 'list',
@@ -30,8 +31,7 @@ const devPages = {
 }
 
 const devDir = './html';
-
-const devPage = `${devPages.Accordion}.html`;
+const devPage = `${devPages.Module}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
@@ -62,10 +62,13 @@ module.exports = merge(common, {
                             injectType: 'singletonStyleTag'
                         },
                     },
-                    "css-loader",
-                    "sass-loader",
+                    'css-loader',
+                    { 
+                        loader: 'postcss-loader'
+                    },
+                    'sass-loader',
                 ],
-            }
+            },
         ],
     },
     plugins: [

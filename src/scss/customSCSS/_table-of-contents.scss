@@ -14,6 +14,13 @@ In this file:
 @layer component {
 
     .table-of-contents {
+    
+        font-size: var(--font-size-md);
+
+        [class*="__title"] {
+            font-weight: var(--font-weight-bold);
+            margin-block-end: 0.5em;
+        }
 
         ul {
             list-style: none;
@@ -29,7 +36,7 @@ In this file:
         }
         
         ul > li > a {
-            font-size: var(--font-size-md);
+            color: var(--link-color);
         }
 
         ul > li > ul > li > a{

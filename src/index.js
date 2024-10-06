@@ -2,7 +2,7 @@
 // A. SCSS
 //////////////////////////////////////////////
 
-import './scss/styles.scss';
+import './scss/index.scss';
 
 //////////////////////////////////////////////
 // B. JS
@@ -10,6 +10,7 @@ import './scss/styles.scss';
 
 // Natura11y JS Modules
 
+import Accordion from './js/accordion';
 import AlertDismissable from './js/alert';
 import Collapse from './js/collapse';
 import FormInput, { FormSubmission, FormFileUpload } from './js/form';
@@ -21,8 +22,6 @@ import Tab from './js/tab';
 // Custom JS Modules
 
 import AudioPlayer from './js/customJS/audio-player';
-
-import Accordion from './js/customJS/accordion';
 import AnchorNav from './js/customJS/anchor-nav';
 import { CompCheck } from './js/customJS/quiz'; 
 import Layout from './js/customJS/layout'; 
