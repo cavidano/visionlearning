@@ -117,9 +117,17 @@ In this file:
 
     .module__tools {
     
+        [class*="__container"] {
+            position: sticky;
+            top: var(--spacer-3);
 
-        [class*="__tools__container"] {
-        background-color: antiquewhite;
+            padding: var(--spacer-2) var(--container-padding-x);
+
+
+            &:has([class*="tabs"]) .table-of-contents {
+                padding-block-start: var(--spacer-2);
+                border-top: var(--border-width) var(--border-style) var(--border-color);
+            }
         }
         
         .tab__buttons {
