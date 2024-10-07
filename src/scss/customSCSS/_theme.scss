@@ -88,7 +88,6 @@ h1 > sub {
 }
 
 hr.divider {
-
     margin-block: calc(var(--grid-divider-gap) * 0.5);
 }
 
@@ -96,6 +95,12 @@ hr.divider {
     --tab-active-bar-color: var(--primary);
     &.library {
         --tab-active-bar-color: var(--library);
+
+    // Pill Active Tab
+
+    --tab-nav-pill-active-text-color: var(--library-text);
+    --tab-nav-pill-active-background-color: var(--library);
+
     }
     &.glossary {
         --tab-active-bar-color: var(--glossary);

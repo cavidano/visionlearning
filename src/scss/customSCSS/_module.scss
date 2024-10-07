@@ -22,13 +22,16 @@ In this file:
 
     .module {
         --_sidebar-width: 22em;
-        --_module-gap: var(--spacer-2);
+        --_module-gap: var(--spacer-3);
 
         display: grid;
         
-        gap: var(--module-gap);
+        gap: var(--_module-gap);
 
         @include breakpoint.breakpoint-up(lg) {
+
+
+        --_module-gap: var(--spacer-2);
 
             grid-template-columns: 1fr var(--_sidebar-width);
 
@@ -46,8 +49,6 @@ In this file:
 
             [class*="__tabs"] {
                 grid-area: tabs;
-
-                margin-block-start: calc(var(--grid-divider-gap) * -0.5);
             }
 
             [class*="__audio"] {
@@ -86,8 +87,9 @@ In this file:
 
     .module__tabs {
         > .tabs-nav {
-            max-width: var(--medium-width);
+            max-width: var(--narrow-width);
             margin-inline: auto;
+            font-size: var(--font-size-md);
         }
     }
 
@@ -114,22 +116,25 @@ In this file:
     }
 
     // Module Tools
+    
+    .module__tools,
+    .module__tools__container {
+        position: sticky;
+        top: var(--spacer-2);
+    }
 
     .module__tools {
-    
-        [class*="__container"] {
-            position: sticky;
-            top: var(--spacer-3);
+        background-color: color-mix(in srgb, var(--canvas), transparent 5%);
+        backdrop-filter: blur(3px);
+    }
 
-            padding: var(--spacer-2) var(--container-padding-x);
+    .module__tools__container {
+        padding-inline: var(--container-padding-x);
 
-
-            &:has([class*="tabs"]) .table-of-contents {
-                padding-block-start: var(--spacer-2);
-                border-top: var(--border-width) var(--border-style) var(--border-color);
-            }
+        &:has(.shown) {
+            padding-block-end: var(--spacer-2);
         }
-        
+
         .tab__buttons {
             --focus-outline-color: currentColor;
             
@@ -141,7 +146,7 @@ In this file:
             
             gap: var(--spacer-2);
 
-            font-size: var(--font-size-md);
+            padding-block: var(--spacer-2);
 
             color: var(--link-color);
 
@@ -152,7 +157,6 @@ In this file:
                 }
             }
         }
-        
     }
 
     // Citation

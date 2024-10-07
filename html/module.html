@@ -54,9 +54,9 @@
 
                     <nav class="module__tabs">
 
-                        <ul class="tabs-nav tabs-nav--horizontal library">
+                        <ul class="tabs-nav tabs-nav--pill tabs-nav--horizontal--md library">
                             <li>
-                                <a href="#1" aria-current="page">
+                                <a href="#1" class="is-active" aria-current="page">
                                     Reading
                                 </a>
                             </li>
@@ -121,15 +121,15 @@
                     
                     </div>
 
-                    <hr class="module__divider divider" />
+                    <hr class="module__divider" />
 
                     <div class="module__tools">
 
                         <aside class="module__tools__container border-radius box-shadow-1">
 
-                            <div class="tabs" role="tablist">
+                            <div class="tabs tabs--toggle-mobile--lg" role="tablist">
 
-                                <ul class="tab__buttons margin-bottom-2">
+                                <ul class="tab__buttons">
                                     <li>
                                         <button class="button button--icon-over-text" aria-label="In this module" aria-controls="tab-panel-module__tools" aria-selected="true" role="tab">
                                             <span class="button__icon">
@@ -162,8 +162,7 @@
                                     aria-labelledby="tab-button-module__tools" 
                                     role="tabpanel"
                                 >
-
-                                    <div class="table-of-contents border-top">
+                                    <div class="table-of-contents">
 
                                         <p class="table-of-contents__title">
                                             Table of Contents
@@ -219,7 +218,12 @@
 
                                 </div>
 
-                                <div class="tabs__panel" id="tab-panel-toggle-terms" aria-labelledby="tab-button-toggle-terms" role="tabpanel">
+                                <div
+                                    class="tabs__panel"
+                                    id="tab-panel-toggle-terms"
+                                    aria-labelledby="tab-button-toggle-terms"
+                                    role="tabpanel"
+                                >
             
                                     <div class="reading-toggle">
 
@@ -288,7 +292,7 @@
 
                     <div class="module__main">
 
-                    <div class="container narrow">
+                    <div class="narrow margin-x-auto">
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ligula id nisi finibus bibendum. Phasellus eget enim at purus dignissim dapibus. Vivamus volutpat augue quis felis malesuada, et facilisis sapien elementum. Nunc in tortor eget lectus consequat gravida quis sed ipsum. Cras sed luctus arcu, nec bibendum nulla.</p>
 

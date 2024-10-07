@@ -120,6 +120,11 @@ In this file:
     --dark-confirm: #00a242;
     --dark-warn: #fe3c3e;
 
+    // Subtle Fill Colors
+
+    --subtle-fill-1: color-mix(in srgb, currentColor 5%, transparent);
+    --subtle-fill-2: color-mix(in srgb, currentColor 10%, transparent);
+
     // Discipline Colors
 
     --biology-color: #00492f;

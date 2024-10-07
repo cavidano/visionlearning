@@ -13,7 +13,6 @@ In this file:
 ////////////////////////////////////////
 
 @use "sass:math";
-@use './accent';
 
 //////////////////////////////////////////////
 // A. Variables
@@ -24,7 +23,7 @@ In this file:
 
     --button-padding-y: 0.5em;
 
-    --button-target-size: 2.75em;
+    --button-target-size: 2.5em;
 
     --button-font-family: var(--body-font-family);
 
@@ -82,8 +81,6 @@ In this file:
         justify-content: center;
         align-items: center;
 
-        flex-shrink: 0;
-
         vertical-align: middle;
 
         line-height: normal;
@@ -111,7 +108,7 @@ In this file:
             [class*="background-color"],
             [data-toggle="dropdown"]
         ) {
-            background-color: var(--subtle-fill-background-color);
+            background-color: var(--subtle-fill-1);
         }
 
         &:hover, 
@@ -145,7 +142,7 @@ In this file:
 
     // :has() Selectors
 
-    .button:has([class*="icon-"]) {
+    .button:not([class*="button--icon-over-text"]):has([class*="icon-"]) {
         align-items: center;
 
         gap: 0.5em;
@@ -164,7 +161,7 @@ In this file:
    
     .button--disperse {
         justify-content: space-between;
-        width: 100%; 
+        width: 100%;
     }
 
     // Button Icon Only Modifier
@@ -190,7 +187,6 @@ In this file:
 
     .button--icon-over-text {
         --font-size-sm: 0.75rem;
-        --focus-outline-offset: -4px;
 
         display: flex;
         flex-direction: column;
@@ -217,7 +213,7 @@ In this file:
             border-radius: var(--button-icon-over-text-border-radius);
 
             &:not([class*="theme-"]) {
-                background-color: var(--subtle-fill-background-color);
+                background-color: var(--subtle-fill-1);
             }
         }
 
@@ -227,22 +223,6 @@ In this file:
             font-size: var(--button-icon-over-text-font-size);
 
             font-weight: var(--font-weight-bold);
-        }
-
-        &:focus-visible {
-            outline: unset;
-
-            > [class*="icon"] {
-                outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
-                outline-offset: var(--focus-outline-offset);
-            }
-        }
-
-        &:hover,
-        &:focus {
-            [class*="__text"] {
-                text-decoration: underline;
-            }
         }
     }
 
