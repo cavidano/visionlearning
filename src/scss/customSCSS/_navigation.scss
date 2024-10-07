@@ -106,8 +106,11 @@ In this file:
 
         ul {
             list-style: none;
+
             line-height: normal;
+
             padding: initial;
+            
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
@@ -191,6 +194,8 @@ In this file:
 
     #es-translate {
         color: white;
+
+        --focus-outline-color: currentColor;
         
         background-image: linear-gradient(#d2593f,#bf3823);
     }
@@ -382,15 +387,17 @@ In this file:
 
         > button[aria-current] {
             font-weight: bold;
+
             text-decoration: underline;
+            
             background-color: white;
+            
             box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 
             span {
                 display: block;
                 transform: scale(1.25);
             }
-            
         }
     }
 
