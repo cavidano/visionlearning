@@ -6,11 +6,11 @@ layout: global
 	
 	<div class="margin-bottom-5">
 	
-		<article class="container narrow wide--lg module">
+		<div class="container narrow wide--lg margin-y-4">
 
-			<header class="grid grid--sidebar-right module__header">
-
-				<div class="module__header__title">
+			<article class="module">
+			
+				<header class="module__header">
 
 					<span class="subcategory">
 						<strong>
@@ -32,45 +32,48 @@ layout: global
 						by Anne E. Egger, Ph.D.
 					</p>
 
-					<nav class="module__header__tabs">
+				</header>
 
-						<ul class="tabs-nav tabs-nav--horizontal library">
-							<li>
-								<a
-									href="{{ site.url }}/library/module/reading.html"
-									{% if page.url contains '/reading.html' %}
-									aria-current="page" 
-									{% endif %}>
-										Reading
-								</a>
-							</li>
-							<li>
-								<a
-									href="{{ site.url }}/library/module/quiz.html"
-									{% if page.url contains '/quiz.html' %}
-									aria-current="page" 
-									{% endif %}>
-										Quiz
-								</a>
-							</li>
-							<li>
-								<a
-									href="{{ site.url }}/library/module/teach.html"
-									{% if page.url contains '/teach.html' %}
-									aria-current="page" 
-									{% endif %}>
-										Teach with this
-								</a>
-							</li>
-						</ul>
+				<nav class="module__tabs">
 
-					</nav>
+					<ul class="tabs-nav tabs-nav--pill tabs-nav--horizontal--md library">
+						<li>
+							<a
+								href="{{ site.url }}/library/module/reading.html"
+								{% if page.url contains '/reading.html' %}
+								class="is-active"
+								aria-current="page" 
+								{% endif %}>
+									Reading
+							</a>
+						</li>
+						<li>
+							<a
+								href="{{ site.url }}/library/module/quiz.html"
+								{% if page.url contains '/quiz.html' %}
+								class="is-active"
+								aria-current="page" 
+								{% endif %}>
+									Quiz
+							</a>
+						</li>
+						<li>
+							<a
+								href="{{ site.url }}/library/module/teach.html"
+								{% if page.url contains '/teach.html' %}
+								class="is-active"
+								aria-current="page" 
+								{% endif %}>
+									Teach with this
+							</a>
+						</li>
+					</ul>
 
-				</div>
+				</nav>
 
 				{% if page.tab == 'reading' %}
 
-				<div class="module_header_audio">
+				<div class="module__audio">
 
 					<div class="audio-player border border-radius">
 
@@ -144,229 +147,186 @@ layout: global
 
 				{% endif %}
 
-			</header>
-
-			<hr class="divider" />
-
-			<div class="grid grid--sidebar-right grid--divider">
-			
-				<div class="order-2 order-1--lg module__main">
-
-					{{ content }}
-
-				</div>
+				<hr class="module__divider" />
 
 				{% if page.tab == 'reading' %}
 
-				<div class="order-1 order-2--lg module__tools">
+				<div class="module__tools">
 
-					<div class="narrow margin-x-auto font-size-md position-sticky-top--xl">
+					<aside class="module__tools__container border-radius box-shadow-1">
 
-						<div class="padding-2 border-radius box-shadow-1--lg">
-						
-							<div class="tabs" role="tablist">
+						<div class="tabs tabs--toggle-mobile--lg" role="tablist">
 
-								<ul class="tab__buttons">
-									<li>
-										<button
-											class="button button--icon-over-text"
-											aria-label="In this module"
-											aria-controls="tab-panel-module__tools"
-											aria-selected="true"
-											role="tab"
-										>
+							<ul class="tab__buttons">
+								<li>
+									<button class="button button--icon-over-text" aria-label="In this module" aria-controls="tab-panel-module__tools" aria-selected="true" role="tab">
 										<span class="button__icon">
 											<span class="icon icon-list" aria-hidden="true"></span>
 										</span>
-											<span class="button__text">Contents</span>
-										</button>
-									</li>
-									<li>
-										<button
-											class="button button--icon-over-text"
-											aria-controls="tab-panel-toggle-terms"
-											aria-selected="false"
-											role="tab"
-										>
-											<span class="button__icon">
-												<span class="icon icon-glossary-highlight" aria-hidden="true"></span>
-											</span>
-											<span class="button__text">Glossary Terms</span>
-										</button>
-									</li>
-									<li>
-										<button
-											class="button button--icon-over-text"
-											aria-controls="tab-panel-toggle-ngss"
-											aria-selected="false"
-											role="tab"
-										>
-											<span class="button__icon">
-												<span class="icon icon-ngss" aria-hidden="true"></span>
-											</span>
-											<span class="button__text">NGSS</span>
-										</button>
-									</li>
-								</ul>
+										<span class="button__text">Contents</span>
+									</button>
+								</li>
+								<li>
+									<button class="button button--icon-over-text" aria-controls="tab-panel-toggle-terms" aria-selected="false" role="tab">
+										<span class="button__icon">
+											<span class="icon icon-glossary-highlight" aria-hidden="true"></span>
+										</span>
+										<span class="button__text">Glossary Terms</span>
+									</button>
+								</li>
+								<li>
+									<button class="button button--icon-over-text" aria-controls="tab-panel-toggle-ngss" aria-selected="false" role="tab">
+										<span class="button__icon">
+											<span class="icon icon-ngss" aria-hidden="true"></span>
+										</span>
+										<span class="button__text">NGSS</span>
+									</button>
+								</li>
+							</ul>
 
-								<hr class="divider" />
+							<div
+								class="tabs__panel shown"
+								id="tab-panel-module__tools"
+								aria-labelledby="tab-button-module__tools" 
+								role="tabpanel"
+							>
+								<div class="table-of-contents">
 
-								<div
-									class="tabs__panel shown"
-									id="tab-panel-module__tools"
-									aria-labelledby="tab-button-module__tools"
-									role="tabpanel">
-
-									<p class="font-weight-bold margin-bottom-1">
+									<p class="table-of-contents__title">
 										Table of Contents
 									</p>
 
-									<div class="table-of-contents">
-										<ul>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc_1">
-													Introduction
-												</a>
-											</li>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc_2">
-													Evidence about Earth's interior
-												</a>
-											</li>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc_3">
-													Seismic waves
-												</a>
-											</li>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc_4">
-													The Moho
-												</a>
-											</li>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc_5">
-													Shadow zones
-												</a>
-											</li>
-											<li>
-												<a href="{{ site.url }}/library/module/reading.html#toc_6">
-													The layers of Earth
-												</a>
-											</li>
-											<li>
-												<ul>
-													<li>
-														<a href="{{ site.url }}/library/module/reading.html#toc6_1">
-															Compositional layers
-														</a>
-													</li>
-													<li>
-														<a href="{{ site.url }}/library/module/reading.html#toc6_2">
-															Mechanical layers
-														</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-
-									</div>
-
-								</div>
-
-								<div
-									class="tabs__panel"
-									id="tab-panel-toggle-terms"
-									aria-labelledby="tab-button-toggle-terms"
-									role="tabpanel">
-		
-									<div class="reading-toggle">
-
-										<div class="reading-toggle__switch">
-											
-											<div class="form-entry__option__switch">
-
-												<label>
-													<input
-														type="checkbox" 
-														name="termsToggleSwitch" 
-														id="terms-toggle-switch"
-													/>
-													<span class="switch__slider"></span>
-													<span class="option__label text-decoration-none font-size-md">
-														Highlight Glossary Terms
-													</span>
-												</label>
-
-											</div>
-										
-										</div>
-
-										<div class="reading-toggle__help">								
-											<p>
-												<em>
-													Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions.
-												</em>
-											</p>
-										</div>
-
-									</div>
-
-								</div>
-
-								<div
-									class="tabs__panel"
-									id="tab-panel-toggle-ngss"
-									aria-labelledby="tab-button-toggle-ngss"
-									role="tabpanel">
-
-									<div class="reading-toggle">
-
-										<div class="reading-toggle__switch">
-											
-											<div class="form-entry__option__switch">
-
-												<label>
-													<input
-														type="checkbox"
-														name="ngssToggleSwitch" 
-														id="ngss-toggle-switch"
-													/>
-													<span class="switch__slider"></span>
-													<span class="option__label text-decoration-none font-size-md">
-														Show NGSS Annotations
-													</span>
-												</label>
-
-											</div>
-										</div>
-
-										<div class="reading-toggle__help">								
-											<p>
-												<em>
-													Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards.
-												</em>
-											</p>
-										</div>
-
-									</div>
-									
+									<ul class="table-of-contents__nav">
+										<li>
+											<a href="/library/module/reading.html#toc_1">
+												Introduction
+											</a>
+										</li>
+										<li>
+											<a href="/library/module/reading.html#toc_2">
+												Evidence about Earth's interior
+											</a>
+										</li>
+										<li>
+											<a href="/library/module/reading.html#toc_3">
+												Seismic waves
+											</a>
+										</li>
+										<li>
+											<a href="/library/module/reading.html#toc_4">
+												The Moho
+											</a>
+										</li>
+										<li>
+											<a href="/library/module/reading.html#toc_5">
+												Shadow zones
+											</a>
+										</li>
+										<li>
+											<a href="/library/module/reading.html#toc_6">
+												The layers of Earth
+											</a>
+										</li>
+										<li>
+											<ul>
+												<li>
+													<a href="/library/module/reading.html#toc6_1">
+														Compositional layers
+													</a>
+												</li>
+												<li>
+													<a href="/library/module/reading.html#toc6_2">
+														Mechanical layers
+													</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
 								</div>
 
 							</div>
-							
-							<div class="reading-annotation-container"></div>
-						
-						</div>
 
-					</div>
+							<div
+								class="tabs__panel"
+								id="tab-panel-toggle-terms"
+								aria-labelledby="tab-button-toggle-terms"
+								role="tabpanel"
+							>
+		
+								<div class="reading-toggle">
+
+									<div class="reading-toggle__switch">
+											
+										<div class="form-entry__option__switch">
+
+											<label>
+												<input type="checkbox" name="termsToggleSwitch" id="terms-toggle-switch" />
+												<span class="switch__slider"></span>
+												<span class="option__label text-decoration-none font-size-md">Highlight Glossary Terms</span>
+											</label>
+
+										</div>
+										
+									</div>
+
+									<div class="reading-toggle__help">								
+										<p>
+											<em>
+												Activate glossary term highlighting to easily identify key terms within the module. Once highlighted, you can click on these terms to view their definitions.
+											</em>
+										</p>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="tabs__panel" id="tab-panel-toggle-ngss" aria-labelledby="tab-button-toggle-ngss" role="tabpanel">
+
+								<div class="reading-toggle">
+
+									<div class="reading-toggle__switch">
+											
+										<div class="form-entry__option__switch">
+
+											<label>
+												<input type="checkbox" name="ngssToggleSwitch" id="ngss-toggle-switch" />
+												<span class="switch__slider"></span>
+												<span class="option__label text-decoration-none font-size-md">Show NGSS Annotations</span>
+											</label>
+
+										</div>
+									</div>
+
+									<div class="reading-toggle__help">								
+										<p>
+											<em>
+												Activate NGSS annotations to easily identify NGSS standards within the module. Once highlighted, you can click on them to view these standards.
+											</em>
+										</p>
+									</div>
+
+								</div>
+									
+							</div>
+
+						</div>
+							
+						<div class="reading-annotation-container"></div>
+
+					</aside>
 
 				</div>
 
 				{% endif %}
 
-			</div>
+				<div class="module__main">
 
-		</article>
+				{{ content }}
+
+			</article>
+
+		</div>
 
 	</div>
 

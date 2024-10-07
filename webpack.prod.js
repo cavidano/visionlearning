@@ -39,7 +39,6 @@ module.exports = merge(common, {
 						presets: [['@babel/preset-env']],
 						plugins: [
 							'@babel/plugin-transform-shorthand-properties',
-							'@babel/plugin-proposal-object-rest-spread',
 						],
 					},
 				},
