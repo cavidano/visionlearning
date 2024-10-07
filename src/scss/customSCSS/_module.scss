@@ -29,9 +29,7 @@ In this file:
         gap: var(--_module-gap);
 
         @include breakpoint.breakpoint-up(lg) {
-
-
-        --_module-gap: var(--spacer-2);
+            --_module-gap: var(--spacer-2);
 
             grid-template-columns: 1fr var(--_sidebar-width);
 
@@ -87,8 +85,10 @@ In this file:
 
     .module__tabs {
         > .tabs-nav {
-            max-width: var(--narrow-width);
+            max-width: calc(var(--narrow-width) + var(--container-padding-x));
+
             margin-inline: auto;
+            
             font-size: var(--font-size-md);
         }
     }
@@ -101,11 +101,14 @@ In this file:
     .module__main {
         container-type: inline-size;
         container-name: module-main;
-
-        padding-top: var(--spacer-4);
     }
 
-    .module__main section {
+    .module__main__container {
+        max-width: var(--narrow-width);
+        margin-inline: auto;
+    }
+
+    .module__main__container section {
         margin-block: var(--spacer-4);
         
         scroll-margin-top: var(--spacer-3);
@@ -129,7 +132,7 @@ In this file:
     }
 
     .module__tools__container {
-        padding-inline: var(--container-padding-x);
+        padding-inline: var(--spacer-2);
 
         &:has(.shown) {
             padding-block-end: var(--spacer-2);
