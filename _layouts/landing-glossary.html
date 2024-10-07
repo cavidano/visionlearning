@@ -34,44 +34,6 @@ discipline_links:
 
 <main id="skip-header-content">
 
-{% if page.title contains 'Library' %}
-
-<nav class="container medium padding-y-3 font-size-md">
-            
-    <ul class="text-align-center nav nav--color-links nav--horizontal--lg justify-content-around">
-        <li>
-            <a
-                href="{{ site.url }}/library"
-                {% if page.title == 'Library • Highlights' %}
-                aria-current="page"
-                {% endif %}>
-                    Learning Modules
-            </a>
-        </li>
-        <li>
-            <a
-                href="{{ site.url }}/library/interactive-animations"
-                {% if page.title contains 'Interactive Animations' %}
-                aria-current="page"
-                {% endif %}>
-                    Interactive Animations
-            </a>
-        </li>
-        <li>
-            <a
-                href="{{ site.url }}/library/research-videos" 
-                {% if page.title contains 'Research Videos' %}
-                aria-current="page"
-                {% endif %}>
-                    Research Videos
-            </a>
-        </li>
-    </ul>
-
-</nav>
-
-{% endif %}
-
     <div class="margin-y-5">
 
         <div class="container wide">

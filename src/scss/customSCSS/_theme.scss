@@ -92,9 +92,10 @@ hr.divider {
 }
 
 .tabs-nav {
-    --tab-active-bar-color: var(--primary);
+    --tab-nav-active-bar-color: var(--primary);
+
     &.library {
-        --tab-active-bar-color: var(--library);
+        --tab-nav-active-bar-color: var(--library);
 
     // Pill Active Tab
 
@@ -103,10 +104,10 @@ hr.divider {
 
     }
     &.glossary {
-        --tab-active-bar-color: var(--glossary);
+        --tab-nav-active-bar-color: var(--glossary);
     }
     &.classroom {
-        --tab-active-bar-color: var(--classroom);
+        --tab-nav-active-bar-color: var(--classroom);
     }
 }
 
