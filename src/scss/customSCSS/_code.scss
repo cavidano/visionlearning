@@ -47,10 +47,55 @@ In this file:
 }
 
 //////////////////////////////////////////////
-// B. Example Selectors
+// B. Doc and Example Selectors
 //////////////////////////////////////////////
 
-.example-code {
+.doc {
+
+	> *:not([class*='example']) {
+		--_content-width: calc(var(--narrow-width) - calc(var(--container-padding-x) *2));
+		
+		max-width: var(--_content-width);
+		margin-inline: auto;
+	}
+
+}
+
+.doc-toc {
+    font-size: var(--font-size-md);
+    margin-block-end: var(--spacer-4);
+    list-style-type: none;
+    padding-inline-start: 0;
+
+    > li > a {
+        font-weight: bold;
+    }
+
+    ul {
+        margin-block-start: 0.25em;
+        list-style-type: none;
+        padding-inline-start: 24px;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-block-end: 0.25em;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--link-color);
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.example__code {
 	background-color: var(--code-background-color);
 }
 
@@ -105,8 +150,7 @@ pre[class*='language-'] {
 // D. Inline Code Elements
 //////////////////////////////////////////////
 
-li > code,
-p > code {
+:is(h2, h3, h4, h5, h6, li, p, strong) > code {
 	--code-padding-x: 0.35em;
 	--code-padding-y: 0.125em;
 
@@ -126,8 +170,6 @@ p > code {
 	
 	color: var(--code-color);
 	
-	// border-bottom: var(--border-width) var(--border-style) currentColor;
-
 	&::before,
 	&::after {
 		content: '';
@@ -163,9 +205,9 @@ p > code {
 	z-index: 10;
 }
  
-.example__code,
-.example figcaption.example__caption {
-}
+// .example__code,
+// .example figcaption.example__caption {
+// }
 
 .token.punctuation {
 	color: var(--code-cool-gray);
@@ -255,7 +297,7 @@ p > code {
 	position: absolute;
 	inset-inline-start: 0;
 
-	border-left: var(--border-width) solid var(--primary);
+	border-left: calc(var(--border-width)*2) solid var(--primary);
 
 	z-index: 1;
 

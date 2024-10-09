@@ -1,7 +1,11 @@
 ---
 layout: docs
 title: Math
+toc: true
 ---
+
+* TOC
+{:toc .doc-toc}
 				
 This page demonstrates how we use [MathJax](https://www.mathjax.org/#docs) and JavaScript to display math equations and formulas on the website. Equations can be displayed inline or within figures.
 

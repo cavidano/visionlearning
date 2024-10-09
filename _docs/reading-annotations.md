@@ -1,7 +1,11 @@
 ---
 layout: docs
 title: Reading Annotations
+toc: true
 ---
+
+* TOC
+{:toc .doc-toc}
 				
 Module readings can include annotations that highlight key terms and NGSS standards. These annotations are hidden by default and can be activated by clicking on the reading toggle switch. Once activated, the annotations are highlighted and can be clicked on to view their definitions and standards.
 

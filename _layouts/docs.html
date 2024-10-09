@@ -157,6 +157,7 @@
 													href="{{ site.url }}/docs/{{doc.slug}}"
 													{% if page.url contains doc.slug %}
 													aria-current="page"
+													class="is-active"
 													{% else %}
 													class="text-color-link"
 													{% endif %}
@@ -198,10 +199,10 @@
 
 						<div class="main">
 
-							<div class="container narrow">
+							<div class="container medium doc">
 							
 								{{ content }}
-								
+
 								{% if page.type == "update" and page.links %}
 
 								<div class="title-list">
@@ -230,6 +231,24 @@
 
 			</div>
 		</main>
+
+		{% if page.toc %}
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					const baseUrl = window.location.origin + window.location.pathname;
+					const tocLinks = document.querySelectorAll("#markdown-toc a");
+
+					tocLinks.forEach(link => {
+					const originalHref = link.getAttribute("href");
+					if (!originalHref.startsWith("http")) {
+						link.setAttribute("href", baseUrl + originalHref);
+					}
+					});
+				});
+			</script>
+
+		{% endif %}
+
 
 		<script src="{{ site.url }}/dist/js/prism.js"></script>
 

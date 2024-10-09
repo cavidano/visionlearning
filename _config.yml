@@ -20,6 +20,7 @@ collections:
   docs:
     output: true
     permalink: /docs/:path/
+    toc: true
     
   module-figures:
     output: true

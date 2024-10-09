@@ -84,6 +84,8 @@ In this file:
     }
 
     .module__tabs {
+        --tab-nav-background-color: var(--subtle-fill-1);
+        
         > .tabs-nav {
             max-width: calc(var(--narrow-width) + var(--container-padding-x));
 

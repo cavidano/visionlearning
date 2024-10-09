@@ -1,29 +1,22 @@
-{% if include.content %}
-    {% assign content = include.content %}
-{% else %}
-    {% assign content = '<p>Hello World</p>' %}
-{% endif %}
+{% assign content = include.content | default: '<p>Hello World</p>' %}
+{% assign highlight_lines = include.highlightLines | default: '' %}
 
-<div class="margin-y-5">
+<div class="example margin-y-5 border-radius box-shadow-1">
 
-    <div>
-
-        {% unless include.visualExample == 'false' %}
-           
-        <div class="margin-bottom-5">
-            {{ include.content }}
+    {% if include.visualExample != 'false' %}
+        <div class="example__visual">
+            <div class="narrow margin-x-auto padding-y-5">
+                {{ content }}
+            </div>
         </div>
+    {% endif %}
 
-        {% endunless %}
-
-        <figure class="example-code margin-x-n5--xl border-radius box-shadow-1">
-            <pre>
-                <code class="language-html">
-                    {{ include.content | replace: '<', '&lt;' | replace: '>', '&gt;'  }}
-                </code>
-            </pre>
-        </figure>
-
-    </div>
+    <figure class="example__code">
+        <pre data-line="{{ highlight_lines }}">
+            <code class="language-html">
+                {{ content | escape }}
+            </code>
+        </pre>
+    </figure>
 
 </div>
