@@ -27,7 +27,7 @@ In this file:
 
     --container-padding-x: var(--container-padding-x-sm);
 
-    --narrow-width: min(40rem, 85vw); // Approximately 55 characters wide for readability
+    --narrow-width: min(40rem, 75vw); // Approximately 55 characters wide for readability
 
     --medium-width: min(var(--narrow-width) * 1.75, 90vw);
     
@@ -63,14 +63,17 @@ In this file:
 
             .narrow#{$mod} {
                 max-width: var(--narrow-width);
+                // background-color: yellow;
             }
 
             .medium#{$mod} {
                 max-width: var(--medium-width);
+                // background-color: green;
             }
 
             .wide#{$mod} {
                 max-width: var(--wide-width);
+                // background-color: blue;
             }
         }
     }

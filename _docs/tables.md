@@ -59,7 +59,6 @@ To render a table within a module, use the following code:
 
 ---
 
-
 <div class="figure">
     <table class="table">
         <caption>Presence of subshells and maximum electron capacity for electron shells</caption>

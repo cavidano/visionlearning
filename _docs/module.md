@@ -304,17 +304,89 @@ The `<hr class="module__divider" aria-hidden="true">` element is used to visuall
 
 The `<div class="module__tools">` element contains actions that users can interact with. It holds the table of contents, glossary highlighting, and NGSS annotation toggles.
 
-
 **To see reading annotations, click [here](#reading-annotations).**
 
 <hr class="margin-y-4" />
 
 ### Module Main
 
-The `<div class="module__main">` element is the primary content area of the module.
+The `<div class="module__main">` element is the primary content area of the module. It holds the core information or functionality of the module.
 
-**The `<div>` Element:**
+{% capture fig_5 %}
 
-- Holds the core information or functionality of the module.
-- Can include text, images, videos, or other types of content.
-- Should be populated dynamically based on data or user interactions.
+<div class="module__main">
+
+    <div class="module__main__container">
+
+        <!-- Prereader -->
+
+        <div class="accordion">
+
+        </div>
+
+        <!-- Reading Body -->
+
+        <section>
+
+            <h2>
+                Top section header
+            </h2>
+            
+            <!-- Paragraphs, Figures, etc. -->
+
+            <section>
+
+                <h3>
+                    Subsection header
+                </h3>
+                
+                <!-- Paragraphs, Figures, etc. -->
+
+            </section>
+
+        </section>
+
+        <!-- Repeat for additional sections -->
+
+        <!-- Module Footer -->
+
+        <footer class="module__main__footer">
+            ...
+        </footer>
+
+    </div>
+
+</div>
+
+{% endcapture %}
+
+{% include code-example.html visualExample='false' highlightLines="7,13,21,37" content=fig_5 %}
+
+#### Prereader
+
+A prereader (accordion, Line 7) starts at the top of the module. It includes:
+- *Did you know?*
+- *Key concepts*
+- *Terms you should know*
+
+{%
+    include external-resource.html
+    url="https://gonatura11y.com/docs/accordion"
+    text="Prereaders utilize Natura11y's Accordion Component"
+    link_text="Natura11y's Accordion Docs"
+%}
+
+#### Reading Body
+
+The reading itself is divided into sections (`<section>`). Each section represented by an `<h2>` header. These sections can contain nested subsections, using `<h3>` to `<h6>` subheaders to organize the content in a clear hierarchy.
+
+The table of contents links to each section, including all subsections. Sections can include:
+
+- Blockquotes
+- Figures with images (optional lightbox option)
+- Figures with math equations
+- Comprehension checkpoints
+- Interactive animations and calls to action (CTAs)
+- Data tables
+
+The last child element of the module main is the module footer: `<footer class="module__main__footer">`.

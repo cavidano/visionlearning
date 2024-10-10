@@ -32,6 +32,12 @@ In this file:
     --medium-width: calc( var(--narrow-width) * 1.5);
     --wide-width: calc( var(--narrow-width) * 2.5);
 
+    // --narrow-width: min(44rem, 85vw); // Approximately 55 characters wide for readability
+
+    // --medium-width: min(var(--narrow-width) * 1.75, 90vw);
+    
+    // --wide-width: min( var(--narrow-width) * 2.5, 95vw);
+
     // Border Radius
 
     --border-radius: 0.25em;

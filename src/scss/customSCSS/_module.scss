@@ -105,19 +105,21 @@ In this file:
         container-name: module-main;
     }
 
-    .module__main__container {
+    .module__main__container,
+    .module__main__footer {
         max-width: var(--narrow-width);
         margin-inline: auto;
     }
 
-    .module__main__container section {
-        margin-block: var(--spacer-4);
-        
-        scroll-margin-top: var(--spacer-3);
+    .module__main__footer {
+        // outline: 3px solid purple;
     }
 
-    .module__footer {
-        margin-block-start: var(--spacer-4);
+    .module__main__container .accordion,
+    .module__main__container section {
+        margin-block: var(--spacer-5);
+        
+        scroll-margin-top: var(--spacer-3);
     }
 
     // Module Tools
