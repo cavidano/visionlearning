@@ -389,4 +389,6 @@ The table of contents links to each section, including all subsections. Sections
 - Interactive animations and calls to action (CTAs)
 - Data tables
 
+### Module Footer
+
 The last child element of the module main is the module footer: `<footer class="module__main__footer">`.
