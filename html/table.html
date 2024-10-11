@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Math • Tearsheet</title>
+
+    <title>Table • Tearsheet</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,32 @@
 
     <!-- Natura11y Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning@main/dist/icons/visionlearning-icons.css">
+    
+    <style>
+        
+            .arrow {
+                position: relative;
+                width: 100%;
+                height: 16px;
+                background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4, #FFD194, #FF647C);
+            }
 
+            .arrow::after {
+                content: '';
+                position: absolute;
+                outline: 1px solid transparent;
+                transform: translate(50%, -50%);
+                inset-block-start: 50%;
+                inset-inline-start: auto;
+                inset-inline-end:0;
+                inset-block-end: 0;
+                width: 0;
+                height: 0;
+                border-top: 25px solid transparent;
+                border-bottom: 25px solid transparent;
+                border-left: 25px solid #FF647C; /* arrowhead color */
+            }
+        </style>
 </head>
 
 <body>
@@ -23,7 +49,7 @@
 
             <header class="margin-y-4 text-align-center">
                 <h2 class="font-weight-normal">
-                    Math
+                    Table
                 </h2>
             </header>
 
@@ -31,46 +57,221 @@
 
                 <div class="container narrow">
 
-                    <h2 class="screen-reader-only">
-                        Math Examples
+                    <h2>
+                        Taxonomy II
                     </h2>
-
                     <p>
-                        Example of an SVG math figure.
+                        <a href="https://www.visionlearning.com/en/library/Biology/2/Taxonomy-II/89">
+                            Taxonomy II
+                        </a>
                     </p>
 
-                    <div class="figure">
+                    <div class="margin-y-4">
 
-                        <figure>
-                            $$C_6H_{12}O_6 + \textcolor{blue}{6}O_2 \rightarrow \textcolor{blue}{6}CO_2 + \textcolor{blue}{6}H_2O + \textit{energy}$$
-                        </figure>
+                        <section id="toc_3">
+
+                            <h2>
+                                Examples of conflicts among scientific names
+                            </h2>
+
+                            <div class="figure">
+                                <figure>
+                                    <img
+                                        src="https://placehold.co/800x600"
+                                        alt="Placeholder"
+                                    />
+                                    <figcaption>
+                                        <p id="gorilla-caption">
+                                            <strong>Figure 1:</strong> Gorillas, Genus Gorilla (I. Geoffroy, 1853).
+                                        </p>
+                                        <span class="credit">image ©Andrejdam/Wikimedia</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        
+                            <div class="figure">
+                            
+                                <table
+                                    class="table box-shadow-1" 
+                                    aria-labelledby="gorilla-caption"
+                                >
+                                    
+                                    <caption>
+                                        <strong>Table 1:</strong>
+                                        Lorem Ipsum Dolar
+                                    </caption>
+
+                                    <thead>
+                                        <tr class="subtle-fill">
+                                            <th>
+                                                Gorillas
+                                            </th>
+                                            <th>
+                                                <em>
+                                                    Genus Gorilla (I. Geoffroy, 1853)
+                                                </em>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Year</th>
+                                            <th scope="col">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td width="20%"><strong>1853</strong></td>
+                                            <td width="80%"><em>Gorilla</em> I. Geoffroy, based on <em>Troglodytes gorilla</em> (Savage and Wyman, 1847)</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%"><strong>1913</strong></td>
+                                            <td width="80%"><em>Pseudogorilla</em> Elliot, based on <em>Gorilla mayema</em> (Alix and Bouvier, 1877)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="figure">
+                                <figure>
+                                    <img
+                                        src="https://placehold.co/800x600"
+                                        alt="Placeholder"
+                                    />
+                                    <figcaption>
+                                        <p id="chimpanzee-caption">
+                                            <strong>Figure 2:</strong>Chimpanzees, Genus Pan (Oken, 1816)
+                                        </p>
+                                        <span class="credit">image ©Andrejdam/Wikimedia</span>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        
+                            <div class="figure">
+
+                                <table
+                                    class="table box-shadow-1" 
+                                    aria-labelledby="chimpanzee-caption"
+                                >
+
+                                    <caption>
+                                        <strong>Table 2:</strong>
+                                        Lorem Ipsum Dolar
+                                    </caption>
+
+                                    <thead>
+                                        <tr class="subtle-fill">
+                                            <th>
+                                                Chimpanzees
+                                            </th>
+                                            <th>
+                                                <em>
+                                                    Genus Pan (Oken, 1816)
+                                                </em>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">Year</th>
+                                            <th scope="col">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1812</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Troglodytes</em>
+                                                E. Geoffroy, based on
+                                                <em>Troglodytes niger</em>
+                                                (E. Geoffroy, 1812)</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1816</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Pan</em>
+                                                Oken, based on
+                                                <em>Pan africanus</em>
+                                                (Oken, 1816)</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1828</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Theranthropus</em>
+                                                Brookes, based on
+                                                <em>Troglodytes niger</em>
+                                                (E. Geoffroy, 1812)</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1841</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Hylanthropus</em>
+                                                Gloger, based on
+                                                <em>Simia troglodytes</em>
+                                                (Blumenbach, 1799)</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1860</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Pseudoanthropus</em>
+                                                Reichenbach, proposed as a replacement for
+                                                <em>Troglodytes</em>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1866</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Engeco</em>
+                                                Haeckel, based on
+                                                <em>Simia troglodytes</em>
+                                                (Blumenbach, 1799)</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1866</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Pongo</em>
+                                                Haeckel, replacement for
+                                                <em>Troglodytes</em>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1895</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Anthropithecus</em>
+                                                Haeckel, correction for
+                                                <em>Anthropopithecus</em>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="20%">
+                                                <strong>1905</strong>
+                                            </td>
+                                            <td width="80%">
+                                                <em>Fsihego</em>
+                                                de Pauw, based on
+                                                <em>Fsihego iturensis</em>
+                                                (de Pauw, 1905)
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </section>
 
                     </div>
-
-                    <div class="figure">
-                        <figure>
-                            <img src="./images/module-figures/61-a.svg" height="72" alt="Illustration of a complex equation">
-                        </figure>
-                    </div>
-
-                    <p>
-                        Example of a LaTeX display figure using MathJax.
-                    </p>
-
-                    <div class="figure">
-                        <figure>
-                            $$C_6H_{12}O_6 + 6O_2 + 6H_2O + \text{energy}$$
-                        </figure>
-                    </div>
-                    <div class="figure">
-                        <figure>
-                            $$6CO_2 + 6H_2O + \text{energy} \rightarrow C_6H_{12}O_6 + 6O_2$$
-                        </figure>
-                    </div>
-                    
-                    <p>
-                        An exponential equation is an equation in which a variable occurs in the exponent. For example, \( y = 5^x \) is an exponential equation since the exponent is the variable \(x\) (also said as "5 to the power of \(x\)"), while \( y = 5^x \) is not an exponential equation since the exponent is 5 and not a variable. We often write exponential equations as \( y = ab^x \), where \(a\) and \(b\) are constants (numbers that don't change value) and \(x\) and \(y\) are variables.
-                    </p>
 
                 </div>
 
@@ -78,24 +279,125 @@
 
             <section>
 
-                <div class="container narrow">
-
+                <div class="container narrow margin-y-5">
+            
+                    <h2>
+                        The Periodic Table of Elements
+                    </h2>
                     <p>
-                        When the remains arrive in your lab, you photograph and measure the bones. From the shape of the pelvis, you can quickly tell that the remains most likely belong to an adult male. You note that the femur is 18.7 inches long. Bone length, especially the length of long bones like the femur, is related to an individual's overall height. Simply put, a tall person will usually have long legs, and a short person generally has shorter legs. This relationship is so strong that you can predict an individual's height if you know the length of one bone in the leg (Figure 1). You plug your measurement into an equation used to estimate the overall height of an adult male based on femur length:
+                        <a href="https://www.visionlearning.com/en/library/Chemistry/1/The-Periodic-Table-of-Elements-III/297">
+                            Periodic Table III
+                        </a>
                     </p>
 
-                    <p>
-                        $$ H = 1.880(L) + 32.010 $$
-                    </p>
+                    <div class="figure">
+                        <table class="table" aria-describedby="configDescription2">
 
-                    <p>
-                        Where <em>H</em> = height in inches and <em>L</em> = femur length in inches.
-                    </p>
+                            <caption id="configDescription2">
+                                <strong>Table 2:</strong>
+                                This chart shows the subshells and the electrons each subshell can hold for the 1st, 2nd, and 3rd electron shells.
+                            </caption>
+                            
+                            <thead>
+                                <tr>
+                                    <th scope="col">Electron shell</th>
+                                    <th scope="col">Presence of an s-subshell?</th>
+                                    <th scope="col">Presence of a p-subshell?</th>
+                                    <th scope="col">Presence of a d-subshell?</th>
+                                    <th scope="col">Maximum electron capacity for shell</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1<sup>st</sup> electron shell</td>
+                                    <td style="background-color: var(--light-green)">Yes (up to 2 electrons)</td>
+                                    <td style="background-color: var(--light-red)">No (0 electrons)</td>
+                                    <td style="background-color: var(--light-red)">No (0 electrons)</td>
+                                    <td>2 electrons total (2+0)</td>
+                                </tr>
+                                <tr>
+                                    <td>2<sup>nd</sup> electron shell</td>
+                                    <td style="background-color: var(--light-green)">Yes (up to 2 electrons)</td>
+                                    <td style="background-color: var(--light-green)">Yes (up to 6 electrons)</td>
+                                    <td style="background-color: var(--light-red)">No (0 electrons)</td>
+                                    <td>8 electrons total (2+6)</td>
+                                </tr>
+                                <tr>
+                                    <td>3<sup>rd</sup> electron shell</td>
+                                    <td style="background-color: var(--light-green)">Yes (up to 2 electrons)</td>
+                                    <td style="background-color: var(--light-green)">Yes (up to 6 electrons)</td>
+                                    <td style="background-color: var(--light-green)">Yes (up to 10 electrons)</td>
+                                    <td>18 electrons total (2+6+10)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
 
-                    <p>
-                        $$ H = (1.880 \times 18.7) + 32.010 $$
-                    </p>
+                <div class="container narrow margin-y-5">
+                
+                    <div class="figure text-align-center">
 
+                        <table class="table">
+                            <caption id="table-caption">Table 3: s-type, p-type, and d-type subshells and their different electron capacities</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Subshell types</th>
+                                    <th scope="col"># of electron orbitals</th>
+                                    <th scope="col">Maximum electron capacity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>s-type</td>
+                                    <td>1</td>
+                                    <td>2</td>
+
+                                </tr>
+                                <tr>
+                                    <td>p-type</td>
+                                    <td>3</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>d-type</td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+
+                <div class="container narrow margin-y-5">
+                
+                    <div class="figure text-align-center">
+                        <table  class="table" aria-labelledby="table-caption">
+                            <thead>
+                                <tr>
+                                    <th colspan="5">Increasing energy level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td colspan="5">
+                                    <div class="arrow" aria-hidden="true"></div>
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td>1s</td>
+                                    <td>2s</td>
+                                    <td>2p</td>
+                                    <td>3s</td>
+                                    <td>3p</td>
+                                </tr>
+                            </tbody>
+                            <caption id="table-caption">Figure 10: The arrow indicates increasing energy levels of the subshells, which indicates the order in which these subshells will fill with electrons.</caption>
+                        </table>
+                    </div>
+                    
                 </div>
 
             </section>
@@ -104,36 +406,6 @@
 
     </main>
 
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['\\(', '\\)']],
-                displayMath: [['$$', '$$']],
-                processEscapes: true
-            },
-            options: {
-                renderActions: {
-                    assistiveMML: ['assistive-mml', MathJax._.a11y.A11yUtil.assistiveMML]
-                }
-            },
-            svg: {
-                scale: 1,
-                minScale: 0.5,
-                exFactor: 0.5,
-                displayAlign: 'center',
-                displayIndent: '0',
-                fontCache: 'global',
-                internalSpeechTitles: true,
-                titleID: 0
-            },
-            startup: {
-                ready() {
-                    MathJax.startup.defaultReady();
-                }
-            }
-        };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js" async></script>
 </body>
 
 </html>

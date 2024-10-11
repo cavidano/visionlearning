@@ -26,12 +26,13 @@ const devPages = {
     'ReadingToggles': 'reading-toggles',
     'Typography': 'typography',
     'Tab': 'tab',
+    'Table': 'table',
     'Search': 'search',
     'Quiz': 'quiz',
 }
 
 const devDir = './html';
-const devPage = `${devPages.HeaderFooter}.html`;
+const devPage = `${devPages.Table}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
