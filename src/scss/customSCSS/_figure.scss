@@ -73,9 +73,9 @@ In this file:
             --table-cell-padding-x: 1cqi !important;
             border-collapse: collapse;
         
-            @extend .table--divider;
+            // @extend .table--divider;
 
-            @extend .box-shadow-1;
+            // @extend .box-shadow-1;
 
             font-size: 2.125cqi;
         }

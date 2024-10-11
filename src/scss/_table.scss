@@ -15,18 +15,18 @@ In this file:
 //////////////////////////////////////////////
 
 @use 'sass:map';
-@use './accent';
 @use './breakpoint';
 
 //////////////////////////////////////////////
 // B. Variables
 //////////////////////////////////////////////
 
-// Scoped to Block
-
-%table-vars {
+:root {
     --table-cell-padding-x: var(--spacer-3);
+    
     --table-cell-padding-y: 0.75em;
+
+    --table-font-size: var(--font-size-md);
  
     --table-scroll-min-width: 800px;
 }
@@ -38,21 +38,20 @@ In this file:
 @layer component {
 
     .table {
-        @extend %table-vars;
         
-        table-layout: auto;
+        table-layout: fixed;
 
         width: 100%;
         
         border-collapse: collapse;
 
-        font-size: var(--font-size-sm);
+        font-size: var(--table-font-size);
 
         caption-side: bottom;
 
         caption {
-            // border-top-width: var(--border-width);
-            // border-top-style: var(--border-style);
+            border-block-start-width: var(--border-width);
+            border-block-start-style: var(--border-style);
 
             padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
             
@@ -73,8 +72,8 @@ In this file:
         }
 
         td {
-            border-top-width: var(--border-width);
-            border-top-style: var(--border-style);
+            border-block-start-width: var(--border-width);
+            border-block-start-style: var(--border-style);
         }
 
         thead {
@@ -84,7 +83,7 @@ In this file:
             }
 
             tr {
-                border-top-style: unset;
+                border-block-start-style: unset;
             }
         }
     }
@@ -93,19 +92,18 @@ In this file:
 
     .table--striped {
         tbody tr:nth-of-type(odd) td {
-            background-color: var(--subtle-fill-background-color);
-            --subtle-fill-opacity: 5%;
+            background-color: var(--subtle-fill-1);
         }
     }
 
-    .table--vertical-align-middle {
+    .table--va-middle {
         tbody td {
             vertical-align: middle;
         }
     }
 
     .table--divider {
-        // border-collapse: collapse;
+        border-collapse: collapse;
         
         :is(
             th, 
@@ -168,7 +166,7 @@ In this file:
                 }
 
                 td::after {
-                    content: attr(data-before);
+                    content: attr(data-header);
                     font-weight: bold;
                 }
 
@@ -226,7 +224,7 @@ In this file:
         
         max-width: 100%;
 
-        :is(table, .table) {
+        table {
             overflow: hidden;
             min-width: var(--table-scroll-min-width);
         }
@@ -241,7 +239,8 @@ In this file:
 
             display: none;
             
-            mask-image: linear-gradient(to left, rgba(0, 0, 0, 1.0), transparent);
+            mask-image: linear-gradient(to left, hsl(0, 0%, 0%), transparent);
+            
             pointer-events: none;
             
             z-index: 600;

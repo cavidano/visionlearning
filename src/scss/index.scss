@@ -69,7 +69,7 @@ In this file:
 @use './customSCSS/list';
 @use './customSCSS/modal';
 @use './customSCSS/module';
-@use './customSCSS/navigation' as nav;
+@use './customSCSS/_global-header-footer';
 @use './customSCSS/reading-toggle';
 @use './customSCSS/table-of-contents';
 @use './customSCSS/theme';

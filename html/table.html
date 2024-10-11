@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Math • Tearsheet</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- Natura11y Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/visionlearning@main/dist/icons/visionlearning-icons.css">
+
+</head>
+
+<body>
+
+    <main>
+
+        <article>
+
+            <header class="margin-y-4 text-align-center">
+                <h2 class="font-weight-normal">
+                    Math
+                </h2>
+            </header>
+
+            <section>
+
+                <div class="container narrow">
+
+                    <h2 class="screen-reader-only">
+                        Math Examples
+                    </h2>
+
+                    <p>
+                        Example of an SVG math figure.
+                    </p>
+
+                    <div class="figure">
+
+                        <figure>
+                            $$C_6H_{12}O_6 + \textcolor{blue}{6}O_2 \rightarrow \textcolor{blue}{6}CO_2 + \textcolor{blue}{6}H_2O + \textit{energy}$$
+                        </figure>
+
+                    </div>
+
+                    <div class="figure">
+                        <figure>
+                            <img src="./images/module-figures/61-a.svg" height="72" alt="Illustration of a complex equation">
+                        </figure>
+                    </div>
+
+                    <p>
+                        Example of a LaTeX display figure using MathJax.
+                    </p>
+
+                    <div class="figure">
+                        <figure>
+                            $$C_6H_{12}O_6 + 6O_2 + 6H_2O + \text{energy}$$
+                        </figure>
+                    </div>
+                    <div class="figure">
+                        <figure>
+                            $$6CO_2 + 6H_2O + \text{energy} \rightarrow C_6H_{12}O_6 + 6O_2$$
+                        </figure>
+                    </div>
+                    
+                    <p>
+                        An exponential equation is an equation in which a variable occurs in the exponent. For example, \( y = 5^x \) is an exponential equation since the exponent is the variable \(x\) (also said as "5 to the power of \(x\)"), while \( y = 5^x \) is not an exponential equation since the exponent is 5 and not a variable. We often write exponential equations as \( y = ab^x \), where \(a\) and \(b\) are constants (numbers that don't change value) and \(x\) and \(y\) are variables.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <div class="container narrow">
+
+                    <p>
+                        When the remains arrive in your lab, you photograph and measure the bones. From the shape of the pelvis, you can quickly tell that the remains most likely belong to an adult male. You note that the femur is 18.7 inches long. Bone length, especially the length of long bones like the femur, is related to an individual's overall height. Simply put, a tall person will usually have long legs, and a short person generally has shorter legs. This relationship is so strong that you can predict an individual's height if you know the length of one bone in the leg (Figure 1). You plug your measurement into an equation used to estimate the overall height of an adult male based on femur length:
+                    </p>
+
+                    <p>
+                        $$ H = 1.880(L) + 32.010 $$
+                    </p>
+
+                    <p>
+                        Where <em>H</em> = height in inches and <em>L</em> = femur length in inches.
+                    </p>
+
+                    <p>
+                        $$ H = (1.880 \times 18.7) + 32.010 $$
+                    </p>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']],
+                processEscapes: true
+            },
+            options: {
+                renderActions: {
+                    assistiveMML: ['assistive-mml', MathJax._.a11y.A11yUtil.assistiveMML]
+                }
+            },
+            svg: {
+                scale: 1,
+                minScale: 0.5,
+                exFactor: 0.5,
+                displayAlign: 'center',
+                displayIndent: '0',
+                fontCache: 'global',
+                internalSpeechTitles: true,
+                titleID: 0
+            },
+            startup: {
+                ready() {
+                    MathJax.startup.defaultReady();
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-svg.js" async></script>
+</body>
+
+</html>
