@@ -32,7 +32,7 @@ const devPages = {
 }
 
 const devDir = './html';
-const devPage = `${devPages.Table}.html`;
+const devPage = `${devPages.Typography}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

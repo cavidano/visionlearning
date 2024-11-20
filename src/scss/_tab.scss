@@ -86,7 +86,7 @@ In this file:
 
     .tabs-nav:not([class*="--pill"]) {
 
-        li {
+        li:not(:last-child) {
             border-bottom: var(--border-width) var(--border-style) var(--border-color);
         }
 

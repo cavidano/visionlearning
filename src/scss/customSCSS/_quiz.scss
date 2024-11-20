@@ -36,12 +36,23 @@ In this file:
 
     // Quiz component
 
-    .quiz { }
+    .quiz {}
+
+    // Shared Selectors
+
+    .quiz__questions,
+    .comprehension-checkpoint {
+        // background-color: yellow;
+
+        .form-entry__option { 
+            margin-block-start: 0.5em;
+        }
+    }
 
     // Quiz form
 
     .quiz__questions {
-        padding: unset;             
+        padding: unset;       
 
         counter-reset: section;
 
@@ -66,18 +77,13 @@ In this file:
             padding-inline-start: calc( var(--form-field-padding-x) + 2em);
         }
 
-        .form-entry__option { 
-            margin-block-start: 0.5em;
-        }
-
         // Figure
         
         .figure {
             --figure-margin-y: var(--spacer-2);
         }
-    }
 
-    .quiz__questions {
+        // Quiz Questions
 
         .form-entry__option__radio {
             font-size: 90%;
@@ -114,6 +120,8 @@ In this file:
 
     }
 
+    // Quiz Response
+
     .quiz__response {
         display: block;
         
@@ -141,10 +149,12 @@ In this file:
         }
     }
 
+    // Quiz Pool
+
     .quiz__pool {
         border-radius: var(--form-field-border-radius);
 
-        border: var(--border-width) var(--border-style) var(--primary) !important;
+        border: var(--border-width) var(--border-style) currentColor;
 
         padding: var(--spacer-3);
 

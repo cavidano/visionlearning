@@ -8,9 +8,7 @@ In this file:
 */
 
 :root {
-
     --list-item-target-size: var(--button-target-size);
-
 }
 
 //////////////////////////////////////////////
@@ -50,8 +48,8 @@ In this file:
     // List divider
 
     .list-divider {
-        --padding-x: 1em;
-        --padding-y: 0.5em;
+        --_padding-x: 1em;
+        --_padding-y: 0.5em;
 
         list-style: none;
 
@@ -62,11 +60,11 @@ In this file:
 
             color: var(--link-color);
 
-            padding-block: var(--padding-y);
+            padding-block: var(--_padding-y);
 
             display: flex;
-
-            min-height: var(--list-item-target-size);
+            
+            min-height: calc( var(--list-item-target-size) + var(--_padding-y));
 
             button {
                 --button-target-size: calc(var(--list-item-target-size) - 0.25em);
@@ -78,19 +76,18 @@ In this file:
         }
 
         > li:not(:has([class*="__cell"])) {
-            display: flex;
-            padding-inline: var(--padding-x);
+            --_padding-y: 0.75em;
+
+            padding-inline: var(--_padding-x);
         }
 
         > li:has([class*="__cell"]) {
-            display: grid;
-            
-            grid-template-columns: 1fr auto;
+            justify-content: space-between;
 
-            gap: var(--spacer-3);
+            gap: var(--spacer-2);
 
             > [class*="__cell"]:nth-child(1) {
-                padding-inline: var(--padding-x);
+                padding-inline: var(--_padding-x);
             }
         }
 
@@ -98,6 +95,7 @@ In this file:
             display: flex;
             flex-direction: column;
             justify-content: center;
+            
             min-height: var(--button-icon-only-size);
         }
 
