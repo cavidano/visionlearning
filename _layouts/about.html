@@ -10,7 +10,7 @@ layout: global
 
             <header class="text-align-center padding-y-4">
 
-                <h1 class="container medium font-weight-normal">
+                <h1 class="banner-headline">
                     {{ page.title }}
                 </h1>
 
@@ -18,15 +18,16 @@ layout: global
     </div>
 
 </div>
+
 <main id="skip-header-content">
 
     <article class="container wide margin-bottom-5">
 
-        <main class="grid grid--sidebars margin-y-4">
+        <div class="grid grid--sidebars margin-y-4">
 
             <div class="display-none display-block--xl">
                 
-                <nav class="anchor-nav font-size-md position-sticky-top">
+                <nav class="anchor-nav font-size-md position-sticky-top display-none">
 
                     {% if page.links %}
 
@@ -52,7 +53,7 @@ layout: global
                     
             </article>
 
-            <div class="font-size-md">
+            <div class="font-size-md display-none">
 
                     <div class="padding-x-2 margin-bottom-2 text-align-center">
                             
@@ -88,7 +89,7 @@ layout: global
 
                 </div>
 
-        </main>
+        </div>
 
     </article>
 

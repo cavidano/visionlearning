@@ -128,6 +128,7 @@ In this file:
     .module__tools__container {
         position: sticky;
         top: var(--spacer-2);
+        z-index: 1000;
     }
 
     .module__tools {

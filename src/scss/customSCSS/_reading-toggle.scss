@@ -389,22 +389,8 @@ In this file:
         }
     }
 
-    @media screen and (max-width: 1024px) {
-        .reading-annotation-container {
-            position: fixed;
-
-            inset-inline-start: 0;
-            inset-inline-end: 0;
-            inset-block-start: 0;
-
-            z-index: 30000;
-
-            margin: var(--spacer-2);
-        }
-
-        .reading-annotation {
-            box-shadow: 0 0 1rem hsla(0, 0%, 0%, 0.25);
-        }
+    .reading-annotation {
+        margin-block-start: var(--spacer-2);
     }
 
 } // end @layer

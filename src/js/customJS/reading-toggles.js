@@ -21,14 +21,14 @@ export default class ReadingToggles {
 
 	hideHelpTexts = () => {
 		this.#helpTextContainers.forEach((helpText) => {
-			helpText.classList.add('display-none--lg');
+			helpText.classList.add('display-none');
 		});
 	};
 
 	// Method to show all help texts
 	showHelpTexts = () => {
 		this.#helpTextContainers.forEach((helpText) => {
-			helpText.classList.remove('display-none--lg');
+			helpText.classList.remove('display-none');
 		});
 	};
 
