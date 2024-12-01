@@ -265,15 +265,12 @@ In this file:
     // Reading Annotation
 
     .reading-annotation {
-
         --_padding-x: 1em;
         --_padding-y: 0.75em;
 
         --button-target-size: 2em;
         
         display: grid;
-
-        outline: 2px solid red;
 
         grid-template-rows: auto 1fr;
 
@@ -390,7 +387,6 @@ In this file:
         background-color: hsla(100, 100%, 100%, 0.875);
 
         overflow: scroll;
-
 
         [class*="standard"] {
             display: block;
