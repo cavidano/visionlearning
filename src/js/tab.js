@@ -1,4 +1,5 @@
 import { delegateEvent } from './utilities/eventDelegation';
+import { getCurrentBreakpoint } from './utilities/getCurrentBreakpoint';
 
 import { handleArrowKeyNavigation } from './utilities/keyboardNavigation';
 
@@ -57,6 +58,7 @@ export default class Tab {
 
   #getBreakpointValue(breakpoint) {
     const value = getComputedStyle(document.documentElement).getPropertyValue(`--bp-${breakpoint}`).trim();
+    console.log("current breakpont is: ", value)
     return parseInt(value, 10);
   }
 
@@ -139,17 +141,18 @@ export default class Tab {
         }
       });
 
-      // window.addEventListener('resize', () => {
-      //   if (this.#hasToggleClass(tab)) {
-      //     if (this.#shouldApplyToggleMode(tab)) {
-      //       // In toggle mode, deactivate all tabs on resize
-      //       this.#deactivateTabs(tabsButtonList, tabsPanelList);
-      //     } else {
-      //       // In normal mode, activate the first tab on resize if needed
-      //       this.#activateTab(tabsButtonList[0], tabsButtonList, tabsPanelList);
-      //     }
-      //   }
-      // });
+      window.addEventListener('resize', () => {
+      console.log("current breakpoint", getCurrentBreakpoint());
+        if (this.#hasToggleClass(tab)) {
+          if (this.#shouldApplyToggleMode(tab)) {
+            // In toggle mode, deactivate all tabs on resize
+            this.#deactivateTabs(tabsButtonList, tabsPanelList);
+          } else {
+            // In normal mode, activate the first tab on resize if needed
+            this.#activateTab(tabsButtonList[0], tabsButtonList, tabsPanelList);
+          }
+        }
+      });
     });
   }
 }
