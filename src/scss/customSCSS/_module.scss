@@ -134,6 +134,8 @@ In this file:
     .module__tools {
         background-color: color-mix(in srgb, var(--canvas), transparent 5%);
         backdrop-filter: blur(3px);
+
+        max-height: calc(100vh - calc(var(--spacer-2) * 2));
     }
 
     .module__tools__container {
@@ -141,6 +143,11 @@ In this file:
 
         &:has(.shown) {
             padding-block-end: var(--spacer-2);
+        }
+
+        .tabs {
+            display: grid;
+            grid-template-rows: auto 1fr;
         }
 
         .tab__buttons {
@@ -152,7 +159,7 @@ In this file:
             align-items: baseline;
             justify-content: center;
             
-            gap: var(--spacer-2);
+            gap: var(--spacer-1);
 
             padding-block: var(--spacer-2);
 
@@ -164,6 +171,10 @@ In this file:
                     color: var(--canvas);
                 }
             }
+        }
+
+        .tabs__panel {
+            overflow: hidden;    
         }
     }
 

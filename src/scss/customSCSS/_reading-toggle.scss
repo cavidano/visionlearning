@@ -265,10 +265,20 @@ In this file:
     // Reading Annotation
 
     .reading-annotation {
-        --padding-x: 1em;
-        --padding-y: 0.75em;
+        // container-type: size;
 
-        overflow: hidden;
+        --_padding-x: 1em;
+        --_padding-y: 0.75em;
+
+        --button-target-size: 2em;
+        
+        display: grid;
+
+        outline: 2px solid red;
+
+        grid-template-rows: auto 1fr;
+
+        max-height: 100cqi;
 
         max-width: var(--narrow-width);
 
@@ -366,18 +376,22 @@ In this file:
         position: relative;
         z-index: 5;
 
-        padding-block: calc(var(--padding-y) * 0.5);
-        padding-inline-start:  var(--padding-x);
-        padding-inline-end: calc(var(--padding-y) * 0.5);
+        padding-block: calc(var(--_padding-y) * 0.55);
+        padding-inline-start:  var(--_padding-x);
+        padding-inline-end: calc(var(--_padding-y) * 0.5);
 
         .h6 {
-            margin-block-end: unset;        
+            margin-block-end: unset;    
+            font-size: var(--font-size-sm);
         }
     }
 
     .reading-annotation__body {
-        padding: var(--padding-y) var(--padding-x);
+        padding: var(--_padding-y) var(--_padding-x);
         background-color: hsla(100, 100%, 100%, 0.875);
+
+        overflow: scroll;
+
 
         [class*="standard"] {
             display: block;
