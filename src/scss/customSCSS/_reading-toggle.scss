@@ -403,3 +403,10 @@ In this file:
     }
 
 } // end @layer
+
+
+figure > mark.ngss.highlighted > mjx-container {
+    display: inline-block;
+outline: 4px solid red !important;
+background-color: blue;
+}   
