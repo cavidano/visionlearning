@@ -11,7 +11,17 @@ category: interactive-animations
     {% assign description = item.Description %}                       
     {% assign imgSlug = item.ImgSlug %}                       
     {% assign relatedModule = item.Module %}                      
-    {% assign url = item.LinkURL %}                      
+    {% assign url = item.LinkURL %}
+
+    <!-- Russ D.,
+
+    Please look at the card below, and ensure it aligns with latest updates
+
+    [Add URL here]
+
+    For example, `card__foot border-topi font-size-md` should be `card__foot border-top font-size-md`   
+    
+    -->
 
     <div class="card theme-light">
 
@@ -46,7 +56,7 @@ category: interactive-animations
 
         <div class="card__foot border-top font-size-md">
 
-            <a class="linl link--has-icon text-transform-uppercase" href="{{ url }}" target="_blank">
+            <a class="link text-transform-uppercase" href="{{ url }}" target="_blank">
                 <strong class="button__text">View Animation</strong>
                 <span class="icon icon-open-new"></span>
             </a>

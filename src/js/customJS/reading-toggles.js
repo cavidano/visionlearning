@@ -30,11 +30,20 @@ export default class ReadingToggles {
     };
 
     removeOldDetails = (container) => {
-        let oldDetailList = container.querySelectorAll('.reading-annotation');
-        if (oldDetailList.length) {
-            oldDetailList.forEach((item) => item.remove());
+        if (!container) {
+            console.warn('Container not found for removeOldDetails');
+            return;
         }
+
+        const oldDetailList = container.querySelectorAll('.reading-annotation');
+        if (oldDetailList.length === 0) {
+            console.log('No annotations to remove in container:', container);
+            return;
+        }
+
+        oldDetailList.forEach((item) => item.remove());
     };
+
 
     handleClose = (container) => () => {
         let closeButton = container.querySelector('[data-close-btn]');

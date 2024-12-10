@@ -99,6 +99,8 @@ In this file:
         max-width: 95vw;
         height: auto;
 
+        margin-block: unset !important;
+
         svg {
             max-width: 100%;
         }

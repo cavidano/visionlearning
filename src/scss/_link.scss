@@ -7,9 +7,6 @@ In this file:
 
 */
 
-
-@use './icon';
-
 //////////////////////////////////////////////
 // A. Generic Links
 //////////////////////////////////////////////
@@ -20,7 +17,7 @@ In this file:
         color: currentColor;
     }
 
-    p > a:not([class*="new-window"]) {
+    p > a {
         text-decoration: underline;
 
         &:hover,
@@ -32,7 +29,7 @@ In this file:
     a[data-logo="brand"] {
         display: inline-block;
 
-        &:focus {
+        &:focus-visible {
             opacity: 0.85;
         }
 
@@ -50,44 +47,55 @@ In this file:
 
 @layer utility {
 
-    // Expanded Link 
+    // Link with Icon
 
-    .expanded-link {
-        &::before {
-            position: absolute;
-            content: "";
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            
-            z-index: 1;
-            pointer-events: auto;
-        }
-    }
-
-    .link-new-window {
-        color: var(--link-color);
-        display: inline-block;
-        position: relative;
-
-        &::after {
-            content: "\f150";
-
-            @extend .icon_font;
-            
-            --icon-size: 0.8em;
-
-            margin-inline-start: 0.5em;
+    .link {
+        font-weight: var(--button-font-weight);
+        
+        &:not([class*="text-color-"]) {
+            color: var(--link-color);
         }
 
-        &:hover,
-        &:focus {
-            [class*="__text"] {
+        &:not(:has([class*="icon"])) {
+            &:hover,
+            &:focus {
                 text-decoration: underline;
             }
         }
 
+    }
+
+    // :has() Selectors
+
+    .link:has([class*="icon"]) {
+        --icon-size: 1em;
+
+        display: inline-flex;
+        align-items: center;
+
+        gap: 0.5em;
+
+        &:hover,
+        &:focus {
+            [class*="text"] {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Link Expanded  
+
+    .link-expanded {
+        &::before {
+            position: absolute;
+            content: "";
+            
+            inset: 0;
+            
+            z-index: 1;
+
+            pointer-events: auto;
+        }
     }
 
 } // end @layer

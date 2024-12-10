@@ -23,7 +23,6 @@ const devPages = {
     'Lightbox': 'lightbox',
     'List': 'list',
     'Navigation': 'navigation',
-    'ReadingToggles': 'reading-toggles',
     'Typography': 'typography',
     'Tab': 'tab',
     'Table': 'table',
@@ -32,7 +31,7 @@ const devPages = {
 }
 
 const devDir = './html';
-const devPage = `${devPages.ReadingToggles}.html`;
+const devPage = `${devPages.Button}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

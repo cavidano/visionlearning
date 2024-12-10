@@ -23,7 +23,7 @@ title: Home
 
 					<!-- Russ, D. 
 
-					Discipline images are specific and have already been sized according to the report please review the images used on the life site and make sure they're properly using these images
+					Discipline images are specific and have already been sized according to viewport, please review the images used on the life site and make sure they're properly using these images
 					
 					-->
 
@@ -302,6 +302,14 @@ title: Home
 						We provide high-quality, accessible, educational material in the science, technology, engineering and mathematics (STEM) disciplines at the introductory undergraduate level.
 					</p>
 
+					<!-- Russ, D. 
+
+					Please review the button text and the icon used here. I've made some updates to the button text and the icon used.
+					
+					Whereever we use `button button--has-icon`, We can drop the `button--has-icon` class and just use `button` as the `button--has-icon` class is not used since Natura11y v4x. Don't worry, if you miss a few, it won't 'hurt' anything. The same is true with `button__text`. We can just use `text` instead.
+					
+					-->
+
 					<a class="button font-size-md text-color-link" href="#1">
 						<span class="button__text">About Us</span>
 						<span class="icon icon-caret-right"></span>
@@ -327,8 +335,8 @@ title: Home
 						Our exclusive content integrates science and engineering practices with disciplinary core ideas and cross-cutting concepts in alignment with the Next Generation Science Standards.
 					</p>
 
-					<a class="button button--has-icon font-size-md text-color-link" href="{{ site.url }}/about/ngss">
-						<span class="button__text">About NGSS</span>
+					<a class="button font-size-md text-color-link" href="{{ site.url }}/about/ngss">
+						<span class="text">About NGSS</span>
 						<span class="icon icon-caret-right"></span>
 					</a>
 
@@ -432,6 +440,15 @@ title: Home
 		<section>
 
 			<h2 class="screen-reader-only">New and featured learning modules</h2>
+
+			<!-- Russ, D., 
+			
+			I've made some updates to these cards.
+
+				- remove the `grid--divider` class from the <ul>
+				- classes on each card should be `flex-column height-100 padding-2 theme-light`
+			
+			-->
 		
 			<ul class="grid grid--column-2--md grid--column-4--lg gap-1">
 
