@@ -2,6 +2,12 @@
 layout: global
 ---
 
+<!-- Russ D.,
+
+Let's try this simpler layout for the about page. Currently the jump to navigation doesn't work exactly as expected and I'm hoping to simplify matters for now and we might make these pages more engaging at a different time. 
+
+-->
+
 <div class="theme-light">
 
     <div class="container wide">
@@ -21,75 +27,13 @@ layout: global
 
 <main id="skip-header-content">
 
-    <article class="container wide margin-bottom-5">
+    <article class="container wide">
 
-        <div class="grid grid--sidebars margin-y-4">
-
-            <div class="display-none display-block--xl">
-                
-                <nav class="anchor-nav font-size-md position-sticky-top display-none">
-
-                    {% if page.links %}
-
-                    <ul class="tabs-nav border border-radius">
-                        {% for link in page.links %}
-                        <li>
-                            <a href="{{ site.url }}{{ link.url }}" aria-selected={{ forloop.first | yes: 'true', 'false' }}>
-                                {{ link.title }}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    
-                    {% endif %}
-                    
-                </nav>
-
-            </div>
-
-            <article class="module__main">
+        <article class="about-article">
 
             {{ content }}
                     
-            </article>
-
-            <div class="font-size-md display-none">
-
-                    <div class="padding-x-2 margin-bottom-2 text-align-center">
-                            
-                        <h6>
-                            Sign in or Join for Free
-                        </h6>
-
-                        <p>
-                            For an ad-free experience and access the Classroom:
-                        </p>
-
-                    </div>
-
-                    <ul class="grid gap-1 margin-bottom-2">
-
-                        <li>
-                            <a class="button button--disperse text-color-link" href="{{ site.url }}/classroom/my-courses">
-                                <span class="button__text">Sign In</span>
-                                <span class="icon icon-caret-right"></span>
-                            </a>
-                        </li>
-
-                        <li>                    
-                            <a class="button button--disperse text-color-link" href="{{ site.url }}/account/register">
-                                <span class="button__text">Join for Free</span>
-                                <span class="icon icon-caret-right"></span>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    {% include process-of-science-book.html %}
-
-                </div>
-
-        </div>
+        </article>
 
     </article>
 
