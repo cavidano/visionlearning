@@ -22,7 +22,6 @@ import Tab from './js/tab';
 // Custom JS Modules
 
 import AudioPlayer from './js/customJS/audio-player';
-import AnchorNav from './js/customJS/anchor-nav';
 import { CompCheck } from './js/customJS/quiz'; 
 import Layout from './js/customJS/layout'; 
 import Modal from './js/customJS/modal';
@@ -69,9 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const audioPlayer = new AudioPlayer();
     audioPlayer.init();
-
-    const anchorNav = new AnchorNav();
-    anchorNav.init();
 
     const compCheck = new CompCheck();
     compCheck.init();
