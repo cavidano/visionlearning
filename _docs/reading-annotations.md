@@ -164,3 +164,36 @@ The `data-ngss-desc` attribute is used to identify the NGSS description that wil
 
 The `data-ngss-standard` attribute identifies the NGSS standard that will be displayed in the annotation (e.g. LS.2.C: Ecosystem Dynamics, Functioning, and Resilience).
 
+<hr class="margin-y-4" />
+
+## Highlighting Math Figures
+
+The reading toggle component can also be used to highlight math figures within the module reading. The following example shows a reading toggle component that highlights math figures.
+
+{% capture fig_X %}
+
+<div class="figure">
+
+	<figure>
+        <mark
+        class="ngss highlighted"
+        data-ngss-cat-abbr="Practice"
+        data-ngss-cat-full="Science and Engineering Practices"
+        data-ngss-desc="[description...]"
+        data-ngss-standard="[standard...]"
+    >
+            $$Na_{(s)} \rightarrow Na^{+}_{(s)} + e^{-}$$
+        </mark>
+	</figure>
+
+</div>
+
+{% endcapture %}
+
+{% include code-example.html content=fig_X %}
+
+### Highlighted Math Figure requirements
+
+The math figure must be contained within a `<figure>` tag. The math figure is highlighted when the reading toggle switch is activated.
+
+
