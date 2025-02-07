@@ -10,6 +10,7 @@ const devPages = {
     'Article': 'article',
     'AudioPlayer': 'audio-player',
     'Button': 'button',
+    'Blockquote': 'blockquote',
     'Color': 'color',
     'CompCheck': 'comp-check',
     'DisciplineGrid': 'discipline-grid',
@@ -31,7 +32,7 @@ const devPages = {
 }
 
 const devDir = './html';
-const devPage = `${devPages.Table}.html`;
+const devPage = `${devPages.Blockquote}.html`;
 
 module.exports = merge(common, {
     mode: 'development',

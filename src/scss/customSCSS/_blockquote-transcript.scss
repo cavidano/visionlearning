@@ -1,0 +1,46 @@
+/*
+
+In this file:
+
+// A. Modules
+// B. Components
+
+*/
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoint";
+
+//////////////////////////////////////////////
+// C. Components
+//////////////////////////////////////////////
+
+blockquote.transcript {
+
+    font-family: "Courier New", Courier, monospace;
+
+    font-size: .875em;
+    
+    line-height: 1.25em;
+
+    background-color: hsl(30, 50%, 92.5%);
+    
+    box-shadow: 0 0 0.375em 0 rgba(128,128,128,0.2);
+
+    padding: 1.25em;
+    
+    margin-bottom: var(--paragraph-margin-bottom);
+
+    strong {
+        background: hsla(60, 100%, 50%, 0.5);
+        padding: 0.25em 0.5em;
+        margin-left: -0.5em;
+    }
+
+    p {
+        margin-block-end: var(--paragraph-margin-bottom);
+    }
+}
