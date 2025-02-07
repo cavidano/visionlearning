@@ -18,12 +18,14 @@ In this file:
 // C. Components
 //////////////////////////////////////////////
 
-blockquote.transcript {
+blockquote.blockquote-transcript {
 
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 
-    font-size: .875em;
-    
+    font-style: normal;
+
+    font-size: 0.875em;
+
     line-height: 1.25em;
 
     background-color: hsl(30, 50%, 92.5%);
@@ -35,9 +37,11 @@ blockquote.transcript {
     margin-bottom: var(--paragraph-margin-bottom);
 
     strong {
-        background: hsla(60, 100%, 50%, 0.5);
         padding: 0.25em 0.5em;
-        margin-left: -0.5em;
+
+        margin-inline-start: -0.5em;
+
+        background: hsla(60, 100%, 50%, 0.5);
     }
 
     p {
