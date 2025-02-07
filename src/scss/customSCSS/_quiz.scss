@@ -34,18 +34,48 @@ In this file:
 
 @layer component {
 
-    // Quiz component
-
-    .quiz {}
-
     // Shared Selectors
 
     .quiz__questions,
     .comprehension-checkpoint {
-        background-color: yellow;
 
         .form-entry__option { 
             margin-block-start: 0.5em;
+        }
+
+        // Quiz Question Options
+
+        .form-entry__option__radio {
+            font-size: 90%;
+        }
+
+        .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
+            content: var(--icon-question-a); 
+        }
+
+        .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
+            content: var(--icon-question-b);
+        }
+
+        .form-entry__option__radio:nth-child(3) > label > input ~ .option__label::before {
+            content: var(--icon-question-c);
+        }
+
+        .form-entry__option__radio:nth-child(4) > label > input ~ .option__label::before {
+            content: var(--icon-question-d);
+        }
+
+        .form-entry__option__radio:nth-child(5) > label > input ~ .option__label::before {
+            content: var(--icon-question-e);
+        }
+
+        .form-entry__option__radio > label > input:checked ~ .option__label::before {
+            content: var(--icon-question-checked);
+        }
+
+        .form-entry__option__radio > label > input:not(:checked) ~ .option__label::before {
+            opacity: 1;
+            color: var(--link-color);
         }
     }
 
@@ -81,41 +111,6 @@ In this file:
         
         .figure {
             --figure-margin-y: var(--spacer-2);
-        }
-
-        // Quiz Questions
-
-        .form-entry__option__radio {
-            font-size: 90%;
-        }
-
-        .form-entry__option__radio:nth-child(1) > label > input ~ .option__label::before {
-            content: var(--icon-question-a); 
-        }
-
-        .form-entry__option__radio:nth-child(2) > label > input ~ .option__label::before {
-            content: var(--icon-question-b);
-        }
-
-        .form-entry__option__radio:nth-child(3) > label > input ~ .option__label::before {
-            content: var(--icon-question-c);
-        }
-
-        .form-entry__option__radio:nth-child(4) > label > input ~ .option__label::before {
-            content: var(--icon-question-d);
-        }
-
-        .form-entry__option__radio:nth-child(5) > label > input ~ .option__label::before {
-            content: var(--icon-question-e);
-        }
-
-        .form-entry__option__radio > label > input:checked ~ .option__label::before {
-            content: var(--icon-question-checked);
-        }
-
-        .form-entry__option__radio > label > input:not(:checked) ~ .option__label::before {
-            opacity: 1;
-            color: var(--link-color);
         }
 
     }
