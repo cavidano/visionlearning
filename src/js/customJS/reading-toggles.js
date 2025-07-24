@@ -8,7 +8,7 @@ export default class ReadingToggles {
     // Separate annotation containers
     #glossaryContainer = document.querySelector('.glossary-container');
     #ngssContainer = document.querySelector('.ngss-container');
-    #helpTextContainers = document.querySelectorAll('.reading-toggle__help');
+    #helpTextContainers = document.querySelectorAll('.reading-toggle__info');
 
     #closeButton = `
         <button class="button button--icon-only" data-close-btn>

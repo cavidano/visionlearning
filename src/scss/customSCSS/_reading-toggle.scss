@@ -65,6 +65,39 @@ In this file:
         }
     }
 
+    // NGSS Standards Summary
+
+    .ngss-standards-summary {
+        // background-color: yellow;
+        
+        font-size: var(--font-size-md);
+        margin-block-start: var(--spacer-2);
+
+        p, ul {
+            margin-block-end: 0.5em;
+        }
+        
+        p {
+            font-weight: var(--font-weight-semibold);
+            color: var(--body-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-block-end: 0.25em;
+            margin-inline: unset;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: underline;
+        }
+        
+    }
+
     // Reading Annotation Mark
 
     mark:is(.term, .ngss) {
