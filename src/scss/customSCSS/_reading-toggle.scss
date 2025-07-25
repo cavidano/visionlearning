@@ -13,6 +13,7 @@ In this file:
 
 @use '../breakpoint';
 @use '../form';
+@use '../assistive';
 
 //////////////////////////////////////////////
 // A. Variables
@@ -59,16 +60,18 @@ In this file:
         
         overflow: hidden;
         
-        &:focus-within:focus-visible [class*="__switch"] {
-            outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
-            outline-offset: var(--focus-outline-distance);
+        [class*="_switch"] {
+            border-radius: inherit;
+        }
+
+        &:has(:focus-within:focus-visible) [class*="_switch"] {
+            @extend %focus-visible;
         }
     }
 
     // NGSS Standards Summary
 
     .ngss-standards-summary {
-        // background-color: yellow;
         
         font-size: var(--font-size-md);
         margin-block-start: var(--spacer-2);
