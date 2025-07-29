@@ -74,6 +74,7 @@ In this file:
     .ngss-standards-summary {
         
         font-size: var(--font-size-md);
+
         margin-block-start: var(--spacer-2);
 
         p, ul {
@@ -97,6 +98,10 @@ In this file:
         a {
             color: var(--link-color);
             text-decoration: underline;
+        }
+
+        [class*="__dimension"] {
+            margin-bottom: 0.75em;
         }
         
     }
