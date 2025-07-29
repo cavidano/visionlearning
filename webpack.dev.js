@@ -25,6 +25,7 @@ const devPages = {
     'List': 'list',
     'Navigation': 'navigation',
     'Typography': 'typography',
+    'Geo': 'geometric-overlay',
     'Tab': 'tab',
     'Table': 'table',
     'Search': 'search',
@@ -32,7 +33,7 @@ const devPages = {
 }
 
 const devDir = './html';
-const devPage = `${devPages.Module}.html`;
+const devPage = `${devPages.Geo}.html`;
 
 module.exports = merge(common, {
     mode: 'development',
